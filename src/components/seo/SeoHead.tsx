@@ -8,6 +8,7 @@ type SeoHeadProps = {
 
 export function SeoHead({ title, description, path }: SeoHeadProps) {
   useEffect(() => {
+    const canonicalBase = 'https://artiais.com'
     document.title = `${title} | ARTIore`
 
     const existingDescription = document.querySelector('meta[name="description"]')
@@ -20,7 +21,7 @@ export function SeoHead({ title, description, path }: SeoHeadProps) {
       document.head.appendChild(descriptionTag)
     }
 
-    const canonicalPath = new URL(path, window.location.origin).toString()
+    const canonicalPath = new URL(path, canonicalBase).toString()
     let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
       canonical = document.createElement('link')
@@ -43,12 +44,12 @@ export function SeoHead({ title, description, path }: SeoHeadProps) {
       name: title,
       description,
       url: canonicalPath,
-      isPartOf: {
-        '@type': 'WebSite',
-        name: 'ARTIore',
-        url: window.location.origin,
-      },
-    })
+        isPartOf: {
+          '@type': 'WebSite',
+          name: 'ARTIore',
+          url: canonicalBase,
+        },
+      })
   }, [description, path, title])
 
   return null
