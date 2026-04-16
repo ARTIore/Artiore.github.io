@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { SITE_URL } from '../../config/site'
 
 type SeoHeadProps = {
   title: string
@@ -20,7 +21,7 @@ export function SeoHead({ title, description, path }: SeoHeadProps) {
       document.head.appendChild(descriptionTag)
     }
 
-    const canonicalPath = new URL(path, window.location.origin).toString()
+    const canonicalPath = new URL(path, SITE_URL).toString()
     let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
       canonical = document.createElement('link')
@@ -43,12 +44,12 @@ export function SeoHead({ title, description, path }: SeoHeadProps) {
       name: title,
       description,
       url: canonicalPath,
-      isPartOf: {
-        '@type': 'WebSite',
-        name: 'ARTIore',
-        url: window.location.origin,
-      },
-    })
+        isPartOf: {
+          '@type': 'WebSite',
+          name: 'ARTIore',
+          url: SITE_URL,
+        },
+      })
   }, [description, path, title])
 
   return null

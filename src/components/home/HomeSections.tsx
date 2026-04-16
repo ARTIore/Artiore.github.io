@@ -80,7 +80,9 @@ export function HomeSections() {
             {copy.blog.map((item) => (
               <li key={item.title}>
                 <p className="text-xs uppercase tracking-[0.2em] text-teal-300/70">{item.category}</p>
-                <p className="mt-1 text-white">{item.title}</p>
+                <Link className="mt-1 block text-white hover:text-teal-100 hover:underline" to={item.href}>
+                  {item.title}
+                </Link>
                 <p className="mt-1 text-sm text-slate-400">{item.summary}</p>
               </li>
             ))}
@@ -92,7 +94,9 @@ export function HomeSections() {
             {copy.resources.map((item) => (
               <li key={item.title}>
                 <p className="text-xs uppercase tracking-[0.2em] text-teal-300/70">{item.category}</p>
-                <p className="mt-1 text-white">{item.title}</p>
+                <Link className="mt-1 block text-white hover:text-teal-100 hover:underline" to={item.href}>
+                  {item.title}
+                </Link>
                 <p className="mt-1 text-sm text-slate-400">{item.summary}</p>
               </li>
             ))}
