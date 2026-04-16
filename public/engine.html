@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eternia · Aurora · Witness Engine</title>
+    <meta
+      name="description"
+      content="Standalone overview page for the Eternia · Aurora · Witness intelligence engine."
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #080b12;
+        --panel: rgba(255, 255, 255, 0.05);
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #f8fafe;
+        --muted: #b0bbcc;
+        --accent: #86b4ff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: radial-gradient(circle at top, #121a2b 0%, var(--bg) 45%);
+        color: var(--text);
+        font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
+
+      main {
+        width: min(980px, calc(100% - 2rem));
+        margin: 0 auto;
+        padding: 3.5rem 0 4rem;
+      }
+
+      .eyebrow {
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-size: 0.75rem;
+        margin: 0 0 0.85rem;
+      }
+
+      h1 {
+        margin: 0;
+        line-height: 1.12;
+        font-size: clamp(2rem, 4vw, 3rem);
+      }
+
+      .lead {
+        margin: 1rem 0 0;
+        max-width: 65ch;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .grid {
+        margin-top: 2rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      article {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        border-radius: 16px;
+        padding: 1rem 1rem 1.1rem;
+      }
+
+      article h2 {
+        margin: 0 0 0.5rem;
+        font-size: 1.08rem;
+      }
+
+      article p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">ARTIore standalone</p>
+      <h1>Eternia · Aurora · Witness engine</h1>
+      <p class="lead">
+        This standalone page presents the three coordinated layers of the ARTIore engine: Eternia for
+        durable signal memory, Aurora for interpretable pattern illumination, and Witness for traceable
+        human-verifiable evidence chains.
+      </p>
+      <section class="grid" aria-label="Engine modules">
+        <article>
+          <h2>Eternia</h2>
+          <p>Persists long-horizon signal context to preserve continuity across fragmented intelligence cycles.</p>
+        </article>
+        <article>
+          <h2>Aurora</h2>
+          <p>Transforms weak correlations into legible structures with explainable confidence framing.</p>
+        </article>
+        <article>
+          <h2>Witness</h2>
+          <p>Captures provenance and review checkpoints so every strategic output remains auditable.</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
