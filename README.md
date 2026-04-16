@@ -22,6 +22,11 @@ npm run lint
 npm run build
 ```
 
+## Deployment
+
+- This repository deploys to GitHub Pages through `.github/workflows/deploy.yml`.
+- The custom domain is `artiais.com` and is set via `public/CNAME` so it is included in `dist/`.
+
 ## Structure highlights
 
 - Lazy-loaded routing for Home, About, Philosophy, Framework, Engine, Dossier, Resources, Blog, Case Studies, Applications, Implementation, System Docs, API Docs, and Contact/Access.
