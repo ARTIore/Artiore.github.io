@@ -10,7 +10,7 @@ export function HomeSections() {
         <div className="pointer-events-none absolute -right-12 -top-12 h-44 w-44 animate-pulse rounded-full border border-amber-300/30" />
         <div className="pointer-events-none absolute right-20 top-20 h-20 w-20 rounded-full border border-teal-300/40" />
         <p className="mb-4 text-xs uppercase tracking-[0.3em] text-teal-300/80">Turn chaos into clarity</p>
-        <h1 className="max-w-4xl text-4xl leading-tight font-semibold text-white md:text-6xl">{copy.heroStatement}</h1>
+        <h1 className="max-w-4xl text-4xl font-semibold leading-tight text-white md:text-6xl">{copy.heroStatement}</h1>
         <p className="mt-6 max-w-3xl text-lg text-slate-300">{copy.heroSubStatement}</p>
         <div className="mt-10 flex flex-wrap gap-4">
           <Link
