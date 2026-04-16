@@ -16,6 +16,7 @@ const ImplementationPage = lazy(() => import('./pages/ImplementationPage'))
 const SystemDocsPage = lazy(() => import('./pages/SystemDocsPage'))
 const ApiDocsPage = lazy(() => import('./pages/ApiDocsPage'))
 const ContactPage = lazy(() => import('./pages/ContactPage'))
+const TodoPage = lazy(() => import('./pages/TodoPage'))
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
             <Route element={<SystemDocsPage />} path="/system-documentation" />
             <Route element={<ApiDocsPage />} path="/api-documentation" />
             <Route element={<ContactPage />} path="/contact" />
+            <Route element={<TodoPage />} path="/todo" />
             <Route element={<Navigate replace to="/" />} path="*" />
           </Route>
         </Routes>
