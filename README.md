@@ -28,3 +28,7 @@ npm run build
 - Shared premium dark layout system with reusable page template cards.
 - Multilingual-ready content model (English + French) through a locale context.
 - SEO metadata management with canonical links and JSON-LD schema.
+
+## Framework
+
+The Grand Directional Prompt Framework (V1.1, Zero-Drift Edition) is available as a [Markdown transcription](docs/ARTIore-Grand-Directional-Prompt-Framework-V1.1.md) and the [original PDF](docs/ARTIore-Grand-Directional-Prompt-Framework-V1.1.pdf).
