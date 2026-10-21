@@ -2,6 +2,12 @@
 
 ARTIore is a dark, premium, intelligence-driven frontend built with **React + TypeScript + Vite + Tailwind CSS**.
 
+## Ecosystem
+- Live site: https://artiais.com
+- 🌐 [artiore.com](https://artiore.com) — the ARTIore reasoning platform ([try it](https://artiore.com/try))
+- ⚙️ [artiais.com](https://artiais.com) — Artiais, AI infrastructure platform
+- 🤝 [artioreconsortium.com](https://artioreconsortium.com) — Artiore Consortium, collaborative network
+
 ## Core message
 
 > They built systems you were never meant to understand.
