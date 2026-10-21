@@ -31,6 +31,6 @@ npm run build
 
 ## Framework
 
-The Grand Directional Prompt Framework (V1.1, Zero-Drift Edition) is available as a [Markdown transcription](docs/ARTIore-Grand-Directional-Prompt-Framework-V1.1.md) and the [original PDF](docs/ARTIore-Grand-Directional-Prompt-Framework-V1.1.pdf).
+The Grand Directional Prompt Framework (V1.1, Zero-Drift Edition) is available as a [Markdown transcription](docs/ARTIore-Grand-Directional-Prompt-Framework-V1.1.md) and the [original PDF](docs/ARTIore-Grand-Directional-Prompt-Framework-V1.1.pdf). An [HTML edition](docs/ARTIore-Grand-Directional-Prompt-Framework-V1.1.html) is also published at [https://artiais.com/framework.html](https://artiais.com/framework.html).
 
 The current full system prompt is [ARTIore System Prompt — Resolved & Winged](docs/ARTIore-System-Prompt.md).
