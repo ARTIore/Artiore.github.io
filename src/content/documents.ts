@@ -5,9 +5,9 @@ export const aboutPage: PageDocument = {
   path: '/about',
   eyebrow: 'About ARTIore',
   title: 'Built to help people think clearly',
-  headTitle: 'About ARTIore | ARTIore',
+  headTitle: 'About ARTIore | Reasoning platform and AI infrastructure',
   description:
-    'Artiore is a reasoning platform for complex situations. Artiais is the AI infrastructure platform that supports it. Founded by Zain Ul Abdin.',
+    'Artiore helps people understand complex situations and take practical next steps. Artiais is the AI infrastructure platform behind it. Founded by Zain Ul Abdin.',
   lead: 'Artiore is a reasoning platform that helps you understand complex situations, weigh options, and take practical next steps. Artiais is the AI systems and infrastructure platform supporting those reasoning capabilities.',
   blocks: [
     {
@@ -67,9 +67,9 @@ export const aboutPage: PageDocument = {
     {
       kind: 'actions',
       items: [
-        { label: 'Email', href: links.email },
-        { label: 'LinkedIn', href: links.linkedinZain },
-        { label: 'X', href: links.x },
+        { label: 'Email artiste@artiore.com', href: links.email },
+        { label: 'LinkedIn · Zain Ul Abdin', href: links.linkedinZain },
+        { label: 'X · Artiore', href: links.x },
         { label: 'Try ARTIore', href: links.artioreTry },
       ],
     },
@@ -117,9 +117,9 @@ export const philosophyPage: PageDocument = {
   path: '/philosophy',
   eyebrow: 'Our charter',
   title: 'What we believe',
-  headTitle: 'Philosophy | ARTIore',
+  headTitle: 'ARTIore philosophy | Clarity, truth, and the witness',
   description:
-    'Artiore’s charter: clarity over confusion, truth over convenience, knowledge sharing, human empowerment, and long-term thinking. The system is a witness, not a verdict.',
+    'Artiore\u2019s charter: clarity over confusion, truth over convenience, knowledge sharing, human empowerment, and long-term thinking. A witness, not a verdict.',
   lead: 'Artiore is built on a few core principles that guide everything we do. The system is a witness, not a verdict.',
   blocks: [
     {
@@ -254,9 +254,9 @@ export const originPage: PageDocument = {
   path: '/origin',
   eyebrow: 'Origin story',
   title: 'How Artiore began',
-  headTitle: 'Origin | ARTIore',
+  headTitle: 'Origin of ARTIore | Founded by Zain Ul Abdin, 2026',
   description:
-    'Artiore was founded by Zain Ul Abdin through ARTIORE in early 2026. The first version launched in April 2026 with dual-mode reasoning and the Grand Prompt Framework. Artiais is the infrastructure layer.',
+    'Artiore was founded by Zain Ul Abdin through ARTIORE in early 2026. The first version launched in April 2026 with dual-mode reasoning and the prompt framework.',
   lead: 'Born from a need for clarity in an age of information overload, Artiore emerged as a response to the growing gap between having answers and understanding reality.',
   blocks: [
     {
@@ -379,9 +379,9 @@ export const doctrinePage: PageDocument = {
   path: '/doctrine',
   eyebrow: 'The eternal loop',
   title: 'The doctrine',
-  headTitle: 'Doctrine | ARTIore',
+  headTitle: 'Eternal Loop doctrine | Reason, Courage, Service, Justice',
   description:
-    'Four pillars — Reason, Courage, Service, Justice — in a loop with no terminal state. The Eternal Loop Doctrine, Artiore Project, V1.x (Zero-Drift).',
+    'Four pillars — Reason, Courage, Service, and Justice — in a loop with no terminal state. The Eternal Loop Doctrine of the Artiore Project, V1.x Zero-Drift.',
   lead: 'Four pillars. One continuum. No terminal state. The Eternal Loop is a structural framework. Remove any single pillar and the system fails.',
   blocks: [
     {
@@ -482,7 +482,7 @@ export const doctrinePage: PageDocument = {
     {
       kind: 'actions',
       items: [
-        { label: 'Philosophy', href: '/philosophy' },
+        { label: 'Read the philosophy', href: '/philosophy' },
         { label: 'Try ARTIore', href: links.artioreTry },
       ],
     },
@@ -493,9 +493,9 @@ export const protocolPage: PageDocument = {
   path: '/protocol',
   eyebrow: 'Safety charter',
   title: 'What Artiore will and will not do',
-  headTitle: 'Protocol | ARTIore',
+  headTitle: 'ARTIore protocol | What the system will and will not do',
   description:
-    'Artiore’s safety charter: multiple perspectives, stated uncertainty, practical next steps, and hard boundaries. It is not a substitute for professional advice and it does not guarantee outcomes.',
+    'Artiore\u2019s safety charter: multiple perspectives, stated uncertainty, and practical next steps, with hard boundaries. It does not replace professional advice.',
   lead: 'Artiore is designed to help you think clearly, and it has boundaries.',
   blocks: [
     {
@@ -577,8 +577,8 @@ export const protocolPage: PageDocument = {
       kind: 'actions',
       items: [
         { label: 'Try ARTIore', href: links.artioreTry },
-        { label: 'Privacy', href: '/privacy' },
-        { label: 'Terms', href: '/terms' },
+        { label: 'Privacy policy', href: '/privacy' },
+        { label: 'Terms of service', href: '/terms' },
       ],
     },
   ],
@@ -588,15 +588,17 @@ export const howItWorksPage: PageDocument = {
   path: '/how-it-works',
   eyebrow: 'The Artiore framework',
   title: 'Six layers, one purpose',
-  headTitle: 'The Artiore Framework | ARTIore',
+  headTitle: 'Six-layer Artiore framework | Clarity to human upliftment',
   description:
-    'Six layers — Clarity, Reasoning, Archives, Derivatives, AI in the margin, and Human upliftment. The full Grand Directional Prompt Framework V1.1 is published at /framework.html.',
+    'Six layers: Clarity, Reasoning, Archives, Derivatives, AI in the margin, and Human upliftment. Grand Directional Prompt Framework V1.1 is at /framework.html.',
   lead: 'Six layers working in harmony — from clarity at the apex to human upliftment at the foundation. This is how Artiore serves without ruling.',
   blocks: [
     {
       kind: 'actions',
       items: [
         { label: 'Read the Grand Directional Prompt Framework V1.1', href: links.frameworkHtml },
+        { label: 'Eternia Aurora Sovereign Engine', href: '/engine' },
+        { label: 'Read the system documentation', href: '/system-documentation' },
         { label: 'Try ARTIore', href: links.artioreTry },
       ],
     },
@@ -692,9 +694,9 @@ export const applicationsPage: PageDocument = {
   path: '/applications',
   eyebrow: 'Use cases',
   title: 'What Artiore helps with',
-  headTitle: 'Applications | ARTIore',
+  headTitle: 'What ARTIore helps with | Work, learning, and reflection',
   description:
-    'Work, health questions, financial confusion, learning, relationships, and faith reflection — structured as options and next steps, not as a substitute for professional advice.',
+    'Work, health questions, money, learning, relationships, and faith reflection — options and next steps, not a substitute for professional advice.',
   lead: 'From work decisions to health questions to faith reflection — Artiore helps you understand, weigh options, and take practical next steps. It is not a substitute for doctors, lawyers, or financial professionals.',
   blocks: [
     {
@@ -767,9 +769,9 @@ export const dossierPage: PageDocument = {
   path: '/dossier',
   eyebrow: 'UAE dossier',
   title: 'The world made a victim. He built a shield.',
-  headTitle: 'UAE dossier | ARTIore',
+  headTitle: 'UAE dossier 2025\u20132026 | Founder\u2019s account | ARTIore',
   description:
-    'Zain Ul Abdin’s published account of six months in Dubai, Abu Dhabi, Sharjah, and Ajman during 2025–2026. Founder’s account. Technical causes remain under review.',
+    'Zain Ul Abdin\u2019s account of digital victimization in the UAE during 2025\u20132026. Reported experiences are kept separate from explanations that remain under review.',
   lead: 'Founder’s account. Technical causes remain under review; the dossier separates reported experiences from unverified explanations.',
   blocks: [
     {
@@ -867,7 +869,7 @@ export const dossierPage: PageDocument = {
       items: [
         { label: 'Read the origin', href: '/origin' },
         { label: 'Instagram @ArtioreConsortium', href: links.instagram },
-        { label: 'X', href: links.x },
+        { label: 'X · Artiore', href: links.x },
       ],
     },
   ],

@@ -1,4 +1,5 @@
 import { SeoHead } from '../seo/SeoHead'
+import { Breadcrumbs } from '../seo/Breadcrumbs'
 import type { Block, PageDocument } from '../../content/types'
 import { InlineText, SiteLink } from './SiteLink'
 
@@ -118,7 +119,18 @@ function BlockView({ block }: { block: Block }) {
 export function DocumentView({ page }: { page: PageDocument }) {
   return (
     <>
-      <SeoHead description={page.description} path={page.path} title={page.headTitle} />
+      <SeoHead
+        author={page.author}
+        crumbName={page.title}
+        datePublished={page.published}
+        description={page.description}
+        headline={page.title}
+        kind={page.published ? 'blog-post' : 'page'}
+        noindex={page.noindex}
+        path={page.path}
+        title={page.headTitle}
+      />
+      <Breadcrumbs current={page.title} path={page.path} />
       <article className="mx-auto max-w-4xl">
         <header>
           <p className="text-xs uppercase tracking-[0.22em] text-gold">{page.eyebrow}</p>

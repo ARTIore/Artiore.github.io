@@ -1,36 +1,13 @@
-import { blogIndexMeta, blogPosts } from './blog'
+import { blogIndexMeta, blogSummaries } from './blog-summaries'
+import { blogPosts } from './blog'
 import { documentPages } from './documents'
 import { legalPages } from './legal'
 import { libraryPages } from './library'
+import { contactMeta, engineMeta, homeMeta, systemMeta } from './meta'
+import { buildJsonLd } from '../seo/structuredData'
 import type { PageDocument, SeoEntry } from './types'
 
-export const homeMeta = {
-  path: '/',
-  headTitle: 'ARTIore | Artiais, AI infrastructure platform',
-  description:
-    'Artiais is the AI infrastructure platform for ARTIore. Clarity-first reasoning maps evidence, assumptions, trade-offs, practical next steps, and limits. The system is a witness, not a verdict.',
-}
-
-export const contactMeta = {
-  path: '/contact',
-  headTitle: 'Contact | ARTIore',
-  description:
-    'Email artiste@artiore.com. X, LinkedIn, Discord, and Instagram, plus artiore.com, the Artiore Consortium, GitHub, and Eternia.',
-}
-
-export const engineMeta = {
-  path: '/engine',
-  headTitle: 'Eternia Aurora Sovereign Engine | ARTIore',
-  description:
-    'Eternia Aurora is a local-first generative ambient instrument in the browser. No server and no account. Play it on artiais.com or read the source on GitHub.',
-}
-
-export const systemMeta = {
-  path: '/system-documentation',
-  headTitle: 'System documentation | ARTIore',
-  description:
-    'Reasoning architecture, the five-line doctrine, four engine layers, the five-part response, and the hosted Acore systems document set.',
-}
+export { buildJsonLd }
 
 export const blogMeta = blogIndexMeta
 
@@ -47,22 +24,36 @@ export const pagesByPath: Record<string, PageDocument> = Object.fromEntries(
   allDocuments.map((page) => [page.path, page]),
 )
 
+const summaryByPath = Object.fromEntries(blogSummaries.map((item) => [item.path, item]))
+
 export const seoEntries: SeoEntry[] = [
-  ...customMetas.map((meta) => ({ ...meta, sitemap: true, prerender: true })),
+  ...customMetas.map((meta) => ({
+    ...meta,
+    sitemap: true,
+    prerender: true,
+  })),
   ...allDocuments.map((page) => ({
     path: page.path,
     headTitle: page.headTitle,
     description: page.description,
     sitemap: page.sitemap !== false,
     prerender: true,
+    noindex: page.noindex === true,
+    kind: page.published ? ('blog-post' as const) : ('page' as const),
+    crumbName: page.title,
+    headline: summaryByPath[page.path]?.title ?? page.title,
+    author: page.author,
+    datePublished: page.published,
   })),
   {
     path: '/framework.html',
-    headTitle: 'Grand Directional Prompt Framework V1.1 | ARTIore',
+    headTitle: 'Grand Directional Prompt Framework, V1.1 | ARTIore',
     description:
-      'The Grand Directional Prompt Framework, V1.1, Zero-Drift Edition. A cognitive charter and operating protocol by Zain Ul Abdin.',
+      'Grand Directional Prompt Framework, V1.1, Zero-Drift Edition: a cognitive charter and operating protocol for an AI, by Zain Ul Abdin of the Artiore Consortium.',
     sitemap: true,
     prerender: false,
+    kind: 'page',
+    crumbName: 'Prompt Framework V1.1',
   },
   {
     path: '/eternia-aurofa-soverign-engine/',

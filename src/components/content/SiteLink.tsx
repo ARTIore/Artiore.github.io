@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
+import { toPublicPath } from '../../content/urls'
 
 function safeHref(href: string) {
   if (
@@ -26,19 +27,20 @@ type SiteLinkProps = {
 
 export function SiteLink({ href, className, children, onClick }: SiteLinkProps) {
   const safe = safeHref(href)
+  const publicHref = isSpaPath(safe) ? toPublicPath(safe) : safe
   if (isSpaPath(safe)) {
     return (
-      <Link className={className} onClick={onClick} to={safe}>
+      <Link className={className} onClick={onClick} to={publicHref}>
         {children}
       </Link>
     )
   }
 
-  const external = safe.startsWith('http')
+  const external = publicHref.startsWith('http')
   return (
     <a
       className={className}
-      href={safe}
+      href={publicHref}
       onClick={onClick}
       rel={external ? 'noreferrer' : undefined}
       target={external ? '_blank' : undefined}

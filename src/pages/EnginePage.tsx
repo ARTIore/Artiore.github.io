@@ -1,7 +1,8 @@
 import { SeoHead } from '../components/seo/SeoHead'
+import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SiteLink } from '../components/content/SiteLink'
 import { links } from '../content/links'
-import { engineMeta } from '../content/registry'
+import { engineMeta } from '../content/meta'
 
 const layers = [
   {
@@ -25,7 +26,14 @@ const layers = [
 export default function EnginePage() {
   return (
     <>
-      <SeoHead description={engineMeta.description} path={engineMeta.path} title={engineMeta.headTitle} />
+      <SeoHead
+        crumbName={engineMeta.crumbName}
+        description={engineMeta.description}
+        kind={engineMeta.kind}
+        path={engineMeta.path}
+        title={engineMeta.headTitle}
+      />
+      <Breadcrumbs current={engineMeta.crumbName} path={engineMeta.path} />
       <article className="mx-auto max-w-4xl">
         <p className="text-xs uppercase tracking-[0.22em] text-gold">Sovereign engine</p>
         <h1 className="mt-3 font-serif text-4xl leading-tight text-cream sm:text-5xl">Eternia Aurora Sovereign Engine</h1>
@@ -71,6 +79,27 @@ export default function EnginePage() {
             named Focus, Calm, Energy, and Balance, plus layer mute, phase, tempo, and volume. Those controls live in
             the instrument, not on this page.
           </p>
+        </section>
+
+        <section>
+          <h2 className="font-serif text-3xl text-cream">Related on this site</h2>
+          <ul className="mt-4 space-y-2">
+            <li>
+              <SiteLink className="inline-flex min-h-11 items-center text-gold-bright underline underline-offset-4" href="/how-it-works">
+                Six-layer framework
+              </SiteLink>
+            </li>
+            <li>
+              <SiteLink className="inline-flex min-h-11 items-center text-gold-bright underline underline-offset-4" href={links.frameworkHtml}>
+                Grand Directional Prompt Framework V1.1
+              </SiteLink>
+            </li>
+            <li>
+              <SiteLink className="inline-flex min-h-11 items-center text-gold-bright underline underline-offset-4" href="/system-documentation">
+                System documentation
+              </SiteLink>
+            </li>
+          </ul>
         </section>
       </article>
     </>

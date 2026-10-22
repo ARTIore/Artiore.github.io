@@ -1,0 +1,23 @@
+{
+  "name": "ARTIore",
+  "short_name": "ARTIore",
+  "description": "Artiais is the AI infrastructure platform for ARTIore. Clarity-first reasoning. The system is a witness, not a verdict.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#12100e",
+  "theme_color": "#12100e",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

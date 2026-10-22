@@ -32,10 +32,23 @@ export type PageDocument = PageMeta & {
   title: string
   lead: string
   blocks: Block[]
+  noindex?: boolean
+  /** Set only when the page names an author. */
+  author?: string
+  /** ISO date, set only when the page states a publication date. */
+  published?: string
 }
+
+export type SeoKind = 'home' | 'page' | 'blog-post' | 'engine'
 
 export type SeoEntry = PageMeta & {
   prerender?: boolean
   /** Present on the live domain, not emitted by this build. */
   external?: boolean
+  noindex?: boolean
+  kind?: SeoKind
+  crumbName?: string
+  headline?: string
+  author?: string
+  datePublished?: string
 }

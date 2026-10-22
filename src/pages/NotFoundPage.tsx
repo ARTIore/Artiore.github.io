@@ -1,4 +1,5 @@
 import { SeoHead } from '../components/seo/SeoHead'
+import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SiteLink } from '../components/content/SiteLink'
 import { links } from '../content/links'
 
@@ -15,11 +16,13 @@ export default function NotFoundPage() {
   return (
     <>
       <SeoHead
-        description="This address is not a page on artiais.com."
+        crumbName="This page is not here."
+        description="This address is not a page on artiais.com. Nothing was redirected. Use Home, Contact, the six-layer framework, or the Eternia Aurora engine."
         noindex
-        path="/404"
+        path="/404.html"
         title="Page not found | ARTIore"
       />
+      <Breadcrumbs current="This page is not here." path="/404.html" />
       <article className="mx-auto max-w-2xl py-8">
         <p className="text-xs uppercase tracking-[0.22em] text-gold">404</p>
         <h1 className="mt-3 font-serif text-4xl text-cream sm:text-5xl">This page is not here.</h1>

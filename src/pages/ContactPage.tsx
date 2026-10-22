@@ -1,7 +1,8 @@
 import { SeoHead } from '../components/seo/SeoHead'
+import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SiteLink } from '../components/content/SiteLink'
 import { links } from '../content/links'
-import { contactMeta } from '../content/registry'
+import { contactMeta } from '../content/meta'
 
 const groups = [
   {
@@ -40,7 +41,14 @@ const groups = [
 export default function ContactPage() {
   return (
     <>
-      <SeoHead description={contactMeta.description} path={contactMeta.path} title={contactMeta.headTitle} />
+      <SeoHead
+        crumbName={contactMeta.crumbName}
+        description={contactMeta.description}
+        kind={contactMeta.kind}
+        path={contactMeta.path}
+        title={contactMeta.headTitle}
+      />
+      <Breadcrumbs current={contactMeta.crumbName} path={contactMeta.path} />
       <article className="mx-auto max-w-3xl">
         <p className="text-xs uppercase tracking-[0.22em] text-gold">Contact</p>
         <h1 className="mt-3 font-serif text-4xl text-cream sm:text-5xl">Reach ARTIore</h1>

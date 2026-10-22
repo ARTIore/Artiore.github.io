@@ -1,5 +1,5 @@
 import { links } from '../../content/links'
-import { blogPosts } from '../../content/blog'
+import { blogSummaries } from '../../content/blog-summaries'
 import { SiteLink } from '../content/SiteLink'
 
 const five = [
@@ -141,8 +141,8 @@ export function HomeSections() {
       <section>
         <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
           <h2 className="font-serif text-3xl text-cream">Six layers, one purpose</h2>
-          <SiteLink className="text-gold-bright underline underline-offset-4" href="/how-it-works">
-            The framework
+          <SiteLink className="inline-flex min-h-11 items-center text-gold-bright underline underline-offset-4" href="/how-it-works">
+            Read the six-layer framework
           </SiteLink>
         </div>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -169,7 +169,7 @@ export function HomeSections() {
             className="mt-6 inline-flex min-h-11 items-center rounded-full bg-gold px-5 py-2 text-sm font-semibold text-ink"
             href={links.frameworkHtml}
           >
-            Open /framework.html
+            Read the prompt framework V1.1
           </SiteLink>
         </article>
         <article className="rounded-2xl border border-gold/30 bg-gold/5 p-6" id="eternia">
@@ -288,7 +288,7 @@ export function HomeSections() {
           </SiteLink>
         </div>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
-          {blogPosts.map((post) => (
+          {blogSummaries.map((post) => (
             <article className="rounded-2xl border border-white/10 p-5" key={post.path}>
               <p className="text-xs uppercase tracking-[0.16em] text-gold">
                 {post.category} · {post.date}

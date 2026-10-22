@@ -7,9 +7,9 @@ export const privacyPage: PageDocument = {
   path: '/privacy',
   eyebrow: 'Legal',
   title: 'Privacy policy',
-  headTitle: 'Privacy policy | ARTIore',
+  headTitle: 'Privacy policy | The Secret Affaire Inc. and ARTIore',
   description:
-    'The privacy policy published for artiore.com on April 16, 2026. The Secret Affaire Inc. says Artiore does not collect or store personal user data.',
+    'Privacy policy published for artiore.com on April 16, 2026. The Secret Affaire Inc. says Artiore does not collect or store personal user data. Reproduced here.',
   lead: 'Last updated April 16, 2026. The Secret Affaire Inc. (“Company”, “we”, “us”, or “our”) operates the Artiore website (artiore.com) and related services.',
   blocks: [
     { kind: 'note', text: framing },
@@ -230,9 +230,9 @@ export const termsPage: PageDocument = {
   path: '/terms',
   eyebrow: 'Legal',
   title: 'Terms of service',
-  headTitle: 'Terms of service | ARTIore',
+  headTitle: 'Terms of service | The Secret Affaire Inc. and ARTIore',
   description:
-    'The terms published for artiore.com on April 16, 2026, between you and The Secret Affaire Inc. Governing law: Canada and the Province of Ontario.',
+    'Terms published for artiore.com on April 16, 2026, between you and The Secret Affaire Inc. Governing law is Canada and the Province of Ontario.',
   lead: 'Last updated April 16, 2026. These terms are a legally binding agreement between you and The Secret Affaire Inc. concerning artiore.com and related services.',
   blocks: [
     { kind: 'note', text: framing },
@@ -441,8 +441,8 @@ export const termsPage: PageDocument = {
       kind: 'actions',
       items: [
         { label: 'Terms on artiore.com', href: links.artioreTerms },
-        { label: 'Privacy', href: '/privacy' },
-        { label: 'Email', href: links.policyEmail },
+        { label: 'Privacy policy', href: '/privacy' },
+        { label: 'Email contact@artiore.com', href: links.policyEmail },
       ],
     },
   ],

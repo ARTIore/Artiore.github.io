@@ -1,7 +1,8 @@
 import { SeoHead } from '../components/seo/SeoHead'
+import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SiteLink } from '../components/content/SiteLink'
 import { links } from '../content/links'
-import { systemMeta } from '../content/registry'
+import { systemMeta } from '../content/meta'
 
 const systemDocs = [
   { file: '1_Acore_Systems_Document_Set.pdf', title: '1. Acore Systems Document Set' },
@@ -36,7 +37,14 @@ const response = [
 export default function SystemDocsPage() {
   return (
     <>
-      <SeoHead description={systemMeta.description} path={systemMeta.path} title={systemMeta.headTitle} />
+      <SeoHead
+        crumbName={systemMeta.crumbName}
+        description={systemMeta.description}
+        kind={systemMeta.kind}
+        path={systemMeta.path}
+        title={systemMeta.headTitle}
+      />
+      <Breadcrumbs current={systemMeta.crumbName} path={systemMeta.path} />
       <article className="mx-auto max-w-4xl space-y-12">
         <header>
           <p className="text-xs uppercase tracking-[0.22em] text-gold">System documentation</p>
@@ -156,9 +164,30 @@ export default function SystemDocsPage() {
             <li>No evasion: if it cannot answer, it says why.</li>
             <li>No ideological bias: analysis grounded in evidence and the four pillars, not political or cultural preference.</li>
           </ul>
-          <SiteLink className="mt-6 inline-block text-gold-bright underline underline-offset-4" href={links.artioreTry}>
+          <SiteLink className="mt-6 inline-flex min-h-11 items-center text-gold-bright underline underline-offset-4" href={links.artioreTry}>
             Try ARTIore
           </SiteLink>
+        </section>
+
+        <section>
+          <h2 className="font-serif text-3xl text-cream">Related on this site</h2>
+          <ul className="mt-4 space-y-2">
+            <li>
+              <SiteLink className="inline-flex min-h-11 items-center text-gold-bright underline underline-offset-4" href="/how-it-works">
+                Six-layer framework
+              </SiteLink>
+            </li>
+            <li>
+              <SiteLink className="inline-flex min-h-11 items-center text-gold-bright underline underline-offset-4" href="/engine">
+                Eternia Aurora Sovereign Engine
+              </SiteLink>
+            </li>
+            <li>
+              <SiteLink className="inline-flex min-h-11 items-center text-gold-bright underline underline-offset-4" href={links.frameworkHtml}>
+                Grand Directional Prompt Framework V1.1
+              </SiteLink>
+            </li>
+          </ul>
         </section>
       </article>
     </>

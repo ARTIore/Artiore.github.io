@@ -25,7 +25,7 @@ export const primaryNav: NavItem[] = [
   {
     label: 'Framework',
     children: [
-      { label: 'Six layers', href: '/how-it-works' },
+      { label: 'Six-layer framework', href: '/how-it-works' },
       { label: 'Prompt Framework V1.1', href: '/framework.html' },
     ],
   },
@@ -51,7 +51,7 @@ export const footerPages: NavLinkItem[] = [
   { label: 'Origin', href: '/origin' },
   { label: 'Doctrine', href: '/doctrine' },
   { label: 'Protocol', href: '/protocol' },
-  { label: 'Framework', href: '/how-it-works' },
+  { label: 'Six-layer framework', href: '/how-it-works' },
   { label: 'Prompt Framework V1.1', href: '/framework.html' },
   { label: 'Engine', href: '/engine' },
   { label: 'Resources', href: '/resources' },

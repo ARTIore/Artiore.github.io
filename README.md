@@ -22,11 +22,11 @@ npm run lint
 npm run build
 ```
 
-`npm run build` typechecks, builds the Vite app, writes a `dist/<route>/index.html` for every app route (so GitHub Pages can open them directly), writes `dist/404.html`, refreshes the sitemap, and fails if a route file or internal link is missing.
+`npm run build` typechecks, builds the Vite app, prerenders each route to HTML (headings, text, and links are in the file before JavaScript runs), writes `dist/404.html`, refreshes the sitemap, and fails if a route is missing metadata, a single H1, prerendered content, or a working internal link.
 
 ## Routes
 
-The app is a `BrowserRouter` site. Direct loads are static copies of `index.html` with that page’s title, description, canonical URL, and social tags baked in. Unknown addresses serve `404.html`, which renders the in-app Not Found page. It does not redirect.
+The app is a `BrowserRouter` site. Direct loads are prerendered HTML for that route, then hydrated in the browser. Canonical URLs, the sitemap, and internal links use the trailing-slash form GitHub Pages serves with status 200. Unknown addresses serve `404.html`, which renders the in-app Not Found page. It does not redirect.
 
 `/framework.html` is the Grand Directional Prompt Framework V1.1 and is not an app route. The six-layer framework page is `/how-it-works` and links to that file. `/engine` is the Eternia Aurora Sovereign Engine page. The instrument itself stays at `/eternia-aurofa-soverign-engine/` from its own repository.
 

@@ -1,13 +1,20 @@
 import { SeoHead } from '../components/seo/SeoHead'
+import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SiteLink } from '../components/content/SiteLink'
-import { alsoOnArtioreBlog, blogPosts } from '../content/blog'
+import { alsoOnArtioreBlog, blogIndexMeta, blogSummaries } from '../content/blog-summaries'
 import { links } from '../content/links'
-import { blogMeta } from '../content/registry'
 
 export default function BlogPage() {
   return (
     <>
-      <SeoHead description={blogMeta.description} path={blogMeta.path} title={blogMeta.headTitle} />
+      <SeoHead
+        crumbName={blogIndexMeta.crumbName}
+        description={blogIndexMeta.description}
+        kind={blogIndexMeta.kind}
+        path={blogIndexMeta.path}
+        title={blogIndexMeta.headTitle}
+      />
+      <Breadcrumbs current={blogIndexMeta.crumbName} path={blogIndexMeta.path} />
       <article className="mx-auto max-w-4xl">
         <p className="text-xs uppercase tracking-[0.22em] text-gold">Blog</p>
         <h1 className="mt-3 font-serif text-4xl text-cream sm:text-5xl">Four essays</h1>
@@ -16,7 +23,7 @@ export default function BlogPage() {
           blog index there lists more transmissions. Their full text is not reproduced here.
         </p>
         <div className="mt-8 space-y-4">
-          {blogPosts.map((post) => (
+          {blogSummaries.map((post) => (
             <article className="rounded-2xl border border-gold/20 p-5" key={post.path}>
               <p className="text-xs uppercase tracking-[0.16em] text-gold">
                 {post.category} · {post.date} · {post.minutes}

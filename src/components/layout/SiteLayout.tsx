@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { links } from '../../content/links'
 import { footerPages, primaryNav, type NavLinkItem } from '../../content/navigation'
+import { normalizePath, toPublicPath } from '../../content/urls'
 import { SiteLink } from '../content/SiteLink'
 
 const linkClass =
@@ -24,7 +25,7 @@ function NavAnchor({ item, onClick }: { item: NavLinkItem; onClick?: () => void 
     )
   }
   return (
-    <NavLink className={({ isActive }) => itemClass(isActive)} onClick={onClick} to={item.href}>
+    <NavLink className={({ isActive }) => itemClass(isActive)} onClick={onClick} to={toPublicPath(item.href)}>
       {item.label}
     </NavLink>
   )
@@ -64,7 +65,7 @@ export function SiteLayout() {
       </a>
       <header className="sticky top-0 z-40 border-b border-gold/20 bg-ink/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
-          <NavLink className="min-w-0" to="/">
+          <NavLink className="min-w-0" end to="/">
             <span className="block font-serif text-2xl tracking-[0.14em] text-gold">ARTIore</span>
             <span className="block text-xs text-muted">Clarity-first reasoning</span>
           </NavLink>
@@ -85,7 +86,7 @@ export function SiteLayout() {
             if ('href' in item) {
               return <NavAnchor item={item} key={item.label} />
             }
-            const childActive = item.children.some((child) => child.href === location.pathname)
+            const childActive = item.children.some((child) => normalizePath(child.href) === normalizePath(location.pathname))
             const expanded = desktopOpen === item.label
             return (
               <div
@@ -136,7 +137,7 @@ export function SiteLayout() {
                 }
                 return (
                   <section key={item.label}>
-                    <h2 className="px-1 text-xs uppercase tracking-[0.18em] text-gold">{item.label}</h2>
+                    <p className="px-1 text-xs uppercase tracking-[0.18em] text-gold">{item.label}</p>
                     <div className="mt-2 flex flex-col items-start gap-2">
                       {item.children.map((child) => (
                         <NavAnchor item={child} key={child.href} />
@@ -167,7 +168,7 @@ export function SiteLayout() {
             <ul className="mt-3 space-y-2 text-sm">
               {footerPages.map((item) => (
                 <li key={item.href}>
-                  <SiteLink className="text-cream/85 hover:text-gold-bright" href={item.href}>
+                  <SiteLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={item.href}>
                     {item.label}
                   </SiteLink>
                 </li>
@@ -178,32 +179,32 @@ export function SiteLayout() {
             <h2 className="text-xs uppercase tracking-[0.18em] text-gold">Contact</h2>
             <ul className="mt-3 space-y-2 text-sm">
               <li>
-                <a className="break-all text-cream/85 hover:text-gold-bright" href={links.email}>
+                <a className="inline-flex min-h-11 items-center break-all text-cream/85 hover:text-gold-bright" href={links.email}>
                   {links.emailAddress}
                 </a>
               </li>
               <li>
-                <a className="text-cream/85 hover:text-gold-bright" href={links.x} rel="noreferrer" target="_blank">
+                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.x} rel="noreferrer" target="_blank">
                   X · Artiore
                 </a>
               </li>
               <li>
-                <a className="text-cream/85 hover:text-gold-bright" href={links.linkedinCompany} rel="noreferrer" target="_blank">
+                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.linkedinCompany} rel="noreferrer" target="_blank">
                   LinkedIn · company
                 </a>
               </li>
               <li>
-                <a className="text-cream/85 hover:text-gold-bright" href={links.linkedinZain} rel="noreferrer" target="_blank">
+                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.linkedinZain} rel="noreferrer" target="_blank">
                   LinkedIn · Zain Ul Abdin
                 </a>
               </li>
               <li>
-                <a className="text-cream/85 hover:text-gold-bright" href={links.discord} rel="noreferrer" target="_blank">
+                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.discord} rel="noreferrer" target="_blank">
                   Discord
                 </a>
               </li>
               <li>
-                <a className="text-cream/85 hover:text-gold-bright" href={links.instagram} rel="noreferrer" target="_blank">
+                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.instagram} rel="noreferrer" target="_blank">
                   Instagram · ArtioreConsortium
                 </a>
               </li>
@@ -213,32 +214,32 @@ export function SiteLayout() {
             <h2 className="text-xs uppercase tracking-[0.18em] text-gold">Ecosystem</h2>
             <ul className="mt-3 space-y-2 text-sm">
               <li>
-                <a className="text-cream/85 hover:text-gold-bright" href={links.artiore} rel="noreferrer" target="_blank">
+                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artiore} rel="noreferrer" target="_blank">
                   artiore.com
                 </a>
               </li>
               <li>
-                <a className="text-cream/85 hover:text-gold-bright" href={links.artioreTry} rel="noreferrer" target="_blank">
+                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreTry} rel="noreferrer" target="_blank">
                   Try ARTIore
                 </a>
               </li>
               <li>
-                <a className="text-cream/85 hover:text-gold-bright" href={links.consortium} rel="noreferrer" target="_blank">
+                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.consortium} rel="noreferrer" target="_blank">
                   artioreconsortium.com
                 </a>
               </li>
               <li>
-                <a className="text-cream/85 hover:text-gold-bright" href={links.eternia}>
+                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.eternia}>
                   Eternia Aurora Sovereign Engine
                 </a>
               </li>
               <li>
-                <a className="text-cream/85 hover:text-gold-bright" href={links.github} rel="noreferrer" target="_blank">
+                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.github} rel="noreferrer" target="_blank">
                   GitHub · ARTIore
                 </a>
               </li>
               <li>
-                <a className="break-all text-cream/85 hover:text-gold-bright" href={links.githubEternia} rel="noreferrer" target="_blank">
+                <a className="inline-flex min-h-11 items-center break-all text-cream/85 hover:text-gold-bright" href={links.githubEternia} rel="noreferrer" target="_blank">
                   Eternia source
                 </a>
               </li>

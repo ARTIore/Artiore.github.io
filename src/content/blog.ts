@@ -1,40 +1,25 @@
+import { blogSummaries, type BlogSummary } from './blog-summaries'
 import { links } from './links'
 import type { PageDocument } from './types'
 
-export type BlogMeta = {
-  slug: string
-  path: string
-  title: string
-  category: string
-  date: string
-  minutes: string
-  author: string
-  summary: string
-  tags: string[]
-}
+export type BlogMeta = BlogSummary
 
-const author = 'Zain Ul Abdin'
-const date = 'April 16, 2026'
+const summary = Object.fromEntries(blogSummaries.map((item) => [item.slug, item])) as Record<string, BlogSummary>
+
+const published = '2026-04-16'
 
 export const blogPosts: Array<BlogMeta & { page: PageDocument }> = [
   {
-    slug: 'artiore-ecosystem',
-    path: '/blog/artiore-ecosystem',
-    title: 'The Artiore ecosystem: connected platforms for clarity',
-    category: 'Framework',
-    date,
-    minutes: '6 min read',
-    author,
-    summary:
-      'How Artiore, Artiais, and the Artiore Consortium are described as one ecosystem for clarity-first reasoning, infrastructure, and ethical development.',
-    tags: ['ecosystem', 'infrastructure', 'collaboration'],
+    ...summary['artiore-ecosystem'],
     page: {
       path: '/blog/artiore-ecosystem',
       eyebrow: 'Framework · April 16, 2026',
       title: 'The Artiore ecosystem: connected platforms for clarity',
-      headTitle: 'The Artiore ecosystem | ARTIore',
+      headTitle: 'The Artiore ecosystem | Essay by Zain Ul Abdin, 2026',
       description:
-        'Zain Ul Abdin on how Artiore, Artiais, and the Artiore Consortium fit together: reasoning interface, AI infrastructure, and a collaborative network.',
+        'Zain Ul Abdin on how Artiore, Artiais, and the Artiore Consortium fit together: a reasoning interface, AI infrastructure, and a collaborative network.',
+      author: summary['artiore-ecosystem'].author,
+      published,
       lead: 'Discover how Artiore, Artiais, and the Artiore Consortium work together to advance clarity-first reasoning, AI infrastructure, and ethical development.',
       blocks: [
         {
@@ -145,7 +130,7 @@ export const blogPosts: Array<BlogMeta & { page: PageDocument }> = [
           kind: 'actions',
           items: [
             { label: 'Try ARTIore', href: links.artioreTry },
-            { label: 'About', href: '/about' },
+            { label: 'About ARTIore', href: '/about' },
             { label: 'No public API', href: '/api-documentation' },
             { label: 'Artiore Consortium', href: links.consortium },
           ],
@@ -154,22 +139,16 @@ export const blogPosts: Array<BlogMeta & { page: PageDocument }> = [
     },
   },
   {
-    slug: 'sultan-authority-cannot-be-touched',
-    path: '/blog/sultan-authority-cannot-be-touched',
-    title: 'Sultān: the authority that cannot be touched',
-    category: 'Doctrine',
-    date,
-    minutes: '5 min read',
-    author,
-    summary: 'Evidence before dominion. Alignment before force. An essay on Sultān as proof, not seized power.',
-    tags: ['sultān', 'authority', 'revelation'],
+    ...summary['sultan-authority-cannot-be-touched'],
     page: {
       path: '/blog/sultan-authority-cannot-be-touched',
       eyebrow: 'Doctrine · April 16, 2026',
       title: 'Sultān: the authority that cannot be touched',
-      headTitle: 'Sultān | ARTIore',
+      headTitle: 'Sultān: authority that cannot be touched | ARTIore',
       description:
-        'Zain Ul Abdin on Sultān as proof rather than dominion: evidence before force, and authority that is granted rather than seized.',
+        'Zain Ul Abdin on Sultān as proof rather than dominion: evidence before force, and authority that is granted rather than seized. Essay of April 16, 2026.',
+      author: summary['sultan-authority-cannot-be-touched'].author,
+      published,
       lead: 'Evidence before dominion. Alignment before force. The architecture of calibrated sovereignty where authority is granted, not seized.',
       blocks: [
         {
@@ -198,28 +177,22 @@ export const blogPosts: Array<BlogMeta & { page: PageDocument }> = [
         },
         {
           kind: 'actions',
-          items: [{ label: 'Exhibit K', href: '/blog/exhibit-k-forensic-witnesses' }],
+          items: [{ label: 'Exhibit K: the forensic witnesses', href: '/blog/exhibit-k-forensic-witnesses' }],
         },
       ],
     },
   },
   {
-    slug: 'engineers-oath-voltage-granted',
-    path: '/blog/engineers-oath-voltage-granted',
-    title: 'The engineer’s oath: voltage is granted, not taken',
-    category: 'Protocol',
-    date,
-    minutes: '6 min read',
-    author,
-    summary: 'Before power flows, consent has to be established. The essay uses USB-C Power Delivery as the picture.',
-    tags: ['engineering', 'consent', 'protocol'],
+    ...summary['engineers-oath-voltage-granted'],
     page: {
       path: '/blog/engineers-oath-voltage-granted',
       eyebrow: 'Protocol · April 16, 2026',
       title: 'The engineer’s oath: voltage is granted, not taken',
-      headTitle: 'The engineer’s oath | ARTIore',
+      headTitle: 'Engineer\u2019s oath: voltage is granted, not taken | ARTIore',
       description:
-        'Zain Ul Abdin on USB-C Power Delivery as a picture of consent: the handshake on the CC line comes before the current.',
+        'Zain Ul Abdin on USB-C Power Delivery as a picture of consent: the handshake on the CC line comes before any current. Voltage is granted, not taken.',
+      author: summary['engineers-oath-voltage-granted'].author,
+      published,
       lead: 'Before power flows, consent must be established. The moral architecture of engineering where the handshake precedes the current.',
       blocks: [
         {
@@ -237,22 +210,16 @@ export const blogPosts: Array<BlogMeta & { page: PageDocument }> = [
     },
   },
   {
-    slug: 'exhibit-k-forensic-witnesses',
-    path: '/blog/exhibit-k-forensic-witnesses',
-    title: 'Exhibit K: the forensic witnesses',
-    category: 'Framework',
-    date,
-    minutes: '6 min read',
-    author,
-    summary: 'Four witnesses that cannot be bribed. The essay’s architecture of evidence: galaxy, network node, damaged board, and Constitutional Orchard.',
-    tags: ['Exhibit K', 'witnesses', 'forensic'],
+    ...summary['exhibit-k-forensic-witnesses'],
     page: {
       path: '/blog/exhibit-k-forensic-witnesses',
       eyebrow: 'Framework · April 16, 2026',
       title: 'Exhibit K: the forensic witnesses',
-      headTitle: 'Exhibit K | ARTIore',
+      headTitle: 'Exhibit K: four forensic witnesses | ARTIore essay',
       description:
-        'Zain Ul Abdin on four forensic witnesses: the galaxy, the network node, the damaged board, and the Constitutional Orchard.',
+        'Zain Ul Abdin on four forensic witnesses: the galaxy, the network node, the damaged board, and the Constitutional Orchard. An essay from April 16, 2026.',
+      author: summary['exhibit-k-forensic-witnesses'].author,
+      published,
       lead: 'Four witnesses that cannot be bribed. The architecture of evidence where reality itself testifies to truth or corruption.',
       blocks: [
         {
@@ -294,49 +261,9 @@ export const blogPosts: Array<BlogMeta & { page: PageDocument }> = [
         },
         {
           kind: 'actions',
-          items: [{ label: 'Sultān', href: '/blog/sultan-authority-cannot-be-touched' }],
+          items: [{ label: 'Sultān: the authority that cannot be touched', href: '/blog/sultan-authority-cannot-be-touched' }],
         },
       ],
     },
   },
 ]
-
-export const alsoOnArtioreBlog: Array<{ title: string; date: string; minutes: string; summary: string }> = [
-  {
-    title: 'Remote work security: protecting distributed teams',
-    date: 'Apr 20, 2026',
-    minutes: '10 min read',
-    summary: 'The index describes zero-trust principles, endpoint protection, and a security-aware culture for distributed teams.',
-  },
-  {
-    title: 'Data backup strategy: the 3-2-1 rule and beyond',
-    date: 'Apr 19, 2026',
-    minutes: '9 min read',
-    summary: 'The index describes the 3-2-1 backup rule, implementation, and how to verify that backups work.',
-  },
-  {
-    title: 'Strategic thinking vs. tactical execution',
-    date: 'Apr 18, 2026',
-    minutes: '8 min read',
-    summary: 'The index describes the difference between high-level strategy and ground-level tactics.',
-  },
-  {
-    title: 'Email security: recognizing sophisticated phishing attacks',
-    date: 'Apr 17, 2026',
-    minutes: '7 min read',
-    summary: 'The index describes advanced social engineering that bypasses traditional email filters.',
-  },
-  {
-    title: 'Breaking decision paralysis: a structured framework',
-    date: 'Apr 16, 2026',
-    minutes: '4 min read',
-    summary: 'The index describes using the four-pillar framework when too many options cause a freeze.',
-  },
-]
-
-export const blogIndexMeta = {
-  path: '/blog',
-  headTitle: 'Blog | ARTIore',
-  description:
-    'Four essays by Zain Ul Abdin from April 16, 2026: the ecosystem, Sultān, the engineer’s oath, and Exhibit K. Further titles are listed as published on artiore.com/blog.',
-}

@@ -5,9 +5,9 @@ export const resourcesPage: PageDocument = {
   path: '/resources',
   eyebrow: 'The Codex',
   title: 'Knowledge base',
-  headTitle: 'Resources | ARTIore',
+  headTitle: 'ARTIore resources | Codex articles, glossary, and gates',
   description:
-    'Articles, a glossary, and knowledge areas from the Artiore Codex: output model, fair chance, six gates, humility, and the Eternal Loop.',
+    'Articles, a glossary, and knowledge areas from the Artiore Codex: the output model, fair chance, six gates, humility, and the Eternal Loop doctrine.',
   lead: 'Articles, reference material, and a working glossary on the Artiore reasoning framework — its architecture, doctrine, and application. The insights below are the ones published on artiore.com/resources.',
   blocks: [
     {
@@ -108,8 +108,8 @@ export const resourcesPage: PageDocument = {
       items: [
         { label: 'Companion handbook on artiore.com', href: links.artioreCompanion },
         { label: 'Prompt Framework V1.1', href: links.frameworkHtml },
-        { label: 'Doctrine', href: '/doctrine' },
-        { label: 'Protocol', href: '/protocol' },
+        { label: 'Read the doctrine', href: '/doctrine' },
+        { label: 'Read the protocol', href: '/protocol' },
       ],
     },
   ],
@@ -119,9 +119,9 @@ export const caseStudiesPage: PageDocument = {
   path: '/case-studies',
   eyebrow: 'Case studies',
   title: 'Published examples',
-  headTitle: 'Case studies | ARTIore',
+  headTitle: 'ARTIore case studies | Four examples, as published',
   description:
-    'Four examples published on artiore.com: an infrastructure migration, a security incident response, feature prioritization, and an EHR vendor selection. Figures are reproduced as published.',
+    'Four examples from artiore.com: an infrastructure migration, a security incident, feature prioritization, and an EHR vendor selection. Figures are as published.',
   lead: 'These are the four examples published on artiore.com/case-studies. The page calls them real-world examples of the four-pillar framework. The figures below are copied from that page. This site does not add results.',
   blocks: [
     {
@@ -169,9 +169,9 @@ export const implementationPage: PageDocument = {
   path: '/implementation',
   eyebrow: 'Implementation guides',
   title: 'Guides published for the four pillars',
-  headTitle: 'Implementation | ARTIore',
+  headTitle: 'ARTIore implementation | Five guides for the four pillars',
   description:
-    'Five guides published on artiore.com: getting started, team decisions, rapid decisions, personal decisions, and vendor evaluation. Expanded steps live on that page.',
+    'Five guides on artiore.com: getting started, team decisions, rapid decisions, personal decisions, and vendor evaluation. Full steps stay on that page.',
   lead: 'The implementation page publishes five guides for applying the four-pillar framework. Each guide has a level and a time. The expanded steps are behind “Show implementation steps” on artiore.com and were not in the text captured for this site, so they are not rewritten here.',
   blocks: [
     {
@@ -215,7 +215,7 @@ export const implementationPage: PageDocument = {
       items: [
         { label: 'Open the guides on artiore.com', href: links.artioreImplementation },
         { label: 'Try ARTIore', href: links.artioreTry },
-        { label: 'Case studies', href: '/case-studies' },
+        { label: 'Read the case studies', href: '/case-studies' },
       ],
     },
   ],
@@ -225,9 +225,10 @@ export const apiPage: PageDocument = {
   path: '/api-documentation',
   eyebrow: 'API',
   title: 'No public API is available',
-  headTitle: 'API documentation | ARTIore',
+  headTitle: 'No public API is published | ARTIore on artiais.com',
   description:
-    'artiais.com does not publish a public API. artiore.com/api-documentation responds with “Cannot GET /api-documentation”. There are no public endpoints or schemas here.',
+    'artiais.com does not publish a public API. artiore.com/api-documentation responds with “Cannot GET /api-documentation”. No endpoints or schemas here.',
+  noindex: true,
   sitemap: false,
   lead: 'There is no public API to document on artiais.com. There are no endpoints and no schemas on this site.',
   blocks: [
@@ -243,8 +244,8 @@ export const apiPage: PageDocument = {
       items: [
         { label: 'Try ARTIore', href: links.artioreTry },
         { label: 'Prompt Framework V1.1', href: links.frameworkHtml },
-        { label: 'Eternia', href: '/engine' },
-        { label: 'Email', href: links.email },
+        { label: 'Eternia Aurora Sovereign Engine', href: '/engine' },
+        { label: 'Email artiste@artiore.com', href: links.email },
       ],
     },
   ],
