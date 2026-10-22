@@ -33,3 +33,7 @@ The app is a `BrowserRouter` site. Direct loads are static copies of `index.html
 ## Framework
 
 The Grand Directional Prompt Framework (V1.1, Zero-Drift Edition) is published at [https://artiais.com/framework.html](https://artiais.com/framework.html). A Markdown transcription and PDF live in `docs/` for the repository. The current full system prompt is [ARTIore System Prompt — Resolved & Winged](docs/ARTIore-System-Prompt.md).
+
+## License
+
+Released under the [MIT License](LICENSE).
