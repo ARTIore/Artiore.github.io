@@ -1,32 +1,67 @@
-export type NavKey =
-  | 'home'
-  | 'about'
-  | 'philosophy'
-  | 'framework'
-  | 'engine'
-  | 'dossier'
-  | 'resources'
-  | 'blog'
-  | 'caseStudies'
-  | 'applications'
-  | 'implementation'
-  | 'systemDocs'
-  | 'apiDocs'
-  | 'contact'
+export type NavLinkItem = {
+  label: string
+  href: string
+}
 
-export const navItems: Array<{ key: NavKey; path: string }> = [
-  { key: 'home', path: '/' },
-  { key: 'about', path: '/about' },
-  { key: 'philosophy', path: '/philosophy' },
-  { key: 'framework', path: '/framework' },
-  { key: 'engine', path: '/engine' },
-  { key: 'dossier', path: '/dossier' },
-  { key: 'resources', path: '/resources' },
-  { key: 'blog', path: '/blog' },
-  { key: 'caseStudies', path: '/case-studies' },
-  { key: 'applications', path: '/applications' },
-  { key: 'implementation', path: '/implementation' },
-  { key: 'systemDocs', path: '/system-documentation' },
-  { key: 'apiDocs', path: '/api-documentation' },
-  { key: 'contact', path: '/contact' },
+export type NavItem =
+  | NavLinkItem
+  | {
+      label: string
+      children: NavLinkItem[]
+    }
+
+export const primaryNav: NavItem[] = [
+  {
+    label: 'Platform',
+    children: [
+      { label: 'About', href: '/about' },
+      { label: 'Philosophy', href: '/philosophy' },
+      { label: 'Origin', href: '/origin' },
+      { label: 'Doctrine', href: '/doctrine' },
+      { label: 'Protocol', href: '/protocol' },
+      { label: 'Applications', href: '/applications' },
+    ],
+  },
+  {
+    label: 'Framework',
+    children: [
+      { label: 'Six layers', href: '/how-it-works' },
+      { label: 'Prompt Framework V1.1', href: '/framework.html' },
+    ],
+  },
+  { label: 'Engine', href: '/engine' },
+  {
+    label: 'Docs',
+    children: [
+      { label: 'Resources', href: '/resources' },
+      { label: 'System documentation', href: '/system-documentation' },
+      { label: 'Implementation', href: '/implementation' },
+      { label: 'Case studies', href: '/case-studies' },
+      { label: 'UAE dossier', href: '/dossier' },
+    ],
+  },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Contact', href: '/contact' },
+]
+
+export const footerPages: NavLinkItem[] = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Philosophy', href: '/philosophy' },
+  { label: 'Origin', href: '/origin' },
+  { label: 'Doctrine', href: '/doctrine' },
+  { label: 'Protocol', href: '/protocol' },
+  { label: 'Framework', href: '/how-it-works' },
+  { label: 'Prompt Framework V1.1', href: '/framework.html' },
+  { label: 'Engine', href: '/engine' },
+  { label: 'Resources', href: '/resources' },
+  { label: 'System documentation', href: '/system-documentation' },
+  { label: 'Implementation', href: '/implementation' },
+  { label: 'Case studies', href: '/case-studies' },
+  { label: 'Applications', href: '/applications' },
+  { label: 'UAE dossier', href: '/dossier' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Contact', href: '/contact' },
+  { label: 'Privacy', href: '/privacy' },
+  { label: 'Terms', href: '/terms' },
 ]

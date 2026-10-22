@@ -1,85 +1,78 @@
 import { SeoHead } from '../components/seo/SeoHead'
-import { useLocale } from '../context/useLocale'
+import { SiteLink } from '../components/content/SiteLink'
+import { links } from '../content/links'
+import { engineMeta } from '../content/registry'
 
-const engineModules = {
-  en: [
-    {
-      title: 'Eternia',
-      description:
-        'Persists long-horizon signal context to preserve continuity across fragmented intelligence cycles.',
-    },
-    {
-      title: 'Aurora',
-      description: 'Transforms weak correlations into legible structures with explainable confidence framing.',
-    },
-    {
-      title: 'Witness',
-      description:
-        'Captures provenance and review checkpoints so every strategic output remains auditable.',
-    },
-  ],
-  fr: [
-    {
-      title: 'Eternia',
-      description:
-        'Préserve le contexte des signaux à long horizon pour maintenir la continuité entre des cycles d’intelligence fragmentés.',
-    },
-    {
-      title: 'Aurora',
-      description:
-        'Transforme les corrélations faibles en structures lisibles avec un cadre de confiance explicable.',
-    },
-    {
-      title: 'Witness',
-      description:
-        'Capture la provenance et les points de revue pour conserver des sorties stratégiques auditables.',
-    },
-  ],
-}
-
-const engineCopy = {
-  en: {
-    eyebrow: 'Integrated engine',
-    title: 'Eternia · Aurora · Witness Engine',
-    lead: 'A coordinated ARTIore stack for durable memory, pattern illumination, and traceable evidence chains.',
+const layers = [
+  {
+    title: 'Starwave',
+    body: 'The public Sovereign Engine page says this layer entrains you: low-frequency oscillation aimed at calm focus.',
   },
-  fr: {
-    eyebrow: 'Moteur intégré',
-    title: 'Moteur Eternia · Aurora · Witness',
-    lead: 'Une pile ARTIore coordonnée pour la mémoire durable, l’illumination des motifs et des chaînes de preuve traçables.',
+  {
+    title: 'Aurora',
+    body: 'The same page says Aurora builds equity. It asks for active positive inputs to keep its glow, and it is described as a check on cynicism. Offering a kind word is logged as an action, not only a thought.',
   },
-}
+  {
+    title: 'Witness',
+    body: '“It does not decide. It audits.” The page says Witness measures what you have done — level and streak — not how you feel.',
+  },
+  {
+    title: 'Cipher',
+    body: 'The page calls Cipher the numeric anchor. It says you enter 4 digits, and it gives 2626 and 1313 as examples of digits that filter noise.',
+  },
+]
 
 export default function EnginePage() {
-  const { locale, copy } = useLocale()
-  const page = copy.pages.engine
-  const localEngineCopy = engineCopy[locale]
-
   return (
     <>
-      <SeoHead description={page.lead} path="/engine" title={page.title} />
-      <section className="space-y-8">
-        <header className="space-y-4">
-          <p className="text-xs uppercase tracking-[0.3em] text-teal-300/80">{copy.siteTitle}</p>
-          <h1 className="text-4xl font-semibold text-white md:text-5xl">{page.title}</h1>
-          <p className="max-w-3xl text-lg text-slate-300">{page.lead}</p>
-        </header>
-
-        <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-8">
-          <p className="text-xs uppercase tracking-[0.25em] text-teal-300/80">{localEngineCopy.eyebrow}</p>
-          <h2 className="mt-3 text-2xl font-semibold text-white">{localEngineCopy.title}</h2>
-          <p className="mt-4 max-w-3xl leading-relaxed text-slate-300">{localEngineCopy.lead}</p>
-        </article>
-
-        <div className="grid gap-5 md:grid-cols-3">
-          {engineModules[locale].map((module) => (
-            <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-6" key={module.title}>
-              <h2 className="text-xl font-semibold text-white">{module.title}</h2>
-              <p className="mt-3 leading-relaxed text-slate-300">{module.description}</p>
-            </article>
-          ))}
+      <SeoHead description={engineMeta.description} path={engineMeta.path} title={engineMeta.headTitle} />
+      <article className="mx-auto max-w-4xl">
+        <p className="text-xs uppercase tracking-[0.22em] text-gold">Sovereign engine</p>
+        <h1 className="mt-3 font-serif text-4xl leading-tight text-cream sm:text-5xl">Eternia Aurora Sovereign Engine</h1>
+        <p className="mt-5 max-w-3xl text-lg leading-relaxed text-cream/90">
+          Eternia · Aurora is a local-first generative ambient instrument by Artiore. Shape evolving rhythms, cosmic
+          tones, and spacious soundscapes in your browser. It is a single-file, local-first instrument: everything
+          runs in the page you open, with no server and no account.
+        </p>
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <SiteLink
+            className="inline-flex min-h-11 items-center justify-center rounded-full bg-gold px-5 py-2 text-sm font-semibold text-ink"
+            href={links.eternia}
+          >
+            Play it in the browser
+          </SiteLink>
+          <SiteLink
+            className="inline-flex min-h-11 items-center justify-center rounded-full border border-gold/50 px-5 py-2 text-sm font-semibold text-gold-bright"
+            href={links.githubEternia}
+          >
+            Source on GitHub
+          </SiteLink>
         </div>
-      </section>
+        <p className="mt-4 break-all text-sm text-muted">{links.eternia}</p>
+
+        <section className="mt-12">
+          <h2 className="font-serif text-3xl text-cream">What the Sovereign Engine page says</h2>
+          <p className="mt-4 leading-relaxed text-muted">
+            artiore.com/engine calls the instrument a four-layer behavioral instrument. Its own line: “Not a mystical
+            relic. Not a magic 8-ball.” Abstract ideas — focus, intent, discipline — are put into mechanics,
+            accountability, and compounding metrics. The system-documentation page describes the same four names as
+            stages of a written response. Those are two published accounts. This page keeps the instrument account.
+          </p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            {layers.map((layer) => (
+              <article className="rounded-2xl border border-gold/20 p-5" key={layer.title}>
+                <h3 className="font-serif text-2xl text-cream">{layer.title}</h3>
+                <p className="mt-3 leading-relaxed text-muted">{layer.body}</p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-6 leading-relaxed text-cream/90">
+            Stable means cleared to execute. Hold means rebuild equity first. The live page also exposes presets
+            named Focus, Calm, Energy, and Balance, plus layer mute, phase, tempo, and volume. Those controls live in
+            the instrument, not on this page.
+          </p>
+        </section>
+      </article>
     </>
   )
 }

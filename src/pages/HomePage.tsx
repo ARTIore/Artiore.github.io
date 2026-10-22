@@ -1,13 +1,11 @@
 import { HomeSections } from '../components/home/HomeSections'
 import { SeoHead } from '../components/seo/SeoHead'
-import { useLocale } from '../context/useLocale'
+import { homeMeta } from '../content/registry'
 
 export default function HomePage() {
-  const { copy } = useLocale()
-
   return (
     <>
-      <SeoHead description={copy.heroSubStatement} path="/" title="Home" />
+      <SeoHead description={homeMeta.description} path={homeMeta.path} title={homeMeta.headTitle} />
       <HomeSections />
     </>
   )

@@ -1,52 +1,42 @@
-import { Suspense, lazy } from 'react'
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { SiteLayout } from './components/layout/SiteLayout'
+import { DocumentView } from './components/content/DocumentView'
+import { allDocuments } from './content/registry'
+import BlogPage from './pages/BlogPage'
+import ContactPage from './pages/ContactPage'
+import EnginePage from './pages/EnginePage'
+import HomePage from './pages/HomePage'
+import NotFoundPage from './pages/NotFoundPage'
+import SystemDocsPage from './pages/SystemDocsPage'
 
-const HomePage = lazy(() => import('./pages/HomePage'))
-const AboutPage = lazy(() => import('./pages/AboutPage'))
-const PhilosophyPage = lazy(() => import('./pages/PhilosophyPage'))
-const FrameworkPage = lazy(() => import('./pages/FrameworkPage'))
-const EnginePage = lazy(() => import('./pages/EnginePage'))
-const DossierPage = lazy(() => import('./pages/DossierPage'))
-const ResourcesPage = lazy(() => import('./pages/ResourcesPage'))
-const BlogPage = lazy(() => import('./pages/BlogPage'))
-const CaseStudiesPage = lazy(() => import('./pages/CaseStudiesPage'))
-const ApplicationsPage = lazy(() => import('./pages/ApplicationsPage'))
-const ImplementationPage = lazy(() => import('./pages/ImplementationPage'))
-const SystemDocsPage = lazy(() => import('./pages/SystemDocsPage'))
-const ApiDocsPage = lazy(() => import('./pages/ApiDocsPage'))
-const ContactPage = lazy(() => import('./pages/ContactPage'))
+function AppRoutes() {
+  const location = useLocation()
+  const pathname =
+    location.pathname.length > 1 && location.pathname.endsWith('/')
+      ? location.pathname.slice(0, -1)
+      : location.pathname
+
+  return (
+    <Routes location={{ ...location, pathname }}>
+      <Route element={<SiteLayout />}>
+        <Route element={<HomePage />} path="/" />
+        <Route element={<ContactPage />} path="/contact" />
+        <Route element={<EnginePage />} path="/engine" />
+        <Route element={<SystemDocsPage />} path="/system-documentation" />
+        <Route element={<BlogPage />} path="/blog" />
+        {allDocuments.map((page) => (
+          <Route element={<DocumentView page={page} />} key={page.path} path={page.path} />
+        ))}
+        <Route element={<NotFoundPage />} path="*" />
+      </Route>
+    </Routes>
+  )
+}
 
 function App() {
   return (
     <BrowserRouter>
-      <Suspense
-        fallback={
-          <div className="grid min-h-screen place-items-center bg-[#05080f] text-slate-200">
-            Loading intelligence layer...
-          </div>
-        }
-      >
-        <Routes>
-          <Route element={<SiteLayout />}>
-            <Route element={<HomePage />} path="/" />
-            <Route element={<AboutPage />} path="/about" />
-            <Route element={<PhilosophyPage />} path="/philosophy" />
-            <Route element={<FrameworkPage />} path="/framework" />
-            <Route element={<EnginePage />} path="/engine" />
-            <Route element={<DossierPage />} path="/dossier" />
-            <Route element={<ResourcesPage />} path="/resources" />
-            <Route element={<BlogPage />} path="/blog" />
-            <Route element={<CaseStudiesPage />} path="/case-studies" />
-            <Route element={<ApplicationsPage />} path="/applications" />
-            <Route element={<ImplementationPage />} path="/implementation" />
-            <Route element={<SystemDocsPage />} path="/system-documentation" />
-            <Route element={<ApiDocsPage />} path="/api-documentation" />
-            <Route element={<ContactPage />} path="/contact" />
-            <Route element={<Navigate replace to="/" />} path="*" />
-          </Route>
-        </Routes>
-      </Suspense>
+      <AppRoutes />
     </BrowserRouter>
   )
 }
