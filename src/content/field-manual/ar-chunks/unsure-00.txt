@@ -1,0 +1,14 @@
+HADITH: The most beloved of people to Allah are those most beneficial to people.
+HADITH: The best jihad is a word of truth before a tyrannical ruler.
+HADITH: a word of justice
+TERM: grader → صاحب الحكم — hadith-science role; «الحاكم» would collide with a political ruler
+TERM: appropriation line → بند اعتماد — budget term; could be «سطر مخصصات»
+TERM: prudential judgment → حكم تدبيري — could be «تقدير مصلحي»
+TERM: derivative → مشتق — tagline and verse comment; could be «عمل مشتق»
+TERM: dated anchor → مرتكز مؤرخ — column for a dated reference point
+TERM: being disappeared → يُغيَّب — enforced-disappearance verb; could be «يُخفى»
+TERM: zeal → حمية — could be «حماس» or «غيرة»
+TERM: filing → إيداع — organization check; could be «مستند مُودَع»
+TERM: authenticated → موثَّقين — not «صحيحين»; the manual itself qualifies the gradings
+TERM: cross-cutting → العابرة للقطاعات — could be «المتقاطعة» or «الشاملة»
+TERM: curious → محب للاستطلاع — «فضولي» often means meddlesome

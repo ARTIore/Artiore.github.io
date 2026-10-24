@@ -1,0 +1,25 @@
+TERM: Houthi → Houthi — kept the Latin proper name; usual Arabic is الحوثي.
+TERM: Palestinian Authority → Palestinian Authority — kept in Latin as an organisation name; usual Arabic is السلطة الفلسطينية.
+TERM: Palestinian Centre for Human Rights → Palestinian Centre for Human Rights — full organisation name kept in English.
+TERM: UN Human Rights Office → UN Human Rights Office — kept as an organisation name rather than translating the office.
+TERM: Security Council → Security Council — the body is kept in Latin, consistent with the publication Security Council Report.
+TERM: At Tur → الطور — treated as a place name (Jerusalem neighbourhood); the Latin form was not kept.
+TERM: Area C / E1 → Area C / E1 — kept as planning classifications rather than translated place names.
+TERM: clearance revenues → إيرادات المقاصة — Palestinian fiscal term; عائدات المقاصة is a close alternative.
+TERM: caseload → عبء الحالات — humanitarian jargon; حافظة المستفيدين is an alternative.
+TERM: advanced → أحرز تقدم — settlement plans moved forward in the pipeline, which is not final approval.
+TERM: brief → مرافعة — contrasts with an account, so an advocacy brief; مذكرة is the other common rendering.
+TERM: sponsorship system → نظام الكفالة — the source does not use the token kafala, so no Latin parenthesis was added.
+TERM: lean season → الموسم الأعجف — food-security term; موسم الشح is an alternative.
+TERM: chicken-and-egg → دجاجة وبيضة — idiom kept in source order; Arabic often says البيضة والدجاجة.
+TERM: pipeline → خط إمداد — verified food or medical pipeline.
+TERM: merchants–Hamas → التجار–Hamas — en dash kept inside the Arabic noun phrase.
+TERM: y/y → y/y — year-on-year abbreviation left in Latin beside CPI.
+TERM: ILO Article 26 → ILO Article 26 — Article left in English as part of the instrument name.
+TERM: Allah → الله — name of God; Latin (Allah) was not added because the source is not discussing the term.
+TERM: spelled-out million/billion → مليون/مليار/ملايين — unit words translated; compact forms such as 1.4m and $4.06bn left unchanged.
+TERM: cut-off → تاريخ القطع — the manual's data cut-off date.
+TERM: ledger → السجل — the funding ledger referred to below.
+TERM: probable-PTSD → probable-PTSD — the whole hyphenated clinical label was kept, including the English word probable.
+TERM: WFP Palestine → WFP Palestine — kept as the programme name; the place inside it was not translated to فلسطين.
+TERM: Gaza MoH → Gaza MoH — source label kept in Latin; the spelled-out ministry later is وزارة الصحة في غزة.

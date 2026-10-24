@@ -1,0 +1,19 @@
+TERM: Houthis/Houthi → Houthis/Houthi — اسم الجماعة أُبقي باللاتينية قياساً على Hamas؛ المقابل الشائع «الحوثيون/الحوثي»
+TERM: Catastrophe → Catastrophe — مرحلة IPC أُبقيت باللاتينية قياساً على Crisis وEmergency وليست في قائمة الإبقاء حرفياً
+TERM: catastrophe → catastrophe — اسم Phase 5 المقتبس أُبقي باللاتينية داخل التنصيص
+TERM: salary-scale → سلم الرواتب — تحتمل مناصرة سلم الرواتب أو المناصرة على نطاق أزمة الرواتب
+TERM: caseload → عدد المستفيدين / فئة مستفيدين مسماة — مصطلح الإغاثة قد يُقابل أيضاً بـ«عبء الحالات»؛ وnamed caseload فُهمت فئة محددة لا قائمة أسماء
+TERM: Central Bank → Central Bank — أُبقي علماً مرسوماً وقد يُراد «البنك المركزي» في العربية
+TERM: People's Assembly → People's Assembly — اسم المجلس أُبقي بالإنجليزية
+TERM: Southern Transitional Council → Southern Transitional Council — اسم الهيئة أُبقي بالإنجليزية
+TERM: Joint Medical Emergency Committee → Joint Medical Emergency Committee — اسم اللجنة أُبقي بالإنجليزية
+TERM: wires → وكالات الأنباء — reported by wires فُهمت وكالات أنباء
+TERM: under-covered → قليلة التغطية — فُهمت نقص تغطية إعلامية لا نقص خدمات
+TERM: Druze → الدروز — اسم الجماعة تُرجم ولم يُبقَ باللاتينية
+TERM: seated → أجلست — إجلاس المجلس مصطلح برلماني مقابل seated
+TERM: diversion → التحويل — مصطلح تحويل المساعدات وقد يُقرأ تحويلاً عاماً
+TERM: constituent → ناخب في دائرتك — لا مقابل حرفي واحد لـ constituent
+TERM: the emergency did not → لم تسقط الطوارئ — أُتمّ فعل «سقط» من الجملة السابقة؛ الطوارئ بمعنى الحالة الإنسانية
+TERM: Yours sincerely → المخلص — ختام الرسالة من غير ألقاب زائدة
+TERM: pipeline → خط إمداد — استعارة قناة الإيصال في قطاع الإغاثة
+TERM: label them → ضع لها علامة — قد تعني وسماً معرفياً أو مجرد التنبيه إلى عدم إمكانية التحقق

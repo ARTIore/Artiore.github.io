@@ -1,0 +1,13 @@
+TERM: carve-outs → استثناءات — استثناءات من نظام العقوبات؛ قد تُقابل بـ«إعفاءات»
+TERM: giga-projects → المشاريع العملاقة — تسمية فئة مشاريع سعودية تُترك غالباً بالإنجليزية
+TERM: crisis-level → مستوى Crisis — النص يقول crisis-level لا التوكن Crisis؛ أُبقي تصنيف IPC باللاتينية
+TERM: emergency → Emergency — النص بحروف صغيرة والمقصود تصنيف IPC؛ أُبقي التوكن Emergency
+TERM: clean crash → انهيار صافٍ — استعارة تعني انهياراً واضحاً في مقابل نمو بلا سبل عيش
+TERM: cash-for-work → النقد مقابل العمل — اسم أداة برامجية قد تُبقى بالإنجليزية
+TERM: binding constraint → القيد الملزم — مصطلح اقتصادي؛ من مقابلاته «العائق الحاسم»
+TERM: Vice and Virtue Ministry → Vice and Virtue Ministry — أُبقي بوصفه اسم منظمة؛ المقابل وزارة الأمر بالمعروف والنهي عن المنكر
+TERM: Ministry of Economy → Ministry of Economy — أُبقي بوصفه اسم منظمة؛ المقابل وزارة الاقتصاد
+TERM: sponsorship system → نظام الكفالة — النص يقول sponsorship لا kafala؛ وأُبقي kafala باللاتينية حيث وردت
+TERM: 16-hour → 16-hour — أُبقي المركّب الرقمي كما في «30-day»؛ وقد يُقرأ «16 ساعة»
+TERM: lean season → الموسم الأعجف — مصطلح IPC؛ يتردد بين «الموسم الأعجف» و«موسم الشح»
+TERM: interpretation → تفسير — وردت داخل الاستشهاد إلى جانب اسم المصدر، وقد تكون وسم منهج لا نثراً
