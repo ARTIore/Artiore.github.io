@@ -48,6 +48,6 @@ export const fieldManualLanguages: FieldManualLanguage[] = [
     nativeLabel: 'العربية',
     dir: 'rtl',
     path: '/field-manual/ar',
-    available: false,
+    available: true,
   },
 ]

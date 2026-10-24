@@ -41,7 +41,22 @@ export const frenchFieldManualMeta: typeof fieldManualMeta = {
   locale: 'fr_FR',
 }
 
-export const fieldManualMetas = [fieldManualMeta, frenchFieldManualMeta]
+export const arabicFieldManualMeta: typeof fieldManualMeta = {
+  path: '/field-manual/ar',
+  headTitle: 'الدليل الميداني ARTIORE، 23 October 2026 | Artiais.com',
+  description:
+    'اقرأ الملخص التنفيذي، ثم إحاطة الوضع، وصفحة "هذا الأسبوع"، وحزمة المناصرة للإقليم الواحد الذي ستعمل بشأنه فعلًا. تجاوز الباقي إلى أن تحتاج إليه.',
+  kind: 'article',
+  crumbName: 'الدليل الميداني',
+  headline: 'الدليل الميداني ARTIORE',
+  author: 'Zain Ul Abdin',
+  authorOrganization: 'ARTIORE',
+  datePublished: '2026-10-23',
+  inLanguage: 'ar',
+  locale: 'ar_AR',
+}
+
+export const fieldManualMetas = [fieldManualMeta, frenchFieldManualMeta, arabicFieldManualMeta]
 
 /** Companion page. Kept out of fieldManualMetas so it does not become an hreflang of the manual. */
 export const pocketBookletMeta: typeof fieldManualMeta = {
