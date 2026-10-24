@@ -1,0 +1,12 @@
+HADITH: Shall I not tell you of something better than fasting, prayer, and charity? It i
+BIBLE: Psalm 103:8 — translated from the manual's English
+BIBLE: Luke 6:36 — translated from the manual's English
+BIBLE: Amos 5:24 — translated from the manual's English
+BIBLE: Micah 6:8 — translated from the manual's English
+TERM: establishment → المؤسسة — في السياسة الباكستانية قد تعني المؤسسة العسكرية لا المؤسسات عامة
+TERM: household → معيشة الأسرة — في مقابل balance sheet، وقد تعني ميزانية الأسرة لا المعيشة
+TERM: safeguarding lead → مسؤول الصون — مصطلح حماية إنساني يُقابل أيضًا بـ«مسؤول الحماية»
+TERM: tokenism → التمثيل الرمزي — قد يُفهم تمثيل أقليات لا مشاركة شكلية
+TERM: trauma-informed → مستنير بالصدمات — شائع، ويُقابل أيضًا بـ«مراعٍ للصدمات»
+TERM: blasphemy → التجديف — في السياق الباكستاني قد يُراد «ازدراء الأديان»
+TERM: ego → أنا الوسيط — قد تُقرأ ضميرًا لا «غرور الوسيط»

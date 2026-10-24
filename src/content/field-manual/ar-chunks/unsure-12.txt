@@ -1,0 +1,12 @@
+TERM: Catastrophe/Famine → Catastrophe/Famine — اسما مرحلة IPC 5 يتصلان بقائمة Crisis, Emergency؛ أُبقيا لاتينيين كما أُبقي Catastrophe في المتن، والقاعدة سمّت Crisis وEmergency ولم تسمِّ Famine
+TERM: Integrated Food Security Phase Classification / Human Development Index / Multidimensional Poverty Index / Wage Protection System / Financial Tracking Service → أُبقيت بالإنجليزية — أسماء مؤشرات وأدوات كما في المتن؛ وللـ IPC مقابل عربي رسمي هو «التصنيف المرحلي المتكامل للأمن الغذائي»
+TERM: Assembly → الجمعية — في خانة White Helmets؛ قد تعني الجمعية العمومية أو مجرد اجتماع أُشير إليه
+TERM: pipeline → مسار — في «Project-based; no pipeline» قد تعني قناة إيصال أو خط برامج لا مساراً عاماً
+TERM: filing → إيداع — قد تعني مستنداً مودعاً لدى جهة تنظيم (نحو Form 990) لا ملفاً عاماً
+TERM: Established 501(c)(3) → كيان 501(c)(3) قائم — قد تفيد «أُثبتت الصفة» لا «كيان عريق»
+TERM: Saudi chapter → فصل السعودية — قد يكون فصل التقرير القُطري لا فرع المنظمة
+TERM: ordinance → مرسوم — في قانون باكستان قد يُقابل «أمر» لا «مرسوم»
+TERM: jurisdiction → اختصاصك القضائي — قد يُراد قانون بلد القارئ لا اختصاص محكمة
+TERM: the Sahel → الساحل — اسم الإقليم؛ قد يُلتبس بالساحل بمعنى الشاطئ
+TERM: authoritative → ذات حجية — قد تُقابل بـ«هي المرجع المعتمد»
+TERM: short source glosses (detention of women, civilian casualties, executions tally, Houthi attacks, inflation, minimum wage, military courts, farmers' protests, freedom of religion report, EFF/RSF reviews) → وُصفت بالعربية — هذه ليست عناوين الصفحات كما في الروابط؛ إن عُدّت عناوين مختصرة كان ينبغي إبقاؤها بالإنجليزية

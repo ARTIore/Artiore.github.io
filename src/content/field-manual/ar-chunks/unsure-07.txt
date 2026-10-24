@@ -1,0 +1,16 @@
+TERM: berkads → berkads — خزانات ماء صومالية بلا مقابل عربي مستقر في الدليل؛ أُبقي التوكن اللاتيني
+TERM: departments → الإدارات — وحدات تشاد (départements)؛ قد تُقابل بـ«مقاطعات» أو «دوائر»
+TERM: Lake province → إقليم البحيرة — مقاطعة Lac؛ الشائع أيضاً «محافظة البحيرة»
+TERM: poverty headcount → تعداد الفقر — قد يكون نسبة انتشار لا عدّاً للرؤوس
+TERM: Catastrophe → Catastrophe — طور IPC الخامس؛ قائمة الإبقاء تذكر Crisis وEmergency ولا تذكر Catastrophe
+TERM: carve-outs → الاستثناءات — استثناءات العقوبات؛ قد تُقابل بـ«إعفاءات»
+TERM: indictments → لوائح اتهام — قد تُقابل بـ«إدانات»
+TERM: graft → الاختلاس — قد يضيق عن الرشوة والفساد معاً
+TERM: severely → بصورة وخيمة — بعد acutely malnourished المقصود الطور الوخيم لا مجرد الشدة
+TERM: the hungry will not → والجياع لن يأكلوا — الفعل محذوف في الإنجليزية وأُظهر «يأكلوا»
+TERM: crisis-level → مستوى Crisis — وصف لا التوكن Crisis وحده
+TERM: in emergency → في Emergency — حروف صغيرة والمقصود طور IPC
+TERM: Red Cross/Red Crescent → Red Cross/Red Crescent — أُبقيا بوصفهما اسمي منظمتين؛ المقابل الشائع الصليب الأحمر/الهلال الأحمر
+TERM: district → المقاطعة — في هذا الإقليم قد تُقابل بـ«منطقة»
+TERM: trigger → المحفّز — في تحليل المجاعة يقابل السبب البنيوي؛ قد يُقابل بـ«المفجّر»
+TERM: pipelines → مسارات — قد تعني قنوات تمويل أو خطوط إيصال

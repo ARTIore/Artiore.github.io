@@ -1,0 +1,13 @@
+HADITH: The most beloved of people to Allah are those most beneficial to people.
+HADITH: The best jihad is a word of truth before a tyrannical ruler.
+TERM: Guardrails → ضوابط — heading; حواجز الحماية is equally plausible
+TERM: Integration → التكامل — phase name in the 30-day plan; الدمج is also plausible
+TERM: divide → انقسام — “across a divide” could be عبر فجوة or مع طرف مخالف
+TERM: witness → يشهدوا — Qur'an 2:256 beside invite/argue; could be شهادة الإيمان rather than the verb
+TERM: belovedness → المحبوبية — rare English noun for being beloved
+TERM: striving → السعي — commentary gloss of jihad; المجاهدة also possible
+TERM: favour → منّة — “not a favour” could be ليست معروفًا
+TERM: grading → الدرجة — hadith grading; الحكم is used elsewhere for the grader’s verdict
+TERM: safeguards → ضمانات وقائية — could be ضمانات alone
+TERM: state-sponsor designation → تصنيف الدولة الراعية — US legal term usually continues “of terrorism”; that was not added because the English omits it
+TERM: register glosses → mixed — shorthand that is not the page title was translated (ReliefWeb country pages; statement on killings of children; oPt 2026 plan; Gaza death toll; statement on prosecution of UN staff; missing persons; rescinding designation; Quneitra incursion; north-west Syria floods; via) and publication titles were kept in English
