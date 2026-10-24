@@ -7,6 +7,7 @@ export default function PocketBookletPage() {
   return (
     <FieldManualLayout
       bookletPages={pocketBookletImages}
+      companions={[{ href: '/field-manual/carousels', label: 'Companion: Carousels' }]}
       download={{ href: pocketBookletPdfPath, label: 'Download PDF' }}
       languages={[]}
       manual={pocketBooklet}

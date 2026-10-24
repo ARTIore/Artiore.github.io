@@ -56,4 +56,9 @@ export type SeoEntry = PageMeta & {
   inLanguage?: string
   locale?: string
   alternates?: { hreflang: string; path: string }[]
+  /** Absolute og:image. Defaults to the site image when omitted. */
+  image?: string
+  imageWidth?: string
+  imageHeight?: string
+  imageAlt?: string
 }

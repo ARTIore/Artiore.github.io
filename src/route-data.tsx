@@ -24,6 +24,7 @@ const loaders: Record<string, Loader> = {
   '/field-manual': () => import('./pages/FieldManualPage'),
   '/field-manual/fr': () => import('./pages/FieldManualFrPage'),
   '/field-manual/pocket-booklet': () => import('./pages/PocketBookletPage'),
+  '/field-manual/carousels': () => import('./pages/CarouselsPage'),
   '/blog': () => import('./pages/BlogPage'),
   '/about': documentRoute(async () => (await import('./content/documents')).aboutPage),
   '/philosophy': documentRoute(async () => (await import('./content/documents')).philosophyPage),

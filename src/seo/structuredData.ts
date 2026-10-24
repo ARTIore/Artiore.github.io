@@ -18,6 +18,7 @@ export type JsonLdInput = {
   authorOrganization?: string
   datePublished?: string
   inLanguage?: string
+  image?: string
 }
 
 export function openGraphType(kind: SeoKind | undefined) {
@@ -91,7 +92,7 @@ export function buildJsonLd(input: JsonLdInput) {
       datePublished: input.datePublished,
       url: canonical,
       mainEntityOfPage: canonical,
-      image: OG_IMAGE_URL,
+      image: input.image ?? OG_IMAGE_URL,
       publisher: { '@id': ORGANIZATION_ID },
       ...(input.inLanguage ? { inLanguage: input.inLanguage } : {}),
     })
@@ -109,7 +110,7 @@ export function buildJsonLd(input: JsonLdInput) {
       datePublished: input.datePublished,
       url: canonical,
       mainEntityOfPage: canonical,
-      image: OG_IMAGE_URL,
+      image: input.image ?? OG_IMAGE_URL,
       publisher: { '@id': ORGANIZATION_ID },
       ...(input.inLanguage ? { inLanguage: input.inLanguage } : {}),
     })

@@ -3,7 +3,8 @@ import { blogPosts } from './blog'
 import { documentPages } from './documents'
 import { legalPages } from './legal'
 import { libraryPages } from './library'
-import { fieldManualMetas, pocketBookletMeta } from './field-manual/meta'
+import { carouselDecks, carouselOgImage } from './field-manual/carousels'
+import { carouselSeriesMeta, fieldManualMetas, pocketBookletMeta } from './field-manual/meta'
 import { contactMeta, engineMeta, homeMeta, systemMeta } from './meta'
 import { buildJsonLd } from '../seo/structuredData'
 import type { PageDocument, SeoEntry } from './types'
@@ -46,6 +47,15 @@ export const seoEntries: SeoEntry[] = [
   })),
   {
     ...pocketBookletMeta,
+    sitemap: true,
+    prerender: true,
+  },
+  {
+    ...carouselSeriesMeta,
+    image: carouselOgImage.src,
+    imageWidth: carouselOgImage.width,
+    imageHeight: carouselOgImage.height,
+    imageAlt: carouselDecks[0].slides[0].alt,
     sitemap: true,
     prerender: true,
   },

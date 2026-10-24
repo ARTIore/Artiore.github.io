@@ -73,6 +73,24 @@ export function HomeSections() {
           >
             Email ARTIore
           </SiteLink>
+          <SiteLink
+            className="inline-flex min-h-11 items-center justify-center rounded-full border border-gold/60 px-5 py-2 text-sm font-semibold text-gold-bright"
+            href="/field-manual"
+          >
+            Field Manual
+          </SiteLink>
+          <SiteLink
+            className="inline-flex min-h-11 items-center justify-center rounded-full border border-gold/60 px-5 py-2 text-sm font-semibold text-gold-bright"
+            href="/field-manual/pocket-booklet"
+          >
+            Pocket Booklet
+          </SiteLink>
+          <SiteLink
+            className="inline-flex min-h-11 items-center justify-center rounded-full border border-gold/60 px-5 py-2 text-sm font-semibold text-gold-bright"
+            href="/field-manual/carousels"
+          >
+            Carousels
+          </SiteLink>
         </div>
       </section>
 

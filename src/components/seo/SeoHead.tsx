@@ -23,6 +23,10 @@ type SeoHeadProps = {
   inLanguage?: string
   locale?: string
   alternates?: { hreflang: string; path: string }[]
+  image?: string
+  imageWidth?: string
+  imageHeight?: string
+  imageAlt?: string
 }
 
 function upsertMeta(selector: string, attributes: Record<string, string>) {
@@ -50,9 +54,17 @@ export function SeoHead({
   inLanguage,
   locale,
   alternates,
+  image,
+  imageWidth,
+  imageHeight,
+  imageAlt,
 }: SeoHeadProps) {
   useEffect(() => {
     const canonical = canonicalUrl(path)
+    const ogUrl = image ?? OG_IMAGE_URL
+    const ogWidth = imageWidth ?? OG_IMAGE_WIDTH
+    const ogHeight = imageHeight ?? OG_IMAGE_HEIGHT
+    const ogAlt = imageAlt ?? OG_IMAGE_ALT
     document.title = title
     document.documentElement.lang = inLanguage ?? 'en'
 
@@ -63,16 +75,16 @@ export function SeoHead({
     upsertMeta('meta[property="og:title"]', { property: 'og:title', content: title })
     upsertMeta('meta[property="og:description"]', { property: 'og:description', content: description })
     upsertMeta('meta[property="og:url"]', { property: 'og:url', content: canonical })
-    upsertMeta('meta[property="og:image"]', { property: 'og:image', content: OG_IMAGE_URL })
-    upsertMeta('meta[property="og:image:width"]', { property: 'og:image:width', content: OG_IMAGE_WIDTH })
-    upsertMeta('meta[property="og:image:height"]', { property: 'og:image:height', content: OG_IMAGE_HEIGHT })
-    upsertMeta('meta[property="og:image:alt"]', { property: 'og:image:alt', content: OG_IMAGE_ALT })
+    upsertMeta('meta[property="og:image"]', { property: 'og:image', content: ogUrl })
+    upsertMeta('meta[property="og:image:width"]', { property: 'og:image:width', content: ogWidth })
+    upsertMeta('meta[property="og:image:height"]', { property: 'og:image:height', content: ogHeight })
+    upsertMeta('meta[property="og:image:alt"]', { property: 'og:image:alt', content: ogAlt })
     upsertMeta('meta[name="twitter:card"]', { name: 'twitter:card', content: 'summary_large_image' })
     upsertMeta('meta[name="twitter:site"]', { name: 'twitter:site', content: '@Artiore' })
     upsertMeta('meta[name="twitter:title"]', { name: 'twitter:title', content: title })
     upsertMeta('meta[name="twitter:description"]', { name: 'twitter:description', content: description })
-    upsertMeta('meta[name="twitter:image"]', { name: 'twitter:image', content: OG_IMAGE_URL })
-    upsertMeta('meta[name="twitter:image:alt"]', { name: 'twitter:image:alt', content: OG_IMAGE_ALT })
+    upsertMeta('meta[name="twitter:image"]', { name: 'twitter:image', content: ogUrl })
+    upsertMeta('meta[name="twitter:image:alt"]', { name: 'twitter:image:alt', content: ogAlt })
     upsertMeta('meta[name="robots"]', {
       name: 'robots',
       content: noindex ? 'noindex,follow' : 'index,follow',
@@ -115,9 +127,10 @@ export function SeoHead({
         authorOrganization,
         datePublished,
         inLanguage,
+        image: ogUrl,
       }),
     )
-  }, [alternates, author, authorOrganization, crumbName, datePublished, description, headline, inLanguage, kind, locale, noindex, path, title])
+  }, [alternates, author, authorOrganization, crumbName, datePublished, description, headline, image, imageAlt, imageHeight, imageWidth, inLanguage, kind, locale, noindex, path, title])
 
   return null
 }

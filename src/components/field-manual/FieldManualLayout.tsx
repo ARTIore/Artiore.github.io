@@ -447,13 +447,13 @@ export function FieldManualLayout({
   manual,
   languages,
   download,
-  companion,
+  companions,
   bookletPages,
 }: {
   manual: FieldManualContent
   languages: FieldManualLanguage[]
   download?: { href: string; label: string }
-  companion?: { href: string; label: string }
+  companions?: { href: string; label: string }[]
   bookletPages?: BookletPageImage[]
 }) {
   const [tocOpen, setTocOpen] = useState(false)
@@ -496,11 +496,17 @@ export function FieldManualLayout({
             <time dateTime={manual.datePublished}>{manual.dateLabel}</time>
           </p>
           <p className="mt-3 text-sm leading-relaxed text-gold-bright">{manual.tagline}</p>
-          {companion ? (
-            <p className="no-print mt-3 text-sm text-muted">
-              <SiteLink className="underline decoration-gold/40 underline-offset-4 hover:text-cream" href={companion.href}>
-                {companion.label}
-              </SiteLink>
+          {companions && companions.length > 0 ? (
+            <p className="no-print mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted">
+              {companions.map((item) => (
+                <SiteLink
+                  className="underline decoration-gold/40 underline-offset-4 hover:text-cream"
+                  href={item.href}
+                  key={item.href}
+                >
+                  {item.label}
+                </SiteLink>
+              ))}
             </p>
           ) : null}
           <div className="mt-5 flex flex-wrap items-center gap-3">

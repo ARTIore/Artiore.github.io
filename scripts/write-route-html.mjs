@@ -19,7 +19,7 @@ function replaceAttr(html, pattern, value) {
   return html.replace(pattern, (full, before, after) => `${before}${value}${after}`)
 }
 
-function applyMeta(html, { title, description, canonical, robots, ogType, lang, locale, alternates }) {
+function applyMeta(html, { title, description, canonical, robots, ogType, lang, locale, alternates, image, imageWidth, imageHeight, imageAlt }) {
   const safeTitle = escapeHtml(title)
   const safeDescription = escapeHtml(description)
   const safeCanonical = escapeHtml(canonical)
@@ -61,6 +61,16 @@ function applyMeta(html, { title, description, canonical, robots, ogType, lang, 
       .join('\n    ')
     next = next.replace('</head>', `    ${links}\n  </head>`)
   }
+  if (image) {
+    next = replaceAttr(next, /(<meta\s+property="og:image"\s+content=")[^"]*(")/, escapeHtml(image))
+    next = replaceAttr(next, /(<meta\s+name="twitter:image"\s+content=")[^"]*(")/, escapeHtml(image))
+  }
+  if (imageWidth) next = replaceAttr(next, /(<meta\s+property="og:image:width"\s+content=")[^"]*(")/, escapeHtml(imageWidth))
+  if (imageHeight) next = replaceAttr(next, /(<meta\s+property="og:image:height"\s+content=")[^"]*(")/, escapeHtml(imageHeight))
+  if (imageAlt) {
+    next = replaceAttr(next, /(<meta\s+property="og:image:alt"\s+content=")[^"]*(")/, escapeHtml(imageAlt))
+    next = replaceAttr(next, /(<meta\s+name="twitter:image:alt"\s+content=")[^"]*(")/, escapeHtml(imageAlt))
+  }
   return next
 }
 
@@ -93,6 +103,8 @@ const routeSources = {
   '/system-documentation': ['src/pages/SystemDocsPage.tsx'],
   '/field-manual': ['src/pages/FieldManualPage.tsx', 'src/components/field-manual/FieldManualLayout.tsx'],
   '/field-manual/fr': ['src/pages/FieldManualFrPage.tsx', 'src/components/field-manual/FieldManualLayout.tsx'],
+  '/field-manual/pocket-booklet': ['src/pages/PocketBookletPage.tsx', 'src/components/field-manual/FieldManualLayout.tsx'],
+  '/field-manual/carousels': ['src/pages/CarouselsPage.tsx', 'src/components/field-manual/CarouselRow.tsx'],
   '/blog': ['src/pages/BlogPage.tsx'],
   '/about': ['src/content/documents.ts', 'src/components/content/DocumentView.tsx'],
   '/philosophy': ['src/content/documents.ts', 'src/components/content/DocumentView.tsx'],
@@ -170,6 +182,10 @@ async function renderDocument(templateHtml, entry, location) {
     lang: entry.inLanguage,
     locale: entry.locale,
     alternates: entry.alternates,
+    image: entry.image,
+    imageWidth: entry.imageWidth,
+    imageHeight: entry.imageHeight,
+    imageAlt: entry.imageAlt,
   })
   const withJson = replaceJsonLd(
     htmlWithMeta,
@@ -184,6 +200,7 @@ async function renderDocument(templateHtml, entry, location) {
       authorOrganization: entry.authorOrganization,
       datePublished: entry.datePublished,
       inLanguage: entry.inLanguage,
+      image: entry.image,
     }),
   )
   const body = await render(location)

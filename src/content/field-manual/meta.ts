@@ -60,3 +60,19 @@ export const pocketBookletMeta: typeof fieldManualMeta = {
 }
 
 export const pocketBookletPdfPath = '/field-manual/ARTIORE-Pocket-Booklet-2026-10-23.pdf'
+
+/** Companion gallery. Kept out of fieldManualMetas so it does not become an hreflang of the manual. */
+export const carouselSeriesMeta: typeof fieldManualMeta = {
+  path: '/field-manual/carousels',
+  headTitle: 'ARTIORE Carousel Series, 23 October 2026 | Artiais.com',
+  description:
+    'Six ARTIORE carousels of 23 October 2026: the moral frame, seven places, the funding gap, before you share, a letter that works, and thirty days.',
+  kind: 'article',
+  crumbName: 'Carousels',
+  headline: 'ARTIORE Carousel Series',
+  author: 'Zain Ul Abdin',
+  authorOrganization: 'ARTIORE',
+  datePublished: '2026-10-23',
+  inLanguage: 'en',
+  locale: 'en_US',
+}
