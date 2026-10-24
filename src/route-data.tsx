@@ -23,6 +23,7 @@ const loaders: Record<string, Loader> = {
   '/system-documentation': () => import('./pages/SystemDocsPage'),
   '/field-manual': () => import('./pages/FieldManualPage'),
   '/field-manual/fr': () => import('./pages/FieldManualFrPage'),
+  '/field-manual/pocket-booklet': () => import('./pages/PocketBookletPage'),
   '/blog': () => import('./pages/BlogPage'),
   '/about': documentRoute(async () => (await import('./content/documents')).aboutPage),
   '/philosophy': documentRoute(async () => (await import('./content/documents')).philosophyPage),

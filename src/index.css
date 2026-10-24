@@ -113,4 +113,13 @@ body {
   .field-manual tr {
     break-inside: avoid;
   }
+
+  .pocket-text {
+    display: block !important;
+  }
+
+  .pocket-viewer,
+  .pocket-tabs {
+    display: none !important;
+  }
 }

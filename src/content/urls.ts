@@ -40,6 +40,13 @@ export function breadcrumbItems(path: string, current: string): Crumb[] {
       { name: current, path: clean },
     ]
   }
+  if (clean === '/field-manual/pocket-booklet') {
+    return [
+      { name: 'Home', path: '/' },
+      { name: 'Field Manual', path: '/field-manual' },
+      { name: current, path: clean },
+    ]
+  }
   return [
     { name: 'Home', path: '/' },
     { name: clean === '/blog' ? 'Blog' : current, path: clean },

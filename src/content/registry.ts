@@ -3,7 +3,7 @@ import { blogPosts } from './blog'
 import { documentPages } from './documents'
 import { legalPages } from './legal'
 import { libraryPages } from './library'
-import { fieldManualMetas } from './field-manual/meta'
+import { fieldManualMetas, pocketBookletMeta } from './field-manual/meta'
 import { contactMeta, engineMeta, homeMeta, systemMeta } from './meta'
 import { buildJsonLd } from '../seo/structuredData'
 import type { PageDocument, SeoEntry } from './types'
@@ -44,6 +44,11 @@ export const seoEntries: SeoEntry[] = [
     sitemap: true,
     prerender: true,
   })),
+  {
+    ...pocketBookletMeta,
+    sitemap: true,
+    prerender: true,
+  },
   ...allDocuments.map((page) => ({
     path: page.path,
     headTitle: page.headTitle,

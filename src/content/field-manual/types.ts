@@ -7,6 +7,8 @@ export type FieldManualBlock =
   | { type: 'checklist'; items: string[] }
   | { type: 'paths'; intro: string; items: { title: string; body: string }[] }
   | { type: 'table'; caption: string; headers: string[]; rows: string[][] }
+  | { type: 'region'; id: string; kicker: string; title: string; subtitle: string }
+  | { type: 'quote'; paragraphs: string[] }
 
 export type FieldManualTocItem = {
   id: string

@@ -42,3 +42,21 @@ export const frenchFieldManualMeta: typeof fieldManualMeta = {
 }
 
 export const fieldManualMetas = [fieldManualMeta, frenchFieldManualMeta]
+
+/** Companion page. Kept out of fieldManualMetas so it does not become an hreflang of the manual. */
+export const pocketBookletMeta: typeof fieldManualMeta = {
+  path: '/field-manual/pocket-booklet',
+  headTitle: 'ARTIORE Pocket Booklet, 23 October 2026 | Artiais.com',
+  description:
+    'This is a pocket booklet for people who want to be useful without becoming propagandists. It is designed to be read in an hour and used for a month.',
+  kind: 'article',
+  crumbName: 'Pocket Booklet',
+  headline: 'The Pocket Booklet',
+  author: 'Zain Ul Abdin',
+  authorOrganization: 'ARTIORE',
+  datePublished: '2026-10-23',
+  inLanguage: 'en',
+  locale: 'en_US',
+}
+
+export const pocketBookletPdfPath = '/field-manual/ARTIORE-Pocket-Booklet-2026-10-23.pdf'
