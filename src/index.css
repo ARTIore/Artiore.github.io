@@ -122,4 +122,9 @@ body {
   .pocket-tabs {
     display: none !important;
   }
+
+  .field-manual .sincerity-note {
+    border: 1px solid #1a1814 !important;
+    break-inside: avoid;
+  }
 }
