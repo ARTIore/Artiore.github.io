@@ -5,7 +5,7 @@ import { breadcrumbItems, canonicalUrl } from '../content/urls'
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`
 export const WEBSITE_ID = `${SITE_URL}/#website`
 
-export type SeoKind = 'home' | 'page' | 'blog-post' | 'engine'
+export type SeoKind = 'home' | 'page' | 'blog-post' | 'engine' | 'article'
 
 export type JsonLdInput = {
   kind: SeoKind
@@ -15,11 +15,12 @@ export type JsonLdInput = {
   crumbName: string
   headline?: string
   author?: string
+  authorOrganization?: string
   datePublished?: string
 }
 
 export function openGraphType(kind: SeoKind | undefined) {
-  return kind === 'blog-post' ? 'article' : 'website'
+  return kind === 'blog-post' || kind === 'article' ? 'article' : 'website'
 }
 
 function organizationNode() {
@@ -86,6 +87,23 @@ export function buildJsonLd(input: JsonLdInput) {
       headline: input.headline,
       description: input.description,
       author: { '@type': 'Person', name: input.author },
+      datePublished: input.datePublished,
+      url: canonical,
+      mainEntityOfPage: canonical,
+      image: OG_IMAGE_URL,
+      publisher: { '@id': ORGANIZATION_ID },
+    })
+  } else if (input.kind === 'article' && input.author && input.datePublished && input.headline) {
+    const authors: Record<string, string>[] = [{ '@type': 'Person', name: input.author }]
+    if (input.authorOrganization) {
+      authors.push({ '@type': 'Organization', name: input.authorOrganization })
+    }
+    graph.push({
+      '@type': 'Article',
+      '@id': `${canonical}#article`,
+      headline: input.headline,
+      description: input.description,
+      author: authors,
       datePublished: input.datePublished,
       url: canonical,
       mainEntityOfPage: canonical,

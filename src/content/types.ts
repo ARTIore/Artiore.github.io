@@ -39,7 +39,7 @@ export type PageDocument = PageMeta & {
   published?: string
 }
 
-export type SeoKind = 'home' | 'page' | 'blog-post' | 'engine'
+export type SeoKind = 'home' | 'page' | 'blog-post' | 'engine' | 'article'
 
 export type SeoEntry = PageMeta & {
   prerender?: boolean
@@ -50,5 +50,7 @@ export type SeoEntry = PageMeta & {
   crumbName?: string
   headline?: string
   author?: string
+  /** Named with the person when the byline is a person and an organization. */
+  authorOrganization?: string
   datePublished?: string
 }

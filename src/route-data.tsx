@@ -21,6 +21,7 @@ const loaders: Record<string, Loader> = {
   '/contact': () => import('./pages/ContactPage'),
   '/engine': () => import('./pages/EnginePage'),
   '/system-documentation': () => import('./pages/SystemDocsPage'),
+  '/field-manual': () => import('./pages/FieldManualPage'),
   '/blog': () => import('./pages/BlogPage'),
   '/about': documentRoute(async () => (await import('./content/documents')).aboutPage),
   '/philosophy': documentRoute(async () => (await import('./content/documents')).philosophyPage),

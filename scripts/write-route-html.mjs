@@ -70,6 +70,7 @@ const routeSources = {
   '/contact': ['src/pages/ContactPage.tsx'],
   '/engine': ['src/pages/EnginePage.tsx'],
   '/system-documentation': ['src/pages/SystemDocsPage.tsx'],
+  '/field-manual': ['src/pages/FieldManualPage.tsx', 'src/components/field-manual/FieldManualLayout.tsx'],
   '/blog': ['src/pages/BlogPage.tsx'],
   '/about': ['src/content/documents.ts', 'src/components/content/DocumentView.tsx'],
   '/philosophy': ['src/content/documents.ts', 'src/components/content/DocumentView.tsx'],
@@ -143,7 +144,7 @@ async function renderDocument(templateHtml, entry, location) {
     description: entry.description,
     canonical: canonicalUrl(entry.path),
     robots: entry.noindex ? 'noindex,follow' : 'index,follow',
-    ogType: kind === 'blog-post' ? 'article' : 'website',
+    ogType: kind === 'blog-post' || kind === 'article' ? 'article' : 'website',
   })
   const withJson = replaceJsonLd(
     htmlWithMeta,
@@ -155,6 +156,7 @@ async function renderDocument(templateHtml, entry, location) {
       crumbName: entry.crumbName || entry.headTitle,
       headline: entry.headline,
       author: entry.author,
+      authorOrganization: entry.authorOrganization,
       datePublished: entry.datePublished,
     }),
   )

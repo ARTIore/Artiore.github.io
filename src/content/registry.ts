@@ -3,6 +3,7 @@ import { blogPosts } from './blog'
 import { documentPages } from './documents'
 import { legalPages } from './legal'
 import { libraryPages } from './library'
+import { fieldManualMeta } from './field-manual/meta'
 import { contactMeta, engineMeta, homeMeta, systemMeta } from './meta'
 import { buildJsonLd } from '../seo/structuredData'
 import type { PageDocument, SeoEntry } from './types'
@@ -11,7 +12,7 @@ export { buildJsonLd }
 
 export const blogMeta = blogIndexMeta
 
-const customMetas = [homeMeta, contactMeta, engineMeta, systemMeta, blogMeta]
+const customMetas = [homeMeta, contactMeta, engineMeta, systemMeta, blogMeta, fieldManualMeta]
 
 export const allDocuments: PageDocument[] = [
   ...documentPages,

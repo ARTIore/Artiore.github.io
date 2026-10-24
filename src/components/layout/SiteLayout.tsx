@@ -63,7 +63,7 @@ export function SiteLayout() {
       >
         Skip to main content
       </a>
-      <header className="sticky top-0 z-40 border-b border-gold/20 bg-ink/95 backdrop-blur">
+      <header className="site-header sticky top-0 z-40 border-b border-gold/20 bg-ink/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
           <NavLink className="min-w-0" end to="/">
             <span className="block font-serif text-2xl tracking-[0.14em] text-gold">ARTIore</span>
@@ -154,7 +154,7 @@ export function SiteLayout() {
         <Outlet />
       </main>
 
-      <footer className="border-t border-gold/20">
+      <footer className="site-footer border-t border-gold/20">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
             <p className="font-serif text-3xl text-gold">ARTIore</p>

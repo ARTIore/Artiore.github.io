@@ -49,3 +49,51 @@ body {
     scroll-behavior: auto;
   }
 }
+
+.field-manual :is(h2, h3) {
+  scroll-margin-top: 9rem;
+}
+
+@media print {
+  .site-header,
+  .site-footer,
+  .no-print {
+    display: none !important;
+  }
+
+  body,
+  #root,
+  main {
+    background: #fff !important;
+    color: #1a1814 !important;
+  }
+
+  .field-manual,
+  .field-manual * {
+    color: #1a1814 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .field-manual a {
+    text-decoration: underline;
+  }
+
+  .field-toc-panel {
+    display: block !important;
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .field-manual table,
+  .field-manual tr,
+  .field-manual th,
+  .field-manual td {
+    border-color: #1a1814 !important;
+  }
+
+  .field-manual tr {
+    break-inside: avoid;
+  }
+}

@@ -18,6 +18,7 @@ type SeoHeadProps = {
   crumbName?: string
   headline?: string
   author?: string
+  authorOrganization?: string
   datePublished?: string
 }
 
@@ -41,6 +42,7 @@ export function SeoHead({
   crumbName,
   headline,
   author,
+  authorOrganization,
   datePublished,
 }: SeoHeadProps) {
   useEffect(() => {
@@ -93,10 +95,11 @@ export function SeoHead({
         crumbName: crumbName ?? title,
         headline,
         author,
+        authorOrganization,
         datePublished,
       }),
     )
-  }, [author, crumbName, datePublished, description, headline, kind, noindex, path, title])
+  }, [author, authorOrganization, crumbName, datePublished, description, headline, kind, noindex, path, title])
 
   return null
 }

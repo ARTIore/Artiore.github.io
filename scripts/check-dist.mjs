@@ -113,6 +113,9 @@ for (const entry of seoEntries) {
       if (entry.kind === 'blog-post' && !types.includes('BlogPosting')) {
         fail(`${entry.path} JSON-LD is missing BlogPosting`)
       }
+      if (entry.kind === 'article' && !types.includes('Article')) {
+        fail(`${entry.path} JSON-LD is missing Article`)
+      }
       if (entry.kind === 'engine' && !types.includes('SoftwareApplication')) {
         fail(`${entry.path} JSON-LD is missing SoftwareApplication`)
       }
