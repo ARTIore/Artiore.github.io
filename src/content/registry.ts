@@ -3,7 +3,7 @@ import { blogPosts } from './blog'
 import { documentPages } from './documents'
 import { legalPages } from './legal'
 import { libraryPages } from './library'
-import { fieldManualMeta } from './field-manual/meta'
+import { fieldManualMetas } from './field-manual/meta'
 import { contactMeta, engineMeta, homeMeta, systemMeta } from './meta'
 import { buildJsonLd } from '../seo/structuredData'
 import type { PageDocument, SeoEntry } from './types'
@@ -12,7 +12,12 @@ export { buildJsonLd }
 
 export const blogMeta = blogIndexMeta
 
-const customMetas = [homeMeta, contactMeta, engineMeta, systemMeta, blogMeta, fieldManualMeta]
+const customMetas = [homeMeta, contactMeta, engineMeta, systemMeta, blogMeta]
+
+const fieldManualAlternates = [
+  ...fieldManualMetas.map((meta) => ({ hreflang: meta.inLanguage, path: meta.path })),
+  { hreflang: 'x-default', path: '/field-manual' },
+]
 
 export const allDocuments: PageDocument[] = [
   ...documentPages,
@@ -30,6 +35,12 @@ const summaryByPath = Object.fromEntries(blogSummaries.map((item) => [item.path,
 export const seoEntries: SeoEntry[] = [
   ...customMetas.map((meta) => ({
     ...meta,
+    sitemap: true,
+    prerender: true,
+  })),
+  ...fieldManualMetas.map((meta) => ({
+    ...meta,
+    alternates: fieldManualAlternates,
     sitemap: true,
     prerender: true,
   })),

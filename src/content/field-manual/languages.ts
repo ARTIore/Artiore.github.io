@@ -16,7 +16,7 @@ export const fieldManualLanguages: FieldManualLanguage[] = [
     nativeLabel: 'Français',
     dir: 'ltr',
     path: '/field-manual/fr',
-    available: false,
+    available: true,
   },
   {
     code: 'es',

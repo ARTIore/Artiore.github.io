@@ -73,6 +73,19 @@ for (const entry of seoEntries) {
     fail(`${entry.path} HTML is missing twitter:card`)
   }
   if (!html.includes('name="twitter:site" content="@Artiore"')) fail(`${entry.path} HTML is missing twitter:site`)
+  if (entry.inLanguage && !html.includes(`<html lang="${entry.inLanguage}">`)) {
+    fail(`${entry.path} HTML lang is not ${entry.inLanguage}`)
+  }
+  if (entry.locale && !html.includes(`property="og:locale" content="${entry.locale}"`)) {
+    fail(`${entry.path} HTML is missing og:locale`)
+  }
+  if (entry.alternates) {
+    for (const alt of entry.alternates) {
+      const href = canonicalUrl(alt.path)
+      if (!html.includes(`hreflang="${alt.hreflang}"`)) fail(`${entry.path} HTML is missing hreflang ${alt.hreflang}`)
+      if (!html.includes(`href="${href}"`)) fail(`${entry.path} HTML is missing alternate ${href}`)
+    }
+  }
   const h1s = html.match(/<h1\b/g) ?? []
   if (h1s.length !== 1) fail(`${entry.path} has ${h1s.length} h1 elements`)
   if (entry.noindex) {
@@ -115,6 +128,12 @@ for (const entry of seoEntries) {
       }
       if (entry.kind === 'article' && !types.includes('Article')) {
         fail(`${entry.path} JSON-LD is missing Article`)
+      }
+      if (entry.inLanguage) {
+        const article = (data['@graph'] ?? []).find((node) => node['@type'] === 'Article' || node['@type'] === 'BlogPosting')
+        if (!article || article.inLanguage !== entry.inLanguage) {
+          fail(`${entry.path} JSON-LD inLanguage is not ${entry.inLanguage}`)
+        }
       }
       if (entry.kind === 'engine' && !types.includes('SoftwareApplication')) {
         fail(`${entry.path} JSON-LD is missing SoftwareApplication`)

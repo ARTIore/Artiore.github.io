@@ -28,6 +28,8 @@ export type FieldManualContent = {
   datePublished: string
   tagline: string
   disclaimers: string[]
+  /** Shown on translations. Absent on the English original. */
+  translationNotice?: string
   toc: FieldManualTocItem[]
   blocks: FieldManualBlock[]
 }

@@ -53,4 +53,7 @@ export type SeoEntry = PageMeta & {
   /** Named with the person when the byline is a person and an organization. */
   authorOrganization?: string
   datePublished?: string
+  inLanguage?: string
+  locale?: string
+  alternates?: { hreflang: string; path: string }[]
 }

@@ -10,6 +10,8 @@ export const fieldManualMeta: {
   author: string
   authorOrganization: string
   datePublished: string
+  inLanguage: string
+  locale: string
 } = {
   path: '/field-manual',
   headTitle: "ARTIORE Field Manual, 23 October 2026 | Artiais.com",
@@ -20,4 +22,23 @@ export const fieldManualMeta: {
   author: 'Zain Ul Abdin',
   authorOrganization: 'ARTIORE',
   datePublished: '2026-10-23',
+  inLanguage: 'en',
+  locale: 'en_US',
 }
+
+export const frenchFieldManualMeta: typeof fieldManualMeta = {
+  path: '/field-manual/fr',
+  headTitle: 'Manuel de terrain ARTIORE, 23 October 2026 | Artiais.com',
+  description:
+    'Lisez la synthèse, puis la note de situation, la page « cette semaine » et le dossier de plaidoyer de la seule région sur laquelle vous agirez vraiment.',
+  kind: 'article',
+  crumbName: 'Manuel de terrain',
+  headline: 'Manuel de terrain ARTIORE',
+  author: 'Zain Ul Abdin',
+  authorOrganization: 'ARTIORE',
+  datePublished: '2026-10-23',
+  inLanguage: 'fr',
+  locale: 'fr_FR',
+}
+
+export const fieldManualMetas = [fieldManualMeta, frenchFieldManualMeta]

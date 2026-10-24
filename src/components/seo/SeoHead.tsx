@@ -20,6 +20,9 @@ type SeoHeadProps = {
   author?: string
   authorOrganization?: string
   datePublished?: string
+  inLanguage?: string
+  locale?: string
+  alternates?: { hreflang: string; path: string }[]
 }
 
 function upsertMeta(selector: string, attributes: Record<string, string>) {
@@ -44,14 +47,18 @@ export function SeoHead({
   author,
   authorOrganization,
   datePublished,
+  inLanguage,
+  locale,
+  alternates,
 }: SeoHeadProps) {
   useEffect(() => {
     const canonical = canonicalUrl(path)
     document.title = title
-    document.documentElement.lang = 'en'
+    document.documentElement.lang = inLanguage ?? 'en'
 
     upsertMeta('meta[name="description"]', { name: 'description', content: description })
     upsertMeta('meta[property="og:site_name"]', { property: 'og:site_name', content: SITE_NAME })
+    if (locale) upsertMeta('meta[property="og:locale"]', { property: 'og:locale', content: locale })
     upsertMeta('meta[property="og:type"]', { property: 'og:type', content: openGraphType(kind) })
     upsertMeta('meta[property="og:title"]', { property: 'og:title', content: title })
     upsertMeta('meta[property="og:description"]', { property: 'og:description', content: description })
@@ -79,6 +86,16 @@ export function SeoHead({
     }
     canonicalLink.setAttribute('href', canonical)
 
+    document.head.querySelectorAll('link[data-seo-alternate]').forEach((node) => node.remove())
+    for (const alternate of alternates ?? []) {
+      const link = document.createElement('link')
+      link.rel = 'alternate'
+      link.hreflang = alternate.hreflang
+      link.href = canonicalUrl(alternate.path)
+      link.dataset.seoAlternate = 'true'
+      document.head.appendChild(link)
+    }
+
     let schema = document.getElementById('seo-jsonld')
     if (!schema) {
       schema = document.createElement('script')
@@ -97,9 +114,10 @@ export function SeoHead({
         author,
         authorOrganization,
         datePublished,
+        inLanguage,
       }),
     )
-  }, [author, authorOrganization, crumbName, datePublished, description, headline, kind, noindex, path, title])
+  }, [alternates, author, authorOrganization, crumbName, datePublished, description, headline, inLanguage, kind, locale, noindex, path, title])
 
   return null
 }

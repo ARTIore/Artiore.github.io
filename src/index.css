@@ -54,6 +54,23 @@ body {
   scroll-margin-top: 9rem;
 }
 
+/* System fonts only. No remote font download. */
+.field-manual[lang='ar'] :is(h1, h2, h3, p, li, td, th, a, span, caption) {
+  font-family: 'Noto Naskh Arabic', 'Noto Sans Arabic', Amiri, 'Scheherazade New', 'Traditional Arabic', 'Geeza Pro', serif;
+}
+
+.field-manual[lang='ur'] {
+  line-height: 1.9;
+}
+
+.field-manual[lang='ur'] :is(h1, h2, h3, p, li, td, th, a, span, caption) {
+  font-family: 'Noto Nastaliq Urdu', 'Noto Naskh Arabic', 'Jameel Noori Nastaleeq', 'Urdu Typesetting', 'Noto Sans Arabic', serif;
+}
+
+.field-manual[lang='hi'] :is(h1, h2, h3, p, li, td, th, a, span, caption) {
+  font-family: 'Noto Sans Devanagari', 'Nirmala UI', Mangal, 'Kohinoor Devanagari', 'Noto Sans', sans-serif;
+}
+
 @media print {
   .site-header,
   .site-footer,

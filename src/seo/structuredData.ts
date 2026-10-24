@@ -17,6 +17,7 @@ export type JsonLdInput = {
   author?: string
   authorOrganization?: string
   datePublished?: string
+  inLanguage?: string
 }
 
 export function openGraphType(kind: SeoKind | undefined) {
@@ -92,6 +93,7 @@ export function buildJsonLd(input: JsonLdInput) {
       mainEntityOfPage: canonical,
       image: OG_IMAGE_URL,
       publisher: { '@id': ORGANIZATION_ID },
+      ...(input.inLanguage ? { inLanguage: input.inLanguage } : {}),
     })
   } else if (input.kind === 'article' && input.author && input.datePublished && input.headline) {
     const authors: Record<string, string>[] = [{ '@type': 'Person', name: input.author }]
@@ -109,6 +111,7 @@ export function buildJsonLd(input: JsonLdInput) {
       mainEntityOfPage: canonical,
       image: OG_IMAGE_URL,
       publisher: { '@id': ORGANIZATION_ID },
+      ...(input.inLanguage ? { inLanguage: input.inLanguage } : {}),
     })
   } else if (input.kind === 'engine') {
     graph.push({

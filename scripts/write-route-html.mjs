@@ -19,11 +19,12 @@ function replaceAttr(html, pattern, value) {
   return html.replace(pattern, (full, before, after) => `${before}${value}${after}`)
 }
 
-function applyMeta(html, { title, description, canonical, robots, ogType }) {
+function applyMeta(html, { title, description, canonical, robots, ogType, lang, locale, alternates }) {
   const safeTitle = escapeHtml(title)
   const safeDescription = escapeHtml(description)
   const safeCanonical = escapeHtml(canonical)
   let next = html
+  if (lang) next = next.replace('<html lang="en">', `<html lang="${escapeHtml(lang)}">`)
   next = next.replace(/<title>[\s\S]*?<\/title>/, `<title>${safeTitle}</title>`)
   next = replaceAttr(next, /(<meta\s+name="description"\s+content=")[^"]*(")/, safeDescription)
   next = replaceAttr(next, /(<link\s+rel="canonical"\s+href=")[^"]*(")/, safeCanonical)
@@ -39,6 +40,26 @@ function applyMeta(html, { title, description, canonical, robots, ogType }) {
       '<meta name="twitter:card" content="summary_large_image" />',
       '<meta name="twitter:card" content="summary_large_image" />\n    <meta name="twitter:site" content="@Artiore" />',
     )
+  }
+  if (locale) {
+    const localeTag = `<meta property="og:locale" content="${escapeHtml(locale)}" />`
+    if (next.includes('property="og:locale"')) {
+      next = replaceAttr(next, /(<meta\s+property="og:locale"\s+content=")[^"]*(")/, escapeHtml(locale))
+    } else {
+      next = next.replace(
+        '<meta property="og:site_name" content="ARTIore" />',
+        `<meta property="og:site_name" content="ARTIore" />\n    ${localeTag}`,
+      )
+    }
+  }
+  if (alternates?.length) {
+    const links = alternates
+      .map(
+        (alt) =>
+          `<link rel="alternate" hreflang="${escapeHtml(alt.hreflang)}" href="${escapeHtml(canonicalUrl(alt.path))}" />`,
+      )
+      .join('\n    ')
+    next = next.replace('</head>', `    ${links}\n  </head>`)
   }
   return next
 }
@@ -71,6 +92,7 @@ const routeSources = {
   '/engine': ['src/pages/EnginePage.tsx'],
   '/system-documentation': ['src/pages/SystemDocsPage.tsx'],
   '/field-manual': ['src/pages/FieldManualPage.tsx', 'src/components/field-manual/FieldManualLayout.tsx'],
+  '/field-manual/fr': ['src/pages/FieldManualFrPage.tsx', 'src/components/field-manual/FieldManualLayout.tsx'],
   '/blog': ['src/pages/BlogPage.tsx'],
   '/about': ['src/content/documents.ts', 'src/components/content/DocumentView.tsx'],
   '/philosophy': ['src/content/documents.ts', 'src/components/content/DocumentView.tsx'],
@@ -145,6 +167,9 @@ async function renderDocument(templateHtml, entry, location) {
     canonical: canonicalUrl(entry.path),
     robots: entry.noindex ? 'noindex,follow' : 'index,follow',
     ogType: kind === 'blog-post' || kind === 'article' ? 'article' : 'website',
+    lang: entry.inLanguage,
+    locale: entry.locale,
+    alternates: entry.alternates,
   })
   const withJson = replaceJsonLd(
     htmlWithMeta,
@@ -158,6 +183,7 @@ async function renderDocument(templateHtml, entry, location) {
       author: entry.author,
       authorOrganization: entry.authorOrganization,
       datePublished: entry.datePublished,
+      inLanguage: entry.inLanguage,
     }),
   )
   const body = await render(location)
