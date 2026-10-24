@@ -23,6 +23,7 @@ const loaders: Record<string, Loader> = {
   '/system-documentation': () => import('./pages/SystemDocsPage'),
   '/field-manual': () => import('./pages/FieldManualPage'),
   '/field-manual/fr': () => import('./pages/FieldManualFrPage'),
+  '/field-manual/ar': () => import('./pages/FieldManualArPage'),
   '/field-manual/pocket-booklet': () => import('./pages/PocketBookletPage'),
   '/field-manual/carousels': () => import('./pages/CarouselsPage'),
   '/blog': () => import('./pages/BlogPage'),

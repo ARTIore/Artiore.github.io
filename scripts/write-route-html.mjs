@@ -103,6 +103,7 @@ const routeSources = {
   '/system-documentation': ['src/pages/SystemDocsPage.tsx'],
   '/field-manual': ['src/pages/FieldManualPage.tsx', 'src/components/field-manual/FieldManualLayout.tsx'],
   '/field-manual/fr': ['src/pages/FieldManualFrPage.tsx', 'src/components/field-manual/FieldManualLayout.tsx'],
+  '/field-manual/ar': ['src/pages/FieldManualArPage.tsx', 'src/components/field-manual/FieldManualLayout.tsx'],
   '/field-manual/pocket-booklet': ['src/pages/PocketBookletPage.tsx', 'src/components/field-manual/FieldManualLayout.tsx'],
   '/field-manual/carousels': ['src/pages/CarouselsPage.tsx', 'src/components/field-manual/CarouselRow.tsx'],
   '/blog': ['src/pages/BlogPage.tsx'],
