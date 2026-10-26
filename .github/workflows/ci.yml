@@ -1,0 +1,40 @@
+name: CI
+
+# Runs the same build gate as the Pages deploy, but on pull requests.
+# Without this, a pull request is merged first and the deploy job is what
+# discovers the breakage - which leaves the live site stuck on the previous
+# successful build. This workflow makes the gate run before merge instead.
+#
+# This workflow never deploys. Deploying stays in deploy.yml, which only
+# triggers on a push to main.
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+      - run: npm run lint
+      # npm run build already runs tsc -b, both Vite builds, the prerender
+      # step, and scripts/check-dist.mjs. It fails the build on missing
+      # route metadata, a duplicate H1, absent prerendered content, or a
+      # broken internal link.
+      - run: npm run build
