@@ -225,7 +225,7 @@ export function SiteLayout() {
               </li>
               <li>
                 <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.consortium} rel="noreferrer" target="_blank">
-                  artioreconsortium.com
+                  Artiore Consortium
                 </a>
               </li>
               <li>

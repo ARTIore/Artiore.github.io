@@ -39,7 +39,6 @@ function organizationNode() {
     },
     sameAs: [
       links.artiore,
-      links.consortium,
       links.x,
       links.linkedinCompany,
       links.github,

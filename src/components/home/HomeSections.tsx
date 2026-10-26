@@ -244,7 +244,7 @@ export function HomeSections() {
               A collaborative network advancing clarity-first reasoning and ethical AI development.
             </p>
             <SiteLink className="mt-4 inline-block text-gold-bright underline underline-offset-4" href={links.consortium}>
-              artioreconsortium.com
+              Artiore Consortium
             </SiteLink>
           </article>
         </div>

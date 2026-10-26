@@ -28,7 +28,7 @@ const groups = [
       { label: 'artiore.com', href: links.artiore, note: 'The reasoning platform.' },
       { label: 'Try ARTIore', href: links.artioreTry, note: 'The live reasoning page.' },
       { label: 'Request access on artiore.com', href: links.artioreAccess, note: 'The access form is published there. This site does not collect that form.' },
-      { label: 'artioreconsortium.com', href: links.consortium, note: 'Artiore Consortium.' },
+      { label: 'Artiore Consortium', href: links.consortium, note: 'The consortium network. Its own domain is not published yet.' },
       { label: 'GitHub · ARTIore', href: links.github, note: 'https://github.com/ARTIore' },
       { label: 'This site’s source', href: links.githubSite, note: 'Artiore.github.io' },
       { label: 'Play Eternia', href: links.eternia, note: 'Local-first instrument in the browser.' },

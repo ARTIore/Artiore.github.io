@@ -143,7 +143,6 @@ for (const entry of seoEntries) {
         const sameAs = org?.sameAs ?? []
         for (const url of [
           'https://artiore.com',
-          'https://artioreconsortium.com',
           'https://x.com/Artiore',
           'https://www.linkedin.com/company/artiore/',
           'https://github.com/ARTIore',
