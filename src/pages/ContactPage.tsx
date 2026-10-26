@@ -9,7 +9,6 @@ const groups = [
     title: 'Email',
     items: [
       { label: links.emailAddress, href: links.email, note: 'The address published with X, LinkedIn, and Discord.' },
-      { label: links.policyEmailAddress, href: links.policyEmail, note: 'The address named in the privacy policy and terms.' },
     ],
   },
   {
@@ -19,7 +18,8 @@ const groups = [
       { label: 'LinkedIn · ARTIore', href: links.linkedinCompany, note: 'https://www.linkedin.com/company/artiore/' },
       { label: 'LinkedIn · Zain Ul Abdin', href: links.linkedinZain, note: 'https://linkedin.com/in/zain-ul-abdin-artiore' },
       { label: 'Discord', href: links.discord, note: 'https://discord.gg/ZTFDuuAmB' },
-      { label: 'Instagram · ArtioreConsortium', href: links.instagram, note: 'https://instagram.com/ArtioreConsortium' },
+      { label: 'Instagram · artiore.consortium', href: links.instagram, note: 'https://instagram.com/artiore.consortium' },
+      { label: 'Instagram · mypapabigger', href: links.instagramSecond, note: 'https://instagram.com/mypapabigger' },
     ],
   },
   {
@@ -27,7 +27,6 @@ const groups = [
     items: [
       { label: 'artiore.com', href: links.artiore, note: 'The reasoning platform.' },
       { label: 'Try ARTIore', href: links.artioreTry, note: 'The live reasoning page.' },
-      { label: 'Request access on artiore.com', href: links.artioreAccess, note: 'The access form is published there. This site does not collect that form.' },
       { label: 'Artiore Consortium', href: links.consortium, note: 'The consortium network. Its own domain is not published yet.' },
       { label: 'GitHub · ARTIore', href: links.github, note: 'https://github.com/ARTIore' },
       { label: 'This site’s source', href: links.githubSite, note: 'Artiore.github.io' },

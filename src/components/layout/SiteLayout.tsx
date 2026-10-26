@@ -205,7 +205,7 @@ export function SiteLayout() {
               </li>
               <li>
                 <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.instagram} rel="noreferrer" target="_blank">
-                  Instagram · ArtioreConsortium
+                  Instagram · artiore.consortium
                 </a>
               </li>
             </ul>

@@ -67,7 +67,7 @@ export const aboutPage: PageDocument = {
     {
       kind: 'actions',
       items: [
-        { label: 'Email artiste@artiore.com', href: links.email },
+        { label: 'Email artiore@outlook.com', href: links.email },
         { label: 'LinkedIn · Zain Ul Abdin', href: links.linkedinZain },
         { label: 'X · Artiore', href: links.x },
         { label: 'Try ARTIore', href: links.artioreTry },
@@ -108,7 +108,7 @@ export const aboutPage: PageDocument = {
     },
     {
       kind: 'note',
-      text: 'Donations, as published on artiore.com, can be made with Bitcoin, Ethereum, or PayPal. They are voluntary and non-refundable, and they are not tax-deductible. This site does not publish wallet addresses or a payment link. Write to artiste@artiore.com, or use the donate path on artiore.com.',
+      text: 'Donations, as published on artiore.com, can be made with Bitcoin, Ethereum, or PayPal. They are voluntary and non-refundable, and they are not tax-deductible. This site does not publish wallet addresses or a payment link. Write to artiore@outlook.com, or use the donate path on artiore.com.',
     },
   ],
 }
@@ -868,7 +868,7 @@ export const dossierPage: PageDocument = {
       kind: 'actions',
       items: [
         { label: 'Read the origin', href: '/origin' },
-        { label: 'Instagram @ArtioreConsortium', href: links.instagram },
+        { label: 'Instagram @artiore.consortium', href: links.instagram },
         { label: 'X · Artiore', href: links.x },
       ],
     },

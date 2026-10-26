@@ -146,7 +146,7 @@ for (const entry of seoEntries) {
           'https://x.com/Artiore',
           'https://www.linkedin.com/company/artiore/',
           'https://github.com/ARTIore',
-          'https://instagram.com/ArtioreConsortium',
+          'https://instagram.com/artiore.consortium',
         ]) {
           if (!sameAs.includes(url)) fail(`Organization sameAs is missing ${url}`)
         }

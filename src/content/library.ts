@@ -236,7 +236,7 @@ export const apiPage: PageDocument = {
       kind: 'paragraphs',
       text: [
         'The address artiore.com/api-documentation responds with “Cannot GET /api-documentation”. A blog post on the ecosystem points developers at that address. The address does not serve documentation.',
-        'Use the reasoning platform at artiore.com/try. Read the Grand Directional Prompt Framework at /framework.html. Play Eternia Aurora Sovereign Engine in the browser. Write to artiste@artiore.com if you need to ask about access.',
+        'Use the reasoning platform at artiore.com/try. Read the Grand Directional Prompt Framework at /framework.html. Play Eternia Aurora Sovereign Engine in the browser. Write to artiore@outlook.com if you need to ask about access.',
       ],
     },
     {
@@ -245,7 +245,7 @@ export const apiPage: PageDocument = {
         { label: 'Try ARTIore', href: links.artioreTry },
         { label: 'Prompt Framework V1.1', href: links.frameworkHtml },
         { label: 'Eternia Aurora Sovereign Engine', href: '/engine' },
-        { label: 'Email artiste@artiore.com', href: links.email },
+        { label: 'Email artiore@outlook.com', href: links.email },
       ],
     },
   ],

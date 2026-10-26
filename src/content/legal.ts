@@ -442,7 +442,7 @@ export const termsPage: PageDocument = {
       items: [
         { label: 'Terms on artiore.com', href: links.artioreTerms },
         { label: 'Privacy policy', href: '/privacy' },
-        { label: 'Email contact@artiore.com', href: links.policyEmail },
+        { label: 'Email artiore@outlook.com', href: links.policyEmail },
       ],
     },
   ],
