@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { links } from '../../content/links'
 import { footerPages, primaryNav, type NavLinkItem } from '../../content/navigation'
-import { normalizePath, toPublicPath } from '../../content/urls'
+import { isStaticPath, normalizePath, toPublicPath } from '../../content/urls'
 import { SiteLink } from '../content/SiteLink'
 
 const linkClass =
@@ -17,7 +17,12 @@ function itemClass(active: boolean) {
 }
 
 function NavAnchor({ item, onClick }: { item: NavLinkItem; onClick?: () => void }) {
-  if (item.href.endsWith('.html') || item.href.startsWith('http') || item.href.startsWith('mailto:')) {
+  if (
+    item.href.endsWith('.html') ||
+    item.href.startsWith('http') ||
+    item.href.startsWith('mailto:') ||
+    isStaticPath(item.href)
+  ) {
     return (
       <SiteLink className={itemClass(false)} href={item.href} onClick={onClick}>
         {item.label}

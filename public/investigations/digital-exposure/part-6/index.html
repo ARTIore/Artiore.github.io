@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Part VI — Apple, Android and Mobile Exploit Chains</title>
+<meta name="description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<link rel="canonical" href="https://artiais.com/investigations/digital-exposure/part-6/">
+<meta name="robots" content="index,follow">
+<meta property="og:site_name" content="ARTIore">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Part VI — Apple, Android and Mobile Exploit Chains">
+<meta property="og:description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<meta property="og:url" content="https://artiais.com/investigations/digital-exposure/part-6/">
+<meta property="og:image" content="https://artiais.com/og-image.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="ARTIore. Part VI — APPLE, ANDROID AND MOBILE EXPLOIT CHAINS.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Artiore">
+<meta name="twitter:title" content="Part VI — Apple, Android and Mobile Exploit Chains">
+<meta name="twitter:description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<meta name="twitter:image" content="https://artiais.com/og-image.png">
+<meta name="twitter:image:alt" content="ARTIore. Part VI — APPLE, ANDROID AND MOBILE EXPLOIT CHAINS.">
+<link rel="icon" href="https://artiais.com/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="https://artiais.com/apple-touch-icon.png">
+<script id="seo-jsonld" type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://artiais.com/#organization", "name": "ARTIore", "url": "https://artiais.com/", "logo": {"@type": "ImageObject", "url": "https://artiais.com/apple-touch-icon.png", "width": 180, "height": 180}, "sameAs": ["https://artiore.com", "https://artioreconsortium.com", "https://x.com/Artiore", "https://www.linkedin.com/company/artiore/", "https://github.com/ARTIore", "https://instagram.com/ArtioreConsortium"]}, {"@type": "WebSite", "@id": "https://artiais.com/#website", "name": "ARTIore", "url": "https://artiais.com/", "description": "Clarity-first reasoning. The system is a witness, not a verdict.", "publisher": {"@id": "https://artiais.com/#organization"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://artiais.com/"}, {"@type": "ListItem", "position": 2, "name": "Investigations", "item": "https://artiais.com/investigations/digital-exposure/"}, {"@type": "ListItem", "position": 3, "name": "Part VI", "item": "https://artiais.com/investigations/digital-exposure/part-6/"}]}, {"@type": "Article", "@id": "https://artiais.com/investigations/digital-exposure/part-6/#article", "headline": "Part VI", "description": "How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.", "url": "https://artiais.com/investigations/digital-exposure/part-6/", "mainEntityOfPage": "https://artiais.com/investigations/digital-exposure/part-6/", "inLanguage": "en", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "author": {"@type": "Organization", "name": "ARTIore Research Desk"}, "publisher": {"@id": "https://artiais.com/#organization"}, "image": "https://artiais.com/og-image.png", "citation": "https://artiais.com/investigations/digital-exposure/source-register/", "isPartOf": {"@type": "CreativeWorkSeries", "name": "Global Digital Exposure Investigation"}}]}</script>
+<style>
+:root{--ink:#12100e;--ink-2:#1c1916;--ink-3:#26211d;--cream:#f4efe6;--muted:#d2cbbf;
+--gold:#d4b36a;--gold-bright:#f0d9a0;--line:rgba(212,179,106,.22);--max:46rem;
+--serif:'Iowan Old Style',Palatino,Georgia,'Times New Roman',serif;
+--sans:'Segoe UI',system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}
+html{background:var(--ink);color:var(--cream);font-family:var(--sans);line-height:1.65;
+-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;overflow-x:clip}
+img{max-width:100%;height:auto}
+a{color:var(--gold-bright);text-underline-offset:.18em}
+a:hover{color:var(--cream)}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip:focus{left:1rem;top:1rem;width:auto;height:auto;padding:.6rem .9rem;background:var(--gold);
+color:var(--ink);z-index:10}
+.site-header{border-bottom:1px solid var(--line);background:var(--ink)}
+.site-header .bar{max-width:72rem;margin:0 auto;padding:1rem 1.25rem;display:flex;flex-wrap:wrap;
+gap:.75rem 1.5rem;align-items:baseline;justify-content:space-between}
+.brand{font-family:var(--serif);font-size:1.5rem;letter-spacing:.14em;color:var(--gold);
+text-decoration:none;white-space:nowrap}
+.brand small{display:block;font-family:var(--sans);font-size:.7rem;letter-spacing:0;
+color:var(--muted)}
+.crumbs{max-width:72rem;margin:0 auto;padding:0 1.25rem .75rem;font-size:.8rem;color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.crumbs a:hover{color:var(--gold-bright)}
+.layout{max-width:72rem;margin:0 auto;padding:0 1.25rem;display:grid;gap:2.5rem;
+grid-template-columns:minmax(0,1fr)}
+@media (min-width:62rem){.layout{grid-template-columns:minmax(0,1fr) 15rem;gap:3.5rem}}
+.prose{max-width:var(--max);min-width:0;padding:2.5rem 0 4rem}
+.prose>header{border-bottom:1px solid var(--line);padding-bottom:1.5rem;margin-bottom:2rem}
+.kicker{font-size:.74rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);
+font-weight:700;margin:0 0 .8rem}
+h1{font-family:var(--serif);font-size:clamp(2rem,5.5vw,3.1rem);line-height:1.08;
+letter-spacing:-.01em;margin:0 0 1rem;font-weight:600}
+h2{font-family:var(--serif);font-size:clamp(1.35rem,3.2vw,1.85rem);line-height:1.2;
+margin:2.6rem 0 .8rem;font-weight:600}
+h3{font-size:1.08rem;margin:1.9rem 0 .5rem;font-weight:700}
+p{margin:0 0 1.1rem}
+ul,ol{margin:0 0 1.2rem;padding-left:1.3rem}
+li{margin:.35rem 0}
+blockquote{margin:1.6rem 0;padding:1rem 1.2rem;border-left:3px solid var(--gold);
+background:var(--ink-2);color:var(--cream)}
+blockquote p{margin:0}
+hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
+table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
+caption{caption-side:top;text-align:left;font-size:.85rem;color:var(--muted);padding:.4rem 0 .7rem}
+th,td{border-bottom:1px solid var(--line);padding:.55rem .4rem;text-align:left;vertical-align:top}
+th{font-weight:700;color:var(--gold-bright)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;
+background:var(--ink-3);padding:.1em .35em;border-radius:.2em}
+a code{color:var(--gold-bright)}
+.aside{position:sticky;top:1.5rem;align-self:start;font-size:.85rem;color:var(--muted);
+border-left:1px solid var(--line);padding-left:1.1rem}
+.aside h2{font-family:var(--sans);font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;
+color:var(--gold);margin:0 0 .6rem}
+.aside ol{list-style:none;padding:0;margin:0}
+.aside li{margin:.2rem 0}
+.aside a{color:var(--muted);text-decoration:none}
+.aside a:hover{color:var(--gold-bright);text-decoration:underline}
+.aside .here{color:var(--gold-bright);font-weight:600}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{border-bottom:1px solid var(--line);padding:.55rem 0}
+.toc a{font-weight:600}
+.doclist{list-style:none;padding:0}
+.doclist li{border-bottom:1px solid var(--line);padding:.55rem 0}
+.site-footer{border-top:1px solid var(--line);margin-top:3rem}
+.site-footer .inner{max-width:72rem;margin:0 auto;padding:2rem 1.25rem 3rem;font-size:.85rem;
+color:var(--muted)}
+.site-footer p{margin:.3rem 0}
+.site-footer a{color:var(--muted)}
+.site-footer a:hover{color:var(--gold-bright)}
+.evidence-note{font-size:.88rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="/">ARTIore<small>Clarity-first reasoning</small></a>
+<span><a href="/investigations/digital-exposure/">The Invisible Attack Surface</a></span>
+</div>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> · <a href="/investigations/digital-exposure/">Investigations</a> · <a href="/investigations/digital-exposure/">The Invisible Attack Surface</a> · Part VI</nav>
+</header>
+<div class="layout">
+<main class="prose" id="main">
+<article>
+<header>
+<p class="kicker">The Invisible Attack Surface · part 6 of 15</p>
+<h1>Part VI — APPLE, ANDROID AND MOBILE EXPLOIT CHAINS</h1>
+<p class="byline" style="font-size:.85rem;color:var(--muted)">ARTIore Research Desk · 2026-10-26</p>
+</header>
+<h2>PART VI — APPLE, ANDROID AND MOBILE EXPLOIT CHAINS</h2>
+<h2>6.1 The chain, not the bug</h2>
+<p>A modern phone compromise is rarely one vulnerability. It is a sequence:</p>
+<ol>
+<li><strong>Initial access</strong> — a message, a web page, an app, a physical connection, or a malicious configuration.</li>
+<li><strong>Code execution</strong> — a memory-corruption bug in a parser or a scripting engine.</li>
+<li><strong>Sandbox escape</strong> — breaking out of the process that was compromised.</li>
+<li><strong>Privilege escalation</strong> — gaining kernel or system-level rights.</li>
+<li><strong>Persistence</strong> — surviving reboot, or re-infecting on demand.</li>
+<li><strong>Collection and exfiltration</strong> — reading messages, location, microphone, camera, keys.</li>
+</ol>
+<p>Each step is a separate technical problem. A chain is valuable because it solves all of them. This is why &quot;there is a vulnerability&quot; and &quot;your phone is compromised&quot; are very different statements.</p>
+<h2>6.2 Apple ecosystem</h2>
+<h3>iOS and iPadOS vulnerabilities</h3>
+<p>Apple's security model is strong and layered: code signing, sandboxing, Pointer Authentication, a signed boot chain, and a fast update pipeline. It is also a very large attack surface: WebKit, image and media parsers, the messaging stack, the baseband, and thousands of system services.</p>
+<p>The public record of exploited-in-the-wild iOS flaws is continuous. Apple's security notes and CISA's Known Exploited Vulnerabilities catalogue document them year by year. A representative set:</p>
+<table>
+<caption>iOS and iPadOS vulnerabilities</caption>
+<thead>
+<tr>
+<th scope="col">CVE</th>
+<th scope="col">Component</th>
+<th scope="col">Year</th>
+<th scope="col">Significance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2021-30860</td>
+<td>CoreGraphics (JBIG2)</td>
+<td>2021</td>
+<td>FORCEDENTRY; zero-click iMessage delivery of Pegasus</td>
+</tr>
+<tr>
+<td>CVE-2023-41064 / -41061</td>
+<td>ImageIO / Wallet</td>
+<td>2023</td>
+<td>BLASTPASS; zero-click via malicious image</td>
+</tr>
+<tr>
+<td>CVE-2023-38606, -41990, -32434, -32435</td>
+<td>Kernel / FontParser / WebKit</td>
+<td>2023</td>
+<td>Operation Triangulation chain</td>
+</tr>
+<tr>
+<td>CVE-2025-43300</td>
+<td>ImageIO</td>
+<td>2025</td>
+<td>Used with CVE-2025-55177 in a WhatsApp zero-click chain</td>
+</tr>
+<tr>
+<td>CVE-2026-86950</td>
+<td>CoreGraphics</td>
+<td>2026</td>
+<td>Out-of-bounds write, CVSS 8.8, exploited against &quot;specific targeted individuals&quot;</td>
+</tr>
+</tbody>
+</table>
+<p>[Confirmed — Apple advisories, CVE records, CISA KEV]</p>
+<p><strong>Required access:</strong> for zero-click chains, only the ability to send a message or cause content to be processed. <strong>Prevalence:</strong> extremely low relative to the installed base; concentrated on high-value targets. <strong>Consequence:</strong> full device access, including messages, location, microphone, camera, and credentials. <strong>Mitigation:</strong> patch immediately, enable Lockdown Mode if at risk, disable auto-download of message attachments where possible.</p>
+<h3>WebKit and browser exploitation</h3>
+<p>WebKit renders web content in Safari and, on iOS, in every browser (all browsers use WebKit). A WebKit exploit therefore reaches users regardless of which browser icon they tap. WebKit has been a recurring target for both commercial spyware and criminal exploit kits.</p>
+<p><strong>Conditions:</strong> a malicious web page, often delivered by link, sometimes injected into a legitimate site. <strong>Mitigation:</strong> keep iOS updated; Lockdown Mode restricts just-in-time compilation and some web features, reducing exploitability at a usability cost.</p>
+<h3>iMessage and message-processing surfaces</h3>
+<p>iMessage automatically processes attachments, link previews, and rich content. Apple introduced <strong>BlastDoor</strong> (iOS 14) to parse messages in a hardened sandbox, which raised the cost of attack but did not eliminate it: FORCEDENTRY and BLASTPASS both defeated the surrounding architecture.</p>
+<p><strong>What this means practically:</strong> a message can compromise a phone without being opened, in principle. In practice, such chains are scarce, expensive, and targeted. The correct response is not to abandon messaging but to patch promptly and to use Lockdown Mode if you are a plausible target.</p>
+<h3>Apple account compromise</h3>
+<p>An Apple ID is the recovery root for much of a person's digital life. Compromise of the account — through phishing, credential reuse, or recovery abuse — can expose iCloud data, allow device removal, enable location tracking, and reset other passwords.</p>
+<p><strong>Distinguish:</strong> account compromise is not device compromise. An attacker inside your Apple account reads your backups and synced data; they do not automatically read end-to-end encrypted content or install spyware.</p>
+<h3>Malicious configuration profiles</h3>
+<p>A configuration profile is an XML file that changes device settings: Wi-Fi, VPN, certificates, restrictions, mail accounts, web proxies. Installing one requires user approval, sometimes with a warning that the profile is unsigned.</p>
+<p>Malicious profiles are used to:</p>
+<ul>
+<li>route traffic through an attacker's proxy;</li>
+<li>install a root certificate, enabling TLS interception;</li>
+<li>enrol the device in mobile device management (MDM), granting remote control;</li>
+<li>disable security features or prevent profile removal.</li>
+</ul>
+<p><strong>Conditions:</strong> the user must install the profile, usually through a convincing pretext (&quot;install this to join the network&quot;, &quot;this is required by your employer&quot;). <strong>Mitigation:</strong> never install a profile you did not request; check Settings → General → VPN &amp; Device Management; remove unknown profiles.</p>
+<h3>MDM abuse</h3>
+<p>MDM is a legitimate enterprise tool with extensive power: install and remove apps, enforce passcodes, locate, lock, wipe, and inspect some device data. It becomes abuse when a victim is tricked into enrolling, or when an attacker obtains MDM credentials.</p>
+<p>The 2024–2025 &quot;NoviSpy&quot; reporting is instructive: forensic tools and spyware were used together against journalists and activists, with device access obtained through physical or investigative means. [Confirmed — Amnesty Tech reporting; specific attribution limited]</p>
+<h3>iCloud credential and recovery risks</h3>
+<p>Account recovery is a security boundary that is often weaker than the password. Documented risks include:</p>
+<ul>
+<li><strong>Recovery contact / trusted device abuse</strong> — an attacker with access to a trusted device can approve a reset.</li>
+<li><strong>Security question guessing</strong> — where legacy recovery is enabled.</li>
+<li><strong>SIM swap</strong> — intercepting SMS-based recovery.</li>
+<li><strong>Support social engineering</strong> — convincing a support agent to reset access.</li>
+</ul>
+<p>Apple has shifted toward end-to-end encrypted recovery and hardware keys, which improves the situation for users who enable them.</p>
+<h3>Keychain security and limits</h3>
+<p>iCloud Keychain syncs passwords and passkeys across devices with end-to-end encryption. It is a strong design. Its limits:</p>
+<ul>
+<li>It protects secrets <em>at rest and in sync</em>, not a compromised device — malware with sufficient privilege can read what the app can read.</li>
+<li>A weak device passcode undermines it; the passcode is part of the key hierarchy.</li>
+<li>Shared groups and family sharing broaden access by design.</li>
+<li>Recovery paths can bypass the encryption if the attacker controls the account.</li>
+</ul>
+<h3>Commercial spyware</h3>
+<p>Covered in Part VIII. For the Apple section, the key point is that commercial spyware is the main customer for the most expensive iOS chains, and that Apple now notifies targeted users.</p>
+<h2>6.3 Android ecosystem</h2>
+<h3>Operating-system vulnerabilities and patch fragmentation</h3>
+<p>Android is a large, diverse ecosystem. The core is hardened and improving (scoped storage, permission auto-reset, memory tagging on newer hardware), but the tail of devices is long. Many devices receive security patches late, briefly, or never.</p>
+<p>Documented exploited flaws include:</p>
+<ul>
+<li><strong>Stagefright (2015)</strong> — media parsing flaws enabling remote code execution via MMS or media playback.</li>
+<li><strong>Janus (CVE-2017-13156)</strong> — signature bypass allowing a malicious APK to be installed as an update to a legitimate app.</li>
+<li><strong>StrandHogg (2019) / StrandHogg 2.0 (CVE-2020-0096)</strong> — task hijacking enabling phishing overlays.</li>
+<li><strong>BlueFrag (CVE-2020-0022)</strong> — Bluetooth remote code execution on some Android versions.</li>
+<li><strong>Dirty Pipe (CVE-2022-0847)</strong> — kernel flaw allowing file overwrite and privilege escalation.</li>
+<li><strong>Binder use-after-free (CVE-2019-2215)</strong> — exploited in the wild by a commercial spyware vendor's Android implant.</li>
+</ul>
+<p>[Confirmed — vendor advisories, Project Zero, CISA KEV]</p>
+<h3>Malicious APK distribution</h3>
+<p>Android allows installation from outside the store. That is a feature for developers and a delivery channel for malware. Common lures: &quot;modded&quot; apps, cracked games, banking &quot;security updates&quot;, delivery notifications, and fake government apps.</p>
+<p>Since Android 13, &quot;restricted settings&quot; adds friction for sideloaded apps seeking accessibility or notification access, which has measurably slowed some malware. It has not stopped it: droppers distributed through messaging or malicious ads install a payload that then requests the permission from a trusted-looking context.</p>
+<h3>Accessibility-service abuse</h3>
+<p>Covered in Part V. It remains the single most important Android fraud mechanism.</p>
+<h3>Privilege escalation</h3>
+<p>Android's permission model is enforced by the kernel and by system services. Escalation flaws — in the kernel, in vendor drivers, in system apps — convert a limited app into a system-level compromise. Vendor-specific drivers are a recurring source because they are numerous and less scrutinised.</p>
+<h3>Baseband and driver vulnerabilities</h3>
+<p>The baseband is the separate processor that handles cellular radio. It runs proprietary firmware, communicates with the application processor over a shared interface, and is a high-value target because it is reachable by the network itself.</p>
+<p>Documented research includes Qualcomm modem and DSP flaws disclosed in 2021, and a long history of baseband parsing bugs across vendors. Exploitation requires either a malicious base station (IMSI catcher class) or a network-level attack, plus a vulnerable modem. [Confirmed for the vulnerability classes; exploitation in the wild against individuals is rare and hard to attribute]</p>
+<h3>Device-management abuse</h3>
+<p>Android Enterprise and device-owner modes grant administrative control. Abuse follows the same pattern as Apple MDM: tricked enrolment, stolen credentials, or a malicious &quot;security&quot; app that requests device-admin rights.</p>
+<h3>Credential-stealing malware and banking trojans</h3>
+<p>The dominant Android criminal ecosystem is financial. Families such as Cerberus, Anubis, Alien, TeaBot/Anatsa, SharkBot, Xenomorph, Octo, and Medusa combine:</p>
+<ul>
+<li>SMS and notification interception (for OTPs);</li>
+<li>overlay screens (for credentials);</li>
+<li>accessibility automation (for transactions);</li>
+<li>remote-access features (for live fraud);</li>
+<li>contact-list exfiltration (for propagation).</li>
+</ul>
+<p>Distribution is often a &quot;dropper&quot; app that appears benign, then downloads the payload after installation — a technique that defeats store review.</p>
+<h3>Supply-chain weaknesses</h3>
+<p>Pre-installed malware has been documented on low-cost devices and through third-party firmware. Advertising SDKs and &quot;cleaner&quot; apps have shipped intrusive behaviour. The common factor is a supply chain with weak review and strong financial incentives.</p>
+<h2>6.4 Required access, prevalence, consequence, mitigation</h2>
+<table>
+<caption>6.4 Required access, prevalence, consequence, mitigation</caption>
+<thead>
+<tr>
+<th scope="col">Threat</th>
+<th scope="col">Attacker needs</th>
+<th scope="col">Known affected versions</th>
+<th scope="col">Observed prevalence</th>
+<th scope="col">Consequence</th>
+<th scope="col">Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zero-click iMessage chain</td>
+<td>Ability to send a message; exploit</td>
+<td>iOS before the patched release</td>
+<td>Very low; targeted</td>
+<td>Full device access</td>
+<td>Patch; Lockdown Mode</td>
+</tr>
+<tr>
+<td>WebKit exploit</td>
+<td>Malicious page + exploit</td>
+<td>iOS/Safari before patch</td>
+<td>Low; targeted or watering-hole</td>
+<td>Code execution, data theft</td>
+<td>Patch; avoid unknown links</td>
+</tr>
+<tr>
+<td>Malicious profile/MDM</td>
+<td>User installs profile or enrols</td>
+<td>Any</td>
+<td>Low but rising in scams</td>
+<td>Traffic interception, remote control</td>
+<td>Never install unrequested profiles</td>
+</tr>
+<tr>
+<td>Apple account takeover</td>
+<td>Credentials or recovery access</td>
+<td>Any</td>
+<td>Moderate</td>
+<td>Cloud data, account lockout</td>
+<td>Strong unique password, hardware key, recovery review</td>
+</tr>
+<tr>
+<td>Android banking trojan</td>
+<td>User installs APK/dropper</td>
+<td>Broad; older devices worse</td>
+<td>High in some regions</td>
+<td>Account drain, OTP theft</td>
+<td>No sideloading; accessibility audit</td>
+</tr>
+<tr>
+<td>Android kernel/driver exploit</td>
+<td>Exploit + delivery</td>
+<td>Unpatched devices</td>
+<td>Low</td>
+<td>Full compromise</td>
+<td>Patch; buy supported devices</td>
+</tr>
+<tr>
+<td>Baseband attack</td>
+<td>Network-level capability</td>
+<td>Specific modems</td>
+<td>Very low</td>
+<td>Interception</td>
+<td>Patch; avoid untrusted networks for high-risk use</td>
+</tr>
+<tr>
+<td>Pre-installed malware</td>
+<td>Supply-chain position</td>
+<td>Specific low-cost models</td>
+<td>Episodic</td>
+<td>Data theft, ad fraud</td>
+<td>Buy from reputable vendors; verify</td>
+</tr>
+<tr>
+<td>Credential stealer</td>
+<td>Malicious app or phishing</td>
+<td>Any</td>
+<td>High</td>
+<td>Account takeover</td>
+<td>Password manager, passkeys, 2FA</td>
+</tr>
+</tbody>
+</table>
+<h2>6.5 Account compromise versus device compromise</h2>
+<p>This distinction should be taught in every digital-literacy programme:</p>
+<p><strong>Account compromise</strong> means someone has your credentials or a valid session. They see what the account sees: email, files, backups, contacts, purchase history. They cannot read end-to-end encrypted messages that are decrypted only on your device, and they cannot turn on your microphone.</p>
+<p><strong>Device compromise</strong> means code is running on your phone with elevated privilege. The attacker sees what the device sees: notifications, screen content, keystrokes, location, microphone, camera, and the plaintext of messages after decryption.</p>
+<p>The two can combine — a compromised device can steal account tokens — but they are different failures with different evidence and different responses. A password reset fixes the first. It does not fix the second.</p>
+<h2>6.6 What actually reduces risk</h2>
+<ul>
+<li><strong>Patch within days, not months.</strong> Both platforms ship fixes for exploited flaws; the gap between disclosure and exploitation is often measured in days.</li>
+<li><strong>Use Lockdown Mode</strong> if you are a plausible target (journalist, activist, official, executive, litigant). It is not for everyone; it is for people whose threat model justifies the trade-offs.</li>
+<li><strong>Enable Advanced Data Protection / advanced account security</strong> where available, and register hardware security keys.</li>
+<li><strong>Never install configuration profiles or MDM enrolment you did not initiate.</strong></li>
+<li><strong>Do not sideload apps.</strong> If you must, remove the capability afterwards.</li>
+<li><strong>Audit accessibility and device-admin lists</strong> monthly.</li>
+<li><strong>Keep the number of apps low.</strong> Attack surface is a function of installed software.</li>
+<li><strong>Separate identities:</strong> a recovery email that is not your daily driver, and a phone number that is not your only second factor.</li>
+<li><strong>Assume that a device you no longer control is compromised</strong> — sell, wipe, and revoke sessions.</li>
+</ul>
+<hr />
+<hr />
+<h2>Evidence</h2>
+<table>
+<caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
+<thead>
+<tr>
+<th scope="col">Claim</th>
+<th scope="col">Verdict</th>
+<th scope="col">Label</th>
+<th scope="col">Source</th>
+<th scope="col">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C020</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Android Help, download apps; checked by the ledger, 2026; <code>r15:S84</code>; [live]; Android Advanced Protection mode; <code>r15:S89</code>; [live]; Android 13 behaviour changes: restricted settings; <code>r15:S92</code>; [live]; Play Protect</td>
+<td>narrowed: Android can install apps from sources other than Play, subject to user permission; a specific malicious APK/dropper is not established by the help page.</td>
+</tr>
+<tr>
+<td>C022</td>
+<td>verified (cataloging pass 26 Oct 2026)</td>
+<td>A — Confirmed</td>
+<td>Google Project Zero, 'Multiple Internet to Baseband Remote…; checked by the cataloging pass, 2023-03; <code>url:b1e8a9e49319</code>; [not checked]; cataloging pass source; <code>r15:S20</code>; [live]; March 2023 archive (Samsung Exynos baseband research); <code>r15:S80</code>; [live]; CVE-2023-24033 — Exynos baseband</td>
+<td>publication-ready wording: Android baseband: remote modem compromise over the internet, in specific vulnerable Exynos devices, with no user interaction and only the victim's phone number required. conditions: A specific vulnerable Exynos modem and a patch gap. Affected families include Exynos 5123, 5300, 980, 1080 and Exynos Auto T5123. Mitigation: turn…</td>
+</tr>
+<tr>
+<td>C024</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Apple Platform Deployment, MDM; checked by the ledger, 2026; <code>r15:S16</code>; [live]; Apple Platform Security Guide</td>
+<td>narrowed: MDM enrollment and configuration profiles can manage devices; malicious use depends on enrollment/consent or supervision, not a universal interception path.</td>
+</tr>
+<tr>
+<td>C025</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Apple, iCloud data security overview; checked by the ledger, 2026; <code>r15:S18</code>; [live]; Advanced Data Protection for iCloud; <code>r15:S57</code>; [live]; 0ktapus: large-scale phishing and MFA-bypass campaign; <code>r15:S66</code>; [live]; SIM swap fraud</td>
+<td>narrowed: iCloud account takeover can expose synced data and backups, depending on the data category, backup encryption and account recovery state.</td>
+</tr>
+<tr>
+<td>C085</td>
+<td>verified (cataloging pass 26 Oct 2026)</td>
+<td>A — Confirmed</td>
+<td>Citizen Lab; CERT-EU security advisory 2023-061; NIST NVD…; checked by the cataloging pass, 2023-09-07; <code>url:c65b12fdcb2e</code>; [not checked]; cataloging pass source; <code>r15:S2</code>; [live]; BLASTPASS: NSO Group iPhone zero-click, zero-day…; <code>r15:S9</code>; [live]; CVE-2023-41064 — Apple ImageIO buffer overflow</td>
+<td>publication-ready wording: BLASTPASS (2023) was a zero-click PassKit/ImageIO chain against iOS 16.6 and earlier (CVE-2023-41064 and CVE-2023-41061), fixed in iOS 16.6.1, attributed to NSO Group by Citizen… the wording as it stands in the spine is unsupported or contradicted. — correct it to the publication-ready wording before publication conditions: Reachable iMessage; a malicious PassKit attachment; a vulnerable iOS version. Delivery through a service, not an app the user installs. [PRINCIPAL'S CALL: legal review before publication]</td>
+</tr>
+<tr>
+<td>C089</td>
+<td>verified (Part 3 batch E)</td>
+<td>A — Confirmed</td>
+<td><code>url:57ee4e44a4ee</code>; [not checked]; Part 3 batch source; <code>r15:S17</code>; [live]; Lockdown Mode</td>
+<td>verified against one authoritative source</td>
+</tr>
+<tr>
+<td>C090</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Citizen Lab / Apple iCloud security; checked by the ledger, 2026; <code>r15:S16</code>; [live]; Apple Platform Security Guide; <code>r15:S18</code>; [live]; Advanced Data Protection for iCloud; <code>r15:S57</code>; [live]; 0ktapus: large-scale phishing and MFA-bypass campaign</td>
+<td>narrowed: Cloud-account compromise can expose synced/backed-up data without a device exploit; device compromise can expose screen, microphone and location without a password. The two paths are…</td>
+</tr>
+<tr>
+<td>C145</td>
+<td>verified (Part 3 batch E)</td>
+<td>A — Confirmed</td>
+<td><code>url:a683fa7c0373</code>; [not checked]; Part 3 batch source</td>
+<td>verified against one authoritative source</td>
+</tr>
+<tr>
+<td>C153</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Citizen Lab FORCEDENTRY/BLASTPASS; checked by the ledger, 2023-09-07; <code>r15:S1</code>; [live]; FORCEDENTRY: NSO Group iMessage zero-click exploit…; <code>r15:S2</code>; [live]; BLASTPASS: NSO Group iPhone zero-click, zero-day…</td>
+<td>narrowed: iMessage parses rich attachments (including PassKit/ImageIO) before user interaction, so a zero-click payload can be handled by a service; the full images/fonts/PDFs list is not…</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+</main>
+<aside class="aside" aria-label="Investigation contents"><h2>Contents</h2><ol><li><a href="/investigations/digital-exposure/part-1/">Part I</a></li><li><a href="/investigations/digital-exposure/part-2/">Part II</a></li><li><a href="/investigations/digital-exposure/part-3/">Part III</a></li><li><a href="/investigations/digital-exposure/part-4/">Part IV</a></li><li><a href="/investigations/digital-exposure/part-5/">Part V</a></li><li class="here"><a href="/investigations/digital-exposure/part-6/">Part VI</a></li><li><a href="/investigations/digital-exposure/part-7/">Part VII</a></li><li><a href="/investigations/digital-exposure/part-8/">Part VIII</a></li><li><a href="/investigations/digital-exposure/part-9/">Part IX</a></li><li><a href="/investigations/digital-exposure/part-10/">Part X</a></li><li><a href="/investigations/digital-exposure/part-11/">Part XI</a></li><li><a href="/investigations/digital-exposure/part-12/">Part XII</a></li><li><a href="/investigations/digital-exposure/part-13/">Part XIII</a></li><li><a href="/investigations/digital-exposure/part-14/">Part XIV</a></li><li><a href="/investigations/digital-exposure/part-15/">Part XV</a></li></ol></aside>
+</div>
+<footer class="site-footer">
+<div class="inner">
+<p>ARTIore — independent research and intelligence practice. No sponsor, vendor or government reviewed this work before publication.</p>
+<p>Every claim is traced to a source. <a href="/investigations/digital-exposure/source-register/">Source register</a> · <a href="/investigations/digital-exposure/evidence/">Method</a> · <a href="/investigations/digital-exposure/corrections/">Corrections</a> · <a href="/">ARTIore</a></p>
+</div>
+</footer>
+</body>
+</html>

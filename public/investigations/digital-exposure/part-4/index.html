@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Part IV — Bluetooth and BLE: The Unseen Environment</title>
+<meta name="description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<link rel="canonical" href="https://artiais.com/investigations/digital-exposure/part-4/">
+<meta name="robots" content="index,follow">
+<meta property="og:site_name" content="ARTIore">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Part IV — Bluetooth and BLE: The Unseen Environment">
+<meta property="og:description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<meta property="og:url" content="https://artiais.com/investigations/digital-exposure/part-4/">
+<meta property="og:image" content="https://artiais.com/og-image.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="ARTIore. Part IV — BLUETOOTH AND BLE: THE UNSEEN WIRELESS ENVIRONMENT.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Artiore">
+<meta name="twitter:title" content="Part IV — Bluetooth and BLE: The Unseen Environment">
+<meta name="twitter:description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<meta name="twitter:image" content="https://artiais.com/og-image.png">
+<meta name="twitter:image:alt" content="ARTIore. Part IV — BLUETOOTH AND BLE: THE UNSEEN WIRELESS ENVIRONMENT.">
+<link rel="icon" href="https://artiais.com/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="https://artiais.com/apple-touch-icon.png">
+<script id="seo-jsonld" type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://artiais.com/#organization", "name": "ARTIore", "url": "https://artiais.com/", "logo": {"@type": "ImageObject", "url": "https://artiais.com/apple-touch-icon.png", "width": 180, "height": 180}, "sameAs": ["https://artiore.com", "https://artioreconsortium.com", "https://x.com/Artiore", "https://www.linkedin.com/company/artiore/", "https://github.com/ARTIore", "https://instagram.com/ArtioreConsortium"]}, {"@type": "WebSite", "@id": "https://artiais.com/#website", "name": "ARTIore", "url": "https://artiais.com/", "description": "Clarity-first reasoning. The system is a witness, not a verdict.", "publisher": {"@id": "https://artiais.com/#organization"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://artiais.com/"}, {"@type": "ListItem", "position": 2, "name": "Investigations", "item": "https://artiais.com/investigations/digital-exposure/"}, {"@type": "ListItem", "position": 3, "name": "Part IV", "item": "https://artiais.com/investigations/digital-exposure/part-4/"}]}, {"@type": "Article", "@id": "https://artiais.com/investigations/digital-exposure/part-4/#article", "headline": "Part IV", "description": "How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.", "url": "https://artiais.com/investigations/digital-exposure/part-4/", "mainEntityOfPage": "https://artiais.com/investigations/digital-exposure/part-4/", "inLanguage": "en", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "author": {"@type": "Organization", "name": "ARTIore Research Desk"}, "publisher": {"@id": "https://artiais.com/#organization"}, "image": "https://artiais.com/og-image.png", "citation": "https://artiais.com/investigations/digital-exposure/source-register/", "isPartOf": {"@type": "CreativeWorkSeries", "name": "Global Digital Exposure Investigation"}}]}</script>
+<style>
+:root{--ink:#12100e;--ink-2:#1c1916;--ink-3:#26211d;--cream:#f4efe6;--muted:#d2cbbf;
+--gold:#d4b36a;--gold-bright:#f0d9a0;--line:rgba(212,179,106,.22);--max:46rem;
+--serif:'Iowan Old Style',Palatino,Georgia,'Times New Roman',serif;
+--sans:'Segoe UI',system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}
+html{background:var(--ink);color:var(--cream);font-family:var(--sans);line-height:1.65;
+-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;overflow-x:clip}
+img{max-width:100%;height:auto}
+a{color:var(--gold-bright);text-underline-offset:.18em}
+a:hover{color:var(--cream)}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip:focus{left:1rem;top:1rem;width:auto;height:auto;padding:.6rem .9rem;background:var(--gold);
+color:var(--ink);z-index:10}
+.site-header{border-bottom:1px solid var(--line);background:var(--ink)}
+.site-header .bar{max-width:72rem;margin:0 auto;padding:1rem 1.25rem;display:flex;flex-wrap:wrap;
+gap:.75rem 1.5rem;align-items:baseline;justify-content:space-between}
+.brand{font-family:var(--serif);font-size:1.5rem;letter-spacing:.14em;color:var(--gold);
+text-decoration:none;white-space:nowrap}
+.brand small{display:block;font-family:var(--sans);font-size:.7rem;letter-spacing:0;
+color:var(--muted)}
+.crumbs{max-width:72rem;margin:0 auto;padding:0 1.25rem .75rem;font-size:.8rem;color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.crumbs a:hover{color:var(--gold-bright)}
+.layout{max-width:72rem;margin:0 auto;padding:0 1.25rem;display:grid;gap:2.5rem;
+grid-template-columns:minmax(0,1fr)}
+@media (min-width:62rem){.layout{grid-template-columns:minmax(0,1fr) 15rem;gap:3.5rem}}
+.prose{max-width:var(--max);min-width:0;padding:2.5rem 0 4rem}
+.prose>header{border-bottom:1px solid var(--line);padding-bottom:1.5rem;margin-bottom:2rem}
+.kicker{font-size:.74rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);
+font-weight:700;margin:0 0 .8rem}
+h1{font-family:var(--serif);font-size:clamp(2rem,5.5vw,3.1rem);line-height:1.08;
+letter-spacing:-.01em;margin:0 0 1rem;font-weight:600}
+h2{font-family:var(--serif);font-size:clamp(1.35rem,3.2vw,1.85rem);line-height:1.2;
+margin:2.6rem 0 .8rem;font-weight:600}
+h3{font-size:1.08rem;margin:1.9rem 0 .5rem;font-weight:700}
+p{margin:0 0 1.1rem}
+ul,ol{margin:0 0 1.2rem;padding-left:1.3rem}
+li{margin:.35rem 0}
+blockquote{margin:1.6rem 0;padding:1rem 1.2rem;border-left:3px solid var(--gold);
+background:var(--ink-2);color:var(--cream)}
+blockquote p{margin:0}
+hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
+table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
+caption{caption-side:top;text-align:left;font-size:.85rem;color:var(--muted);padding:.4rem 0 .7rem}
+th,td{border-bottom:1px solid var(--line);padding:.55rem .4rem;text-align:left;vertical-align:top}
+th{font-weight:700;color:var(--gold-bright)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;
+background:var(--ink-3);padding:.1em .35em;border-radius:.2em}
+a code{color:var(--gold-bright)}
+.aside{position:sticky;top:1.5rem;align-self:start;font-size:.85rem;color:var(--muted);
+border-left:1px solid var(--line);padding-left:1.1rem}
+.aside h2{font-family:var(--sans);font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;
+color:var(--gold);margin:0 0 .6rem}
+.aside ol{list-style:none;padding:0;margin:0}
+.aside li{margin:.2rem 0}
+.aside a{color:var(--muted);text-decoration:none}
+.aside a:hover{color:var(--gold-bright);text-decoration:underline}
+.aside .here{color:var(--gold-bright);font-weight:600}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{border-bottom:1px solid var(--line);padding:.55rem 0}
+.toc a{font-weight:600}
+.doclist{list-style:none;padding:0}
+.doclist li{border-bottom:1px solid var(--line);padding:.55rem 0}
+.site-footer{border-top:1px solid var(--line);margin-top:3rem}
+.site-footer .inner{max-width:72rem;margin:0 auto;padding:2rem 1.25rem 3rem;font-size:.85rem;
+color:var(--muted)}
+.site-footer p{margin:.3rem 0}
+.site-footer a{color:var(--muted)}
+.site-footer a:hover{color:var(--gold-bright)}
+.evidence-note{font-size:.88rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="/">ARTIore<small>Clarity-first reasoning</small></a>
+<span><a href="/investigations/digital-exposure/">The Invisible Attack Surface</a></span>
+</div>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> · <a href="/investigations/digital-exposure/">Investigations</a> · <a href="/investigations/digital-exposure/">The Invisible Attack Surface</a> · Part IV</nav>
+</header>
+<div class="layout">
+<main class="prose" id="main">
+<article>
+<header>
+<p class="kicker">The Invisible Attack Surface · part 4 of 15</p>
+<h1>Part IV — BLUETOOTH AND BLE: THE UNSEEN WIRELESS ENVIRONMENT</h1>
+<p class="byline" style="font-size:.85rem;color:var(--muted)">ARTIore Research Desk · 2026-10-26</p>
+</header>
+<h2>PART IV — BLUETOOTH AND BLE: THE UNSEEN WIRELESS ENVIRONMENT</h2>
+<h2>4.1 Two technologies, one name</h2>
+<p><strong>Bluetooth Classic</strong> carries continuous streams: audio for calls and headphones, some file transfer, older peripherals. It establishes a session, negotiates a link key, and maintains a connection.</p>
+<p><strong>Bluetooth Low Energy (BLE)</strong> carries small packets at low power. It is designed for sensors, wearables, tags, locks, medical devices, and location services. Most of the time, a BLE device is not &quot;connected&quot; to anything. It is <em>advertising</em>: broadcasting short packets so that something nearby can notice it.</p>
+<p>That distinction explains most public confusion. A phone with Bluetooth on is not necessarily connected to anything, but it is almost certainly transmitting. Advertising is the normal state of the protocol, not a symptom.</p>
+<h2>4.2 Discovery, advertising, pairing, bonding</h2>
+<p><strong>Advertising</strong> packets contain a device address, flags, and often a local name, service UUIDs, and manufacturer-specific data. Some of that data is designed to be readable by anyone in range — that is the point.</p>
+<p><strong>Pairing</strong> establishes keys. Modern pairing uses Secure Simple Pairing or LE Secure Connections, with numeric comparison, passkey entry, or &quot;Just Works&quot;. Just Works provides encryption without authentication: it protects against passive eavesdropping but not against an active man-in-the-middle who relays the exchange.</p>
+<p><strong>Bonding</strong> stores the keys so the device reconnects without pairing again. A bond is a long-lived trust relationship, and it is why removing a device from your phone is not always enough — the peripheral may still hold the bond and attempt reconnection.</p>
+<p><strong>Address randomisation.</strong> To prevent trivial tracking, BLE devices rotate their addresses. A <strong>Resolvable Private Address (RPA)</strong> is derived from an <strong>Identity Resolving Key (IRK)</strong> shared with bonded devices. Anyone with the IRK can recognise the device across address changes; anyone without it cannot, in principle.</p>
+<p>The IRK is therefore a privacy-critical secret. If it leaks — through a compromised device, a backup, a debug interface, or a poorly implemented peripheral — the address rotation stops providing protection for that observer.</p>
+<h2>4.3 Tracking: the realistic threat</h2>
+<p>Tracking is the most consequential everyday Bluetooth risk, and it requires no exploit.</p>
+<p><strong>Commercial and civic infrastructure.</strong> Retail beacons, transit systems, venue analytics, and &quot;find my device&quot; networks all rely on observing advertisements. Apple's Find My network and Google's Find My Device network crowd-source location from billions of devices. This is a designed feature with privacy controls, and it is also a tracking infrastructure that can be abused.</p>
+<p><strong>Tracking tags.</strong> A tag in a bag, a coat, or a car boot broadcasts to nearby phones, which relay its location. Apple and Google have implemented anti-stalking alerts; researchers have repeatedly shown that alerts can be evaded or delayed by modifying a tag's behaviour. [Confirmed — platform documentation, independent research]</p>
+<p><strong>Physical-layer fingerprinting.</strong> Peer-reviewed research has demonstrated that radio-level imperfections — carrier frequency offset, clock drift, and I/Q imbalance — can fingerprint a BLE device even when its address rotates, without pairing and without the vendor's keys. [Demonstrated in research] This is not a consumer-grade capability, but it shows that address randomisation is a privacy control, not anonymity.</p>
+<p><strong>Cross-device correlation.</strong> A phone, a watch, earbuds, and a laptop often advertise with identifiers that link them. Observing one can imply the presence of the others.</p>
+<p><strong>What tracking does not require:</strong> malware, pairing, or any interaction with the victim. <strong>What it does require:</strong> receivers in physical range, or participation in a crowd-sourced network.</p>
+<h2>4.4 Malicious or vulnerable peripherals</h2>
+<p>A peripheral is a computer with a radio. If an attacker can cause your host to trust it, they inherit the peripheral's capabilities.</p>
+<p><strong>HID impersonation.</strong> A Bluetooth keyboard is trusted to send keystrokes. CVE-2023-45866 allowed unauthenticated keystroke injection into Android, Linux, and macOS hosts by exploiting the way some stacks accept HID connections without confirmation. The practical effect: an attacker within radio range can type into a locked or unlocked device — opening a terminal, invoking voice assistant, or entering commands. Apple and Google addressed related issues in updates. [Confirmed — CVE record, researcher disclosure]</p>
+<p><strong>Malicious peripherals.</strong> A device that looks like a keyboard, charger, or speaker can contain a radio and a microcontroller. Once paired, it can log keystrokes, inject input, or act as a network bridge. This is a supply-chain and social-engineering threat more than a protocol flaw: the victim is given or sold the device.</p>
+<p><strong>Vulnerable peripherals.</strong> Cheap BLE devices frequently implement &quot;Just Works&quot; pairing, static PINs, or no authentication at all. A lock, a medical sensor, or a toy with weak pairing is not protected by the strength of the phone it connects to.</p>
+<p><strong>Relay attacks against access systems.</strong> BLE-based locks and vehicle entry systems can be attacked by relaying signals between a legitimate key and the lock. The cryptography may be sound; the distance assumption is not. Documented in vehicle research and demonstrated against consumer locks. [Demonstrated in research; varies by product]</p>
+<h2>4.5 Implementation vulnerability classes</h2>
+<p>The protocol is generally sound; implementations are not.</p>
+<table>
+<caption>4.5 Implementation vulnerability classes</caption>
+<thead>
+<tr>
+<th scope="col">Class</th>
+<th scope="col">Examples</th>
+<th scope="col">Effect</th>
+<th scope="col">Prerequisite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stack memory corruption</td>
+<td>BlueBorne (CVE-2017-1000251 family)</td>
+<td>Code execution or info leak, sometimes without pairing</td>
+<td>Vulnerable stack, proximity</td>
+</tr>
+<tr>
+<td>Key negotiation downgrade</td>
+<td>KNOB (CVE-2019-9506)</td>
+<td>Brute-force of link key</td>
+<td>Vulnerable implementation, captured handshake</td>
+</tr>
+<tr>
+<td>Impersonation</td>
+<td>BIAS (CVE-2020-10135)</td>
+<td>Impersonate a bonded device</td>
+<td>Vulnerable stack, proximity</td>
+</tr>
+<tr>
+<td>SoC/link-layer flaws</td>
+<td>SweynTooth (2020), BrakTooth (2021)</td>
+<td>Crash, deadlock, code execution</td>
+<td>Vulnerable chipset, proximity</td>
+</tr>
+<tr>
+<td>Session key derivation</td>
+<td>BLUFFS (CVE-2023-24023)</td>
+<td>Impersonation, decryption across sessions</td>
+<td>Vulnerable stack, proximity</td>
+</tr>
+<tr>
+<td>HID acceptance</td>
+<td>CVE-2023-45866</td>
+<td>Keystroke injection</td>
+<td>Host accepts HID without confirmation</td>
+</tr>
+</tbody>
+</table>
+<p>[Confirmed for the CVE identifiers and vendor advisories; exploitation in the wild varies by class]</p>
+<p>None of these is a mass-market attack. Each requires a vulnerable target, proximity, and often a specific protocol state. Their significance is that they exist at all in a technology the public treats as inert.</p>
+<h2>4.6 Smart locks, access systems, and assistive hardware</h2>
+<p><strong>Bluetooth smart locks</strong> combine a radio, a motor, and an access-control decision. The attack surface includes the pairing process, the mobile app, the cloud service that issues keys, and the physical fallback. Documented failures tend to be in the app or the cloud rather than the radio: shared keys, weak account recovery, or an API that trusts the client. [Confirmed in specific disclosures; varies]</p>
+<p><strong>Bluetooth Braille displays and input devices</strong> are, technically, HID peripherals. A Braille display presents text as a refreshable tactile line and often provides input keys; it pairs with a phone or computer as a keyboard-like device, sometimes with additional serial profiles. That means it inherits the trust of a keyboard: it can send keystrokes and, in some configurations, receive information about what is on screen.</p>
+<p>This is not a criticism of assistive technology. It is an observation about a trust boundary that users and vendors rarely discuss. Specific attacks against Braille displays are not well documented in public research; the <em>class</em> — a paired HID device with broad input privileges — is well understood. [Plausible but unverified for specific products; Confirmed for the HID trust model]</p>
+<p><strong>What would make it exploitable:</strong> physical access to the device or its pairing, a malicious replacement device, a compromised firmware update, or an app with pairing privileges. <strong>What would not:</strong> the mere presence of a Braille display in a room.</p>
+<h2>4.7 What a Bluetooth log actually shows</h2>
+<p>Phone diagnostic logs are often cited as evidence of surveillance. They usually show:</p>
+<ul>
+<li>advertisements from nearby devices (expected in any public space);</li>
+<li>connection attempts that failed (expected when devices move out of range);</li>
+<li>pairing records for accessories the user owns;</li>
+<li>error codes from audio codec negotiation.</li>
+</ul>
+<p>None of these establishes that a device connected, that data was exchanged, or that a person was targeted. Establishing unauthorised access requires correlation across time, device identifiers, and — ideally — the peripheral itself. Treating a log line as proof is a category error that has caused real harm: people have destroyed evidence, replaced devices, and accused family members on the basis of normal radio noise.</p>
+<h2>4.8 Prerequisites, plainly</h2>
+<table>
+<caption>4.8 Prerequisites, plainly</caption>
+<thead>
+<tr>
+<th scope="col">Attack</th>
+<th scope="col">What the attacker needs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Passive advertisement observation</td>
+<td>A receiver in range</td>
+</tr>
+<tr>
+<td>Crowd-sourced tracking</td>
+<td>A tag or device participating in a find-my network</td>
+</tr>
+<tr>
+<td>Physical-layer fingerprinting</td>
+<td>Specialised radio hardware and signal-processing skill</td>
+</tr>
+<tr>
+<td>HID injection</td>
+<td>Proximity, a vulnerable or permissive host, a radio interface</td>
+</tr>
+<tr>
+<td>Impersonation (BIAS/BLUFFS)</td>
+<td>A bonded device, proximity, a vulnerable stack</td>
+</tr>
+<tr>
+<td>Code execution (BlueBorne class)</td>
+<td>An unpatched stack, proximity, exploit code</td>
+</tr>
+<tr>
+<td>Lock relay</td>
+<td>Two radios, proximity to both key and lock</td>
+</tr>
+</tbody>
+</table>
+<h2>4.9 Protections that match the threat</h2>
+<ul>
+<li><strong>Turn Bluetooth off when you are not using it</strong> — especially in hotels, conferences, and transport. This eliminates the entire class at the cost of convenience.</li>
+<li><strong>Disable &quot;discoverable&quot; / &quot;pairing&quot; modes</strong> when not pairing.</li>
+<li><strong>Do not accept pairing requests you did not initiate.</strong> A pairing request is an authentication event, not a notification.</li>
+<li><strong>Audit paired devices</strong> periodically and remove unknown entries.</li>
+<li><strong>Keep devices updated</strong>; most of the listed vulnerabilities are patched.</li>
+<li><strong>For high-risk users</strong>, avoid untrusted peripherals and treat free accessories as untrusted computers.</li>
+<li><strong>For anti-stalking</strong>, use platform detection features and, if a tag is found, preserve it rather than dismantling it — it may contain evidence.</li>
+<li><strong>For Braille and other assistive devices</strong>, buy from reputable vendors, apply firmware updates, and remove the pairing when the device is not in use.</li>
+</ul>
+<p>The correct mental model is not &quot;Bluetooth is dangerous&quot;. It is &quot;Bluetooth is a radio with a trust model, and the trust model has been broken before&quot;.</p>
+<hr />
+<hr />
+<h2>Evidence</h2>
+<table>
+<caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
+<thead>
+<tr>
+<th scope="col">Claim</th>
+<th scope="col">Verdict</th>
+<th scope="col">Label</th>
+<th scope="col">Source</th>
+<th scope="col">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C013</td>
+<td>confirmed</td>
+<td>A — Confirmed</td>
+<td>Martin et al., PETS 2019 (arXiv:1904.10600); checked by the ledger, 2019-04-24; <code>r15:S53</code>; [live]; Handoff all your privacy: a review of Apple's BLE…</td>
+<td>single source — a second independent source is required</td>
+</tr>
+<tr>
+<td>C017</td>
+<td>adjusted</td>
+<td>B — Demonstrated in research</td>
+<td>USENIX WOOT 25, Master Lock D1000; checked by the ledger, 2025-08; <code>r15:S51</code>; [live]; Bluetooth security</td>
+<td>narrowed: BLE lock: replay attacks have been demonstrated against the Master Lock D1000; the finding is product-specific, not universal to all BLE locks.</td>
+</tr>
+<tr>
+<td>C071</td>
+<td>plausible (Part 3 batch D)</td>
+<td>C — Plausible but unverified</td>
+<td><code>r15:S51</code>; [live]; Bluetooth security; <code>r15:S53</code>; [live]; Handoff all your privacy: a review of Apple's BLE…</td>
+<td>publication-ready wording: Evil-twin access points are a documented technique; there is no reliable public estimate of how often they are used in hotels.</td>
+</tr>
+<tr>
+<td>C072</td>
+<td>verified (Part 3 batch E)</td>
+<td>A — Confirmed</td>
+<td><code>url:97ffb36ebfdc</code>; [not checked]; Part 3 batch source; <code>r15:S52</code>; [live]; Unwanted tracking alerts in iOS and Android</td>
+<td>verified against one authoritative source</td>
+</tr>
+<tr>
+<td>C073</td>
+<td>verified (cataloging pass 26 Oct 2026)</td>
+<td>A — Confirmed</td>
+<td>NIST NVD, CVE-2017-1000251; Red Hat security advisory for…; checked by the cataloging pass, 2017-09; <code>url:b6bffe9d785d</code>; [not checked]; cataloging pass source; <code>r15:S48</code>; [live]; CVE-2017-1000251 — BlueBorne (Linux Bluetooth stack)</td>
+<td>publication-ready wording: BlueBorne (2017) included a Linux kernel Bluetooth flaw (CVE-2017-1000251) allowing remote code execution without pairing, under certain conditions. conditions: Radio range; an unpatched Bluetooth stack; a specific implementation. Code execution rather than a crash additionally depends on the absence of… [PRINCIPAL'S CALL: legal review before publication]</td>
+</tr>
+<tr>
+<td>C074</td>
+<td>verified (cataloging pass 26 Oct 2026)</td>
+<td>A — Confirmed</td>
+<td>NIST NVD CVE-2019-9506; NIST NVD CVE-2020-10135; IEEE S&amp;P…; checked by the cataloging pass, 2019-08 / 2020-05; <code>url:edc7a4c5444c</code>; [not checked]; cataloging pass source; <code>r15:S49</code>; [live]; CVE-2019-9506 — KNOB attack; <code>r15:S50</code>; [live]; CVE-2020-12351 — BIAS impersonation (BlueZ); CITATION FAULT — wrong identifier — the entry names the wrong CVE for BIAS at the registered URL;…</td>
+<td>publication-ready wording: KNOB (CVE-2019-9506) can force pairing key entropy down to one byte; BIAS (CVE-2020-10135) can impersonate a bonded device in some reconnection scenarios. the wording as it stands in the spine is unsupported or contradicted. — correct it to the publication-ready wording before publication conditions: Radio range during pairing or reconnection; vulnerable implementations on both ends. Neither is exploitable by an arbitrary passer-by — the claim's…</td>
+</tr>
+<tr>
+<td>C075</td>
+<td>adjusted</td>
+<td>B — Demonstrated in research</td>
+<td>NVD CVE-2023-45866; checked by the ledger, 2023-12-08; <code>r15:S51</code>; [live]; Bluetooth security</td>
+<td>narrowed: Bluetooth HID peripherals can inject keystrokes when an attacker pairs/impersonates one (CVE-2023-45866 class); the braille-display example is an analogy, not established by the CVE.</td>
+</tr>
+<tr>
+<td>C076</td>
+<td>adjusted</td>
+<td>C — Plausible but unverified</td>
+<td>USENIX WOOT 25, Master Lock D1000; checked by the ledger, 2025-08; <code>r15:S51</code>; [live]; Bluetooth security</td>
+<td>narrowed: BLE lock security depends on the lock’s protocol and key management, not the fact that it uses Bluetooth; the Master Lock D1000 study supports protocol/key failures, while the…</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+</main>
+<aside class="aside" aria-label="Investigation contents"><h2>Contents</h2><ol><li><a href="/investigations/digital-exposure/part-1/">Part I</a></li><li><a href="/investigations/digital-exposure/part-2/">Part II</a></li><li><a href="/investigations/digital-exposure/part-3/">Part III</a></li><li class="here"><a href="/investigations/digital-exposure/part-4/">Part IV</a></li><li><a href="/investigations/digital-exposure/part-5/">Part V</a></li><li><a href="/investigations/digital-exposure/part-6/">Part VI</a></li><li><a href="/investigations/digital-exposure/part-7/">Part VII</a></li><li><a href="/investigations/digital-exposure/part-8/">Part VIII</a></li><li><a href="/investigations/digital-exposure/part-9/">Part IX</a></li><li><a href="/investigations/digital-exposure/part-10/">Part X</a></li><li><a href="/investigations/digital-exposure/part-11/">Part XI</a></li><li><a href="/investigations/digital-exposure/part-12/">Part XII</a></li><li><a href="/investigations/digital-exposure/part-13/">Part XIII</a></li><li><a href="/investigations/digital-exposure/part-14/">Part XIV</a></li><li><a href="/investigations/digital-exposure/part-15/">Part XV</a></li></ol></aside>
+</div>
+<footer class="site-footer">
+<div class="inner">
+<p>ARTIore — independent research and intelligence practice. No sponsor, vendor or government reviewed this work before publication.</p>
+<p>Every claim is traced to a source. <a href="/investigations/digital-exposure/source-register/">Source register</a> · <a href="/investigations/digital-exposure/evidence/">Method</a> · <a href="/investigations/digital-exposure/corrections/">Corrections</a> · <a href="/">ARTIore</a></p>
+</div>
+</footer>
+</body>
+</html>

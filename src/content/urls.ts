@@ -6,6 +6,18 @@ export function normalizePath(pathname: string) {
   return path
 }
 
+/**
+ * Paths served as prebuilt static files rather than by the React router.
+ * The Global Digital Exposure Investigation is carried in public/ and published
+ * as complete pages, so the router must hand them to the server as ordinary
+ * navigations instead of trying to resolve them client-side.
+ */
+export const staticPrefixes = ['/investigations/']
+
+export function isStaticPath(href: string) {
+  return staticPrefixes.some((prefix) => href.startsWith(prefix))
+}
+
 export function toPublicPath(href: string) {
   if (!href.startsWith('/')) return href
   const hashIndex = href.indexOf('#')

@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iPhone Zero-Click Spyware: What's Proven and What Helps</title>
+<meta name="description" content="iPhones are hard to hack, not immune. Documented zero-click chains, Apple Threat Notifications, Lockdown Mode, and what is not evidence of a compromise.">
+<link rel="canonical" href="https://artiais.com/investigations/digital-exposure/iphone-zero-click-spyware/">
+<meta name="robots" content="index,follow">
+<meta property="og:site_name" content="ARTIore">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iPhone Zero-Click Spyware: What's Proven and What Helps">
+<meta property="og:description" content="iPhones are hard to hack, not immune. Documented zero-click chains, Apple Threat Notifications, Lockdown Mode, and what is not evidence of a compromise.">
+<meta property="og:url" content="https://artiais.com/investigations/digital-exposure/iphone-zero-click-spyware/">
+<meta property="og:image" content="https://artiais.com/og-image.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="ARTIore. iPhone Zero-Click Spyware: What's Proven and What Helps.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Artiore">
+<meta name="twitter:title" content="iPhone Zero-Click Spyware: What's Proven and What Helps">
+<meta name="twitter:description" content="iPhones are hard to hack, not immune. Documented zero-click chains, Apple Threat Notifications, Lockdown Mode, and what is not evidence of a compromise.">
+<meta name="twitter:image" content="https://artiais.com/og-image.png">
+<meta name="twitter:image:alt" content="ARTIore. iPhone Zero-Click Spyware: What's Proven and What Helps.">
+<link rel="icon" href="https://artiais.com/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="https://artiais.com/apple-touch-icon.png">
+<script id="seo-jsonld" type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://artiais.com/#organization", "name": "ARTIore", "url": "https://artiais.com/", "logo": {"@type": "ImageObject", "url": "https://artiais.com/apple-touch-icon.png", "width": 180, "height": 180}, "sameAs": ["https://artiore.com", "https://artioreconsortium.com", "https://x.com/Artiore", "https://www.linkedin.com/company/artiore/", "https://github.com/ARTIore", "https://instagram.com/ArtioreConsortium"]}, {"@type": "WebSite", "@id": "https://artiais.com/#website", "name": "ARTIore", "url": "https://artiais.com/", "description": "Clarity-first reasoning. The system is a witness, not a verdict.", "publisher": {"@id": "https://artiais.com/#organization"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://artiais.com/"}, {"@type": "ListItem", "position": 2, "name": "Investigations", "item": "https://artiais.com/investigations/digital-exposure/"}, {"@type": "ListItem", "position": 3, "name": "iPhone Zero-Click Spyware: What's Proven and What Helps", "item": "https://artiais.com/investigations/digital-exposure/iphone-zero-click-spyware/"}]}, {"@type": "Article", "@id": "https://artiais.com/investigations/digital-exposure/iphone-zero-click-spyware/#article", "headline": "iPhone Zero-Click Spyware: What's Proven and What Helps", "description": "iPhones are hard to hack, not immune. Documented zero-click chains, Apple Threat Notifications, Lockdown Mode, and what is not evidence of a compromise.", "url": "https://artiais.com/investigations/digital-exposure/iphone-zero-click-spyware/", "mainEntityOfPage": "https://artiais.com/investigations/digital-exposure/iphone-zero-click-spyware/", "inLanguage": "en", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "author": {"@type": "Organization", "name": "ARTIore Research Desk"}, "publisher": {"@id": "https://artiais.com/#organization"}, "image": "https://artiais.com/og-image.png", "citation": "https://artiais.com/investigations/digital-exposure/source-register/", "isPartOf": {"@type": "CreativeWorkSeries", "name": "Global Digital Exposure Investigation"}}]}</script>
+<style>
+:root{--ink:#12100e;--ink-2:#1c1916;--ink-3:#26211d;--cream:#f4efe6;--muted:#d2cbbf;
+--gold:#d4b36a;--gold-bright:#f0d9a0;--line:rgba(212,179,106,.22);--max:46rem;
+--serif:'Iowan Old Style',Palatino,Georgia,'Times New Roman',serif;
+--sans:'Segoe UI',system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}
+html{background:var(--ink);color:var(--cream);font-family:var(--sans);line-height:1.65;
+-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;overflow-x:clip}
+img{max-width:100%;height:auto}
+a{color:var(--gold-bright);text-underline-offset:.18em}
+a:hover{color:var(--cream)}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip:focus{left:1rem;top:1rem;width:auto;height:auto;padding:.6rem .9rem;background:var(--gold);
+color:var(--ink);z-index:10}
+.site-header{border-bottom:1px solid var(--line);background:var(--ink)}
+.site-header .bar{max-width:72rem;margin:0 auto;padding:1rem 1.25rem;display:flex;flex-wrap:wrap;
+gap:.75rem 1.5rem;align-items:baseline;justify-content:space-between}
+.brand{font-family:var(--serif);font-size:1.5rem;letter-spacing:.14em;color:var(--gold);
+text-decoration:none;white-space:nowrap}
+.brand small{display:block;font-family:var(--sans);font-size:.7rem;letter-spacing:0;
+color:var(--muted)}
+.crumbs{max-width:72rem;margin:0 auto;padding:0 1.25rem .75rem;font-size:.8rem;color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.crumbs a:hover{color:var(--gold-bright)}
+.layout{max-width:72rem;margin:0 auto;padding:0 1.25rem;display:grid;gap:2.5rem;
+grid-template-columns:minmax(0,1fr)}
+@media (min-width:62rem){.layout{grid-template-columns:minmax(0,1fr) 15rem;gap:3.5rem}}
+.prose{max-width:var(--max);min-width:0;padding:2.5rem 0 4rem}
+.prose>header{border-bottom:1px solid var(--line);padding-bottom:1.5rem;margin-bottom:2rem}
+.kicker{font-size:.74rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);
+font-weight:700;margin:0 0 .8rem}
+h1{font-family:var(--serif);font-size:clamp(2rem,5.5vw,3.1rem);line-height:1.08;
+letter-spacing:-.01em;margin:0 0 1rem;font-weight:600}
+h2{font-family:var(--serif);font-size:clamp(1.35rem,3.2vw,1.85rem);line-height:1.2;
+margin:2.6rem 0 .8rem;font-weight:600}
+h3{font-size:1.08rem;margin:1.9rem 0 .5rem;font-weight:700}
+p{margin:0 0 1.1rem}
+ul,ol{margin:0 0 1.2rem;padding-left:1.3rem}
+li{margin:.35rem 0}
+blockquote{margin:1.6rem 0;padding:1rem 1.2rem;border-left:3px solid var(--gold);
+background:var(--ink-2);color:var(--cream)}
+blockquote p{margin:0}
+hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
+table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
+caption{caption-side:top;text-align:left;font-size:.85rem;color:var(--muted);padding:.4rem 0 .7rem}
+th,td{border-bottom:1px solid var(--line);padding:.55rem .4rem;text-align:left;vertical-align:top}
+th{font-weight:700;color:var(--gold-bright)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;
+background:var(--ink-3);padding:.1em .35em;border-radius:.2em}
+a code{color:var(--gold-bright)}
+.aside{position:sticky;top:1.5rem;align-self:start;font-size:.85rem;color:var(--muted);
+border-left:1px solid var(--line);padding-left:1.1rem}
+.aside h2{font-family:var(--sans);font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;
+color:var(--gold);margin:0 0 .6rem}
+.aside ol{list-style:none;padding:0;margin:0}
+.aside li{margin:.2rem 0}
+.aside a{color:var(--muted);text-decoration:none}
+.aside a:hover{color:var(--gold-bright);text-decoration:underline}
+.aside .here{color:var(--gold-bright);font-weight:600}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{border-bottom:1px solid var(--line);padding:.55rem 0}
+.toc a{font-weight:600}
+.doclist{list-style:none;padding:0}
+.doclist li{border-bottom:1px solid var(--line);padding:.55rem 0}
+.site-footer{border-top:1px solid var(--line);margin-top:3rem}
+.site-footer .inner{max-width:72rem;margin:0 auto;padding:2rem 1.25rem 3rem;font-size:.85rem;
+color:var(--muted)}
+.site-footer p{margin:.3rem 0}
+.site-footer a{color:var(--muted)}
+.site-footer a:hover{color:var(--gold-bright)}
+.evidence-note{font-size:.88rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="/">ARTIore<small>Clarity-first reasoning</small></a>
+<span><a href="/investigations/digital-exposure/">The Invisible Attack Surface</a></span>
+</div>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> · <a href="/investigations/digital-exposure/">Investigations</a> · <a href="/investigations/digital-exposure/">The Invisible Attack Surface</a> · iPhone Zero-Click Spyware: What's Proven and What Helps</nav>
+</header>
+<div class="layout">
+<main class="prose" id="main">
+<article>
+<header>
+<p class="kicker">Mobile</p>
+<h1>iPhone Zero-Click Spyware: What's Proven and What Helps</h1>
+<p class="byline" style="font-size:.85rem;color:var(--muted)">2026-10-26</p>
+</header>
+<p>The sentence &quot;iPhones cannot get spyware&quot; is reassuring, widely repeated, and false. The accurate sentence is harder and more useful: <strong>iPhones are among the hardest consumer devices to compromise, and they have been compromised repeatedly in targeted attacks.</strong></p>
+<p>The difference matters, because the first sentence produces complacency and the second produces appropriate action.</p>
+<h2>What &quot;zero-click&quot; means</h2>
+<p>Most compromises require you to do something: tap a link, install an app, enter a password. A <strong>zero-click</strong> exploit requires nothing. The device processes incoming data automatically — an image, a font, a message attachment, a link preview — and a memory-corruption bug in that processing path yields code execution before you see anything.</p>
+<p>This is not science fiction. It is the documented mechanism of several of the most important iOS attacks on record.</p>
+<h2>The documented chains</h2>
+<table>
+<caption>The documented chains</caption>
+<thead>
+<tr>
+<th scope="col">CVE</th>
+<th scope="col">Component</th>
+<th scope="col">Year</th>
+<th scope="col">What it was used for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2021-30860</td>
+<td>CoreGraphics (JBIG2)</td>
+<td>2021</td>
+<td>FORCEDENTRY: zero-click iMessage delivery of Pegasus</td>
+</tr>
+<tr>
+<td>CVE-2023-41064 / -41061</td>
+<td>ImageIO / Wallet</td>
+<td>2023</td>
+<td>BLASTPASS: zero-click via a malicious image</td>
+</tr>
+<tr>
+<td>CVE-2023-38606, -41990, -32434, -32435</td>
+<td>Kernel / FontParser / WebKit</td>
+<td>2023</td>
+<td>Operation Triangulation: four-zero-day chain</td>
+</tr>
+<tr>
+<td>CVE-2025-43300</td>
+<td>ImageIO</td>
+<td>2025</td>
+<td>Used with WhatsApp CVE-2025-55177 in a zero-click chain</td>
+</tr>
+<tr>
+<td>CVE-2026-86950</td>
+<td>CoreGraphics</td>
+<td>2026</td>
+<td>Patched in September; exploited against &quot;specific targeted individuals&quot;</td>
+</tr>
+</tbody>
+</table>
+<p>[Confirmed — Apple advisories, CVE records, CISA KEV, Citizen Lab, Kaspersky]</p>
+<p>Two details deserve emphasis.</p>
+<p><strong>FORCEDENTRY</strong> used a malicious PDF-like image that iMessage processed automatically. The victim did not click. Apple introduced BlastDoor to harden message parsing; later chains still found paths around the architecture.</p>
+<p><strong>Operation Triangulation</strong> combined four zero-days, including an undocumented hardware feature that allowed the attackers to bypass a security mitigation. Kaspersky observed it from 2019 and disclosed it in 2023. [Confirmed]</p>
+<h2>The 2026 case that shows how this is confirmed</h2>
+<p>In September 2026, Citizen Lab, working with the SHARE Foundation, confirmed that an iPhone belonging to a Serbian student activist had been infected with Pegasus through an iMessage zero-click exploit, with high-confidence indicators from December 2025 to January 2026. The exploit was subsequently patched by Apple in iOS 18.4.1. At least 14 people in the student movement and civil society had received Apple Threat Notifications. [Confirmed — Citizen Lab, Reuters]</p>
+<p>This is what evidence looks like: a forensic examination, a named exploit path, a vendor patch, and a notification trail. It is very different from a battery that drains quickly.</p>
+<h2>What Lockdown Mode does</h2>
+<p>Lockdown Mode is an optional, extreme hardening setting for people who may be targeted. It reduces attack surface by disabling or restricting features that are commonly exploited:</p>
+<ul>
+<li>most message attachment types;</li>
+<li>link previews;</li>
+<li>some web technologies and just-in-time compilation;</li>
+<li>incoming invitations and calls from unknown contacts;</li>
+<li>wired connections;</li>
+<li>some configuration profiles and device management.</li>
+</ul>
+<p>The trade-off is real: attachments, some websites, and some accessories may not work. It is not necessary for most people. It is rational for journalists, activists, officials, executives, litigants, and anyone who has received a Threat Notification.</p>
+<h2>Apple Threat Notifications</h2>
+<p>Apple sends notifications to users it believes have been targeted by mercenary spyware. They are deliberately sparse, to protect detection methods. Access Now and Citizen Lab treat them as a high-confidence indicator of targeting.</p>
+<p>If you receive one:</p>
+<ol>
+<li>Do not reset or &quot;clean&quot; the device.</li>
+<li>Do not confront anyone using that device.</li>
+<li>Contact a recognised digital-security helpline or a forensic provider.</li>
+<li>Preserve the device and its logs.</li>
+<li>Enable Lockdown Mode after consultation.</li>
+<li>Inform people you communicate with, through a separate channel.</li>
+</ol>
+<h2>What is not evidence of spyware</h2>
+<ul>
+<li>battery drain (common, usually software);</li>
+<li>a phone that heats up (same);</li>
+<li>an unexplained call or missed call (network behaviour, spam);</li>
+<li>a strange notification (app bug, spam, marketing);</li>
+<li>a Bluetooth device in your list (public space);</li>
+<li>a log entry you do not understand (logs contain error strings).</li>
+</ul>
+<p>Each of these can co-occur with spyware. None establishes it. The error runs in both directions — dismissing real infections and accusing innocent ones — and both are harmful.</p>
+<h2>Who is actually targeted</h2>
+<p>The public record is consistent: journalists, human-rights defenders, lawyers, opposition politicians, officials, and people close to them. The cost of a full chain — millions of dollars, or a subscription to a spyware product — means deployment is selective.</p>
+<p>That is not a reason for complacency. It is a reason to calibrate. If you are in a targeted group, patch within hours, use Lockdown Mode, and use hardware security keys. If you are not, patch promptly, use a strong passcode, and spend your attention on the risks that are actually common: phishing, account takeover, and fraud.</p>
+<h2>Practical measures</h2>
+<ol>
+<li><strong>Update iOS immediately</strong> when a security update appears.</li>
+<li><strong>Use a strong alphanumeric passcode</strong> — not six digits.</li>
+<li><strong>Enable Lockdown Mode</strong> if you are high-risk.</li>
+<li><strong>Disable message previews</strong> on the lock screen.</li>
+<li><strong>Use hardware keys</strong> for your Apple account and primary email.</li>
+<li><strong>Review trusted devices and recovery contacts</strong> twice a year.</li>
+<li><strong>Do not install configuration profiles</strong> you did not request.</li>
+<li><strong>Keep the app count low.</strong></li>
+</ol>
+<h2>FAQ</h2>
+<p><strong>Can an iPhone be hacked without clicking anything?</strong>
+Yes, with a zero-click exploit chain. It is rare, expensive, and targeted.</p>
+<p><strong>Does Lockdown Mode make an iPhone unhackable?</strong>
+No. It substantially reduces attack surface. Nothing makes a device unhackable.</p>
+<p><strong>How would I know if I were infected?</strong>
+Often you would not. Threat Notifications and forensic examination are the reliable routes.</p>
+<p><strong>Is Android safer?</strong>
+Neither platform is immune. Both have been compromised by commercial spyware. Patch behaviour matters more than brand.</p>
+<h2>Evidence</h2>
+<table>
+<caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
+<thead>
+<tr>
+<th scope="col">Claim</th>
+<th scope="col">Verdict</th>
+<th scope="col">Label</th>
+<th scope="col">Source</th>
+<th scope="col">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C023</td>
+<td>confirmed</td>
+<td>A — Confirmed</td>
+<td>Citizen Lab / NVD (cross-reference to Part 3 C084–C086); checked by the ledger, 2021-09-13; <code>r15:S1</code>; [live]; FORCEDENTRY: NSO Group iMessage zero-click exploit…; <code>r15:S2</code>; [live]; BLASTPASS: NSO Group iPhone zero-click, zero-day…; <code>r15:S3</code>; [live]; Operation Triangulation: mapping the exploit chain</td>
+<td>2 independent sources</td>
+</tr>
+<tr>
+<td>C031</td>
+<td>confirmed</td>
+<td>A — Confirmed</td>
+<td>Citizen Lab / IFJ (cross-reference to Part 3 C100–C101); checked by the ledger, 2021-12; <code>r15:S1</code>; [live]; FORCEDENTRY: NSO Group iMessage zero-click exploit…; <code>r15:S12</code>; [live]; Predator in the wires: Cytrox, Intellexa and the…; <code>r15:S14</code>; [live]; Italy: second Italian journalist targeted with…</td>
+<td>2 independent sources</td>
+</tr>
+<tr>
+<td>C047</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>FBI IC3 2024 Internet Crime Report; checked by the ledger, 2025-04-23; <code>r15:S5</code>; [live]; Forensic methodology report: how to catch NSO Group's…; <code>r15:S6</code>; [live]; What is Pegasus spyware and how does it work?</td>
+<td>narrowed: Mass-market fraud is large-scale and financially motivated: 859,532 IC3 complaints and over $16B in reported losses in 2024. “Cheap” and “scalable” are analytical characterizations, not…</td>
+</tr>
+<tr>
+<td>C052</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Citizen Lab FORCEDENTRY; Android AccessibilityService; checked by the ledger, 2021-09-13; <code>r15:S1</code>; [live]; FORCEDENTRY: NSO Group iMessage zero-click exploit…; <code>r15:S2</code>; [live]; BLASTPASS: NSO Group iPhone zero-click, zero-day…; <code>r15:S3</code>; [live]; Operation Triangulation: mapping the exploit chain; <code>r15:S17</code>; [live]; Lockdown Mode; <code>r15:S21</code>; [live]; Android Security Bulletin; <code>r15:S84</code>; [live]; Android Advanced Protection mode</td>
+<td>narrowed: iOS zero-click exploitation, Lockdown Mode, Android sideloading/accessibility abuse and update variability are documented; “patch level, account security, installed software and targeting…</td>
+</tr>
+<tr>
+<td>C054</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Amnesty International, Pegasus forensic methodology report; checked by the ledger, 2021-07-18; <code>r15:S1</code>; [live]; FORCEDENTRY: NSO Group iMessage zero-click exploit…; <code>r15:S2</code>; [live]; BLASTPASS: NSO Group iPhone zero-click, zero-day…; <code>r15:S12</code>; [live]; Predator in the wires: Cytrox, Intellexa and the…; <code>r15:S14</code>; [live]; Italy: second Italian journalist targeted with…; <code>r15:S4</code>; [live]; Coruna: the framework used in Operation Triangulation</td>
+<td>narrowed: Commercial spyware is targeted at human-rights defenders, journalists and civil-society figures; “smaller than the fear” is an analytical judgment, not a measured comparison.</td>
+</tr>
+<tr>
+<td>C084</td>
+<td>verified (Part 3 batch A)</td>
+<td>A — Confirmed</td>
+<td><code>url:9c6ae9cf6f3a</code>; [not checked]; Part 3 batch source; <code>r15:S1</code>; [live]; FORCEDENTRY: NSO Group iMessage zero-click exploit…; <code>r15:S8</code>; [live]; CVE-2021-30860 — Apple JBIG2 integer overflow</td>
+<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+</tr>
+<tr>
+<td>C085</td>
+<td>verified (cataloging pass 26 Oct 2026)</td>
+<td>A — Confirmed</td>
+<td>Citizen Lab; CERT-EU security advisory 2023-061; NIST NVD…; checked by the cataloging pass, 2023-09-07; <code>url:c65b12fdcb2e</code>; [not checked]; cataloging pass source; <code>r15:S2</code>; [live]; BLASTPASS: NSO Group iPhone zero-click, zero-day…; <code>r15:S9</code>; [live]; CVE-2023-41064 — Apple ImageIO buffer overflow</td>
+<td>publication-ready wording: BLASTPASS (2023) was a zero-click PassKit/ImageIO chain against iOS 16.6 and earlier (CVE-2023-41064 and CVE-2023-41061), fixed in iOS 16.6.1, attributed to NSO Group by Citizen… the wording as it stands in the spine is unsupported or contradicted. — correct it to the publication-ready wording before publication conditions: Reachable iMessage; a malicious PassKit attachment; a vulnerable iOS version. Delivery through a service, not an app the user installs. [PRINCIPAL'S CALL: legal review before publication]</td>
+</tr>
+<tr>
+<td>C086</td>
+<td>verified (Part 3 batch A)</td>
+<td>A — Confirmed</td>
+<td><code>url:3dbde65f2e97</code>; [not checked]; Part 3 batch source; <code>url:50cf860ffb56</code>; [not checked]; Part 3 batch source; <code>url:72fd36bd3571</code>; [not checked]; Part 3 batch source; <code>url:84c85683032f</code>; [not checked]; Part 3 batch source; <code>r15:S3</code>; [live]; Operation Triangulation: mapping the exploit chain</td>
+<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+</tr>
+<tr>
+<td>C089</td>
+<td>verified (Part 3 batch E)</td>
+<td>A — Confirmed</td>
+<td><code>url:57ee4e44a4ee</code>; [not checked]; Part 3 batch source; <code>r15:S17</code>; [live]; Lockdown Mode</td>
+<td>verified against one authoritative source</td>
+</tr>
+<tr>
+<td>C098</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>MVT documentation; checked by the ledger, 2026; <code>r15:S15</code>; [live]; Mobile Verification Toolkit (MVT)</td>
+<td>narrowed: Common symptoms are not sufficient indicators; forensic examination (e.g. MVT) is needed for a real signal.</td>
+</tr>
+<tr>
+<td>C103</td>
+<td>plausible (Part 3 batch C)</td>
+<td>C — Plausible but unverified</td>
+<td><code>url:31abe9ab83ba</code>; [not checked]; Part 3 batch source; <code>r15:S1</code>; [live]; FORCEDENTRY: NSO Group iMessage zero-click exploit…; <code>r15:S2</code>; [live]; BLASTPASS: NSO Group iPhone zero-click, zero-day…; <code>r15:S12</code>; [live]; Predator in the wires: Cytrox, Intellexa and the…; <code>r15:S14</code>; [live]; Italy: second Italian journalist targeted with…; <code>r15:S4</code>; [live]; Coruna: the framework used in Operation Triangulation</td>
+<td>publication-ready wording: The documented commercial-spyware cases concern journalists, activists, lawyers, officials and business figures; there is no credible public evidence of population-scale deployment against…</td>
+</tr>
+<tr>
+<td>C132</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Pegasus Project / Amnesty MVT; checked by the ledger, 2021-07-18; <code>r15:S5</code>; [live]; Forensic methodology report: how to catch NSO Group's…; <code>r15:S6</code>; [live]; What is Pegasus spyware and how does it work?</td>
+<td>narrowed: A number on the Pegasus Project target list is a lead, not proof of infection; a specific infection claim requires forensic examination.</td>
+</tr>
+<tr>
+<td>C134</td>
+<td>verified (Part 3 batch E)</td>
+<td>A — Confirmed</td>
+<td><code>url:8f6b543c1146</code>; [not checked]; Part 3 batch source; <code>url:489845ba59a0</code>; [not checked]; Part 3 batch source</td>
+<td>verified against one authoritative source</td>
+</tr>
+<tr>
+<td>C145</td>
+<td>verified (Part 3 batch E)</td>
+<td>A — Confirmed</td>
+<td><code>url:a683fa7c0373</code>; [not checked]; Part 3 batch source</td>
+<td>verified against one authoritative source</td>
+</tr>
+<tr>
+<td>C153</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Citizen Lab FORCEDENTRY/BLASTPASS; checked by the ledger, 2023-09-07; <code>r15:S1</code>; [live]; FORCEDENTRY: NSO Group iMessage zero-click exploit…; <code>r15:S2</code>; [live]; BLASTPASS: NSO Group iPhone zero-click, zero-day…</td>
+<td>narrowed: iMessage parses rich attachments (including PassKit/ImageIO) before user interaction, so a zero-click payload can be handled by a service; the full images/fonts/PDFs list is not…</td>
+</tr>
+<tr>
+<td>C201</td>
+<td>verified (Part 3 batch A)</td>
+<td>A — Confirmed</td>
+<td><code>url:e780657bf7b6</code>; [not checked]; Part 3 batch source; <code>url:5069297fb7c1</code>; [not checked]; Part 3 batch source</td>
+<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Related:</strong> <a href="/investigations/digital-exposure/pegasus-predator-commercial-spyware/">Pegasus, Predator and commercial spyware</a> · <a href="/investigations/digital-exposure/whatsapp-encryption-limits/">WhatsApp encryption limits</a> · <a href="/investigations/digital-exposure/android-accessibility-service-malware/">Android accessibility malware</a></p>
+<p><strong>Part of the ARTIore Global Digital Exposure Investigation.</strong></p>
+
+</article>
+</main>
+<aside class="aside" aria-label="Investigation contents"><h2>The investigation</h2><ol><li><a href="/investigations/digital-exposure/password-protected-wifi-not-secure/">Why a Password-Protected Wi-Fi Network Is Not a Secure Network</a></li><li><a href="/investigations/digital-exposure/hotel-wifi-security-guide/">Hotel Wi-Fi Security: What Travellers Should Actually Do</a></li><li><a href="/investigations/digital-exposure/dns-hijacking-explained/">DNS Hijacking Explained: The Invisible Switch That Decides Where You Go</a></li><li><a href="/investigations/digital-exposure/bluetooth-ble-tracking/">Bluetooth and BLE Tracking: What Your Devices Broadcast</a></li><li><a href="/investigations/digital-exposure/android-accessibility-service-malware/">Android Accessibility Service Malware: The Permission That Can Read Your Screen</a></li><li><a href="/investigations/digital-exposure/iphone-zero-click-spyware/">iPhone Zero-Click Spyware: What Is Proven, What Lockdown Mode Does</a></li><li><a href="/investigations/digital-exposure/whatsapp-encryption-limits/">WhatsApp Encryption Limits: What End-to-End Encryption Does Not Protect</a></li><li><a href="/investigations/digital-exposure/pegasus-predator-commercial-spyware/">Pegasus, Predator and Commercial Spyware: What Is Actually Proven</a></li><li><a href="/investigations/digital-exposure/cloud-photo-account-takeover/">Cloud Photo Security: How Accounts and Tokens Get Stolen</a></li><li><a href="/investigations/digital-exposure/crypto-wallet-drainers/">Crypto Wallet Drainers: Seed Phrases, Approvals and Address Poisoning</a></li><li><a href="/investigations/digital-exposure/sim-swap-account-takeover/">SIM Swap and Account Takeover: When Your Phone Number Becomes the Weakest Link</a></li><li><a href="/investigations/digital-exposure/hotel-keycard-lock-security/">Hotel Keycard Locks: The Unsaflok Case and What It Means for Guests</a></li><li><a href="/investigations/digital-exposure/global-threat-matrix/">Global Threat Matrix</a></li><li><a href="/investigations/digital-exposure/public-safety-checklist/">Public Safety Checklist</a></li><li><a href="/investigations/digital-exposure/technical-glossary/">Technical Glossary</a></li><li><a href="/investigations/digital-exposure/source-register/">Source Register</a></li></ol></aside>
+</div>
+<footer class="site-footer">
+<div class="inner">
+<p>ARTIore — independent research and intelligence practice. No sponsor, vendor or government reviewed this work before publication.</p>
+<p>Every claim is traced to a source. <a href="/investigations/digital-exposure/source-register/">Source register</a> · <a href="/investigations/digital-exposure/evidence/">Method</a> · <a href="/investigations/digital-exposure/corrections/">Corrections</a> · <a href="/">ARTIore</a></p>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crypto Wallet Drainers: How Approvals and Seeds Get Stolen</title>
+<meta name="description" content="Blockchains are secure; wallets are not. Drainer kits, malicious approvals, address poisoning, fake apps and the verification habits that stop them.">
+<link rel="canonical" href="https://artiais.com/investigations/digital-exposure/crypto-wallet-drainers/">
+<meta name="robots" content="index,follow">
+<meta property="og:site_name" content="ARTIore">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Crypto Wallet Drainers: How Approvals and Seeds Get Stolen">
+<meta property="og:description" content="Blockchains are secure; wallets are not. Drainer kits, malicious approvals, address poisoning, fake apps and the verification habits that stop them.">
+<meta property="og:url" content="https://artiais.com/investigations/digital-exposure/crypto-wallet-drainers/">
+<meta property="og:image" content="https://artiais.com/og-image.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="ARTIore. Crypto Wallet Drainers: How Approvals and Seeds Get Stolen.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Artiore">
+<meta name="twitter:title" content="Crypto Wallet Drainers: How Approvals and Seeds Get Stolen">
+<meta name="twitter:description" content="Blockchains are secure; wallets are not. Drainer kits, malicious approvals, address poisoning, fake apps and the verification habits that stop them.">
+<meta name="twitter:image" content="https://artiais.com/og-image.png">
+<meta name="twitter:image:alt" content="ARTIore. Crypto Wallet Drainers: How Approvals and Seeds Get Stolen.">
+<link rel="icon" href="https://artiais.com/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="https://artiais.com/apple-touch-icon.png">
+<script id="seo-jsonld" type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://artiais.com/#organization", "name": "ARTIore", "url": "https://artiais.com/", "logo": {"@type": "ImageObject", "url": "https://artiais.com/apple-touch-icon.png", "width": 180, "height": 180}, "sameAs": ["https://artiore.com", "https://artioreconsortium.com", "https://x.com/Artiore", "https://www.linkedin.com/company/artiore/", "https://github.com/ARTIore", "https://instagram.com/ArtioreConsortium"]}, {"@type": "WebSite", "@id": "https://artiais.com/#website", "name": "ARTIore", "url": "https://artiais.com/", "description": "Clarity-first reasoning. The system is a witness, not a verdict.", "publisher": {"@id": "https://artiais.com/#organization"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://artiais.com/"}, {"@type": "ListItem", "position": 2, "name": "Investigations", "item": "https://artiais.com/investigations/digital-exposure/"}, {"@type": "ListItem", "position": 3, "name": "Crypto Wallet Drainers: How Approvals and Seeds Get Stolen", "item": "https://artiais.com/investigations/digital-exposure/crypto-wallet-drainers/"}]}, {"@type": "Article", "@id": "https://artiais.com/investigations/digital-exposure/crypto-wallet-drainers/#article", "headline": "Crypto Wallet Drainers: How Approvals and Seeds Get Stolen", "description": "Blockchains are secure; wallets are not. Drainer kits, malicious approvals, address poisoning, fake apps and the verification habits that stop them.", "url": "https://artiais.com/investigations/digital-exposure/crypto-wallet-drainers/", "mainEntityOfPage": "https://artiais.com/investigations/digital-exposure/crypto-wallet-drainers/", "inLanguage": "en", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "author": {"@type": "Organization", "name": "ARTIore Research Desk"}, "publisher": {"@id": "https://artiais.com/#organization"}, "image": "https://artiais.com/og-image.png", "citation": "https://artiais.com/investigations/digital-exposure/source-register/", "isPartOf": {"@type": "CreativeWorkSeries", "name": "Global Digital Exposure Investigation"}}]}</script>
+<style>
+:root{--ink:#12100e;--ink-2:#1c1916;--ink-3:#26211d;--cream:#f4efe6;--muted:#d2cbbf;
+--gold:#d4b36a;--gold-bright:#f0d9a0;--line:rgba(212,179,106,.22);--max:46rem;
+--serif:'Iowan Old Style',Palatino,Georgia,'Times New Roman',serif;
+--sans:'Segoe UI',system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}
+html{background:var(--ink);color:var(--cream);font-family:var(--sans);line-height:1.65;
+-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;overflow-x:clip}
+img{max-width:100%;height:auto}
+a{color:var(--gold-bright);text-underline-offset:.18em}
+a:hover{color:var(--cream)}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip:focus{left:1rem;top:1rem;width:auto;height:auto;padding:.6rem .9rem;background:var(--gold);
+color:var(--ink);z-index:10}
+.site-header{border-bottom:1px solid var(--line);background:var(--ink)}
+.site-header .bar{max-width:72rem;margin:0 auto;padding:1rem 1.25rem;display:flex;flex-wrap:wrap;
+gap:.75rem 1.5rem;align-items:baseline;justify-content:space-between}
+.brand{font-family:var(--serif);font-size:1.5rem;letter-spacing:.14em;color:var(--gold);
+text-decoration:none;white-space:nowrap}
+.brand small{display:block;font-family:var(--sans);font-size:.7rem;letter-spacing:0;
+color:var(--muted)}
+.crumbs{max-width:72rem;margin:0 auto;padding:0 1.25rem .75rem;font-size:.8rem;color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.crumbs a:hover{color:var(--gold-bright)}
+.layout{max-width:72rem;margin:0 auto;padding:0 1.25rem;display:grid;gap:2.5rem;
+grid-template-columns:minmax(0,1fr)}
+@media (min-width:62rem){.layout{grid-template-columns:minmax(0,1fr) 15rem;gap:3.5rem}}
+.prose{max-width:var(--max);min-width:0;padding:2.5rem 0 4rem}
+.prose>header{border-bottom:1px solid var(--line);padding-bottom:1.5rem;margin-bottom:2rem}
+.kicker{font-size:.74rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);
+font-weight:700;margin:0 0 .8rem}
+h1{font-family:var(--serif);font-size:clamp(2rem,5.5vw,3.1rem);line-height:1.08;
+letter-spacing:-.01em;margin:0 0 1rem;font-weight:600}
+h2{font-family:var(--serif);font-size:clamp(1.35rem,3.2vw,1.85rem);line-height:1.2;
+margin:2.6rem 0 .8rem;font-weight:600}
+h3{font-size:1.08rem;margin:1.9rem 0 .5rem;font-weight:700}
+p{margin:0 0 1.1rem}
+ul,ol{margin:0 0 1.2rem;padding-left:1.3rem}
+li{margin:.35rem 0}
+blockquote{margin:1.6rem 0;padding:1rem 1.2rem;border-left:3px solid var(--gold);
+background:var(--ink-2);color:var(--cream)}
+blockquote p{margin:0}
+hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
+table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
+caption{caption-side:top;text-align:left;font-size:.85rem;color:var(--muted);padding:.4rem 0 .7rem}
+th,td{border-bottom:1px solid var(--line);padding:.55rem .4rem;text-align:left;vertical-align:top}
+th{font-weight:700;color:var(--gold-bright)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;
+background:var(--ink-3);padding:.1em .35em;border-radius:.2em}
+a code{color:var(--gold-bright)}
+.aside{position:sticky;top:1.5rem;align-self:start;font-size:.85rem;color:var(--muted);
+border-left:1px solid var(--line);padding-left:1.1rem}
+.aside h2{font-family:var(--sans);font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;
+color:var(--gold);margin:0 0 .6rem}
+.aside ol{list-style:none;padding:0;margin:0}
+.aside li{margin:.2rem 0}
+.aside a{color:var(--muted);text-decoration:none}
+.aside a:hover{color:var(--gold-bright);text-decoration:underline}
+.aside .here{color:var(--gold-bright);font-weight:600}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{border-bottom:1px solid var(--line);padding:.55rem 0}
+.toc a{font-weight:600}
+.doclist{list-style:none;padding:0}
+.doclist li{border-bottom:1px solid var(--line);padding:.55rem 0}
+.site-footer{border-top:1px solid var(--line);margin-top:3rem}
+.site-footer .inner{max-width:72rem;margin:0 auto;padding:2rem 1.25rem 3rem;font-size:.85rem;
+color:var(--muted)}
+.site-footer p{margin:.3rem 0}
+.site-footer a{color:var(--muted)}
+.site-footer a:hover{color:var(--gold-bright)}
+.evidence-note{font-size:.88rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="/">ARTIore<small>Clarity-first reasoning</small></a>
+<span><a href="/investigations/digital-exposure/">The Invisible Attack Surface</a></span>
+</div>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> · <a href="/investigations/digital-exposure/">Investigations</a> · <a href="/investigations/digital-exposure/">The Invisible Attack Surface</a> · Crypto Wallet Drainers: How Approvals and Seeds Get Stolen</nav>
+</header>
+<div class="layout">
+<main class="prose" id="main">
+<article>
+<header>
+<p class="kicker">Finance</p>
+<h1>Crypto Wallet Drainers: How Approvals and Seeds Get Stolen</h1>
+<p class="byline" style="font-size:.85rem;color:var(--muted)">2026-10-26</p>
+</header>
+<p>The cryptography securing major blockchains has not been broken. Forging a signature is not a realistic attack. Yet billions of dollars are stolen every year.</p>
+<p>The reason is simple: attackers do not attack the chain. They attack the wallet, the browser, the exchange, the bridge, and the person approving transactions.</p>
+<h2>The scale</h2>
+<p>TRM Labs recorded approximately <strong>$2.87 billion</strong> stolen across nearly 150 incidents in 2025, with the Bybit breach alone accounting for about $1.46 billion — roughly 51 percent of the total. Chainalysis separately attributed about <strong>$2 billion</strong> to DPRK-linked actors in 2025, describing it as their most destructive year. [Confirmed — both firms' 2026 reports]</p>
+<p>Those figures are dominated by a handful of enormous platform compromises. The long tail is individual users, drained one approval at a time.</p>
+<h2>How drainers work</h2>
+<p>A <strong>wallet drainer</strong> is a kit sold to criminals. It provides a convincing interface and a set of contracts designed to extract value.</p>
+<p>The typical sequence:</p>
+<ol>
+<li>The victim is lured to a site — a fake airdrop, a mint, a &quot;security check&quot;, a job offer.</li>
+<li>They connect a wallet.</li>
+<li>They sign a message or transaction that looks routine.</li>
+<li>The signature grants an allowance or transfers assets.</li>
+<li>The attacker drains later, often after the victim has closed the tab.</li>
+</ol>
+<p><strong>The signature is the attack.</strong> No malware is required. The user authorised it.</p>
+<h2>The main techniques</h2>
+<p><strong>Malicious approvals.</strong> Many token standards let a contract spend your tokens if you grant an allowance. An unlimited approval can be used at any time.</p>
+<p><strong>Permit signatures.</strong> Some tokens allow approval by signature alone, with no on-chain transaction and no gas — which makes the phishing step faster and less visible.</p>
+<p><strong>Address poisoning.</strong> The attacker sends a zero-value transaction from an address that matches the first and last characters of an address you have used. It appears in your history. Later, you copy the &quot;familiar&quot; address and send funds to the attacker.</p>
+<p><strong>Clipboard hijacking.</strong> Malware replaces a copied address with the attacker's. The victim pastes without checking the middle characters.</p>
+<p><strong>Fake wallets and extensions.</strong> Search ads, cloned store listings, and trojanised installers distribute wallets that leak seeds or generate keys the attacker knows.</p>
+<p><strong>Seed-phrase phishing.</strong> Fake support, fake wallet validation, fake migration. No legitimate service ever needs your seed phrase.</p>
+<h2>Platform-level failures</h2>
+<p>Individual drainers are the small end. The large losses come from:</p>
+<ul>
+<li><strong>Exchange compromise</strong> — hot-wallet keys, signing infrastructure, or insider access.</li>
+<li><strong>Bridge exploits</strong> — validation logic holding assets on one chain and issuing representations on another.</li>
+<li><strong>Smart-contract bugs</strong> — reentrancy, oracle manipulation, access control.</li>
+</ul>
+<p>Documented examples: Ronin Bridge (March 2022, ~$624 million), Wormhole (February 2022, ~$326 million), Nomad (August 2022, ~$190 million), Poly Network (August 2021, ~$611 million, later returned), Bybit (February 2025, ~$1.46 billion). [Confirmed]</p>
+<h2>Why crypto is different</h2>
+<ol>
+<li><strong>Irreversibility.</strong> There is no chargeback.</li>
+<li><strong>Composability.</strong> One approval can expose an entire wallet; one bridge can expose a chain.</li>
+<li><strong>Transparency.</strong> Attackers can watch addresses and time further attacks.</li>
+</ol>
+<p>These are properties of the technology, not bugs. They raise the stakes of every human decision — which is why the defences are procedural, not cryptographic.</p>
+<h2>The twelve habits that matter</h2>
+<ol>
+<li><strong>Hardware wallet</strong> for long-term holdings.</li>
+<li><strong>Seed phrase offline</strong>, on paper or metal, never photographed or typed into a computer except on the device during setup.</li>
+<li><strong>Verify the full address on the hardware screen</strong>, not on the computer.</li>
+<li><strong>Separate wallets</strong> — a &quot;hot&quot; wallet with limited funds for new protocols.</li>
+<li><strong>Revoke approvals</strong> regularly.</li>
+<li><strong>Hardware-key 2FA</strong> on exchange and email accounts; never SMS alone.</li>
+<li><strong>Withdrawal allowlists</strong> on exchanges.</li>
+<li><strong>No unsolicited support.</strong> No legitimate person DMs you first.</li>
+<li><strong>Test transactions</strong> before large transfers.</li>
+<li><strong>Slow down.</strong> Urgency is the attack.</li>
+<li><strong>Do not announce holdings.</strong> Physical coercion is a documented risk.</li>
+<li><strong>An inheritance plan</strong> that does not concentrate the seed in one place.</li>
+</ol>
+<h2>What does not help</h2>
+<ul>
+<li>&quot;Checking&quot; a wallet on a site that asks for the seed.</li>
+<li>Installing a &quot;drainer checker&quot; extension from an ad.</li>
+<li>Sending funds to &quot;unlock&quot; a withdrawal.</li>
+<li>Trusting a support agent who contacted you.</li>
+<li>Assuming a small test transaction proves an address is safe — poisoning attacks are designed for exactly that.</li>
+</ul>
+<h2>FAQ</h2>
+<p><strong>Can a wallet be hacked without my approval?</strong>
+Only through a vulnerability in the wallet software or the device. Most losses involve a signature the user gave.</p>
+<p><strong>Is a hardware wallet necessary?</strong>
+For meaningful holdings, yes. It keeps the key off the internet and lets you verify addresses on a trusted screen.</p>
+<p><strong>What is address poisoning?</strong>
+A zero-value transfer from a look-alike address so that the fake address appears in your history and gets copied later.</p>
+<p><strong>Are stablecoins safer?</strong>
+The token is not the risk. The approval, the platform, and the counterparty are.</p>
+<h2>Evidence</h2>
+<table>
+<caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
+<thead>
+<tr>
+<th scope="col">Claim</th>
+<th scope="col">Verdict</th>
+<th scope="col">Label</th>
+<th scope="col">Source</th>
+<th scope="col">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C037</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Ethereum, ERC-20 approval tutorial; checked by the ledger, 2020-04-07; <code>r15:S67</code>; [live]; Wallet drainer statistics</td>
+<td>narrowed: ERC-20 approvals let a spender move the approved token amount; a malicious approval can drain that approved balance, but not necessarily the whole wallet.</td>
+</tr>
+<tr>
+<td>C038</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Ethereum security and scam prevention; checked by the ledger, 2026; <code>r15:S86</code>; [live]; ATT&amp;CK T1115: Clipboard Data; <code>r15:S87</code>; [live]; Address poisoning: a growing scam</td>
+<td>narrowed: Address poisoning and clipboard hijacking are documented crypto scam patterns; a specific clipboard chain is not established by the cited page.</td>
+</tr>
+<tr>
+<td>C039</td>
+<td>confirmed</td>
+<td>A — Confirmed</td>
+<td>Ethereum, Crypto wallets; checked by the ledger, 2026-02-24; <code>r15:S62</code>; [live]; $2.2 billion stolen in crypto in 2024</td>
+<td>single source — a second independent source is required</td>
+</tr>
+<tr>
+<td>C041</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Chainalysis, cross-chain bridge hacks; checked by the ledger, 2022-08; <code>r15:S64</code>; [live]; FBI confirms Lazarus Group responsible for Ronin…</td>
+<td>narrowed: Bridge and contract exploits can drain funds; exploitability is protocol-specific, not a universal property of bridges.</td>
+</tr>
+<tr>
+<td>C046</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>NIST SP 800-207, Zero Trust Architecture; Google BeyondCorp; checked by the ledger, 2020-08; <code>r15:S1</code>; [live]; FORCEDENTRY: NSO Group iMessage zero-click exploit…</td>
+<td>narrowed: This article treats the perimeter as identity and permission policy, not network location alone — an analytical frame supported by zero-trust architecture, not a measured fact.</td>
+</tr>
+<tr>
+<td>C055</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Chainalysis crypto crime reporting; checked by the ledger, 2025; <code>r15:S63</code>; [live]; FBI identifies Lazarus Group as responsible for Bybit…; <code>r15:S64</code>; [live]; FBI confirms Lazarus Group responsible for Ronin…; <code>r15:S65</code>; [live]; Arup deepfake video-call fraud</td>
+<td>narrowed: The listed compromise surfaces are supported by wallet/security guidance; Ronin and Bybit are reported as key/infrastructure/trust compromises, not cryptographic breaks. Dollar figures are…</td>
+</tr>
+<tr>
+<td>C118</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Ethereum ERC-20 approval tutorial; checked by the ledger, 2020-04-07; <code>r15:S67</code>; [live]; Wallet drainer statistics</td>
+<td>narrowed: Many tokens require an approval before a contract can spend them; a malicious site can request an unlimited approval, and once granted the contract can move the approved amount without…</td>
+</tr>
+<tr>
+<td>C119</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Chainalysis / address-poisoning reporting; checked by the ledger, 2026; <code>r15:S86</code>; [live]; ATT&amp;CK T1115: Clipboard Data; <code>r15:S87</code>; [live]; Address poisoning: a growing scam</td>
+<td>narrowed: Address poisoning uses dust transactions and look-alike addresses to exploit copy-paste habits; clipboard hijacking is a related but distinct technique.</td>
+</tr>
+<tr>
+<td>C120</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Ethereum, Crypto wallets; checked by the ledger, 2026-02-24; <code>r15:S62</code>; [live]; $2.2 billion stolen in crypto in 2024</td>
+<td>narrowed: A seed phrase is the wallet recovery secret; anyone who obtains it controls the wallet. The listed theft routes are reported patterns, not all independently verified here.</td>
+</tr>
+<tr>
+<td>C121</td>
+<td>unsupported (Part 3 batch B)</td>
+<td>U — Unsupported</td>
+<td><code>url:f2022af15a34</code>; [not checked]; Part 3 batch source; <code>url:f56ade7374f4</code>; [not checked]; Part 3 batch source; <code>r15:S64</code>; [live]; FBI confirms Lazarus Group responsible for Ronin…</td>
+<td>unsupported or contradicted by the available evidence [PRINCIPAL'S CALL: legal review before publication]</td>
+</tr>
+<tr>
+<td>C122</td>
+<td>verified (Part 3 batch B)</td>
+<td>A — Confirmed</td>
+<td><code>url:956ebaa070d1</code>; [not checked]; Part 3 batch source; <code>r15:S63</code>; [live]; FBI identifies Lazarus Group as responsible for Bybit…</td>
+<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+</tr>
+<tr>
+<td>C193</td>
+<td>plausible (Part 3 batch B)</td>
+<td>C — Plausible but unverified</td>
+<td><code>url:d4d632c94605</code>; [not checked]; Part 3 batch source; <code>r15:S62</code>; [live]; $2.2 billion stolen in crypto in 2024; <code>r15:S68</code>; [live]; 2025 Internet Crime Report</td>
+<td>publication-ready wording: Hold the 2025 $2.87B figure; the verified annual total in the corpus is Chainalysis's US$2.2 billion for 2024. [PRINCIPAL'S CALL: legal review before publication]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Related:</strong> <a href="/investigations/digital-exposure/sim-swap-account-takeover/">SIM swap and account takeover</a> · <a href="/investigations/digital-exposure/cloud-photo-account-takeover/">Cloud photo account takeover</a> · <a href="/investigations/digital-exposure/password-protected-wifi-not-secure/">Why Wi-Fi passwords do not equal safety</a></p>
+<p><strong>Part of the ARTIore Global Digital Exposure Investigation.</strong></p>
+
+</article>
+</main>
+<aside class="aside" aria-label="Investigation contents"><h2>The investigation</h2><ol><li><a href="/investigations/digital-exposure/password-protected-wifi-not-secure/">Why a Password-Protected Wi-Fi Network Is Not a Secure Network</a></li><li><a href="/investigations/digital-exposure/hotel-wifi-security-guide/">Hotel Wi-Fi Security: What Travellers Should Actually Do</a></li><li><a href="/investigations/digital-exposure/dns-hijacking-explained/">DNS Hijacking Explained: The Invisible Switch That Decides Where You Go</a></li><li><a href="/investigations/digital-exposure/bluetooth-ble-tracking/">Bluetooth and BLE Tracking: What Your Devices Broadcast</a></li><li><a href="/investigations/digital-exposure/android-accessibility-service-malware/">Android Accessibility Service Malware: The Permission That Can Read Your Screen</a></li><li><a href="/investigations/digital-exposure/iphone-zero-click-spyware/">iPhone Zero-Click Spyware: What Is Proven, What Lockdown Mode Does</a></li><li><a href="/investigations/digital-exposure/whatsapp-encryption-limits/">WhatsApp Encryption Limits: What End-to-End Encryption Does Not Protect</a></li><li><a href="/investigations/digital-exposure/pegasus-predator-commercial-spyware/">Pegasus, Predator and Commercial Spyware: What Is Actually Proven</a></li><li><a href="/investigations/digital-exposure/cloud-photo-account-takeover/">Cloud Photo Security: How Accounts and Tokens Get Stolen</a></li><li><a href="/investigations/digital-exposure/crypto-wallet-drainers/">Crypto Wallet Drainers: Seed Phrases, Approvals and Address Poisoning</a></li><li><a href="/investigations/digital-exposure/sim-swap-account-takeover/">SIM Swap and Account Takeover: When Your Phone Number Becomes the Weakest Link</a></li><li><a href="/investigations/digital-exposure/hotel-keycard-lock-security/">Hotel Keycard Locks: The Unsaflok Case and What It Means for Guests</a></li><li><a href="/investigations/digital-exposure/global-threat-matrix/">Global Threat Matrix</a></li><li><a href="/investigations/digital-exposure/public-safety-checklist/">Public Safety Checklist</a></li><li><a href="/investigations/digital-exposure/technical-glossary/">Technical Glossary</a></li><li><a href="/investigations/digital-exposure/source-register/">Source Register</a></li></ol></aside>
+</div>
+<footer class="site-footer">
+<div class="inner">
+<p>ARTIore — independent research and intelligence practice. No sponsor, vendor or government reviewed this work before publication.</p>
+<p>Every claim is traced to a source. <a href="/investigations/digital-exposure/source-register/">Source register</a> · <a href="/investigations/digital-exposure/evidence/">Method</a> · <a href="/investigations/digital-exposure/corrections/">Corrections</a> · <a href="/">ARTIore</a></p>
+</div>
+</footer>
+</body>
+</html>
