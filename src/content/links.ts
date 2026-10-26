@@ -17,10 +17,10 @@ export const links = {
   artioreCompanion: 'https://artiore.com/companion-handbook',
   artiorePrivacy: 'https://artiore.com/privacy',
   artioreTerms: 'https://artiore.com/terms',
-  // The ARTIore Consortium's own domain (artioreconsortium.com) is registered but
-  // parked with no site and no TLS certificate, so it cannot be linked from here.
-  // The consortium's live presence is its Instagram profile, linked above as
-  // `instagram`. Restore the domain link once it actually serves a page.
+  // The ARTIore Consortium's own domain is registered but not published: it
+  // serves no page and has no TLS certificate, so it cannot be linked from
+  // here. The consortium's live presence is its Instagram profile, linked
+  // above as `instagram`. Restore the domain link once it actually serves.
   consortium: 'https://instagram.com/ArtioreConsortium',
   github: 'https://github.com/ARTIore',
   githubSite: 'https://github.com/ARTIore/Artiore.github.io',

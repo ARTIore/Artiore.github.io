@@ -4,7 +4,6 @@ Public site for [artiais.com](https://artiais.com), the AI infrastructure platfo
 
 - [artiore.com](https://artiore.com) — the reasoning platform ([try it](https://artiore.com/try))
 - [artiais.com](https://artiais.com) — Artiais, AI infrastructure platform
-- [artioreconsortium.com](https://artioreconsortium.com) — Artiore Consortium
 
 Clarity-first reasoning. ARTIore helps people understand complex situations, make grounded decisions, and take practical next steps — without overwhelm, gatekeeping, or false certainty. The system is a witness, not a verdict.
 
