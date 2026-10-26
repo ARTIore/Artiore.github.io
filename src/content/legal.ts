@@ -1,7 +1,7 @@
 import { links } from './links'
 import type { PageDocument } from './types'
 
-const framing = `This is the policy published for the Artiore service at artiore.com, last updated April 16, 2026. It is reproduced here so readers of artiais.com can find it. artiais.com is a static site. It does not run the Artiore reasoning engine. The operator named in the policy is The Secret Affaire Inc., a private limited corporation registered in Canada. Questions go to ${links.policyEmailAddress}. The phone number printed on the original policy is omitted on this site.`
+const framing = `This is the policy published for the Artiore service at artiore.com, last updated April 16, 2026. It is reproduced here so readers of artiais.com can find it. artiais.com is a static site. It does not run the Artiore reasoning engine. The operator named in the policy is The Secret Affaire Inc., a private limited corporation registered in Canada and Oregon, at ${links.postalAddress}. Questions go to ${links.policyEmailAddress}. The phone number printed on the original policy is omitted on this site.`
 
 export const privacyPage: PageDocument = {
   path: '/privacy',
@@ -17,7 +17,7 @@ export const privacyPage: PageDocument = {
       kind: 'paragraphs',
       text: [
         'The policy explains how information is collected, used, disclosed, and safeguarded when you visit the Service.',
-        `Contact in the policy: The Secret Affaire Inc., Zain Ul Abdin, ${links.policyEmailAddress}.`,
+        `Contact in the policy: The Secret Affaire Inc., Zain Ul Abdin, ${links.postalAddress}, ${links.policyEmailAddress}.`,
       ],
     },
     {
@@ -186,7 +186,7 @@ export const privacyPage: PageDocument = {
     {
       kind: 'paragraphs',
       text: [
-        `The Secret Affaire Inc. Privacy officer: Zain Ul Abdin. Email: ${links.policyEmailAddress}. Website: artiore.com. The policy says inquiries are answered within 30 days.`,
+        `The Secret Affaire Inc. Privacy officer: Zain Ul Abdin. Address: ${links.postalAddress}. Email: ${links.policyEmailAddress}. Website: artiore.com. The policy says inquiries are answered within 30 days.`,
       ],
     },
     {
@@ -240,7 +240,7 @@ export const termsPage: PageDocument = {
       kind: 'paragraphs',
       text: [
         'By accessing or using the Service, you agree to the terms. If you do not agree, you may not use the Service.',
-        `Contact in the terms: The Secret Affaire Inc., Zain Ul Abdin, ${links.policyEmailAddress}.`,
+        `Contact in the terms: The Secret Affaire Inc., Zain Ul Abdin, ${links.postalAddress}, ${links.policyEmailAddress}.`,
       ],
     },
     {
@@ -435,7 +435,7 @@ export const termsPage: PageDocument = {
     },
     {
       kind: 'paragraphs',
-      text: [`The Secret Affaire Inc., Zain Ul Abdin, ${links.policyEmailAddress}, artiore.com.`],
+      text: [`The Secret Affaire Inc., Zain Ul Abdin, ${links.postalAddress}, ${links.policyEmailAddress}, artiore.com.`],
     },
     {
       kind: 'actions',

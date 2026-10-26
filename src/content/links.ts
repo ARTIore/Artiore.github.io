@@ -4,6 +4,7 @@ export const links = {
   emailAddress: 'artiore@outlook.com',
   policyEmail: 'mailto:artiore@outlook.com',
   policyEmailAddress: 'artiore@outlook.com',
+  postalAddress: '9780-129 Street, Surrey, British Columbia, Canada',
   x: 'https://x.com/Artiore',
   linkedinCompany: 'https://www.linkedin.com/company/artiore/',
   linkedinZain: 'https://linkedin.com/in/zain-ul-abdin-artiore',
