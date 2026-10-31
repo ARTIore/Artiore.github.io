@@ -100,6 +100,8 @@ color:var(--muted)}
 .site-footer a{color:var(--muted)}
 .site-footer a:hover{color:var(--gold-bright)}
 .evidence-note{font-size:.88rem;color:var(--muted)}
+.legal-review{display:inline-block;font-size:.78rem;letter-spacing:.02em;text-transform:uppercase;color:var(--gold-bright);border:1px solid var(--line);border-radius:2px;padding:.05em .4em;white-space:nowrap}
+.evidence-legend{font-size:.88rem;color:var(--muted);margin:1rem 0 .5rem}
 </style>
 </head>
 <body>
@@ -125,7 +127,7 @@ color:var(--muted)}
 <p>Most compromises require you to do something: tap a link, install an app, enter a password. A <strong>zero-click</strong> exploit requires nothing. The device processes incoming data automatically — an image, a font, a message attachment, a link preview — and a memory-corruption bug in that processing path yields code execution before you see anything.</p>
 <p>This is not science fiction. It is the documented mechanism of several of the most important iOS attacks on record.</p>
 <h2>The documented chains</h2>
-<div class="tscroll"><table>
+<div class="tscroll"><p class="evidence-legend"><strong>Evidence labels.</strong> Each claim carries a label. <em>Legal review pending</em> marks a claim that has not yet cleared the publisher’s legal review.</p><table>
 <caption>The documented chains</caption>
 <thead>
 <tr>
@@ -283,21 +285,21 @@ Neither platform is immune. Both have been compromised by commercial spyware. Pa
 <td>verified (Part 3 batch A)</td>
 <td>A — Confirmed</td>
 <td><code>url:9c6ae9cf6f3a</code>; [not checked]; Part 3 batch source; <code>r15:S1</code>; [live]; FORCEDENTRY: NSO Group iMessage zero-click exploit…; <code>r15:S8</code>; [live]; CVE-2021-30860 — Apple JBIG2 integer overflow</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C085</td>
 <td>verified (cataloging pass 26 Oct 2026)</td>
 <td>A — Confirmed</td>
 <td>Citizen Lab; CERT-EU security advisory 2023-061; NIST NVD…; checked by the cataloging pass, 2023-09-07; <code>url:c65b12fdcb2e</code>; [not checked]; cataloging pass source; <code>r15:S2</code>; [live]; BLASTPASS: NSO Group iPhone zero-click, zero-day…; <code>r15:S9</code>; [live]; CVE-2023-41064 — Apple ImageIO buffer overflow</td>
-<td>publication-ready wording: BLASTPASS (2023) was a zero-click PassKit/ImageIO chain against iOS 16.6 and earlier (CVE-2023-41064 and CVE-2023-41061), fixed in iOS 16.6.1, attributed to NSO Group by Citizen… the wording as it stands in the spine is unsupported or contradicted. — correct it to the publication-ready wording before publication conditions: Reachable iMessage; a malicious PassKit attachment; a vulnerable iOS version. Delivery through a service, not an app the user installs. [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>publication-ready wording: BLASTPASS (2023) was a zero-click PassKit/ImageIO chain against iOS 16.6 and earlier (CVE-2023-41064 and CVE-2023-41061), fixed in iOS 16.6.1, attributed to NSO Group by Citizen… the wording as it stands in the spine is unsupported or contradicted. — correct it to the publication-ready wording before publication conditions: Reachable iMessage; a malicious PassKit attachment; a vulnerable iOS version. Delivery through a service, not an app the user installs. <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C086</td>
 <td>verified (Part 3 batch A)</td>
 <td>A — Confirmed</td>
 <td><code>url:3dbde65f2e97</code>; [not checked]; Part 3 batch source; <code>url:50cf860ffb56</code>; [not checked]; Part 3 batch source; <code>url:72fd36bd3571</code>; [not checked]; Part 3 batch source; <code>url:84c85683032f</code>; [not checked]; Part 3 batch source; <code>r15:S3</code>; [live]; Operation Triangulation: mapping the exploit chain</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C089</td>
@@ -353,7 +355,7 @@ Neither platform is immune. Both have been compromised by commercial spyware. Pa
 <td>verified (Part 3 batch A)</td>
 <td>A — Confirmed</td>
 <td><code>url:e780657bf7b6</code>; [not checked]; Part 3 batch source; <code>url:5069297fb7c1</code>; [not checked]; Part 3 batch source</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 </tbody>
 </table></div>

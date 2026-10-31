@@ -177,6 +177,17 @@ const forbidden = [
   { pattern: /42 days before visible disruption/, label: 'unsourced 42-day claim' },
   { pattern: /blind spots across 5 systems/, label: 'unsourced five-system claim' },
   { pattern: /Try Demo Access/, label: 'placeholder demo CTA' },
+  // The investigation corpus is rendered by tools/build_artiore_site.py, which
+  // is not tracked in this repository. A corpus run regenerates
+  // public/investigations/**/index.html from scratch, so any editorial marker
+  // that is only styled by hand would silently revert to raw text on the next
+  // run — and the live page would regress with no diff to review.
+  //
+  // The raw marker is therefore banned outright. The reviewed replacement is
+  // the styled "Legal review pending" badge (see scripts/style-legal-review.mjs),
+  // which carries the same meaning. This rule fails the build if the raw form
+  // reappears, so the regression is loud rather than silent.
+  { pattern: /PRINCIPAL'S CALL: legal review before publication/, label: 'raw legal-review marker (use the styled badge)' },
 ]
 
 const textFiles = walk(dist).filter((file) => /\.(html|js|css|xml|txt|svg|webmanifest)$/.test(file))

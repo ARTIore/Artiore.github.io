@@ -100,6 +100,8 @@ color:var(--muted)}
 .site-footer a{color:var(--muted)}
 .site-footer a:hover{color:var(--gold-bright)}
 .evidence-note{font-size:.88rem;color:var(--muted)}
+.legal-review{display:inline-block;font-size:.78rem;letter-spacing:.02em;text-transform:uppercase;color:var(--gold-bright);border:1px solid var(--line);border-radius:2px;padding:.05em .4em;white-space:nowrap}
+.evidence-legend{font-size:.88rem;color:var(--muted);margin:1rem 0 .5rem}
 </style>
 </head>
 <body>
@@ -183,7 +185,7 @@ No. Documented targets also include politicians, officials, executives, lawyers,
 <p><strong>Can I remove it myself?</strong>
 No. A confirmed infection requires expert handling; resetting may destroy evidence without guaranteeing removal.</p>
 <h2>Evidence</h2>
-<div class="tscroll"><table>
+<div class="tscroll"><p class="evidence-legend"><strong>Evidence labels.</strong> Each claim carries a label. <em>Legal review pending</em> marks a claim that has not yet cleared the publisher’s legal review.</p><table>
 <caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
 <thead>
 <tr>
@@ -228,7 +230,7 @@ No. A confirmed infection requires expert handling; resetting may destroy eviden
 <td>verified (Part 3 batch A)</td>
 <td>A — Confirmed</td>
 <td><code>url:9c6ae9cf6f3a</code>; [not checked]; Part 3 batch source; <code>r15:S1</code>; [live]; FORCEDENTRY: NSO Group iMessage zero-click exploit…; <code>r15:S8</code>; [live]; CVE-2021-30860 — Apple JBIG2 integer overflow</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C089</td>
@@ -242,28 +244,28 @@ No. A confirmed infection requires expert handling; resetting may destroy eviden
 <td>verified (Part 3 batch A)</td>
 <td>A — Confirmed</td>
 <td><code>url:edb6c6afcf5a</code>; [not checked]; Part 3 batch source; <code>r15:S7</code>; [live]; CVE-2019-3568 — WhatsApp SDP parsing buffer overflow; <code>r15:S1</code>; [live]; FORCEDENTRY: NSO Group iMessage zero-click exploit…</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C094</td>
 <td>adjusted</td>
 <td>A — Confirmed</td>
 <td>IFJ, Paragon case; checked by the ledger, 2025-06-13; <code>r15:S14</code>; [live]; Italy: second Italian journalist targeted with…</td>
-<td>narrowed: In 2025 WhatsApp attributed the campaign to Paragon; IFJ documented Italian journalists targeted with Graphite; reporting describes zero-click delivery, but the full target list remains… [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>narrowed: In 2025 WhatsApp attributed the campaign to Paragon; IFJ documented Italian journalists targeted with Graphite; reporting describes zero-click delivery, but the full target list remains… <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C100</td>
 <td>verified (Part 3 batch C)</td>
 <td>A — Confirmed</td>
 <td><code>url:3d89ad394855</code>; [not checked]; Part 3 batch source; <code>r15:S12</code>; [live]; Predator in the wires: Cytrox, Intellexa and the…; <code>r15:S13</code>; [live]; Treasury sanctions Intellexa Consortium entities</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C101</td>
 <td>verified (Part 3 batch C)</td>
 <td>A — Confirmed</td>
 <td><code>url:13482050a281</code>; [not checked]; Part 3 batch source; <code>r15:S14</code>; [live]; Italy: second Italian journalist targeted with…</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C102</td>
@@ -319,14 +321,14 @@ No. A confirmed infection requires expert handling; resetting may destroy eviden
 <td>verified (cataloging pass 26 Oct 2026)</td>
 <td>A — Confirmed</td>
 <td>WhatsApp/Meta statement of 31 January 2025, reported by…; checked by the cataloging pass, 2025-01-31; <a href="https://www.bleepingcomputer.com/news/security/whatsapp-pat…" rel="noopener noreferrer">https://www.bleepingcomputer.com/news/security/whatsapp-pat…</a>; cataloging pass source; <code>r15:S14</code>; [live]; Italy: second Italian journalist targeted with…</td>
-<td>publication-ready wording: In January 2025 WhatsApp disclosed that it had disrupted a Paragon Graphite campaign and notified roughly 90 users across more than two dozen countries, including journalists and… conditions: A WhatsApp account; targeted users. The campaign was discovered in December 2024 and disclosed on 31 January 2025; WhatsApp addressed the vector… [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>publication-ready wording: In January 2025 WhatsApp disclosed that it had disrupted a Paragon Graphite campaign and notified roughly 90 users across more than two dozen countries, including journalists and… conditions: A WhatsApp account; targeted users. The campaign was discovered in December 2024 and disclosed on 31 January 2025; WhatsApp addressed the vector… <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C188</td>
 <td>verified (Part 3 batch B)</td>
 <td>A — Confirmed</td>
 <td><code>url:109586ca8d9c</code>; [not checked]; Part 3 batch source; <code>url:4640f3e85fdb</code>; [not checked]; Part 3 batch source; <code>r15:S7</code>; [live]; CVE-2019-3568 — WhatsApp SDP parsing buffer overflow</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 </tbody>
 </table></div>

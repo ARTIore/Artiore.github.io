@@ -100,6 +100,8 @@ color:var(--muted)}
 .site-footer a{color:var(--muted)}
 .site-footer a:hover{color:var(--gold-bright)}
 .evidence-note{font-size:.88rem;color:var(--muted)}
+.legal-review{display:inline-block;font-size:.78rem;letter-spacing:.02em;text-transform:uppercase;color:var(--gold-bright);border:1px solid var(--line);border-radius:2px;padding:.05em .4em;white-space:nowrap}
+.evidence-legend{font-size:.88rem;color:var(--muted);margin:1rem 0 .5rem}
 </style>
 </head>
 <body>
@@ -235,7 +237,7 @@ color:var(--muted)}
 <p><em>End of A01 draft.</em></p>
 <hr />
 <h2>Evidence</h2>
-<div class="tscroll"><table>
+<div class="tscroll"><p class="evidence-legend"><strong>Evidence labels.</strong> Each claim carries a label. <em>Legal review pending</em> marks a claim that has not yet cleared the publisher’s legal review.</p><table>
 <caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
 <thead>
 <tr>
@@ -301,28 +303,28 @@ color:var(--muted)}
 <td>confirmed</td>
 <td>A — Confirmed</td>
 <td>Kaspersky, Darkhotel; checked by the ledger, 2014-11-10; <code>r15:S28</code>; [live]; Darkhotel: an elite spying crew targeting business…</td>
-<td>single source — a second independent source is required [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>single source — a second independent source is required <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C057</td>
 <td>plausible (Part 3 batch B)</td>
 <td>C — Plausible but unverified</td>
 <td><code>url:6960ab670ff9</code>; [not checked]; Part 3 batch source; <code>r15:S29</code>; [live]; FTC takes action against Marriott and Starwood over…; <code>r15:S30</code>; [live]; $52 million multistate settlement for…; <code>r15:S31</code>; [live]; Enforcement: Marriott International Hotels Ltd</td>
-<td>publication-ready wording: Marriott's January 2019 update lowered its estimate to 383 million guest records; the FTC's 2024 complaint describes approximately 339 million Starwood guest records. The counts differ in… [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>publication-ready wording: Marriott's January 2019 update lowered its estimate to 383 million guest records; the FTC's 2024 complaint describes approximately 339 million Starwood guest records. The counts differ in… <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C058</td>
 <td>adjusted</td>
 <td>A — Confirmed</td>
 <td>CISA AA23-320A; National Law Review; checked by the ledger, 2025-07-29; <code>r15:S33</code>; [live]; #StopRansomware: Scattered Spider (AA23-320A); <code>r15:S39</code>; [live]; MGM inks $45M class-action settlement for 2019 and…; <code>r15:S15</code>; [live]; Mobile Verification Toolkit (MVT); <code>r15:S16</code>; [live]; Apple Platform Security Guide</td>
-<td>narrowed: The 2023 MGM intrusion began with help-desk social engineering, not a Wi-Fi exploit; CISA confirms the help-desk vector, NLR confirms a $45M settlement, and MGM’s 8-K is the basis for the… [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>narrowed: The 2023 MGM intrusion began with help-desk social engineering, not a Wi-Fi exploit; CISA confirms the help-desk vector, NLR confirms a $45M settlement, and MGM’s 8-K is the basis for the… <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C059</td>
 <td>confirmed</td>
 <td>A — Confirmed</td>
 <td>Unsaflok disclosure; checked by the ledger, 2024-03; <code>r15:S27</code>; [live]; Unsaflok: vulnerabilities in Saflok RFID hotel locks</td>
-<td>single source — a second independent source is required [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>single source — a second independent source is required <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C062</td>
@@ -357,14 +359,14 @@ color:var(--muted)}
 <td>verified (Part 3 batch A)</td>
 <td>A — Confirmed</td>
 <td><code>url:9c6ae9cf6f3a</code>; [not checked]; Part 3 batch source; <code>r15:S1</code>; [live]; FORCEDENTRY: NSO Group iMessage zero-click exploit…; <code>r15:S8</code>; [live]; CVE-2021-30860 — Apple JBIG2 integer overflow</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C085</td>
 <td>verified (cataloging pass 26 Oct 2026)</td>
 <td>A — Confirmed</td>
 <td>Citizen Lab; CERT-EU security advisory 2023-061; NIST NVD…; checked by the cataloging pass, 2023-09-07; <code>url:c65b12fdcb2e</code>; [not checked]; cataloging pass source; <code>r15:S2</code>; [live]; BLASTPASS: NSO Group iPhone zero-click, zero-day…; <code>r15:S9</code>; [live]; CVE-2023-41064 — Apple ImageIO buffer overflow</td>
-<td>publication-ready wording: BLASTPASS (2023) was a zero-click PassKit/ImageIO chain against iOS 16.6 and earlier (CVE-2023-41064 and CVE-2023-41061), fixed in iOS 16.6.1, attributed to NSO Group by Citizen… the wording as it stands in the spine is unsupported or contradicted. — correct it to the publication-ready wording before publication conditions: Reachable iMessage; a malicious PassKit attachment; a vulnerable iOS version. Delivery through a service, not an app the user installs. [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>publication-ready wording: BLASTPASS (2023) was a zero-click PassKit/ImageIO chain against iOS 16.6 and earlier (CVE-2023-41064 and CVE-2023-41061), fixed in iOS 16.6.1, attributed to NSO Group by Citizen… the wording as it stands in the spine is unsupported or contradicted. — correct it to the publication-ready wording before publication conditions: Reachable iMessage; a malicious PassKit attachment; a vulnerable iOS version. Delivery through a service, not an app the user installs. <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C092</td>
@@ -378,7 +380,7 @@ color:var(--muted)}
 <td>verified (Part 3 batch C)</td>
 <td>A — Confirmed</td>
 <td><code>url:31abe9ab83ba</code>; [not checked]; Part 3 batch source; <code>r15:S5</code>; [live]; Forensic methodology report: how to catch NSO Group's…; <code>r15:S6</code>; [live]; What is Pegasus spyware and how does it work?</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C103</td>
@@ -406,7 +408,7 @@ color:var(--muted)}
 <td>verified (Part 3 batch E)</td>
 <td>A — Confirmed</td>
 <td><code>url:ffd1d6fdcb79</code>; [not checked]; Part 3 batch source; <code>r15:S65</code>; [live]; Arup deepfake video-call fraud</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C134</td>

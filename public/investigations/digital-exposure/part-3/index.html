@@ -100,6 +100,8 @@ color:var(--muted)}
 .site-footer a{color:var(--muted)}
 .site-footer a:hover{color:var(--gold-bright)}
 .evidence-note{font-size:.88rem;color:var(--muted)}
+.legal-review{display:inline-block;font-size:.78rem;letter-spacing:.02em;text-transform:uppercase;color:var(--gold-bright);border:1px solid var(--line);border-radius:2px;padding:.05em .4em;white-space:nowrap}
+.evidence-legend{font-size:.88rem;color:var(--muted);margin:1rem 0 .5rem}
 </style>
 </head>
 <body>
@@ -218,7 +220,7 @@ color:var(--muted)}
 <hr />
 <hr />
 <h2>Evidence</h2>
-<div class="tscroll"><table>
+<div class="tscroll"><p class="evidence-legend"><strong>Evidence labels.</strong> Each claim carries a label. <em>Legal review pending</em> marks a claim that has not yet cleared the publisher’s legal review.</p><table>
 <caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
 <thead>
 <tr>
@@ -277,35 +279,35 @@ color:var(--muted)}
 <td>adjusted</td>
 <td>A — Confirmed</td>
 <td>NVD CVE-2008-1447; checked by the ledger, 2008-07-08; <code>r15:S42</code>; [live]; CVE-2008-1447 — DNS cache poisoning (Kaminsky)</td>
-<td>narrowed: CVE-2008-1447 documents the DNS cache-poisoning vulnerability; the coordinated-disclosure and source-port-randomisation response is historical context not established by the NVD entry. [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>narrowed: CVE-2008-1447 documents the DNS cache-poisoning vulnerability; the coordinated-disclosure and source-port-randomisation response is historical context not established by the NVD entry. <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C066</td>
 <td>confirmed</td>
 <td>A — Confirmed</td>
 <td>FBI, Operation Ghost Click; checked by the ledger, 2011-11-09; <code>r15:S47</code>; [live]; Operation Ghost Click (DNSChanger takedown)</td>
-<td>2 independent sources [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>2 independent sources <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C067</td>
 <td>confirmed</td>
 <td>A — Confirmed</td>
 <td>Cisco Talos, Sea Turtle; checked by the ledger, 2019-04-17; <code>r15:S41</code>; [live]; Sea Turtle: DNS hijacking campaign</td>
-<td>single source — a second independent source is required [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>single source — a second independent source is required <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C068</td>
 <td>adjusted</td>
 <td>A — Confirmed</td>
 <td>Sitting Ducks research; checked by the ledger, 2024; <code>r15:S46</code>; [live]; Sitting Ducks: domain hijacking at scale</td>
-<td>narrowed: Sitting Ducks (2024) documents domain hijacking via dangling DNS records and lame delegations; the ~1 million vulnerable and tens-of-thousands hijacked figures are research estimates, not… [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>narrowed: Sitting Ducks (2024) documents domain hijacking via dangling DNS records and lame delegations; the ~1 million vulnerable and tens-of-thousands hijacked figures are research estimates, not… <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C069</td>
 <td>adjusted</td>
 <td>A — Confirmed</td>
 <td>Public reporting on 2018 Route 53 BGP hijack; checked by the ledger, 2018-04; <code>r15:S24</code>; [live]; Help Center: end-to-end encryption and backups; <code>r15:S18</code>; [live]; Advanced Data Protection for iCloud</td>
-<td>narrowed: The April 2018 BGP hijack redirected some Route 53 DNS traffic and MyEtherWallet users to a phishing site; the ~$150,000 loss is a reported estimate, not independently audited here. [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>narrowed: The April 2018 BGP hijack redirected some Route 53 DNS traffic and MyEtherWallet users to a phishing site; the ~$150,000 loss is a reported estimate, not independently audited here. <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C070</td>

@@ -100,6 +100,8 @@ color:var(--muted)}
 .site-footer a{color:var(--muted)}
 .site-footer a:hover{color:var(--gold-bright)}
 .evidence-note{font-size:.88rem;color:var(--muted)}
+.legal-review{display:inline-block;font-size:.78rem;letter-spacing:.02em;text-transform:uppercase;color:var(--gold-bright);border:1px solid var(--line);border-radius:2px;padding:.05em .4em;white-space:nowrap}
+.evidence-legend{font-size:.88rem;color:var(--muted);margin:1rem 0 .5rem}
 </style>
 </head>
 <body>
@@ -216,7 +218,7 @@ color:var(--muted)}
 <p><em>See the Source Register for the evidence behind each definition.</em></p>
 <hr />
 <h2>Evidence</h2>
-<div class="tscroll"><table>
+<div class="tscroll"><p class="evidence-legend"><strong>Evidence labels.</strong> Each claim carries a label. <em>Legal review pending</em> marks a claim that has not yet cleared the publisher’s legal review.</p><table>
 <caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
 <thead>
 <tr>
@@ -443,7 +445,7 @@ color:var(--muted)}
 <td>adjusted</td>
 <td>A — Confirmed</td>
 <td>CISA AA23-320A; National Law Review; checked by the ledger, 2025-07-29; <code>r15:S33</code>; [live]; #StopRansomware: Scattered Spider (AA23-320A); <code>r15:S39</code>; [live]; MGM inks $45M class-action settlement for 2019 and…; <code>r15:S15</code>; [live]; Mobile Verification Toolkit (MVT); <code>r15:S16</code>; [live]; Apple Platform Security Guide</td>
-<td>narrowed: The 2023 MGM intrusion began with help-desk social engineering, not a Wi-Fi exploit; CISA confirms the help-desk vector, NLR confirms a $45M settlement, and MGM’s 8-K is the basis for the… [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>narrowed: The 2023 MGM intrusion began with help-desk social engineering, not a Wi-Fi exploit; CISA confirms the help-desk vector, NLR confirms a $45M settlement, and MGM’s 8-K is the basis for the… <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C062</td>
@@ -471,7 +473,7 @@ color:var(--muted)}
 <td>adjusted</td>
 <td>A — Confirmed</td>
 <td>Public reporting on 2018 Route 53 BGP hijack; checked by the ledger, 2018-04; <code>r15:S24</code>; [live]; Help Center: end-to-end encryption and backups; <code>r15:S18</code>; [live]; Advanced Data Protection for iCloud</td>
-<td>narrowed: The April 2018 BGP hijack redirected some Route 53 DNS traffic and MyEtherWallet users to a phishing site; the ~$150,000 loss is a reported estimate, not independently audited here. [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>narrowed: The April 2018 BGP hijack redirected some Route 53 DNS traffic and MyEtherWallet users to a phishing site; the ~$150,000 loss is a reported estimate, not independently audited here. <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C070</td>
@@ -492,7 +494,7 @@ color:var(--muted)}
 <td>verified (cataloging pass 26 Oct 2026)</td>
 <td>A — Confirmed</td>
 <td>NIST NVD, CVE-2017-1000251; Red Hat security advisory for…; checked by the cataloging pass, 2017-09; <code>url:b6bffe9d785d</code>; [not checked]; cataloging pass source; <code>r15:S48</code>; [live]; CVE-2017-1000251 — BlueBorne (Linux Bluetooth stack)</td>
-<td>publication-ready wording: BlueBorne (2017) included a Linux kernel Bluetooth flaw (CVE-2017-1000251) allowing remote code execution without pairing, under certain conditions. conditions: Radio range; an unpatched Bluetooth stack; a specific implementation. Code execution rather than a crash additionally depends on the absence of… [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>publication-ready wording: BlueBorne (2017) included a Linux kernel Bluetooth flaw (CVE-2017-1000251) allowing remote code execution without pairing, under certain conditions. conditions: Radio range; an unpatched Bluetooth stack; a specific implementation. Code execution rather than a crash additionally depends on the absence of… <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C074</td>
@@ -534,14 +536,14 @@ color:var(--muted)}
 <td>adjusted</td>
 <td>B — Demonstrated in research</td>
 <td>Kaspersky, Coruna analysis; checked by the ledger, 2026-03; <code>r15:S4</code>; [live]; Coruna: the framework used in Operation Triangulation</td>
-<td>narrowed: Kaspersky’s March 2026 Coruna analysis links a framework to Operation Triangulation tooling; “reused and maintained” is an analytical inference from the link, not a direct measurement. [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>narrowed: Kaspersky’s March 2026 Coruna analysis links a framework to Operation Triangulation tooling; “reused and maintained” is an analytical inference from the link, not a direct measurement. <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C091</td>
 <td>verified (Part 3 batch A)</td>
 <td>A — Confirmed</td>
 <td><code>url:b1e8a9e49319</code>; [not checked]; Part 3 batch source; <code>r15:S20</code>; [live]; March 2023 archive (Samsung Exynos baseband research); <code>r15:S80</code>; [live]; CVE-2023-24033 — Exynos baseband</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C092</td>
@@ -555,7 +557,7 @@ color:var(--muted)}
 <td>adjusted</td>
 <td>A — Confirmed</td>
 <td>IFJ, Paragon case; checked by the ledger, 2025-06-13; <code>r15:S14</code>; [live]; Italy: second Italian journalist targeted with…</td>
-<td>narrowed: In 2025 WhatsApp attributed the campaign to Paragon; IFJ documented Italian journalists targeted with Graphite; reporting describes zero-click delivery, but the full target list remains… [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>narrowed: In 2025 WhatsApp attributed the campaign to Paragon; IFJ documented Italian journalists targeted with Graphite; reporting describes zero-click delivery, but the full target list remains… <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C095</td>
@@ -569,14 +571,14 @@ color:var(--muted)}
 <td>verified (Part 3 batch C)</td>
 <td>A — Confirmed</td>
 <td><code>url:3d89ad394855</code>; [not checked]; Part 3 batch source; <code>r15:S12</code>; [live]; Predator in the wires: Cytrox, Intellexa and the…; <code>r15:S13</code>; [live]; Treasury sanctions Intellexa Consortium entities</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C101</td>
 <td>verified (Part 3 batch C)</td>
 <td>A — Confirmed</td>
 <td><code>url:13482050a281</code>; [not checked]; Part 3 batch source; <code>r15:S14</code>; [live]; Italy: second Italian journalist targeted with…</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C103</td>

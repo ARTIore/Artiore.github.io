@@ -100,6 +100,8 @@ color:var(--muted)}
 .site-footer a{color:var(--muted)}
 .site-footer a:hover{color:var(--gold-bright)}
 .evidence-note{font-size:.88rem;color:var(--muted)}
+.legal-review{display:inline-block;font-size:.78rem;letter-spacing:.02em;text-transform:uppercase;color:var(--gold-bright);border:1px solid var(--line);border-radius:2px;padding:.05em .4em;white-space:nowrap}
+.evidence-legend{font-size:.88rem;color:var(--muted);margin:1rem 0 .5rem}
 </style>
 </head>
 <body>
@@ -135,7 +137,7 @@ color:var(--muted)}
 <h3>iOS and iPadOS vulnerabilities</h3>
 <p>Apple's security model is strong and layered: code signing, sandboxing, Pointer Authentication, a signed boot chain, and a fast update pipeline. It is also a very large attack surface: WebKit, image and media parsers, the messaging stack, the baseband, and thousands of system services.</p>
 <p>The public record of exploited-in-the-wild iOS flaws is continuous. Apple's security notes and CISA's Known Exploited Vulnerabilities catalogue document them year by year. A representative set:</p>
-<div class="tscroll"><table>
+<div class="tscroll"><p class="evidence-legend"><strong>Evidence labels.</strong> Each claim carries a label. <em>Legal review pending</em> marks a claim that has not yet cleared the publisher’s legal review.</p><table>
 <caption>iOS and iPadOS vulnerabilities</caption>
 <thead>
 <tr>
@@ -411,7 +413,7 @@ color:var(--muted)}
 <td>verified (cataloging pass 26 Oct 2026)</td>
 <td>A — Confirmed</td>
 <td>Citizen Lab; CERT-EU security advisory 2023-061; NIST NVD…; checked by the cataloging pass, 2023-09-07; <code>url:c65b12fdcb2e</code>; [not checked]; cataloging pass source; <code>r15:S2</code>; [live]; BLASTPASS: NSO Group iPhone zero-click, zero-day…; <code>r15:S9</code>; [live]; CVE-2023-41064 — Apple ImageIO buffer overflow</td>
-<td>publication-ready wording: BLASTPASS (2023) was a zero-click PassKit/ImageIO chain against iOS 16.6 and earlier (CVE-2023-41064 and CVE-2023-41061), fixed in iOS 16.6.1, attributed to NSO Group by Citizen… the wording as it stands in the spine is unsupported or contradicted. — correct it to the publication-ready wording before publication conditions: Reachable iMessage; a malicious PassKit attachment; a vulnerable iOS version. Delivery through a service, not an app the user installs. [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>publication-ready wording: BLASTPASS (2023) was a zero-click PassKit/ImageIO chain against iOS 16.6 and earlier (CVE-2023-41064 and CVE-2023-41061), fixed in iOS 16.6.1, attributed to NSO Group by Citizen… the wording as it stands in the spine is unsupported or contradicted. — correct it to the publication-ready wording before publication conditions: Reachable iMessage; a malicious PassKit attachment; a vulnerable iOS version. Delivery through a service, not an app the user installs. <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C089</td>

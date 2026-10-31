@@ -100,6 +100,8 @@ color:var(--muted)}
 .site-footer a{color:var(--muted)}
 .site-footer a:hover{color:var(--gold-bright)}
 .evidence-note{font-size:.88rem;color:var(--muted)}
+.legal-review{display:inline-block;font-size:.78rem;letter-spacing:.02em;text-transform:uppercase;color:var(--gold-bright);border:1px solid var(--line);border-radius:2px;padding:.05em .4em;white-space:nowrap}
+.evidence-legend{font-size:.88rem;color:var(--muted);margin:1rem 0 .5rem}
 </style>
 </head>
 <body>
@@ -281,7 +283,7 @@ color:var(--muted)}
 <p><strong>S140 — ENISA Threat Landscape 2026.</strong> ENISA, 2026. <strong>P.</strong> Supports: current-year threat priorities. <a href="https://www.enisa.europa.eu/topics/cyber-threats/threat-landscape" rel="noopener noreferrer">https://www.enisa.europa.eu/topics/cyber-threats/threat-landscape</a></p>
 <hr />
 <h2>Claim-to-source map (selected high-impact claims)</h2>
-<div class="tscroll"><table>
+<div class="tscroll"><p class="evidence-legend"><strong>Evidence labels.</strong> Each claim carries a label. <em>Legal review pending</em> marks a claim that has not yet cleared the publisher’s legal review.</p><table>
 <caption>Claim-to-source map (selected high-impact claims)</caption>
 <thead>
 <tr>
@@ -451,70 +453,70 @@ color:var(--muted)}
 <td>confirmed</td>
 <td>A — Confirmed</td>
 <td>Kaspersky, Darkhotel; checked by the ledger, 2014-11-10; <code>r15:S28</code>; [live]; Darkhotel: an elite spying crew targeting business…</td>
-<td>single source — a second independent source is required [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>single source — a second independent source is required <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C057</td>
 <td>plausible (Part 3 batch B)</td>
 <td>C — Plausible but unverified</td>
 <td><code>url:6960ab670ff9</code>; [not checked]; Part 3 batch source; <code>r15:S29</code>; [live]; FTC takes action against Marriott and Starwood over…; <code>r15:S30</code>; [live]; $52 million multistate settlement for…; <code>r15:S31</code>; [live]; Enforcement: Marriott International Hotels Ltd</td>
-<td>publication-ready wording: Marriott's January 2019 update lowered its estimate to 383 million guest records; the FTC's 2024 complaint describes approximately 339 million Starwood guest records. The counts differ in… [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>publication-ready wording: Marriott's January 2019 update lowered its estimate to 383 million guest records; the FTC's 2024 complaint describes approximately 339 million Starwood guest records. The counts differ in… <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C058</td>
 <td>adjusted</td>
 <td>A — Confirmed</td>
 <td>CISA AA23-320A; National Law Review; checked by the ledger, 2025-07-29; <code>r15:S33</code>; [live]; #StopRansomware: Scattered Spider (AA23-320A); <code>r15:S39</code>; [live]; MGM inks $45M class-action settlement for 2019 and…; <code>r15:S15</code>; [live]; Mobile Verification Toolkit (MVT); <code>r15:S16</code>; [live]; Apple Platform Security Guide</td>
-<td>narrowed: The 2023 MGM intrusion began with help-desk social engineering, not a Wi-Fi exploit; CISA confirms the help-desk vector, NLR confirms a $45M settlement, and MGM’s 8-K is the basis for the… [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>narrowed: The 2023 MGM intrusion began with help-desk social engineering, not a Wi-Fi exploit; CISA confirms the help-desk vector, NLR confirms a $45M settlement, and MGM’s 8-K is the basis for the… <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C059</td>
 <td>confirmed</td>
 <td>A — Confirmed</td>
 <td>Unsaflok disclosure; checked by the ledger, 2024-03; <code>r15:S27</code>; [live]; Unsaflok: vulnerabilities in Saflok RFID hotel locks</td>
-<td>single source — a second independent source is required [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>single source — a second independent source is required <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C066</td>
 <td>confirmed</td>
 <td>A — Confirmed</td>
 <td>FBI, Operation Ghost Click; checked by the ledger, 2011-11-09; <code>r15:S47</code>; [live]; Operation Ghost Click (DNSChanger takedown)</td>
-<td>2 independent sources [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>2 independent sources <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C067</td>
 <td>confirmed</td>
 <td>A — Confirmed</td>
 <td>Cisco Talos, Sea Turtle; checked by the ledger, 2019-04-17; <code>r15:S41</code>; [live]; Sea Turtle: DNS hijacking campaign</td>
-<td>single source — a second independent source is required [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>single source — a second independent source is required <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C068</td>
 <td>adjusted</td>
 <td>A — Confirmed</td>
 <td>Sitting Ducks research; checked by the ledger, 2024; <code>r15:S46</code>; [live]; Sitting Ducks: domain hijacking at scale</td>
-<td>narrowed: Sitting Ducks (2024) documents domain hijacking via dangling DNS records and lame delegations; the ~1 million vulnerable and tens-of-thousands hijacked figures are research estimates, not… [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>narrowed: Sitting Ducks (2024) documents domain hijacking via dangling DNS records and lame delegations; the ~1 million vulnerable and tens-of-thousands hijacked figures are research estimates, not… <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C084</td>
 <td>verified (Part 3 batch A)</td>
 <td>A — Confirmed</td>
 <td><code>url:9c6ae9cf6f3a</code>; [not checked]; Part 3 batch source; <code>r15:S1</code>; [live]; FORCEDENTRY: NSO Group iMessage zero-click exploit…; <code>r15:S8</code>; [live]; CVE-2021-30860 — Apple JBIG2 integer overflow</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C085</td>
 <td>verified (cataloging pass 26 Oct 2026)</td>
 <td>A — Confirmed</td>
 <td>Citizen Lab; CERT-EU security advisory 2023-061; NIST NVD…; checked by the cataloging pass, 2023-09-07; <code>url:c65b12fdcb2e</code>; [not checked]; cataloging pass source; <code>r15:S2</code>; [live]; BLASTPASS: NSO Group iPhone zero-click, zero-day…; <code>r15:S9</code>; [live]; CVE-2023-41064 — Apple ImageIO buffer overflow</td>
-<td>publication-ready wording: BLASTPASS (2023) was a zero-click PassKit/ImageIO chain against iOS 16.6 and earlier (CVE-2023-41064 and CVE-2023-41061), fixed in iOS 16.6.1, attributed to NSO Group by Citizen… the wording as it stands in the spine is unsupported or contradicted. — correct it to the publication-ready wording before publication conditions: Reachable iMessage; a malicious PassKit attachment; a vulnerable iOS version. Delivery through a service, not an app the user installs. [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>publication-ready wording: BLASTPASS (2023) was a zero-click PassKit/ImageIO chain against iOS 16.6 and earlier (CVE-2023-41064 and CVE-2023-41061), fixed in iOS 16.6.1, attributed to NSO Group by Citizen… the wording as it stands in the spine is unsupported or contradicted. — correct it to the publication-ready wording before publication conditions: Reachable iMessage; a malicious PassKit attachment; a vulnerable iOS version. Delivery through a service, not an app the user installs. <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C086</td>
 <td>verified (Part 3 batch A)</td>
 <td>A — Confirmed</td>
 <td><code>url:3dbde65f2e97</code>; [not checked]; Part 3 batch source; <code>url:50cf860ffb56</code>; [not checked]; Part 3 batch source; <code>url:72fd36bd3571</code>; [not checked]; Part 3 batch source; <code>url:84c85683032f</code>; [not checked]; Part 3 batch source; <code>r15:S3</code>; [live]; Operation Triangulation: mapping the exploit chain</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C089</td>
@@ -535,7 +537,7 @@ color:var(--muted)}
 <td>adjusted</td>
 <td>A — Confirmed</td>
 <td>IFJ, Paragon case; checked by the ledger, 2025-06-13; <code>r15:S14</code>; [live]; Italy: second Italian journalist targeted with…</td>
-<td>narrowed: In 2025 WhatsApp attributed the campaign to Paragon; IFJ documented Italian journalists targeted with Graphite; reporting describes zero-click delivery, but the full target list remains… [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>narrowed: In 2025 WhatsApp attributed the campaign to Paragon; IFJ documented Italian journalists targeted with Graphite; reporting describes zero-click delivery, but the full target list remains… <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C095</td>
@@ -549,14 +551,14 @@ color:var(--muted)}
 <td>verified (Part 3 batch C)</td>
 <td>A — Confirmed</td>
 <td><code>url:31abe9ab83ba</code>; [not checked]; Part 3 batch source; <code>r15:S5</code>; [live]; Forensic methodology report: how to catch NSO Group's…; <code>r15:S6</code>; [live]; What is Pegasus spyware and how does it work?</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C100</td>
 <td>verified (Part 3 batch C)</td>
 <td>A — Confirmed</td>
 <td><code>url:3d89ad394855</code>; [not checked]; Part 3 batch source; <code>r15:S12</code>; [live]; Predator in the wires: Cytrox, Intellexa and the…; <code>r15:S13</code>; [live]; Treasury sanctions Intellexa Consortium entities</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C104</td>
@@ -577,14 +579,14 @@ color:var(--muted)}
 <td>adjusted</td>
 <td>A — Confirmed</td>
 <td>23andMe breach reporting (Ars Technica); checked by the ledger, 2023-12; <code>r15:S38</code>; [live]; Alert: phishing messages from compromised Booking.com…</td>
-<td>narrowed: 23andMe reported 6.9 million profiles affected after credential-based access; the sharing-feature spread is reported but the cited source was inaccessible. [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>narrowed: 23andMe reported 6.9 million profiles affected after credential-based access; the sharing-feature spread is reported but the cited source was inaccessible. <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C115</td>
 <td>verified (Part 3 batch E)</td>
 <td>A — Confirmed</td>
 <td><code>url:ffd1d6fdcb79</code>; [not checked]; Part 3 batch source; <code>r15:S65</code>; [live]; Arup deepfake video-call fraud</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C119</td>
@@ -598,14 +600,14 @@ color:var(--muted)}
 <td>unsupported (Part 3 batch B)</td>
 <td>U — Unsupported</td>
 <td><code>url:f2022af15a34</code>; [not checked]; Part 3 batch source; <code>url:f56ade7374f4</code>; [not checked]; Part 3 batch source; <code>r15:S64</code>; [live]; FBI confirms Lazarus Group responsible for Ronin…</td>
-<td>unsupported or contradicted by the available evidence [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>unsupported or contradicted by the available evidence <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C124</td>
 <td>verified (Part 3 batch B)</td>
 <td>A — Confirmed</td>
 <td><code>url:4547ec23d15a</code>; [not checked]; Part 3 batch source; <code>r15:S68</code>; [live]; 2025 Internet Crime Report; <code>r15:S69</code>; [live]; Cryptocurrency and AI scams bilk Americans of billions</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C128</td>
@@ -668,21 +670,21 @@ color:var(--muted)}
 <td>verified (cataloging pass 26 Oct 2026)</td>
 <td>A — Confirmed</td>
 <td>WhatsApp/Meta statement of 31 January 2025, reported by…; checked by the cataloging pass, 2025-01-31; <a href="https://www.bleepingcomputer.com/news/security/whatsapp-pat…" rel="noopener noreferrer">https://www.bleepingcomputer.com/news/security/whatsapp-pat…</a>; cataloging pass source; <code>r15:S14</code>; [live]; Italy: second Italian journalist targeted with…</td>
-<td>publication-ready wording: In January 2025 WhatsApp disclosed that it had disrupted a Paragon Graphite campaign and notified roughly 90 users across more than two dozen countries, including journalists and… conditions: A WhatsApp account; targeted users. The campaign was discovered in December 2024 and disclosed on 31 January 2025; WhatsApp addressed the vector… [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>publication-ready wording: In January 2025 WhatsApp disclosed that it had disrupted a Paragon Graphite campaign and notified roughly 90 users across more than two dozen countries, including journalists and… conditions: A WhatsApp account; targeted users. The campaign was discovered in December 2024 and disclosed on 31 January 2025; WhatsApp addressed the vector… <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C188</td>
 <td>verified (Part 3 batch B)</td>
 <td>A — Confirmed</td>
 <td><code>url:109586ca8d9c</code>; [not checked]; Part 3 batch source; <code>url:4640f3e85fdb</code>; [not checked]; Part 3 batch source; <code>r15:S7</code>; [live]; CVE-2019-3568 — WhatsApp SDP parsing buffer overflow</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C193</td>
 <td>plausible (Part 3 batch B)</td>
 <td>C — Plausible but unverified</td>
 <td><code>url:d4d632c94605</code>; [not checked]; Part 3 batch source; <code>r15:S62</code>; [live]; $2.2 billion stolen in crypto in 2024; <code>r15:S68</code>; [live]; 2025 Internet Crime Report</td>
-<td>publication-ready wording: Hold the 2025 $2.87B figure; the verified annual total in the corpus is Chainalysis's US$2.2 billion for 2024. [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>publication-ready wording: Hold the 2025 $2.87B figure; the verified annual total in the corpus is Chainalysis's US$2.2 billion for 2024. <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C195</td>
@@ -703,7 +705,7 @@ color:var(--muted)}
 <td>verified (Part 3 batch A)</td>
 <td>A — Confirmed</td>
 <td><code>url:e780657bf7b6</code>; [not checked]; Part 3 batch source; <code>url:5069297fb7c1</code>; [not checked]; Part 3 batch source</td>
-<td>verified against one authoritative source [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
 </tr>
 </tbody>
 </table></div>

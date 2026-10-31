@@ -100,6 +100,8 @@ color:var(--muted)}
 .site-footer a{color:var(--muted)}
 .site-footer a:hover{color:var(--gold-bright)}
 .evidence-note{font-size:.88rem;color:var(--muted)}
+.legal-review{display:inline-block;font-size:.78rem;letter-spacing:.02em;text-transform:uppercase;color:var(--gold-bright);border:1px solid var(--line);border-radius:2px;padding:.05em .4em;white-space:nowrap}
+.evidence-legend{font-size:.88rem;color:var(--muted);margin:1rem 0 .5rem}
 </style>
 </head>
 <body>
@@ -194,7 +196,7 @@ The realistic risk is low for most travellers. The deadbolt and basic habits add
 <p><strong>Is a mobile key less safe than a card?</strong>
 It depends on the implementation. Both depend on revocation and account security.</p>
 <h2>Evidence</h2>
-<div class="tscroll"><table>
+<div class="tscroll"><p class="evidence-legend"><strong>Evidence labels.</strong> Each claim carries a label. <em>Legal review pending</em> marks a claim that has not yet cleared the publisher’s legal review.</p><table>
 <caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
 <thead>
 <tr>
@@ -239,7 +241,7 @@ It depends on the implementation. Both depend on revocation and account security
 <td>confirmed</td>
 <td>A — Confirmed</td>
 <td>Unsaflok disclosure; checked by the ledger, 2024-03; <code>r15:S27</code>; [live]; Unsaflok: vulnerabilities in Saflok RFID hotel locks</td>
-<td>single source — a second independent source is required [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>single source — a second independent source is required <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C076</td>

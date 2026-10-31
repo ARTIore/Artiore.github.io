@@ -100,6 +100,8 @@ color:var(--muted)}
 .site-footer a{color:var(--muted)}
 .site-footer a:hover{color:var(--gold-bright)}
 .evidence-note{font-size:.88rem;color:var(--muted)}
+.legal-review{display:inline-block;font-size:.78rem;letter-spacing:.02em;text-transform:uppercase;color:var(--gold-bright);border:1px solid var(--line);border-radius:2px;padding:.05em .4em;white-space:nowrap}
+.evidence-legend{font-size:.88rem;color:var(--muted);margin:1rem 0 .5rem}
 </style>
 </head>
 <body>
@@ -144,7 +146,7 @@ color:var(--muted)}
 <p><strong>Retail and venue analytics.</strong> Beacons and Wi-Fi/Bluetooth analytics estimate footfall and dwell time. Even without identifying you, they measure you.</p>
 <p><strong>Cross-device correlation.</strong> A phone, watch, earbuds, and laptop often advertise with identifiers that link them. Seeing one implies the others.</p>
 <h2>Vulnerabilities that matter</h2>
-<div class="tscroll"><table>
+<div class="tscroll"><p class="evidence-legend"><strong>Evidence labels.</strong> Each claim carries a label. <em>Legal review pending</em> marks a claim that has not yet cleared the publisher’s legal review.</p><table>
 <caption>Vulnerabilities that matter</caption>
 <thead>
 <tr>
@@ -334,7 +336,7 @@ Usually not. Public spaces contain many devices. Evidence requires correlation, 
 <td>verified (cataloging pass 26 Oct 2026)</td>
 <td>A — Confirmed</td>
 <td>NIST NVD, CVE-2017-1000251; Red Hat security advisory for…; checked by the cataloging pass, 2017-09; <code>url:b6bffe9d785d</code>; [not checked]; cataloging pass source; <code>r15:S48</code>; [live]; CVE-2017-1000251 — BlueBorne (Linux Bluetooth stack)</td>
-<td>publication-ready wording: BlueBorne (2017) included a Linux kernel Bluetooth flaw (CVE-2017-1000251) allowing remote code execution without pairing, under certain conditions. conditions: Radio range; an unpatched Bluetooth stack; a specific implementation. Code execution rather than a crash additionally depends on the absence of… [PRINCIPAL'S CALL: legal review before publication]</td>
+<td>publication-ready wording: BlueBorne (2017) included a Linux kernel Bluetooth flaw (CVE-2017-1000251) allowing remote code execution without pairing, under certain conditions. conditions: Radio range; an unpatched Bluetooth stack; a specific implementation. Code execution rather than a crash additionally depends on the absence of… <span class="legal-review">Legal review pending</span></td>
 </tr>
 <tr>
 <td>C074</td>
