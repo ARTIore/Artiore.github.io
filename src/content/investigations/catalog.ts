@@ -21,12 +21,11 @@ export const investigationPublished = '2026-10-26'
 
 export const investigationHub = {
   path: investigationBase,
-  title: 'The Invisible Attack Surface',
-  headTitle:
-    'The Invisible Attack Surface: Digital Exposure | Artiais.com',
+  title: 'Global Digital Exposure Investigation',
+  headTitle: 'Global Digital Exposure Investigation | Artiais.com',
   description:
     'How everyday technology can compromise privacy, identity and financial security. ARTIore Research Desk, Global Digital Exposure Investigation, version 1.0.',
-  crumbName: 'The Invisible Attack Surface',
+  crumbName: 'Global Digital Exposure Investigation',
 }
 
 export type InvestigationPiece = {

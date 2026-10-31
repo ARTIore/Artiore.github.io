@@ -44,7 +44,7 @@ export const primaryNav: NavItem[] = [
   {
     label: 'Investigation',
     children: [
-      { label: 'The Invisible Attack Surface', href: '/investigations/digital-exposure/' },
+      { label: 'Global Digital Exposure Investigation', href: '/investigations/digital-exposure/' },
       { label: 'Public safety checklist', href: '/investigations/digital-exposure/public-safety-checklist/' },
       { label: 'Source register', href: '/investigations/digital-exposure/source-register/' },
       { label: 'Corrections', href: '/investigations/digital-exposure/#corrections' },
@@ -71,7 +71,7 @@ export const footerPages: NavLinkItem[] = [
   { label: 'Applications', href: '/applications' },
   { label: 'UAE dossier', href: '/dossier' },
   { label: 'Field manual', href: '/field-manual' },
-  { label: 'The Invisible Attack Surface', href: '/investigations/digital-exposure/' },
+  { label: 'Global Digital Exposure Investigation', href: '/investigations/digital-exposure/' },
   { label: 'Public safety checklist', href: '/investigations/digital-exposure/public-safety-checklist/' },
   { label: 'Corrections', href: '/investigations/digital-exposure/#corrections' },
   { label: 'Blog', href: '/blog' },

@@ -60,7 +60,7 @@ export function breadcrumbItems(path: string, current: string): Crumb[] {
   if (clean.startsWith('/investigations/digital-exposure/')) {
     return [
       { name: 'Home', path: '/' },
-      { name: 'The Invisible Attack Surface', path: '/investigations/digital-exposure' },
+      { name: 'Global Digital Exposure Investigation', path: '/investigations/digital-exposure' },
       { name: current, path: clean },
     ]
   }

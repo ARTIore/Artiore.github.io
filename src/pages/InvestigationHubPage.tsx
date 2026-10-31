@@ -50,7 +50,7 @@ export default function InvestigationHubPage() {
       <Breadcrumbs current={investigationHub.crumbName} path={investigationHub.path} />
       <article className="investigation">
         <header className="max-w-[68ch]">
-          <p className="text-xs uppercase tracking-[0.22em] text-gold">Global Digital Exposure Investigation</p>
+          <p className="text-xs uppercase tracking-[0.22em] text-gold">The Invisible Attack Surface</p>
           <h1 className="mt-4 font-serif text-4xl leading-tight text-cream sm:text-5xl">{investigationHub.title}</h1>
           <p className="mt-4 text-lg leading-relaxed text-cream/90">
             How everyday technology can compromise privacy, identity and financial security
