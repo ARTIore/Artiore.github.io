@@ -26,6 +26,7 @@ export const investigationHub = {
   description:
     'How everyday technology can compromise privacy, identity and financial security. ARTIore Research Desk, Global Digital Exposure Investigation, version 1.0.',
   crumbName: 'Global Digital Exposure Investigation',
+  lastmod: '2026-11-01',
 }
 
 export type InvestigationPiece = {
@@ -117,6 +118,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "7 minutes",
     partsToc: false,
     printable: false,
+    lastmod: "2026-11-01",
   },
   {
     file: "04-bluetooth-ble-tracking.md",
@@ -128,6 +130,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "7 minutes",
     partsToc: false,
     printable: false,
+    lastmod: "2026-11-01",
   },
   {
     file: "05-android-accessibility-service-malware.md",
@@ -139,6 +142,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "7 minutes",
     partsToc: false,
     printable: false,
+    lastmod: "2026-11-01",
   },
   {
     file: "06-iphone-zero-click-spyware.md",
@@ -150,6 +154,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "7 minutes",
     partsToc: false,
     printable: false,
+    lastmod: "2026-11-01",
   },
   {
     file: "07-whatsapp-encryption-limits.md",
@@ -161,6 +166,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "7 minutes",
     partsToc: false,
     printable: false,
+    lastmod: "2026-11-01",
   },
   {
     file: "08-pegasus-predator-commercial-spyware.md",
@@ -172,6 +178,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "8 minutes",
     partsToc: false,
     printable: false,
+    lastmod: "2026-11-01",
   },
   {
     file: "09-cloud-photo-account-takeover.md",
@@ -183,6 +190,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "6 minutes",
     partsToc: false,
     printable: false,
+    lastmod: "2026-11-01",
   },
   {
     file: "10-crypto-wallet-drainers.md",
@@ -194,6 +202,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "7 minutes",
     partsToc: false,
     printable: false,
+    lastmod: "2026-11-01",
   },
   {
     file: "11-sim-swap-account-takeover.md",
@@ -205,6 +214,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "6 minutes",
     partsToc: false,
     printable: false,
+    lastmod: "2026-11-01",
   },
   {
     file: "12-hotel-keycard-lock-security.md",
@@ -216,6 +226,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "5 minutes",
     partsToc: false,
     printable: false,
+    lastmod: "2026-11-01",
   },
   {
     file: "browser-extensions-session-theft.md",
@@ -228,6 +239,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     printable: false,
     datePublished: "2026-10-25",
     dateModified: "2026-10-31",
+    lastmod: "2026-11-01",
   },
   {
     file: "digital-security-warning-signs.md",
@@ -240,6 +252,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     printable: false,
     datePublished: "2026-10-25",
     dateModified: "2026-10-31",
+    lastmod: "2026-11-01",
   },
   {
     file: "13-global-threat-matrix.md",
@@ -280,6 +293,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     kicker: "Source register",
     partsToc: false,
     printable: false,
+    lastmod: "2026-11-01",
   },
 ]
 
@@ -311,6 +325,7 @@ export const investigationMeta = [
     imageWidth: investigationOg.width,
     imageHeight: investigationOg.height,
     imageAlt: investigationOg.alt,
+    lastmod: investigationHub.lastmod,
   },
   ...investigationPieces.map((piece) => ({
     path: piece.path,

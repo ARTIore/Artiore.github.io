@@ -187,6 +187,9 @@ export default function InvestigationHubPage() {
           <p className="mt-4 leading-relaxed text-cream/90">
             1 November 2026: the framework article was added and the hotel Wi-Fi guide was expanded.
           </p>
+          <p className="mt-4 leading-relaxed text-cream/90">
+            1 November 2026 — linked verification sources added to the source register and articles.
+          </p>
         </section>
 
         <SincerityNote code="en" placement="bottom" />
