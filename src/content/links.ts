@@ -13,6 +13,8 @@ export const links = {
   artioreTry: 'https://artiore.com/try',
   artioreAccess: 'https://artiore.com/access',
   artioreBlog: 'https://artiore.com/blog',
+  artioreFramework: 'https://artiore.com/framework',
+  artioreDoctrine: 'https://artiore.com/doctrine',
   artioreImplementation: 'https://artiore.com/implementation',
   artioreCompanion: 'https://artiore.com/companion-handbook',
   artiorePrivacy: 'https://artiore.com/privacy',

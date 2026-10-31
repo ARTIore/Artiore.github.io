@@ -2,6 +2,8 @@ import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SeoHead } from '../components/seo/SeoHead'
 import { SiteLink } from '../components/content/SiteLink'
 import { SincerityNote } from '../components/field-manual/SincerityNote'
+import { AlsoOnArtiore } from '../components/investigations/AlsoOnArtiore'
+import { investigationHubCompanionUrl } from '../content/investigations/companions'
 import {
   investigationHub,
   investigationOg,
@@ -192,6 +194,7 @@ export default function InvestigationHubPage() {
           </p>
         </section>
 
+        <AlsoOnArtiore href={investigationHubCompanionUrl} />
         <SincerityNote code="en" placement="bottom" />
       </article>
     </>

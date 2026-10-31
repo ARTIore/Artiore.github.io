@@ -6,6 +6,14 @@ Public site for [artiais.com](https://artiais.com), the AI infrastructure platfo
 - [artiais.com](https://artiais.com) — Artiais, AI infrastructure platform
 - [artioreconsortium.com](https://artioreconsortium.com) — Artiore Consortium
 
+## On artiore.com
+
+- [Home](https://artiore.com)
+- [Framework](https://artiore.com/framework)
+- [Doctrine](https://artiore.com/doctrine)
+- [The Invisible Attack Surface](https://artiore.com/security/invisible-attack-surface)
+- [Security blog](https://artiore.com/blog)
+
 Clarity-first reasoning. ARTIore helps people understand complex situations, make grounded decisions, and take practical next steps — without overwhelm, gatekeeping, or false certainty. The system is a witness, not a verdict.
 
 ## Development

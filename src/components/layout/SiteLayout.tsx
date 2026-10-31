@@ -238,6 +238,21 @@ export function SiteLayout() {
                 </a>
               </li>
               <li>
+                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreFramework} rel="noreferrer" target="_blank">
+                  Framework
+                </a>
+              </li>
+              <li>
+                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreDoctrine} rel="noreferrer" target="_blank">
+                  Doctrine
+                </a>
+              </li>
+              <li>
+                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreBlog} rel="noreferrer" target="_blank">
+                  Security blog
+                </a>
+              </li>
+              <li>
                 <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.consortium} rel="noreferrer" target="_blank">
                   artioreconsortium.com
                 </a>

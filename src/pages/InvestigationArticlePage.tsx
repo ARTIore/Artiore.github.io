@@ -13,7 +13,9 @@ import {
 } from '../content/investigations/catalog'
 import { investigationFaqs } from '../content/investigations/faqs'
 import { renderInvestigationMarkdown } from '../content/investigations/markdown'
+import { AlsoOnArtiore } from '../components/investigations/AlsoOnArtiore'
 import { ArticleVerificationSources, VerificationSourceRegister } from '../components/investigations/VerificationSources'
+import { investigationCompanionUrls } from '../content/investigations/companions'
 
 const linkClass =
   'text-gold-bright underline decoration-gold/40 underline-offset-4 hover:decoration-gold-bright'
@@ -94,6 +96,7 @@ export default function InvestigationArticlePage({ markdown, slug }: { markdown:
           </nav>
         ) : null}
         <div className="mt-10 min-w-0 space-y-4">{rendered.body}</div>
+        {investigationCompanionUrls[slug] ? <AlsoOnArtiore href={investigationCompanionUrls[slug]} /> : null}
         {slug === 'source-register' ? <VerificationSourceRegister /> : <ArticleVerificationSources slug={slug} />}
         <SincerityNote code="en" placement="bottom" />
       </article>
