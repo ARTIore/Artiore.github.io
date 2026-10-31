@@ -88,6 +88,42 @@ for (const entry of seoEntries) {
   }
   const h1s = html.match(/<h1\b/g) ?? []
   if (h1s.length !== 1) fail(`${entry.path} has ${h1s.length} h1 elements`)
+
+  // Every table must sit inside a horizontally scrollable container.
+  //
+  // The investigation pages set `prerender: false` — they are prebuilt static
+  // files carried in public/ — so the landmark block below is skipped for
+  // them. That means this assertion has to live HERE, in the always-run
+  // region, or it would silently never execute for the very pages it
+  // protects.
+  //
+  // Without it, `body { overflow-x: clip }` clips wide tables on a phone: the
+  // document no longer scrolls, so the table is simply cut off.
+  //
+  // Two containers satisfy this, and BOTH are the house's own mechanisms:
+  //   - `.tscroll` — the investigation pages' self-contained stylesheet
+  //   - `max-w-full overflow-x-auto` — the Field Manual's Tailwind class
+  //     (src/components/field-manual/FieldManualLayout.tsx), which is the
+  //     precedent the investigation pages were built to mirror
+  //
+  // The count is of ENCLOSING containers, not literal adjacency: a legend
+  // paragraph may sit between the div and the table.
+  const tables = html.match(/<table\b/g) ?? []
+  if (tables.length > 0) {
+    let wrapped = 0
+    for (const match of html.matchAll(/<table\b/g)) {
+      const before = html.slice(0, match.index)
+      const divClose = before.lastIndexOf('</div>')
+      const scrollOpen = before.lastIndexOf('<div class="tscroll">')
+      const tailwindOpen = before.lastIndexOf('<div class="max-w-full overflow-x-auto">')
+      const open = Math.max(scrollOpen, tailwindOpen)
+      if (open !== -1 && open > divClose) wrapped += 1
+    }
+    if (wrapped !== tables.length) {
+      fail(`${entry.path} has ${tables.length - wrapped} of ${tables.length} tables outside a scrollable container`)
+    }
+  }
+
   if (entry.noindex) {
     if (!html.includes('noindex')) fail(`${entry.path} should be noindex`)
   }

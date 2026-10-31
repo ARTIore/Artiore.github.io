@@ -99,15 +99,24 @@ for (const file of files) {
     next = next.replace('</style>', `${BADGE_CSS}</style>`);
   }
 
-  // 3. a one-line legend, placed immediately before the first marked table so
-  //    it reads as part of the evidence table rather than as page chrome.
-  // Guard on the paragraph element itself. Guarding on the bare class name
-  // would be wrong: the CSS rule above already contains the string
-  // ".evidence-legend", so the paragraph would never be inserted.
+  // 3. a one-line legend, placed immediately before the marked table's scroll
+  //    container so it reads as part of the evidence table rather than as page
+  //    chrome — and so it does NOT scroll horizontally with the table on a
+  //    narrow viewport.
+  //
+  //    Guard on the paragraph element itself. Guarding on the bare class name
+  //    would be wrong: the CSS rule above already contains the string
+  //    ".evidence-legend", so the paragraph would never be inserted.
   if (!next.includes('<p class="evidence-legend"')) {
     const tableIndex = next.indexOf('<table');
     if (tableIndex !== -1) {
-      next = next.slice(0, tableIndex) + LEGEND + next.slice(tableIndex);
+      // If the table is wrapped in a .tscroll div, put the legend BEFORE the
+      // div, not between the div and the table.
+      const before = next.slice(0, tableIndex)
+      const divOpen = before.lastIndexOf('<div class="tscroll">')
+      const divClose = before.lastIndexOf('</div>')
+      const at = divOpen !== -1 && divOpen > divClose ? divOpen : tableIndex
+      next = next.slice(0, at) + LEGEND + next.slice(at)
     }
   }
 
