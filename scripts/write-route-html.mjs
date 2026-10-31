@@ -269,18 +269,20 @@ if (frameworkEntry) {
   writeFileSync(join(process.cwd(), 'public', 'framework.html'), framework)
 }
 
-// Fixed revision date for this metadata pass. Do not stamp the build clock.
-const lastmod = '2026-10-31'
-const sitemapUrls = seoEntries.filter((entry) => entry.sitemap !== false).map((entry) => canonicalUrl(entry.path))
+// Default revision date. A page may set its own lastmod. Do not stamp the build clock.
+const defaultLastmod = '2026-10-31'
+const sitemapUrls = seoEntries.filter((entry) => entry.sitemap !== false)
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapUrls
-  .map(
-    (loc) => `  <url>
+  .map((entry) => {
+    const loc = canonicalUrl(entry.path)
+    const lastmod = entry.lastmod || defaultLastmod
+    return `  <url>
     <loc>${loc}</loc>
     <lastmod>${lastmod}</lastmod>
-  </url>`,
-  )
+  </url>`
+  })
   .join('\n')}
 </urlset>
 `

@@ -57,6 +57,13 @@ export function breadcrumbItems(path: string, current: string): Crumb[] {
       { name: current, path: clean },
     ]
   }
+  if (clean === '/perimeter') {
+    return [
+      { name: 'Home', path: '/' },
+      { name: 'Global Digital Exposure Investigation', path: '/investigations/digital-exposure' },
+      { name: current, path: clean },
+    ]
+  }
   if (clean.startsWith('/investigations/digital-exposure/')) {
     return [
       { name: 'Home', path: '/' },

@@ -45,10 +45,33 @@ export type InvestigationPiece = {
   printable: boolean
   datePublished?: string
   dateModified?: string
+  /** Overrides the default /investigations/digital-exposure/<slug> path. */
+  publicPath?: string
+  dek?: string
+  byline?: string
+  lastmod?: string
 }
 
 const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' | 'summary'>[] = [
 
+  {
+    file: "perimeter.md",
+    slug: "perimeter",
+    publicPath: "/perimeter",
+    title: "The Permission Is the Perimeter",
+    seoTitle: "The Permission Is the Perimeter: Digital Exposure, Explained",
+    description:
+      "A structural guide to digital exposure: why permissions, accounts, metadata and recovery paths matter more than any single device.",
+    dek: "Your phone is not a locked box. It is a stack of permissions — and most of them are doing exactly what they were designed to do.",
+    byline: "ARTIore Research",
+    kicker: "Framework",
+    readingTime: "10 minutes",
+    partsToc: false,
+    printable: false,
+    datePublished: "2026-10-25",
+    dateModified: "2026-11-01",
+    lastmod: "2026-11-01",
+  },
   {
     file: "00-executive-investigation.md",
     slug: "executive-investigation",
@@ -81,6 +104,8 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "7 minutes",
     partsToc: false,
     printable: false,
+    dateModified: "2026-11-01",
+    lastmod: "2026-11-01",
   },
   {
     file: "03-dns-hijacking-explained.md",
@@ -260,7 +285,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
 
 export const investigationPieces: InvestigationPiece[] = pieceSource.map((piece) => ({
   ...piece,
-  path: `${investigationBase}/${piece.slug}`,
+  path: piece.publicPath ?? `${investigationBase}/${piece.slug}`,
   headTitle: piece.seoTitle ?? piece.title,
   crumbName: piece.title,
   summary: piece.description,
@@ -295,6 +320,7 @@ export const investigationMeta = [
     headline: piece.title,
     datePublished: piece.datePublished ?? investigationPublished,
     dateModified: piece.dateModified,
+    lastmod: piece.lastmod,
     inLanguage: 'en' as const,
     locale: 'en_US' as const,
     image: investigationOg.src,

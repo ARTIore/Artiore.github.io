@@ -16,6 +16,8 @@ reading_time: "approx. 105 minutes"
 
 **A global public-awareness investigation by ARTIore.**
 
+**Start here:** [The Permission Is the Perimeter](/perimeter/).
+
 ---
 
 ## How to read this report

@@ -54,6 +54,7 @@ export type SeoEntry = PageMeta & {
   authorOrganization?: string
   datePublished?: string
   dateModified?: string
+  lastmod?: string
   inLanguage?: string
   locale?: string
   alternates?: { hreflang: string; path: string }[]

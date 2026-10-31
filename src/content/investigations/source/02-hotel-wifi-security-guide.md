@@ -31,7 +31,7 @@ A seventh matters just as much: guests are away from their normal environment an
 
 ## The realistic threats, ranked
 
-**1. Captive-portal phishing.** A page asks you to "sign in with Google" or re-enter your room number and surname. The first harvests credentials; the second harvests personal data for later fraud. This is the most common hotel-network attack because it requires no exploit.
+**1. Captive-portal phishing.** A page asks you to "sign in with Google" or re-enter your room number and surname. The first harvests credentials; the second harvests personal data for later fraud. This is the most common hotel-network attack because it requires no exploit. The finding that a fake portal can collect an email, Apple, Google, bank, or card password without breaking encryption rests on a single authoritative source class, not two independent sources.
 
 **2. Evil-twin access points.** A rogue access point advertises the hotel's network name. Your device joins automatically. From there, the attacker can serve portals, redirect DNS, or observe metadata.
 
@@ -43,7 +43,33 @@ A seventh matters just as much: guests are away from their normal environment an
 
 **6. Outdated access-point firmware.** An unpatched access point is a known vulnerability with a power cable.
 
-**7. Physical access systems.** Electronic locks are part of the digital surface. The 2024 "Unsaflok" research found flaws in Dormakaba Saflok systems affecting more than 3 million doors in 131 countries, exploitable with a forged keycard and a card writer. [Confirmed]
+**7. Physical access systems.** Electronic locks are part of the digital surface. The 2024 "Unsaflok" research found flaws in Dormakaba Saflok systems affecting more than 3 million doors in 131 countries. Opening a room in that research required a pair of forged keycards and a card writer, and no known real-world exploitation was reported when the research was disclosed. [Demonstrated in research]
+
+## What the network can and cannot see
+
+A hotel network can see a map of connections. It cannot, by itself, read the contents of a properly validated encrypted session.
+
+**What it can see.** Destinations, DNS queries when DNS is not encrypted, and the server name sent in the clear at the start of many encrypted connections. Some providers go further: Performance Networks, a UK hotel Wi-Fi vendor, told Ars Technica that its software records “every click” and what guests have viewed, held for legislative purposes. That is one provider’s logging, not a property of every hotel network, and an encrypted path is not visible without interception.
+
+**What is not established.** Timing, traffic volume, and full web-address logging are described by vendor and industry sources, and primary-source verification is still pending. A hotel cannot be assumed to analyse timing or volume just because it can see a connection. The capability and the practice are different questions.
+
+**What it cannot see.** The page body, the password field, and the message contents of a correctly validated encrypted session. “Correctly validated” excludes a device that has been taught to trust the wrong certificate, a browser that ignores certificate warnings, or an app that trusts every certificate. Reading those contents from the network requires a trusted rogue certificate or an installed configuration profile. That finding rests on a single authoritative source class, not two independent sources. Do not install a hotel “network profile” or “trust certificate” to get online. If the network requires it, use a different network or a cellular connection.
+
+## Risks that are not Wi-Fi
+
+The documented hotel incidents in this record often sit in accounts, booking systems, help desks, and physical access. The guest is not always on the hotel network when the harm happens.
+
+**Booking-account phishing.** Criminals have taken over hotel partner accounts and used the platform’s own messaging to send guests payment requests. The message can arrive inside the booking app, from the hotel’s account, with real booking details, while the guest is on a train, in a taxi, or at home. Treat a payment request inside a booking thread as hostile until you verify it through a separate channel: the official app or site you open yourself, the front desk on a number you look up, or the platform’s own support path. Do not use the contact details in the message.
+
+**Help-desk social engineering.** The 2023 MGM intrusion began with help-desk social engineering, not a Wi-Fi exploit. The public record supports that help-desk path and a $45 million settlement. A figure of about $100 million is MGM’s own attribution in its 8-K, not a figure verified in the fetched CISA or NLR sources, so it stays attributed to that filing.
+
+**Reservation databases.** The Starwood guest-reservation breach, later associated with Marriott, was a reservation-system breach, not a guest-Wi-Fi breach. A later disclosure put the figure at 383 million records. Other published counts — 339 million in a 2024 FTC account, and an earlier estimate of up to 500 million — differ by date and scope. The lesson is that reservation databases concentrate names, contact details, passport numbers, and payment data across properties and third-party systems.
+
+**Malware delivered over the network.** Microsoft attributed the CaptiveCrunch hotel-Wi-Fi campaign, which served a fake browser update delivering the CornFlake remote-access trojan, to Storm-2945. That is a device compromise delivered through a hotel network, not a passive observer reading encrypted pages. BWH Hotels identified an intrusion in a web application of guest reservation data, with no payment or bank details involved. Again: the reservation system, not the Wi-Fi password.
+
+**Shared Wi-Fi passphrases.** WPA2-Personal uses a shared passphrase. Guests do not each get a unique master key; session keys are derived through the handshake. A weak shared passphrase can allow offline guessing if an attacker captures a handshake. Protection of management frames (802.11w) is optional, not the default. These are reasons to keep encrypted connections, avoid weak passphrases where you control them, and prefer WPA3 where both the access point and the device support it. They are not a reason to say that hotel Wi-Fi decrypts banking.
+
+A documented incident shows that a pattern occurred. It does not show that every hotel is unsafe.
 
 ## What is not supported
 
@@ -100,7 +126,7 @@ Basic habits: use the deadbolt, do not leave keycards behind, report lost cards 
 Treat it as untrusted. Use cellular data or a VPN you control, and verify the site's domain before entering credentials.
 
 **Can the hotel see my traffic?**
-They can see metadata — which sites you connect to — and content only if it is unencrypted or if you installed a certificate that allows interception.
+They can see metadata: which sites you connect to, unencrypted DNS queries, and often the server name. The contents of a properly validated encrypted session are not readable from the network alone. Seeing those contents requires a further condition, such as an installed certificate or configuration profile, and that finding rests on a single authoritative source class. Whether a hotel logs timing, traffic volume, or full web addresses is not established.
 
 **Should I use the hotel's "secure" network with a password?**
 A password limits access; it does not establish trust. The precautions above still apply.

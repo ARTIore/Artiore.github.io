@@ -184,6 +184,9 @@ export default function InvestigationHubPage() {
           <p className="mt-4 leading-relaxed text-cream/90">
             31 October 2026: added two articles, Browser Extensions and Session Theft, and Digital Security Warning Signs.
           </p>
+          <p className="mt-4 leading-relaxed text-cream/90">
+            1 November 2026: the framework article was added and the hotel Wi-Fi guide was expanded.
+          </p>
         </section>
 
         <SincerityNote code="en" placement="bottom" />

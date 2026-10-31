@@ -59,8 +59,9 @@ export default function InvestigationArticlePage({ markdown, slug }: { markdown:
         <header className="max-w-[68ch]">
           <p className="text-xs uppercase tracking-[0.22em] text-gold">Global Digital Exposure Investigation</p>
           <h1 className="mt-4 font-serif text-4xl leading-tight text-cream sm:text-5xl">{piece.title}</h1>
+          {piece.dek ? <p className="mt-4 text-lg leading-relaxed text-cream/90">{piece.dek}</p> : null}
           <p className="mt-4 text-sm text-muted">
-            ARTIore Research Desk · Version 1.0 · <time dateTime={published}>{publishedLabel}</time>
+            {piece.byline ?? 'ARTIore Research Desk · Version 1.0'} · <time dateTime={published}>{publishedLabel}</time>
             {piece.readingTime ? ` · ${piece.readingTime}` : ''}
           </p>
           <p className="mt-4 text-sm">

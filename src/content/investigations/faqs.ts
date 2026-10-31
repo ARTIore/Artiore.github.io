@@ -8,7 +8,7 @@ export const investigationFaqs: Record<string, { question: string; answer: strin
   ],
   "hotel-wifi-security-guide": [
     { question: "Is hotel Wi-Fi safe for online banking?", answer: "Treat it as untrusted. Use cellular data or a VPN you control, and verify the site's domain before entering credentials." },
-    { question: "Can the hotel see my traffic?", answer: "They can see metadata — which sites you connect to — and content only if it is unencrypted or if you installed a certificate that allows interception." },
+    { question: "Can the hotel see my traffic?", answer: "They can see metadata: which sites you connect to, unencrypted DNS queries, and often the server name. The contents of a properly validated encrypted session are not readable from the network alone. Seeing those contents requires a further condition, such as an installed certificate or configuration profile, and that finding rests on a single authoritative source class. Whether a hotel logs timing, traffic volume, or full web addresses is not established." },
     { question: "Should I use the hotel's \"secure\" network with a password?", answer: "A password limits access; it does not establish trust. The precautions above still apply." },
     { question: "Are booking messages from hotels always genuine?", answer: "No. Reservation-data scams use real details. Verify through the official app, never through the link in the message." },
   ],
