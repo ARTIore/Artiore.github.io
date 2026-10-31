@@ -36,7 +36,7 @@ html{background:var(--ink);color:var(--cream);font-family:var(--sans);line-heigh
 -webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;overflow-x:clip}
 img{max-width:100%;height:auto}
-a{color:var(--gold-bright);text-underline-offset:.18em}
+a{color:var(--gold-bright);text-underline-offset:.18em;overflow-wrap:anywhere}
 a:hover{color:var(--cream)}
 :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
 .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
@@ -72,6 +72,7 @@ background:var(--ink-2);color:var(--cream)}
 blockquote p{margin:0}
 hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
 table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
+.tscroll{max-width:100%;overflow-x:auto}
 caption{caption-side:top;text-align:left;font-size:.85rem;color:var(--muted);padding:.4rem 0 .7rem}
 th,td{border-bottom:1px solid var(--line);padding:.55rem .4rem;text-align:left;vertical-align:top}
 th{font-weight:700;color:var(--gold-bright)}
@@ -143,7 +144,7 @@ color:var(--muted)}
 <p><strong>Retail and venue analytics.</strong> Beacons and Wi-Fi/Bluetooth analytics estimate footfall and dwell time. Even without identifying you, they measure you.</p>
 <p><strong>Cross-device correlation.</strong> A phone, watch, earbuds, and laptop often advertise with identifiers that link them. Seeing one implies the others.</p>
 <h2>Vulnerabilities that matter</h2>
-<table>
+<div class="tscroll"><table>
 <caption>Vulnerabilities that matter</caption>
 <thead>
 <tr>
@@ -191,7 +192,7 @@ color:var(--muted)}
 <td>Host accepts HID without confirmation</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>[Confirmed — CVE records and vendor advisories]</p>
 <p>None of these is a mass-market attack. Each requires a vulnerable target, proximity, and often a specific protocol state. Their significance is that they exist in a technology the public treats as inert.</p>
 <h2>What a Bluetooth log actually shows</h2>
@@ -205,7 +206,7 @@ color:var(--muted)}
 <p>None of these establishes that a device connected, that data was exchanged, or that a person was targeted. Establishing unauthorised access requires correlation across time, identifiers, and ideally the peripheral itself.</p>
 <p>Treating a log line as proof has caused real harm: destroyed evidence, unnecessary device replacement, and accusations within families.</p>
 <h2>Prerequisites, plainly</h2>
-<table>
+<div class="tscroll"><table>
 <caption>Prerequisites, plainly</caption>
 <thead>
 <tr>
@@ -239,7 +240,7 @@ color:var(--muted)}
 <td>An unpatched stack, exploit code</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>What to do</h2>
 <ul>
 <li><strong>Turn Bluetooth off when not in use</strong> — hotels, conferences, transport. It eliminates the class.</li>
@@ -260,7 +261,7 @@ No. Any BLE tag or find-my-compatible device can be misused, and venue analytics
 <p><strong>Is a strange device in my Bluetooth list evidence of surveillance?</strong>
 Usually not. Public spaces contain many devices. Evidence requires correlation, not a single entry.</p>
 <h2>Evidence</h2>
-<table>
+<div class="tscroll"><table>
 <caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
 <thead>
 <tr>
@@ -385,7 +386,7 @@ Usually not. Public spaces contain many devices. Evidence requires correlation, 
 <td>PROPOSED EXTENSION — verified against one authoritative source The document names the finding; the claim id and its place in the spine are the principal's call.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <p><strong>Related:</strong> <a href="/investigations/digital-exposure/iphone-zero-click-spyware/">iPhone zero-click spyware</a> · <a href="/investigations/digital-exposure/android-accessibility-service-malware/">Android accessibility malware</a> · <a href="/investigations/digital-exposure/password-protected-wifi-not-secure/">Why Wi-Fi passwords do not equal safety</a></p>
 <p><strong>Part of the ARTIore Global Digital Exposure Investigation.</strong></p>

@@ -36,7 +36,7 @@ html{background:var(--ink);color:var(--cream);font-family:var(--sans);line-heigh
 -webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;overflow-x:clip}
 img{max-width:100%;height:auto}
-a{color:var(--gold-bright);text-underline-offset:.18em}
+a{color:var(--gold-bright);text-underline-offset:.18em;overflow-wrap:anywhere}
 a:hover{color:var(--cream)}
 :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
 .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
@@ -72,6 +72,7 @@ background:var(--ink-2);color:var(--cream)}
 blockquote p{margin:0}
 hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
 table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
+.tscroll{max-width:100%;overflow-x:auto}
 caption{caption-side:top;text-align:left;font-size:.85rem;color:var(--muted);padding:.4rem 0 .7rem}
 th,td{border-bottom:1px solid var(--line);padding:.55rem .4rem;text-align:left;vertical-align:top}
 th{font-weight:700;color:var(--gold-bright)}
@@ -139,7 +140,7 @@ color:var(--muted)}
 </ul>
 <p>None of these is a breach. All of them are exposure.</p>
 <h2>What attackers actually get</h2>
-<table>
+<div class="tscroll"><table>
 <caption>What attackers actually get</caption>
 <thead>
 <tr>
@@ -173,7 +174,7 @@ color:var(--muted)}
 <td>Only the data that service held</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>Metadata matters more than people think</h2>
 <p>Photos carry EXIF data: GPS coordinates, timestamps, device model, sometimes software and edit history. Documents carry author names and revision history. Social platforms strip some of this; email attachments and cloud links often do not.</p>
 <p>The location of your home, your workplace, your children's school, and your daily pattern is often more sensitive than the image itself.</p>
@@ -207,7 +208,7 @@ Check active sessions, recent security events, and linked apps. Providers vary i
 <p><strong>Is it safer to keep photos only on my phone?</strong>
 Not necessarily. Phones are lost, stolen, and damaged. The safer pattern is encrypted backup plus strong account security.</p>
 <h2>Evidence</h2>
-<table>
+<div class="tscroll"><table>
 <caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
 <thead>
 <tr>
@@ -360,7 +361,7 @@ Not necessarily. Phones are lost, stolen, and damaged. The safer pattern is encr
 <td>verified against one authoritative source</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <p><strong>Related:</strong> <a href="/investigations/digital-exposure/password-protected-wifi-not-secure/">Why Wi-Fi passwords do not make a network safe</a> · <a href="/investigations/digital-exposure/crypto-wallet-drainers/">Crypto wallet drainers</a> · <a href="/investigations/digital-exposure/whatsapp-encryption-limits/">WhatsApp encryption limits</a></p>
 <p><strong>Part of the ARTIore Global Digital Exposure Investigation.</strong></p>

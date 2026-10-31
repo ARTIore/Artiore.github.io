@@ -36,7 +36,7 @@ html{background:var(--ink);color:var(--cream);font-family:var(--sans);line-heigh
 -webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;overflow-x:clip}
 img{max-width:100%;height:auto}
-a{color:var(--gold-bright);text-underline-offset:.18em}
+a{color:var(--gold-bright);text-underline-offset:.18em;overflow-wrap:anywhere}
 a:hover{color:var(--cream)}
 :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
 .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
@@ -72,6 +72,7 @@ background:var(--ink-2);color:var(--cream)}
 blockquote p{margin:0}
 hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
 table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
+.tscroll{max-width:100%;overflow-x:auto}
 caption{caption-side:top;text-align:left;font-size:.85rem;color:var(--muted);padding:.4rem 0 .7rem}
 th,td{border-bottom:1px solid var(--line);padding:.55rem .4rem;text-align:left;vertical-align:top}
 th{font-weight:700;color:var(--gold-bright)}
@@ -132,7 +133,7 @@ color:var(--muted)}
 <p><strong>Protection</strong> names the single highest-leverage control, not a complete programme.</p>
 <hr />
 <h2>A. Shared and public networks</h2>
-<table>
+<div class="tscroll"><table>
 <caption>A. Shared and public networks</caption>
 <thead>
 <tr>
@@ -226,9 +227,9 @@ color:var(--muted)}
 <td>Alternative connectivity</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>B. DNS</h2>
-<table>
+<div class="tscroll"><table>
 <caption>B. DNS</caption>
 <thead>
 <tr>
@@ -322,9 +323,9 @@ color:var(--muted)}
 <td>Audit delegations</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>C. Bluetooth and BLE</h2>
-<table>
+<div class="tscroll"><table>
 <caption>C. Bluetooth and BLE</caption>
 <thead>
 <tr>
@@ -410,9 +411,9 @@ color:var(--muted)}
 <td>Vendor updates; unpair unused</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>D. Accessibility and device control</h2>
-<table>
+<div class="tscroll"><table>
 <caption>D. Accessibility and device control</caption>
 <thead>
 <tr>
@@ -482,9 +483,9 @@ color:var(--muted)}
 <td>Lock-screen restrictions</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>E. Mobile platform exploitation</h2>
-<table>
+<div class="tscroll"><table>
 <caption>E. Mobile platform exploitation</caption>
 <thead>
 <tr>
@@ -570,9 +571,9 @@ color:var(--muted)}
 <td>Strong passcode; ADP; E2EE backup</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>F. Messaging and accounts</h2>
-<table>
+<div class="tscroll"><table>
 <caption>F. Messaging and accounts</caption>
 <thead>
 <tr>
@@ -642,9 +643,9 @@ color:var(--muted)}
 <td>Disable previews</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>G. Cloud, media and identity</h2>
-<table>
+<div class="tscroll"><table>
 <caption>G. Cloud, media and identity</caption>
 <thead>
 <tr>
@@ -730,9 +731,9 @@ color:var(--muted)}
 <td>Treat as third party; check settings</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>H. Cryptocurrency</h2>
-<table>
+<div class="tscroll"><table>
 <caption>H. Cryptocurrency</caption>
 <thead>
 <tr>
@@ -834,9 +835,9 @@ color:var(--muted)}
 <td>Discretion; duress planning</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>I. Hospitality-specific</h2>
-<table>
+<div class="tscroll"><table>
 <caption>I. Hospitality-specific</caption>
 <thead>
 <tr>
@@ -906,9 +907,9 @@ color:var(--muted)}
 <td>Strong verification; phishing-resistant auth</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>J. Claims we explicitly reject</h2>
-<table>
+<div class="tscroll"><table>
 <caption>J. Claims we explicitly reject</caption>
 <thead>
 <tr>
@@ -964,7 +965,7 @@ color:var(--muted)}
 <td>The technology is legitimate; abuse requires deception and consent</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>Risk-adjusted priorities</h2>
 <p>If a reader can act on only five items, these have the highest expected value across regions and profiles:</p>
@@ -978,7 +979,7 @@ color:var(--muted)}
 <p>The matrix is a map, not a scoreboard. Its purpose is to show that the same five controls recur across almost every row — which is why they are worth doing even for people who will never face the most sophisticated threats.</p>
 <hr />
 <h2>Evidence</h2>
-<table>
+<div class="tscroll"><table>
 <caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
 <thead>
 <tr>
@@ -1509,7 +1510,7 @@ color:var(--muted)}
 <td>PROPOSED EXTENSION — verified against one authoritative source The document names the finding; the claim id and its place in the spine are the principal's call.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 
 </article>
 </main>

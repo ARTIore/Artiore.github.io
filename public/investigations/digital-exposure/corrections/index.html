@@ -36,7 +36,7 @@ html{background:var(--ink);color:var(--cream);font-family:var(--sans);line-heigh
 -webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;overflow-x:clip}
 img{max-width:100%;height:auto}
-a{color:var(--gold-bright);text-underline-offset:.18em}
+a{color:var(--gold-bright);text-underline-offset:.18em;overflow-wrap:anywhere}
 a:hover{color:var(--cream)}
 :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
 .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
@@ -72,6 +72,7 @@ background:var(--ink-2);color:var(--cream)}
 blockquote p{margin:0}
 hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
 table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
+.tscroll{max-width:100%;overflow-x:auto}
 caption{caption-side:top;text-align:left;font-size:.85rem;color:var(--muted);padding:.4rem 0 .7rem}
 th,td{border-bottom:1px solid var(--line);padding:.55rem .4rem;text-align:left;vertical-align:top}
 th{font-weight:700;color:var(--gold-bright)}
@@ -123,11 +124,11 @@ color:var(--muted)}
 investigation is listed here with what was wrong and what it was corrected to. The
 corpus&rsquo;s source registers are read-only, so corrections are recorded here and in
 the machine-readable correction table rather than edited into the originals in place.</p>
-<table><caption>Every correction made to a source, a citation or a claim</caption>
+<div class="tscroll"><table><caption>Every correction made to a source, a citation or a claim</caption>
 <thead><tr><th scope="col">Identifier</th><th scope="col">What was wrong</th>
 <th scope="col">Corrected to</th><th scope="col">Why</th></tr></thead>
 <tbody><tr><td><code>src:S35</code></td><td>dead</td><td>https://www.infoblox.com/blog/threat-intelligence/who-knew-domain-hijacking-is-so-easy/</td><td>The register's own entry title reads 'Who Knew? Domain Hijacking is So Easy (Sitting Ducks)' — the word 'so' is in the title and missing from the URL. The registered URL returns 404; the corrected URL returns 200 (fetched 26 October 2026). The article is Infoblox Threat Intelligence, 31 July 2024, on the 'Sitting Ducks' lame-delegation attack, joint research with Eclypsium.</td></tr>
-<tr><td><code>r15:S50</code></td><td>wrong identifier — the entry names the wrong CVE for BIAS</td><td>https://nvd.nist.gov/vuln/detail/CVE-2020-10135</td><td>CVE-2020-12351 is 'Improper input validation in BlueZ ... escalation of privilege via adjacent access' — the head of the BleedingTooth family, an L2CAP type-confusion flaw, not an impersonation attack. BIAS is CVE-2020-10135. The corpus already records the conflict under C185 (Part 3 batch 3A) and 04_Master_Document.md line 109, and the publication register's own S49 carries the correct identifier; only the R15 package's register entry is wrong. The URL resolves, so this is a mislabel, not a dead link.</td></tr></tbody></table>
+<tr><td><code>r15:S50</code></td><td>wrong identifier — the entry names the wrong CVE for BIAS</td><td>https://nvd.nist.gov/vuln/detail/CVE-2020-10135</td><td>CVE-2020-12351 is 'Improper input validation in BlueZ ... escalation of privilege via adjacent access' — the head of the BleedingTooth family, an L2CAP type-confusion flaw, not an impersonation attack. BIAS is CVE-2020-10135. The corpus already records the conflict under C185 (Part 3 batch 3A) and 04_Master_Document.md line 109, and the publication register's own S49 carries the correct identifier; only the R15 package's register entry is wrong. The URL resolves, so this is a mislabel, not a dead link.</td></tr></tbody></table></div>
 <p>Two corrections were found by the claim-by-claim verification of the eight claims
 this investigation had previously reported as unverified. Both are naming or version
 errors, and both are reflected in the published text:</p>

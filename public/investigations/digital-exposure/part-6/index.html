@@ -36,7 +36,7 @@ html{background:var(--ink);color:var(--cream);font-family:var(--sans);line-heigh
 -webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;overflow-x:clip}
 img{max-width:100%;height:auto}
-a{color:var(--gold-bright);text-underline-offset:.18em}
+a{color:var(--gold-bright);text-underline-offset:.18em;overflow-wrap:anywhere}
 a:hover{color:var(--cream)}
 :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
 .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
@@ -72,6 +72,7 @@ background:var(--ink-2);color:var(--cream)}
 blockquote p{margin:0}
 hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
 table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
+.tscroll{max-width:100%;overflow-x:auto}
 caption{caption-side:top;text-align:left;font-size:.85rem;color:var(--muted);padding:.4rem 0 .7rem}
 th,td{border-bottom:1px solid var(--line);padding:.55rem .4rem;text-align:left;vertical-align:top}
 th{font-weight:700;color:var(--gold-bright)}
@@ -134,7 +135,7 @@ color:var(--muted)}
 <h3>iOS and iPadOS vulnerabilities</h3>
 <p>Apple's security model is strong and layered: code signing, sandboxing, Pointer Authentication, a signed boot chain, and a fast update pipeline. It is also a very large attack surface: WebKit, image and media parsers, the messaging stack, the baseband, and thousands of system services.</p>
 <p>The public record of exploited-in-the-wild iOS flaws is continuous. Apple's security notes and CISA's Known Exploited Vulnerabilities catalogue document them year by year. A representative set:</p>
-<table>
+<div class="tscroll"><table>
 <caption>iOS and iPadOS vulnerabilities</caption>
 <thead>
 <tr>
@@ -176,7 +177,7 @@ color:var(--muted)}
 <td>Out-of-bounds write, CVSS 8.8, exploited against &quot;specific targeted individuals&quot;</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>[Confirmed — Apple advisories, CVE records, CISA KEV]</p>
 <p><strong>Required access:</strong> for zero-click chains, only the ability to send a message or cause content to be processed. <strong>Prevalence:</strong> extremely low relative to the installed base; concentrated on high-value targets. <strong>Consequence:</strong> full device access, including messages, location, microphone, camera, and credentials. <strong>Mitigation:</strong> patch immediately, enable Lockdown Mode if at risk, disable auto-download of message attachments where possible.</p>
 <h3>WebKit and browser exploitation</h3>
@@ -258,7 +259,7 @@ color:var(--muted)}
 <h3>Supply-chain weaknesses</h3>
 <p>Pre-installed malware has been documented on low-cost devices and through third-party firmware. Advertising SDKs and &quot;cleaner&quot; apps have shipped intrusive behaviour. The common factor is a supply chain with weak review and strong financial incentives.</p>
 <h2>6.4 Required access, prevalence, consequence, mitigation</h2>
-<table>
+<div class="tscroll"><table>
 <caption>6.4 Required access, prevalence, consequence, mitigation</caption>
 <thead>
 <tr>
@@ -344,7 +345,7 @@ color:var(--muted)}
 <td>Password manager, passkeys, 2FA</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>6.5 Account compromise versus device compromise</h2>
 <p>This distinction should be taught in every digital-literacy programme:</p>
 <p><strong>Account compromise</strong> means someone has your credentials or a valid session. They see what the account sees: email, files, backups, contacts, purchase history. They cannot read end-to-end encrypted messages that are decrypted only on your device, and they cannot turn on your microphone.</p>
@@ -365,7 +366,7 @@ color:var(--muted)}
 <hr />
 <hr />
 <h2>Evidence</h2>
-<table>
+<div class="tscroll"><table>
 <caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
 <thead>
 <tr>
@@ -441,7 +442,7 @@ color:var(--muted)}
 <td>narrowed: iMessage parses rich attachments (including PassKit/ImageIO) before user interaction, so a zero-click payload can be handled by a service; the full images/fonts/PDFs list is not…</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 
 </article>
 </main>

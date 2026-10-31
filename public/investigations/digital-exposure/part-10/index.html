@@ -36,7 +36,7 @@ html{background:var(--ink);color:var(--cream);font-family:var(--sans);line-heigh
 -webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;overflow-x:clip}
 img{max-width:100%;height:auto}
-a{color:var(--gold-bright);text-underline-offset:.18em}
+a{color:var(--gold-bright);text-underline-offset:.18em;overflow-wrap:anywhere}
 a:hover{color:var(--cream)}
 :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
 .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
@@ -72,6 +72,7 @@ background:var(--ink-2);color:var(--cream)}
 blockquote p{margin:0}
 hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
 table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
+.tscroll{max-width:100%;overflow-x:auto}
 caption{caption-side:top;text-align:left;font-size:.85rem;color:var(--muted);padding:.4rem 0 .7rem}
 th,td{border-bottom:1px solid var(--line);padding:.55rem .4rem;text-align:left;vertical-align:top}
 th{font-weight:700;color:var(--gold-bright)}
@@ -178,7 +179,7 @@ color:var(--muted)}
 <h3>Physical coercion</h3>
 <p>A growing and under-discussed risk: attackers who know a holder has crypto may use violence or threats to force a transfer. Blockchain analytics firms reported an increase in such incidents timed to price peaks. [Confirmed — industry reporting; individual cases vary]</p>
 <h2>10.3 The largest documented losses</h2>
-<table>
+<div class="tscroll"><table>
 <caption>10.3 The largest documented losses</caption>
 <thead>
 <tr>
@@ -261,7 +262,7 @@ color:var(--muted)}
 <td>FBI attributed to DPRK-linked group</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>[Confirmed — company statements, FBI statements, court records, blockchain analytics]</p>
 <p><strong>Aggregate 2025:</strong> TRM Labs recorded approximately <strong>$2.87 billion</strong> stolen across nearly 150 incidents, with Bybit accounting for roughly 51 percent of the total. Chainalysis separately attributed approximately <strong>$2 billion</strong> to DPRK-linked actors in 2025, describing it as their most destructive year. [Confirmed — both firms' 2026 reports]</p>
 <h2>10.4 Methodological limits</h2>
@@ -301,7 +302,7 @@ color:var(--muted)}
 <hr />
 <hr />
 <h2>Evidence</h2>
-<table>
+<div class="tscroll"><table>
 <caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
 <thead>
 <tr>
@@ -405,7 +406,7 @@ color:var(--muted)}
 <td>publication-ready wording: Hold the 2025 $2.87B figure; the verified annual total in the corpus is Chainalysis's US$2.2 billion for 2024. [PRINCIPAL'S CALL: legal review before publication]</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 
 </article>
 </main>
