@@ -17,8 +17,10 @@ export type JsonLdInput = {
   author?: string
   authorOrganization?: string
   datePublished?: string
+  dateModified?: string
   inLanguage?: string
   image?: string
+  faqs?: { question: string; answer: string }[]
 }
 
 export function openGraphType(kind: SeoKind | undefined) {
@@ -90,6 +92,7 @@ export function buildJsonLd(input: JsonLdInput) {
       description: input.description,
       author: { '@type': 'Person', name: input.author },
       datePublished: input.datePublished,
+      dateModified: input.dateModified ?? input.datePublished,
       url: canonical,
       mainEntityOfPage: canonical,
       image: input.image ?? OG_IMAGE_URL,
@@ -108,6 +111,7 @@ export function buildJsonLd(input: JsonLdInput) {
       description: input.description,
       author: authors,
       datePublished: input.datePublished,
+      dateModified: input.dateModified ?? input.datePublished,
       url: canonical,
       mainEntityOfPage: canonical,
       image: input.image ?? OG_IMAGE_URL,
@@ -135,7 +139,24 @@ export function buildJsonLd(input: JsonLdInput) {
       author: { '@type': 'Organization', name: 'Artiore' },
       featureList: ['Local-first', 'Runs in the browser', 'No server', 'No account'],
     })
-  } else if (input.kind !== 'home') {
+  }
+
+  if (input.faqs?.length) {
+    graph.push({
+      '@type': 'FAQPage',
+      '@id': `${canonical}#faq`,
+      mainEntity: input.faqs.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    })
+  }
+
+  if (input.kind !== 'home' && !graph.some((node) => node['@type'] === 'WebPage' || node['@type'] === 'Article' || node['@type'] === 'BlogPosting')) {
     graph.push({
       '@type': 'WebPage',
       '@id': `${canonical}#webpage`,

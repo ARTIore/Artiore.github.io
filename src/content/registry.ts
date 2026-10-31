@@ -91,6 +91,7 @@ export const seoEntries: SeoEntry[] = [
     imageWidth: page.imageWidth,
     imageHeight: page.imageHeight,
     imageAlt: page.imageAlt,
+    faqs: 'faqs' in page ? page.faqs : undefined,
   })),
   {
     path: '/framework.html',

@@ -4,9 +4,6 @@ import { pathToFileURL } from 'node:url'
 import { loadSeoModule } from './load-seo.mjs'
 import { canonicalUrl } from './public-url.mjs'
 
-// Used only when no entry in the content model carries a publication date.
-const FALLBACK_LASTMOD = '2026-10-26'
-
 const SITE_URL = 'https://artiais.com'
 
 function escapeHtml(value) {
@@ -17,6 +14,13 @@ function escapeHtml(value) {
     .replaceAll('>', '&gt;')
 }
 
+function upsertMeta(html, attribute, name, content) {
+  const tag = `<meta ${attribute}="${name}" content="${escapeHtml(content)}" />`
+  const pattern = new RegExp(`<meta\\s+${attribute}="${name}"\\s+content="[^"]*"\\s*/?>`, 'i')
+  if (pattern.test(html)) return html.replace(pattern, tag)
+  return html.replace('</head>', `    ${tag}\n  </head>`)
+}
+
 function replaceAttr(html, pattern, value) {
   if (!pattern.test(html)) return html
   return html.replace(pattern, (full, before, after) => `${before}${value}${after}`)
@@ -24,19 +28,18 @@ function replaceAttr(html, pattern, value) {
 
 function applyMeta(html, { title, description, canonical, robots, ogType, lang, locale, alternates, image, imageWidth, imageHeight, imageAlt }) {
   const safeTitle = escapeHtml(title)
-  const safeDescription = escapeHtml(description)
   const safeCanonical = escapeHtml(canonical)
   let next = html
   if (lang) next = next.replace('<html lang="en">', `<html lang="${escapeHtml(lang)}">`)
   next = next.replace(/<title>[\s\S]*?<\/title>/, `<title>${safeTitle}</title>`)
-  next = replaceAttr(next, /(<meta\s+name="description"\s+content=")[^"]*(")/, safeDescription)
+  next = upsertMeta(next, 'name', 'description', description)
   next = replaceAttr(next, /(<link\s+rel="canonical"\s+href=")[^"]*(")/, safeCanonical)
   next = replaceAttr(next, /(<meta\s+property="og:title"\s+content=")[^"]*(")/, safeTitle)
-  next = replaceAttr(next, /(<meta\s+property="og:description"\s+content=")[^"]*(")/, safeDescription)
+  next = upsertMeta(next, 'property', 'og:description', description)
   next = replaceAttr(next, /(<meta\s+property="og:url"\s+content=")[^"]*(")/, safeCanonical)
   next = replaceAttr(next, /(<meta\s+property="og:type"\s+content=")[^"]*(")/, ogType)
   next = replaceAttr(next, /(<meta\s+name="twitter:title"\s+content=")[^"]*(")/, safeTitle)
-  next = replaceAttr(next, /(<meta\s+name="twitter:description"\s+content=")[^"]*(")/, safeDescription)
+  next = upsertMeta(next, 'name', 'twitter:description', description)
   next = replaceAttr(next, /(<meta\s+name="robots"\s+content=")[^"]*(")/, robots)
   if (!next.includes('name="twitter:site"')) {
     next = next.replace(
@@ -205,6 +208,7 @@ async function renderDocument(templateHtml, entry, location) {
       datePublished: entry.datePublished,
       inLanguage: entry.inLanguage,
       image: entry.image,
+      faqs: entry.faqs,
     }),
   )
   const body = await render(location)
@@ -264,17 +268,8 @@ if (frameworkEntry) {
   writeFileSync(join(process.cwd(), 'public', 'framework.html'), framework)
 }
 
-// The sitemap's lastmod must describe WHEN THE CONTENT CHANGED, not when the
-// build ran. Stamping the wall clock made the tracked public/sitemap.xml change
-// on every build - dirtying the source tree, colliding with the other live
-// branches on that file, and telling crawlers every URL changed today.
-// Derive it from the content model instead, so the build is reproducible and
-// the committed file stays byte-identical to what the build emits.
-const contentDates = seoEntries
-  .map((entry) => entry.datePublished)
-  .filter((value) => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value))
-  .sort()
-const lastmod = contentDates.at(-1) ?? FALLBACK_LASTMOD
+// Fixed revision date for this metadata pass. Do not stamp the build clock.
+const lastmod = '2026-10-31'
 const sitemapUrls = seoEntries.filter((entry) => entry.sitemap !== false).map((entry) => canonicalUrl(entry.path))
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

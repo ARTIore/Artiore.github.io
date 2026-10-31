@@ -4,6 +4,7 @@ import { SeoHead } from '../components/seo/SeoHead'
 import { SiteLink } from '../components/content/SiteLink'
 import { SincerityNote } from '../components/field-manual/SincerityNote'
 import {
+  investigationBase,
   investigationOg,
   investigationPiece,
   investigationPrintPath,
@@ -55,6 +56,11 @@ export default function InvestigationArticlePage({ markdown, slug }: { markdown:
           <p className="mt-4 text-sm text-muted">
             ARTIore Research Desk · Version 1.0 · <time dateTime={investigationPublished}>26 October 2026</time>
             {piece.readingTime ? ` · ${piece.readingTime}` : ''}
+          </p>
+          <p className="mt-4 text-sm">
+            <SiteLink className={linkClass} href={investigationBase}>
+              The Invisible Attack Surface
+            </SiteLink>
           </p>
           {piece.printable ? (
             <p className="mt-4">

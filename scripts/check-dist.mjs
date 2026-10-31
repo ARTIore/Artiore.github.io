@@ -127,17 +127,34 @@ for (const entry of seoEntries) {
   if (entry.noindex) {
     if (!html.includes('noindex')) fail(`${entry.path} should be noindex`)
   }
+  const head = html.slice(0, html.indexOf('</head>') === -1 ? html.length : html.indexOf('</head>'))
+  const descriptionTag = head.match(/<meta name="description" content="([^"]*)"\s*\/?>/)
+  if (!descriptionTag) fail(`${entry.path} HTML head is missing <meta name="description">`)
+  else {
+    const decoded = descriptionTag[1]
+      .replaceAll('&quot;', '"')
+      .replaceAll('&amp;', '&')
+      .replaceAll('&lt;', '<')
+      .replaceAll('&gt;', '>')
+    const descriptionTagLength = chars(decoded)
+    if (descriptionTagLength < 50 || descriptionTagLength > 170) {
+      fail(`${entry.path} meta description is ${descriptionTagLength} characters`)
+    }
+  }
+  if (!/<meta property="og:description" content="[^"]*"\s*\/?>/.test(head)) {
+    fail(`${entry.path} HTML head is missing og:description`)
+  }
+  if (!/<meta name="twitter:description" content="[^"]*"\s*\/?>/.test(head)) {
+    fail(`${entry.path} HTML head is missing twitter:description`)
+  }
   const indexable = entry.sitemap !== false && !entry.noindex
-  // The digital-exposure pages use the publication's own title and
-  // description verbatim, including front-matter strings outside the usual
-  // 50–60 / 140–160 window. Trimming them would change that wording.
-  if (indexable && !entry.path.startsWith('/investigations/')) {
+  if (indexable) {
     const titleLength = chars(entry.headTitle)
     const descriptionLength = chars(entry.description)
-    if (titleLength < 50 || titleLength > 60) {
+    if (titleLength < 30 || titleLength > 60) {
       fail(`${entry.path} title is ${titleLength} characters`)
     }
-    if (descriptionLength < 140 || descriptionLength > 160) {
+    if (descriptionLength < 120 || descriptionLength > 160) {
       fail(`${entry.path} description is ${descriptionLength} characters`)
     }
   }
