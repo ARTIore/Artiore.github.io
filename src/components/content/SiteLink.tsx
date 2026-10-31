@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { toPublicPath } from '../../content/urls'
+import { isStaticPath, toPublicPath } from '../../content/urls'
 
 function safeHref(href: string) {
   if (
@@ -15,7 +15,12 @@ function safeHref(href: string) {
 }
 
 function isSpaPath(href: string) {
-  return href.startsWith('/') && !href.endsWith('.html') && !href.endsWith('.pdf')
+  return (
+    href.startsWith('/') &&
+    !href.endsWith('.html') &&
+    !href.endsWith('.pdf') &&
+    !isStaticPath(href)
+  )
 }
 
 type SiteLinkProps = {

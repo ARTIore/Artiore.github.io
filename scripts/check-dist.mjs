@@ -88,6 +88,42 @@ for (const entry of seoEntries) {
   }
   const h1s = html.match(/<h1\b/g) ?? []
   if (h1s.length !== 1) fail(`${entry.path} has ${h1s.length} h1 elements`)
+
+  // Every table must sit inside a horizontally scrollable container.
+  //
+  // The investigation pages set `prerender: false` — they are prebuilt static
+  // files carried in public/ — so the landmark block below is skipped for
+  // them. That means this assertion has to live HERE, in the always-run
+  // region, or it would silently never execute for the very pages it
+  // protects.
+  //
+  // Without it, `body { overflow-x: clip }` clips wide tables on a phone: the
+  // document no longer scrolls, so the table is simply cut off.
+  //
+  // Two containers satisfy this, and BOTH are the house's own mechanisms:
+  //   - `.tscroll` — the investigation pages' self-contained stylesheet
+  //   - `max-w-full overflow-x-auto` — the Field Manual's Tailwind class
+  //     (src/components/field-manual/FieldManualLayout.tsx), which is the
+  //     precedent the investigation pages were built to mirror
+  //
+  // The count is of ENCLOSING containers, not literal adjacency: a legend
+  // paragraph may sit between the div and the table.
+  const tables = html.match(/<table\b/g) ?? []
+  if (tables.length > 0) {
+    let wrapped = 0
+    for (const match of html.matchAll(/<table\b/g)) {
+      const before = html.slice(0, match.index)
+      const divClose = before.lastIndexOf('</div>')
+      const scrollOpen = before.lastIndexOf('<div class="tscroll">')
+      const tailwindOpen = before.lastIndexOf('<div class="max-w-full overflow-x-auto">')
+      const open = Math.max(scrollOpen, tailwindOpen)
+      if (open !== -1 && open > divClose) wrapped += 1
+    }
+    if (wrapped !== tables.length) {
+      fail(`${entry.path} has ${tables.length - wrapped} of ${tables.length} tables outside a scrollable container`)
+    }
+  }
+
   if (entry.noindex) {
     if (!html.includes('noindex')) fail(`${entry.path} should be noindex`)
   }
@@ -158,22 +194,53 @@ for (const entry of seoEntries) {
   }
 }
 
+// Every specific identifier below stays banned across the whole site.
+//
+// The bare word "WhatsApp" is banned everywhere except the published
+// investigation. That investigation is a documented study of WhatsApp's own
+// security properties and names the platform in ordinary prose (the
+// zero-click article, the Paragon case, the encryption-limits article); the
+// specific identifiers around it — wa.me links, the two phone numbers, the
+// shared-number claim — are absent from that subtree and remain banned
+// there. To restore the blanket ban, drop the `investigationExempt` flag
+// from that one entry.
 const forbidden = [
-  [/wa\.me/i, 'wa.me link'],
-  [/whatsapp/i, 'WhatsApp'],
-  [/16478093075/, 'WhatsApp number'],
-  [/809-3075/, 'phone number shared with WhatsApp'],
-  [/8093075/, 'phone number shared with WhatsApp'],
-  [/42 days before visible disruption/, 'unsourced 42-day claim'],
-  [/blind spots across 5 systems/, 'unsourced five-system claim'],
-  [/Try Demo Access/, 'placeholder demo CTA'],
+  { pattern: /wa\.me/i, label: 'wa.me link' },
+  { pattern: /whatsapp/i, label: 'WhatsApp', investigationExempt: true },
+  { pattern: /16478093075/, label: 'WhatsApp number' },
+  { pattern: /809-3075/, label: 'phone number shared with WhatsApp' },
+  { pattern: /8093075/, label: 'phone number shared with WhatsApp' },
+  { pattern: /42 days before visible disruption/, label: 'unsourced 42-day claim' },
+  { pattern: /blind spots across 5 systems/, label: 'unsourced five-system claim' },
+  { pattern: /Try Demo Access/, label: 'placeholder demo CTA' },
+  // The investigation corpus is rendered by tools/build_artiore_site.py, which
+  // is not tracked in this repository. A corpus run regenerates
+  // public/investigations/**/index.html from scratch, so any editorial marker
+  // that is only styled by hand would silently revert to raw text on the next
+  // run — and the live page would regress with no diff to review.
+  //
+  // The raw marker is therefore banned outright. The reviewed replacement is
+  // the styled "Legal review pending" badge (see scripts/style-legal-review.mjs),
+  // which carries the same meaning. This rule fails the build if the raw form
+  // reappears, so the regression is loud rather than silent.
+  { pattern: /PRINCIPAL'S CALL: legal review before publication/, label: 'raw legal-review marker (use the styled badge)' },
 ]
 
 const textFiles = walk(dist).filter((file) => /\.(html|js|css|xml|txt|svg|webmanifest)$/.test(file))
 for (const file of textFiles) {
-  const text = readFileSync(file, 'utf8')
-  for (const [pattern, label] of forbidden) {
-    if (pattern.test(text)) fail(`${file.replace(root, '')} contains ${label}`)
+  const relative = file.replace(root, '')
+  let text = readFileSync(file, 'utf8')
+  const inInvestigation = relative.includes('/investigations/')
+  for (const { pattern, label, investigationExempt } of forbidden) {
+    if (investigationExempt && inInvestigation) continue
+    // The sitemap lists the published investigation's URLs, and one of those
+    // URLs is the WhatsApp article. Strip the investigation's own URLs before
+    // testing the bare word, so a mention anywhere else in the sitemap is
+    // still caught.
+    if (investigationExempt && relative.endsWith('sitemap.xml')) {
+      text = text.replace(/https:\/\/artiais\.com\/investigations\/[^<\s]*/g, '')
+    }
+    if (pattern.test(text)) fail(`${relative} contains ${label}`)
   }
 }
 

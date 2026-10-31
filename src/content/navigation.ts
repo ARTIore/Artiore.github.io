@@ -41,6 +41,15 @@ export const primaryNav: NavItem[] = [
       { label: 'Field manual', href: '/field-manual' },
     ],
   },
+  {
+    label: 'Investigation',
+    children: [
+      { label: 'The Invisible Attack Surface', href: '/investigations/digital-exposure/' },
+      { label: 'Evidence and method', href: '/investigations/digital-exposure/evidence/' },
+      { label: 'Source register', href: '/investigations/digital-exposure/source-register/' },
+      { label: 'Corrections', href: '/investigations/digital-exposure/corrections/' },
+    ],
+  },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ]
@@ -62,6 +71,9 @@ export const footerPages: NavLinkItem[] = [
   { label: 'Applications', href: '/applications' },
   { label: 'UAE dossier', href: '/dossier' },
   { label: 'Field manual', href: '/field-manual' },
+  { label: 'The Invisible Attack Surface', href: '/investigations/digital-exposure/' },
+  { label: 'Evidence and method', href: '/investigations/digital-exposure/evidence/' },
+  { label: 'Corrections', href: '/investigations/digital-exposure/corrections/' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
   { label: 'Privacy', href: '/privacy' },

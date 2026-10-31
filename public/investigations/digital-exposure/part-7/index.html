@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Part VII — WhatsApp, Zero-Click Attacks and Messaging</title>
+<meta name="description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<link rel="canonical" href="https://artiais.com/investigations/digital-exposure/part-7/">
+<meta name="robots" content="index,follow">
+<meta property="og:site_name" content="ARTIore">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Part VII — WhatsApp, Zero-Click Attacks and Messaging">
+<meta property="og:description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<meta property="og:url" content="https://artiais.com/investigations/digital-exposure/part-7/">
+<meta property="og:image" content="https://artiais.com/og-image.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="ARTIore. Part VII — WHATSAPP, ZERO-CLICK ATTACKS AND ENCRYPTED MESSAGING.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Artiore">
+<meta name="twitter:title" content="Part VII — WhatsApp, Zero-Click Attacks and Messaging">
+<meta name="twitter:description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<meta name="twitter:image" content="https://artiais.com/og-image.png">
+<meta name="twitter:image:alt" content="ARTIore. Part VII — WHATSAPP, ZERO-CLICK ATTACKS AND ENCRYPTED MESSAGING.">
+<link rel="icon" href="https://artiais.com/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="https://artiais.com/apple-touch-icon.png">
+<script id="seo-jsonld" type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://artiais.com/#organization", "name": "ARTIore", "url": "https://artiais.com/", "logo": {"@type": "ImageObject", "url": "https://artiais.com/apple-touch-icon.png", "width": 180, "height": 180}, "sameAs": ["https://artiore.com", "https://artioreconsortium.com", "https://x.com/Artiore", "https://www.linkedin.com/company/artiore/", "https://github.com/ARTIore", "https://instagram.com/ArtioreConsortium"]}, {"@type": "WebSite", "@id": "https://artiais.com/#website", "name": "ARTIore", "url": "https://artiais.com/", "description": "Clarity-first reasoning. The system is a witness, not a verdict.", "publisher": {"@id": "https://artiais.com/#organization"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://artiais.com/"}, {"@type": "ListItem", "position": 2, "name": "Investigations", "item": "https://artiais.com/investigations/digital-exposure/"}, {"@type": "ListItem", "position": 3, "name": "Part VII", "item": "https://artiais.com/investigations/digital-exposure/part-7/"}]}, {"@type": "Article", "@id": "https://artiais.com/investigations/digital-exposure/part-7/#article", "headline": "Part VII", "description": "How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.", "url": "https://artiais.com/investigations/digital-exposure/part-7/", "mainEntityOfPage": "https://artiais.com/investigations/digital-exposure/part-7/", "inLanguage": "en", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "author": {"@type": "Organization", "name": "ARTIore Research Desk"}, "publisher": {"@id": "https://artiais.com/#organization"}, "image": "https://artiais.com/og-image.png", "citation": "https://artiais.com/investigations/digital-exposure/source-register/", "isPartOf": {"@type": "CreativeWorkSeries", "name": "Global Digital Exposure Investigation"}}]}</script>
+<style>
+:root{--ink:#12100e;--ink-2:#1c1916;--ink-3:#26211d;--cream:#f4efe6;--muted:#d2cbbf;
+--gold:#d4b36a;--gold-bright:#f0d9a0;--line:rgba(212,179,106,.22);--max:46rem;
+--serif:'Iowan Old Style',Palatino,Georgia,'Times New Roman',serif;
+--sans:'Segoe UI',system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}
+html{background:var(--ink);color:var(--cream);font-family:var(--sans);line-height:1.65;
+-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;overflow-x:clip}
+img{max-width:100%;height:auto}
+a{color:var(--gold-bright);text-underline-offset:.18em;overflow-wrap:anywhere}
+a:hover{color:var(--cream)}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip:focus{left:1rem;top:1rem;width:auto;height:auto;padding:.6rem .9rem;background:var(--gold);
+color:var(--ink);z-index:10}
+.site-header{border-bottom:1px solid var(--line);background:var(--ink)}
+.site-header .bar{max-width:72rem;margin:0 auto;padding:1rem 1.25rem;display:flex;flex-wrap:wrap;
+gap:.75rem 1.5rem;align-items:baseline;justify-content:space-between}
+.brand{font-family:var(--serif);font-size:1.5rem;letter-spacing:.14em;color:var(--gold);
+text-decoration:none;white-space:nowrap}
+.brand small{display:block;font-family:var(--sans);font-size:.7rem;letter-spacing:0;
+color:var(--muted)}
+.crumbs{max-width:72rem;margin:0 auto;padding:0 1.25rem .75rem;font-size:.8rem;color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.crumbs a:hover{color:var(--gold-bright)}
+.layout{max-width:72rem;margin:0 auto;padding:0 1.25rem;display:grid;gap:2.5rem;
+grid-template-columns:minmax(0,1fr)}
+@media (min-width:62rem){.layout{grid-template-columns:minmax(0,1fr) 15rem;gap:3.5rem}}
+.prose{max-width:var(--max);min-width:0;padding:2.5rem 0 4rem}
+.prose>header{border-bottom:1px solid var(--line);padding-bottom:1.5rem;margin-bottom:2rem}
+.kicker{font-size:.74rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);
+font-weight:700;margin:0 0 .8rem}
+h1{font-family:var(--serif);font-size:clamp(2rem,5.5vw,3.1rem);line-height:1.08;
+letter-spacing:-.01em;margin:0 0 1rem;font-weight:600}
+h2{font-family:var(--serif);font-size:clamp(1.35rem,3.2vw,1.85rem);line-height:1.2;
+margin:2.6rem 0 .8rem;font-weight:600}
+h3{font-size:1.08rem;margin:1.9rem 0 .5rem;font-weight:700}
+p{margin:0 0 1.1rem}
+ul,ol{margin:0 0 1.2rem;padding-left:1.3rem}
+li{margin:.35rem 0}
+blockquote{margin:1.6rem 0;padding:1rem 1.2rem;border-left:3px solid var(--gold);
+background:var(--ink-2);color:var(--cream)}
+blockquote p{margin:0}
+hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
+table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
+.tscroll{max-width:100%;overflow-x:auto}
+caption{caption-side:top;text-align:left;font-size:.85rem;color:var(--muted);padding:.4rem 0 .7rem}
+th,td{border-bottom:1px solid var(--line);padding:.55rem .4rem;text-align:left;vertical-align:top}
+th{font-weight:700;color:var(--gold-bright)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;
+background:var(--ink-3);padding:.1em .35em;border-radius:.2em}
+a code{color:var(--gold-bright)}
+.aside{position:sticky;top:1.5rem;align-self:start;font-size:.85rem;color:var(--muted);
+border-left:1px solid var(--line);padding-left:1.1rem}
+.aside h2{font-family:var(--sans);font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;
+color:var(--gold);margin:0 0 .6rem}
+.aside ol{list-style:none;padding:0;margin:0}
+.aside li{margin:.2rem 0}
+.aside a{color:var(--muted);text-decoration:none}
+.aside a:hover{color:var(--gold-bright);text-decoration:underline}
+.aside .here{color:var(--gold-bright);font-weight:600}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{border-bottom:1px solid var(--line);padding:.55rem 0}
+.toc a{font-weight:600}
+.doclist{list-style:none;padding:0}
+.doclist li{border-bottom:1px solid var(--line);padding:.55rem 0}
+.site-footer{border-top:1px solid var(--line);margin-top:3rem}
+.site-footer .inner{max-width:72rem;margin:0 auto;padding:2rem 1.25rem 3rem;font-size:.85rem;
+color:var(--muted)}
+.site-footer p{margin:.3rem 0}
+.site-footer a{color:var(--muted)}
+.site-footer a:hover{color:var(--gold-bright)}
+.evidence-note{font-size:.88rem;color:var(--muted)}
+.legal-review{display:inline-block;font-size:.78rem;letter-spacing:.02em;text-transform:uppercase;color:var(--gold-bright);border:1px solid var(--line);border-radius:2px;padding:.05em .4em;white-space:nowrap}
+.evidence-legend{font-size:.88rem;color:var(--muted);margin:1rem 0 .5rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="/">ARTIore<small>Clarity-first reasoning</small></a>
+<span><a href="/investigations/digital-exposure/">The Invisible Attack Surface</a></span>
+</div>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> · <a href="/investigations/digital-exposure/">Investigations</a> · <a href="/investigations/digital-exposure/">The Invisible Attack Surface</a> · Part VII</nav>
+</header>
+<div class="layout">
+<main class="prose" id="main">
+<article>
+<header>
+<p class="kicker">The Invisible Attack Surface · part 7 of 15</p>
+<h1>Part VII — WHATSAPP, ZERO-CLICK ATTACKS AND ENCRYPTED MESSAGING</h1>
+<p class="byline" style="font-size:.85rem;color:var(--muted)">ARTIore Research Desk · 2026-10-26</p>
+</header>
+<h2>PART VII — WHATSAPP, ZERO-CLICK ATTACKS AND ENCRYPTED MESSAGING</h2>
+<h2>7.1 What end-to-end encryption guarantees</h2>
+<p>WhatsApp uses the Signal Protocol: a double-ratchet design that derives a fresh key for each message, provides forward secrecy, and authenticates participants through safety numbers and key changes. In a correctly implemented system, the server relays ciphertext it cannot read, and the network sees only encrypted blobs.</p>
+<p>That guarantee is real and it is narrow. It covers:</p>
+<ul>
+<li>message content and attachments in transit;</li>
+<li>voice and video call media;</li>
+<li>group messages, with a sender-key design;</li>
+<li>message content at rest on the server (which holds ciphertext).</li>
+</ul>
+<p>It does not cover:</p>
+<ul>
+<li><strong>metadata</strong> — who you talk to, when, how often, from which IP, on which device;</li>
+<li><strong>your contact graph</strong>, which the platform necessarily processes to route messages;</li>
+<li><strong>backups</strong>, unless end-to-end encrypted backup is enabled;</li>
+<li><strong>notifications</strong>, which render plaintext on your lock screen;</li>
+<li><strong>the endpoint</strong> — the phone, its screen, its keyboard, its clipboard;</li>
+<li><strong>anything you tell a third-party app</strong> — including &quot;share to&quot; integrations and cloud drives.</li>
+</ul>
+<h2>7.2 Documented WhatsApp vulnerabilities</h2>
+<p><strong>CVE-2019-3568 (May 2019).</strong> A buffer overflow in the VOIP stack allowed a crafted call sequence to execute code. It was exploited to deliver Pegasus to approximately <strong>1,400</strong> users. WhatsApp patched it within days and sued the vendor. [Confirmed — WhatsApp advisory, court record]</p>
+<p><strong>CVE-2025-55177 (patched September 2025).</strong> A vulnerability in link-preview processing on iOS and macOS, exploited in combination with Apple's <strong>CVE-2025-43300</strong> (ImageIO) in a targeted zero-click campaign. WhatsApp notified affected users and published an advisory. [Confirmed — WhatsApp security advisory, Apple advisory]</p>
+<p><strong>CVE-2024-? class advisories.</strong> WhatsApp publishes a regular security advisory page listing memory-safety and logic flaws in media parsing, sticker handling, and call setup, most rated moderate to high and most without evidence of exploitation. [Confirmed — vendor advisories]</p>
+<p>The pattern is consistent: the message-processing path — media, previews, calls — is the attack surface, because it must parse untrusted input before the user makes a decision.</p>
+<h2>7.3 Zero-click mechanics in messaging</h2>
+<p>A zero-click chain in a messaging app typically works like this:</p>
+<ol>
+<li>The attacker sends a message with a specially crafted attachment, preview, or call setup packet.</li>
+<li>The app's parser processes it automatically — to generate a thumbnail, decrypt media, or negotiate a call.</li>
+<li>A memory-corruption bug yields code execution inside the app's sandbox.</li>
+<li>A kernel or sandbox-escape bug yields system access.</li>
+<li>The implant persists and begins collection.</li>
+</ol>
+<p>Every step is hard. The result is that zero-click capability is concentrated among a small number of actors: commercial spyware vendors, a handful of state-linked teams, and exploit brokers who sell to both.</p>
+<p><strong>What the public record supports:</strong> such chains exist, have been used against journalists and civil-society figures, and are patched when discovered. <strong>What it does not support:</strong> that unusual calls, missed calls, or strange notifications are evidence of spyware. Most are network bugs, spam, or ordinary software failure.</p>
+<h2>7.4 Account takeover: the cheaper path</h2>
+<p>For every zero-click exploit in existence, there are thousands of account takeovers. The mechanisms:</p>
+<p><strong>SMS interception / SIM swap.</strong> The attacker convinces a carrier to port the victim's number to a SIM they control, then receives the verification code. SIM swap complaints to the FBI rose to <strong>971</strong> in 2025 with <strong>$17.4 million</strong> in reported losses — a small fraction of the real total, since most swaps are used to enable other fraud. [Confirmed — IC3 2025]</p>
+<p><strong>Verification-code phishing.</strong> A message claims to be from a friend or support agent and asks for the six-digit code. The code is the account.</p>
+<p><strong>Linked-device abuse.</strong> WhatsApp supports companion devices (web, desktop, tablet). An attacker with brief access to an unlocked phone, or with a phishing page that mimics the linking flow, can pair their own device and receive messages in real time. Some 2025 campaigns used social engineering to persuade users to &quot;link&quot; a device for support purposes.</p>
+<p><strong>Support impersonation.</strong> Fraudsters pose as WhatsApp support and ask for codes or screen sharing. WhatsApp does not initiate such requests.</p>
+<p><strong>Number recycling.</strong> A phone number that is reassigned to a new owner can be used to register the account if the original owner did not enable two-step verification and did not migrate.</p>
+<h2>7.5 Cloud backups: the quiet exception</h2>
+<p>By default, WhatsApp chats are backed up to iCloud or Google Drive. Unless the user enables <strong>end-to-end encrypted backup</strong> with a passphrase, the backup is protected by the cloud provider's encryption-at-rest and account security — not by the Signal Protocol.</p>
+<p>That means:</p>
+<ul>
+<li>A compromised Apple or Google account may expose the backup.</li>
+<li>A lawful request to the cloud provider may obtain it.</li>
+<li>A backup restored to a new device decrypts everything.</li>
+</ul>
+<p>This is the single largest gap between what users believe (&quot;my WhatsApp is encrypted&quot;) and what is true (&quot;my messages in transit are encrypted; my backup may not be&quot;). [Confirmed — WhatsApp documentation]</p>
+<h2>7.6 Metadata: what the envelope reveals</h2>
+<p>Even with perfect content encryption, the platform knows:</p>
+<ul>
+<li>account identifiers and phone numbers;</li>
+<li>contact uploads (address book matching);</li>
+<li>message timestamps and frequency;</li>
+<li>group membership;</li>
+<li>IP addresses and approximate location;</li>
+<li>device type and app version;</li>
+<li>status/story views and call durations.</li>
+</ul>
+<p>This is enough to map a social graph, infer work patterns, identify sources, and establish contact between people. Intelligence services value metadata precisely because it survives encryption. [Confirmed — platform privacy documentation, academic analysis]</p>
+<h2>7.7 Endpoint exposure</h2>
+<p>The most common way an encrypted message is read is on the endpoint:</p>
+<ul>
+<li><strong>Notification previews</strong> on the lock screen.</li>
+<li><strong>Cloud sync of screenshots</strong> and copied text.</li>
+<li><strong>Malicious apps with notification access</strong> (Part V).</li>
+<li><strong>Screen recording or mirroring</strong> during a support scam.</li>
+<li><strong>A compromised device</strong> (Part VI).</li>
+<li><strong>A shared or borrowed device</strong> with the account still logged in.</li>
+</ul>
+<p>None of these requires breaking encryption. All of them are common.</p>
+<h2>7.8 Commercial spyware targeting messaging</h2>
+<p>WhatsApp has been a repeated delivery vector for commercial spyware because it is ubiquitous and processes rich content. Documented campaigns include:</p>
+<ul>
+<li><strong>2019</strong> — Pegasus via CVE-2019-3568 (approximately 1,400 users).</li>
+<li><strong>2025 (January)</strong> — WhatsApp disclosed that it had disrupted a Paragon Solutions &quot;Graphite&quot; campaign targeting around <strong>90</strong> users, including journalists and civil-society figures, and notified them. [Confirmed — WhatsApp statement, press reporting]</li>
+<li><strong>2025 (August–September)</strong> — a zero-click chain using CVE-2025-55177 and CVE-2025-43300, attributed by WhatsApp with high confidence to NSO Group, targeting a small number of users. [Confirmed — vendor advisory; attribution by vendor]</li>
+</ul>
+<p>The legal aftermath matters for public understanding: in December 2024 a U.S. court found NSO liable for the 2019 intrusion; in May 2025 a jury awarded $444,719 in compensatory and $167.254 million in punitive damages; in October 2025 the judge issued a permanent injunction barring NSO from targeting WhatsApp, while reducing punitive damages to just over $4 million. [Confirmed — court record, reporting]</p>
+<h2>7.9 What encryption does and does not protect</h2>
+<p class="evidence-legend"><strong>Evidence labels.</strong> Each claim carries a label. <em>Legal review pending</em> marks a claim that has not yet cleared the publisher’s legal review.</p><div class="tscroll"><table>
+<caption>7.9 What encryption does and does not protect</caption>
+<thead>
+<tr>
+<th scope="col">Scenario</th>
+<th scope="col">Protected?</th>
+<th scope="col">Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Network operator reads message content</td>
+<td>Yes</td>
+<td>E2EE</td>
+</tr>
+<tr>
+<td>Platform reads message content</td>
+<td>Yes (in transit/at rest)</td>
+<td>E2EE</td>
+</tr>
+<tr>
+<td>Platform sees who you message</td>
+<td>No</td>
+<td>Metadata</td>
+</tr>
+<tr>
+<td>Attacker with your unlocked phone reads chats</td>
+<td>No</td>
+<td>Endpoint</td>
+</tr>
+<tr>
+<td>Spyware on your phone reads chats</td>
+<td>No</td>
+<td>Endpoint</td>
+</tr>
+<tr>
+<td>Cloud backup without E2EE passphrase</td>
+<td>No</td>
+<td>Provider-held keys</td>
+</tr>
+<tr>
+<td>Attacker takes over your account</td>
+<td>No</td>
+<td>They are a participant</td>
+</tr>
+<tr>
+<td>Notification preview on lock screen</td>
+<td>No</td>
+<td>Rendered plaintext</td>
+</tr>
+<tr>
+<td>Message forwarded by recipient</td>
+<td>No</td>
+<td>Human action</td>
+</tr>
+</tbody>
+</table></div>
+<h2>7.10 Practical protections</h2>
+<ol>
+<li><strong>Enable two-step verification</strong> and set a PIN you do not reuse.</li>
+<li><strong>Enable end-to-end encrypted backups</strong> and store the passphrase safely — losing it loses the backup.</li>
+<li><strong>Disable message previews</strong> on the lock screen.</li>
+<li><strong>Review linked devices</strong> regularly and log out anything unfamiliar.</li>
+<li><strong>Never share a verification code.</strong> No legitimate support process needs it.</li>
+<li><strong>Verify safety numbers</strong> with high-value contacts, or use a platform with transparent key verification.</li>
+<li><strong>Keep the app and OS updated.</strong></li>
+<li><strong>Use disappearing messages</strong> for sensitive conversations — while understanding they do not defeat a compromised endpoint.</li>
+<li><strong>Treat &quot;support&quot; contact as fraud</strong> unless you initiated it in-app.</li>
+<li><strong>If you are a high-risk user</strong>, assume metadata is public and choose channels accordingly.</li>
+</ol>
+<p>The honest summary: WhatsApp's encryption is strong and worth using. It solves the interception problem. It does not solve the endpoint problem, the account problem, or the metadata problem — and those are where most real-world exposure occurs.</p>
+<hr />
+<hr />
+<h2>Evidence</h2>
+<div class="tscroll"><table>
+<caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
+<thead>
+<tr>
+<th scope="col">Claim</th>
+<th scope="col">Verdict</th>
+<th scope="col">Label</th>
+<th scope="col">Source</th>
+<th scope="col">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C027</td>
+<td>confirmed</td>
+<td>A — Confirmed</td>
+<td>NIST NVD, CVE-2019-3568; checked by the ledger, 2019-05-14; <code>r15:S7</code>; [live]; CVE-2019-3568 — WhatsApp SDP parsing buffer overflow</td>
+<td>single source — a second independent source is required</td>
+</tr>
+<tr>
+<td>C028</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>FCC SIM-swap page (403/moved); checked by the ledger, 2023-2024; <code>r15:S66</code>; [live]; SIM swap fraud</td>
+<td>narrowed: WhatsApp account: SIM swap and verification-code phishing are documented takeover routes; carrier mechanics are not independently verified here.</td>
+</tr>
+<tr>
+<td>C029</td>
+<td>confirmed</td>
+<td>A — Confirmed</td>
+<td>WhatsApp Help Center, About linked devices; checked by the ledger, 2026; <code>r15:S25</code>; [live]; Help Center: linked devices</td>
+<td>single source — a second independent source is required</td>
+</tr>
+<tr>
+<td>C030</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>WhatsApp Help Center, end-to-end encrypted backup; checked by the ledger, 2026; <code>r15:S24</code>; [live]; Help Center: end-to-end encryption and backups</td>
+<td>narrowed: WhatsApp backup: cloud backup can be exposed if the cloud account is compromised and the backup is not end-to-end encrypted.</td>
+</tr>
+<tr>
+<td>C092</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>WhatsApp Help Center, About linked devices; checked by the ledger, 2026; <code>r15:S93</code>; [live]; Privacy policy</td>
+<td>narrowed: A linked device can sync messages; approval-of-logins and file access are not established by the fetched page.</td>
+</tr>
+<tr>
+<td>C093</td>
+<td>verified (Part 3 batch A)</td>
+<td>A — Confirmed</td>
+<td><code>url:edb6c6afcf5a</code>; [not checked]; Part 3 batch source; <code>r15:S7</code>; [live]; CVE-2019-3568 — WhatsApp SDP parsing buffer overflow; <code>r15:S1</code>; [live]; FORCEDENTRY: NSO Group iMessage zero-click exploit…</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
+</tr>
+<tr>
+<td>C094</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>IFJ, Paragon case; checked by the ledger, 2025-06-13; <code>r15:S14</code>; [live]; Italy: second Italian journalist targeted with…</td>
+<td>narrowed: In 2025 WhatsApp attributed the campaign to Paragon; IFJ documented Italian journalists targeted with Graphite; reporting describes zero-click delivery, but the full target list remains… <span class="legal-review">Legal review pending</span></td>
+</tr>
+<tr>
+<td>C095</td>
+<td>confirmed</td>
+<td>A — Confirmed</td>
+<td>WhatsApp Help Center, end-to-end encrypted backup; checked by the ledger, 2026; <code>r15:S24</code>; [live]; Help Center: end-to-end encryption and backups</td>
+<td>single source — a second independent source is required</td>
+</tr>
+<tr>
+<td>C096</td>
+<td>confirmed</td>
+<td>A — Confirmed</td>
+<td>WhatsApp Help Center, About linked devices; checked by the ledger, 2026; <code>r15:S25</code>; [live]; Help Center: linked devices</td>
+<td>single source — a second independent source is required</td>
+</tr>
+<tr>
+<td>C097</td>
+<td>verified (Part 3 batch E)</td>
+<td>A — Confirmed</td>
+<td><code>url:a683fa7c0373</code>; [not checked]; Part 3 batch source; <code>r15:S66</code>; [live]; SIM swap fraud; <code>r15:S25</code>; [live]; Help Center: linked devices; <code>r15:S24</code>; [live]; Help Center: end-to-end encryption and backups</td>
+<td>verified against one authoritative source</td>
+</tr>
+<tr>
+<td>C098</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>MVT documentation; checked by the ledger, 2026; <code>r15:S15</code>; [live]; Mobile Verification Toolkit (MVT)</td>
+<td>narrowed: Common symptoms are not sufficient indicators; forensic examination (e.g. MVT) is needed for a real signal.</td>
+</tr>
+<tr>
+<td>C152</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>WhatsApp privacy policy; checked by the ledger, 2026; <code>r15:S93</code>; [live]; Privacy policy</td>
+<td>narrowed: WhatsApp routes end-to-end encrypted content and processes account, phone, device, connection and usage metadata; the cited policy does not establish that the server never holds content…</td>
+</tr>
+<tr>
+<td>C188</td>
+<td>verified (Part 3 batch B)</td>
+<td>A — Confirmed</td>
+<td><code>url:109586ca8d9c</code>; [not checked]; Part 3 batch source; <code>url:4640f3e85fdb</code>; [not checked]; Part 3 batch source; <code>r15:S7</code>; [live]; CVE-2019-3568 — WhatsApp SDP parsing buffer overflow</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
+</tr>
+<tr>
+<td>C201</td>
+<td>verified (Part 3 batch A)</td>
+<td>A — Confirmed</td>
+<td><code>url:e780657bf7b6</code>; [not checked]; Part 3 batch source; <code>url:5069297fb7c1</code>; [not checked]; Part 3 batch source</td>
+<td>verified against one authoritative source <span class="legal-review">Legal review pending</span></td>
+</tr>
+</tbody>
+</table></div>
+
+</article>
+</main>
+<aside class="aside" aria-label="Investigation contents"><h2>Contents</h2><ol><li><a href="/investigations/digital-exposure/part-1/">Part I</a></li><li><a href="/investigations/digital-exposure/part-2/">Part II</a></li><li><a href="/investigations/digital-exposure/part-3/">Part III</a></li><li><a href="/investigations/digital-exposure/part-4/">Part IV</a></li><li><a href="/investigations/digital-exposure/part-5/">Part V</a></li><li><a href="/investigations/digital-exposure/part-6/">Part VI</a></li><li class="here"><a href="/investigations/digital-exposure/part-7/">Part VII</a></li><li><a href="/investigations/digital-exposure/part-8/">Part VIII</a></li><li><a href="/investigations/digital-exposure/part-9/">Part IX</a></li><li><a href="/investigations/digital-exposure/part-10/">Part X</a></li><li><a href="/investigations/digital-exposure/part-11/">Part XI</a></li><li><a href="/investigations/digital-exposure/part-12/">Part XII</a></li><li><a href="/investigations/digital-exposure/part-13/">Part XIII</a></li><li><a href="/investigations/digital-exposure/part-14/">Part XIV</a></li><li><a href="/investigations/digital-exposure/part-15/">Part XV</a></li></ol></aside>
+</div>
+<footer class="site-footer">
+<div class="inner">
+<p>ARTIore — independent research and intelligence practice. No sponsor, vendor or government reviewed this work before publication.</p>
+<p>Every claim is traced to a source. <a href="/investigations/digital-exposure/source-register/">Source register</a> · <a href="/investigations/digital-exposure/evidence/">Method</a> · <a href="/investigations/digital-exposure/corrections/">Corrections</a> · <a href="/">ARTIore</a></p>
+</div>
+</footer>
+</body>
+</html>

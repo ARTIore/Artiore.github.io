@@ -6,6 +6,7 @@ import { libraryPages } from './library'
 import { carouselDecks, carouselOgImage } from './field-manual/carousels'
 import { carouselSeriesMeta, fieldManualMetas, pocketBookletMeta } from './field-manual/meta'
 import { contactMeta, engineMeta, homeMeta, systemMeta } from './meta'
+import { investigationMeta } from './investigation'
 import { buildJsonLd } from '../seo/structuredData'
 import type { PageDocument, SeoEntry } from './types'
 
@@ -71,6 +72,25 @@ export const seoEntries: SeoEntry[] = [
     headline: summaryByPath[page.path]?.title ?? page.title,
     author: page.author,
     datePublished: page.published,
+  })),
+  // The Global Digital Exposure Investigation. Its pages are prebuilt static
+  // files carried in public/investigations/digital-exposure/, so this build
+  // does not prerender them; the entries below give the site's build check
+  // something to verify, and put every page in the sitemap.
+  ...investigationMeta.map((page) => ({
+    path: page.path,
+    headTitle: page.headTitle,
+    description: page.description,
+    sitemap: true,
+    prerender: false as const,
+    kind: 'article' as const,
+    crumbName: page.crumbName,
+    headline: page.crumbName,
+    author: 'ARTIore Research Desk',
+    authorOrganization: 'ARTIore',
+    datePublished: page.datePublished,
+    inLanguage: page.inLanguage,
+    locale: page.locale,
   })),
   {
     path: '/framework.html',

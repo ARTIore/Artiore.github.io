@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Part V — Accessibility and Privileged Device Access</title>
+<meta name="description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<link rel="canonical" href="https://artiais.com/investigations/digital-exposure/part-5/">
+<meta name="robots" content="index,follow">
+<meta property="og:site_name" content="ARTIore">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Part V — Accessibility and Privileged Device Access">
+<meta property="og:description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<meta property="og:url" content="https://artiais.com/investigations/digital-exposure/part-5/">
+<meta property="og:image" content="https://artiais.com/og-image.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="ARTIore. Part V — ACCESSIBILITY FEATURES AND PRIVILEGED DEVICE INTERACTION.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Artiore">
+<meta name="twitter:title" content="Part V — Accessibility and Privileged Device Access">
+<meta name="twitter:description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<meta name="twitter:image" content="https://artiais.com/og-image.png">
+<meta name="twitter:image:alt" content="ARTIore. Part V — ACCESSIBILITY FEATURES AND PRIVILEGED DEVICE INTERACTION.">
+<link rel="icon" href="https://artiais.com/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="https://artiais.com/apple-touch-icon.png">
+<script id="seo-jsonld" type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://artiais.com/#organization", "name": "ARTIore", "url": "https://artiais.com/", "logo": {"@type": "ImageObject", "url": "https://artiais.com/apple-touch-icon.png", "width": 180, "height": 180}, "sameAs": ["https://artiore.com", "https://artioreconsortium.com", "https://x.com/Artiore", "https://www.linkedin.com/company/artiore/", "https://github.com/ARTIore", "https://instagram.com/ArtioreConsortium"]}, {"@type": "WebSite", "@id": "https://artiais.com/#website", "name": "ARTIore", "url": "https://artiais.com/", "description": "Clarity-first reasoning. The system is a witness, not a verdict.", "publisher": {"@id": "https://artiais.com/#organization"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://artiais.com/"}, {"@type": "ListItem", "position": 2, "name": "Investigations", "item": "https://artiais.com/investigations/digital-exposure/"}, {"@type": "ListItem", "position": 3, "name": "Part V", "item": "https://artiais.com/investigations/digital-exposure/part-5/"}]}, {"@type": "Article", "@id": "https://artiais.com/investigations/digital-exposure/part-5/#article", "headline": "Part V", "description": "How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.", "url": "https://artiais.com/investigations/digital-exposure/part-5/", "mainEntityOfPage": "https://artiais.com/investigations/digital-exposure/part-5/", "inLanguage": "en", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "author": {"@type": "Organization", "name": "ARTIore Research Desk"}, "publisher": {"@id": "https://artiais.com/#organization"}, "image": "https://artiais.com/og-image.png", "citation": "https://artiais.com/investigations/digital-exposure/source-register/", "isPartOf": {"@type": "CreativeWorkSeries", "name": "Global Digital Exposure Investigation"}}]}</script>
+<style>
+:root{--ink:#12100e;--ink-2:#1c1916;--ink-3:#26211d;--cream:#f4efe6;--muted:#d2cbbf;
+--gold:#d4b36a;--gold-bright:#f0d9a0;--line:rgba(212,179,106,.22);--max:46rem;
+--serif:'Iowan Old Style',Palatino,Georgia,'Times New Roman',serif;
+--sans:'Segoe UI',system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}
+html{background:var(--ink);color:var(--cream);font-family:var(--sans);line-height:1.65;
+-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;overflow-x:clip}
+img{max-width:100%;height:auto}
+a{color:var(--gold-bright);text-underline-offset:.18em;overflow-wrap:anywhere}
+a:hover{color:var(--cream)}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip:focus{left:1rem;top:1rem;width:auto;height:auto;padding:.6rem .9rem;background:var(--gold);
+color:var(--ink);z-index:10}
+.site-header{border-bottom:1px solid var(--line);background:var(--ink)}
+.site-header .bar{max-width:72rem;margin:0 auto;padding:1rem 1.25rem;display:flex;flex-wrap:wrap;
+gap:.75rem 1.5rem;align-items:baseline;justify-content:space-between}
+.brand{font-family:var(--serif);font-size:1.5rem;letter-spacing:.14em;color:var(--gold);
+text-decoration:none;white-space:nowrap}
+.brand small{display:block;font-family:var(--sans);font-size:.7rem;letter-spacing:0;
+color:var(--muted)}
+.crumbs{max-width:72rem;margin:0 auto;padding:0 1.25rem .75rem;font-size:.8rem;color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.crumbs a:hover{color:var(--gold-bright)}
+.layout{max-width:72rem;margin:0 auto;padding:0 1.25rem;display:grid;gap:2.5rem;
+grid-template-columns:minmax(0,1fr)}
+@media (min-width:62rem){.layout{grid-template-columns:minmax(0,1fr) 15rem;gap:3.5rem}}
+.prose{max-width:var(--max);min-width:0;padding:2.5rem 0 4rem}
+.prose>header{border-bottom:1px solid var(--line);padding-bottom:1.5rem;margin-bottom:2rem}
+.kicker{font-size:.74rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);
+font-weight:700;margin:0 0 .8rem}
+h1{font-family:var(--serif);font-size:clamp(2rem,5.5vw,3.1rem);line-height:1.08;
+letter-spacing:-.01em;margin:0 0 1rem;font-weight:600}
+h2{font-family:var(--serif);font-size:clamp(1.35rem,3.2vw,1.85rem);line-height:1.2;
+margin:2.6rem 0 .8rem;font-weight:600}
+h3{font-size:1.08rem;margin:1.9rem 0 .5rem;font-weight:700}
+p{margin:0 0 1.1rem}
+ul,ol{margin:0 0 1.2rem;padding-left:1.3rem}
+li{margin:.35rem 0}
+blockquote{margin:1.6rem 0;padding:1rem 1.2rem;border-left:3px solid var(--gold);
+background:var(--ink-2);color:var(--cream)}
+blockquote p{margin:0}
+hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
+table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
+.tscroll{max-width:100%;overflow-x:auto}
+caption{caption-side:top;text-align:left;font-size:.85rem;color:var(--muted);padding:.4rem 0 .7rem}
+th,td{border-bottom:1px solid var(--line);padding:.55rem .4rem;text-align:left;vertical-align:top}
+th{font-weight:700;color:var(--gold-bright)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;
+background:var(--ink-3);padding:.1em .35em;border-radius:.2em}
+a code{color:var(--gold-bright)}
+.aside{position:sticky;top:1.5rem;align-self:start;font-size:.85rem;color:var(--muted);
+border-left:1px solid var(--line);padding-left:1.1rem}
+.aside h2{font-family:var(--sans);font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;
+color:var(--gold);margin:0 0 .6rem}
+.aside ol{list-style:none;padding:0;margin:0}
+.aside li{margin:.2rem 0}
+.aside a{color:var(--muted);text-decoration:none}
+.aside a:hover{color:var(--gold-bright);text-decoration:underline}
+.aside .here{color:var(--gold-bright);font-weight:600}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{border-bottom:1px solid var(--line);padding:.55rem 0}
+.toc a{font-weight:600}
+.doclist{list-style:none;padding:0}
+.doclist li{border-bottom:1px solid var(--line);padding:.55rem 0}
+.site-footer{border-top:1px solid var(--line);margin-top:3rem}
+.site-footer .inner{max-width:72rem;margin:0 auto;padding:2rem 1.25rem 3rem;font-size:.85rem;
+color:var(--muted)}
+.site-footer p{margin:.3rem 0}
+.site-footer a{color:var(--muted)}
+.site-footer a:hover{color:var(--gold-bright)}
+.evidence-note{font-size:.88rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="/">ARTIore<small>Clarity-first reasoning</small></a>
+<span><a href="/investigations/digital-exposure/">The Invisible Attack Surface</a></span>
+</div>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> · <a href="/investigations/digital-exposure/">Investigations</a> · <a href="/investigations/digital-exposure/">The Invisible Attack Surface</a> · Part V</nav>
+</header>
+<div class="layout">
+<main class="prose" id="main">
+<article>
+<header>
+<p class="kicker">The Invisible Attack Surface · part 5 of 15</p>
+<h1>Part V — ACCESSIBILITY FEATURES AND PRIVILEGED DEVICE INTERACTION</h1>
+<p class="byline" style="font-size:.85rem;color:var(--muted)">ARTIore Research Desk · 2026-10-26</p>
+</header>
+<h2>PART V — ACCESSIBILITY FEATURES AND PRIVILEGED DEVICE INTERACTION</h2>
+<h2>5.1 Why accessibility exists, and why it is powerful</h2>
+<p>Accessibility features exist so that people with disabilities can use devices that were not designed for them. A screen reader speaks the interface aloud. Switch Control lets a person operate a phone with one or two switches. Voice Control maps spoken commands to interface actions. Braille displays render text tactilely and accept input. These are not niche features; they are the difference between participation and exclusion for hundreds of millions of people.</p>
+<p>To do that work, accessibility software needs capabilities that ordinary apps are deliberately denied:</p>
+<ul>
+<li>read the content of the screen, including text in other apps;</li>
+<li>know when windows, dialogs, and notifications appear;</li>
+<li>perform actions on behalf of the user (click, scroll, type, go back);</li>
+<li>observe text fields, including what is typed into them;</li>
+<li>sometimes capture the screen or inject gestures.</li>
+</ul>
+<p>In Android, this is the <strong>AccessibilityService</strong> API: an app declares a service, the user enables it in Settings, and the service then receives an event stream describing the UI and can call <code>performAction</code> or dispatch gestures. In iOS, the equivalent power is largely reserved for the system: third-party apps cannot install a general-purpose UI automation service. VoiceOver, Switch Control, AssistiveTouch, and Guided Access are operating-system features; apps can support them but cannot use them to read other apps' screens.</p>
+<p>That asymmetry matters: <strong>the Android accessibility model is the main documented abuse surface</strong>, and most of this section concerns it.</p>
+<h2>5.2 The legitimate-versus-deceptive distinction</h2>
+<p>There is no technical difference between a screen reader and a banking trojan at the API level. Both register an AccessibilityService; both receive events; both can act. The difference is intent, disclosure, and consent.</p>
+<p>A legitimate app:</p>
+<ul>
+<li>explains why it needs the permission, in the language of the task (&quot;read the screen to speak it aloud&quot;);</li>
+<li>requests it at the moment of need, not on first launch;</li>
+<li>does not ask for it alongside unrelated permissions;</li>
+<li>does not hide its icon, disable uninstall, or resist revocation;</li>
+<li>is distributed through a store with review, or is open source and auditable.</li>
+</ul>
+<p>A deceptive app:</p>
+<ul>
+<li>presents the request as something else (&quot;enable this to fix your battery&quot;, &quot;allow to continue&quot;);</li>
+<li>uses an overlay or a fake system dialog to guide the user to the setting;</li>
+<li>asks for accessibility plus device-admin plus notification access;</li>
+<li>hides its launcher icon or uses a generic name;</li>
+<li>blocks back navigation, uninstall screens, or security prompts.</li>
+</ul>
+<p>The permission is the same. The consent is not.</p>
+<h2>5.3 The attack patterns</h2>
+<h3>Screen reading and credential capture</h3>
+<p>Once enabled, a malicious AccessibilityService can read the text of a banking app, including balances, payee names, and one-time codes displayed on screen. It can also read the contents of notifications, which is why notification access is often requested together with accessibility.</p>
+<p><strong>Effect:</strong> the attacker does not need to break the bank's app. They read what the legitimate app displays after the user logs in.</p>
+<h3>UI automation and gesture execution</h3>
+<p><code>performAction</code> and gesture dispatch let the service tap buttons, fill fields, scroll, and navigate. Documented banking trojans use this to:</p>
+<ul>
+<li>grant themselves additional permissions;</li>
+<li>approve a transaction the user did not intend;</li>
+<li>dismiss security warnings;</li>
+<li>complete a transfer while the screen is covered by an overlay.</li>
+</ul>
+<p>This is the mechanism behind a large share of Android banking fraud since roughly 2019. [Confirmed — vendor research on Cerberus, Anubis, Alien, TeaBot/Anatsa, SharkBot, Xenomorph, Octo and related families]</p>
+<h3>Notification access</h3>
+<p>Notification access allows an app to read and dismiss notifications from other apps. For fraud, the valuable items are one-time passcodes, push-approval prompts, and bank alerts. For surveillance, the value is broader: message previews, calendar reminders, delivery notifications, and app activity patterns.</p>
+<h3>Overlay attacks</h3>
+<p>An overlay draws a window on top of another app. A classic <strong>tapjacking</strong> attack shows a harmless-looking interface while the user's taps land on the underlying privileged screen — approving a payment, granting a permission, or confirming a password reset.</p>
+<p>Android has progressively restricted overlays: apps cannot draw over certain system screens, obscured touches are blocked in sensitive contexts, and Android 12+ introduced stricter rules for untrusted windows. The attack class persists in modified forms, particularly on older devices and through accessibility-driven automation rather than pure overlays.</p>
+<h3>Voice control and Switch Control</h3>
+<p>Voice assistants and Switch Control are input channels. If an attacker can reach the microphone or the switch interface — through a malicious app, a paired peripheral, or a nearby speaker — they can issue commands the system treats as user intent. The prerequisite is significant: the device must be unlocked or the assistant must be reachable from lock screen, and the command set must be able to do something useful.</p>
+<h3>Braille displays and Bluetooth input</h3>
+<p>As noted in Part IV, a Braille display is a HID keyboard with extra semantics. It can type, and in some implementations it can request screen content for translation. A malicious or compromised display is therefore an input device with the trust of a keyboard. This is a structural risk, not a documented campaign; the mitigation is the same as for any peripheral — buy from reputable vendors, update firmware, unpair when not in use.</p>
+<h3>Remote support applications</h3>
+<p>Legitimate remote-support tools (TeamViewer, AnyDesk, RustDesk, manufacturer support apps) allow a technician to see and control a device. They are also the backbone of <strong>tech-support fraud</strong>, which the FBI recorded as a <strong>$2.13 billion</strong> loss category in 2025. [Confirmed — IC3 2025]</p>
+<p>The scam pattern is consistent: a pop-up claims a virus; a phone number is provided; the &quot;technician&quot; asks the victim to install a remote-support app; the attacker then moves money, installs malware, or sells &quot;support&quot; that does nothing.</p>
+<h3>Screen recording and screen sharing</h3>
+<p>Screen recording permissions (Android MediaProjection, iOS ReplayKit) allow capture of what is displayed. Screen sharing in a call does the same with the user's cooperation. Both are legitimate features; both can be abused by a convincing pretext (&quot;share your screen so I can help you&quot;).</p>
+<h2>5.4 Why operating systems cannot simply remove the capability</h2>
+<p>Accessibility APIs are, by design, a bypass of the normal app sandbox. Removing them would remove assistive technology. The platform therefore tries to manage the risk rather than eliminate it:</p>
+<ul>
+<li><strong>Explicit settings entry</strong>, separated from normal permissions.</li>
+<li><strong>Warning dialogs</strong> describing broad access.</li>
+<li><strong>Restricted settings</strong> for apps installed from outside a store (Android 13+), requiring an extra confirmation path.</li>
+<li><strong>Play Protect</strong> scanning and removal of known malicious apps.</li>
+<li><strong>Revocation controls</strong> and, on newer Android versions, the ability to review which apps can read the screen.</li>
+<li><strong>Advanced Protection</strong> modes that restrict sideloading and unverified accessibility services.</li>
+<li><strong>iOS</strong>: no general third-party accessibility automation API; strong entitlement controls for screen capture; visible indicators when screen recording or microphone is active.</li>
+</ul>
+<p>These are meaningful. They are also defeatable by a user who has been persuaded, which is why the attack is fundamentally social as well as technical.</p>
+<h2>5.5 Documented malware families, and what they actually did</h2>
+<div class="tscroll"><table>
+<caption>5.5 Documented malware families, and what they actually did</caption>
+<thead>
+<tr>
+<th scope="col">Family</th>
+<th scope="col">Period</th>
+<th scope="col">Mechanism</th>
+<th scope="col">Notable capability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cerberus</td>
+<td>2019–2020</td>
+<td>Sideloaded APK, accessibility</td>
+<td>Overlay + keylogging, OTP theft</td>
+</tr>
+<tr>
+<td>Anubis</td>
+<td>2019–2021</td>
+<td>Droppers, accessibility</td>
+<td>Banking overlay, ransomware module</td>
+</tr>
+<tr>
+<td>Alien</td>
+<td>2020–2021</td>
+<td>Droppers, accessibility</td>
+<td>Credential theft, notification access</td>
+</tr>
+<tr>
+<td>TeaBot / Anatsa</td>
+<td>2021–2025</td>
+<td>Droppers, store droppers</td>
+<td>Screen streaming, remote action</td>
+</tr>
+<tr>
+<td>SharkBot</td>
+<td>2021–2023</td>
+<td>Sideloaded APK</td>
+<td>Automatic transfer via accessibility</td>
+</tr>
+<tr>
+<td>Xenomorph</td>
+<td>2022–2024</td>
+<td>Droppers</td>
+<td>OTP interception at scale</td>
+</tr>
+<tr>
+<td>Octo</td>
+<td>2023–2025</td>
+<td>Droppers</td>
+<td>Remote access, fraud</td>
+</tr>
+</tbody>
+</table></div>
+<p>[Confirmed — vendor research and law-enforcement reporting; capabilities vary by version]</p>
+<p>The common thread is not sophistication. It is the combination of a user willing to install something, a permission that grants the screen, and a bank that cannot distinguish a legitimate tap from an automated one.</p>
+<h2>5.6 Indicators, and their limits</h2>
+<p>Possible signs of abusive accessibility use:</p>
+<ul>
+<li>An unfamiliar app in Settings → Accessibility, especially one with a generic name.</li>
+<li>Battery drain, heat, or data use that began after installing an app.</li>
+<li>A &quot;screen reader&quot; or &quot;service&quot; that turns itself back on after being disabled.</li>
+<li>Overlays you cannot dismiss, or a back button that does not work in one app.</li>
+<li>Notifications disappearing before you read them.</li>
+<li>A device-admin app you did not knowingly enable.</li>
+</ul>
+<p><strong>Limits:</strong> every one of these has legitimate causes. Screen readers do run constantly; some apps do use overlays; batteries do degrade. The decisive check is the accessibility list itself, not the symptom.</p>
+<h2>5.7 What to do</h2>
+<ol>
+<li><strong>Audit accessibility services</strong> now: Android Settings → Accessibility → Downloaded/Installed services; iOS Settings → Accessibility (review what is enabled).</li>
+<li><strong>Remove anything you cannot explain.</strong> If a family member relies on a service, note it and keep it.</li>
+<li><strong>Do not sideload APKs</strong> from messages, forums, or &quot;mod&quot; sites. If you must, disable &quot;install unknown apps&quot; immediately afterwards.</li>
+<li><strong>Never install a remote-support tool because someone asked you to</strong> — banks, police, Microsoft, and Apple do not operate that way.</li>
+<li><strong>Enable Google Play Protect</strong> and keep it on; consider Advanced Protection for high-risk users.</li>
+<li><strong>Use biometric confirmation</strong> for payments where available; it raises the cost of automated taps.</li>
+<li><strong>Check device-admin apps</strong> and remove unknown ones.</li>
+<li><strong>If you suspect fraud, contact the bank from a different device</strong> — not from the phone you suspect.</li>
+</ol>
+<p>Accessibility is one of the clearest examples of the report's central theme: a feature built to include people becomes a capability that can be turned against them, and the difference is consent that the interface does not make meaningful.</p>
+<hr />
+<hr />
+<h2>Evidence</h2>
+<div class="tscroll"><table>
+<caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
+<thead>
+<tr>
+<th scope="col">Claim</th>
+<th scope="col">Verdict</th>
+<th scope="col">Label</th>
+<th scope="col">Source</th>
+<th scope="col">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C018</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Android AccessibilityService reference; checked by the ledger, 2026-09-16; <code>r15:S82</code>; [live]; Android banking-trojan research (Anatsa/TeaBot,…; <code>r15:S83</code>; [live]; Anatsa campaigns distributed through Google Play…; <code>r15:S88</code>; [live]; Create your own accessibility service</td>
+<td>narrowed: Android accessibility services can read window content and perform gestures; a specific banking trojan using that capability is a threat-report claim, not established by the platform…</td>
+</tr>
+<tr>
+<td>C019</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Android View, setFilterTouchesWhenObscured; checked by the ledger, 2026; <code>r15:S21</code>; [live]; Android Security Bulletin</td>
+<td>narrowed: Android provides obscured-touch filtering because overlays can obscure taps; a specific tapjacking chain against a banking app is not established here.</td>
+</tr>
+<tr>
+<td>C021</td>
+<td>unverified</td>
+<td>C — Plausible but unverified</td>
+<td>None yet; checked by the ledger; <code>r15:S90</code>; [live]; Android 15 behaviour changes: sensitive notifications</td>
+<td>—</td>
+</tr>
+<tr>
+<td>C051</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Android AccessibilityService; checked by the ledger, 2026-09-16; <code>r15:S82</code>; [live]; Android banking-trojan research (Anatsa/TeaBot,…; <code>r15:S83</code>; [live]; Anatsa campaigns distributed through Google Play…; <code>r15:S88</code>; [live]; Create your own accessibility service</td>
+<td>narrowed: AccessibilityService can read window content and perform gestures; the “exactly what banking trojans need / technology is not the threat” part is an analytical frame, not a measured claim.</td>
+</tr>
+<tr>
+<td>C077</td>
+<td>confirmed</td>
+<td>A — Confirmed</td>
+<td>Android AccessibilityService; checked by the ledger, 2026-09-16; <code>r15:S88</code>; [live]; Create your own accessibility service</td>
+<td>single source — a second independent source is required</td>
+</tr>
+<tr>
+<td>C078</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Apple Platform Security / Accessibility; checked by the ledger, 2026; <code>r15:S91</code>; [live]; Accessibility</td>
+<td>narrowed: iOS accessibility features are OS-level; the claim that no third-party app gets a general cross-app accessibility service is an architectural inference, not a direct quote from the cited…</td>
+</tr>
+<tr>
+<td>C079</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Android NotificationListenerService; checked by the ledger, 2026; <code>r15:S82</code>; [live]; Android banking-trojan research (Anatsa/TeaBot,…; <code>r15:S83</code>; [live]; Anatsa campaigns distributed through Google Play…</td>
+<td>narrowed: Notification access can read posted notifications; whether an OTP or message preview is exposed depends on the app’s notification content and redaction.</td>
+</tr>
+<tr>
+<td>C080</td>
+<td>verified (Part 3 batch E)</td>
+<td>A — Confirmed</td>
+<td><code>url:33ea8271e17a</code>; [not checked]; Part 3 batch source; <code>r15:S89</code>; [live]; Android 13 behaviour changes: restricted settings; <code>r15:S90</code>; [live]; Android 15 behaviour changes: sensitive notifications</td>
+<td>verified against one authoritative source</td>
+</tr>
+<tr>
+<td>C081</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Android NotificationListenerService; checked by the ledger, 2026; <code>r15:S90</code>; [live]; Android 15 behaviour changes: sensitive notifications</td>
+<td>narrowed: Notification access lets an app read posted notification content; whether password-reset or one-time codes are present depends on the app’s notification content and redaction.</td>
+</tr>
+<tr>
+<td>C082</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>FTC/Microsoft tech-support scam guidance; checked by the ledger, 2026</td>
+<td>narrowed: Remote-support tools are legitimate and are used in tech-support fraud; a caller asking for installation is a hostile signal, not proof every caller is hostile.</td>
+</tr>
+</tbody>
+</table></div>
+
+</article>
+</main>
+<aside class="aside" aria-label="Investigation contents"><h2>Contents</h2><ol><li><a href="/investigations/digital-exposure/part-1/">Part I</a></li><li><a href="/investigations/digital-exposure/part-2/">Part II</a></li><li><a href="/investigations/digital-exposure/part-3/">Part III</a></li><li><a href="/investigations/digital-exposure/part-4/">Part IV</a></li><li class="here"><a href="/investigations/digital-exposure/part-5/">Part V</a></li><li><a href="/investigations/digital-exposure/part-6/">Part VI</a></li><li><a href="/investigations/digital-exposure/part-7/">Part VII</a></li><li><a href="/investigations/digital-exposure/part-8/">Part VIII</a></li><li><a href="/investigations/digital-exposure/part-9/">Part IX</a></li><li><a href="/investigations/digital-exposure/part-10/">Part X</a></li><li><a href="/investigations/digital-exposure/part-11/">Part XI</a></li><li><a href="/investigations/digital-exposure/part-12/">Part XII</a></li><li><a href="/investigations/digital-exposure/part-13/">Part XIII</a></li><li><a href="/investigations/digital-exposure/part-14/">Part XIV</a></li><li><a href="/investigations/digital-exposure/part-15/">Part XV</a></li></ol></aside>
+</div>
+<footer class="site-footer">
+<div class="inner">
+<p>ARTIore — independent research and intelligence practice. No sponsor, vendor or government reviewed this work before publication.</p>
+<p>Every claim is traced to a source. <a href="/investigations/digital-exposure/source-register/">Source register</a> · <a href="/investigations/digital-exposure/evidence/">Method</a> · <a href="/investigations/digital-exposure/corrections/">Corrections</a> · <a href="/">ARTIore</a></p>
+</div>
+</footer>
+</body>
+</html>

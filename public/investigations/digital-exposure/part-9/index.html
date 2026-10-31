@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Part IX — Digital Media, Personal Content and Cloud</title>
+<meta name="description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<link rel="canonical" href="https://artiais.com/investigations/digital-exposure/part-9/">
+<meta name="robots" content="index,follow">
+<meta property="og:site_name" content="ARTIore">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Part IX — Digital Media, Personal Content and Cloud">
+<meta property="og:description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<meta property="og:url" content="https://artiais.com/investigations/digital-exposure/part-9/">
+<meta property="og:image" content="https://artiais.com/og-image.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="ARTIore. Part IX — DIGITAL MEDIA, PERSONAL CONTENT AND CLOUD EXPOSURE.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Artiore">
+<meta name="twitter:title" content="Part IX — Digital Media, Personal Content and Cloud">
+<meta name="twitter:description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<meta name="twitter:image" content="https://artiais.com/og-image.png">
+<meta name="twitter:image:alt" content="ARTIore. Part IX — DIGITAL MEDIA, PERSONAL CONTENT AND CLOUD EXPOSURE.">
+<link rel="icon" href="https://artiais.com/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="https://artiais.com/apple-touch-icon.png">
+<script id="seo-jsonld" type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://artiais.com/#organization", "name": "ARTIore", "url": "https://artiais.com/", "logo": {"@type": "ImageObject", "url": "https://artiais.com/apple-touch-icon.png", "width": 180, "height": 180}, "sameAs": ["https://artiore.com", "https://artioreconsortium.com", "https://x.com/Artiore", "https://www.linkedin.com/company/artiore/", "https://github.com/ARTIore", "https://instagram.com/ArtioreConsortium"]}, {"@type": "WebSite", "@id": "https://artiais.com/#website", "name": "ARTIore", "url": "https://artiais.com/", "description": "Clarity-first reasoning. The system is a witness, not a verdict.", "publisher": {"@id": "https://artiais.com/#organization"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://artiais.com/"}, {"@type": "ListItem", "position": 2, "name": "Investigations", "item": "https://artiais.com/investigations/digital-exposure/"}, {"@type": "ListItem", "position": 3, "name": "Part IX", "item": "https://artiais.com/investigations/digital-exposure/part-9/"}]}, {"@type": "Article", "@id": "https://artiais.com/investigations/digital-exposure/part-9/#article", "headline": "Part IX", "description": "How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.", "url": "https://artiais.com/investigations/digital-exposure/part-9/", "mainEntityOfPage": "https://artiais.com/investigations/digital-exposure/part-9/", "inLanguage": "en", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "author": {"@type": "Organization", "name": "ARTIore Research Desk"}, "publisher": {"@id": "https://artiais.com/#organization"}, "image": "https://artiais.com/og-image.png", "citation": "https://artiais.com/investigations/digital-exposure/source-register/", "isPartOf": {"@type": "CreativeWorkSeries", "name": "Global Digital Exposure Investigation"}}]}</script>
+<style>
+:root{--ink:#12100e;--ink-2:#1c1916;--ink-3:#26211d;--cream:#f4efe6;--muted:#d2cbbf;
+--gold:#d4b36a;--gold-bright:#f0d9a0;--line:rgba(212,179,106,.22);--max:46rem;
+--serif:'Iowan Old Style',Palatino,Georgia,'Times New Roman',serif;
+--sans:'Segoe UI',system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}
+html{background:var(--ink);color:var(--cream);font-family:var(--sans);line-height:1.65;
+-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;overflow-x:clip}
+img{max-width:100%;height:auto}
+a{color:var(--gold-bright);text-underline-offset:.18em;overflow-wrap:anywhere}
+a:hover{color:var(--cream)}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip:focus{left:1rem;top:1rem;width:auto;height:auto;padding:.6rem .9rem;background:var(--gold);
+color:var(--ink);z-index:10}
+.site-header{border-bottom:1px solid var(--line);background:var(--ink)}
+.site-header .bar{max-width:72rem;margin:0 auto;padding:1rem 1.25rem;display:flex;flex-wrap:wrap;
+gap:.75rem 1.5rem;align-items:baseline;justify-content:space-between}
+.brand{font-family:var(--serif);font-size:1.5rem;letter-spacing:.14em;color:var(--gold);
+text-decoration:none;white-space:nowrap}
+.brand small{display:block;font-family:var(--sans);font-size:.7rem;letter-spacing:0;
+color:var(--muted)}
+.crumbs{max-width:72rem;margin:0 auto;padding:0 1.25rem .75rem;font-size:.8rem;color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.crumbs a:hover{color:var(--gold-bright)}
+.layout{max-width:72rem;margin:0 auto;padding:0 1.25rem;display:grid;gap:2.5rem;
+grid-template-columns:minmax(0,1fr)}
+@media (min-width:62rem){.layout{grid-template-columns:minmax(0,1fr) 15rem;gap:3.5rem}}
+.prose{max-width:var(--max);min-width:0;padding:2.5rem 0 4rem}
+.prose>header{border-bottom:1px solid var(--line);padding-bottom:1.5rem;margin-bottom:2rem}
+.kicker{font-size:.74rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);
+font-weight:700;margin:0 0 .8rem}
+h1{font-family:var(--serif);font-size:clamp(2rem,5.5vw,3.1rem);line-height:1.08;
+letter-spacing:-.01em;margin:0 0 1rem;font-weight:600}
+h2{font-family:var(--serif);font-size:clamp(1.35rem,3.2vw,1.85rem);line-height:1.2;
+margin:2.6rem 0 .8rem;font-weight:600}
+h3{font-size:1.08rem;margin:1.9rem 0 .5rem;font-weight:700}
+p{margin:0 0 1.1rem}
+ul,ol{margin:0 0 1.2rem;padding-left:1.3rem}
+li{margin:.35rem 0}
+blockquote{margin:1.6rem 0;padding:1rem 1.2rem;border-left:3px solid var(--gold);
+background:var(--ink-2);color:var(--cream)}
+blockquote p{margin:0}
+hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
+table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
+.tscroll{max-width:100%;overflow-x:auto}
+caption{caption-side:top;text-align:left;font-size:.85rem;color:var(--muted);padding:.4rem 0 .7rem}
+th,td{border-bottom:1px solid var(--line);padding:.55rem .4rem;text-align:left;vertical-align:top}
+th{font-weight:700;color:var(--gold-bright)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;
+background:var(--ink-3);padding:.1em .35em;border-radius:.2em}
+a code{color:var(--gold-bright)}
+.aside{position:sticky;top:1.5rem;align-self:start;font-size:.85rem;color:var(--muted);
+border-left:1px solid var(--line);padding-left:1.1rem}
+.aside h2{font-family:var(--sans);font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;
+color:var(--gold);margin:0 0 .6rem}
+.aside ol{list-style:none;padding:0;margin:0}
+.aside li{margin:.2rem 0}
+.aside a{color:var(--muted);text-decoration:none}
+.aside a:hover{color:var(--gold-bright);text-decoration:underline}
+.aside .here{color:var(--gold-bright);font-weight:600}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{border-bottom:1px solid var(--line);padding:.55rem 0}
+.toc a{font-weight:600}
+.doclist{list-style:none;padding:0}
+.doclist li{border-bottom:1px solid var(--line);padding:.55rem 0}
+.site-footer{border-top:1px solid var(--line);margin-top:3rem}
+.site-footer .inner{max-width:72rem;margin:0 auto;padding:2rem 1.25rem 3rem;font-size:.85rem;
+color:var(--muted)}
+.site-footer p{margin:.3rem 0}
+.site-footer a{color:var(--muted)}
+.site-footer a:hover{color:var(--gold-bright)}
+.evidence-note{font-size:.88rem;color:var(--muted)}
+.legal-review{display:inline-block;font-size:.78rem;letter-spacing:.02em;text-transform:uppercase;color:var(--gold-bright);border:1px solid var(--line);border-radius:2px;padding:.05em .4em;white-space:nowrap}
+.evidence-legend{font-size:.88rem;color:var(--muted);margin:1rem 0 .5rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="/">ARTIore<small>Clarity-first reasoning</small></a>
+<span><a href="/investigations/digital-exposure/">The Invisible Attack Surface</a></span>
+</div>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> · <a href="/investigations/digital-exposure/">Investigations</a> · <a href="/investigations/digital-exposure/">The Invisible Attack Surface</a> · Part IX</nav>
+</header>
+<div class="layout">
+<main class="prose" id="main">
+<article>
+<header>
+<p class="kicker">The Invisible Attack Surface · part 9 of 15</p>
+<h1>Part IX — DIGITAL MEDIA, PERSONAL CONTENT AND CLOUD EXPOSURE</h1>
+<p class="byline" style="font-size:.85rem;color:var(--muted)">ARTIore Research Desk · 2026-10-26</p>
+</header>
+<h2>PART IX — DIGITAL MEDIA, PERSONAL CONTENT AND CLOUD EXPOSURE</h2>
+<h2>9.1 The shift from devices to identities</h2>
+<p>A decade ago, the unit of compromise was the device. Today it is the identity. Photographs, documents, and messages live in accounts that sync across devices, share with family, and authorise third-party apps. An attacker who obtains the identity does not need the device at all.</p>
+<p>This is why &quot;my phone was never stolen&quot; is not a reassuring statement. Most media exposure happens through accounts, tokens, and sharing — not through physical possession.</p>
+<h2>9.2 Entry routes, in order of frequency</h2>
+<h3>Compromised cloud accounts</h3>
+<p>Credential phishing, credential stuffing with reused passwords, infostealer malware, and recovery-channel abuse. Once inside, the attacker sees the account as the owner does: photo libraries, documents, backups, contacts, and linked services.</p>
+<p>Documented at scale: the 2014 iCloud photo leak, in which attackers used phishing and password guessing against celebrity accounts; the 2023 23andMe breach, driven by credential stuffing against reused passwords; the 2024 Snowflake-linked campaign, in which stolen credentials gave access to customer data at multiple large organisations. [Confirmed — company statements, regulatory filings, reporting]</p>
+<p><strong>What the attacker gets:</strong> whatever the account holds and whatever it can delegate. <strong>What they do not get:</strong> end-to-end encrypted content that requires a device-held key, unless they also control a trusted device.</p>
+<h3>Stolen authentication tokens</h3>
+<p>Cookies and OAuth refresh tokens are bearer credentials. Malware that copies them — &quot;infostealers&quot; such as RedLine, Lumma, Vidar, and their successors — can replay a session without the password or the second factor.</p>
+<p>This is the mechanism behind a large share of &quot;I changed my password and they still got in&quot; reports. The fix is not a password change; it is <strong>session revocation</strong> — signing out of all devices — plus removing the malware.</p>
+<p><strong>Conditions:</strong> malware on the device, or a malicious extension, or physical access to an unlocked browser. <strong>Evidence:</strong> [Confirmed — the infostealer ecosystem is extensively documented; stolen session cookies are a traded commodity]</p>
+<h3>Malicious apps with media permissions</h3>
+<p>An app with photo-library access can read every image. An app with microphone or camera access can capture. Permissions are requested at install or first use, often with vague descriptions, and rarely revoked.</p>
+<p>On iOS, the limited-photo picker (iOS 14+) reduced blanket library access; on Android, scoped storage and the photo picker do the same. These are meaningful improvements, but an app that legitimately needs &quot;all photos&quot; still gets them.</p>
+<h3>Device theft and unlocked-device access</h3>
+<p>A stolen unlocked phone is a complete identity: email, banking, photos, messaging, and password manager. Even a locked phone can expose notifications, and some devices allow assistant access from the lock screen.</p>
+<p>The realistic threat is not a sophisticated attacker. It is opportunistic theft, a borrowed phone, or a family member.</p>
+<h3>Cloud synchronisation risks</h3>
+<p>Sync is a feature that makes compromise durable. Delete a photo locally, and it may persist in the cloud; delete it in the cloud, and it may persist on another device or in a backup. Conversely, a compromised account propagates to every signed-in device.</p>
+<p>Sync also creates <strong>accidental exposure</strong>: a folder shared with a link, a family group, a work account syncing personal photos, or a backup that includes sensitive documents.</p>
+<h3>Shared albums and accidental exposure</h3>
+<p>&quot;Anyone with the link&quot; sharing is convenient and dangerous. Links get forwarded, indexed, or guessed. Some services have had link structures that were enumerable. The content is not &quot;hacked&quot;; it is published.</p>
+<h3>Metadata leakage</h3>
+<p>Photos carry EXIF data: GPS coordinates, timestamps, device model, sometimes software and edit history. Documents carry author names, revision history, and comments. Social platforms strip some metadata; email attachments and cloud links often do not.</p>
+<p><strong>Impact:</strong> location history, home address, workplace, patterns of life, and the identity of devices. This is often more sensitive than the image itself.</p>
+<h3>Malicious browser extensions</h3>
+<p>Extensions run inside the browser with broad permissions: read and change data on all sites, access cookies, modify pages, and observe keystrokes. A malicious or compromised extension can steal sessions, inject phishing forms, and exfiltrate documents.</p>
+<p>In December 2024, a widely used extension was compromised in a supply-chain attack and used to steal credentials from users. [Confirmed — vendor disclosure, reporting]</p>
+<h3>Insecure backups</h3>
+<p>Unencrypted backups on external drives, on shared network storage, or in cloud accounts with weak passwords are a common exposure. Phone backups are especially sensitive: they can contain messages, call logs, app data, and saved passwords.</p>
+<h3>Insider access and privileged administrative misuse</h3>
+<p>Cloud providers and SaaS vendors employ administrators with access to systems. Strong providers use access controls, logging, and separation of duties; none of that is absolute. Documented cases of insider misuse exist across industries, though they are far rarer than external compromise.</p>
+<h3>Third-party breaches</h3>
+<p>Your data may be exposed by a service you barely remember: a fitness app, a hotel loyalty programme, a delivery service, a school portal. The 2023 MOVEit campaign affected thousands of organisations and hundreds of millions of individuals through a single file-transfer vulnerability. [Confirmed — vendor and regulator disclosures]</p>
+<h3>AI tools</h3>
+<p>Uploading sensitive content to an AI assistant creates a new copy outside your control. Whether it is retained, reviewed, or used for training depends on the provider, the plan, and the settings. Consumer products often reserve broader rights than enterprise agreements.</p>
+<p><strong>Practical rule:</strong> treat an AI chat like email to a third party. Do not upload identity documents, medical records, contracts under NDA, or images of other people without consent.</p>
+<h2>9.3 What is accessible under each scenario</h2>
+<p class="evidence-legend"><strong>Evidence labels.</strong> Each claim carries a label. <em>Legal review pending</em> marks a claim that has not yet cleared the publisher’s legal review.</p><div class="tscroll"><table>
+<caption>9.3 What is accessible under each scenario</caption>
+<thead>
+<tr>
+<th scope="col">Scenario</th>
+<th scope="col">Local files</th>
+<th scope="col">Cloud files</th>
+<th scope="col">E2EE cloud</th>
+<th scope="col">Backups</th>
+<th scope="col">Messages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stolen unlocked phone</td>
+<td>Yes</td>
+<td>Yes (signed in)</td>
+<td>Yes (if unlocked)</td>
+<td>Partial</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Stolen locked phone</td>
+<td>No (encrypted)</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>Notifications only</td>
+</tr>
+<tr>
+<td>Cloud account takeover</td>
+<td>No</td>
+<td>Yes</td>
+<td>No (key on device)</td>
+<td>Yes (if in account)</td>
+<td>Depends on backup E2EE</td>
+</tr>
+<tr>
+<td>Session token theft</td>
+<td>No</td>
+<td>Yes (until revoked)</td>
+<td>No</td>
+<td>Yes</td>
+<td>Depends</td>
+</tr>
+<tr>
+<td>Malicious app with photo permission</td>
+<td>Selected albums</td>
+<td>Via sync</td>
+<td>Via sync</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Malicious extension</td>
+<td>Downloads</td>
+<td>Yes (browser session)</td>
+<td>Web access limited</td>
+<td>No</td>
+<td>Web session</td>
+</tr>
+<tr>
+<td>Third-party breach</td>
+<td>No</td>
+<td>Depends on data held</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Insider at provider</td>
+<td>No</td>
+<td>Possible</td>
+<td>No (keys)</td>
+<td>Possible</td>
+<td>Possible</td>
+</tr>
+</tbody>
+</table></div>
+<h2>9.4 The iCloud and Google specifics</h2>
+<p><strong>iCloud.</strong> Standard iCloud Backup is encrypted in transit and at rest, but Apple holds the keys for most categories unless <strong>Advanced Data Protection</strong> is enabled, which extends end-to-end encryption to backups, photos, and more. With ADP on, Apple cannot recover the data for you; losing your recovery methods means losing the account.</p>
+<p><strong>Google.</strong> Google encrypts data at rest and in transit; some categories are end-to-end encrypted (for example, some backup and messaging features). Account takeover exposes everything not end-to-end encrypted.</p>
+<p><strong>The trade-off is real:</strong> end-to-end encryption improves security and removes recovery. Users should make that choice deliberately, not by default.</p>
+<h2>9.5 Practical protections</h2>
+<ol>
+<li><strong>Use a password manager</strong> with unique passwords; enable passkeys where possible.</li>
+<li><strong>Turn on advanced account protection</strong> (ADP, Advanced Protection Program) for high-value accounts.</li>
+<li><strong>Review active sessions</strong> monthly and revoke unfamiliar ones.</li>
+<li><strong>Limit OAuth grants</strong> — remove apps you no longer use.</li>
+<li><strong>Reduce photo-library permissions</strong> to selected items where the app allows it.</li>
+<li><strong>Strip location metadata</strong> before sharing images publicly; most platforms do it, email does not.</li>
+<li><strong>Avoid &quot;anyone with the link&quot;</strong> for sensitive albums; use named recipients.</li>
+<li><strong>Encrypt local backups</strong> and keep them offline.</li>
+<li><strong>Audit browser extensions</strong> and remove anything you cannot justify.</li>
+<li><strong>Treat AI chats as third parties</strong>, and check retention settings.</li>
+<li><strong>Assume breach notifications are incomplete</strong>; change credentials on your own schedule, not only after an incident.</li>
+</ol>
+<p>The central insight of this section is simple: content is only as protected as the weakest path to it. A photograph may be encrypted at rest and still be exposed by a shared link, a synced folder, a backup, or an extension. Security is a property of the whole path, not of the storage medium.</p>
+<hr />
+<hr />
+<h2>Evidence</h2>
+<div class="tscroll"><table>
+<caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
+<thead>
+<tr>
+<th scope="col">Claim</th>
+<th scope="col">Verdict</th>
+<th scope="col">Label</th>
+<th scope="col">Source</th>
+<th scope="col">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C032</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Group-IB, 0ktapus; checked by the ledger, 2022-08-25; <code>r15:S57</code>; [live]; 0ktapus: large-scale phishing and MFA-bypass campaign</td>
+<td>narrowed: Cloud session: 0ktapus-style reverse-proxy phishing captures credentials and MFA codes; session-token theft is a related but distinct technique not established by the cited source.</td>
+</tr>
+<tr>
+<td>C034</td>
+<td>confirmed</td>
+<td>A — Confirmed</td>
+<td>SecurityWeek, Cyberhaven extension compromise; checked by the ledger, 2024-12-31; <code>r15:S56</code>; [live]; Incident report: malicious Chrome extension update</td>
+<td>single source — a second independent source is required</td>
+</tr>
+<tr>
+<td>C035</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Apple iCloud Shared Albums; checked by the ledger, 2026; <code>r15:S18</code>; [live]; Advanced Data Protection for iCloud</td>
+<td>narrowed: Cloud sharing: a shared album/link can expose content to anyone with the link when settings allow; “beyond intent” depends on the sharing configuration.</td>
+</tr>
+<tr>
+<td>C036</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>OpenAI privacy policy; checked by the ledger, 2026-07-30; <code>r15:S59</code>; [live]; Samsung bans generative AI tools after employee data…</td>
+<td>narrowed: Consumer AI tools may collect prompts and uploaded content under their privacy policy; exposure depends on account settings, retention and feature use.</td>
+</tr>
+<tr>
+<td>C043</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Apple Stolen Device Protection; checked by the ledger, 2024; <code>r15:S19</code>; [live]; Stolen Device Protection; <code>r15:S66</code>; [live]; SIM swap fraud</td>
+<td>narrowed: Stolen unlocked phone can expose logged-in apps; exposure depends on lock state and app protections.</td>
+</tr>
+<tr>
+<td>C045</td>
+<td>confirmed</td>
+<td>A — Confirmed</td>
+<td>Reuters citing HHS OCR, Change Healthcare; checked by the ledger, 2025-08-14; <code>r15:S60</code>; [live]; Hack at UnitedHealth's tech unit impacted 192.7…</td>
+<td>single source — a second independent source is required</td>
+</tr>
+<tr>
+<td>C105</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Apple Advanced Data Protection / iCloud security; checked by the ledger, 2022; <code>r15:S18</code>; [live]; Advanced Data Protection for iCloud; <code>r15:S52</code>; [live]; Unwanted tracking alerts in iOS and Android</td>
+<td>narrowed: Photo storage depends on sync/backup/encryption settings; the five categories are illustrative, not exhaustive.</td>
+</tr>
+<tr>
+<td>C106</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Group-IB 0ktapus; FCC SIM-swap; checked by the ledger, 2022-08-25; <code>r15:S57</code>; [live]; 0ktapus: large-scale phishing and MFA-bypass campaign; <code>r15:S66</code>; [live]; SIM swap fraud</td>
+<td>narrowed: Account takeover is a common route to cloud content through phishing, reverse-proxy theft, SIM swap, MFA fatigue or reused passwords; “most common” is not established by the cited sources.</td>
+</tr>
+<tr>
+<td>C107</td>
+<td>verified (Part 3 batch E)</td>
+<td>A — Confirmed</td>
+<td><code>url:0c56e569cc0f</code>; [not checked]; Part 3 batch source; <code>url:4bf97fa935a7</code>; [not checked]; Part 3 batch source; <code>r15:S57</code>; [live]; 0ktapus: large-scale phishing and MFA-bypass campaign</td>
+<td>verified against one authoritative source</td>
+</tr>
+<tr>
+<td>C109</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>SecurityWeek, Cyberhaven extension compromise; checked by the ledger, 2024-12-31; <code>r15:S56</code>; [live]; Incident report: malicious Chrome extension update</td>
+<td>narrowed: Broad extension permissions can read page and session data; the Cyberhaven case confirms a compromised admin account pushed a malicious auto-update to users. The exact all-site/cookie…</td>
+</tr>
+<tr>
+<td>C110</td>
+<td>verified (Part 3 batch E)</td>
+<td>A — Confirmed</td>
+<td><code>url:b2ec9c35705c</code>; [not checked]; Part 3 batch source; <code>r15:S18</code>; [live]; Advanced Data Protection for iCloud</td>
+<td>verified against one authoritative source</td>
+</tr>
+<tr>
+<td>C112</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>23andMe breach reporting (Ars Technica); checked by the ledger, 2023-12; <code>r15:S38</code>; [live]; Alert: phishing messages from compromised Booking.com…</td>
+<td>narrowed: 23andMe reported 6.9 million profiles affected after credential-based access; the sharing-feature spread is reported but the cited source was inaccessible. <span class="legal-review">Legal review pending</span></td>
+</tr>
+<tr>
+<td>C113</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>OpenAI privacy policy; checked by the ledger, 2026-07-30; <code>r15:S59</code>; [live]; Samsung bans generative AI tools after employee data…</td>
+<td>narrowed: Pasting content into a consumer AI assistant sends it to the provider; retention, training and human-review depend on the provider’s policy and the user’s settings.</td>
+</tr>
+<tr>
+<td>C135</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Apple photo metadata / personal safety guide; checked by the ledger, 2026; <code>r15:S18</code>; [live]; Advanced Data Protection for iCloud</td>
+<td>narrowed: Photos can carry EXIF time, device and GPS metadata; whether it survives depends on the sharing channel and its stripping behavior.</td>
+</tr>
+<tr>
+<td>C200</td>
+<td>adjusted</td>
+<td>B — Demonstrated in research</td>
+<td>R15/R05 retention statements; checked by the ledger, 2026; <code>r15:S59</code>; [live]; Samsung bans generative AI tools after employee data…</td>
+<td>narrowed: R15 says provider retention/training/human-review policies determine what happens to an uploaded prompt; R05 says consumer LLM uploads “frequently” face human review, training retention or…</td>
+</tr>
+</tbody>
+</table></div>
+
+</article>
+</main>
+<aside class="aside" aria-label="Investigation contents"><h2>Contents</h2><ol><li><a href="/investigations/digital-exposure/part-1/">Part I</a></li><li><a href="/investigations/digital-exposure/part-2/">Part II</a></li><li><a href="/investigations/digital-exposure/part-3/">Part III</a></li><li><a href="/investigations/digital-exposure/part-4/">Part IV</a></li><li><a href="/investigations/digital-exposure/part-5/">Part V</a></li><li><a href="/investigations/digital-exposure/part-6/">Part VI</a></li><li><a href="/investigations/digital-exposure/part-7/">Part VII</a></li><li><a href="/investigations/digital-exposure/part-8/">Part VIII</a></li><li class="here"><a href="/investigations/digital-exposure/part-9/">Part IX</a></li><li><a href="/investigations/digital-exposure/part-10/">Part X</a></li><li><a href="/investigations/digital-exposure/part-11/">Part XI</a></li><li><a href="/investigations/digital-exposure/part-12/">Part XII</a></li><li><a href="/investigations/digital-exposure/part-13/">Part XIII</a></li><li><a href="/investigations/digital-exposure/part-14/">Part XIV</a></li><li><a href="/investigations/digital-exposure/part-15/">Part XV</a></li></ol></aside>
+</div>
+<footer class="site-footer">
+<div class="inner">
+<p>ARTIore — independent research and intelligence practice. No sponsor, vendor or government reviewed this work before publication.</p>
+<p>Every claim is traced to a source. <a href="/investigations/digital-exposure/source-register/">Source register</a> · <a href="/investigations/digital-exposure/evidence/">Method</a> · <a href="/investigations/digital-exposure/corrections/">Corrections</a> · <a href="/">ARTIore</a></p>
+</div>
+</footer>
+</body>
+</html>

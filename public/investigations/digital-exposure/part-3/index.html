@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Part III — DNS: The Hidden Control Layer | ARTIore</title>
+<meta name="description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<link rel="canonical" href="https://artiais.com/investigations/digital-exposure/part-3/">
+<meta name="robots" content="index,follow">
+<meta property="og:site_name" content="ARTIore">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Part III — DNS: The Hidden Control Layer | ARTIore">
+<meta property="og:description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<meta property="og:url" content="https://artiais.com/investigations/digital-exposure/part-3/">
+<meta property="og:image" content="https://artiais.com/og-image.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="ARTIore. Part III — DNS: THE HIDDEN CONTROL LAYER.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Artiore">
+<meta name="twitter:title" content="Part III — DNS: The Hidden Control Layer | ARTIore">
+<meta name="twitter:description" content="How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.">
+<meta name="twitter:image" content="https://artiais.com/og-image.png">
+<meta name="twitter:image:alt" content="ARTIore. Part III — DNS: THE HIDDEN CONTROL LAYER.">
+<link rel="icon" href="https://artiais.com/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="https://artiais.com/apple-touch-icon.png">
+<script id="seo-jsonld" type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://artiais.com/#organization", "name": "ARTIore", "url": "https://artiais.com/", "logo": {"@type": "ImageObject", "url": "https://artiais.com/apple-touch-icon.png", "width": 180, "height": 180}, "sameAs": ["https://artiore.com", "https://artioreconsortium.com", "https://x.com/Artiore", "https://www.linkedin.com/company/artiore/", "https://github.com/ARTIore", "https://instagram.com/ArtioreConsortium"]}, {"@type": "WebSite", "@id": "https://artiais.com/#website", "name": "ARTIore", "url": "https://artiais.com/", "description": "Clarity-first reasoning. The system is a witness, not a verdict.", "publisher": {"@id": "https://artiais.com/#organization"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://artiais.com/"}, {"@type": "ListItem", "position": 2, "name": "Investigations", "item": "https://artiais.com/investigations/digital-exposure/"}, {"@type": "ListItem", "position": 3, "name": "Part III", "item": "https://artiais.com/investigations/digital-exposure/part-3/"}]}, {"@type": "Article", "@id": "https://artiais.com/investigations/digital-exposure/part-3/#article", "headline": "Part III", "description": "How Wi-Fi, DNS, Bluetooth, accessibility tools, phones, messaging, cloud and crypto expose ordinary people — and what the evidence actually proves.", "url": "https://artiais.com/investigations/digital-exposure/part-3/", "mainEntityOfPage": "https://artiais.com/investigations/digital-exposure/part-3/", "inLanguage": "en", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "author": {"@type": "Organization", "name": "ARTIore Research Desk"}, "publisher": {"@id": "https://artiais.com/#organization"}, "image": "https://artiais.com/og-image.png", "citation": "https://artiais.com/investigations/digital-exposure/source-register/", "isPartOf": {"@type": "CreativeWorkSeries", "name": "Global Digital Exposure Investigation"}}]}</script>
+<style>
+:root{--ink:#12100e;--ink-2:#1c1916;--ink-3:#26211d;--cream:#f4efe6;--muted:#d2cbbf;
+--gold:#d4b36a;--gold-bright:#f0d9a0;--line:rgba(212,179,106,.22);--max:46rem;
+--serif:'Iowan Old Style',Palatino,Georgia,'Times New Roman',serif;
+--sans:'Segoe UI',system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}
+html{background:var(--ink);color:var(--cream);font-family:var(--sans);line-height:1.65;
+-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;overflow-x:clip}
+img{max-width:100%;height:auto}
+a{color:var(--gold-bright);text-underline-offset:.18em;overflow-wrap:anywhere}
+a:hover{color:var(--cream)}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip:focus{left:1rem;top:1rem;width:auto;height:auto;padding:.6rem .9rem;background:var(--gold);
+color:var(--ink);z-index:10}
+.site-header{border-bottom:1px solid var(--line);background:var(--ink)}
+.site-header .bar{max-width:72rem;margin:0 auto;padding:1rem 1.25rem;display:flex;flex-wrap:wrap;
+gap:.75rem 1.5rem;align-items:baseline;justify-content:space-between}
+.brand{font-family:var(--serif);font-size:1.5rem;letter-spacing:.14em;color:var(--gold);
+text-decoration:none;white-space:nowrap}
+.brand small{display:block;font-family:var(--sans);font-size:.7rem;letter-spacing:0;
+color:var(--muted)}
+.crumbs{max-width:72rem;margin:0 auto;padding:0 1.25rem .75rem;font-size:.8rem;color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.crumbs a:hover{color:var(--gold-bright)}
+.layout{max-width:72rem;margin:0 auto;padding:0 1.25rem;display:grid;gap:2.5rem;
+grid-template-columns:minmax(0,1fr)}
+@media (min-width:62rem){.layout{grid-template-columns:minmax(0,1fr) 15rem;gap:3.5rem}}
+.prose{max-width:var(--max);min-width:0;padding:2.5rem 0 4rem}
+.prose>header{border-bottom:1px solid var(--line);padding-bottom:1.5rem;margin-bottom:2rem}
+.kicker{font-size:.74rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);
+font-weight:700;margin:0 0 .8rem}
+h1{font-family:var(--serif);font-size:clamp(2rem,5.5vw,3.1rem);line-height:1.08;
+letter-spacing:-.01em;margin:0 0 1rem;font-weight:600}
+h2{font-family:var(--serif);font-size:clamp(1.35rem,3.2vw,1.85rem);line-height:1.2;
+margin:2.6rem 0 .8rem;font-weight:600}
+h3{font-size:1.08rem;margin:1.9rem 0 .5rem;font-weight:700}
+p{margin:0 0 1.1rem}
+ul,ol{margin:0 0 1.2rem;padding-left:1.3rem}
+li{margin:.35rem 0}
+blockquote{margin:1.6rem 0;padding:1rem 1.2rem;border-left:3px solid var(--gold);
+background:var(--ink-2);color:var(--cream)}
+blockquote p{margin:0}
+hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
+table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
+.tscroll{max-width:100%;overflow-x:auto}
+caption{caption-side:top;text-align:left;font-size:.85rem;color:var(--muted);padding:.4rem 0 .7rem}
+th,td{border-bottom:1px solid var(--line);padding:.55rem .4rem;text-align:left;vertical-align:top}
+th{font-weight:700;color:var(--gold-bright)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;
+background:var(--ink-3);padding:.1em .35em;border-radius:.2em}
+a code{color:var(--gold-bright)}
+.aside{position:sticky;top:1.5rem;align-self:start;font-size:.85rem;color:var(--muted);
+border-left:1px solid var(--line);padding-left:1.1rem}
+.aside h2{font-family:var(--sans);font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;
+color:var(--gold);margin:0 0 .6rem}
+.aside ol{list-style:none;padding:0;margin:0}
+.aside li{margin:.2rem 0}
+.aside a{color:var(--muted);text-decoration:none}
+.aside a:hover{color:var(--gold-bright);text-decoration:underline}
+.aside .here{color:var(--gold-bright);font-weight:600}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{border-bottom:1px solid var(--line);padding:.55rem 0}
+.toc a{font-weight:600}
+.doclist{list-style:none;padding:0}
+.doclist li{border-bottom:1px solid var(--line);padding:.55rem 0}
+.site-footer{border-top:1px solid var(--line);margin-top:3rem}
+.site-footer .inner{max-width:72rem;margin:0 auto;padding:2rem 1.25rem 3rem;font-size:.85rem;
+color:var(--muted)}
+.site-footer p{margin:.3rem 0}
+.site-footer a{color:var(--muted)}
+.site-footer a:hover{color:var(--gold-bright)}
+.evidence-note{font-size:.88rem;color:var(--muted)}
+.legal-review{display:inline-block;font-size:.78rem;letter-spacing:.02em;text-transform:uppercase;color:var(--gold-bright);border:1px solid var(--line);border-radius:2px;padding:.05em .4em;white-space:nowrap}
+.evidence-legend{font-size:.88rem;color:var(--muted);margin:1rem 0 .5rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="/">ARTIore<small>Clarity-first reasoning</small></a>
+<span><a href="/investigations/digital-exposure/">The Invisible Attack Surface</a></span>
+</div>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> · <a href="/investigations/digital-exposure/">Investigations</a> · <a href="/investigations/digital-exposure/">The Invisible Attack Surface</a> · Part III</nav>
+</header>
+<div class="layout">
+<main class="prose" id="main">
+<article>
+<header>
+<p class="kicker">The Invisible Attack Surface · part 3 of 15</p>
+<h1>Part III — DNS: THE HIDDEN CONTROL LAYER</h1>
+<p class="byline" style="font-size:.85rem;color:var(--muted)">ARTIore Research Desk · 2026-10-26</p>
+</header>
+<h2>PART III — DNS: THE HIDDEN CONTROL LAYER</h2>
+<h2>3.1 What DNS actually does</h2>
+<p>Every time you open an app, the first network event is usually a question: <em>where is this service?</em> The Domain Name System answers it. A <strong>resolver</strong> takes a human-readable name (<code>example.com</code>) and returns an IP address (<code>192.0.2.10</code>), plus records that describe mail servers, security policy, and ownership.</p>
+<p>The system is hierarchical and distributed:</p>
+<ul>
+<li><strong>Root servers</strong> point to top-level domains (<code>.com</code>, <code>.org</code>, country codes).</li>
+<li><strong>Authoritative servers</strong> hold the actual records for a domain.</li>
+<li><strong>Recursive resolvers</strong> do the legwork: they ask the hierarchy, cache the answer for a period set by the record's <strong>TTL</strong>, and return it to your device.</li>
+</ul>
+<p>Your device learns which resolver to use from <strong>DHCP</strong> on a local network, from the mobile carrier, or from a setting. That single parameter — often invisible, often default — determines who answers every &quot;where is&quot; question your device asks.</p>
+<p>This is why DNS is a control plane. It does not carry your data; it decides where your data goes.</p>
+<h2>3.2 The attack family, separated properly</h2>
+<p>Public discussion uses &quot;DNS attack&quot; for at least six different things. They have different prerequisites and different evidence.</p>
+<h3>DNS hijacking</h3>
+<p>Broadest term: any unauthorised change to resolution. It can occur at the registrar (changing nameservers), at the authoritative zone (altering records), at the resolver (poisoning cache), at the router (changing the DHCP-advertised resolver), or on the device (malware editing settings).</p>
+<p><strong>What it achieves:</strong> the victim's device connects to an attacker-chosen server for a chosen name. <strong>What it does not achieve by itself:</strong> decryption of HTTPS. <strong>Evidence:</strong> [Confirmed] across multiple documented campaigns.</p>
+<h3>DNS spoofing and cache poisoning</h3>
+<p>A spoofer sends forged responses to a resolver, hoping to win the race against the legitimate answer. Classic cache poisoning (popularised by Dan Kaminsky's 2008 research) exploited predictable transaction identifiers and source ports; modern resolvers randomise both, which raised the cost substantially but did not eliminate the class.</p>
+<p><strong>SAD DNS (CVE-2020-25705, 2020)</strong> demonstrated a side-channel that could infer source-port selection and make poisoning practical again under specific conditions. It was fixed in major operating systems and resolvers. [Confirmed — research and vendor advisories]</p>
+<p><strong>Key conditions:</strong> control of the path to the resolver, or the ability to send many forged responses fast enough, plus a cache that will accept the answer.</p>
+<h3>Malicious resolver configuration</h3>
+<p>If an attacker controls the resolver your device uses, they do not need to poison a cache. They <em>are</em> the answer. This is the most common and most durable form of DNS manipulation, because it survives reboots and requires no exploit.</p>
+<p><strong>Where it comes from:</strong> a compromised router, a rogue DHCP server, a malicious VPN or &quot;accelerator&quot; app, a configuration profile, or malware that edits network settings.</p>
+<h3>Router-level DNS manipulation</h3>
+<p>Consumer and small-business routers expose a DNS setting in their admin interface. Default credentials, UPnP misconfiguration, or a known firmware vulnerability can give an attacker that interface. Changing the DNS server to an attacker-controlled address redirects every device behind the router — phones, laptops, televisions, cameras — without touching any of them.</p>
+<p><strong>Documented pattern:</strong> router-targeting malware families have done exactly this for years, often to inject ads, block security updates, or redirect banking traffic. [Confirmed]</p>
+<h3>Rogue DHCP</h3>
+<p>DHCP assigns an IP address, a gateway, and a DNS server. A rogue DHCP server on a shared network can hand out its own gateway and resolver, positioning itself as both. This is a local attack requiring proximity, and it is one reason client isolation matters on guest networks.</p>
+<h3>Domain impersonation</h3>
+<p>Not all deception requires breaking DNS. Registering <code>examp1e.com</code>, using homoglyphs (<code>аpple.com</code> with a Cyrillic <code>а</code>), or abusing a subdomain of a legitimate service (<code>login.example.com.attacker.net</code>) exploits human reading, not protocol weakness.</p>
+<p><strong>Defence:</strong> password managers that bind credentials to exact origins, passkeys, and a habit of reading the registrable domain from the right.</p>
+<h3>DNS tunnelling</h3>
+<p>DNS queries and responses can carry arbitrary data in labels and records. Malware uses this to exfiltrate data or maintain command-and-control through networks that block most outbound traffic but must allow DNS. Detection requires inspecting query volume, entropy, and unusual record types — not merely blocking &quot;bad domains&quot;.</p>
+<p><strong>Conditions:</strong> an authoritative server the attacker controls and a compromised host inside the network. <strong>Evidence:</strong> [Confirmed] in malware research; used by both criminal and espionage tooling.</p>
+<h3>Encrypted DNS (DoH/DoT) and its limits</h3>
+<p>DNS-over-HTTPS and DNS-over-TLS encrypt the query between the device and the resolver. This is a genuine privacy improvement: a hotel network or ISP can no longer see which names you resolve.</p>
+<p>The limits are equally real:</p>
+<ul>
+<li><strong>Trust moves, it does not disappear.</strong> The resolver now sees every query. Choosing a resolver is choosing a trust relationship.</li>
+<li><strong>It can bypass local protections.</strong> Enterprise and parental filtering often relies on DNS; DoH can route around it. Some malware has used DoH to evade network detection. [Confirmed]</li>
+<li><strong>It does not encrypt the destination.</strong> The TLS connection that follows still reveals the server name unless Encrypted Client Hello (ECH) is in use.</li>
+<li><strong>It does not stop a compromised endpoint.</strong> Malware on the device can ignore DoH entirely.</li>
+</ul>
+<h3>DNS-based censorship and filtering</h3>
+<p>Governments and networks filter by returning NXDOMAIN, a sinkhole address, or a block page. This is not a vulnerability; it is a policy implementation. It becomes a security issue when users cannot distinguish a block from a failure, and when workarounds train them to install untrusted software or profiles.</p>
+<h3>DNS failures that resemble interference</h3>
+<p>A surprising share of &quot;someone is tampering with my DNS&quot; reports are ordinary breakage: an expired domain, a broken DNSSEC chain, a resolver outage, a captive portal, a misconfigured CNAME, or a stale cache. Distinguishing failure from attack requires evidence, not intuition.</p>
+<h2>3.3 What DNS control can and cannot do against HTTPS</h2>
+<p>This is the most important technical distinction in the report, and it is routinely gotten wrong in both directions.</p>
+<p><strong>If DNS is controlled but TLS is intact:</strong></p>
+<ul>
+<li>The attacker can send you to a different server.</li>
+<li>Your browser will check the certificate against the name in the address bar.</li>
+<li>A look-alike domain will present a valid certificate <em>for the look-alike</em>, which a careful user can detect.</li>
+<li>A redirect to the real domain's IP but a different service will fail certificate validation.</li>
+<li>Content remains unreadable unless the user accepts an invalid certificate or installs a rogue root.</li>
+</ul>
+<p><strong>If DNS is controlled and a valid certificate for the real domain is obtained</strong> (mis-issuance, domain-validation hijack, compromised CA, or a corporate/attacker-installed root), then TLS no longer protects you. This is rare, documented, and serious.</p>
+<p><strong>Therefore:</strong> DNS manipulation is primarily a <em>positioning</em> and <em>denial</em> capability. It is excellent for phishing, blocking, and surveillance of destinations. It is not, by itself, a decryption capability.</p>
+<h2>3.4 Documented cases</h2>
+<p><strong>DNSChanger (2007–2011).</strong> A criminal operation (Rove Digital) altered DNS settings on infected machines — estimated in the millions — to redirect advertising and, later, to manipulate search and affiliate revenue. The U.S. FBI led a takedown in November 2011, and a temporary clean resolver was operated to keep victims online. [Confirmed — DOJ indictments, FBI statements]</p>
+<p><em>Why it matters:</em> it proved that DNS settings are a durable, monetisable control point, and that remediation requires reaching endpoints, not just servers.</p>
+<p><strong>Sea Turtle (2017–2019, disclosed 2019).</strong> Cisco Talos documented a campaign that hijacked DNS records at registrars and registries, affecting more than 40 organisations across at least 13 countries, including government and telecom entities. The technique targeted the <em>authoritative</em> layer, not endpoints. [Confirmed — Talos research]</p>
+<p><em>Why it matters:</em> DNS hijacking does not require malware on the victim's device. It can be done entirely in the registry.</p>
+<p><strong>DNSpionage (2018–2019).</strong> A campaign that manipulated DNS records and used malicious SSL certificates to intercept credentials, targeting entities in the Middle East. [Confirmed — vendor research; attribution limited]</p>
+<p><strong>Roaming Mantis (from 2018).</strong> A criminal campaign that compromised routers to change DNS settings, redirecting mobile users to phishing pages and Android malware. It evolved to use DNS-over-HTTPS in later stages to evade detection. [Confirmed — vendor research]</p>
+<p><em>Why it matters:</em> it combined router compromise, DNS manipulation, and mobile malware into a single chain — a preview of Part XI.</p>
+<p><strong>MyEtherWallet BGP hijack (April 2018).</strong> Attackers hijacked BGP routes for Amazon Route 53 DNS servers, redirecting some users of a cryptocurrency wallet service to a phishing site. Roughly $150,000 in cryptocurrency was reported stolen in a short window. [Confirmed — company statement, network analysis]</p>
+<p><em>Why it matters:</em> the attack was not against the wallet's cryptography or its servers. It was against the routing that delivered users to it.</p>
+<p><strong>Sitting Ducks (disclosed 2024).</strong> Researchers described a class of domain hijacking that requires no registrar compromise: domains whose authoritative DNS is delegated to a provider that no longer serves the zone (&quot;lame delegation&quot;) can be claimed by an attacker who simply registers the zone at that provider. The technique has been used since at least 2019, and researchers identified large numbers of vulnerable domains and multiple criminal clusters exploiting them. [Confirmed — Infoblox and Eclypsium research]</p>
+<p><em>Why it matters:</em> DNS security failures can be pure configuration errors, invisible to the domain owner, and exploitable by low-capability actors.</p>
+<p><strong>KeyTrap (CVE-2023-50387, 2024).</strong> A DNSSEC validation algorithm complexity flaw allowed a single malicious signed zone to consume extreme CPU on validating resolvers, potentially denying service to large user populations. It affected multiple widely used resolver implementations and was patched in early 2024. [Confirmed — CVE record, vendor advisories, academic paper]</p>
+<p><em>Why it matters:</em> DNSSEC improves authenticity but adds attack surface. Security layers have their own failure modes.</p>
+<h2>3.5 Detecting suspicious DNS configuration</h2>
+<p>Practical checks, in order of accessibility:</p>
+<ol>
+<li><strong>Inspect the device's DNS settings.</strong> On iOS: Settings → Wi-Fi → (i) → Configure DNS. On Android: network details → IP settings. Anything you did not set should be explainable.</li>
+<li><strong>Inspect the router.</strong> Admin interface → WAN/DHCP settings → DNS servers. Look for unfamiliar IP addresses. Compare against your ISP's published ranges or a resolver you recognise.</li>
+<li><strong>Query directly.</strong> From a computer: <code>nslookup example.com</code> and <code>nslookup example.com 1.1.1.1</code> — if answers differ materially, something local is intercepting.</li>
+<li><strong>Check DNSSEC validation</strong> using a validator test service. A domain that fails validation when it should pass is a signal worth investigating.</li>
+<li><strong>Use a DNS leak test</strong> while on a VPN to confirm queries are going where you expect.</li>
+<li><strong>Check Certificate Transparency logs</strong> for unexpected certificates issued for your own domains (relevant if you run a website).</li>
+<li><strong>Watch for behavioural symptoms:</strong> unexpected login pages, redirects to unfamiliar domains, security software that cannot update, and sites that load only over HTTP.</li>
+</ol>
+<p><strong>Limits.</strong> All of these require a baseline. Most users do not know what their DNS server <em>should</em> be, which is precisely why the manipulation is durable. The practical baseline is: if you did not choose it, and you cannot identify it, replace it with a resolver you trust and re-check after a week.</p>
+<h2>3.6 Protections</h2>
+<ul>
+<li>Use a reputable resolver with a clear privacy policy, and set it deliberately on your devices rather than inheriting it.</li>
+<li>Enable DNSSEC validation where available; understand that it authenticates, not encrypts.</li>
+<li>Use DoH/DoT where the trust trade-off makes sense for you, and understand that it shifts visibility to the resolver.</li>
+<li>Change router admin credentials; disable remote management and UPnP unless needed; keep firmware current.</li>
+<li>Prefer networks with client isolation; avoid captive portals that ask for credentials.</li>
+<li>For domain owners: monitor Certificate Transparency, enable registrar locks, audit DNS delegations, and fix lame delegations.</li>
+<li>Do not &quot;fix&quot; DNS problems by installing random profiles or apps. That is how many real compromises begin.</li>
+</ul>
+<p>DNS is the layer where a small, boring configuration error becomes a nationwide redirection. It deserves the same attention as passwords — and almost never gets it.</p>
+<hr />
+<hr />
+<h2>Evidence</h2>
+<p class="evidence-legend"><strong>Evidence labels.</strong> Each claim carries a label. <em>Legal review pending</em> marks a claim that has not yet cleared the publisher’s legal review.</p><div class="tscroll"><table>
+<caption>Every claim this document makes, with the verdict the corpus&rsquo;s own record reached, the evidence label that follows from it, the source, and the note that states what the claim does and does not support.</caption>
+<thead>
+<tr>
+<th scope="col">Claim</th>
+<th scope="col">Verdict</th>
+<th scope="col">Label</th>
+<th scope="col">Source</th>
+<th scope="col">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C008</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>CISA ED 19-01; FBI DNSChanger; checked by the ledger, 2019-01-22; <code>r15:S40</code>; [live]; Cyber Insights: mitigate DNS infrastructure tampering; <code>r15:S47</code>; [live]; Operation Ghost Click (DNSChanger takedown)</td>
+<td>narrowed: DNS settings can be changed through a compromised router or malware; the default-credential/firmware vector is not established by the cited sources.</td>
+</tr>
+<tr>
+<td>C009</td>
+<td>confirmed</td>
+<td>A — Confirmed</td>
+<td>Cisco Talos, Sea Turtle; checked by the ledger, 2019-04-17; <code>r15:S41</code>; [live]; Sea Turtle: DNS hijacking campaign</td>
+<td>single source — a second independent source is required</td>
+</tr>
+<tr>
+<td>C010</td>
+<td>confirmed</td>
+<td>A — Confirmed</td>
+<td>NIST NVD, CVE-2008-1447; checked by the ledger, 2008-07-08; <code>r15:S42</code>; [live]; CVE-2008-1447 — DNS cache poisoning (Kaminsky)</td>
+<td>single source — a second independent source is required</td>
+</tr>
+<tr>
+<td>C011</td>
+<td>confirmed</td>
+<td>A — Confirmed</td>
+<td>Let's Encrypt, How It Works; checked by the ledger, 2025-08-02; <code>r15:S43</code>; [live]; What is DNS?</td>
+<td>single source — a second independent source is required</td>
+</tr>
+<tr>
+<td>C049</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>CISA Emergency Directive 19-01; checked by the ledger, 2019-01-22; <code>r15:S41</code>; [live]; Sea Turtle: DNS hijacking campaign; <code>r15:S47</code>; [live]; Operation Ghost Click (DNSChanger takedown)</td>
+<td>narrowed: Control of name resolution can redirect or block resolution and support look-alike routing; timing analysis and every outcome are not established by the cited CISA page.</td>
+</tr>
+<tr>
+<td>C064</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>CISA ED 19-01; Cloudflare DNS; checked by the ledger, 2019-01-22; <code>r15:S43</code>; [live]; What is DNS?; <code>r15:S44</code>; [live]; DNS over HTTPS / DNS over TLS</td>
+<td>narrowed: Control of name resolution can redirect or block resolution and support look-alike routing; timing analysis and the valid-certificate outcome are not established by the cited page, and TLS…</td>
+</tr>
+<tr>
+<td>C065</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>NVD CVE-2008-1447; checked by the ledger, 2008-07-08; <code>r15:S42</code>; [live]; CVE-2008-1447 — DNS cache poisoning (Kaminsky)</td>
+<td>narrowed: CVE-2008-1447 documents the DNS cache-poisoning vulnerability; the coordinated-disclosure and source-port-randomisation response is historical context not established by the NVD entry. <span class="legal-review">Legal review pending</span></td>
+</tr>
+<tr>
+<td>C066</td>
+<td>confirmed</td>
+<td>A — Confirmed</td>
+<td>FBI, Operation Ghost Click; checked by the ledger, 2011-11-09; <code>r15:S47</code>; [live]; Operation Ghost Click (DNSChanger takedown)</td>
+<td>2 independent sources <span class="legal-review">Legal review pending</span></td>
+</tr>
+<tr>
+<td>C067</td>
+<td>confirmed</td>
+<td>A — Confirmed</td>
+<td>Cisco Talos, Sea Turtle; checked by the ledger, 2019-04-17; <code>r15:S41</code>; [live]; Sea Turtle: DNS hijacking campaign</td>
+<td>single source — a second independent source is required <span class="legal-review">Legal review pending</span></td>
+</tr>
+<tr>
+<td>C068</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Sitting Ducks research; checked by the ledger, 2024; <code>r15:S46</code>; [live]; Sitting Ducks: domain hijacking at scale</td>
+<td>narrowed: Sitting Ducks (2024) documents domain hijacking via dangling DNS records and lame delegations; the ~1 million vulnerable and tens-of-thousands hijacked figures are research estimates, not… <span class="legal-review">Legal review pending</span></td>
+</tr>
+<tr>
+<td>C069</td>
+<td>adjusted</td>
+<td>A — Confirmed</td>
+<td>Public reporting on 2018 Route 53 BGP hijack; checked by the ledger, 2018-04; <code>r15:S24</code>; [live]; Help Center: end-to-end encryption and backups; <code>r15:S18</code>; [live]; Advanced Data Protection for iCloud</td>
+<td>narrowed: The April 2018 BGP hijack redirected some Route 53 DNS traffic and MyEtherWallet users to a phishing site; the ~$150,000 loss is a reported estimate, not independently audited here. <span class="legal-review">Legal review pending</span></td>
+</tr>
+<tr>
+<td>C070</td>
+<td>verified (Part 3 batch E)</td>
+<td>A — Confirmed</td>
+<td><code>url:97ffb36ebfdc</code>; [not checked]; Part 3 batch source; <code>r15:S44</code>; [live]; DNS over HTTPS / DNS over TLS; <code>r15:S45</code>; [live]; DNSSEC</td>
+<td>verified against one authoritative source</td>
+</tr>
+</tbody>
+</table></div>
+
+</article>
+</main>
+<aside class="aside" aria-label="Investigation contents"><h2>Contents</h2><ol><li><a href="/investigations/digital-exposure/part-1/">Part I</a></li><li><a href="/investigations/digital-exposure/part-2/">Part II</a></li><li class="here"><a href="/investigations/digital-exposure/part-3/">Part III</a></li><li><a href="/investigations/digital-exposure/part-4/">Part IV</a></li><li><a href="/investigations/digital-exposure/part-5/">Part V</a></li><li><a href="/investigations/digital-exposure/part-6/">Part VI</a></li><li><a href="/investigations/digital-exposure/part-7/">Part VII</a></li><li><a href="/investigations/digital-exposure/part-8/">Part VIII</a></li><li><a href="/investigations/digital-exposure/part-9/">Part IX</a></li><li><a href="/investigations/digital-exposure/part-10/">Part X</a></li><li><a href="/investigations/digital-exposure/part-11/">Part XI</a></li><li><a href="/investigations/digital-exposure/part-12/">Part XII</a></li><li><a href="/investigations/digital-exposure/part-13/">Part XIII</a></li><li><a href="/investigations/digital-exposure/part-14/">Part XIV</a></li><li><a href="/investigations/digital-exposure/part-15/">Part XV</a></li></ol></aside>
+</div>
+<footer class="site-footer">
+<div class="inner">
+<p>ARTIore — independent research and intelligence practice. No sponsor, vendor or government reviewed this work before publication.</p>
+<p>Every claim is traced to a source. <a href="/investigations/digital-exposure/source-register/">Source register</a> · <a href="/investigations/digital-exposure/evidence/">Method</a> · <a href="/investigations/digital-exposure/corrections/">Corrections</a> · <a href="/">ARTIore</a></p>
+</div>
+</footer>
+</body>
+</html>

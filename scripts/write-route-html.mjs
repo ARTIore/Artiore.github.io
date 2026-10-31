@@ -4,6 +4,9 @@ import { pathToFileURL } from 'node:url'
 import { loadSeoModule } from './load-seo.mjs'
 import { canonicalUrl } from './public-url.mjs'
 
+// Used only when no entry in the content model carries a publication date.
+const FALLBACK_LASTMOD = '2026-10-26'
+
 const SITE_URL = 'https://artiais.com'
 
 function escapeHtml(value) {
@@ -261,7 +264,17 @@ if (frameworkEntry) {
   writeFileSync(join(process.cwd(), 'public', 'framework.html'), framework)
 }
 
-const lastmod = new Date().toISOString().slice(0, 10)
+// The sitemap's lastmod must describe WHEN THE CONTENT CHANGED, not when the
+// build ran. Stamping the wall clock made the tracked public/sitemap.xml change
+// on every build - dirtying the source tree, colliding with the other live
+// branches on that file, and telling crawlers every URL changed today.
+// Derive it from the content model instead, so the build is reproducible and
+// the committed file stays byte-identical to what the build emits.
+const contentDates = seoEntries
+  .map((entry) => entry.datePublished)
+  .filter((value) => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value))
+  .sort()
+const lastmod = contentDates.at(-1) ?? FALLBACK_LASTMOD
 const sitemapUrls = seoEntries.filter((entry) => entry.sitemap !== false).map((entry) => canonicalUrl(entry.path))
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
