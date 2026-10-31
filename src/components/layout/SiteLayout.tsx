@@ -38,6 +38,7 @@ function NavAnchor({ item, onClick }: { item: NavLinkItem; onClick?: () => void 
 
 export function SiteLayout() {
   const location = useLocation()
+  const onHome = normalizePath(location.pathname) === '/'
   const [menuOpen, setMenuOpen] = useState(false)
   const [openMenuPath, setOpenMenuPath] = useState(location.pathname)
   const [desktopOpen, setDesktopOpen] = useState<string | null>(null)
@@ -68,6 +69,14 @@ export function SiteLayout() {
       >
         Skip to main content
       </a>
+      {onHome ? (
+        <SiteLink
+          className="flex min-h-11 w-full items-center justify-center border-b border-ink/15 bg-gold px-4 py-2 text-center text-sm font-semibold text-ink hover:bg-gold-bright focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-ink"
+          href="/investigations/digital-exposure/"
+        >
+          New: The Invisible Attack Surface — Digital Safety Investigation →
+        </SiteLink>
+      ) : null}
       <header className="site-header sticky top-0 z-40 border-b border-gold/20 bg-ink/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
           <NavLink className="min-w-0" end to="/">
