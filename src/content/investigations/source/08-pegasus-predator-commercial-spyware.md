@@ -96,6 +96,6 @@ No. A confirmed infection requires expert handling; resetting may destroy eviden
 
 ---
 
-**Related:** [iPhone zero-click spyware](iphone-zero-click-spyware) · [WhatsApp encryption limits](whatsapp-encryption-limits) · [Hotel Wi-Fi security](hotel-wifi-security-guide)
+**Related:** [iPhone zero-click spyware](iphone-zero-click-spyware) · [WhatsApp encryption limits](whatsapp-encryption-limits) · [Hotel Wi-Fi security](hotel-wifi-security-guide) · [Digital Security Warning Signs: What to Check Before You Panic](digital-security-warning-signs)
 
 **Part of the ARTIore Global Digital Exposure Investigation.**

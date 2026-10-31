@@ -206,6 +206,7 @@ async function renderDocument(templateHtml, entry, location) {
       author: entry.author,
       authorOrganization: entry.authorOrganization,
       datePublished: entry.datePublished,
+      dateModified: entry.dateModified,
       inLanguage: entry.inLanguage,
       image: entry.image,
       faqs: entry.faqs,

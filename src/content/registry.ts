@@ -85,6 +85,7 @@ export const seoEntries: SeoEntry[] = [
     author: 'ARTIore Research Desk',
     authorOrganization: 'ARTIore',
     datePublished: page.datePublished,
+    dateModified: 'dateModified' in page ? page.dateModified : undefined,
     inLanguage: page.inLanguage,
     locale: page.locale,
     image: page.image,

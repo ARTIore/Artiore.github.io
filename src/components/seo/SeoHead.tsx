@@ -20,6 +20,8 @@ type SeoHeadProps = {
   author?: string
   authorOrganization?: string
   datePublished?: string
+  dateModified?: string
+  faqs?: { question: string; answer: string }[]
   inLanguage?: string
   locale?: string
   alternates?: { hreflang: string; path: string }[]
@@ -51,6 +53,8 @@ export function SeoHead({
   author,
   authorOrganization,
   datePublished,
+  dateModified,
+  faqs,
   inLanguage,
   locale,
   alternates,
@@ -126,11 +130,13 @@ export function SeoHead({
         author,
         authorOrganization,
         datePublished,
+        dateModified,
         inLanguage,
         image: ogUrl,
+        faqs,
       }),
     )
-  }, [alternates, author, authorOrganization, crumbName, datePublished, description, headline, image, imageAlt, imageHeight, imageWidth, inLanguage, kind, locale, noindex, path, title])
+  }, [alternates, author, authorOrganization, crumbName, dateModified, datePublished, description, faqs, headline, image, imageAlt, imageHeight, imageWidth, inLanguage, kind, locale, noindex, path, title])
 
   return null
 }

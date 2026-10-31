@@ -21,6 +21,8 @@ const rawSources = {
   '14-public-safety-checklist.md': () => import('./source/14-public-safety-checklist.md?raw'),
   '15-technical-glossary.md': () => import('./source/15-technical-glossary.md?raw'),
   '16-source-register.md': () => import('./source/16-source-register.md?raw'),
+  'browser-extensions-session-theft.md': () => import('./source/browser-extensions-session-theft.md?raw'),
+  'digital-security-warning-signs.md': () => import('./source/digital-security-warning-signs.md?raw'),
 }
 
 export function investigationRouteLoaders(): Record<string, Loader> {

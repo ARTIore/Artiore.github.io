@@ -104,6 +104,6 @@ Not necessarily. Phones are lost, stolen, and damaged. The safer pattern is encr
 
 ---
 
-**Related:** [Why Wi-Fi passwords do not make a network safe](password-protected-wifi-not-secure) · [Crypto wallet drainers](crypto-wallet-drainers) · [WhatsApp encryption limits](whatsapp-encryption-limits)
+**Related:** [Why Wi-Fi passwords do not make a network safe](password-protected-wifi-not-secure) · [Crypto wallet drainers](crypto-wallet-drainers) · [WhatsApp encryption limits](whatsapp-encryption-limits) · [Browser Extensions and Session Theft: Why MFA Is Not the Last Barrier](browser-extensions-session-theft)
 
 **Part of the ARTIore Global Digital Exposure Investigation.**

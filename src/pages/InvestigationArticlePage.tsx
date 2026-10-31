@@ -11,6 +11,7 @@ import {
   investigationPublished,
   investigationSlugs,
 } from '../content/investigations/catalog'
+import { investigationFaqs } from '../content/investigations/faqs'
 import { renderInvestigationMarkdown } from '../content/investigations/markdown'
 
 const linkClass =
@@ -29,13 +30,18 @@ export default function InvestigationArticlePage({ markdown, slug }: { markdown:
 
   if (!piece) return null
 
+  const published = piece.datePublished ?? investigationPublished
+  const publishedLabel = published === '2026-10-25' ? '25 October 2026' : '26 October 2026'
+
   return (
     <>
       <SeoHead
         author="ARTIore Research Desk"
         authorOrganization="ARTIore"
         crumbName={piece.crumbName}
-        datePublished={investigationPublished}
+        dateModified={piece.dateModified}
+        datePublished={published}
+        faqs={investigationFaqs[slug]}
         description={piece.description}
         headline={piece.title}
         image={investigationOg.src}
@@ -54,7 +60,7 @@ export default function InvestigationArticlePage({ markdown, slug }: { markdown:
           <p className="text-xs uppercase tracking-[0.22em] text-gold">Global Digital Exposure Investigation</p>
           <h1 className="mt-4 font-serif text-4xl leading-tight text-cream sm:text-5xl">{piece.title}</h1>
           <p className="mt-4 text-sm text-muted">
-            ARTIore Research Desk · Version 1.0 · <time dateTime={investigationPublished}>26 October 2026</time>
+            ARTIore Research Desk · Version 1.0 · <time dateTime={published}>{publishedLabel}</time>
             {piece.readingTime ? ` · ${piece.readingTime}` : ''}
           </p>
           <p className="mt-4 text-sm">

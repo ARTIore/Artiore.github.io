@@ -72,4 +72,14 @@ export const investigationFaqs: Record<string, { question: string; answer: strin
     { question: "Should I worry about my room being broken into digitally?", answer: "The realistic risk is low for most travellers. The deadbolt and basic habits address the common cases." },
     { question: "Is a mobile key less safe than a card?", answer: "It depends on the implementation. Both depend on revocation and account security." },
   ],
+  "browser-extensions-session-theft": [
+    { question: "Does an extension need permission to read cookies?", answer: "Browser APIs impose permission requirements; exact behavior differs by browser and feature. S55" },
+    { question: "Does MFA stop cookie replay?", answer: "It can be bypassed as a repeated login step when an already authenticated reusable session is stolen; other service controls may still block misuse. S54" },
+    { question: "Are all extensions unsafe?", answer: "No. Evaluate publisher, permissions, necessity and updates; the evidence concerns particular compromised tools. S54 S55" },
+  ],
+  "digital-security-warning-signs": [
+    { question: "Does a negative malware check prove the device was never compromised?", answer: "No. Scope, retained evidence and known indicators limit what a negative finding establishes. S51" },
+    { question: "Should I replace every device after a suspicious notification?", answer: "First verify it and identify the access route. Replacement alone does not secure a compromised cloud account. S37 S53" },
+    { question: "What makes advice trustworthy?", answer: "It names its evidence, conditions, limitations and practical next action, rather than promising certainty from one ambiguous symptom. This is ARTIore's editorial standard." },
+  ],
 }

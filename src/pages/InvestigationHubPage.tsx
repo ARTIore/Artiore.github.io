@@ -181,6 +181,9 @@ export default function InvestigationHubPage() {
         <section className="mt-12 max-w-[68ch]" id="corrections">
           <h2 className="font-serif text-3xl text-cream">Corrections log</h2>
           <p className="mt-4 leading-relaxed text-cream/90">Version 1.0 published 31 October 2026. No corrections yet.</p>
+          <p className="mt-4 leading-relaxed text-cream/90">
+            31 October 2026: added two articles, Browser Extensions and Session Theft, and Digital Security Warning Signs.
+          </p>
         </section>
 
         <SincerityNote code="en" placement="bottom" />

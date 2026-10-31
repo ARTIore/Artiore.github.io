@@ -44,6 +44,8 @@ export type InvestigationPiece = {
   readingTime?: string
   partsToc: boolean
   printable: boolean
+  datePublished?: string
+  dateModified?: string
 }
 
 const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' | 'summary'>[] = [
@@ -192,6 +194,30 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     printable: false,
   },
   {
+    file: "browser-extensions-session-theft.md",
+    slug: "browser-extensions-session-theft",
+    title: "Browser Extensions and Session Theft: Why MFA Is Not the Last Barrier",
+    seoTitle: "Browser Extensions and Session Theft | Artiais.com",
+    description:
+      "Multifactor authentication protects the login process. After login, a service often relies on a session credential to recognize the browser.",
+    partsToc: false,
+    printable: false,
+    datePublished: "2026-10-25",
+    dateModified: "2026-10-31",
+  },
+  {
+    file: "digital-security-warning-signs.md",
+    slug: "digital-security-warning-signs",
+    title: "Digital Security Warning Signs: What to Check Before You Panic",
+    seoTitle: "Digital Security Warning Signs: What to Check",
+    description:
+      "A phone warms up. A Wi-Fi connection fails. A list of Bluetooth identifiers grows. These observations are real, but they do not answer the same question.",
+    partsToc: false,
+    printable: false,
+    datePublished: "2026-10-25",
+    dateModified: "2026-10-31",
+  },
+  {
     file: "13-global-threat-matrix.md",
     slug: "global-threat-matrix",
     title: "Global Threat Matrix",
@@ -268,7 +294,8 @@ export const investigationMeta = [
     description: piece.description,
     crumbName: piece.crumbName,
     headline: piece.title,
-    datePublished: investigationPublished,
+    datePublished: piece.datePublished ?? investigationPublished,
+    dateModified: piece.dateModified,
     inLanguage: 'en' as const,
     locale: 'en_US' as const,
     image: investigationOg.src,
