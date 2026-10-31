@@ -73,24 +73,24 @@ export const seoEntries: SeoEntry[] = [
     author: page.author,
     datePublished: page.published,
   })),
-  // The Global Digital Exposure Investigation. Its pages are prebuilt static
-  // files carried in public/investigations/digital-exposure/, so this build
-  // does not prerender them; the entries below give the site's build check
-  // something to verify, and put every page in the sitemap.
   ...investigationMeta.map((page) => ({
     path: page.path,
     headTitle: page.headTitle,
     description: page.description,
     sitemap: true,
-    prerender: false as const,
+    prerender: true,
     kind: 'article' as const,
     crumbName: page.crumbName,
-    headline: page.crumbName,
+    headline: page.headline,
     author: 'ARTIore Research Desk',
     authorOrganization: 'ARTIore',
     datePublished: page.datePublished,
     inLanguage: page.inLanguage,
     locale: page.locale,
+    image: page.image,
+    imageWidth: page.imageWidth,
+    imageHeight: page.imageHeight,
+    imageAlt: page.imageAlt,
   })),
   {
     path: '/framework.html',

@@ -7,10 +7,8 @@ export function normalizePath(pathname: string) {
 }
 
 /**
- * Paths served as prebuilt static files rather than by the React router.
- * The Global Digital Exposure Investigation is carried in public/ and published
- * as complete pages, so the router must hand them to the server as ordinary
- * navigations instead of trying to resolve them client-side.
+ * The investigation is prerendered, and its pages are large. Serve them as
+ * ordinary navigations so the header does not treat every child as the hub.
  */
 export const staticPrefixes = ['/investigations/']
 
@@ -56,6 +54,13 @@ export function breadcrumbItems(path: string, current: string): Crumb[] {
     return [
       { name: 'Home', path: '/' },
       { name: 'Field Manual', path: '/field-manual' },
+      { name: current, path: clean },
+    ]
+  }
+  if (clean.startsWith('/investigations/digital-exposure/')) {
+    return [
+      { name: 'Home', path: '/' },
+      { name: 'The Invisible Attack Surface', path: '/investigations/digital-exposure' },
       { name: current, path: clean },
     ]
   }

@@ -32,7 +32,7 @@ type SiteLinkProps = {
 
 export function SiteLink({ href, className, children, onClick }: SiteLinkProps) {
   const safe = safeHref(href)
-  const publicHref = isSpaPath(safe) ? toPublicPath(safe) : safe
+  const publicHref = safe.startsWith('/') ? toPublicPath(safe) : safe
   if (isSpaPath(safe)) {
     return (
       <Link className={className} onClick={onClick} to={publicHref}>

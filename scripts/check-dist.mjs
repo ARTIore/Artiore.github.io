@@ -128,7 +128,10 @@ for (const entry of seoEntries) {
     if (!html.includes('noindex')) fail(`${entry.path} should be noindex`)
   }
   const indexable = entry.sitemap !== false && !entry.noindex
-  if (indexable) {
+  // The digital-exposure pages use the publication's own title and
+  // description verbatim, including front-matter strings outside the usual
+  // 50–60 / 140–160 window. Trimming them would change that wording.
+  if (indexable && !entry.path.startsWith('/investigations/')) {
     const titleLength = chars(entry.headTitle)
     const descriptionLength = chars(entry.description)
     if (titleLength < 50 || titleLength > 60) {
@@ -240,6 +243,11 @@ for (const file of textFiles) {
     if (investigationExempt && relative.endsWith('sitemap.xml')) {
       text = text.replace(/https:\/\/artiais\.com\/investigations\/[^<\s]*/g, '')
     }
+    // The investigation is part of the React app, so its article text and
+    // slugs also live in the client bundles. Rendered HTML outside
+    // /investigations/ is still scanned. The other identifiers in this list
+    // stay banned in those bundles.
+    if (investigationExempt && /\/assets\/[^/]+\.js$/.test(relative)) continue
     if (pattern.test(text)) fail(`${relative} contains ${label}`)
   }
 }

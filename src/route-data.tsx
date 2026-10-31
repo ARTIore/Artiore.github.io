@@ -1,4 +1,5 @@
 import { createElement, type ComponentType, type ReactNode } from 'react'
+import { investigationRouteLoaders } from './content/investigations/routes'
 import type { PageDocument } from './content/types'
 import { normalizePath } from './content/urls'
 
@@ -61,6 +62,7 @@ const loaders: Record<string, Loader> = {
     if (!post) throw new Error('Missing essay exhibit-k-forensic-witnesses')
     return post.page
   }),
+  ...investigationRouteLoaders(),
 }
 
 const notFoundLoader: Loader = () => import('./pages/NotFoundPage')
