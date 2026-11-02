@@ -10,7 +10,8 @@ import { buttonClass, fieldClass, linkClass } from '../components/safety/safety-
 import { demoRecord } from '../content/safety/demo-record'
 import { sources } from '../content/safety/sources'
 import { evidenceMeta } from '../content/meta'
-import { SiteLink } from '../components/content/SiteLink'
+import { ExternalLink, SiteLink } from '../components/content/SiteLink'
+import { claimStatusLabel, publicationStatusLabel } from '../content/research/samples'
 import { isSafeHttpUrl, validateEvidenceText, type ValidationIssue } from '../lib/evidence/validate'
 
 type EvidenceSource = {
@@ -52,23 +53,6 @@ type EvidenceRecord = {
   conflicting_evidence?: EvidenceConflict[]
   human_approval?: EvidenceApproval | null
   revision_history: EvidenceRevision[]
-}
-
-const statusLabel: Record<string, string> = {
-  VERIFIED: 'Verified',
-  SUPPORTED_INFERENCE: 'Supported inference',
-  DISPUTED: 'Disputed',
-  UNVERIFIED: 'Unverified',
-  BELIEF_INTERPRETATION: 'Belief or interpretation',
-  CORRECTED: 'Corrected',
-}
-
-const publicationLabel: Record<string, string> = {
-  DRAFT: 'Draft',
-  REVIEW: 'In review',
-  APPROVED: 'Approved',
-  PUBLISHED: 'Published',
-  RETRACTED: 'Retracted',
 }
 
 function asRecords(data: unknown) {
@@ -193,7 +177,7 @@ export default function EvidenceExplorerPage() {
             Knowledge status
             <select className={fieldClass} id="evidence-status" onChange={(event) => setStatus(event.target.value)} value={status}>
               <option value="">All statuses</option>
-              {Object.entries(statusLabel).map(([value, label]) => (
+              {Object.entries(claimStatusLabel).map(([value, label]) => (
                 <option key={value} value={value}>
                   {label}
                 </option>
@@ -209,7 +193,7 @@ export default function EvidenceExplorerPage() {
               value={publication}
             >
               <option value="">All publication states</option>
-              {Object.entries(publicationLabel).map(([value, label]) => (
+              {Object.entries(publicationStatusLabel).map(([value, label]) => (
                 <option key={value} value={value}>
                   {label}
                 </option>
@@ -269,8 +253,8 @@ export default function EvidenceExplorerPage() {
               <h3 className="break-words font-serif text-2xl text-cream">{record.claim_id}</h3>
               <p className="mt-3 max-w-[68ch] text-cream/90">{record.statement}</p>
               <p className="mt-3 text-sm text-gold-bright">
-                {statusLabel[record.status] ?? record.status}. Publication:{' '}
-                {publicationLabel[record.publication_status] ?? record.publication_status}.
+                {claimStatusLabel[record.status] ?? record.status}. Publication:{' '}
+                {publicationStatusLabel[record.publication_status] ?? record.publication_status}.
               </p>
               <dl className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-[11rem_minmax(0,1fr)]">
                 <dt className="font-semibold text-cream">Scope</dt>
@@ -297,9 +281,9 @@ export default function EvidenceExplorerPage() {
                     <li className="break-words" key={item.statement}>
                       <p>{item.statement}</p>
                       {item.source_url && isSafeHttpUrl(item.source_url) ? (
-                        <a className={linkClass} href={item.source_url} rel="noreferrer" target="_blank">
+                        <ExternalLink className={linkClass} href={item.source_url}>
                           {item.source_url}
-                        </a>
+                        </ExternalLink>
                       ) : null}
                     </li>
                   ))}
@@ -316,9 +300,9 @@ export default function EvidenceExplorerPage() {
                         {source.source_type}. Accessed {source.accessed_at}.
                       </p>
                       {isSafeHttpUrl(source.url) ? (
-                        <a className={linkClass} href={source.url} rel="noreferrer" target="_blank">
+                        <ExternalLink className={linkClass} href={source.url}>
                           {source.url}
-                        </a>
+                        </ExternalLink>
                       ) : (
                         <p>Unsupported link.</p>
                       )}

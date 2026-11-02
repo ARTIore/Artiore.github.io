@@ -71,3 +71,11 @@ export const claimStatusLabel: Record<string, string> = {
   BELIEF_INTERPRETATION: 'Belief or interpretation',
   CORRECTED: 'Corrected',
 }
+
+export const publicationStatusLabel: Record<string, string> = {
+  DRAFT: 'Draft',
+  REVIEW: 'In review',
+  APPROVED: 'Approved',
+  PUBLISHED: 'Published',
+  RETRACTED: 'Retracted',
+}

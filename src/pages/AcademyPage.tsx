@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SeoHead } from '../components/seo/SeoHead'
-import { SiteLink } from '../components/content/SiteLink'
+import { ExternalLink, SiteLink } from '../components/content/SiteLink'
 import {
   evidenceGrades,
   evidenceNotes,
@@ -184,12 +184,14 @@ export default function AcademyPage() {
         <section className="mt-12 border-t border-white/10 pt-8" id="evidence">
           <h2 className="font-serif text-3xl text-gold-bright">1. Evidence and knowledge status</h2>
           <p className="mt-4 max-w-[68ch] text-cream/90">
-            A citation is not automatically proof. These four grades are the ones this site uses for empirical claims.
-            The wording matches the investigation’s evidence labels. Read the method on the{' '}
+            A citation is not automatically proof. These four grades are the ones this site uses for empirical claims
+            on investigation pages. The wording matches the investigation’s evidence labels. Read the method on the{' '}
             <SiteLink className={linkClass} href="/investigations/digital-exposure/evidence-method/">
               evidence method
             </SiteLink>{' '}
-            page.
+            page. A claim file uses a different set of words: Verified, Supported inference, Disputed, Unverified,
+            Belief or interpretation, and Corrected. Verified is not the same as Confirmed, and Unverified is not the
+            same as Unsupported.
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {evidenceGrades.map((grade) => (
@@ -361,9 +363,9 @@ export default function AcademyPage() {
               {lesson.limit}
             </p>
             <p className="mt-3">
-              <a className={linkClass} href={lesson.source} rel="noreferrer" target="_blank">
+              <ExternalLink className={linkClass} href={lesson.source}>
                 {lesson.sourceLabel}
-              </a>
+              </ExternalLink>
             </p>
           </article>
           <div className="mt-4 rounded-2xl border border-gold/20 p-4">
@@ -412,9 +414,9 @@ export default function AcademyPage() {
                 <p className="text-xs uppercase tracking-[0.16em] text-gold">{item.id}</p>
                 <h3 className="mt-2 font-serif text-xl text-cream">{item.title}</h3>
                 {isExternal(item.href) ? (
-                  <a className={`${linkClass} mt-3 inline-block break-all`} href={item.href} rel="noreferrer" target="_blank">
+                  <ExternalLink className={`${linkClass} mt-3 inline-block break-all`} href={item.href}>
                     {item.href}
-                  </a>
+                  </ExternalLink>
                 ) : (
                   <SiteLink className={`${linkClass} mt-3 inline-block break-all`} href={item.href}>
                     {item.href}

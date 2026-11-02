@@ -12,6 +12,7 @@ import { buttonClass, linkClass } from '../components/safety/safety-styles'
 import { SiteLink } from '../components/content/SiteLink'
 import {
   claimStatusLabel,
+  publicationStatusLabel,
   correctionStatusLabel,
   illustrativeClaims,
   illustrativeCorrection,
@@ -236,7 +237,8 @@ export default function ResearchDashboardPage() {
                     <h3 className="font-serif text-2xl text-cream">{claim.claim_id}</h3>
                     <p className="mt-2 text-cream/90">{claim.statement}</p>
                     <p className="mt-2 text-sm text-gold-bright">
-                      {claimStatusLabel[claim.status] ?? claim.status}. The file says {claim.publication_status}.
+                      {claimStatusLabel[claim.status] ?? claim.status}. The file says{' '}
+                      {publicationStatusLabel[claim.publication_status] ?? claim.publication_status}.
                       {fileClaimsAuthority(claim.publication_status) ? ` ${FILE_STATUS_IS_NOT_APPROVAL}` : ''}
                     </p>
                     <p className="mt-2 text-cream/90">

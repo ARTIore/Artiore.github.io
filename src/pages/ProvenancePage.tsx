@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import { LoadJsonButton } from '../components/research/LoadJsonButton'
 import { GlossaryList, LanguageNote, OtherTools, PrivacyNote, ReadingControls, SafetyFrame } from '../components/safety/safety-ui'
 import { buttonClass } from '../components/safety/safety-styles'
-import { illustrativeClaims, illustrativeCorrection, illustrativeLabel } from '../content/research/samples'
+import { correctionStatusLabel, illustrativeClaims, illustrativeCorrection, illustrativeLabel } from '../content/research/samples'
 import { provenanceMeta } from '../content/meta'
 import { FILE_STATUS_IS_NOT_APPROVAL, fileClaimsAuthority } from '../lib/evidence/corrections'
 import { interpretLedger } from '../lib/evidence/ledger'
@@ -185,7 +185,7 @@ export default function ProvenancePage() {
                 <>
                   <p className="mt-3 text-cream/90">{correction.public_note}</p>
                   <p className="mt-2 text-sm text-muted">
-                    File status: {correction.status}.
+                    File status: {correctionStatusLabel[correction.status] ?? correction.status}.
                     {fileClaimsAuthority(correction.status) ? ` ${FILE_STATUS_IS_NOT_APPROVAL}` : ''}
                   </p>
                 </>

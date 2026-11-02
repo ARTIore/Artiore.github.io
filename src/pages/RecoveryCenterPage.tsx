@@ -12,7 +12,7 @@ import { buttonClass, linkClass } from '../components/safety/safety-styles'
 import { canadianContacts, playbooks } from '../content/safety/playbooks'
 import { sources } from '../content/safety/sources'
 import { recoveryMeta } from '../content/meta'
-import { SiteLink } from '../components/content/SiteLink'
+import { ExternalLink, SiteLink } from '../components/content/SiteLink'
 
 export default function RecoveryCenterPage() {
   const [large, setLarge] = useState(false)
@@ -87,9 +87,9 @@ export default function RecoveryCenterPage() {
         <h2 className="font-serif text-2xl text-cream">If you are in Canada</h2>
         <p className="mt-3 max-w-[68ch] text-cream/90">
           Report fraud and identity misuse to the{' '}
-          <a className={linkClass} href={sources.cafcReport.href} rel="noreferrer" target="_blank">
+          <ExternalLink className={linkClass} href={sources.cafcReport.href}>
             Canadian Anti-Fraud Centre
-          </a>
+          </ExternalLink>
           . Toll-free{' '}
           <a className={linkClass} href={canadianContacts.phoneHref}>
             {canadianContacts.phoneDisplay}
@@ -98,13 +98,13 @@ export default function RecoveryCenterPage() {
         </p>
         <p className="mt-3 max-w-[68ch] text-cream/90">
           For everyday protection, start with{' '}
-          <a className={linkClass} href={sources.getCyberSafe.href} rel="noreferrer" target="_blank">
+          <ExternalLink className={linkClass} href={sources.getCyberSafe.href}>
             Get Cyber Safe
-          </a>{' '}
+          </ExternalLink>{' '}
           and the{' '}
-          <a className={linkClass} href={sources.cyberCentre.href} rel="noreferrer" target="_blank">
+          <ExternalLink className={linkClass} href={sources.cyberCentre.href}>
             Canadian Centre for Cyber Security
-          </a>
+          </ExternalLink>
           . IdentityTheft.gov and the FBI’s IC3 are United States services. They do not replace a report in Canada.
         </p>
       </section>

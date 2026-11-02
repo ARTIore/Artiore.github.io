@@ -26,7 +26,7 @@ export const labScenarios: readonly LabScenario[] = [
     ],
     correctChoiceId: 'official',
     why: 'A link in an unexpected text can lead to a copy of a real sign-in page. Use a path you already trust. Sending the link onward can spread the fake. A strange text does not prove your phone is infected.',
-    sources: [sources.cisaPhishing, sources.cyberCentreSmishing, sources.ftcPhishing],
+    sources: [sources.cisaPhishing, sources.cyberCentreSmishing, sources.cafcPhishing],
   },
   {
     id: 'wifi',

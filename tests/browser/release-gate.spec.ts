@@ -94,7 +94,7 @@ test.describe('built site release checks', () => {
     await page.setViewportSize({ width: 320, height: 800 })
     await page.goto('/academy/')
     await page.getByRole('button', { name: 'Open menu' }).click()
-    await page.getByRole('navigation', { name: 'Primary' }).getByRole('link', { name: 'Threat practice lab' }).click()
+    await page.getByRole('navigation', { name: 'Menu' }).getByRole('link', { name: 'Threat practice lab' }).click()
     await expect(page).toHaveURL(/\/academy\/threat-lab\/?/)
     await expect(page.getByRole('heading', { level: 1, name: 'Threat practice lab' })).toBeVisible()
   })
@@ -186,5 +186,58 @@ test.describe('built site release checks', () => {
     await expect(page.getByText('ordinary web links')).toBeVisible()
     await expect(page.getByText('who authorized')).toBeVisible()
     await expect(page.getByText('ART-COR-0001')).toBeVisible()
+  })
+
+  const axeTags = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'] as const
+
+  test('language names, distinct navigation names, and new-tab links are exposed', async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 800 })
+    await page.goto('/academy/threat-lab/')
+    const urdu = page.locator('span[lang="ur"]')
+    await expect(urdu).toHaveText('اردو')
+    await expect(urdu).toHaveAttribute('dir', 'rtl')
+    const arabic = page.locator('span[lang="ar"]')
+    await expect(arabic).toHaveText('العربية')
+    await expect(arabic).toHaveAttribute('dir', 'rtl')
+    await expect(page.locator('span[lang="fr"]')).toHaveAttribute('dir', 'ltr')
+    await expect(page.locator('span[lang="fr"]')).toHaveText('Français')
+
+    const headerNavLabels = await page.evaluate(
+      `(() => [...document.querySelectorAll('header nav')].map((node) => node.getAttribute('aria-label')))()`,
+    )
+    expect(headerNavLabels).toEqual(['Primary', 'Menu'])
+    await expect(page.getByRole('navigation', { name: 'Primary' })).toBeVisible()
+    await expect(page.getByRole('navigation', { name: 'Menu' })).toHaveCount(0)
+    const phishing = page.getByRole('link', { name: 'Phishing (opens in a new tab)', exact: true })
+    await expect(phishing).toHaveAttribute(
+      'href',
+      'https://antifraudcentre-centreantifraude.ca/scams-fraudes/phishing-hameconnage-eng.htm',
+    )
+    await expect(phishing).toHaveAttribute('target', '_blank')
+    await expect(page.getByRole('link', { name: 'GitHub · ARTIore (opens in a new tab)', exact: true })).toHaveAttribute(
+      'target',
+      '_blank',
+    )
+
+    const desktop = await new AxeBuilder({ page }).withTags([...axeTags]).analyze()
+    expect(desktop.violations.map((item) => `${item.id} (${item.nodes.length})`)).toEqual([])
+
+    await page.setViewportSize({ width: 320, height: 800 })
+    await page.getByRole('button', { name: 'Open menu' }).click()
+    await expect(page.getByRole('navigation', { name: 'Menu' })).toBeVisible()
+    await expect(page.getByRole('navigation', { name: 'Primary' })).toHaveCount(0)
+    const mobile = await new AxeBuilder({ page }).withTags([...axeTags]).analyze()
+    expect(mobile.violations.map((item) => `${item.id} (${item.nodes.length})`)).toEqual([])
+  })
+
+  test('hiding a disagreement flag moves focus and announces the change', async ({ page }) => {
+    await page.goto('/academy/research/contradictions/')
+    const hide = page.getByRole('button', { name: 'Hide this flag for now' }).first()
+    await hide.focus()
+    await page.keyboard.press('Enter')
+    const summary = page.locator('#flags-summary')
+    await expect(summary).toBeFocused()
+    await expect(summary).toContainText('Flag hidden. It is still included if you download the notes.')
+    await expect(page.locator('#flags-heading')).toBeVisible()
   })
 })
