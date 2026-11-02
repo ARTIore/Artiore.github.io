@@ -3,10 +3,11 @@ import { SeoHead } from '../components/seo/SeoHead'
 import { SiteLink } from '../components/content/SiteLink'
 import { SincerityNote } from '../components/field-manual/SincerityNote'
 import { AlsoOnArtiore } from '../components/investigations/AlsoOnArtiore'
-import { InvestigationLicense, investigationLicenseUrl } from '../components/investigations/InvestigationLicense'
+import { InvestigationLicense } from '../components/investigations/InvestigationLicense'
 import { investigationHubCompanionUrl } from '../content/investigations/companions'
 import {
   investigationHub,
+  investigationLicenseUrl,
   investigationOg,
   investigationPieces,
   investigationHubPublished,

@@ -107,6 +107,17 @@ export const seoEntries: SeoEntry[] = [
     crumbName: 'Prompt Framework V1.1',
   },
   {
+    path: '/academy',
+    headTitle: 'ARTIORE | Clarity & Digital Safety Lab',
+    description:
+      'Evidence-aware digital safety education and an interactive six-layer reasoning framework. Truth before certainty. Human agency before automation.',
+    sitemap: true,
+    prerender: false,
+    kind: 'page',
+    crumbName: 'Clarity & Digital Safety Lab',
+    lastmod: '2026-11-02',
+  },
+  {
     path: '/eternia-aurofa-soverign-engine/',
     headTitle: 'Eternia Aurora Sovereign Engine',
     description: 'Local-first generative ambient instrument served from its own project.',
