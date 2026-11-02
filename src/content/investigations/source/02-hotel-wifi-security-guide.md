@@ -51,7 +51,7 @@ A hotel network can see a map of connections. It cannot, by itself, read the con
 
 **What it can see.** Destinations, DNS queries when DNS is not encrypted, and the server name sent in the clear at the start of many encrypted connections. Some providers go further: Performance Networks, a UK hotel Wi-Fi vendor, told Ars Technica that its software records “every click” and what guests have viewed, held for legislative purposes. That is one provider’s logging, not a property of every hotel network, and an encrypted path is not visible without interception.
 
-**What is not established.** Timing, traffic volume, and full web-address logging are described by vendor and industry sources, and primary-source verification is still pending. A hotel cannot be assumed to analyse timing or volume just because it can see a connection. The capability and the practice are different questions.
+**Provisional — SNI/DNS supported; timing/volume and URL logging documented by vendor/industry sources, primary verification pending.** A hotel cannot be assumed to analyse timing or volume just because it can see a connection. The capability and the practice are different questions. A sentence that says the hotel can see every address you visit is too broad unless the provider logs or intercepts them.
 
 **What it cannot see.** The page body, the password field, and the message contents of a correctly validated encrypted session. “Correctly validated” excludes a device that has been taught to trust the wrong certificate, a browser that ignores certificate warnings, or an app that trusts every certificate. Reading those contents from the network requires a trusted rogue certificate or an installed configuration profile. That finding rests on a single authoritative source class, not two independent sources. Do not install a hotel “network profile” or “trust certificate” to get online. If the network requires it, use a different network or a cellular connection.
 
@@ -67,7 +67,7 @@ The documented hotel incidents in this record often sit in accounts, booking sys
 
 **Malware delivered over the network.** Microsoft attributed the CaptiveCrunch hotel-Wi-Fi campaign, which served a fake browser update delivering the CornFlake remote-access trojan, to Storm-2945. That is a device compromise delivered through a hotel network, not a passive observer reading encrypted pages. BWH Hotels identified an intrusion in a web application of guest reservation data, with no payment or bank details involved. Again: the reservation system, not the Wi-Fi password.
 
-**Shared Wi-Fi passphrases.** WPA2-Personal uses a shared passphrase. Guests do not each get a unique master key; session keys are derived through the handshake. A weak shared passphrase can allow offline guessing if an attacker captures a handshake. Protection of management frames (802.11w) is optional, not the default. These are reasons to keep encrypted connections, avoid weak passphrases where you control them, and prefer WPA3 where both the access point and the device support it. They are not a reason to say that hotel Wi-Fi decrypts banking.
+**Shared Wi-Fi passphrases.** WPA2-Personal uses a shared passphrase. Guests do not each get a unique master key; session keys are derived through the handshake. A weak shared passphrase can allow offline guessing if an attacker captures a handshake. Protection of management frames (802.11w) is optional, not the default. WPA3 with management-frame protection addresses parts of this only when both the access point and the device support it. Single-source. These are reasons to keep encrypted connections, avoid weak passphrases where you control them, and prefer WPA3 where both sides support it. They are not a reason to say that hotel Wi-Fi decrypts banking.
 
 A documented incident shows that a pattern occurred. It does not show that every hotel is unsafe.
 
@@ -126,7 +126,7 @@ Basic habits: use the deadbolt, do not leave keycards behind, report lost cards 
 Treat it as untrusted. Use cellular data or a VPN you control, and verify the site's domain before entering credentials.
 
 **Can the hotel see my traffic?**
-They can see metadata: which sites you connect to, unencrypted DNS queries, and often the server name. The contents of a properly validated encrypted session are not readable from the network alone. Seeing those contents requires a further condition, such as an installed certificate or configuration profile, and that finding rests on a single authoritative source class. Whether a hotel logs timing, traffic volume, or full web addresses is not established.
+They can see metadata: which sites you connect to, unencrypted DNS queries, and often the server name. The contents of a properly validated encrypted session are not readable from the network alone. Seeing those contents requires a further condition, such as an installed certificate or configuration profile, and that finding rests on a single authoritative source class. Provisional — SNI/DNS supported; timing/volume and URL logging documented by vendor/industry sources, primary verification pending.
 
 **Should I use the hotel's "secure" network with a password?**
 A password limits access; it does not establish trust. The precautions above still apply.

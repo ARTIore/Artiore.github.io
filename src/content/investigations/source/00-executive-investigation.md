@@ -114,7 +114,7 @@ The encryption also protects less than people assume. On a shared network with a
 
 Second, pairing is a security boundary only if the implementation is correct. Documented vulnerability classes include:
 
-- **BlueBorne (2017)** — a set of vulnerabilities in Bluetooth stacks on Android, Linux, Windows and iOS allowing remote code execution or information disclosure without pairing (CVE-2017-1000251 and related).
+- **BlueBorne (2017)** — a set of Bluetooth-stack flaws. The Linux issue CVE-2017-1000251 is a stack overflow in BlueZ L2CAP handling, kernels 2.6.32 through 4.13.1. Remote use depends on documented conditions. It is not a universal attack without pairing. Single-source.
 - **KNOB (2019)** — key negotiation downgrade enabling brute-force of the encryption key (CVE-2019-9506).
 - **BIAS (2020)** — impersonation of a paired device by exploiting role-switch behaviour (CVE-2020-10135).
 - **SweynTooth (2020)** and **BrakTooth (2021)** — families of implementation flaws in SoCs and stacks causing crashes, deadlocks, or code execution.
@@ -630,7 +630,7 @@ The protocol is generally sound; implementations are not.
 
 | Class | Examples | Effect | Prerequisite |
 |---|---|---|---|
-| Stack memory corruption | BlueBorne (CVE-2017-1000251 family) | Code execution or info leak, sometimes without pairing | Vulnerable stack, proximity |
+| Stack memory corruption | BlueBorne (CVE-2017-1000251) | Linux L2CAP stack overflow, kernels 2.6.32–4.13.1; not universal unpaired code execution | Vulnerable BlueZ stack, proximity |
 | Key negotiation downgrade | KNOB (CVE-2019-9506) | Brute-force of link key | Vulnerable implementation, captured handshake |
 | Impersonation | BIAS (CVE-2020-10135) | Impersonate a bonded device | Vulnerable stack, proximity |
 | SoC/link-layer flaws | SweynTooth (2020), BrakTooth (2021) | Crash, deadlock, code execution | Vulnerable chipset, proximity |

@@ -9,6 +9,8 @@ date: "2026-10-26"
 
 A comparative view of the attack surfaces examined in this investigation. The matrix is designed for editors, policy teams, and security trainers who need to compare risks without collapsing them into a single "danger" score.
 
+Regional reporting — a U.S. complaint baseline, European dataset shares, Oceania, Southeast Asian cases, a UAE enforcement action, and the limits of thinner files — is on [Regional reporting, not a ranking](regional-reporting-limits). Those figures are not a country ranking, and they are not repeated here.
+
 ## How to read it
 
 **Prerequisite** describes what the attacker must have. It is the most important column: it converts "possible" into "possible for whom".

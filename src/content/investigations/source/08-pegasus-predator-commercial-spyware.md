@@ -40,9 +40,17 @@ In September 2026, Citizen Lab and the SHARE Foundation confirmed that an iPhone
 
 This case illustrates the modern pattern: a political moment, a wave of targeting, notifications from a platform, and forensic confirmation for a subset.
 
+The Pegasus Project analysed a list of more than 50,000 phone numbers selected as potential targets. A number on that list is not a confirmed infection. Single-source.
+
+A May 2025 civil award against NSO is a court outcome. It is not technical proof of every alleged infection. Single-source.
+
+The Million Dollar Dissident case is one documented targeting episode. It is not a prevalence study, and this page does not add a victim count for it. Single-source.
+
+A factory reset can destroy the artefacts that would prove an infection. Preserve the device before resetting it, with a trusted adviser. Single-source.
+
 ## What is not established
 
-- **The number of infections.** Known cases are those someone looked for.
+- **The number of infections.** A target list is not an infection record. Known cases are those someone looked for.
 - **The full customer list.** Vendors do not publish it; sanctions and reporting reveal fragments.
 - **Attribution in specific cases.** A confirmed infection does not, by itself, identify who operated it.
 - **Whether a given individual was targeted.** A single artefact is not proof.
@@ -56,7 +64,9 @@ Spyware firms buy exploit chains from brokers and independent researchers. Adver
 ## Legal and regulatory response
 
 - **WhatsApp v. NSO:** a U.S. court found NSO liable in December 2024; a jury awarded $444,719 in compensatory and $167.254 million in punitive damages in May 2025; in October 2025 the judge issued a permanent injunction and reduced punitive damages to just over $4 million. [Confirmed]
-- **U.S. Treasury sanctions** on Intellexa and its founder (September 2023), and later on linked entities and individuals.
+- **U.S. Treasury sanctions** on Intellexa-linked parties. On 30 December 2025, OFAC deleted three individuals from the SDN List under CYBER2: Sara Hamou, Andrea Gambazzi, and Merom Harpaz. The same deletion list did not name Intellexa or Cytrox as entities. That action does not support the sentence "Intellexa was delisted." Single-source.
+- A 2 November 2026 retrieval of the UK Sanctions List CSV returned no rows matching Intellexa, Cytrox, or Predator. That is a negative search of one official file on one date. It is not a claim that no country lists the entities, and naming variants may exist. Single-source.
+- Predator remains associated with Cytrox and the Intellexa consortium on the earlier record. That confirmation is separate from the dated sanctions action. Single-source.
 - **EU Parliament's PEGA committee** investigated spyware use and recommended reforms.
 - **National inquiries** in several countries have examined procurement and oversight.
 - **Apple Threat Notifications** give targets a signal they would otherwise lack.

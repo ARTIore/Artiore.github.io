@@ -192,6 +192,71 @@ export default function InvestigationHubPage() {
           <p className="mt-4 leading-relaxed text-cream/90">
             1 November 2026 — linked verification sources added to the source register and articles.
           </p>
+          <p className="mt-4 leading-relaxed text-cream/90">
+            2 November 2026 — DNS: CVE-2008-1447 is named without treating the record as a history of the
+            response; DNSChanger is labeled two-source; Sea Turtle is dozens of organisations, single-source;
+            Sitting Ducks “around one million” is an estimate; the Route 53 hijack loss is a reported figure of
+            roughly US$150,000; Emergency Directive 19-01 is dated 22 January 2019 and is not described as
+            prompted by the April 2019 Sea Turtle disclosure.
+          </p>
+          <p className="mt-4 leading-relaxed text-cream/90">
+            2 November 2026 — Bluetooth: BlueBorne is narrowed to CVE-2017-1000251, Linux kernels 2.6.32
+            through 4.13.1, under documented conditions. It is not a universal attack without pairing. BIAS
+            stays CVE-2020-10135. CVE-2020-12351 is a different BlueZ flaw. KNOB can force key entropy down
+            to one byte. May 2024 tracker alerts are compatibility-dependent. The same narrowing is applied in
+            the glossary, the executive summary, and the source register.
+          </p>
+          <p className="mt-4 leading-relaxed text-cream/90">
+            2 November 2026 — iPhone chains: FORCEDENTRY was fixed in iOS 14.8. BLASTPASS and Operation
+            Triangulation use 16.6.1 as the patch boundary. The BLASTPASS sources disagree on whether 16.6.1
+            is inside the affected range or is the fix, and that conflict is stated rather than averaged.
+            CVE-2025-24200 requires physical access and is not zero-click.
+          </p>
+          <p className="mt-4 leading-relaxed text-cream/90">
+            2 November 2026 — Android accessibility: Android 12, 13, and 15 mitigations are described as
+            partial. Anatsa’s figure of more than 100,000 Play installs is reported, not audited. The page does
+            not advise disabling accessibility.
+          </p>
+          <p className="mt-4 leading-relaxed text-cream/90">
+            2 November 2026 — Hotel Wi-Fi: the provisional metadata label is kept in full: SNI and DNS are
+            supported; timing, volume, and URL logging are documented by vendor and industry sources, and
+            primary verification is pending. Management-frame protection (802.11w) stays optional.
+          </p>
+          <p className="mt-4 leading-relaxed text-cream/90">
+            2 November 2026 — SIM swap: the verification-code path is documented and is not the only
+            messaging takeover route. Session revocation is separate from a password change. The routes are
+            not ranked.
+          </p>
+          <p className="mt-4 leading-relaxed text-cream/90">
+            2 November 2026 — Spyware: more than 50,000 Pegasus Project numbers are potential targets, not
+            confirmed infections. On 30 December 2025 OFAC deleted three individuals — Sara Hamou, Andrea
+            Gambazzi, and Merom Harpaz — and did not delete Intellexa or Cytrox as entities. A 2 November
+            2026 UK sanctions-list search found no rows for those three entity names.
+          </p>
+          <p className="mt-4 leading-relaxed text-cream/90">
+            2 November 2026 — Added one page on deepfakes and AI payment fraud. The AI fraud multiplier is
+            stated as a hypothesis. A reported MGM impact figure whose source was not fetched is omitted; the
+            help-desk vector and the US$45 million settlement are kept.
+          </p>
+          <p className="mt-4 leading-relaxed text-cream/90">
+            2 November 2026 — Added one regional page. Shares keep their denominators. No country ranking
+            and no client names. Rejected and unverified regional claims are named as excluded and are not
+            stated as fact.
+          </p>
+          <p className="mt-4 leading-relaxed text-cream/90">
+            2 November 2026 — Added a stalkerware safety-planning page. It recommends an advocate and
+            evidence preservation. It does not explain surveillance, and it does not use a rejected prevalence
+            figure.
+          </p>
+          <p className="mt-4 leading-relaxed text-cream/90">
+            2 November 2026 — Added an evidence-method page for the ledger split (39 verified in the ledger
+            plus 46 imported) and for named omissions V3A-19 and V3A-20. Those omissions are not entered as
+            new claims. Suppressed references are not reproduced.
+          </p>
+          <p className="mt-4 leading-relaxed text-cream/90">
+            2 November 2026 — The public safety checklist gains an eight-step reset. It is not a guarantee.
+            Lockdown Mode stays conditional. Advanced Data Protection exclusions are stated.
+          </p>
         </section>
 
         <AlsoOnArtiore href={investigationHubCompanionUrl} />

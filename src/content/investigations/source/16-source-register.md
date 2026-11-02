@@ -10,6 +10,8 @@ entries: 140
 
 Every material factual claim in the investigation maps to an entry below. Entries record the publisher, publication date, type, what the source supports, and a link or locator.
 
+How claims are refused, and how the ledger counts were derived, is on [Evidence method](evidence-method). That page does not reproduce suppressed references.
+
 ## Link policy
 
 - **Verified link:** the URL was checked at publication.
@@ -118,7 +120,7 @@ Every material factual claim in the investigation maps to an entry below. Entrie
 
 ## 4. Bluetooth and BLE
 
-**S46 — BlueBorne: Bluetooth vulnerabilities.** Armis, 2017. **R.** Supports: unpaired remote code execution class. Locator: armis.com research archive.
+**S46 — BlueBorne: Bluetooth vulnerabilities.** Armis, 2017. **R.** Supports: Linux BlueZ L2CAP stack overflow, CVE-2017-1000251, kernels 2.6.32–4.13.1. Not a universal unpaired attack. Locator: armis.com research archive.
 
 **S47 — CVE-2017-1000251.** NVD. **P.** https://nvd.nist.gov/vuln/detail/CVE-2017-1000251
 

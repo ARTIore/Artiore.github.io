@@ -94,7 +94,9 @@ export const verificationSourceGroups: VerificationGroup[] = [
     { url: "https://www.kaspersky.com/about/press-releases/global-kaspersky-report-reveals-digital-violence-has-increased", title: "Global Kaspersky report reveals digital violence has increased", publisher: "Kaspersky", date: "13 March 2024", usedFor: "Stalkerware 31,031 unique users in 2023; 29,312 in 2022" },
     { url: "https://securelist.com/state-of-stalkerware-2023/112135/", title: "Kaspersky 2023 report on stalkerware", publisher: "Securelist", date: "13 March 2024", usedFor: "Methodology; vendor telemetry caveat" },
     { url: "https://www.amnesty.org/en/latest/press-release/2021/07/the-pegasus-project/", title: "Massive data leak reveals NSO Group's spyware used to target activists, journalists, and political leaders globally", publisher: "Amnesty International", date: "19 July 2021", usedFor: "Pegasus Project 50,000 numbers; potential clients in 11 countries; 180 journalists in 20 countries" },
-    { url: "https://therecord.media/treasury-sanctions-intellexa-removed", title: "Treasury removes sanctions for three executives tied to spyware maker Intellexa", publisher: "The Record", date: "30 December 2025", usedFor: "Intellexa sanctions March/Sept 2024; delisting Dec 2025; Commerce Entity List July 2023" },
+    { url: "https://therecord.media/treasury-sanctions-intellexa-removed", title: "Treasury removes sanctions for three executives tied to spyware maker Intellexa", publisher: "The Record", date: "30 December 2025", usedFor: "Reporting on the 30 December 2025 removal of three individuals; not an entity delisting" },
+    { url: "https://ofac.treasury.gov/recent-actions/20251230", title: "OFAC recent action, 30 December 2025", publisher: "OFAC", date: "30 December 2025", usedFor: "Deletion of Hamou, Gambazzi and Harpaz under CYBER2; Intellexa and Cytrox not on this deletion list" },
+    { url: "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv", title: "UK Sanctions List CSV", publisher: "FCDO", date: "2 November 2026", usedFor: "Negative search for Intellexa, Cytrox and Predator on this date" },
     { url: "https://citizenlab.ca/2016/08/million-dollar-dissident-iphone-zero-day-nso-group-uae/", title: "Citizen Lab: The Million Dollar Dissident", publisher: "Citizen Lab", date: "August 2016", usedFor: "Ahmed Mansoor/Trident primary forensic report" },
   ] },
   { topic: "Cloud & accounts", sources: [
@@ -235,6 +237,8 @@ export const articleVerificationSources: Record<string, VerificationSource[]> = 
     { url: "https://nvd.nist.gov/vuln/detail/CVE-2025-43300", title: "CVE-2025-43300 — Apple ImageIO", publisher: "NIST NVD", date: "21 August 2025", usedFor: "2025 chain OS-level component; fixed iOS 18.6.2, 17.7.10, 16.7.12, 15.8.5" },
     { url: "https://support.apple.com/en-us/106361", title: "About the security content of iOS 16.6.1 and iPadOS 16.6.1", publisher: "Apple", date: "7 September 2023", usedFor: "BLASTPASS fix in iOS 16.6.1; CVE-2023-41064/-41061" },
     { url: "https://thehackernews.com/2023/12/most-sophisticated-iphone-hack-ever.html", title: "Most Sophisticated iPhone Hack Ever Exploited Apple's Hidden Hardware Feature", publisher: "The Hacker News, citing Kaspersky", date: "28 December 2023", usedFor: "Operation Triangulation affected iOS up to 16.2; CVE fix versions" },
+    { url: "https://nvd.nist.gov/vuln/detail/CVE-2025-24200", title: "CVE-2025-24200 — Apple USB Restricted Mode", publisher: "NIST NVD", date: "10 February 2025", usedFor: "Physical-access USB Restricted Mode bypass; not a remote zero-click chain" },
+    { url: "https://projectzero.google/2023/03/multiple-internet-to-baseband-remote-rce.html", title: "Multiple Internet to Baseband Remote Code Execution Vulnerabilities in Exynos Modems", publisher: "Google Project Zero", date: "16 March 2023", usedFor: "Exynos modem flaws are a separate, device-dependent path, not an iPhone chain" },
   ],
   "whatsapp-encryption-limits": [
     { url: "https://faq.whatsapp.com/378279804439436/?lang=en", title: "About linked devices", publisher: "WhatsApp Help Center" },
@@ -254,8 +258,10 @@ export const articleVerificationSources: Record<string, VerificationSource[]> = 
     { url: "https://citizenlab.ca/2023/09/blastpass-nso-group-iphone-zero-click-zero-day-exploit-captured-in-the-wild/", title: "Citizen Lab FORCEDENTRY/BLASTPASS", publisher: "Citizen Lab" },
     { url: "https://www.securityweek.com/whatsapp-catches-spyware-firm-nso-defying-no-hacking-court-order/", title: "WhatsApp Catches Spyware Firm NSO Defying No-Hacking Court Order", publisher: "SecurityWeek", date: "8 June 2026", usedFor: "NSO judgment: $444k compensatory, $167M punitive, reduced to $4M, permanent injunction" },
     { url: "https://www.reuters.com/5f374b32b07b/sustainability/society-equity/us-court-orders-spyware-company-nso-stop-targeting-whatsapp-reduces-damages-2025-10-18/", title: "US court orders spyware company NSO to stop targeting WhatsApp, reduces damages", publisher: "Reuters", date: "18 October 2025", usedFor: "NSO reduction/injunction" },
-    { url: "https://www.amnesty.org/en/latest/press-release/2021/07/the-pegasus-project/", title: "Massive data leak reveals NSO Group's spyware used to target activists, journalists, and political leaders globally", publisher: "Amnesty International", date: "19 July 2021", usedFor: "Pegasus Project 50,000 numbers; potential clients in 11 countries; 180 journalists in 20 countries" },
-    { url: "https://therecord.media/treasury-sanctions-intellexa-removed", title: "Treasury removes sanctions for three executives tied to spyware maker Intellexa", publisher: "The Record", date: "30 December 2025", usedFor: "Intellexa sanctions March/Sept 2024; delisting Dec 2025; Commerce Entity List July 2023" },
+    { url: "https://www.amnesty.org/en/latest/press-release/2021/07/the-pegasus-project/", title: "Massive data leak reveals NSO Group's spyware used to target activists, journalists, and political leaders globally", publisher: "Amnesty International", date: "19 July 2021", usedFor: "More than 50,000 numbers selected as potential targets, not confirmed infections" },
+    { url: "https://ofac.treasury.gov/recent-actions/20251230", title: "OFAC recent action, 30 December 2025", publisher: "OFAC", date: "30 December 2025", usedFor: "Deletion of Hamou, Gambazzi and Harpaz under CYBER2; Intellexa and Cytrox not on this deletion list" },
+    { url: "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv", title: "UK Sanctions List CSV", publisher: "FCDO", date: "2 November 2026", usedFor: "Negative search for Intellexa, Cytrox and Predator on this date" },
+    { url: "https://therecord.media/treasury-sanctions-intellexa-removed", title: "Treasury removes sanctions for three executives tied to spyware maker Intellexa", publisher: "The Record", date: "30 December 2025", usedFor: "Reporting on the 30 December 2025 removal of three individuals; not an entity delisting" },
     { url: "https://www.globalsecurity.org/intell/library/news/2019/intell-190131-presstv01.htm", title: "American mercenaries used 'Karma' to hack UAE's opponents: Reuters", publisher: "GlobalSecurity.org, citing Reuters/Press TV", date: "31 January 2019", usedFor: "Project Raven/Karma; 2016–2017 targeting; DarkMatter" },
     { url: "https://www.reuters.com/investigates/special-report/usa-spying-raven/", title: "Reuters special report: Project Raven", publisher: "Reuters", date: "30 January 2019", usedFor: "Primary Project Raven reporting" },
     { url: "https://citizenlab.ca/2016/08/million-dollar-dissident-iphone-zero-day-nso-group-uae/", title: "Citizen Lab: The Million Dollar Dissident", publisher: "Citizen Lab", date: "August 2016", usedFor: "Ahmed Mansoor/Trident primary forensic report" },
@@ -285,6 +291,7 @@ export const articleVerificationSources: Record<string, VerificationSource[]> = 
   "sim-swap-account-takeover": [
     { url: "https://www.fcc.gov/sim-swap", title: "FCC SIM-swap page (403/moved)", publisher: "FCC" },
     { url: "https://www.ic3.gov/PSA/2022/PSA220208", title: "Criminals Increasing SIM Swap Schemes to Steal Millions of Dollars from US Public", publisher: "FBI IC3", date: "8 February 2022", usedFor: "SIM-swap mechanism; verify carrier calls; strong MFA; don't store passwords" },
+    { url: "https://www.group-ib.com/blog/0ktapus/", title: "Group-IB 0ktapus", publisher: "Group-IB", usedFor: "Stolen session tokens used as the login; routes are not a ranking" },
   ],
   "hotel-keycard-lock-security": [
     { url: "https://unsaflok.com/", title: "Unsaflok disclosure", publisher: "unsaflok.com" },
@@ -295,6 +302,26 @@ export const articleVerificationSources: Record<string, VerificationSource[]> = 
   "digital-security-warning-signs": [
     { url: "https://docs.mvt.re/en/latest/", title: "MVT documentation", publisher: "MVT", date: "2026", usedFor: "Forensic analysis of backups/filesystem/sysdiagnose; preserve evidence" },
     { url: "https://www.ic3.gov/PSA/2024/PSA241203", title: "Criminals Use Generative Artificial Intelligence to Facilitate Financial Fraud", publisher: "FBI IC3", date: "3 December 2024", usedFor: "Code word/second-channel advice; AI voice/video fraud" },
+  ],
+  "deepfake-ai-payment-fraud": [
+    { url: "https://www.ic3.gov/Media/News/2024/240226.pdf", title: "FBI IC3 deepfake advisory", publisher: "FBI IC3", usedFor: "Deepfake or social engineering can be used to authorise a transfer; not a success rate" },
+    { url: "https://www.cnn.com/2024/02/04/asia/deepfake-cfo-scam-hong-kong-intl-hnk", title: "Finance worker pays out $25 million after video call with deepfake chief financial officer", publisher: "CNN", date: "4 February 2024", usedFor: "Reported Arup transfer of about HK$200 million, about US$25.6 million" },
+    { url: "https://www.fbi.gov/news/press-releases/cryptocurrency-and-ai-scams-bilk-americans-of-billions", title: "Cryptocurrency and AI Scams Bilk Americans of Billions", publisher: "FBI National Press Office", date: "6 April 2026", usedFor: "IC3 2025 AI category: 22,364 complaints and about US$893 million in reported losses" },
+    { url: "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf", title: "2025 Internet Crime Report (PDF)", publisher: "FBI IC3", date: "6 April 2026", usedFor: "Reported AI-related complaint category; not an audited census" },
+    { url: "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-320a", title: "CISA AA23-320A", publisher: "CISA", usedFor: "Help-desk vishing vector; the US$45 million settlement is the fetched figure" },
+    { url: "https://www.chainalysis.com/blog/crypto-hacking-stolen-funds-2025/", title: "Crypto hacking stolen funds", publisher: "Chainalysis", date: "2025", usedFor: "Approval-screen claim; figures on this page are estimates and are not an AI multiplier" },
+    { url: "https://fidoalliance.org/passkeys/", title: "FIDO Passkeys: Passwordless Authentication", publisher: "FIDO Alliance", usedFor: "Passkeys and origin binding" },
+  ],
+  "regional-reporting-limits": [
+    { url: "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf", title: "2025 Internet Crime Report (PDF)", publisher: "FBI IC3", date: "6 April 2026", usedFor: "1,008,597 complaints; US$20.877 billion reported losses; U.S. reporting channel" },
+    { url: "https://www.enisa.europa.eu/news/etl-2025-eu-consistently-targeted-by-diverse-yet-convergent-threat-groups", title: "EU consistently targeted by diverse yet convergent threat groups", publisher: "ENISA", date: "1 October 2025", usedFor: "4,875 incidents; DDoS 77%; phishing 60%; vulnerability exploitation 21.3%" },
+    { url: "https://english.news.cn/20241120/532f5f17c8c142a0bce71739ea3be34b/c.html", title: "Australians report cybercrime every 6 minutes", publisher: "Xinhua, citing ASD", date: "20 November 2024", usedFor: "87,400 or more cybercrime reports in FY23-24; reports are not victims" },
+    { url: "https://www.globalsecurity.org/security/library/news/2025/10/sec-251014-audod01.htm", title: "Annual Cyber Threat Report highlights persistent threat", publisher: "Australian Minister for Defence (via GlobalSecurity)", date: "14 October 2025", usedFor: "42,500 or more hotline calls; not the same count as reports" },
+    { url: "https://www.uaelegislation.gov.ae/en/legislations/1526", title: "UAE Legislation portal — Federal Decree-Law No. 34 of 2021", publisher: "UAE Government", date: "2021", usedFor: "Decree published 2021; in force 2 January 2022; no legal conclusion drawn here" },
+    { url: "https://www.infosecurity-magazine.com/news/lightspy-spyware-targets-ios/", title: "New LightSpy Spyware Targets iOS with Enhanced Capabilities", publisher: "Infosecurity Magazine, citing ThreatFabric", date: "29 October 2024", usedFor: "15-device sample; not a regional infection rate" },
+  ],
+  "stalkerware-safety-planning": [
+    { url: "https://arxiv.org/abs/1904.10600", title: "PETS 2019 (arXiv:1904.10600)", publisher: "Martin et al.", usedFor: "BLE advertising can remain trackable after address rotation; mechanism, not prevalence" },
   ],
   "perimeter": [
     { url: "https://csrc.nist.gov/pubs/sp/800/207/final", title: "Zero Trust Architecture; Google BeyondCorp", publisher: "NIST SP 800-207" },

@@ -26,7 +26,7 @@ export const investigationHub = {
   description:
     'How everyday technology can compromise privacy, identity and financial security. ARTIore Research Desk, Global Digital Exposure Investigation, version 1.0.',
   crumbName: 'Global Digital Exposure Investigation',
-  lastmod: '2026-11-01',
+  lastmod: '2026-11-02',
 }
 
 export type InvestigationPiece = {
@@ -83,6 +83,8 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "approx. 105 minutes",
     partsToc: true,
     printable: false,
+    dateModified: "2026-11-02",
+    lastmod: "2026-11-02",
   },
   {
     file: "01-password-protected-wifi-not-secure.md",
@@ -105,8 +107,8 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "7 minutes",
     partsToc: false,
     printable: false,
-    dateModified: "2026-11-01",
-    lastmod: "2026-11-01",
+    dateModified: "2026-11-02",
+    lastmod: "2026-11-02",
   },
   {
     file: "03-dns-hijacking-explained.md",
@@ -118,7 +120,8 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "7 minutes",
     partsToc: false,
     printable: false,
-    lastmod: "2026-11-01",
+    dateModified: "2026-11-02",
+    lastmod: "2026-11-02",
   },
   {
     file: "04-bluetooth-ble-tracking.md",
@@ -130,7 +133,8 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "7 minutes",
     partsToc: false,
     printable: false,
-    lastmod: "2026-11-01",
+    dateModified: "2026-11-02",
+    lastmod: "2026-11-02",
   },
   {
     file: "05-android-accessibility-service-malware.md",
@@ -142,7 +146,8 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "7 minutes",
     partsToc: false,
     printable: false,
-    lastmod: "2026-11-01",
+    dateModified: "2026-11-02",
+    lastmod: "2026-11-02",
   },
   {
     file: "06-iphone-zero-click-spyware.md",
@@ -154,7 +159,8 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "7 minutes",
     partsToc: false,
     printable: false,
-    lastmod: "2026-11-01",
+    dateModified: "2026-11-02",
+    lastmod: "2026-11-02",
   },
   {
     file: "07-whatsapp-encryption-limits.md",
@@ -166,7 +172,8 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "7 minutes",
     partsToc: false,
     printable: false,
-    lastmod: "2026-11-01",
+    dateModified: "2026-11-02",
+    lastmod: "2026-11-02",
   },
   {
     file: "08-pegasus-predator-commercial-spyware.md",
@@ -178,7 +185,8 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "8 minutes",
     partsToc: false,
     printable: false,
-    lastmod: "2026-11-01",
+    dateModified: "2026-11-02",
+    lastmod: "2026-11-02",
   },
   {
     file: "09-cloud-photo-account-takeover.md",
@@ -214,7 +222,8 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     readingTime: "6 minutes",
     partsToc: false,
     printable: false,
-    lastmod: "2026-11-01",
+    dateModified: "2026-11-02",
+    lastmod: "2026-11-02",
   },
   {
     file: "12-hotel-keycard-lock-security.md",
@@ -255,6 +264,66 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     lastmod: "2026-11-01",
   },
   {
+    file: "deepfake-ai-payment-fraud.md",
+    slug: "deepfake-ai-payment-fraud",
+    title: "Deepfakes and AI Payment Fraud",
+    seoTitle: "Deepfakes and AI Payment Fraud | Artiais.com",
+    description:
+      "A video call is not authentication. Reported deepfake transfers, the approval screen, and why an AI fraud multiplier is a hypothesis, not a measured figure.",
+    kicker: "Fraud",
+    readingTime: "6 minutes",
+    partsToc: false,
+    printable: false,
+    datePublished: "2026-11-02",
+    dateModified: "2026-11-02",
+    lastmod: "2026-11-02",
+  },
+  {
+    file: "regional-reporting-limits.md",
+    slug: "regional-reporting-limits",
+    title: "Regional Reporting, Not a Ranking",
+    seoTitle: "Regional Reporting, Not a Ranking | Artiais.com",
+    description:
+      "Regional figures are reporting windows, not a country ranking. A U.S. complaint baseline, European dataset shares, and the limits of thinner files.",
+    kicker: "Regions",
+    readingTime: "8 minutes",
+    partsToc: false,
+    printable: false,
+    datePublished: "2026-11-02",
+    dateModified: "2026-11-02",
+    lastmod: "2026-11-02",
+  },
+  {
+    file: "stalkerware-safety-planning.md",
+    slug: "stalkerware-safety-planning",
+    title: "Stalkerware and Safety Planning",
+    seoTitle: "Stalkerware and Safety Planning | Artiais.com",
+    description:
+      "Stalkerware is usually someone with access, not a stranger. Preserve evidence and plan with an advocate. A reset is not the first step.",
+    kicker: "Safety",
+    readingTime: "5 minutes",
+    partsToc: false,
+    printable: false,
+    datePublished: "2026-11-02",
+    dateModified: "2026-11-02",
+    lastmod: "2026-11-02",
+  },
+  {
+    file: "evidence-method.md",
+    slug: "evidence-method",
+    title: "Evidence Method",
+    seoTitle: "Evidence Method: What Was Held Back",
+    description:
+      "How this investigation holds claims back. Rejected, unverified, suppressed and legally held are different states, and the ledger counts are stated.",
+    kicker: "Method",
+    readingTime: "7 minutes",
+    partsToc: false,
+    printable: false,
+    datePublished: "2026-11-02",
+    dateModified: "2026-11-02",
+    lastmod: "2026-11-02",
+  },
+  {
     file: "13-global-threat-matrix.md",
     slug: "global-threat-matrix",
     title: "Global Threat Matrix",
@@ -263,6 +332,8 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     kicker: "Threat matrix",
     partsToc: false,
     printable: false,
+    dateModified: "2026-11-02",
+    lastmod: "2026-11-02",
   },
   {
     file: "14-public-safety-checklist.md",
@@ -273,6 +344,8 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     kicker: "Public safety checklist",
     partsToc: false,
     printable: true,
+    dateModified: "2026-11-02",
+    lastmod: "2026-11-02",
   },
   {
     file: "15-technical-glossary.md",
@@ -283,6 +356,8 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     kicker: "Glossary",
     partsToc: false,
     printable: false,
+    dateModified: "2026-11-02",
+    lastmod: "2026-11-02",
   },
   {
     file: "16-source-register.md",
@@ -293,7 +368,8 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     kicker: "Source register",
     partsToc: false,
     printable: false,
-    lastmod: "2026-11-01",
+    dateModified: "2026-11-02",
+    lastmod: "2026-11-02",
   },
 ]
 

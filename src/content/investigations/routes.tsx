@@ -24,6 +24,10 @@ const rawSources = {
   'perimeter.md': () => import('./source/perimeter.md?raw'),
   'browser-extensions-session-theft.md': () => import('./source/browser-extensions-session-theft.md?raw'),
   'digital-security-warning-signs.md': () => import('./source/digital-security-warning-signs.md?raw'),
+  'deepfake-ai-payment-fraud.md': () => import('./source/deepfake-ai-payment-fraud.md?raw'),
+  'regional-reporting-limits.md': () => import('./source/regional-reporting-limits.md?raw'),
+  'stalkerware-safety-planning.md': () => import('./source/stalkerware-safety-planning.md?raw'),
+  'evidence-method.md': () => import('./source/evidence-method.md?raw'),
 }
 
 export function investigationRouteLoaders(): Record<string, Loader> {
