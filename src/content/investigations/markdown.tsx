@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { SiteLink } from '../../components/content/SiteLink'
+import { OpensInNewTab, SiteLink } from '../../components/content/SiteLink'
 import { investigationBase } from './catalog'
 
 const linkClass =
@@ -53,6 +53,7 @@ function renderLink(href: string, children: ReactNode, key: number) {
     return (
       <a className={linkClass} href={href} key={key} rel="noreferrer" target="_blank">
         {children}
+        <OpensInNewTab />
       </a>
     )
   }

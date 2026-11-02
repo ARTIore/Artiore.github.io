@@ -1,3 +1,4 @@
+import { OpensInNewTab } from '../content/SiteLink'
 import {
   articleVerificationSources,
   verificationSourceGroups,
@@ -14,6 +15,7 @@ function SourceItem({ source }: { source: VerificationSource }) {
     <li className="leading-relaxed">
       <a className={linkClass} href={source.url} rel="noopener noreferrer" target="_blank">
         {source.title}
+        <OpensInNewTab />
       </a>
       <span className="text-cream/80"> — {source.publisher}</span>
       {source.date ? <span className="text-muted"> · {source.date}</span> : null}

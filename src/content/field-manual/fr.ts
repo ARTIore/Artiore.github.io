@@ -5,7 +5,7 @@ export const frenchManual: FieldManualContent = {
   "lang": "fr",
   "dir": "ltr",
   "path": "/field-manual/fr",
-  "headTitle": "Manuel de terrain ARTIORE, 23 October 2026 | Artiais.com",
+  "headTitle": "Manuel de terrain ARTIORE, 23 October 2026 | ARTIore",
   "description": "Lisez la synthèse, puis la note de situation, la page « cette semaine » et le dossier de plaidoyer de la seule région sur laquelle vous agirez vraiment.",
   "crumbName": "Manuel de terrain",
   "title": "Manuel de terrain ARTIORE",

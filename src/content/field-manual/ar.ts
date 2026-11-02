@@ -5,7 +5,7 @@ export const arabicManual: FieldManualContent = {
   "lang": "ar",
   "dir": "rtl",
   "path": "/field-manual/ar",
-  "headTitle": "الدليل الميداني ARTIORE، 23 October 2026 | Artiais.com",
+  "headTitle": "الدليل الميداني ARTIORE، 23 October 2026 | ARTIore",
   "description": "اقرأ الملخص التنفيذي، ثم إحاطة الوضع، وصفحة \"هذا الأسبوع\"، وحزمة المناصرة للإقليم الواحد الذي ستعمل بشأنه فعلًا. تجاوز الباقي إلى أن تحتاج إليه.",
   "crumbName": "الدليل الميداني",
   "title": "الدليل الميداني ARTIORE",

@@ -1,7 +1,7 @@
 import { createContext, useContext, useMemo, useState, type ReactNode } from 'react'
 import { Breadcrumbs } from '../seo/Breadcrumbs'
 import { SeoHead } from '../seo/SeoHead'
-import { SiteLink } from '../content/SiteLink'
+import { OpensInNewTab, SiteLink } from '../content/SiteLink'
 import type { FieldManualBlock, FieldManualContent, FieldManualLanguage } from '../../content/field-manual/types'
 import { BookletViewer, type BookletPageImage } from './BookletViewer'
 import { SincerityNote } from './SincerityNote'
@@ -157,6 +157,7 @@ function inlineNodes(text: string, state: TextState, keyPrefix: string) {
           target="_blank"
         >
           <bdi>{url}</bdi>
+          <OpensInNewTab />
         </a>,
       )
       if (trailing) nodes.push(<Plain key={`${keyPrefix}-u-${index}`} rtl={rtl} text={trailing} />)
