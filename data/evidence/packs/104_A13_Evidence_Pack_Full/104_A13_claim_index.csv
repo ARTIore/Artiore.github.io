@@ -1,0 +1,5 @@
+﻿claim_id,topic,verdict,source,source_url,corroboration,role
+C134,Spyware & surveillance,confirmed,Part 3 3E — Verified from an authoritative source.,,single,core
+C013,Bluetooth & BLE,confirmed,"Martin et al., PETS 2019 (arXiv:1904.10600)",,single,core
+C072,Bluetooth & BLE,confirmed,Part 3 3E — Verified from an authoritative source.,,single,core
+C190,Families & vulnerable users,rejected,Part 3 3B — Unsupported or contradicted.,,single,core

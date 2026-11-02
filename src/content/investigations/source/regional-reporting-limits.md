@@ -19,7 +19,7 @@ That is a U.S. reporting channel. It is not a global census, and it is not a den
 
 ## Europe
 
-ENISA's Threat Landscape 2025 summary gives a base of 4,875 EU incidents. Inside that set, DDoS was 77 percent, phishing was 60 percent of access paths, and vulnerability exploitation was 21.3 percent of intrusion access points. The categories overlap. They are not a pie that sums to 100, and they do not say which country was "most attacked." Single-source.
+ENISA's Threat Landscape 2025 summary gives a base of 4,875 EU incidents. → [C169](/investigations/digital-exposure/claims/#C169) Inside that set, DDoS was 77 percent, phishing was 60 percent of access paths, and vulnerability exploitation was 21.3 percent of intrusion access points. The categories overlap. They are not a pie that sums to 100, and they do not say which country was "most attacked." Single-source.
 
 Read the denominator before the percentage.
 

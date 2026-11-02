@@ -1,0 +1,18 @@
+claim_id,verdict,source,scope_note
+C001,confirmed-single-source,Part 3 verified / S43-S44,Captive portal credential capture.
+C007,confirmed-single-source,Part 3 verified / S43-S44,TLS interception requires rogue CA/profile.
+C063,confirmed-single-source,Part 3 verified / S43-S44,Captive portal can harvest account credentials without breaking encryption.
+C062,adjusted,Cloudflare SNI/DNS,SNI/DNS supported; timing/volume and URL logging provisional — vendor/industry sources, primary pending.
+C006,confirmed,Action Fraud / NW Fraud Forum,Booking partner-account takeover.
+C061,confirmed,Action Fraud / NW Fraud Forum,Guest phishing through platform messaging.
+C196,confirmed,R02,2026 Booking-confirmed reservation-data access and PIN reset.
+C058,adjusted,CISA AA23-320A / National Law Review,Help-desk vector and $45M; ~$100M attributed to 8-K.
+C186,confirmed,Corpus record,Three Starwood/Marriott figures; date/scope.
+C129,adjusted,NJ AG / corpus record,Three counts; use one with source.
+C174,confirmed,Microsoft reporting,CaptiveCrunch/Storm-2945 hotel-Wi-Fi campaign.
+C176,confirmed,BWH notice,Reservation web-application intrusion; no payment/bank details.
+C005,adjusted,Unsaflok,Pair of forged keycards; no known real-world exploitation.
+C147,adjusted,NVD/Wi-Fi,Shared PSK and per-session keys.
+C148,adjusted,Wi-Fi Alliance/NVD,802.11w optional; WPA3 MFP both ends.
+C060,rejected,Infosecurity/AFP release,Rejected as worded; corrected facts only.
+C130,confirmed,R36 source register,Source list ends S90; OM-13 suppression.

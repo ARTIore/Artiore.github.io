@@ -1,0 +1,13 @@
+﻿claim_id,topic,verdict,source,source_url,corroboration,a03_role
+C064,DNS,adjusted,CISA ED 19-01; Cloudflare DNS,,single,core
+C065,DNS,adjusted,NVD CVE-2008-1447,,single,core
+C066,DNS,confirmed,"FBI, Operation Ghost Click",,two-source,core
+C067,DNS,confirmed,"Cisco Talos, Sea Turtle",,single,core
+C068,DNS,adjusted,Sitting Ducks research,,single,core
+C069,DNS,adjusted,Public reporting on 2018 Route 53 BGP hijack,,single,core
+C070,DNS,confirmed,Part 3 3E — Verified from an authoritative source.,,single,core
+C150,DNS,adjusted,CISA Emergency Directive 19-01,,single,core
+C197,DNS,adjusted,CISA ED 19-01; R05/R15,,single,core
+C011,DNS,confirmed,"Let's Encrypt, How It Works",,single,core
+C009,DNS,confirmed,"Cisco Talos, Sea Turtle",,single,core
+C008,DNS,adjusted,CISA ED 19-01; FBI DNSChanger,,single,core

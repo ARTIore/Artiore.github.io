@@ -1,0 +1,10 @@
+﻿claim_id,topic,verdict,source,source_url,corroboration,a05_role
+C084,Smartphones & exploits,adjusted,Citizen Lab FORCEDENTRY,,single,core
+C085,Smartphones & exploits,adjusted,Citizen Lab BLASTPASS,,single,core
+C086,Smartphones & exploits,adjusted,Kaspersky/Citizen Lab Triangulation,,single,core
+C087,Smartphones & exploits,confirmed,NVD CVE-2025-24200,,single,core
+C088,Smartphones & exploits,adjusted,"Kaspersky, Coruna analysis",,single,core
+C089,Smartphones & exploits,confirmed,Part 3 3E — Verified from an authoritative source.,,single,core
+C091,Smartphones & exploits,adjusted,Project Zero Exynos reporting,,single,core
+C145,Smartphones & exploits,confirmed,Part 3 3E — Verified from an authoritative source.,,single,core
+C184,Smartphones & exploits,adjusted,Citizen Lab/R07 conflict,,single,core

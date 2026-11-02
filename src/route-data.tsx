@@ -64,6 +64,7 @@ const loaders: Record<string, Loader> = {
     return post.page
   }),
   ...investigationRouteLoaders(),
+  '/investigations/digital-exposure/claims': () => import('./pages/ClaimsPage'),
 }
 
 const notFoundLoader: Loader = () => import('./pages/NotFoundPage')

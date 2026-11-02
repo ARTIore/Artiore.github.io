@@ -46,6 +46,6 @@ These counts are derived from the ledger. They are not a census of all cybercrim
 
 ---
 
-**Related:** [Source register](source-register) · [Regional reporting, not a ranking](regional-reporting-limits) · [Global Digital Exposure Investigation](/investigations/digital-exposure/)
+**Related:** [Claim trace](/investigations/digital-exposure/claims/) · [Source register](source-register) · [Regional reporting, not a ranking](regional-reporting-limits) · [Global Digital Exposure Investigation](/investigations/digital-exposure/)
 
 **Part of the ARTIore Global Digital Exposure Investigation.**

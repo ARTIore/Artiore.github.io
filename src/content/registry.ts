@@ -5,7 +5,7 @@ import { legalPages } from './legal'
 import { libraryPages } from './library'
 import { carouselDecks, carouselOgImage } from './field-manual/carousels'
 import { carouselSeriesMeta, fieldManualMetas, pocketBookletMeta } from './field-manual/meta'
-import { academyMeta, contactMeta, engineMeta, homeMeta, systemMeta } from './meta'
+import { academyMeta, claimsMeta, contactMeta, engineMeta, homeMeta, systemMeta } from './meta'
 import { investigationLicenseUrl, investigationMeta } from './investigation'
 import { buildJsonLd } from '../seo/structuredData'
 import type { PageDocument, SeoEntry } from './types'
@@ -14,7 +14,7 @@ export { buildJsonLd }
 
 export const blogMeta = blogIndexMeta
 
-const customMetas = [homeMeta, contactMeta, engineMeta, systemMeta, academyMeta, blogMeta]
+const customMetas = [homeMeta, contactMeta, engineMeta, systemMeta, academyMeta, claimsMeta, blogMeta]
 
 const fieldManualAlternates = [
   ...fieldManualMetas.map((meta) => ({ hreflang: meta.inLanguage, path: meta.path })),

@@ -1,0 +1,5 @@
+﻿claim_id,topic,verdict,source,source_url,corroboration,a10_role
+C042,AI-related exposure,adjusted,FBI IC3 deepfake advisory,,single,core
+C115,AI-related exposure,confirmed,Part 3 3E — Verified from an authoritative source.,,single,core
+C116,AI-related exposure,confirmed,Part 3 3B — Verified from an authoritative source.,,single,core
+C055,Cross-cutting synthesis,adjusted,Chainalysis crypto crime reporting,,single,core

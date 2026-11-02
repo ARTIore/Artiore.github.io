@@ -106,7 +106,7 @@ Confusing the three markets produces bad advice. If you treat mass fraud as targ
 
 **Metadata exposure is not content access.** A network operator can see destinations, DNS queries and TLS SNI without reading the encrypted content. The SNI observation is a documented TLS mechanism; the broader metadata exposure depends on the network. Timing and volume are not established. That is a real exposure — it can reveal a source, a medical appointment or a business deal — but it is not the same as reading the message. The distinction matters because the remedy is different: content encryption does not hide metadata; a VPN or a relay may reduce it.
 
-**Historical incident is not current exposure.** A patched 2019 vulnerability is not a statement about a current phone. Dates and affected versions matter. BLASTPASS was observed on iOS 16.6 and fixed in 16.6.1; FORCEDENTRY affected iOS before 14.8 and was fixed in 14.8. A reader who believes the wrong version may conclude that updating is useless.
+**Historical incident is not current exposure.** A patched 2019 vulnerability is not a statement about a current phone. Dates and affected versions matter. BLASTPASS was observed on iOS 16.6 and fixed in 16.6.1; FORCEDENTRY affected iOS before 14.8 and was fixed in 14.8. → [C084](/investigations/digital-exposure/claims/#C084) A reader who believes the wrong version may conclude that updating is useless.
 
 ---
 
