@@ -27,7 +27,7 @@ export const investigationLicenseUrl = 'https://creativecommons.org/licenses/by/
 export const investigationHub = {
   path: investigationBase,
   title: 'Global Digital Exposure Investigation',
-  headTitle: 'Global Digital Exposure Investigation | Artiais.com',
+  headTitle: 'Global Digital Exposure Investigation | ARTIore',
   description:
     'How everyday technology can compromise privacy, identity and financial security. ARTIore Research Desk, Global Digital Exposure Investigation, version 1.0.',
   crumbName: 'Global Digital Exposure Investigation',
@@ -82,7 +82,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     file: "00-executive-investigation.md",
     slug: "executive-investigation",
     title: "The Invisible Attack Surface",
-    seoTitle: "The Invisible Attack Surface Report | Artiais.com",
+    seoTitle: "The Invisible Attack Surface Report | ARTIore",
     description: "The purpose of this report is not to convince you that you are under attack. It is to make sure you never mistake unfamiliarity with safety.",
     kicker: "Executive investigation",
     readingTime: "approx. 105 minutes",
@@ -246,7 +246,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     file: "browser-extensions-session-theft.md",
     slug: "browser-extensions-session-theft",
     title: "Browser Extensions and Session Theft: Why MFA Is Not the Last Barrier",
-    seoTitle: "Browser Extensions and Session Theft | Artiais.com",
+    seoTitle: "Browser Extensions and Session Theft | ARTIore",
     description:
       "Multifactor authentication protects the login process. After login, a service often relies on a session credential to recognize the browser.",
     partsToc: false,
@@ -272,7 +272,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     file: "deepfake-ai-payment-fraud.md",
     slug: "deepfake-ai-payment-fraud",
     title: "Deepfakes and AI Payment Fraud",
-    seoTitle: "Deepfakes and AI Payment Fraud | Artiais.com",
+    seoTitle: "Deepfakes and AI Payment Fraud | ARTIore",
     description:
       "A video call is not authentication. Reported deepfake transfers, the approval screen, and why an AI fraud multiplier is a hypothesis, not a measured figure.",
     kicker: "Fraud",
@@ -287,7 +287,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     file: "regional-reporting-limits.md",
     slug: "regional-reporting-limits",
     title: "Regional Reporting, Not a Ranking",
-    seoTitle: "Regional Reporting, Not a Ranking | Artiais.com",
+    seoTitle: "Regional Reporting, Not a Ranking | ARTIore",
     description:
       "Regional figures are reporting windows, not a country ranking. A U.S. complaint baseline, European dataset shares, and the limits of thinner files.",
     kicker: "Regions",
@@ -302,7 +302,7 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     file: "stalkerware-safety-planning.md",
     slug: "stalkerware-safety-planning",
     title: "Stalkerware and Safety Planning",
-    seoTitle: "Stalkerware and Safety Planning | Artiais.com",
+    seoTitle: "Stalkerware and Safety Planning | ARTIore",
     description:
       "Stalkerware is usually someone with access, not a stranger. Preserve evidence and plan with an advocate. A reset is not the first step.",
     kicker: "Safety",

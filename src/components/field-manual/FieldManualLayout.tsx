@@ -83,13 +83,38 @@ const CHROME: Record<string, { contents: string; hide: string; print: string; la
   ar: { contents: 'المحتويات', hide: 'إخفاء المحتويات', print: 'طباعة / حفظ PDF', languages: 'اللغات', onThisPage: 'في هذه الصفحة', disclaimers: 'تنبيهات' },
 }
 
+/** Keyed by the manual language code, the same code FieldManualLanguage uses. */
+const NEW_TAB_TEXT: Record<string, string> = {
+  en: '(opens in a new tab)',
+  fr: "(s'ouvre dans un nouvel onglet)",
+  ar: '(يفتح في علامة تبويب جديدة)',
+}
+
 type TextState = {
   dir: 'ltr' | 'rtl'
+  lang: string
+  newTab: string
+  noticeDir: 'ltr' | 'rtl'
   glosses?: Record<string, string>
   pending?: Set<string>
 }
 
-const TextContext = createContext<TextState>({ dir: 'ltr' })
+const TextContext = createContext<TextState>({
+  dir: 'ltr',
+  lang: 'en',
+  newTab: NEW_TAB_TEXT.en,
+  noticeDir: 'ltr',
+})
+
+function newTabFor(manual: FieldManualContent, languages: readonly FieldManualLanguage[]) {
+  const language = languages.find((item) => item.code === manual.lang || item.code === manual.code)
+  const lang = language?.code ?? manual.lang
+  return {
+    lang,
+    dir: language?.dir ?? manual.dir,
+    text: NEW_TAB_TEXT[lang] ?? NEW_TAB_TEXT.en,
+  }
+}
 
 function trimUrl(raw: string) {
   let url = raw
@@ -157,6 +182,10 @@ function inlineNodes(text: string, state: TextState, keyPrefix: string) {
           target="_blank"
         >
           <bdi>{url}</bdi>
+          <span className="sr-only" dir={state.noticeDir} lang={state.lang}>
+            {' '}
+            {state.newTab}
+          </span>
         </a>,
       )
       if (trailing) nodes.push(<Plain key={`${keyPrefix}-u-${index}`} rtl={rtl} text={trailing} />)
@@ -386,17 +415,23 @@ function BlockBody({ block }: { block: FieldManualBlock }) {
 function BlockView({
   block,
   dir,
+  lang,
+  newTab,
+  noticeDir,
   glosses,
   glossLabels,
 }: {
   block: FieldManualBlock
   dir: 'ltr' | 'rtl'
+  lang: string
+  newTab: string
+  noticeDir: 'ltr' | 'rtl'
   glosses?: Record<string, string>
   glossLabels?: Set<string>
 }) {
   const pending = glossLabels?.size ? new Set(glossLabels) : undefined
   return (
-    <TextContext.Provider value={{ dir, glosses, pending }}>
+    <TextContext.Provider value={{ dir, lang, newTab, noticeDir, glosses, pending }}>
       <BlockBody block={block} />
     </TextContext.Provider>
   )
@@ -460,6 +495,7 @@ export function FieldManualLayout({
   const [tocOpen, setTocOpen] = useState(false)
   const [view, setView] = useState<'text' | 'booklet'>('text')
   const chrome = CHROME[manual.code] ?? CHROME.en
+  const newTab = newTabFor(manual, languages)
   const alternates = useMemo(() => {
     const published = languages.filter((language) => language.available)
     if (published.length === 0) return undefined
@@ -606,6 +642,9 @@ export function FieldManualLayout({
                 glossLabels={plan.get(index)}
                 glosses={glosses}
                 key={`${block.type}-${index}`}
+                lang={newTab.lang}
+                newTab={newTab.text}
+                noticeDir={newTab.dir}
               />
             ))}
           </div>

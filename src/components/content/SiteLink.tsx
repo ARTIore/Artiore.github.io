@@ -30,7 +30,7 @@ type SiteLinkProps = {
   onClick?: () => void
 }
 
-function OpensInNewTab() {
+export function OpensInNewTab() {
   return <span className="sr-only"> (opens in a new tab)</span>
 }
 

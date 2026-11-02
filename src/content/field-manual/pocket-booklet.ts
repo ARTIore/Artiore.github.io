@@ -5,7 +5,7 @@ export const pocketBooklet: FieldManualContent = {
   lang: 'en',
   dir: 'ltr',
   path: '/field-manual/pocket-booklet',
-  headTitle: 'ARTIORE Pocket Booklet, 23 October 2026 | Artiais.com',
+  headTitle: 'ARTIORE Pocket Booklet, 23 October 2026 | ARTIore',
   description:
     'This is a pocket booklet for people who want to be useful without becoming propagandists. It is designed to be read in an hour and used for a month.',
   crumbName: 'Pocket Booklet',

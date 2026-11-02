@@ -1,3 +1,5 @@
+import { OpensInNewTab } from '../content/SiteLink'
+
 const linkClass =
   'text-gold-bright underline decoration-gold/40 underline-offset-4 hover:decoration-gold-bright'
 
@@ -8,6 +10,7 @@ export function AlsoOnArtiore({ href }: { href: string }) {
       Also on artiore.com:{' '}
       <a className={linkClass} href={href} rel="noopener noreferrer" target="_blank">
         {href}
+        <OpensInNewTab />
       </a>
     </p>
   )

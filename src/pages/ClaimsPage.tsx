@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SeoHead } from '../components/seo/SeoHead'
-import { SiteLink } from '../components/content/SiteLink'
+import { OpensInNewTab, SiteLink } from '../components/content/SiteLink'
 import { claimsPageData } from '../content/investigations/claims-data'
 import { claimsMeta } from '../content/meta'
 
@@ -114,6 +114,7 @@ export default function ClaimsPage() {
                       {source.url ? (
                         <a className={linkClass} href={source.url} rel="noreferrer" target="_blank">
                           {source.name || source.url}
+                          <OpensInNewTab />
                         </a>
                       ) : (
                         <span className="text-cream/90">{source.name}</span>

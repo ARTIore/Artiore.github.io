@@ -5,7 +5,7 @@ export const englishManual: FieldManualContent = {
   "lang": "en",
   "dir": "ltr",
   "path": "/field-manual",
-  "headTitle": "ARTIORE Field Manual, 23 October 2026 | Artiais.com",
+  "headTitle": "ARTIORE Field Manual, 23 October 2026 | ARTIore",
   "description": "Read Part I for the seven regional briefs, Part II for the cross-cutting projects, Part III for the 30-day conduct plan, and keep Part IV as a reference.",
   "crumbName": "Field Manual",
   "title": "ARTIORE Field Manual",
