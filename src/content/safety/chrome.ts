@@ -22,5 +22,9 @@ export const safetyChrome = {
     { href: '/academy/recovery', label: 'Recovery steps' },
     { href: '/academy/navigator', label: 'Safety navigator' },
     { href: '/academy/evidence', label: 'Evidence explorer' },
+    { href: '/academy/research', label: 'Research review' },
+    { href: '/academy/research/provenance', label: 'Source links' },
+    { href: '/academy/research/corrections', label: 'Correction requests' },
+    { href: '/academy/research/contradictions', label: 'Possible disagreements' },
   ],
 } as const

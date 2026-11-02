@@ -73,6 +73,46 @@ export const navigatorMeta = {
   lastmod: '2026-11-02',
 }
 
+export const researchMeta = {
+  path: '/academy/research',
+  headTitle: 'Research integrity review | ARTIore',
+  description:
+    'Count gaps in illustrative claim and correction files. A word such as published, inside a file, is not approval. Nothing on this page is uploaded.',
+  kind: 'page' as const,
+  crumbName: 'Research review',
+  lastmod: '2026-11-02',
+}
+
+export const provenanceMeta = {
+  path: '/academy/research/provenance',
+  headTitle: 'Source links behind a claim | ARTIore',
+  description:
+    'See which illustrative claims cite a link, and which correction requests point at a claim. A line is not proof. Nothing on this page is uploaded.',
+  kind: 'page' as const,
+  crumbName: 'Source links',
+  lastmod: '2026-11-02',
+}
+
+export const correctionsMeta = {
+  path: '/academy/research/corrections',
+  headTitle: 'Correction requests stay local | ARTIore',
+  description:
+    'Read or draft a correction request on this device. Downloading a file does not send it. A published label in a file is not approval.',
+  kind: 'page' as const,
+  crumbName: 'Correction requests',
+  lastmod: '2026-11-02',
+}
+
+export const contradictionMeta = {
+  path: '/academy/research/contradictions',
+  headTitle: 'Possible disagreements to review | ARTIore',
+  description:
+    'Simple word checks flag illustrative sentences that may disagree. The flags can be wrong. A person must decide. Nothing on this page is uploaded.',
+  kind: 'page' as const,
+  crumbName: 'Possible disagreements',
+  lastmod: '2026-11-02',
+}
+
 export const evidenceMeta = {
   path: '/academy/evidence',
   headTitle: 'Evidence explorer | Check a claim record locally | ARTIore',

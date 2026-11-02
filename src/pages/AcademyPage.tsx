@@ -99,6 +99,7 @@ export default function AcademyPage() {
           <nav aria-label="On this page" className="mt-6 flex flex-wrap gap-2">
             {[
               ['#tools', 'Practice tools'],
+              ['#research', 'Research review'],
               ['#evidence', 'Evidence labels'],
               ['#framework', 'Six layers'],
               ['#controls', 'Your controls'],
@@ -141,6 +142,41 @@ export default function AcademyPage() {
                 Evidence explorer
               </SiteLink>
               <span className="text-cream/90"> — check a claim file before anyone calls it published.</span>
+            </li>
+          </ul>
+        </section>
+
+        <section className="mt-12 border-t border-white/10 pt-8" id="research">
+          <h2 className="font-serif text-3xl text-gold-bright">Research review</h2>
+          <p className="mt-4 max-w-[68ch] text-cream/90">
+            Research pages are separate from these lessons. They do not replace the investigation’s source register or
+            its corrections log. The records there are illustrative and unverified. A status inside a file is not
+            approval.
+          </p>
+          <ul className="mt-4 space-y-2">
+            <li>
+              <SiteLink className={linkClass} href="/academy/research">
+                Research review
+              </SiteLink>
+              <span className="text-cream/90"> — counts gaps. It does not decide what is true.</span>
+            </li>
+            <li>
+              <SiteLink className={linkClass} href="/academy/research/provenance">
+                Source links
+              </SiteLink>
+              <span className="text-cream/90"> — a request or a citation. Not proof.</span>
+            </li>
+            <li>
+              <SiteLink className={linkClass} href="/academy/research/corrections">
+                Correction requests
+              </SiteLink>
+              <span className="text-cream/90"> — a draft stays on your device.</span>
+            </li>
+            <li>
+              <SiteLink className={linkClass} href="/academy/research/contradictions">
+                Possible disagreements
+              </SiteLink>
+              <span className="text-cream/90"> — word checks a person still has to judge.</span>
             </li>
           </ul>
         </section>
@@ -226,11 +262,11 @@ export default function AcademyPage() {
             These settings affect only this page. No account, no analytics, no tracking, and no cloud copy.
           </p>
           <div className="mt-4 rounded-2xl border border-gold/20 p-4">
-            <div className="flex flex-wrap items-center gap-3">
-              <label htmlFor="fontSize">
+            <div className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-2">
+              <label className="block min-w-0" htmlFor="fontSize">
                 Text size
                 <select
-                  className="ml-2 min-h-11 rounded-full border border-gold/40 bg-ink px-3 text-cream"
+                  className="mt-1 block w-full min-w-0 max-w-full rounded-full border border-gold/40 bg-ink px-3 py-2 text-cream"
                   id="fontSize"
                   onChange={(event) => setFontSize(event.target.value as 'normal' | 'large')}
                   value={fontSize}
@@ -239,10 +275,10 @@ export default function AcademyPage() {
                   <option value="large">Large</option>
                 </select>
               </label>
-              <label htmlFor="pace">
+              <label className="block min-w-0" htmlFor="pace">
                 Reading pace
                 <select
-                  className="ml-2 min-h-11 rounded-full border border-gold/40 bg-ink px-3 text-cream"
+                  className="mt-1 block w-full min-w-0 max-w-full rounded-full border border-gold/40 bg-ink px-3 py-2 text-cream"
                   id="pace"
                   onChange={(event) => setPace(event.target.value as 'normal' | 'spacious')}
                   value={pace}
@@ -251,10 +287,10 @@ export default function AcademyPage() {
                   <option value="spacious">Spacious</option>
                 </select>
               </label>
-              <label htmlFor="depth">
+              <label className="block min-w-0" htmlFor="depth">
                 Explanation depth
                 <select
-                  className="ml-2 min-h-11 rounded-full border border-gold/40 bg-ink px-3 text-cream"
+                  className="mt-1 block w-full min-w-0 max-w-full rounded-full border border-gold/40 bg-ink px-3 py-2 text-cream"
                   id="depth"
                   onChange={(event) => setDepth(event.target.value as 'simple' | 'detail')}
                   value={depth}
@@ -293,10 +329,10 @@ export default function AcademyPage() {
             </SiteLink>
             .
           </p>
-          <label className="mt-4 block" htmlFor="lesson">
+          <label className="mt-4 block min-w-0 max-w-full" htmlFor="lesson">
             Lesson
             <select
-              className="ml-2 min-h-11 rounded-full border border-gold/40 bg-ink px-3 text-cream"
+              className="mt-1 block w-full min-w-0 max-w-full rounded-full border border-gold/40 bg-ink px-3 py-2 text-cream"
               disabled={paused}
               id="lesson"
               onChange={(event) => {

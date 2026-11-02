@@ -40,10 +40,26 @@ export const primaryNav: NavItem[] = [
       { label: 'UAE dossier', href: '/dossier' },
       { label: 'Field manual', href: '/field-manual' },
       { label: 'Digital safety academy', href: '/academy' },
+    ],
+  },
+  {
+    label: 'Learning',
+    children: [
+      { label: 'Digital safety lab', href: '/academy' },
       { label: 'Threat practice lab', href: '/academy/threat-lab' },
-      { label: 'Recovery steps', href: '/academy/recovery' },
       { label: 'Safety navigator', href: '/academy/navigator' },
+      { label: 'Recovery steps', href: '/academy/recovery' },
       { label: 'Evidence explorer', href: '/academy/evidence' },
+    ],
+  },
+  {
+    label: 'Research',
+    children: [
+      { label: 'Research review', href: '/academy/research' },
+      { label: 'Evidence explorer', href: '/academy/evidence' },
+      { label: 'Source links', href: '/academy/research/provenance' },
+      { label: 'Correction requests', href: '/academy/research/corrections' },
+      { label: 'Possible disagreements', href: '/academy/research/contradictions' },
     ],
   },
   {
@@ -85,6 +101,10 @@ export const footerPages: NavLinkItem[] = [
   { label: 'Recovery steps', href: '/academy/recovery' },
   { label: 'Safety navigator', href: '/academy/navigator' },
   { label: 'Evidence explorer', href: '/academy/evidence' },
+  { label: 'Research review', href: '/academy/research' },
+  { label: 'Source links', href: '/academy/research/provenance' },
+  { label: 'Correction requests', href: '/academy/research/corrections' },
+  { label: 'Possible disagreements', href: '/academy/research/contradictions' },
   { label: 'Global Digital Exposure Investigation', href: '/investigations/digital-exposure/' },
   { label: 'Public safety checklist', href: '/investigations/digital-exposure/public-safety-checklist/' },
   { label: 'Deepfakes and AI payment fraud', href: '/investigations/digital-exposure/deepfake-ai-payment-fraud/' },

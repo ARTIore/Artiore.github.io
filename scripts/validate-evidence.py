@@ -231,7 +231,135 @@ def check_record(issues: Issues, path: str, value: object) -> None:
             issues.add(f"{path}/conflicting_evidence", "A disputed record needs conflicting evidence.")
 
 
-def validate_data(data: object) -> list[str]:
+SCHEMA_VERSION = "1.1"
+CORRECTION_ID = re.compile(r"^ART-COR-[0-9]{4,}$")
+CORRECTION_STATUSES = {
+    "SUBMITTED_DRAFT",
+    "UNDER_REVIEW",
+    "NEEDS_EVIDENCE",
+    "ACCEPTED",
+    "DECLINED",
+    "PUBLISHED",
+    "WITHDRAWN",
+}
+CORRECTION_KEYS = {
+    "correction_id",
+    "claim_id",
+    "original_statement",
+    "proposed_statement",
+    "reason",
+    "evidence_urls",
+    "status",
+    "submitted_at",
+    "reviewed_at",
+    "reviewer",
+    "decision_reason",
+    "publication_authorization",
+    "revision_history",
+    "public_note",
+}
+
+
+def check_correction(issues: Issues, path: str, value: object) -> None:
+    if not isinstance(value, dict):
+        issues.add(path, "Each correction must be an object.")
+        return
+    reject_unknown(issues, path, value, CORRECTION_KEYS)
+    for key in ("correction_id", "claim_id", "original_statement", "proposed_statement", "reason", "evidence_urls", "status", "revision_history"):
+        if key not in value:
+            issues.add(f"{path}/{key}", "This field is required.")
+    if not (isinstance(value.get("correction_id"), str) and CORRECTION_ID.fullmatch(value["correction_id"])):
+        issues.add(f"{path}/correction_id", "Correction id must look like ART-COR-0001.")
+    if not (isinstance(value.get("claim_id"), str) and CLAIM_ID.fullmatch(value["claim_id"])):
+        issues.add(f"{path}/claim_id", "Claim id must look like ART-EVD-0001.")
+    if not non_empty(value.get("original_statement")):
+        issues.add(f"{path}/original_statement", "The original statement cannot be empty.")
+    if not non_empty(value.get("proposed_statement")):
+        issues.add(f"{path}/proposed_statement", "The proposed statement cannot be empty.")
+    if not non_empty(value.get("reason")):
+        issues.add(f"{path}/reason", "The reason cannot be empty.")
+    urls = value.get("evidence_urls")
+    if not isinstance(urls, list):
+        issues.add(f"{path}/evidence_urls", "Supporting links must be a list.")
+    else:
+        for index, url in enumerate(urls):
+            check_url(issues, f"{path}/evidence_urls/{index}", url)
+    if value.get("status") not in CORRECTION_STATUSES:
+        issues.add(f"{path}/status", "Correction status is not a known state.")
+    if "submitted_at" in value and value["submitted_at"] is not None:
+        check_date(issues, f"{path}/submitted_at", value["submitted_at"])
+    if "reviewed_at" in value and value["reviewed_at"] is not None:
+        check_date(issues, f"{path}/reviewed_at", value["reviewed_at"])
+    if "reviewer" in value and value["reviewer"] is not None and not isinstance(value["reviewer"], str):
+        issues.add(f"{path}/reviewer", "Reviewer must be text or null.")
+    if "decision_reason" in value and value["decision_reason"] is not None and not isinstance(value["decision_reason"], str):
+        issues.add(f"{path}/decision_reason", "Decision reason must be text or null.")
+    if "public_note" in value and not isinstance(value["public_note"], str):
+        issues.add(f"{path}/public_note", "The public note must be text.")
+    history = value.get("revision_history")
+    if not isinstance(history, list):
+        issues.add(f"{path}/revision_history", "Revision history must be a list.")
+    else:
+        for index, item in enumerate(history):
+            check_revision(issues, f"{path}/revision_history/{index}", item)
+    needs_authorization = value.get("status") in {"ACCEPTED", "PUBLISHED"}
+    authorization = value.get("publication_authorization")
+    if authorization is None:
+        if needs_authorization:
+            issues.add(f"{path}/publication_authorization", "A published or accepted correction must name who authorized it.")
+    elif not isinstance(authorization, dict):
+        issues.add(f"{path}/publication_authorization", "A published or accepted correction must name who authorized it.")
+    else:
+        reject_unknown(issues, f"{path}/publication_authorization", authorization, {"approver", "approved_at", "action"})
+        if not non_empty(authorization.get("approver")) or not non_empty(authorization.get("action")):
+            issues.add(f"{path}/publication_authorization", "A published or accepted correction must name who authorized it.")
+        check_date(issues, f"{path}/publication_authorization/approved_at", authorization.get("approved_at"))
+
+
+def validate_corrections(data: object) -> list[str]:
+    issues = Issues()
+    if not isinstance(data, list):
+        check_correction(issues, "", data)
+        return list(issues)
+    if not 1 <= len(data) <= 2000:
+        issues.add("", "Provide one correction, or a list of 1 to 2000 corrections.")
+    seen: set[str] = set()
+    for index, record in enumerate(data):
+        check_correction(issues, f"/{index}", record)
+        if isinstance(record, dict) and isinstance(record.get("correction_id"), str):
+            correction_id = record["correction_id"]
+            if correction_id in seen:
+                issues.add(f"/{index}/correction_id", f"Duplicate correction id {correction_id}.")
+            seen.add(correction_id)
+    return list(issues)
+
+
+def validate_exchange(data: object) -> list[str]:
+    issues = Issues()
+    if not isinstance(data, dict):
+        issues.add("", "An exchange file must be an object.")
+        return list(issues)
+    reject_unknown(issues, "", data, {"schema_version", "claims", "corrections", "label"})
+    if data.get("schema_version") != SCHEMA_VERSION:
+        issues.add("/schema_version", f"This file must say schema_version {SCHEMA_VERSION}. Version 1.0 is not checked here.")
+    if "label" in data and not isinstance(data["label"], str):
+        issues.add("/label", "The label must be text.")
+    claims = data.get("claims")
+    corrections = data.get("corrections")
+    if not isinstance(claims, list) or len(claims) > 2000:
+        issues.add("/claims", "Claims must be a list of at most 2000 records.")
+    elif claims:
+        for item in _validate_evidence(claims):
+            issues.append(f"/claims{item}" if item.startswith("/") else f"/claims: {item}")
+    if not isinstance(corrections, list) or len(corrections) > 2000:
+        issues.add("/corrections", "Corrections must be a list of at most 2000 records.")
+    elif corrections:
+        for item in validate_corrections(corrections):
+            issues.append(f"/corrections{item}" if item.startswith("/") else f"/corrections: {item}")
+    return list(issues)
+
+
+def _validate_evidence(data: object) -> list[str]:
     issues = Issues()
     if isinstance(data, list):
         if not 1 <= len(data) <= 2000:
@@ -247,6 +375,26 @@ def validate_data(data: object) -> list[str]:
     else:
         check_record(issues, "", data)
     return list(issues)
+
+
+def _is_exchange(data: object) -> bool:
+    return isinstance(data, dict) and {"schema_version", "claims", "corrections"} <= set(data)
+
+
+def _is_correction_document(data: object) -> bool:
+    if isinstance(data, dict):
+        return "correction_id" in data
+    return isinstance(data, list) and len(data) > 0 and all(isinstance(item, dict) and "correction_id" in item for item in data)
+
+
+def validate_data(data: object) -> list[str]:
+    if _is_exchange(data):
+        return validate_exchange(data)
+    if _is_correction_document(data):
+        return validate_corrections(data)
+    if isinstance(data, list) and any(isinstance(item, dict) and "correction_id" in item for item in data):
+        return ["Do not mix claims and corrections in one list. Use an exchange file."]
+    return _validate_evidence(data)
 
 
 def validate_text(text: str) -> list[str]:
