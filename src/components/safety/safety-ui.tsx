@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { Breadcrumbs } from '../seo/Breadcrumbs'
 import { SeoHead } from '../seo/SeoHead'
-import { SiteLink } from '../content/SiteLink'
+import { ExternalLink, SiteLink } from '../content/SiteLink'
 import { safetyChrome } from '../../content/safety/chrome'
 import { glossaryTerms } from '../../content/safety/glossary'
 import { getSafetyLocale, safetyLocales } from '../../content/safety/locales'
@@ -54,10 +54,19 @@ export function LanguageNote() {
   const rtl = planned.filter((item) => item.dir === 'rtl')
   return (
     <p className="mt-4 max-w-[68ch] text-sm text-muted">
-      This page is in {current.nativeLabel}.{' '}
-      {planned.map((item) => `${item.label} (${item.nativeLabel})`).join(', ')} are planned. They will be written for
-      those readers, not translated by machine. {rtl.map((item) => item.label).join(' and ')} will use right-to-left
-      text.
+      This page is in <span lang={current.lang}>{current.nativeLabel}</span>.{' '}
+      {planned.map((item, index) => (
+        <span key={item.code}>
+          {index > 0 ? ', ' : null}
+          {item.label} (
+          <span dir={item.dir} lang={item.lang}>
+            {item.nativeLabel}
+          </span>
+          )
+        </span>
+      ))}{' '}
+      are planned. They will be written for those readers, not translated by machine.{' '}
+      {rtl.map((item) => item.label).join(' and ')} will use right-to-left text.
     </p>
   )
 }
@@ -114,9 +123,9 @@ export function SourceList({ items }: { items: readonly SourceLink[] }) {
               {item.label}
             </SiteLink>
           ) : (
-            <a className={linkClass} href={item.href} rel="noreferrer" target="_blank">
+            <ExternalLink className={linkClass} href={item.href}>
               {item.label}
-            </a>
+            </ExternalLink>
           )}
           <p className="mt-1 text-sm text-muted">
             {item.publisher}. {item.region}.

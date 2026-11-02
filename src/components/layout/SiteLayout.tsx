@@ -3,7 +3,7 @@ import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { links } from '../../content/links'
 import { footerPages, primaryNav, type NavLinkItem } from '../../content/navigation'
 import { isStaticPath, normalizePath, toPublicPath } from '../../content/urls'
-import { SiteLink } from '../content/SiteLink'
+import { ExternalLink, SiteLink } from '../content/SiteLink'
 
 const linkClass =
   'inline-flex min-h-11 items-center whitespace-nowrap rounded-full border px-3 py-2 text-sm transition'
@@ -135,7 +135,7 @@ export function SiteLayout() {
         </nav>
 
         <nav
-          aria-label="Primary"
+          aria-label="Menu"
           className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-gold/20 px-4 py-4 xl:hidden"
           hidden={!menuOpen}
           id="site-menu"
@@ -198,29 +198,29 @@ export function SiteLayout() {
                 </a>
               </li>
               <li>
-                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.x} rel="noreferrer" target="_blank">
+                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.x}>
                   X · Artiore
-                </a>
+                </ExternalLink>
               </li>
               <li>
-                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.linkedinCompany} rel="noreferrer" target="_blank">
+                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.linkedinCompany}>
                   LinkedIn · company
-                </a>
+                </ExternalLink>
               </li>
               <li>
-                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.linkedinZain} rel="noreferrer" target="_blank">
+                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.linkedinZain}>
                   LinkedIn · Zain Ul Abdin
-                </a>
+                </ExternalLink>
               </li>
               <li>
-                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.discord} rel="noreferrer" target="_blank">
+                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.discord}>
                   Discord
-                </a>
+                </ExternalLink>
               </li>
               <li>
-                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.instagram} rel="noreferrer" target="_blank">
+                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.instagram}>
                   Instagram · ArtioreConsortium
-                </a>
+                </ExternalLink>
               </li>
             </ul>
           </div>
@@ -228,34 +228,34 @@ export function SiteLayout() {
             <h2 className="text-xs uppercase tracking-[0.18em] text-gold">Ecosystem</h2>
             <ul className="mt-3 space-y-2 text-sm">
               <li>
-                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artiore} rel="noreferrer" target="_blank">
+                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artiore}>
                   artiore.com
-                </a>
+                </ExternalLink>
               </li>
               <li>
-                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreTry} rel="noreferrer" target="_blank">
+                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreTry}>
                   Try ARTIore
-                </a>
+                </ExternalLink>
               </li>
               <li>
-                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreFramework} rel="noreferrer" target="_blank">
+                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreFramework}>
                   Framework
-                </a>
+                </ExternalLink>
               </li>
               <li>
-                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreDoctrine} rel="noreferrer" target="_blank">
+                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreDoctrine}>
                   Doctrine
-                </a>
+                </ExternalLink>
               </li>
               <li>
-                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreBlog} rel="noreferrer" target="_blank">
+                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreBlog}>
                   Security blog
-                </a>
+                </ExternalLink>
               </li>
               <li>
-                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.consortium} rel="noreferrer" target="_blank">
+                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.consortium}>
                   artioreconsortium.com
-                </a>
+                </ExternalLink>
               </li>
               <li>
                 <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.eternia}>
@@ -263,14 +263,14 @@ export function SiteLayout() {
                 </a>
               </li>
               <li>
-                <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.github} rel="noreferrer" target="_blank">
+                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.github}>
                   GitHub · ARTIore
-                </a>
+                </ExternalLink>
               </li>
               <li>
-                <a className="inline-flex min-h-11 items-center break-all text-cream/85 hover:text-gold-bright" href={links.githubEternia} rel="noreferrer" target="_blank">
+                <ExternalLink className="inline-flex min-h-11 items-center break-all text-cream/85 hover:text-gold-bright" href={links.githubEternia}>
                   Eternia source
-                </a>
+                </ExternalLink>
               </li>
             </ul>
           </div>

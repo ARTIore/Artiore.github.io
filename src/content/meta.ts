@@ -36,7 +36,7 @@ export const claimsMeta = {
 
 export const academyMeta = {
   path: '/academy',
-  headTitle: 'Clarity and Digital Safety Lab | Artiais.com',
+  headTitle: 'Clarity and Digital Safety Lab | ARTIore',
   description:
     'An interactive lab for four evidence labels, the six-layer framework, and five short digital safety lessons. Checks stay on this page. Nothing is submitted.',
   kind: 'page' as const,

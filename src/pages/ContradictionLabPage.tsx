@@ -1,8 +1,8 @@
-import { useMemo, useState } from 'react'
+import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { LoadJsonButton } from '../components/research/LoadJsonButton'
 import { GlossaryList, LanguageNote, OtherTools, PrivacyNote, ReadingControls, SafetyFrame } from '../components/safety/safety-ui'
 import { buttonClass } from '../components/safety/safety-styles'
-import { illustrativeClaims, illustrativeLabel, rejectedVerifiedSample } from '../content/research/samples'
+import { claimStatusLabel, illustrativeClaims, illustrativeLabel, rejectedVerifiedSample } from '../content/research/samples'
 import { contradictionMeta } from '../content/meta'
 import { interpretLedger } from '../lib/evidence/ledger'
 import { validateEvidence } from '../lib/evidence/validate'
@@ -32,11 +32,25 @@ export default function ContradictionLabPage() {
   const [paused, setPaused] = useState(false)
   const [records, setRecords] = useState<Claim[]>([...illustrativeClaims])
   const [hidden, setHidden] = useState<string[]>([])
+  const [hideNotice, setHideNotice] = useState('')
   const [message, setMessage] = useState(illustrativeLabel)
+  const focusSummary = useRef(false)
   const [issues, setIssues] = useState<string[]>([])
   const flags = useMemo(() => reviewRecords(records), [records])
   const shown = flags.filter((flag) => !hidden.includes(flagKey(flag)))
   const rejected = validateEvidence(rejectedVerifiedSample)
+
+  useLayoutEffect(() => {
+    if (!focusSummary.current) return
+    focusSummary.current = false
+    document.getElementById('flags-summary')?.focus()
+  }, [hidden])
+
+  function hideFlag(key: string) {
+    focusSummary.current = true
+    setHidden((current) => (current.includes(key) ? current : [...current, key]))
+    setHideNotice('Flag hidden. It is still included if you download the notes.')
+  }
 
   function load(text: string) {
     let data: unknown
@@ -59,6 +73,7 @@ export default function ContradictionLabPage() {
     }
     setRecords(result.claims as Claim[])
     setHidden([])
+    setHideNotice('')
     setIssues(result.warnings.map((item) => item.message))
     setMessage('Claims loaded. Flags below are word checks, not a decision that two sentences contradict.')
   }
@@ -118,6 +133,7 @@ export default function ContradictionLabPage() {
               onClick={() => {
                 setRecords([...illustrativeClaims])
                 setHidden([])
+                setHideNotice('')
                 setIssues([])
                 setMessage('Sample restored. It is still illustrative and unverified.')
               }}
@@ -139,8 +155,11 @@ export default function ContradictionLabPage() {
               ))}
             </ul>
           ) : null}
-          <h2 className="mt-8 font-serif text-2xl text-cream">Flags</h2>
-          <p className="mt-2 text-sm text-muted">
+          <h2 className="mt-8 font-serif text-2xl text-cream" id="flags-heading">
+            Flags
+          </h2>
+          <p className="scroll-mt-28 mt-2 text-sm text-muted" id="flags-summary" role="status" tabIndex={-1}>
+            {hideNotice ? `${hideNotice} ` : null}
             {records.length} records checked. {flags.length} flags. {shown.length} still shown. Hiding a flag does not
             delete it from a downloaded note.
           </p>
@@ -158,7 +177,7 @@ export default function ContradictionLabPage() {
                   <p className="mt-2">Next step: {flag.next}</p>
                   <button
                     className={`${buttonClass} mt-3`}
-                    onClick={() => setHidden((current) => [...current, flagKey(flag)])}
+                    onClick={() => hideFlag(flagKey(flag))}
                     type="button"
                   >
                     Hide this flag for now
@@ -173,7 +192,7 @@ export default function ContradictionLabPage() {
               {records.map((record) => (
                 <article className="rounded-2xl border border-white/10 p-4" key={record.claim_id}>
                   <h3 className="font-semibold">
-                    {record.claim_id} · {record.status}
+                    {record.claim_id} · {claimStatusLabel[record.status] ?? record.status}
                   </h3>
                   <p className="mt-2">{record.statement}</p>
                   <p className="mt-2 text-sm text-muted">Scope: {record.scope}</p>

@@ -30,6 +30,19 @@ type SiteLinkProps = {
   onClick?: () => void
 }
 
+function OpensInNewTab() {
+  return <span className="sr-only"> (opens in a new tab)</span>
+}
+
+export function ExternalLink({ href, className, children, onClick }: SiteLinkProps) {
+  return (
+    <a className={className} href={href} onClick={onClick} rel="noreferrer" target="_blank">
+      {children}
+      <OpensInNewTab />
+    </a>
+  )
+}
+
 export function SiteLink({ href, className, children, onClick }: SiteLinkProps) {
   const safe = safeHref(href)
   const publicHref = safe.startsWith('/') ? toPublicPath(safe) : safe
@@ -41,15 +54,15 @@ export function SiteLink({ href, className, children, onClick }: SiteLinkProps) 
     )
   }
 
-  const external = publicHref.startsWith('http')
+  if (publicHref.startsWith('http')) {
+    return (
+      <ExternalLink className={className} href={publicHref} onClick={onClick}>
+        {children}
+      </ExternalLink>
+    )
+  }
   return (
-    <a
-      className={className}
-      href={publicHref}
-      onClick={onClick}
-      rel={external ? 'noreferrer' : undefined}
-      target={external ? '_blank' : undefined}
-    >
+    <a className={className} href={publicHref} onClick={onClick}>
       {children}
     </a>
   )

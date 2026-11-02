@@ -97,12 +97,12 @@ export const sources = {
     publisher: 'CISA',
     region: 'United States',
   },
-  ftcPhishing: {
-    href: 'https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams',
-    label: 'How to recognize and avoid phishing scams',
-    publisher: 'U.S. Federal Trade Commission',
-    region: 'United States',
-    note: 'The older address with the word “and” in the path no longer opens. This is the current article path.',
+  cafcPhishing: {
+    href: 'https://antifraudcentre-centreantifraude.ca/scams-fraudes/phishing-hameconnage-eng.htm',
+    label: 'Phishing',
+    publisher: 'Canadian Anti-Fraud Centre',
+    region: 'Canada',
+    note: 'Official guidance on phishing by email and text.',
   },
   identityTheftUs: {
     href: 'https://www.identitytheft.gov/',
