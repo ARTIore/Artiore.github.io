@@ -14,6 +14,7 @@ import {
 import { investigationFaqs } from '../content/investigations/faqs'
 import { renderInvestigationMarkdown } from '../content/investigations/markdown'
 import { AlsoOnArtiore } from '../components/investigations/AlsoOnArtiore'
+import { InvestigationLicense, investigationLicenseUrl } from '../components/investigations/InvestigationLicense'
 import { ArticleVerificationSources, VerificationSourceRegister } from '../components/investigations/VerificationSources'
 import { investigationCompanionUrls } from '../content/investigations/companions'
 
@@ -54,6 +55,7 @@ export default function InvestigationArticlePage({ markdown, slug }: { markdown:
         imageWidth={investigationOg.width}
         inLanguage="en"
         kind="article"
+        license={investigationLicenseUrl}
         locale="en_US"
         path={piece.path}
         title={piece.headTitle}
@@ -68,6 +70,7 @@ export default function InvestigationArticlePage({ markdown, slug }: { markdown:
             {piece.byline ?? 'ARTIore Research Desk · Version 1.0'} · <time dateTime={published}>{publishedLabel}</time>
             {piece.readingTime ? ` · ${piece.readingTime}` : ''}
           </p>
+          <InvestigationLicense />
           <p className="mt-4 text-sm">
             <SiteLink className={linkClass} href={investigationBase}>
               The Invisible Attack Surface

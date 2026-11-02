@@ -64,4 +64,5 @@ export type SeoEntry = PageMeta & {
   imageHeight?: string
   imageAlt?: string
   faqs?: { question: string; answer: string }[]
+  license?: string
 }

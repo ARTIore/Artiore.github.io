@@ -6,7 +6,7 @@ import { libraryPages } from './library'
 import { carouselDecks, carouselOgImage } from './field-manual/carousels'
 import { carouselSeriesMeta, fieldManualMetas, pocketBookletMeta } from './field-manual/meta'
 import { contactMeta, engineMeta, homeMeta, systemMeta } from './meta'
-import { investigationMeta } from './investigation'
+import { investigationLicenseUrl, investigationMeta } from './investigation'
 import { buildJsonLd } from '../seo/structuredData'
 import type { PageDocument, SeoEntry } from './types'
 
@@ -94,6 +94,7 @@ export const seoEntries: SeoEntry[] = [
     imageHeight: page.imageHeight,
     imageAlt: page.imageAlt,
     faqs: 'faqs' in page ? page.faqs : undefined,
+    license: investigationLicenseUrl,
   })),
   {
     path: '/framework.html',
