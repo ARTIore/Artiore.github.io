@@ -157,6 +157,19 @@ Do these once, then revisit quarterly.
 - [ ] Train front desk staff on identity verification for account changes.
 - [ ] Have a breach response plan that includes guest notification.
 
+## A 30-minute reset
+
+Eight steps, in order. This is not a guarantee. Each step is single-source.
+
+1. Update the device and the browser. Most of the exploits covered in this series are defeated by a current build. Replace a device that no longer receives security updates.
+2. Install a password manager and passkeys, starting with email. A fill that only happens on the right domain, and a passkey bound to that origin, defeats most credential phishing.
+3. Revoke sessions. A stolen session token can be the login. Changing the password and leaving the token is a partial response.
+4. Check recovery and the phone number. Set a carrier port freeze and an account PIN. Move off SMS as the only second factor. A port freeze is not a guarantee.
+5. Turn on Apple Advanced Data Protection only if you accept the trade. It extends end-to-end encryption to most iCloud categories, it is off by default, and it requires a recovery setup. Mail, Contacts, and Calendars are documented exclusions.
+6. Audit accessibility, notification access, and screen overlay. Android 12 untrusted-touch blocking, Android 13 restricted settings for sideloaded apps, and Android 15 sensitive-notification protections are partial.
+7. Verify a payment change out of band: a number you already have, and two approvers. A video call is not authentication. See [deepfakes and AI payment fraud](deepfake-ai-payment-fraud).
+8. Use Lockdown Mode only if you are high-risk. It limits features. It is not the default for everyone.
+
 ## A note on trade-offs
 
 Every control here costs something: convenience, money, time, or access to a feature. That is normal. Security is not a state of being protected; it is a set of choices about which risks you are willing to carry.

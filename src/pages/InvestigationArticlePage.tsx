@@ -34,7 +34,8 @@ export default function InvestigationArticlePage({ markdown, slug }: { markdown:
   if (!piece) return null
 
   const published = piece.datePublished ?? investigationPublished
-  const publishedLabel = published === '2026-10-25' ? '25 October 2026' : '26 October 2026'
+  const publishedLabel =
+    published === '2026-10-25' ? '25 October 2026' : published === '2026-11-02' ? '2 November 2026' : '26 October 2026'
 
   return (
     <>

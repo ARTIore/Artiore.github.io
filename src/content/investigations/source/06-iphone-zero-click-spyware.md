@@ -32,7 +32,27 @@ This is not science fiction. It is the documented mechanism of several of the mo
 | CVE-2025-43300 | ImageIO | 2025 | Used with WhatsApp CVE-2025-55177 in a zero-click chain |
 | CVE-2026-86950 | CoreGraphics | 2026 | Patched in September; exploited against "specific targeted individuals" |
 
-[Confirmed — Apple advisories, CVE records, CISA KEV, Citizen Lab, Kaspersky]
+[Confirmed — Apple advisories, CVE records, Citizen Lab, Kaspersky]
+
+## Version boundaries
+
+These boundaries are single-source. They are not averaged when the sources disagree.
+
+**FORCEDENTRY** (CVE-2021-30860) was fixed in iOS 14.8. The affected range is iOS before 14.8, not "14.8 and earlier."
+
+**BLASTPASS** (CVE-2023-41064 and CVE-2023-41061) was fixed in iOS 16.6.1. The sources do not agree on the edge, and this page does not smooth them into one sentence. One account gives the affected range as iOS 16.6.1 and earlier. Another says the chain was observed on an iPhone running iOS 16.6, and that Apple released 16.6.1 as the fix.
+
+**Operation Triangulation** is fixed in iOS 16.6.1 and affected versions before 16.6.1. "16.6 and earlier" is a different sentence. Public records for individual components also list earlier fixes, including iOS 16.3, 16.5.1, and 16.6. Those component dates stay visible. They are not collapsed into the chain boundary.
+
+**CVE-2025-24200** is a USB Restricted Mode bypass that requires physical access. It was used against specific targeted individuals. It is not a remote zero-click chain.
+
+A March 2026 Kaspersky analysis, Coruna, linked a framework to tooling used in Operation Triangulation. That is a research inference about reuse. It is not a victim count. Single-source.
+
+Most of the chains covered here are defeated by a current operating-system and browser build. A device that no longer receives security updates should be replaced. Single-source.
+
+Remotely triggerable flaws in some Samsung Exynos modems are a separate processor path. They are device-dependent and rare, and they are not an iPhone chain. Single-source.
+
+No victim count is asserted for these chains.
 
 Two details deserve emphasis.
 
@@ -57,7 +77,7 @@ Lockdown Mode is an optional, extreme hardening setting for people who may be ta
 - wired connections;
 - some configuration profiles and device management.
 
-The trade-off is real: attachments, some websites, and some accessories may not work. It is not necessary for most people. It is rational for journalists, activists, officials, executives, litigants, and anyone who has received a Threat Notification.
+The trade-off is real: attachments, some websites, and some accessories may not work. It is not the default for everyone. It is a conditional choice for journalists, activists, officials, executives, litigants, and anyone who has received a Threat Notification. Single-source.
 
 ## Apple Threat Notifications
 

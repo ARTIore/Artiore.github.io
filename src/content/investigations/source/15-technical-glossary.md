@@ -116,7 +116,7 @@ Eighty-six concepts used in this investigation, in plain language. Definitions d
 
 **Bluetooth Low Energy (BLE)** — A low-power mode for sensors, wearables, tags, and locks. Most BLE devices advertise rather than stay connected.
 
-**BlueBorne** — A 2017 family of Bluetooth stack vulnerabilities allowing remote code execution or information disclosure, in some cases without pairing.
+**BlueBorne** — A 2017 set of Bluetooth-stack flaws. The Linux issue CVE-2017-1000251 is a stack overflow in BlueZ L2CAP handling, kernels 2.6.32 through 4.13.1. Remote use depends on documented conditions. It is not a universal attack without pairing. Single-source.
 
 **Bonding** — Storing pairing keys so devices reconnect automatically. A bond is a durable trust relationship.
 
