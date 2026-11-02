@@ -262,11 +262,11 @@ export default function AcademyPage() {
             These settings affect only this page. No account, no analytics, no tracking, and no cloud copy.
           </p>
           <div className="mt-4 rounded-2xl border border-gold/20 p-4">
-            <div className="flex flex-wrap items-center gap-3">
-              <label htmlFor="fontSize">
+            <div className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-2">
+              <label className="block min-w-0" htmlFor="fontSize">
                 Text size
                 <select
-                  className="ml-2 min-h-11 rounded-full border border-gold/40 bg-ink px-3 text-cream"
+                  className="mt-1 block w-full min-w-0 max-w-full rounded-full border border-gold/40 bg-ink px-3 py-2 text-cream"
                   id="fontSize"
                   onChange={(event) => setFontSize(event.target.value as 'normal' | 'large')}
                   value={fontSize}
@@ -275,10 +275,10 @@ export default function AcademyPage() {
                   <option value="large">Large</option>
                 </select>
               </label>
-              <label htmlFor="pace">
+              <label className="block min-w-0" htmlFor="pace">
                 Reading pace
                 <select
-                  className="ml-2 min-h-11 rounded-full border border-gold/40 bg-ink px-3 text-cream"
+                  className="mt-1 block w-full min-w-0 max-w-full rounded-full border border-gold/40 bg-ink px-3 py-2 text-cream"
                   id="pace"
                   onChange={(event) => setPace(event.target.value as 'normal' | 'spacious')}
                   value={pace}
@@ -287,10 +287,10 @@ export default function AcademyPage() {
                   <option value="spacious">Spacious</option>
                 </select>
               </label>
-              <label htmlFor="depth">
+              <label className="block min-w-0" htmlFor="depth">
                 Explanation depth
                 <select
-                  className="ml-2 min-h-11 rounded-full border border-gold/40 bg-ink px-3 text-cream"
+                  className="mt-1 block w-full min-w-0 max-w-full rounded-full border border-gold/40 bg-ink px-3 py-2 text-cream"
                   id="depth"
                   onChange={(event) => setDepth(event.target.value as 'simple' | 'detail')}
                   value={depth}
@@ -329,10 +329,10 @@ export default function AcademyPage() {
             </SiteLink>
             .
           </p>
-          <label className="mt-4 block" htmlFor="lesson">
+          <label className="mt-4 block min-w-0 max-w-full" htmlFor="lesson">
             Lesson
             <select
-              className="ml-2 min-h-11 rounded-full border border-gold/40 bg-ink px-3 text-cream"
+              className="mt-1 block w-full min-w-0 max-w-full rounded-full border border-gold/40 bg-ink px-3 py-2 text-cream"
               disabled={paused}
               id="lesson"
               onChange={(event) => {
