@@ -25,6 +25,15 @@ export const engineMeta = {
   crumbName: 'Eternia Aurora Sovereign Engine',
 }
 
+export const claimsMeta = {
+  path: '/investigations/digital-exposure/claims',
+  headTitle: 'Claim trace | Digital Exposure Investigation',
+  description:
+    'A public trace of claims on the investigation pages: wording, sources, quotes, caveats and corrections. Six rejected claims are excluded.',
+  kind: 'page' as const,
+  crumbName: 'Claim trace',
+}
+
 export const academyMeta = {
   path: '/academy',
   headTitle: 'Clarity and Digital Safety Lab | Artiais.com',

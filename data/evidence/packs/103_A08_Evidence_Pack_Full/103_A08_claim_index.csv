@@ -1,0 +1,10 @@
+﻿claim_id,topic,verdict,source,source_url,corroboration,role
+C099,Spyware & surveillance,rejected,Part 3 3C — Unsupported or contradicted.,,single,core
+C100,Spyware & surveillance,confirmed,Part 3 3C — Verified from an authoritative source.,,single,core
+C101,Spyware & surveillance,confirmed,Part 3 3C — Verified from an authoritative source.,,single,core
+C102,Spyware & surveillance,confirmed,Part 3 3C — Verified from an authoritative source.,,single,core
+C103,Spyware & surveillance,unverified,,,single,core
+C134,Spyware & surveillance,confirmed,Part 3 3E — Verified from an authoritative source.,,single,core
+C158,Spyware & surveillance,unverified,,,single,core
+C159,Spyware & surveillance,confirmed,Part 3 3C — Verified from an authoritative source.,,single,core
+C188,Spyware & surveillance,confirmed,Part 3 3B — Verified from an authoritative source.,,single,core

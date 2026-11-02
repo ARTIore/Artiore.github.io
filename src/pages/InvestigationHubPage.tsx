@@ -136,7 +136,11 @@ export default function InvestigationHubPage() {
               ) : (
                 <strong>Source register</strong>
               )}{' '}
-              — for fact-checking.
+              — for fact-checking. The{' '}
+              <SiteLink className={linkClass} href="/investigations/digital-exposure/claims/">
+                claim trace
+              </SiteLink>{' '}
+              lists the published claims behind these pages.
             </li>
           </ol>
         </section>

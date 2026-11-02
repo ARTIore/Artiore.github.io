@@ -1,0 +1,9 @@
+﻿claim_id,topic,verdict,source,source_url,corroboration,a04_role
+C013,Bluetooth & BLE,confirmed,"Martin et al., PETS 2019 (arXiv:1904.10600)",,single,core
+C072,Bluetooth & BLE,confirmed,Part 3 3E — Verified from an authoritative source.,,single,core
+C073,Bluetooth & BLE,confirmed,NVD CVE-2017-1000251,,single,core
+C014,Bluetooth & BLE,adjusted,NVD CVE-2017-1000251,,single,core
+C198,Bluetooth & BLE,adjusted,NVD CVE-2017-1000251,,single,core
+C015,Bluetooth & BLE,confirmed,NVD CVE-2019-9506; CVE-2020-10135,,single,core
+C074,Bluetooth & BLE,confirmed,NVD CVE-2019-9506; CVE-2020-10135,,single,core
+C185,Bluetooth & BLE,adjusted,NVD CVE-2020-10135; CVE-2020-12351,,single,core

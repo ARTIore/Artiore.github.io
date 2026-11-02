@@ -24,7 +24,7 @@ Your device asks a **resolver** for the IP address behind a name. The resolver w
 
 **1. DNS hijacking.** Any unauthorised change to resolution: at the registrar (nameservers), at the authoritative zone (records), at the resolver (cache), at the router (settings), or on the device (malware).
 
-**2. Spoofing and cache poisoning.** Forged responses injected into a resolver, hoping to win the race against the legitimate answer. Modern resolvers randomise transaction IDs and source ports, which raised the cost. The 2008 class is CVE-2008-1447. That record supports the identifier. It does not, by itself, document the later response. Single-source. Research such as SAD DNS (CVE-2020-25705) showed the class is not extinct under specific conditions. [Confirmed]
+**2. Spoofing and cache poisoning.** Forged responses injected into a resolver, hoping to win the race against the legitimate answer. Modern resolvers randomise transaction IDs and source ports, which raised the cost. The 2008 class is CVE-2008-1447. → [C065](/investigations/digital-exposure/claims/#C065) That record supports the identifier. It does not, by itself, document the later response. Single-source. Research such as SAD DNS (CVE-2020-25705) showed the class is not extinct under specific conditions. [Confirmed]
 
 **3. Malicious resolver configuration.** The attacker does not poison a cache; they *are* the answer. This is the most durable form, because it survives reboots.
 
@@ -51,13 +51,13 @@ So: DNS manipulation is primarily a **positioning** and **denial** capability. C
 
 ## Documented cases
 
-- **DNSChanger (2007–2011):** altered DNS settings on infected computers to redirect advertising and affiliate revenue; an FBI-led takedown replaced rogue servers with clean ones. Two-source.
-- **Sea Turtle (2017–2019):** compromised registrars and DNS providers and hijacked records, affecting dozens of organisations in at least 13 countries — without malware on victim devices. Single-source. Cisco Talos.
+- **DNSChanger (2007–2011):** altered DNS settings on infected computers to redirect advertising and affiliate revenue; an FBI-led takedown replaced rogue servers with clean ones. → [C066](/investigations/digital-exposure/claims/#C066) Two-source.
+- **Sea Turtle (2017–2019):** compromised registrars and DNS providers and hijacked records, affecting dozens of organisations in at least 13 countries → [C067](/investigations/digital-exposure/claims/#C067) — without malware on victim devices. Single-source. Cisco Talos.
 - **DNSpionage (2018–2019):** manipulated DNS records and certificates to intercept credentials in the Middle East. [Confirmed]
 - **Roaming Mantis (from 2018):** compromised routers to change DNS, redirecting mobile users to phishing and Android malware; later used DNS-over-HTTPS to evade detection. [Confirmed]
-- **MyEtherWallet BGP hijack (April 2018):** rerouted traffic for Amazon Route 53 DNS servers and redirected some wallet users to a phishing site. Roughly US$150,000 was reported stolen. The loss figure is reported. Single-source.
-- **Sitting Ducks (2024):** domains delegated to DNS providers that no longer served the zone could be claimed by attackers. Researchers estimated around one million vulnerable domains. That count is an estimate. Single-source.
-- **Emergency Directive 19-01:** dated 22 January 2019. An account that the April 2019 Sea Turtle disclosure prompted the directive is not used. The directive summary does not, by itself, establish a longer action list, so this page does not add one. Single-source.
+- **MyEtherWallet BGP hijack (April 2018):** rerouted traffic for Amazon Route 53 DNS servers and redirected some wallet users to a phishing site. Roughly US$150,000 was reported stolen. → [C069](/investigations/digital-exposure/claims/#C069) The loss figure is reported. Single-source.
+- **Sitting Ducks (2024):** domains delegated to DNS providers that no longer served the zone could be claimed by attackers. Researchers estimated around one million vulnerable domains. → [C068](/investigations/digital-exposure/claims/#C068) That count is an estimate. Single-source.
+- **Emergency Directive 19-01:** dated 22 January 2019. → [C197](/investigations/digital-exposure/claims/#C197) An account that the April 2019 Sea Turtle disclosure prompted the directive is not used. The directive summary does not, by itself, establish a longer action list, so this page does not add one. Single-source.
 - **KeyTrap (CVE-2023-50387, 2024):** a DNSSEC validation complexity flaw allowed a single malicious zone to exhaust resolver CPU. Patched in early 2024. [Confirmed]
 
 The pattern: DNS failures are often **configuration errors**, not exploits. That makes them cheap, durable, and invisible to the domain owner.
@@ -87,7 +87,7 @@ The limits:
 ## What to do
 
 - Set a reputable resolver deliberately on your devices.
-- Enable DNSSEC validation where available. It protects the integrity of the answer, not its confidentiality. DNS-over-HTTPS and DNS-over-TLS protect the path to the resolver and move trust to the resolver operator. Single-source.
+- Enable DNSSEC validation where available. It protects the integrity of the answer, not its confidentiality. → [C070](/investigations/digital-exposure/claims/#C070) DNS-over-HTTPS and DNS-over-TLS protect the path to the resolver and move trust to the resolver operator. Single-source.
 - Change router admin credentials; disable remote management and UPnP unless needed.
 - Never install a "DNS fix" app or profile.
 - For domain owners: enable registrar locks, monitor Certificate Transparency, audit delegations, and fix lame delegations.

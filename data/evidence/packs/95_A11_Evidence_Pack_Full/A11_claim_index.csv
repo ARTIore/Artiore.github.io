@@ -1,0 +1,6 @@
+﻿claim_id,topic,verdict,source,source_url,corroboration,a11_role
+C055,Cross-cutting synthesis,adjusted,Chainalysis crypto crime reporting,,single,core
+C042,AI-related exposure,adjusted,FBI IC3 deepfake advisory,,single,core
+C115,AI-related exposure,confirmed,Part 3 3E — Verified from an authoritative source.,,single,core
+C058,Networks & hospitality,adjusted,CISA AA23-320A; National Law Review,,single,core
+C116,AI-related exposure,confirmed,Part 3 3B — Verified from an authoritative source.,,single,core

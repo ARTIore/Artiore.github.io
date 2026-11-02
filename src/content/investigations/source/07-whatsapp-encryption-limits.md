@@ -46,7 +46,7 @@ The pattern is consistent: the **message-processing path** is the attack surface
 
 For every zero-click chain, there are thousands of account takeovers.
 
-**SIM swap.** The attacker convinces a carrier to port your number, then receives the verification code. That path is documented. It is not the only way an account is taken over. The FBI recorded 971 SIM-swap complaints and $17.4 million in reported losses in 2025 — a fraction of the real total, since most swaps enable other fraud. [Confirmed — IC3 2025] Single-source for the path itself.
+**SIM swap.** The attacker convinces a carrier to port your number, then receives the verification code. That path is documented. It is not the only way an account is taken over. → [C028](/investigations/digital-exposure/claims/#C028) The FBI recorded 971 SIM-swap complaints and $17.4 million in reported losses in 2025 — a fraction of the real total, since most swaps enable other fraud. [Confirmed — IC3 2025] Single-source for the path itself.
 
 **Verification-code phishing.** A message claims to be from a friend or support and asks for the six-digit code. The code is the account.
 

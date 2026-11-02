@@ -1,0 +1,4 @@
+﻿claim_id,topic,verdict,source,source_url,corroboration,a06_role
+C080,Accessibility & mobile,confirmed,Part 3 3E — Verified from an authoritative source.,,single,core
+C083,Accessibility & mobile,adjusted,ThreatFabric / Google Play reporting,,single,core
+C199,Accessibility & mobile,confirmed,ThreatFabric/Google Play reporting,,single,core

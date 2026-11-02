@@ -1,0 +1,4 @@
+﻿claim_id,topic,verdict,source,source_url,corroboration,role
+C124,Regional & cross-cutting,confirmed,Part 3 3B — Verified from an authoritative source.,,single,core
+C165,Regional & cross-cutting,rejected,Part 3 3D — Unsupported or contradicted.,,n/a,core
+C168,AI-related exposure,unverified,,,n/a,core

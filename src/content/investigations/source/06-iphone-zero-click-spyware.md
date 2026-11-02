@@ -38,13 +38,13 @@ This is not science fiction. It is the documented mechanism of several of the mo
 
 These boundaries are single-source. They are not averaged when the sources disagree.
 
-**FORCEDENTRY** (CVE-2021-30860) was fixed in iOS 14.8. The affected range is iOS before 14.8, not "14.8 and earlier."
+**FORCEDENTRY** (CVE-2021-30860) was fixed in iOS 14.8. → [C084](/investigations/digital-exposure/claims/#C084) The affected range is iOS before 14.8, not "14.8 and earlier."
 
 **BLASTPASS** (CVE-2023-41064 and CVE-2023-41061) was fixed in iOS 16.6.1. The sources do not agree on the edge, and this page does not smooth them into one sentence. One account gives the affected range as iOS 16.6.1 and earlier. Another says the chain was observed on an iPhone running iOS 16.6, and that Apple released 16.6.1 as the fix.
 
 **Operation Triangulation** is fixed in iOS 16.6.1 and affected versions before 16.6.1. "16.6 and earlier" is a different sentence. Public records for individual components also list earlier fixes, including iOS 16.3, 16.5.1, and 16.6. Those component dates stay visible. They are not collapsed into the chain boundary.
 
-**CVE-2025-24200** is a USB Restricted Mode bypass that requires physical access. It was used against specific targeted individuals. It is not a remote zero-click chain.
+**CVE-2025-24200** is a USB Restricted Mode bypass that requires physical access. → [C087](/investigations/digital-exposure/claims/#C087) It was used against specific targeted individuals. It is not a remote zero-click chain.
 
 A March 2026 Kaspersky analysis, Coruna, linked a framework to tooling used in Operation Triangulation. That is a research inference about reuse. It is not a victim count. Single-source.
 

@@ -43,7 +43,7 @@ This is not a consumer-grade capability. It does show that randomisation is a pr
 
 **Find-my networks.** Apple's Find My and Google's Find My Device crowd-source location from billions of phones. They are designed features with privacy controls, and they are also tracking infrastructure that can be abused.
 
-**Tracking tags.** A tag in a bag or a car broadcasts to nearby phones, which relay its location. Apple and Google added cross-platform unwanted-tracking alerts in May 2024. The alerts depend on tracker compatibility and on the tracker being separated from its owner. They are not a universal detector, and this page does not claim how often tracking happens. Single-source.
+**Tracking tags.** A tag in a bag or a car broadcasts to nearby phones, which relay its location. Apple and Google added cross-platform unwanted-tracking alerts in May 2024. → [C072](/investigations/digital-exposure/claims/#C072) The alerts depend on tracker compatibility and on the tracker being separated from its owner. They are not a universal detector, and this page does not claim how often tracking happens. Single-source.
 
 **Retail and venue analytics.** Beacons and Wi-Fi/Bluetooth analytics estimate footfall and dwell time. Even without identifying you, they measure you.
 
@@ -54,7 +54,7 @@ This is not a consumer-grade capability. It does show that randomisation is a pr
 | Class | Example | Effect | Prerequisite |
 |---|---|---|---|
 | Stack memory corruption | BlueBorne (CVE-2017-1000251) | Linux kernel stack overflow in L2CAP, kernels 2.6.32 through 4.13.1. Remote only under documented conditions | Vulnerable BlueZ stack, proximity |
-| Key downgrade | KNOB (CVE-2019-9506) | Negotiated key entropy can be forced down, in the worst case to one byte | Attacker in the pairing path, vulnerable stack |
+| Key downgrade | KNOB (CVE-2019-9506) | Negotiated key entropy can be forced down, in the worst case to one byte → [C015](/investigations/digital-exposure/claims/#C015) | Attacker in the pairing path, vulnerable stack |
 | Impersonation | BIAS (CVE-2020-10135) | Impersonate a bonded device in some reconnection scenarios | Proximity, vulnerable stack |
 | SoC flaws | SweynTooth (2020), BrakTooth (2021) | Crash, deadlock, code execution | Vulnerable chipset |
 | Session keys | BLUFFS (CVE-2023-24023) | Impersonation, decryption | Proximity, vulnerable stack |
@@ -62,9 +62,9 @@ This is not a consumer-grade capability. It does show that randomisation is a pr
 
 These rows are single-source. None of them is a mass-market attack. Each requires a vulnerable target, proximity, and often a specific protocol state.
 
-BlueBorne's Linux flaw is CVE-2017-1000251: a stack overflow while processing L2CAP configuration responses in BlueZ, kernel 2.6.32 through 4.13.1, with remote code execution in kernel space under the conditions in the vulnerability record. "Without pairing" and "pre-authentication" are not universal. The research described over-the-air use in some conditions; the vulnerability record is narrower than that shorthand. Single-source.
+BlueBorne's Linux flaw is CVE-2017-1000251: → [C073](/investigations/digital-exposure/claims/#C073) a stack overflow while processing L2CAP configuration responses in BlueZ, kernel 2.6.32 through 4.13.1, with remote code execution in kernel space under the conditions in the vulnerability record. "Without pairing" and "pre-authentication" are not universal. The research described over-the-air use in some conditions; the vulnerability record is narrower than that shorthand. Single-source.
 
-KNOB and BIAS are pairing-protocol failures, not a statement that Bluetooth is broken. BIAS is CVE-2020-10135. One internal account assigned BIAS to CVE-2020-12351. That identifier is a different Linux BlueZ flaw. This page keeps CVE-2020-10135 for BIAS and records the disagreement. It does not merge the two. Single-source.
+KNOB and BIAS are pairing-protocol failures, not a statement that Bluetooth is broken. BIAS is CVE-2020-10135. → [C185](/investigations/digital-exposure/claims/#C185) One internal account assigned BIAS to CVE-2020-12351. That identifier is a different Linux BlueZ flaw. This page keeps CVE-2020-10135 for BIAS and records the disagreement. It does not merge the two. Single-source.
 
 A paired connection is encrypted. The advertisement before pairing is not. Address rotation is not the same as "you cannot be tracked": service data, timing, and behaviour can stay stable. That is a research finding about a mechanism, not a population estimate. Single-source. Unverified tracker-prevalence claims are not used.
 

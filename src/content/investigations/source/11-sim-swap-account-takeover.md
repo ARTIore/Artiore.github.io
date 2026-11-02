@@ -28,7 +28,7 @@ The technical skill required is low. The weak point is the carrier's verificatio
 
 ## What the path does and does not prove
 
-A SIM swap, or a stolen verification code, is a documented route into a messaging account. It is not the only route. Linked devices and a backup that is not end-to-end encrypted are separate paths. For most people the realistic messaging threat is account takeover, not a zero-click exploit. Single-source.
+A SIM swap, or a stolen verification code, is a documented route into a messaging account. It is not the only route. → [C028](/investigations/digital-exposure/claims/#C028) Linked devices and a backup that is not end-to-end encrypted are separate paths. For most people the realistic messaging threat is account takeover, not a zero-click exploit. Single-source.
 
 Crypto exchanges have been taken over through a SIM swap or through credential theft, and the two often travel together. Exchange withdrawal controls — a whitelist, a hardware key, a delay on a new address — matter more than another SMS code. Single-source.
 

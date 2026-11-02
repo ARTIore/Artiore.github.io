@@ -13,7 +13,7 @@ This page combines three lines of the same evidence: the video call, the approva
 
 ## A reported transfer
 
-In 2024, an Arup employee in Hong Kong transferred approximately HK$200 million — about US$25.6 million — after a video call with synthetic versions of the company's CFO and other staff. The figure is reported, not independently audited here. Single-source.
+In 2024, an Arup employee in Hong Kong transferred approximately HK$200 million → [C115](/investigations/digital-exposure/claims/#C115) — about US$25.6 million — after a video call with synthetic versions of the company's CFO and other staff. The figure is reported, not independently audited here. Single-source.
 
 The deepfake was the delivery. The failure was an approval path that treated the call as authentication. That is a mechanism. It is not a success rate, and it is not evidence that every synthetic call works. Single-source.
 
@@ -27,7 +27,7 @@ Looking for visual artifacts is not a control. Quality varies, and a busy person
 
 ## What was reported, not measured
 
-The FBI's Internet Crime Complaint Center recorded 22,364 AI-related complaints and about US$893 million in reported losses in 2025, the first year it reported the category. That is a reported-loss figure for a broad category, not an audited total, and not a count of successful deepfakes. Single-source.
+The FBI's Internet Crime Complaint Center recorded 22,364 AI-related complaints → [C116](/investigations/digital-exposure/claims/#C116) and about US$893 million in reported losses in 2025, the first year it reported the category. That is a reported-loss figure for a broad category, not an audited total, and not a count of successful deepfakes. Single-source.
 
 "AI is a fraud multiplier" is a hypothesis. No sourced coefficient says AI doubles, triples, or multiplies fraud by any specific factor. A multiplier needs a baseline, a stable definition, and a reporting frame. This category is new, so that baseline is thin. The Arup loss is one case. It does not give an average loss or a success rate.
 

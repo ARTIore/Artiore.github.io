@@ -1,0 +1,8 @@
+﻿claim_id,topic,verdict,source,source_url,corroboration,a07_role
+C062,Networks & hospitality,adjusted,Cloudflare SNI/DNS; hide.me; hellorecon.com; Performance Networks via Ars Technica,,single,core
+C064,DNS,adjusted,CISA ED 19-01; Cloudflare DNS,,single,core
+C007,Networks & hospitality,confirmed,Cloudflare DNS/DoH (S43; S44),,single,core
+C070,DNS,confirmed,Part 3 3E — Verified from an authoritative source.,,single,core
+C001,Networks & hospitality,confirmed,Wi-Fi Alliance / Cloudflare (S37; S43),,single,core
+C063,Networks & hospitality,confirmed,Wi-Fi Alliance / Cloudflare (S37; S43),,single,core
+C148,Networks & hospitality,adjusted,Wi-Fi Alliance security; NVD CVE-2017-13077,,single,core

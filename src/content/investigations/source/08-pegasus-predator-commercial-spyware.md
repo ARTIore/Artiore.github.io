@@ -64,7 +64,7 @@ Spyware firms buy exploit chains from brokers and independent researchers. Adver
 ## Legal and regulatory response
 
 - **WhatsApp v. NSO:** a U.S. court found NSO liable in December 2024; a jury awarded $444,719 in compensatory and $167.254 million in punitive damages in May 2025; in October 2025 the judge issued a permanent injunction and reduced punitive damages to just over $4 million. [Confirmed]
-- **U.S. Treasury sanctions** on Intellexa-linked parties. On 30 December 2025, OFAC deleted three individuals from the SDN List under CYBER2: Sara Hamou, Andrea Gambazzi, and Merom Harpaz. The same deletion list did not name Intellexa or Cytrox as entities. That action does not support the sentence "Intellexa was delisted." Single-source.
+- **U.S. Treasury sanctions** on Intellexa-linked parties. On 30 December 2025, OFAC deleted three individuals from the SDN List under CYBER2: Sara Hamou, Andrea Gambazzi, and Merom Harpaz. → [C204](/investigations/digital-exposure/claims/#C204) The same deletion list did not name Intellexa or Cytrox as entities. That action does not support the sentence "Intellexa was delisted." Single-source.
 - A 2 November 2026 retrieval of the UK Sanctions List CSV returned no rows matching Intellexa, Cytrox, or Predator. That is a negative search of one official file on one date. It is not a claim that no country lists the entities, and naming variants may exist. Single-source.
 - Predator remains associated with Cytrox and the Intellexa consortium on the earlier record. That confirmation is separate from the dated sanctions action. Single-source.
 - **EU Parliament's PEGA committee** investigated spyware use and recommended reforms.
