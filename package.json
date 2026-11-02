@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "python3 scripts/build-claims.py && tsc -b && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/write-route-html.mjs && node scripts/check-dist.mjs",
     "lint": "eslint .",
+    "test": "vitest run",
+    "test:evidence": "python3 scripts/test_validate_evidence.py && python3 scripts/validate-evidence.py data/evidence/ledger-v1/example-record.json data/evidence/ledger-v1/example-list.json",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -28,6 +30,7 @@
     "globals": "^17.4.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.72.0",
-    "vite": "^8.3.5"
+    "vite": "^8.3.5",
+    "vitest": "^5.1.0"
   }
 }

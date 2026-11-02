@@ -98,6 +98,7 @@ export default function AcademyPage() {
           </p>
           <nav aria-label="On this page" className="mt-6 flex flex-wrap gap-2">
             {[
+              ['#tools', 'Practice tools'],
               ['#evidence', 'Evidence labels'],
               ['#framework', 'Six layers'],
               ['#controls', 'Your controls'],
@@ -110,6 +111,39 @@ export default function AcademyPage() {
             ))}
           </nav>
         </header>
+
+        <section className="mt-12 border-t border-white/10 pt-8" id="tools">
+          <h2 className="font-serif text-3xl text-gold-bright">Practice tools</h2>
+          <p className="mt-4 max-w-[68ch] text-cream/90">
+            Four tools sit next to this lab. They stay on this site. They do not scan a device or send what you type.
+          </p>
+          <ul className="mt-4 space-y-2">
+            <li>
+              <SiteLink className={linkClass} href="/academy/threat-lab">
+                Threat practice lab
+              </SiteLink>
+              <span className="text-cream/90"> — five fictional choices, including tracker alerts.</span>
+            </li>
+            <li>
+              <SiteLink className={linkClass} href="/academy/navigator">
+                Safety navigator
+              </SiteLink>
+              <span className="text-cream/90"> — screen lock, encryption, and a warning before you delete software.</span>
+            </li>
+            <li>
+              <SiteLink className={linkClass} href="/academy/recovery">
+                Recovery steps
+              </SiteLink>
+              <span className="text-cream/90"> — lost devices, lost passwords, and Canadian reporting contacts.</span>
+            </li>
+            <li>
+              <SiteLink className={linkClass} href="/academy/evidence">
+                Evidence explorer
+              </SiteLink>
+              <span className="text-cream/90"> — check a claim file before anyone calls it published.</span>
+            </li>
+          </ul>
+        </section>
 
         <section className="mt-12 border-t border-white/10 pt-8" id="evidence">
           <h2 className="font-serif text-3xl text-gold-bright">1. Evidence and knowledge status</h2>

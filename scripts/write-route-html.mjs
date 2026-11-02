@@ -104,6 +104,10 @@ function replaceJsonLd(html, data) {
 
 const routeSources = {
   '/': ['src/pages/HomePage.tsx'],
+  '/academy/threat-lab': ['src/pages/ThreatLabPage.tsx'],
+  '/academy/recovery': ['src/pages/RecoveryCenterPage.tsx'],
+  '/academy/navigator': ['src/pages/SafetyNavigatorPage.tsx'],
+  '/academy/evidence': ['src/pages/EvidenceExplorerPage.tsx'],
   '/contact': ['src/pages/ContactPage.tsx'],
   '/engine': ['src/pages/EnginePage.tsx'],
   '/system-documentation': ['src/pages/SystemDocsPage.tsx'],

@@ -1,0 +1,518 @@
+[
+  {
+    "id": "example-record",
+    "ok": true,
+    "file": "example-record.json"
+  },
+  {
+    "id": "example-list",
+    "ok": true,
+    "file": "example-list.json"
+  },
+  {
+    "id": "verified-published",
+    "ok": true,
+    "data": {
+      "claim_id": "ART-EVD-1001",
+      "statement": "An unknown-tracker alert is a safety signal from the phone.",
+      "status": "VERIFIED",
+      "sources": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/five-practical-ways-make-yourself-cybersafe",
+          "source_type": "PRIMARY",
+          "accessed_at": "2026-11-02T16:00:00Z",
+          "archived_url": null,
+          "note": "Public guidance page."
+        }
+      ],
+      "scope": "The meaning of a vendor alert, not a named incident.",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": "Read the vendor page on 2 November 2026.",
+      "verified_at": "2026-11-02T16:00:00Z",
+      "conflicting_evidence": [],
+      "publication_status": "PUBLISHED",
+      "human_approval": {
+        "approver": "Example reviewer",
+        "approved_at": "2026-11-02T17:00:00Z",
+        "action": "Approved this educational example."
+      },
+      "revision_history": []
+    }
+  },
+  {
+    "id": "corrected-keeps-wording",
+    "ok": true,
+    "data": {
+      "claim_id": "ART-EVD-1002",
+      "statement": "A nearby Bluetooth name alone does not show that a phone was hacked.",
+      "status": "CORRECTED",
+      "sources": [],
+      "scope": "Educational example; no specific device or incident assessed",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": null,
+      "verified_at": null,
+      "conflicting_evidence": [],
+      "publication_status": "DRAFT",
+      "human_approval": null,
+      "revision_history": [
+        {
+          "timestamp": "2026-11-02T18:00:00Z",
+          "summary": "Removed advice to ignore an unknown-tracker alert.",
+          "previous_statement": "Ignore unpaired Bluetooth broadcasts unless further evidence appears."
+        }
+      ]
+    }
+  },
+  {
+    "id": "disputed-with-conflict",
+    "ok": true,
+    "data": {
+      "claim_id": "ART-EVD-1003",
+      "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+      "status": "DISPUTED",
+      "sources": [],
+      "scope": "Educational example; no specific device or incident assessed",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": null,
+      "verified_at": null,
+      "conflicting_evidence": [
+        {
+          "statement": "A different note treats every nearby name as proof of infection.",
+          "source_url": "https://example.com/counter-note"
+        }
+      ],
+      "publication_status": "DRAFT",
+      "human_approval": null,
+      "revision_history": []
+    }
+  },
+  {
+    "id": "leap-day",
+    "ok": true,
+    "data": {
+      "claim_id": "ART-EVD-0001",
+      "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+      "status": "UNVERIFIED",
+      "sources": [],
+      "scope": "Educational example; no specific device or incident assessed",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": null,
+      "verified_at": "2024-02-29T00:00:00Z",
+      "conflicting_evidence": [],
+      "publication_status": "DRAFT",
+      "human_approval": null,
+      "revision_history": []
+    }
+  },
+  {
+    "id": "published-without-approval",
+    "ok": false,
+    "match": "Human approval",
+    "data": {
+      "claim_id": "ART-EVD-0001",
+      "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+      "status": "UNVERIFIED",
+      "sources": [],
+      "scope": "Educational example; no specific device or incident assessed",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": null,
+      "verified_at": null,
+      "conflicting_evidence": [],
+      "publication_status": "PUBLISHED",
+      "revision_history": []
+    }
+  },
+  {
+    "id": "published-null-approval",
+    "ok": false,
+    "match": "Human approval",
+    "data": {
+      "claim_id": "ART-EVD-0001",
+      "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+      "status": "UNVERIFIED",
+      "sources": [],
+      "scope": "Educational example; no specific device or incident assessed",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": null,
+      "verified_at": null,
+      "conflicting_evidence": [],
+      "publication_status": "PUBLISHED",
+      "human_approval": null,
+      "revision_history": []
+    }
+  },
+  {
+    "id": "javascript-url",
+    "ok": false,
+    "match": "ordinary web links",
+    "data": {
+      "claim_id": "ART-EVD-0001",
+      "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+      "status": "UNVERIFIED",
+      "sources": [
+        {
+          "url": "javascript:alert(1)",
+          "source_type": "PRIMARY",
+          "accessed_at": "2026-11-02T16:00:00Z",
+          "archived_url": null,
+          "note": "Public guidance page."
+        }
+      ],
+      "scope": "Educational example; no specific device or incident assessed",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": null,
+      "verified_at": null,
+      "conflicting_evidence": [],
+      "publication_status": "DRAFT",
+      "human_approval": null,
+      "revision_history": []
+    }
+  },
+  {
+    "id": "javascript-url-mixed-case",
+    "ok": false,
+    "match": "ordinary web links",
+    "data": {
+      "claim_id": "ART-EVD-0001",
+      "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+      "status": "UNVERIFIED",
+      "sources": [
+        {
+          "url": "JavaScript:alert(1)",
+          "source_type": "PRIMARY",
+          "accessed_at": "2026-11-02T16:00:00Z",
+          "archived_url": null,
+          "note": "Public guidance page."
+        }
+      ],
+      "scope": "Educational example; no specific device or incident assessed",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": null,
+      "verified_at": null,
+      "conflicting_evidence": [],
+      "publication_status": "DRAFT",
+      "human_approval": null,
+      "revision_history": []
+    }
+  },
+  {
+    "id": "data-url",
+    "ok": false,
+    "match": "ordinary web links",
+    "data": {
+      "claim_id": "ART-EVD-0001",
+      "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+      "status": "UNVERIFIED",
+      "sources": [
+        {
+          "url": "data:text/html,hello",
+          "source_type": "PRIMARY",
+          "accessed_at": "2026-11-02T16:00:00Z",
+          "archived_url": null,
+          "note": "Public guidance page."
+        }
+      ],
+      "scope": "Educational example; no specific device or incident assessed",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": null,
+      "verified_at": null,
+      "conflicting_evidence": [],
+      "publication_status": "DRAFT",
+      "human_approval": null,
+      "revision_history": []
+    }
+  },
+  {
+    "id": "file-url",
+    "ok": false,
+    "match": "ordinary web links",
+    "data": {
+      "claim_id": "ART-EVD-0001",
+      "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+      "status": "UNVERIFIED",
+      "sources": [
+        {
+          "url": "file:///etc/passwd",
+          "source_type": "PRIMARY",
+          "accessed_at": "2026-11-02T16:00:00Z",
+          "archived_url": null,
+          "note": "Public guidance page."
+        }
+      ],
+      "scope": "Educational example; no specific device or incident assessed",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": null,
+      "verified_at": null,
+      "conflicting_evidence": [],
+      "publication_status": "DRAFT",
+      "human_approval": null,
+      "revision_history": []
+    }
+  },
+  {
+    "id": "url-userinfo",
+    "ok": false,
+    "match": "ordinary web links",
+    "data": {
+      "claim_id": "ART-EVD-0001",
+      "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+      "status": "UNVERIFIED",
+      "sources": [
+        {
+          "url": "https://user:pass@example.com/secret",
+          "source_type": "PRIMARY",
+          "accessed_at": "2026-11-02T16:00:00Z",
+          "archived_url": null,
+          "note": "Public guidance page."
+        }
+      ],
+      "scope": "Educational example; no specific device or incident assessed",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": null,
+      "verified_at": null,
+      "conflicting_evidence": [],
+      "publication_status": "DRAFT",
+      "human_approval": null,
+      "revision_history": []
+    }
+  },
+  {
+    "id": "impossible-date",
+    "ok": false,
+    "match": "real date and time",
+    "data": {
+      "claim_id": "ART-EVD-0001",
+      "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+      "status": "UNVERIFIED",
+      "sources": [],
+      "scope": "Educational example; no specific device or incident assessed",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": null,
+      "verified_at": "2026-02-31T00:00:00Z",
+      "conflicting_evidence": [],
+      "publication_status": "DRAFT",
+      "human_approval": null,
+      "revision_history": []
+    }
+  },
+  {
+    "id": "date-without-timezone",
+    "ok": false,
+    "match": "real date and time",
+    "data": {
+      "claim_id": "ART-EVD-0001",
+      "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+      "status": "UNVERIFIED",
+      "sources": [],
+      "scope": "Educational example; no specific device or incident assessed",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": null,
+      "verified_at": "2026-11-02T16:00:00",
+      "conflicting_evidence": [],
+      "publication_status": "DRAFT",
+      "human_approval": null,
+      "revision_history": []
+    }
+  },
+  {
+    "id": "non-leap-day",
+    "ok": false,
+    "match": "real date and time",
+    "data": {
+      "claim_id": "ART-EVD-0001",
+      "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+      "status": "UNVERIFIED",
+      "sources": [],
+      "scope": "Educational example; no specific device or incident assessed",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": null,
+      "verified_at": "2023-02-29T00:00:00Z",
+      "conflicting_evidence": [],
+      "publication_status": "DRAFT",
+      "human_approval": null,
+      "revision_history": []
+    }
+  },
+  {
+    "id": "corrected-without-history",
+    "ok": false,
+    "match": "revision history",
+    "data": {
+      "claim_id": "ART-EVD-0001",
+      "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+      "status": "CORRECTED",
+      "sources": [],
+      "scope": "Educational example; no specific device or incident assessed",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": null,
+      "verified_at": null,
+      "conflicting_evidence": [],
+      "publication_status": "DRAFT",
+      "human_approval": null,
+      "revision_history": []
+    }
+  },
+  {
+    "id": "corrected-without-prior-wording",
+    "ok": false,
+    "match": "previous wording",
+    "data": {
+      "claim_id": "ART-EVD-0001",
+      "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+      "status": "CORRECTED",
+      "sources": [],
+      "scope": "Educational example; no specific device or incident assessed",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": null,
+      "verified_at": null,
+      "conflicting_evidence": [],
+      "publication_status": "DRAFT",
+      "human_approval": null,
+      "revision_history": [
+        {
+          "timestamp": "2026-11-02T18:00:00Z",
+          "summary": "Changed the sentence."
+        }
+      ]
+    }
+  },
+  {
+    "id": "disputed-without-conflict",
+    "ok": false,
+    "match": "conflicting evidence",
+    "data": {
+      "claim_id": "ART-EVD-0001",
+      "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+      "status": "DISPUTED",
+      "sources": [],
+      "scope": "Educational example; no specific device or incident assessed",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": null,
+      "verified_at": null,
+      "conflicting_evidence": [],
+      "publication_status": "DRAFT",
+      "human_approval": null,
+      "revision_history": []
+    }
+  },
+  {
+    "id": "verified-without-method",
+    "ok": false,
+    "match": "verification method",
+    "data": {
+      "claim_id": "ART-EVD-0001",
+      "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+      "status": "VERIFIED",
+      "sources": [],
+      "scope": "Educational example; no specific device or incident assessed",
+      "limitations": [
+        "No source validation performed for this sample record",
+        "No device forensics performed"
+      ],
+      "verification_method": null,
+      "verified_at": null,
+      "conflicting_evidence": [],
+      "publication_status": "DRAFT",
+      "human_approval": null,
+      "revision_history": []
+    }
+  },
+  {
+    "id": "duplicate-ids",
+    "ok": false,
+    "match": "Duplicate claim id",
+    "data": [
+      {
+        "claim_id": "ART-EVD-0001",
+        "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+        "status": "UNVERIFIED",
+        "sources": [],
+        "scope": "Educational example; no specific device or incident assessed",
+        "limitations": [
+          "No source validation performed for this sample record",
+          "No device forensics performed"
+        ],
+        "verification_method": null,
+        "verified_at": null,
+        "conflicting_evidence": [],
+        "publication_status": "DRAFT",
+        "human_approval": null,
+        "revision_history": []
+      },
+      {
+        "claim_id": "ART-EVD-0001",
+        "statement": "An unfamiliar Bluetooth device name, by itself, does not establish unauthorized access to a phone.",
+        "status": "UNVERIFIED",
+        "sources": [],
+        "scope": "Educational example; no specific device or incident assessed",
+        "limitations": [
+          "No source validation performed for this sample record",
+          "No device forensics performed"
+        ],
+        "verification_method": null,
+        "verified_at": null,
+        "conflicting_evidence": [],
+        "publication_status": "DRAFT",
+        "human_approval": null,
+        "revision_history": []
+      }
+    ]
+  },
+  {
+    "id": "empty-list",
+    "ok": false,
+    "match": "one record",
+    "data": []
+  }
+]

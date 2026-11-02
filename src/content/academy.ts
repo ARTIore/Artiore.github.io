@@ -178,8 +178,8 @@ export const referenceLinks = [
     href: '/investigations/digital-exposure/public-safety-checklist/',
   },
   {
-    id: 'LESSONS 1–4',
-    title: 'CISA Secure Our World',
+    id: 'CISA',
+    title: 'CISA Secure Our World campaign hub',
     href: 'https://www.cisa.gov/secure-our-world',
   },
   {

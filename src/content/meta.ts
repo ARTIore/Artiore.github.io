@@ -43,6 +43,46 @@ export const academyMeta = {
   crumbName: 'Clarity and Digital Safety Lab',
 }
 
+export const threatLabMeta = {
+  path: '/academy/threat-lab',
+  headTitle: 'Threat practice lab | Safer choices | ARTIore',
+  description:
+    'Practice five fictional safety choices: fake messages, lookalike Wi-Fi, tracker alerts, app permissions, and sign-in prompts. Nothing is sent.',
+  kind: 'page' as const,
+  crumbName: 'Threat practice lab',
+  lastmod: '2026-11-02',
+}
+
+export const recoveryMeta = {
+  path: '/academy/recovery',
+  headTitle: 'Recovery steps for accounts, devices, and fraud | ARTIore',
+  description:
+    'Plain steps for a lost phone, a lost password, a stolen account, identity theft, and payment fraud, with Canadian reporting contacts.',
+  kind: 'page' as const,
+  crumbName: 'Recovery steps',
+  lastmod: '2026-11-02',
+}
+
+export const navigatorMeta = {
+  path: '/academy/navigator',
+  headTitle: 'Device safety navigator | Locks and alerts | ARTIore',
+  description:
+    'Device checks in plain language: screen lock, disk encryption, tracker alerts, Safety Check, and a warning before removing stalkerware.',
+  kind: 'page' as const,
+  crumbName: 'Safety navigator',
+  lastmod: '2026-11-02',
+}
+
+export const evidenceMeta = {
+  path: '/academy/evidence',
+  headTitle: 'Evidence explorer | Check a claim record locally | ARTIore',
+  description:
+    'Open a local evidence file and check it on this page. Published claims need a named human approval. Unsafe links are rejected.',
+  kind: 'page' as const,
+  crumbName: 'Evidence explorer',
+  lastmod: '2026-11-02',
+}
+
 export const systemMeta = {
   path: '/system-documentation',
   headTitle: 'ARTIore system documentation | Architecture and doctrine',

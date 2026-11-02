@@ -67,6 +67,14 @@ body {
   font-family: 'Noto Nastaliq Urdu', 'Noto Naskh Arabic', 'Jameel Noori Nastaleeq', 'Urdu Typesetting', 'Noto Sans Arabic', serif;
 }
 
+.safety-tool {
+  overflow-wrap: anywhere;
+}
+
+.safety-tool[dir='rtl'] {
+  text-align: start;
+}
+
 .field-manual[lang='hi'] :is(h1, h2, h3, p, li, td, th, a, span, caption) {
   font-family: 'Noto Sans Devanagari', 'Nirmala UI', Mangal, 'Kohinoor Devanagari', 'Noto Sans', sans-serif;
 }
