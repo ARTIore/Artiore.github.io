@@ -50,6 +50,13 @@ export function breadcrumbItems(path: string, current: string): Crumb[] {
       { name: current, path: clean },
     ]
   }
+  if (clean.startsWith('/academy/')) {
+    return [
+      { name: 'Home', path: '/' },
+      { name: 'Digital safety lab', path: '/academy' },
+      { name: current, path: clean },
+    ]
+  }
   if (clean === '/field-manual/pocket-booklet' || clean === '/field-manual/carousels') {
     return [
       { name: 'Home', path: '/' },
