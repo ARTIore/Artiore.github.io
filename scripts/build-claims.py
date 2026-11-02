@@ -40,6 +40,29 @@ CURATED = {
     'C159', 'C167', 'C169', 'C172', 'C184', 'C185', 'C188', 'C197', 'C198', 'C199',
     'C204', 'C205', 'C206',
 }
+# Owner-approved public labels for the previously unstated set.
+# The 19 Needs-review claims stay unlabeled.
+APPROVED_LABELS = {
+    'C001': 'Confirmed', 'C008': 'Confirmed', 'C009': 'Confirmed', 'C040': 'Confirmed',
+    'C042': 'Confirmed', 'C047': 'Confirmed', 'C055': 'Confirmed', 'C058': 'Confirmed',
+    'C063': 'Confirmed', 'C064': 'Confirmed', 'C067': 'Confirmed', 'C070': 'Confirmed',
+    'C084': 'Confirmed', 'C085': 'Confirmed', 'C086': 'Confirmed', 'C087': 'Confirmed',
+    'C089': 'Confirmed', 'C100': 'Confirmed', 'C102': 'Confirmed', 'C106': 'Confirmed',
+    'C107': 'Confirmed', 'C110': 'Confirmed', 'C115': 'Confirmed', 'C116': 'Confirmed',
+    'C134': 'Confirmed', 'C148': 'Confirmed', 'C150': 'Confirmed', 'C159': 'Confirmed',
+    'C167': 'Confirmed', 'C169': 'Confirmed', 'C188': 'Confirmed', 'C197': 'Confirmed',
+    'C013': 'Demonstrated', 'C014': 'Demonstrated', 'C015': 'Demonstrated',
+    'C065': 'Demonstrated', 'C074': 'Demonstrated', 'C088': 'Demonstrated',
+    'C091': 'Demonstrated', 'C185': 'Demonstrated', 'C198': 'Demonstrated',
+}
+HOLD_NOT_STATED = {
+    'C007', 'C011', 'C028', 'C046', 'C062', 'C068', 'C072', 'C080', 'C083', 'C097',
+    'C124', 'C145', 'C146', 'C154', 'C155', 'C172', 'C184', 'C199', 'C206',
+}
+SCOPE_NOTES = {
+    'C055': 'Confirmed covers the mechanism only, not the dollar figures.',
+    'C058': 'Confirmed covers the mechanism only, not the dollar figures.',
+}
 ARTICLE_LINKS = [
     ('content/investigations/source/03-dns-hijacking-explained.md', 'The 2008 class is CVE-2008-1447.', 'C065'),
     ('content/investigations/source/03-dns-hijacking-explained.md', 'an FBI-led takedown replaced rogue servers with clean ones.', 'C066'),
@@ -426,8 +449,18 @@ def main():
             if verdict == 'confirmed' and in_the_wild(wording, claim_sources):
                 label = 'Confirmed'
             else:
-                unmapped.append(claim_id)
                 label = ''
+        if claim_id in HOLD_NOT_STATED:
+            label = ''
+        elif claim_id in APPROVED_LABELS:
+            label = APPROVED_LABELS[claim_id]
+        if not label and verdict != 'unverified':
+            unmapped.append(claim_id)
+        caveats = caveats_for(indexes.get(claim_id, []))
+        if claim_id in APPROVED_LABELS and 'Single-source.' not in caveats:
+            caveats.append('Single-source.')
+        if claim_id in SCOPE_NOTES and SCOPE_NOTES[claim_id] not in caveats:
+            caveats.append(SCOPE_NOTES[claim_id])
         published.append({
             'id': claim_id,
             'wording': wording,
@@ -435,7 +468,7 @@ def main():
             'narrowed': verdict == 'adjusted',
             'sources': claim_sources,
             'quotes': claim_quotes,
-            'caveats': caveats_for(indexes.get(claim_id, [])),
+            'caveats': caveats,
             'history': history_for(claim_id, events, legs_by_event, reversed_ids),
             'pages': matched,
         })

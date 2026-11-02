@@ -40,9 +40,9 @@ These boundaries are single-source. They are not averaged when the sources disag
 
 **FORCEDENTRY** (CVE-2021-30860) was fixed in iOS 14.8. → [C084](/investigations/digital-exposure/claims/#C084) The affected range is iOS before 14.8, not "14.8 and earlier."
 
-**BLASTPASS** (CVE-2023-41064 and CVE-2023-41061) was fixed in iOS 16.6.1. The sources do not agree on the edge, and this page does not smooth them into one sentence. One account gives the affected range as iOS 16.6.1 and earlier. Another says the chain was observed on an iPhone running iOS 16.6, and that Apple released 16.6.1 as the fix.
+**BLASTPASS** (CVE-2023-41064 and CVE-2023-41061) was fixed in iOS 16.6.1. → [C085](/investigations/digital-exposure/claims/#C085) Affected versions are those before 16.6.1. A wording that included 16.6.1 in the affected range is not used. → [C184](/investigations/digital-exposure/claims/#C184)
 
-**Operation Triangulation** is fixed in iOS 16.6.1 and affected versions before 16.6.1. "16.6 and earlier" is a different sentence. Public records for individual components also list earlier fixes, including iOS 16.3, 16.5.1, and 16.6. Those component dates stay visible. They are not collapsed into the chain boundary.
+**Operation Triangulation** components in the cited records were fixed in iOS 16.3, iOS 16.5.1, and iOS 16.6. → [C086](/investigations/digital-exposure/claims/#C086) Those are CVE-2023-41990, CVE-2023-32434, and CVE-2023-38606. A wording that the chain was fixed in 16.6.1 does not match those records.
 
 **CVE-2025-24200** is a USB Restricted Mode bypass that requires physical access. → [C087](/investigations/digital-exposure/claims/#C087) It was used against specific targeted individuals. It is not a remote zero-click chain.
 
