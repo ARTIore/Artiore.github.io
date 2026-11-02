@@ -270,24 +270,6 @@ if (frameworkEntry) {
   writeFileSync(join(process.cwd(), 'public', 'framework.html'), framework)
 }
 
-const academyEntry = seoEntries.find((entry) => entry.path === '/academy')
-if (academyEntry) {
-  const academyPath = join(dist, 'academy', 'index.html')
-  let academy = readFileSync(academyPath, 'utf8')
-  academy = replaceJsonLd(
-    academy,
-    buildJsonLd({
-      kind: 'page',
-      title: academyEntry.headTitle,
-      description: academyEntry.description,
-      path: academyEntry.path,
-      crumbName: academyEntry.crumbName || 'Clarity & Digital Safety Lab',
-    }),
-  )
-  writeFileSync(academyPath, academy)
-  writeFileSync(join(process.cwd(), 'public', 'academy', 'index.html'), academy)
-}
-
 // Default revision date. A page may set its own lastmod. Do not stamp the build clock.
 const defaultLastmod = '2026-10-31'
 const sitemapUrls = seoEntries.filter((entry) => entry.sitemap !== false)

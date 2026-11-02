@@ -10,6 +10,8 @@ audience: "Travellers, smartphone users, families, cryptocurrency holders"
 
 A practical guide based on the investigation. It is deliberately short. A list of a hundred items is a way of saying "this is not your problem"; these are the controls that change outcomes.
 
+[Try the interactive lessons](/academy/).
+
 ## The 20-minute baseline (everyone)
 
 Do these once, then revisit quarterly.

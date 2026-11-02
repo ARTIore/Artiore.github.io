@@ -5,7 +5,7 @@ import { legalPages } from './legal'
 import { libraryPages } from './library'
 import { carouselDecks, carouselOgImage } from './field-manual/carousels'
 import { carouselSeriesMeta, fieldManualMetas, pocketBookletMeta } from './field-manual/meta'
-import { contactMeta, engineMeta, homeMeta, systemMeta } from './meta'
+import { academyMeta, contactMeta, engineMeta, homeMeta, systemMeta } from './meta'
 import { investigationLicenseUrl, investigationMeta } from './investigation'
 import { buildJsonLd } from '../seo/structuredData'
 import type { PageDocument, SeoEntry } from './types'
@@ -14,7 +14,7 @@ export { buildJsonLd }
 
 export const blogMeta = blogIndexMeta
 
-const customMetas = [homeMeta, contactMeta, engineMeta, systemMeta, blogMeta]
+const customMetas = [homeMeta, contactMeta, engineMeta, systemMeta, academyMeta, blogMeta]
 
 const fieldManualAlternates = [
   ...fieldManualMetas.map((meta) => ({ hreflang: meta.inLanguage, path: meta.path })),
@@ -105,17 +105,6 @@ export const seoEntries: SeoEntry[] = [
     prerender: false,
     kind: 'page',
     crumbName: 'Prompt Framework V1.1',
-  },
-  {
-    path: '/academy',
-    headTitle: 'ARTIORE | Clarity & Digital Safety Lab',
-    description:
-      'Evidence-aware digital safety education and an interactive six-layer reasoning framework. Truth before certainty. Human agency before automation.',
-    sitemap: true,
-    prerender: false,
-    kind: 'page',
-    crumbName: 'Clarity & Digital Safety Lab',
-    lastmod: '2026-11-02',
   },
   {
     path: '/eternia-aurofa-soverign-engine/',
