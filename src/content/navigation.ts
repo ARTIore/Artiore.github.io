@@ -39,6 +39,7 @@ export const primaryNav: NavItem[] = [
       { label: 'Case studies', href: '/case-studies' },
       { label: 'UAE dossier', href: '/dossier' },
       { label: 'Field manual', href: '/field-manual' },
+      { label: 'Digital safety academy', href: '/academy' },
     ],
   },
   {
@@ -75,6 +76,7 @@ export const footerPages: NavLinkItem[] = [
   { label: 'Applications', href: '/applications' },
   { label: 'UAE dossier', href: '/dossier' },
   { label: 'Field manual', href: '/field-manual' },
+  { label: 'Digital safety academy', href: '/academy' },
   { label: 'Global Digital Exposure Investigation', href: '/investigations/digital-exposure/' },
   { label: 'Public safety checklist', href: '/investigations/digital-exposure/public-safety-checklist/' },
   { label: 'Deepfakes and AI payment fraud', href: '/investigations/digital-exposure/deepfake-ai-payment-fraud/' },
