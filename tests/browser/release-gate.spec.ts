@@ -230,6 +230,26 @@ test.describe('built site release checks', () => {
     expect(mobile.violations.map((item) => `${item.id} (${item.nodes.length})`)).toEqual([])
   })
 
+  test('French and Arabic field manuals use their own new-tab notice', async ({ page }) => {
+    await page.goto('/field-manual/fr/')
+    const french = page.locator('article.field-manual a[target="_blank"] span.sr-only')
+    await expect(french.first()).toContainText("(s'ouvre dans un nouvel onglet)")
+    await expect(french.first()).toHaveAttribute('lang', 'fr')
+    await expect(french.first()).toHaveAttribute('dir', 'ltr')
+    await expect(french.filter({ hasText: 'opens in a new tab' })).toHaveCount(0)
+
+    await page.goto('/field-manual/ar/')
+    const arabicArticle = page.locator('article.field-manual')
+    await expect(arabicArticle).toHaveAttribute('dir', 'rtl')
+    await expect(arabicArticle).toHaveAttribute('lang', 'ar')
+    const arabic = arabicArticle.locator('a[target="_blank"] span.sr-only')
+    await expect(arabic.first()).toContainText('يفتح في علامة تبويب جديدة')
+    await expect(arabic.first()).toHaveAttribute('lang', 'ar')
+    await expect(arabic.first()).toHaveAttribute('dir', 'rtl')
+    await expect(arabic.filter({ hasText: 'opens in a new tab' })).toHaveCount(0)
+    await expect(arabic.filter({ hasText: "s'ouvre dans un nouvel onglet" })).toHaveCount(0)
+  })
+
   test('hiding a disagreement flag moves focus and announces the change', async ({ page }) => {
     await page.goto('/academy/research/contradictions/')
     const hide = page.getByRole('button', { name: 'Hide this flag for now' }).first()
