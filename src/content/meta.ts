@@ -25,6 +25,15 @@ export const engineMeta = {
   crumbName: 'Eternia Aurora Sovereign Engine',
 }
 
+export const academyMeta = {
+  path: '/academy',
+  headTitle: 'Clarity and Digital Safety Lab | Artiais.com',
+  description:
+    'An interactive lab for four evidence labels, the six-layer framework, and five short digital safety lessons. Checks stay on this page. Nothing is submitted.',
+  kind: 'page' as const,
+  crumbName: 'Clarity and Digital Safety Lab',
+}
+
 export const systemMeta = {
   path: '/system-documentation',
   headTitle: 'ARTIore system documentation | Architecture and doctrine',

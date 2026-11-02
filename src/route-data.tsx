@@ -19,6 +19,7 @@ function documentRoute(load: () => Promise<PageDocument>): Loader {
 
 const loaders: Record<string, Loader> = {
   '/': () => import('./pages/HomePage'),
+  '/academy': () => import('./pages/AcademyPage'),
   '/contact': () => import('./pages/ContactPage'),
   '/engine': () => import('./pages/EnginePage'),
   '/system-documentation': () => import('./pages/SystemDocsPage'),
