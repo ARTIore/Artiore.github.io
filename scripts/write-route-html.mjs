@@ -210,6 +210,7 @@ async function renderDocument(templateHtml, entry, location) {
       inLanguage: entry.inLanguage,
       image: entry.image,
       faqs: entry.faqs,
+      license: entry.license,
     }),
   )
   const body = await render(location)

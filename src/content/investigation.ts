@@ -1,5 +1,6 @@
 export {
   investigationHub,
+  investigationLicenseUrl,
   investigationMeta,
   investigationOg,
   investigationPieces,

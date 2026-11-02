@@ -29,6 +29,7 @@ type SeoHeadProps = {
   imageWidth?: string
   imageHeight?: string
   imageAlt?: string
+  license?: string
 }
 
 function upsertMeta(selector: string, attributes: Record<string, string>) {
@@ -62,6 +63,7 @@ export function SeoHead({
   imageWidth,
   imageHeight,
   imageAlt,
+  license,
 }: SeoHeadProps) {
   useEffect(() => {
     const canonical = canonicalUrl(path)
@@ -134,9 +136,10 @@ export function SeoHead({
         inLanguage,
         image: ogUrl,
         faqs,
+        license,
       }),
     )
-  }, [alternates, author, authorOrganization, crumbName, dateModified, datePublished, description, faqs, headline, image, imageAlt, imageHeight, imageWidth, inLanguage, kind, locale, noindex, path, title])
+  }, [alternates, author, authorOrganization, crumbName, dateModified, datePublished, description, faqs, headline, image, imageAlt, imageHeight, imageWidth, inLanguage, kind, license, locale, noindex, path, title])
 
   return null
 }

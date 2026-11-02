@@ -21,6 +21,7 @@ export type JsonLdInput = {
   inLanguage?: string
   image?: string
   faqs?: { question: string; answer: string }[]
+  license?: string
 }
 
 export function openGraphType(kind: SeoKind | undefined) {
@@ -117,6 +118,7 @@ export function buildJsonLd(input: JsonLdInput) {
       image: input.image ?? OG_IMAGE_URL,
       publisher: { '@id': ORGANIZATION_ID },
       ...(input.inLanguage ? { inLanguage: input.inLanguage } : {}),
+      ...(input.license ? { license: input.license } : {}),
     })
   } else if (input.kind === 'engine') {
     graph.push({

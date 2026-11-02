@@ -3,11 +3,13 @@ import { SeoHead } from '../components/seo/SeoHead'
 import { SiteLink } from '../components/content/SiteLink'
 import { SincerityNote } from '../components/field-manual/SincerityNote'
 import { AlsoOnArtiore } from '../components/investigations/AlsoOnArtiore'
+import { InvestigationLicense, investigationLicenseUrl } from '../components/investigations/InvestigationLicense'
 import { investigationHubCompanionUrl } from '../content/investigations/companions'
 import {
   investigationHub,
   investigationOg,
   investigationPieces,
+  investigationHubPublished,
   investigationPrintPath,
   investigationPublished,
 } from '../content/investigations/catalog'
@@ -45,6 +47,7 @@ export default function InvestigationHubPage() {
         imageWidth={investigationOg.width}
         inLanguage="en"
         kind="article"
+        license={investigationLicenseUrl}
         locale="en_US"
         path={investigationHub.path}
         title={investigationHub.headTitle}
@@ -58,8 +61,9 @@ export default function InvestigationHubPage() {
             How everyday technology can compromise privacy, identity and financial security
           </p>
           <p className="mt-3 text-sm text-muted">
-            Version 1.0 · <time dateTime={investigationPublished}>26 October 2026</time> · Public
+            Version 1.0 · <time dateTime={investigationHubPublished}>31 October 2026</time> · Public
           </p>
+          <InvestigationLicense />
         </header>
         <SincerityNote code="en" />
         <div className="mt-10 max-w-[68ch] space-y-4 text-base leading-relaxed text-cream/90">
@@ -182,7 +186,7 @@ export default function InvestigationHubPage() {
 
         <section className="mt-12 max-w-[68ch]" id="corrections">
           <h2 className="font-serif text-3xl text-cream">Corrections log</h2>
-          <p className="mt-4 leading-relaxed text-cream/90">Version 1.0 published 31 October 2026. No corrections yet.</p>
+          <p className="mt-4 leading-relaxed text-cream/90">Version 1.0 published 31 October 2026.</p>
           <p className="mt-4 leading-relaxed text-cream/90">
             31 October 2026: added two articles, Browser Extensions and Session Theft, and Digital Security Warning Signs.
           </p>
@@ -293,6 +297,10 @@ export default function InvestigationHubPage() {
           <p className="mt-4 leading-relaxed text-cream/90">
             2 November 2026 — Added four pages: Deepfakes and AI Payment Fraud; Regional Reporting, Not a
             Ranking; Stalkerware and Safety Planning; and Evidence Method.
+          </p>
+          <p className="mt-4 leading-relaxed text-cream/90">
+            2 November 2026 — Licence added: Creative Commons Attribution 4.0 International (CC BY 4.0). The
+            version date on the hub is 31 October 2026, the date this hub was first published.
           </p>
         </section>
 

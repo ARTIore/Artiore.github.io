@@ -19,6 +19,11 @@ export const investigationOg = {
 
 export const investigationPublished = '2026-10-26'
 
+/** First publication of the hub on artiais.com, commit a8cd068, 31 October 2026. */
+export const investigationHubPublished = '2026-10-31'
+
+export const investigationLicenseUrl = 'https://creativecommons.org/licenses/by/4.0/'
+
 export const investigationHub = {
   path: investigationBase,
   title: 'Global Digital Exposure Investigation',
