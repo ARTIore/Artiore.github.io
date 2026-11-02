@@ -38,6 +38,28 @@ class EvidenceValidatorTest(unittest.TestCase):
             else:
                 self.assertTrue(any(case["match"] in item for item in issues), f"{case['id']}: {issues}")
 
+    def test_corrections_and_exchange(self) -> None:
+        draft = {
+            "correction_id": "ART-COR-0001",
+            "claim_id": "ART-EVD-0001",
+            "original_statement": "An unfamiliar name is not proof.",
+            "proposed_statement": "Say when the name would matter.",
+            "reason": "Illustrative only.",
+            "evidence_urls": [],
+            "status": "SUBMITTED_DRAFT",
+            "publication_authorization": None,
+            "revision_history": [],
+        }
+        self.assertEqual(validate_evidence.validate_data(draft), [])
+        unsafe = dict(draft)
+        unsafe["evidence_urls"] = ["javascript:alert(1)"]
+        self.assertTrue(any("ordinary web links" in item for item in validate_evidence.validate_data(unsafe)))
+        published = dict(draft)
+        published["status"] = "PUBLISHED"
+        self.assertTrue(any("who authorized" in item for item in validate_evidence.validate_data(published)))
+        old = {"schema_version": "1.0", "claims": [], "corrections": []}
+        self.assertTrue(any("1.1" in item for item in validate_evidence.validate_data(old)))
+
     def test_schema_documents_the_rules(self) -> None:
         schema = (ROOT / "public" / "schemas" / "evidence-ledger-v1.json").read_text(encoding="utf-8")
         for phrase in ("human_approval", "previous_statement", "conflicting_evidence", "javascript:"):

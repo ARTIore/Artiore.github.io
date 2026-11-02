@@ -1,11 +1,14 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://artiais.com/schemas/evidence-ledger-v1.json",
-  "title": "ARTIore Evidence Ledger document v1",
-  "description": "One evidence record, or a list of records. Normative checks live in src/lib/evidence/validate.ts and scripts/validate-evidence.py. A date-time must be a real RFC 3339 instant with a timezone. A URL must be http or https, with no userinfo and no javascript:, data:, vbscript:, file:, or blob: scheme. PUBLISHED and APPROVED require human_approval. CORRECTED requires revision history that keeps the previous wording. DISPUTED requires conflicting evidence. VERIFIED requires a method, a time, and at least one source.",
+  "title": "ARTIore evidence exchange v1.1",
+  "description": "Version 1.1. One evidence record, a list of evidence records, one correction request, a list of correction requests, or an exchange file with schema_version 1.1. Normative checks live in src/lib/evidence/validate.ts and scripts/validate-evidence.py. A date-time must be a real RFC 3339 instant with a timezone. A URL must be http or https, with no userinfo and no javascript:, data:, vbscript:, file:, or blob: scheme. PUBLISHED and APPROVED evidence requires human_approval. ACCEPTED and PUBLISHED corrections require publication_authorization. Those fields are not proof that a person approved anything. CORRECTED evidence requires revision history that keeps the previous wording. DISPUTED evidence requires conflicting evidence. VERIFIED evidence requires a method, a time, and at least one source. A contradiction flag is a review note, not a record that can be imported as a verdict.",
   "oneOf": [
     { "$ref": "#/$defs/record" },
-    { "$ref": "#/$defs/recordList" }
+    { "$ref": "#/$defs/recordList" },
+    { "$ref": "#/$defs/correction" },
+    { "$ref": "#/$defs/correctionList" },
+    { "$ref": "#/$defs/exchange" }
   ],
   "$defs": {
     "safeUrl": {
@@ -152,6 +155,56 @@
           }
         }
       ]
+    },
+    "correctionList": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 2000,
+      "items": { "$ref": "#/$defs/correction" }
+    },
+    "correction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["correction_id", "claim_id", "original_statement", "proposed_statement", "reason", "evidence_urls", "status", "revision_history"],
+      "properties": {
+        "correction_id": { "type": "string", "pattern": "^ART-COR-[0-9]{4,}$" },
+        "claim_id": { "type": "string", "pattern": "^ART-EVD-[0-9]{4,}$" },
+        "original_statement": { "type": "string", "minLength": 1 },
+        "proposed_statement": { "type": "string", "minLength": 1 },
+        "reason": { "type": "string", "minLength": 1 },
+        "evidence_urls": { "type": "array", "items": { "$ref": "#/$defs/safeUrl" } },
+        "status": { "enum": ["SUBMITTED_DRAFT", "UNDER_REVIEW", "NEEDS_EVIDENCE", "ACCEPTED", "DECLINED", "PUBLISHED", "WITHDRAWN"] },
+        "submitted_at": { "type": ["string", "null"], "format": "date-time" },
+        "reviewed_at": { "type": ["string", "null"], "format": "date-time" },
+        "reviewer": { "type": ["string", "null"] },
+        "decision_reason": { "type": ["string", "null"] },
+        "publication_authorization": { "type": ["object", "null"] },
+        "revision_history": { "type": "array", "items": { "$ref": "#/$defs/revision" } },
+        "public_note": { "type": "string" }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": ["status"],
+            "properties": { "status": { "enum": ["ACCEPTED", "PUBLISHED"] } }
+          },
+          "then": {
+            "required": ["publication_authorization"],
+            "properties": { "publication_authorization": { "$ref": "#/$defs/approval" } }
+          }
+        }
+      ]
+    },
+    "exchange": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "claims", "corrections"],
+      "properties": {
+        "schema_version": { "const": "1.1" },
+        "claims": { "type": "array", "maxItems": 2000, "items": { "$ref": "#/$defs/record" } },
+        "corrections": { "type": "array", "maxItems": 2000, "items": { "$ref": "#/$defs/correction" } },
+        "label": { "type": "string" }
+      }
     }
   }
 }

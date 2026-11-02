@@ -99,6 +99,7 @@ export default function AcademyPage() {
           <nav aria-label="On this page" className="mt-6 flex flex-wrap gap-2">
             {[
               ['#tools', 'Practice tools'],
+              ['#research', 'Research review'],
               ['#evidence', 'Evidence labels'],
               ['#framework', 'Six layers'],
               ['#controls', 'Your controls'],
@@ -141,6 +142,41 @@ export default function AcademyPage() {
                 Evidence explorer
               </SiteLink>
               <span className="text-cream/90"> — check a claim file before anyone calls it published.</span>
+            </li>
+          </ul>
+        </section>
+
+        <section className="mt-12 border-t border-white/10 pt-8" id="research">
+          <h2 className="font-serif text-3xl text-gold-bright">Research review</h2>
+          <p className="mt-4 max-w-[68ch] text-cream/90">
+            Research pages are separate from these lessons. They do not replace the investigation’s source register or
+            its corrections log. The records there are illustrative and unverified. A status inside a file is not
+            approval.
+          </p>
+          <ul className="mt-4 space-y-2">
+            <li>
+              <SiteLink className={linkClass} href="/academy/research">
+                Research review
+              </SiteLink>
+              <span className="text-cream/90"> — counts gaps. It does not decide what is true.</span>
+            </li>
+            <li>
+              <SiteLink className={linkClass} href="/academy/research/provenance">
+                Source links
+              </SiteLink>
+              <span className="text-cream/90"> — a request or a citation. Not proof.</span>
+            </li>
+            <li>
+              <SiteLink className={linkClass} href="/academy/research/corrections">
+                Correction requests
+              </SiteLink>
+              <span className="text-cream/90"> — a draft stays on your device.</span>
+            </li>
+            <li>
+              <SiteLink className={linkClass} href="/academy/research/contradictions">
+                Possible disagreements
+              </SiteLink>
+              <span className="text-cream/90"> — word checks a person still has to judge.</span>
             </li>
           </ul>
         </section>
