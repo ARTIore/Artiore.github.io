@@ -4989,3 +4989,43 @@
 4989,499,heeded,n/a
 4990,499,searched_sources,n/a
 4991,499,corroboration,n/a
+4992,500,verdict,confirmed
+4993,500,source,NVD CVE-2019-9506; CVE-2020-10135
+4994,500,refute_first,BIAS is CVE-2020-10135. CVE-2020-12351 is a different BlueZ flaw.
+4995,500,old_wording,BIAS (CVE-2020-12351 and related)
+4996,500,new_wording,"KNOB is CVE-2019-9506. BIAS is CVE-2020-10135, not CVE-2020-12351."
+4997,500,reason,The BIAS identifier in the claim text was CVE-2020-12351. The cited record is CVE-2020-10135.
+4998,500,recomputation,N/A — no arithmetic.
+4999,500,heeded,n/a
+5000,500,searched_sources,NVD CVE-2020-10135; NVD CVE-2019-9506
+5001,500,corroboration,single
+5002,501,verdict,adjusted
+5003,501,source,"Apple, About the security content of iOS 16.6.1; Citizen Lab BLASTPASS"
+5004,501,refute_first,"iOS 16.6.1 addresses CVE-2023-41064 and CVE-2023-41061. It is the fix, not an affected version."
+5005,501,old_wording,iOS 16.6.1 and earlier per Citizen Lab; R07 conflict noted.
+5006,501,new_wording,"BLASTPASS was fixed in iOS 16.6.1. Affected versions are those before 16.6.1, not 16.6.1 and earlier."
+5007,501,reason,"16.6.1 is the fix, so the affected range is the versions before 16.6.1."
+5008,501,recomputation,N/A — no arithmetic.
+5009,501,heeded,pending
+5010,501,searched_sources,"Apple security content of iOS 16.6.1 (CVE-2023-41064, CVE-2023-41061)"
+5011,501,corroboration,single
+5012,502,verdict,adjusted
+5013,502,source,"Apple security notes for iOS 16.3, 16.5.1, and 16.6; Kaspersky Operation Triangulation"
+5014,502,refute_first,"Cited notes fix CVE-2023-41990 in 16.3, CVE-2023-32434 in 16.5.1, and CVE-2023-38606 in 16.6."
+5015,502,old_wording,iOS before 16.6.1; fixed in 16.6.1.
+5016,502,new_wording,"Cited component records fix Operation Triangulation in iOS 16.3, 16.5.1, and 16.6, not as a single fix in 16.6.1."
+5017,502,reason,The cited Apple notes do not record a single Triangulation fix in 16.6.1.
+5018,502,recomputation,N/A — no arithmetic.
+5019,502,heeded,pending
+5020,502,searched_sources,Apple iOS 16.3 (CVE-2023-41990); iOS 16.5.1 (CVE-2023-32434); iOS 16.6 (CVE-2023-38606)
+5021,502,corroboration,single
+5022,503,verdict,adjusted
+5023,503,source,"Apple, About the security content of iOS 16.6.1"
+5024,503,refute_first,iOS 16.6.1 is the BLASTPASS fix. It is not inside the affected range.
+5025,503,old_wording,16.6.1 and earlier; source conflict noted.
+5026,503,new_wording,"16.6.1 is the BLASTPASS fix. Affected versions are those before 16.6.1, not 16.6.1 and earlier."
+5027,503,reason,"16.6.1 is the fix, so it is not inside the affected range."
+5028,503,recomputation,N/A — no arithmetic.
+5029,503,heeded,pending
+5030,503,searched_sources,"Apple security content of iOS 16.6.1 (CVE-2023-41064, CVE-2023-41061)"
+5031,503,corroboration,single

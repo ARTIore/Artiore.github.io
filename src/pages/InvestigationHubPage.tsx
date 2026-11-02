@@ -307,6 +307,12 @@ export default function InvestigationHubPage() {
             2 November 2026 — Licence added: Creative Commons Attribution 4.0 International (CC BY 4.0). The
             version date on the hub is 31 October 2026, the date this hub was first published.
           </p>
+          <p className="mt-4 leading-relaxed text-cream/90">
+            2 November 2026 — Claim ledger: C085 and C184 no longer say BLASTPASS affected iOS 16.6.1 and
+            earlier. iOS 16.6.1 is the fix, so the affected versions are those before 16.6.1. C086 no longer
+            says Operation Triangulation was fixed in 16.6.1. The cited component records list fixes in iOS
+            16.3, 16.5.1, and 16.6. C074 records BIAS as CVE-2020-10135, not CVE-2020-12351.
+          </p>
         </section>
 
         <AlsoOnArtiore href={investigationHubCompanionUrl} />

@@ -72,7 +72,7 @@ C070,confirmed,350
 C071,unverified,
 C072,confirmed,353
 C073,confirmed,394
-C074,confirmed,395
+C074,confirmed,500
 C075,adjusted,212
 C076,adjusted,213
 C077,confirmed,214
@@ -83,8 +83,8 @@ C081,adjusted,219
 C082,adjusted,220
 C083,adjusted,396
 C084,adjusted,397
-C085,adjusted,398
-C086,adjusted,399
+C085,adjusted,501
+C086,adjusted,502
 C087,confirmed,400
 C088,adjusted,221
 C089,confirmed,355
@@ -182,7 +182,7 @@ C180,adjusted,256
 C181,confirmed,257
 C182,rejected,381
 C183,confirmed,258
-C184,adjusted,403
+C184,adjusted,503
 C185,adjusted,404
 C186,confirmed,274
 C187,confirmed,382

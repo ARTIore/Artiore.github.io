@@ -31,7 +31,7 @@ One regional row records 87,400 or more cybercrime reports in FY23–24 and 42,5
 
 Documented Predator and Pegasus deployments in Southeast Asia sit in the same case set as Operation Triangulation and LightSpy implants. That is a set of cases, not a prevalence estimate, and not a claim that every device in the region is compromised. Single-source.
 
-Operation Triangulation was an iMessage zero-click chain affecting iOS before 16.6.1. The patch boundary used here is iOS 16.6.1. Single-source.
+Operation Triangulation was an iMessage zero-click chain. The cited component records list fixes in iOS 16.3, 16.5.1, and 16.6, not a single fix in 16.6.1. → [C086](/investigations/digital-exposure/claims/#C086) Single-source.
 
 A 15-device sample can show that a technique was observed. It cannot show that the technique is common, or that a country is the most targeted. The selection method is not re-derived here.
 
