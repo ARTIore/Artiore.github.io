@@ -5,6 +5,7 @@ import { SiteLink } from '../components/content/SiteLink'
 import { SincerityNote } from '../components/field-manual/SincerityNote'
 import {
   investigationBase,
+  investigationLicenseUrl,
   investigationOg,
   investigationPiece,
   investigationPrintPath,
@@ -14,7 +15,7 @@ import {
 import { investigationFaqs } from '../content/investigations/faqs'
 import { renderInvestigationMarkdown } from '../content/investigations/markdown'
 import { AlsoOnArtiore } from '../components/investigations/AlsoOnArtiore'
-import { InvestigationLicense, investigationLicenseUrl } from '../components/investigations/InvestigationLicense'
+import { InvestigationLicense } from '../components/investigations/InvestigationLicense'
 import { ArticleVerificationSources, VerificationSourceRegister } from '../components/investigations/VerificationSources'
 import { investigationCompanionUrls } from '../content/investigations/companions'
 

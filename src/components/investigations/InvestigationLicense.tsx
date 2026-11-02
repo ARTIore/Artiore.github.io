@@ -3,8 +3,6 @@ import { investigationLicenseUrl } from '../../content/investigations/catalog'
 const linkClass =
   'text-gold-bright underline decoration-gold/40 underline-offset-4 hover:decoration-gold-bright'
 
-export { investigationLicenseUrl }
-
 /** Reuse notice for the Global Digital Exposure Investigation. */
 export function InvestigationLicense() {
   return (
