@@ -1,4 +1,5 @@
 import { createElement, type ComponentType, type ReactNode } from 'react'
+import { globalInjusticeRouteLoaders } from './content/global-injustice/routes'
 import { investigationRouteLoaders } from './content/investigations/routes'
 import type { PageDocument } from './content/types'
 import { normalizePath } from './content/urls'
@@ -72,6 +73,7 @@ const loaders: Record<string, Loader> = {
     return post.page
   }),
   ...investigationRouteLoaders(),
+  ...globalInjusticeRouteLoaders(),
   '/investigations/digital-exposure/claims': () => import('./pages/ClaimsPage'),
   '/investigations/digital-exposure/ar/claims': async () => {
     const view = await import('./pages/ClaimsPage')

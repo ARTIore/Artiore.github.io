@@ -79,6 +79,19 @@ export function breadcrumbItems(path: string, current: string): Crumb[] {
       { name: current, path: clean },
     ]
   }
+  if (clean === '/investigations/global-injustice' || clean.startsWith('/investigations/global-injustice/')) {
+    if (clean === '/investigations/global-injustice') {
+      return [
+        { name: 'Home', path: '/' },
+        { name: current, path: clean },
+      ]
+    }
+    return [
+      { name: 'Home', path: '/' },
+      { name: 'Global Injustice Investigation', path: '/investigations/global-injustice' },
+      { name: current, path: clean },
+    ]
+  }
   if (clean === '/investigations/digital-exposure/ar' || clean.startsWith('/investigations/digital-exposure/ar/')) {
     if (clean === '/investigations/digital-exposure/ar') {
       return [
