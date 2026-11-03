@@ -44,4 +44,6 @@ export type InjusticePage = {
   confidence: string
   heldBack: HeldBack[]
   sourceIds: string[]
+  /** When set, the page points at the hub corrections list. */
+  seesCorrections?: boolean
 }

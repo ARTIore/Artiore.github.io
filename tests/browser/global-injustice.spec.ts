@@ -33,7 +33,7 @@ test.describe('Global Injustice Investigation', () => {
     await expect(page.getByText('ESTABLISHED does not mean Verified')).toBeVisible()
     await expect(page.getByText('Last source check:')).toBeVisible()
     await page.goto('/investigations/global-injustice/l1-systems/')
-    const source = page.getByRole('link', { name: /legislation\.gov\.uk/i }).first()
+    const source = page.locator('a[href*="justice.gov"]').first()
     await expect(source).toHaveAttribute('target', '_blank')
     await expect(source).toContainText('(opens in a new tab)')
     await page.goto('/investigations/global-injustice/l7-crime-trends/')

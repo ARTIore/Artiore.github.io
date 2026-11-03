@@ -1,439 +1,337 @@
 {
-  "edition": "Global Injustice Investigation, version 1.0",
+  "edition": "Global Injustice Investigation, revised desk report, 3 November 2026",
   "sourceCheck": "2026-11-03",
-  "method": "Each URL below was requested on 3 November 2026. A published sentence uses a URL only when the opened page supports that sentence. Desk-report figures that failed this test are marked replaced, removed, or could not access, and are not findings.",
+  "method": "Revised-report URLs were requested on 3 November 2026. A sentence is published only when the opened page supports it. The first edition log is superseded for what this edition states.",
   "entries": [
     {
-      "id": "po-act",
-      "url": "https://www.legislation.gov.uk/ukpga/2024/14/section/1/enacted",
-      "status": "verified",
-      "claim": "The Post Office (Horizon System) Offences Act 2024, section 1, quashes convictions for relevant offences."
-    },
-    {
-      "id": "po-inquiry",
-      "url": "https://www.postofficehorizoninquiry.org.uk/",
-      "status": "verified",
-      "claim": "The statutory Horizon inquiry has published Volume 1 of its final report on human impact and redress."
-    },
-    {
-      "id": "po-bbc",
-      "url": "https://www.bbc.co.uk/news/uk-politics-67923192",
-      "status": "verified",
-      "claim": "On 9 January 2024 BBC News reported more than 700 Horizon prosecutions and said quashing legislation was under consideration. It does not support a count of 900 convictions."
-    },
-    {
-      "id": "po-computer-weekly",
-      "url": "https://www.computerweekly.com/news/366566755/More-than-900-subpostmaster-convictions-wouldnt-have-happened-without-Post-Office-backed-law-change",
-      "status": "could not access",
-      "claim": "Desk report: more than 900 convictions. HTTP 403. Not a finding."
-    },
-    {
-      "id": "nre",
-      "url": "https://exonerationregistry.org/",
-      "status": "verified",
-      "claim": "On 3 November 2026 the registry homepage showed 3,870 exonerations and more than 36,226 years lost since 1989. It did not state an official-misconduct share."
-    },
-    {
       "id": "ferguson",
-      "url": "https://www.justice.gov/sites/default/files/opa/press-releases/attachments/2015/03/04/ferguson_police_department_report.pdf",
+      "url": "https://www.justice.gov/crt/case/united-states-v-city-ferguson",
       "status": "verified",
-      "claim": "DOJ report of 4 March 2015: Ferguson policing and the municipal court were shaped by revenue, and warrants were a routine response to missed appearances and unpaid fines."
+      "claim": "DOJ case page: 4 March 2015 findings that Ferguson police and court practices systematically violate the First, Fourth, and Fourteenth Amendments, with a revenue focus and race bias."
     },
     {
-      "id": "trac",
-      "url": "https://tracreports.org/immigration/quickfacts/eoir.html",
+      "id": "po-index",
+      "url": "https://www.postofficehorizoninquiry.org.uk/reports-and-statements",
       "status": "verified",
-      "claim": "TRAC: 3,037,800 active U.S. immigration-court cases pending at the end of September 2026."
+      "claim": "Inquiry reports page: Volume 1, 8 July 2025, human impact and redress."
     },
     {
-      "id": "oig",
-      "url": "https://oig.justice.gov/sites/default/files/reports/21-028_0.pdf",
+      "id": "po-v1",
+      "url": "https://www.postofficehorizoninquiry.org.uk/sites/default/files/2025-07/Post%20Office%20Horizon%20IT%20Inquiry%20Final%20Report%20Volume%201_0.pdf",
       "status": "verified",
-      "claim": "OIG report 21-028, January 2021 (revised): Zero Tolerance family-separation planning underestimated the complexity."
+      "claim": "Volume 1 PDF cover: ordered printed 8 July 2025."
     },
     {
-      "id": "uksc",
-      "url": "https://www.supremecourt.uk/cases/uksc-2023-0093",
+      "id": "myanmar",
+      "url": "https://about.fb.com/wp-content/uploads/2018/11/bsr-facebook-myanmar-hria_final.pdf",
       "status": "verified",
-      "claim": "UKSC judgment of 15 November 2023, [2023] UKSC 42: majority allowed the appeal; Rwanda removals unlawful under the Human Rights Act until asylum deficiencies were corrected."
+      "claim": "BSR assessment undertaken May to September 2018. It cannot predate 2017."
     },
     {
-      "id": "rwanda-act",
-      "url": "https://www.legislation.gov.uk/ukpga/2024/21/contents",
-      "status": "could not access",
-      "claim": "Desk report: the Safety of Rwanda Act and a 2025 discontinuation. The contents page timed out. Not a finding."
-    },
-    {
-      "id": "doj-hsbc",
-      "url": "https://www.justice.gov/opa/pr/hsbc-holdings-plc-and-hsbc-bank-usa-na-admit-anti-money-laundering-and-sanctions-violations",
-      "status": "could not access",
-      "claim": "Desk report: HSBC 2012 penalty of $1.9 billion. The page returned an empty body. Not a finding."
-    },
-    {
-      "id": "doj-wells",
-      "url": "https://www.justice.gov/opa/pr/wells-fargo-agrees-pay-3-billion-resolve-criminal-and-civil-investigations-sales-practices",
-      "status": "could not access",
-      "claim": "Desk report: Wells Fargo $3 billion settlement. The page returned an empty body. Not a finding."
-    },
-    {
-      "id": "npr-cholera",
-      "url": "https://www.npr.org/sections/goatsandsoda/2016/12/02/504173541/u-n-finally-apologizes-for-cholera-in-haiti-but-omits-one-point",
-      "status": "could not access",
-      "claim": "Desk report: UN cholera apology. The page timed out. Not a finding."
-    },
-    {
-      "id": "un-cholera",
-      "url": "https://press.un.org/en/2016/sgsm18323.doc.htm",
-      "status": "could not access",
-      "claim": "Desk report: UN cholera statement. HTTP 406. Not a finding."
-    },
-    {
-      "id": "wirecard",
-      "url": "https://www.bbc.co.uk/news/business-53149907",
+      "id": "rwanda",
+      "url": "https://www.gov.rw/fileadmin/user_upload/gov_user_upload/Publications/Press_Releases/Press_Release.pdf",
       "status": "verified",
-      "claim": "BBC, 23 June 2020: Wirecard’s former chief executive arrested after EY refused to sign the 2019 accounts over a missing €1.9 billion."
+      "claim": "Rwanda government PDF: notice of arbitration on 24 November 2025 under the migration treaty. Not the 5 August 2024 parliamentary answer."
     },
     {
-      "id": "doj-odebrecht",
-      "url": "https://www.justice.gov/opa/pr/odebrecht-and-braskem-plead-guilty-and-agree-pay-least-35-billion-global-penalties-resolve",
-      "status": "could not access",
-      "claim": "Desk report: Odebrecht penalty package. The page returned an empty body. Not a finding."
-    },
-    {
-      "id": "doj-1mdb",
-      "url": "https://www.justice.gov/opa/pr/goldman-sachs-charged-foreign-bribery-case-and-agrees-pay-over-29-billion",
-      "status": "could not access",
-      "claim": "Desk report: Goldman Sachs 1MDB settlement above $2.9 billion. The page returned an empty body. Not a finding."
-    },
-    {
-      "id": "danske",
-      "url": "https://danskebank.com/-/media/danske-bank-com/file-cloud/2018/9/report-on-the-non-resident-portfolio-at-danske-banks-estonian-branch.pdf",
+      "id": "findex",
+      "url": "https://blogs.worldbank.org/en/developmenttalk/digital-technology-is-unlocking-financial-inclusion",
       "status": "verified",
-      "claim": "Danske Bank’s 19 September 2018 commissioned report: non-resident portfolio flow of approximately EUR 200 billion, and manifestly insufficient AML controls."
+      "claim": "World Bank: 1.3 billion adults still lack accounts, alongside growth in account ownership."
     },
     {
-      "id": "fincen",
-      "url": "https://www.icij.org/investigations/fincen-files/",
+      "id": "bsr-2022",
+      "url": "https://www.bsr.org/reports/BSR_Meta_Human_Rights_Israel_Palestine_English.pdf",
       "status": "verified",
-      "claim": "ICIJ FinCEN Files page: an investigation of global banks and industrial-scale money laundering. The page does not itself say reports were filed and then ignored."
+      "claim": "BSR, 22 September 2022: did not identify intentional bias; identified unintentional bias and greater over-enforcement of Arabic content."
     },
     {
-      "id": "cpi",
-      "url": "https://www.transparency.org/en/cpi/2025",
+      "id": "meta-2022",
+      "url": "https://about.fb.com/news/2022/09/human-rights-impact-meta-israel-palestine/",
       "status": "verified",
-      "claim": "Corruption Perceptions Index 2025 ranks 182 countries and territories and describes a perceptions index, not a count of corrupt acts."
+      "claim": "Meta, same day: unintentional impact on Palestinian and Arab communities."
     },
     {
-      "id": "cpi-news",
-      "url": "https://www.transparency.org/en/news/cpi-2025-findings-insights-corruption",
+      "id": "fed",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20201022a.htm",
       "status": "verified",
-      "claim": "TI findings note, 10 February 2026: average score 42, 122 countries below 50, authors describe a worsening direction and a decline in accountable leadership."
+      "claim": "Federal Reserve, 22 October 2020: $154 million fine of Goldman Sachs for 1MDB oversight failures. Not the $2.9 billion resolution."
     },
     {
-      "id": "cpj-killed",
-      "url": "https://cpj.org/data/killed/2025/?status=Killed&motiveConfirmed%5B%5D=Confirmed&type%5B%5D=Journalist&start_year=2025&end_year=2025&group_by=location",
+      "id": "nao-covid",
+      "url": "https://www.nao.org.uk/reports/government-procurement-during-the-covid-19-pandemic/",
       "status": "verified",
-      "claim": "CPJ’s 2025 killed database explains its work-related coding. It did not display a total of 130. The coding word is CPJ’s, not this site’s grade Confirmed."
-    },
-    {
-      "id": "cpj-130-removed",
-      "url": "https://cpj.org/data/killed/2025/",
-      "status": "removed",
-      "claim": "Desk report: 130 journalists and media workers killed in 2025. The opened database did not show that total. Not a finding."
+      "claim": "NAO: does not evaluate value for money of the COVID contracts; sample had insufficient documentation in specific cases."
     },
     {
       "id": "cpj-prison",
-      "url": "https://cpj.org/reports/2026/01/2025-prison-census/",
-      "status": "could not access",
-      "claim": "Desk report: more than 300 journalists imprisoned for a fifth year. HTTP 404. Not a finding."
-    },
-    {
-      "id": "rsf-index",
-      "url": "https://rsf.org/en/index",
+      "url": "https://cpj.org/special-reports/2025-journalist-jailings-remain-stubbornly-high-harsh-prison-conditions-pervasive/",
       "status": "verified",
-      "claim": "RSF publishes a 2026 World Press Freedom Index covering 180 countries. The opened pages did not say the index was at a 25-year low."
+      "claim": "CPJ: 330 journalists imprisoned as of 1 December 2025, down from 384 in 2024."
     },
     {
-      "id": "rsf-low-removed",
-      "url": "https://rsf.org/en/world-press-freedom-index",
-      "status": "removed",
-      "claim": "Desk report: press freedom at its lowest in 25 years. That sentence was not on the index pages opened. Not a finding."
-    },
-    {
-      "id": "rsf-russia",
-      "url": "https://rsf.org/en/country/russia",
+      "id": "cpj-129",
+      "url": "https://cpj.org/special-reports/record-129-press-members-killed-in-2025-israel-responsible-for-2-of-3-of-deaths/",
       "status": "verified",
-      "claim": "RSF 2026 Russia page: rank 172 of 180, score 23.15, and independent media banned, blocked, or labelled foreign agents or undesirable organisations since February 2022."
+      "claim": "CPJ, 25 February 2026: 129 press members killed in 2025; database changes. Replaces 130."
     },
     {
-      "id": "memorial",
-      "url": "https://www.nobelprize.org/prizes/peace/2022/memorial/facts/",
+      "id": "citizen-lab",
+      "url": "https://citizenlab.ca/amnesty-peer-review/",
       "status": "verified",
-      "claim": "Nobel facts page: Memorial was declared a foreign agent in 2016, the Russian Supreme Court ordered liquidation in 2021, and Memorial is a 2022 peace laureate."
+      "claim": "Citizen Lab validated Pegasus infections in four iTunes backups. Not every leaked number."
     },
     {
-      "id": "civicus",
-      "url": "https://monitor.civicus.org/globalfindings/",
+      "id": "paragon",
+      "url": "https://citizenlab.ca/research/first-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted/",
       "status": "verified",
-      "claim": "CIVICUS Monitor: more than two billion people, 28 percent of the world population, live in countries rated closed."
-    },
-    {
-      "id": "civicus-3-2",
-      "url": "https://monitor.civicus.org/globalfindings/",
-      "status": "replaced",
-      "claim": "Desk report: 3.2 billion people in countries rated closed or repressed. The opened page stated the two-billion / 28 percent closed figure instead. The 3.2 billion figure is not used."
-    },
-    {
-      "id": "cjeu-hungary",
-      "url": "https://curia.europa.eu/juris/document/document.jsf?docid=227569&doclang=EN",
-      "status": "could not access",
-      "claim": "Desk report: CJEU annulled Hungary’s 2017 foreign-funded NGO law. The document page did not return the judgment. Not a finding."
-    },
-    {
-      "id": "oxfam",
-      "url": "https://assets.publishing.service.gov.uk/media/5cff7fabed915d09a33c2142/Inquiry_Report_summary_findings_and_conclusions_Oxfam.pdf",
-      "status": "verified",
-      "claim": "Charity Commission inquiry into Oxfam GB, 11 June 2019: Haiti safeguarding failures, victims not taken seriously enough, official warning for mismanagement."
-    },
-    {
-      "id": "oxfam-page",
-      "url": "https://www.gov.uk/government/publications/charity-inquiry-oxfam-gb",
-      "status": "verified",
-      "claim": "Government publication page for the Oxfam GB inquiry, published 11 June 2019."
-    },
-    {
-      "id": "oxfam-paid-survivors",
-      "url": "https://www.civilsociety.co.uk/voices/timeline-of-the-oxfam-sexual-misconduct-scandal.html",
-      "status": "replaced",
-      "claim": "Desk wording that staff paid survivors for sex is not used. The Commission inquiry, which was opened, is the source for the Haiti findings."
-    },
-    {
-      "id": "parliament-idc",
-      "url": "https://publications.parliament.uk/pa/cm201719/cmselect/cmintdev/840/84004.htm",
-      "status": "could not access",
-      "claim": "Desk report: International Development Committee evidence on sector-wide abuse. HTTP 403. Not a finding."
-    },
-    {
-      "id": "voa-cholera",
-      "url": "https://www.voanews.com/a/united-nations-approves-unspent-funds-haiti-cholera-epidemic/3943866.html",
-      "status": "removed",
-      "claim": "Page opened. It reports UN approval of unspent funds in July 2017. It does not support a death toll or the moral-versus-legal apology. Those claims are not findings."
-    },
-    {
-      "id": "kff",
-      "url": "https://www.kff.org/health-costs/kff-health-care-debt-survey/",
-      "status": "verified",
-      "claim": "KFF survey published 16 June 2022 (2,375 adults). The page links a project titled 100 million people saddled with health-care debt and cites a CFPB estimate of $88 billion on credit reports."
-    },
-    {
-      "id": "kff-220",
-      "url": "https://www.kshb.com/news/local-news/report-finds-millions-of-americans-are-facing-medical-debt",
-      "status": "removed",
-      "claim": "A local news page attributed at least $220 billion to a KFF analysis. The KFF survey page that was opened does not state $220 billion. The figure is not used."
-    },
-    {
-      "id": "world-bank",
-      "url": "https://www.worldbank.org/en/news/press-release/2024/10/15/ending-poverty-for-half-the-world-could-take-more-than-a-century",
-      "status": "verified",
-      "claim": "World Bank, 15 October 2024: almost 700 million people, 8.5 percent, live on less than $2.15 a day; the headcount has barely changed since 1990 because of population growth."
-    },
-    {
-      "id": "world-bank-38",
-      "url": "https://www.worldbank.org/en/news/press-release/2024/10/15/ending-poverty-for-half-the-world-could-take-more-than-a-century",
-      "status": "removed",
-      "claim": "Desk report: extreme-poverty rate fell from about 38 percent in 1990 to single digits. That sentence was not on the release. Not a finding."
-    },
-    {
-      "id": "unhabitat-figures",
-      "url": "https://unhabitat.org/wcr/",
-      "status": "removed",
-      "claim": "Desk report: 1.2 billion in informal settlements and 318 million homeless. Those figures were not on the World Cities Report page. Not findings."
-    },
-    {
-      "id": "ic3-2024",
-      "url": "https://www.ic3.gov/AnnualReport/Reports/2024_ic3Report.pdf",
-      "status": "verified",
-      "claim": "IC3 2024 report: 859,532 complaints and $16.6 billion in reported losses, a 33 percent increase in losses from 2023."
-    },
-    {
-      "id": "ic3-2025",
-      "url": "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf",
-      "status": "verified",
-      "claim": "IC3 2025 report: 1,008,597 complaints and $20.877 billion in reported losses, a 26 percent increase in losses from 2024."
-    },
-    {
-      "id": "fbi-press",
-      "url": "https://www.fbi.gov/news/press-releases/fbi-releases-annual-internet-crime-report",
-      "status": "replaced",
-      "claim": "Desk register pointed at an FBI press page that returned 403. The IC3 PDFs were opened instead and are the sources for the loss figures."
-    },
-    {
-      "id": "unodc",
-      "url": "https://www.unodc.org/unodc/en/press/releases/2026/July/new-unodc-report-reveals-scale-of-south-east-asias-ever-more-interconnected-criminal-economy.html",
-      "status": "verified",
-      "claim": "UNODC, 21 July 2026: fundamental restructuring of South-East Asia’s criminal economy; scam losses across East Asia, South-East Asia, Australia and New Zealand estimated at $88.3 billion to $114.1 billion for 2025."
-    },
-    {
-      "id": "un-homicide",
-      "url": "https://news.un.org/en/story/2023/12/1144392",
-      "status": "could not access",
-      "claim": "Desk report: about 458,000 homicides in 2021 and a rate of about 5.8 per 100,000. HTTP 406. Not a finding."
-    },
-    {
-      "id": "crs",
-      "url": "https://www.congress.gov/crs-product/R49432",
-      "status": "could not access",
-      "claim": "Desk report: American scam-centre losses of $10.0 billion in 2024 and $18.2 billion in 2025. HTTP 403. Not a finding."
-    },
-    {
-      "id": "wef",
-      "url": "https://www.weforum.org/publications/global-cybersecurity-outlook-2026/",
-      "status": "verified",
-      "claim": "WEF Global Cybersecurity Outlook 2026: CEOs rank cyber-enabled fraud first; 73 percent of respondents said they or someone in their network was affected during 2025."
-    },
-    {
-      "id": "biia-wef",
-      "url": "https://www.biia.com/world-economic-forum-global-cybersecurity-outlook-2026/",
-      "status": "replaced",
-      "claim": "Desk register used a secondary summary that returned 429. The Forum’s own outlook page was opened instead."
-    },
-    {
-      "id": "verizon",
-      "url": "https://www.verizon.com/business/resources/reports/dbir/",
-      "status": "verified",
-      "claim": "Verizon DBIR page: human element, including phishing and stolen credentials, remains among the most frequent causes, with vulnerability exploitation and ransomware. The page does not state 60 percent."
-    },
-    {
-      "id": "verizon-60",
-      "url": "https://www.verizon.com/business/resources/reports/dbir/",
-      "status": "removed",
-      "claim": "Desk report: human element in roughly 60 percent of breaches. Not on the page that opened. Not a finding."
-    },
-    {
-      "id": "microsoft",
-      "url": "https://blogs.microsoft.com/blog/2024/07/20/helping-our-customers-through-the-crowdstrike-outage/",
-      "status": "verified",
-      "claim": "Microsoft, 20 July 2024: a CrowdStrike update affected an estimated 8.5 million Windows devices, less than one percent of Windows machines. Not described as an attack."
-    },
-    {
-      "id": "nao",
-      "url": "https://www.nao.org.uk/reports/investigation-wannacry-cyber-attack-and-the-nhs/",
-      "status": "verified",
-      "claim": "National Audit Office, 27 October 2017: WannaCry infected unpatched or unsupported NHS Windows systems and disrupted at least 34 percent of trusts in England."
-    },
-    {
-      "id": "colonial",
-      "url": "https://www.justice.gov/opa/pr/department-justice-seizes-23-million-cryptocurrency-paid-ransomware-extortionists-darkside",
-      "status": "could not access",
-      "claim": "Desk report: Colonial Pipeline ransom of about $4.4 million. The page returned an empty body. Not a finding."
-    },
-    {
-      "id": "moveit",
-      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-158a",
-      "status": "could not access",
-      "claim": "Desk report: MOVEit cascade. HTTP 403. Not a finding."
-    },
-    {
-      "id": "change-healthcare",
-      "url": "https://www.unitedhealthgroup.com/newsroom/2024/2024-04-22-uhg-update-change-healthcare-cyberattack.html",
-      "status": "could not access",
-      "claim": "Desk report: Change Healthcare ransom and cost. The URL did not return the incident page. Not a finding."
-    },
-    {
-      "id": "itu",
-      "url": "https://www.itu.int/itu-d/reports/statistics/facts-figures-2023/",
-      "status": "verified",
-      "claim": "The ITU Facts and Figures 2023 page opened and did not display an offline population. The desk figure of 2.6 billion is not a finding."
-    },
-    {
-      "id": "oecd-ai",
-      "url": "https://www.oecd.org/en/publications/is-education-losing-the-race-with-technology_73105f99-en.html",
-      "status": "could not access",
-      "claim": "Desk report: language models outperforming median adults. HTTP 403. Not a finding."
-    },
-    {
-      "id": "oxfam-wealth",
-      "url": "https://www.oxfam.ca/story/as-world-leaders-descend-on-davos-we-need-to-talk-about-inequality/",
-      "status": "verified",
-      "claim": "Oxfam Canada: billionaire wealth grew by $2.8 trillion in 2024, about $7.9 billion a day, as that page states it."
-    },
-    {
-      "id": "oxfam-81",
-      "url": "https://www.oxfam.ca/story/as-world-leaders-descend-on-davos-we-need-to-talk-about-inequality/",
-      "status": "removed",
-      "claim": "Desk report: billionaire count above 3,000 and wealth up about 81 percent, or $8.2 trillion, since 2020. Not on the page. Not a finding."
-    },
-    {
-      "id": "ubs",
-      "url": "https://www.ubs.com/global/en/wealthmanagement/insights/global-wealth-report.html",
-      "status": "could not access",
-      "claim": "Desk report: UBS wealth-stock figures, including a 10.8 percent rise and about one million new millionaires. HTTP 403. Not a finding."
-    },
-    {
-      "id": "deccan-ubs",
-      "url": "https://www.deccanherald.com/world/rest-of-world/millionaires-everywhere-about-one-million-people-became-millionaires-worldwide-in-2025-inequality-rises-ubs-report-4057123",
-      "status": "could not access",
-      "claim": "A headline repeated the millionaire sentence. The article body did not load. Not a finding."
-    },
-    {
-      "id": "opensecrets",
-      "url": "https://www.opensecrets.org/elections-overview/cost-of-election",
-      "status": "could not access",
-      "claim": "Desk report: about $16 billion in 2024 U.S. federal election spending. HTTP 403. Not a finding."
-    },
-    {
-      "id": "entity-list",
-      "url": "https://www.federalregister.gov/documents/2021/11/04/2021-24123/addition-of-certain-entities-to-the-entity-list",
-      "status": "verified",
-      "claim": "Federal Register, effective 4 November 2021: NSO Group and Candiru added to the Entity List for supplying spyware used to target officials, journalists, businesspeople, activists, academics and embassy workers."
+      "claim": "Citizen Lab, 12 June 2025: forensic confirmation involving Paragon iOS spyware and journalists devices. No method repeated."
     },
     {
       "id": "amnesty",
       "url": "https://www.amnesty.org/en/latest/press-release/2021/07/the-pegasus-project/",
       "status": "verified",
-      "claim": "Amnesty, 19 July 2021: a leak of 50,000 phone numbers of potential surveillance targets, not a stated count of confirmed infections, investigated with 17 media organisations."
+      "claim": "Amnesty, 19 July 2021: 50,000 numbers of potential targets, including Jamal Khashoggi family. Not confirmed infections."
     },
     {
-      "id": "amnesty-lab",
-      "url": "https://securitylab.amnesty.org/case-study-the-pegasus-project/",
-      "status": "replaced",
-      "claim": "Desk register Security Lab URL returned 403. Amnesty’s 19 July 2021 press release was opened instead for the same project description."
-    },
-    {
-      "id": "record",
-      "url": "https://therecord.media/judge-bars-nso-from-targeting-whatsapp-users-lowers-damages",
+      "id": "cjeu",
+      "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2020-06/cp200073en.pdf",
       "status": "verified",
-      "claim": "The Record, 20 October 2025: a Northern District of California order bars NSO from targeting WhatsApp and cuts damages from $168 million to $4 million, concerning about 1,400 users in 2019. The judgment PDF was not opened."
+      "claim": "CJEU, 18 June 2020, C-78/18: Hungary funding restrictions breach EU law, including Charter articles on private life, personal data, and association."
     },
     {
-      "id": "digital-watch",
-      "url": "https://dig.watch/updates/judge-bars-nso-group-from-using-spyware-to-target-whatsapp-in-landmark-ruling",
+      "id": "civicus",
+      "url": "https://monitor.civicus.org/globalfindings_2025/",
       "status": "verified",
-      "claim": "Digital Watch, 22 October 2025: the same order, damages cut, and user count. The two article dates are not averaged, and neither is treated as the docket date."
+      "claim": "CIVICUS 2025: severe attack in 122 of 198 jurisdictions; 15 downgrades and 3 upgrades. Ratings, not a closure census."
     },
     {
-      "id": "documentcloud-order",
-      "url": "https://www.documentcloud.org/documents/25958565-govuscourtscand3506137470/",
-      "status": "could not access",
-      "claim": "The judgment PDF linked in the desk register returned 403. Court details are attributed to the two news reports, not to the opinion."
+      "id": "oxfam",
+      "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/807943/Inquiry_Report_summary_findings_and_conclusions_Oxfam.pdf",
+      "status": "verified",
+      "claim": "Charity Commission, 11 June 2019: Oxfam GB safeguarding mismanagement and an official warning."
     },
     {
-      "id": "treasury-wrong",
-      "url": "https://home.treasury.gov/news/press-releases/jy0471",
-      "status": "removed",
-      "claim": "A Treasury ransomware release was opened by mistake and does not sanction NSO Group or Candiru. The sanctions claim is not a finding."
+      "id": "oxfam-response",
+      "url": "https://www.oxfam.org.uk/about-us/tackling-abuse-information-and-updates/charity-commission-report/",
+      "status": "verified",
+      "claim": "Oxfam accepted the findings, apologised, and describes tripled safeguarding investment. Not independent proof of beneficiary safety."
     },
     {
-      "id": "coe-pegasus",
-      "url": "https://rm.coe.int/pegasus-spyware-report-en/1680a6f5d8",
-      "status": "could not access",
-      "claim": "Council of Europe Pegasus report. HTTP 403. Not used."
+      "id": "kff",
+      "url": "https://www.kff.org/health-costs/kff-health-care-debt-survey/",
+      "status": "verified",
+      "claim": "KFF June 2022: 41 percent of US adults have some medical or dental debt under a broad definition."
+    },
+    {
+      "id": "ilo",
+      "url": "https://www.ilo.org/resource/news/annual-profits-forced-labour-amount-us-236-billion-ilo-report-finds",
+      "status": "verified",
+      "claim": "ILO: forced labour in the private economy generates US$236 billion in illegal profits a year, up 37 percent since 2014."
+    },
+    {
+      "id": "learning",
+      "url": "https://www.worldbank.org/en/news/press-release/2022/06/23/70-of-10-year-olds-now-in-learning-poverty-unable-to-read-and-understand-a-simple-text",
+      "status": "verified",
+      "claim": "World Bank, 23 June 2022: estimated 70 percent of 10-year-olds in low- and middle-income countries cannot understand a simple text."
+    },
+    {
+      "id": "sdg-16",
+      "url": "https://unstats.un.org/sdgs/report/2026/Goal-16/",
+      "status": "verified",
+      "claim": "UN Goal 16 2026: homicide rate 5.9 per 100,000 in 2015 and 5.1 in 2024."
+    },
+    {
+      "id": "ic3",
+      "url": "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf",
+      "status": "verified",
+      "claim": "IC3 2025 PDF: 1,008,597 complaints, $20.877 billion losses, up 26 percent; cyber-enabled fraud $17.697 billion."
+    },
+    {
+      "id": "ohchr",
+      "url": "https://bangkok.ohchr.org/reports/wicked-problem-seeking-human-rights-based-solutions-trafficking-cyber-scam-operations",
+      "status": "verified",
+      "claim": "OHCHR page for the 20 February 2026 report on trafficking into cyber-scam operations."
+    },
+    {
+      "id": "interpol",
+      "url": "https://www.interpol.int/News-and-Events/News/2023/INTERPOL-issues-global-warning-on-human-trafficking-fueled-fraud",
+      "status": "verified",
+      "claim": "INTERPOL, 7 June 2023: warning that people are trafficked to work in online scam centres."
+    },
+    {
+      "id": "nao-wanna",
+      "url": "https://www.nao.org.uk/press-releases/investigation-wannacry-cyber-attack-and-the-nhs/",
+      "status": "verified",
+      "claim": "NAO press release: WannaCry NHS impact could have been prevented by basic IT security practice."
+    },
+    {
+      "id": "microsoft",
+      "url": "https://blogs.microsoft.com/blog/2024/07/20/helping-our-customers-through-the-crowdstrike-outage/",
+      "status": "verified",
+      "claim": "Microsoft, 20 July 2024: CrowdStrike update affected an estimated 8.5 million Windows devices. Not an intrusion."
+    },
+    {
+      "id": "piaac",
+      "url": "https://www.oecd.org/content/dam/oecd/en/publications/support-materials/2024/12/survey-of-adult-skills-2023_1ab54c9e/PIAAC2024_InsightsInterpretations_FULL.pdf",
+      "status": "verified",
+      "claim": "OECD 2024 insights on the 2023 adult-skills survey: reading text, numbers, and complex problems. Not an AI-literacy census."
+    },
+    {
+      "id": "mathur",
+      "url": "https://arxiv.org/abs/1907.07032",
+      "status": "verified",
+      "claim": "Abstract: 1,818 dark-pattern instances on about 11,000 shopping websites. Shopping sites only. No method reproduced."
+    },
+    {
+      "id": "wir",
+      "url": "https://wir2026.wid.world/insight/executive-summary/",
+      "status": "verified",
+      "claim": "World Inequality Report 2026: top 10 percent own three-quarters of global wealth; bottom half holds 2 percent."
+    },
+    {
+      "id": "entity-list",
+      "url": "https://www.bis.gov/press-release/commerce-adds-nso-group-other-foreign-companies-entity-list-malicious-cyber-activities",
+      "status": "verified",
+      "claim": "BIS, 4 November 2021: NSO Group and Candiru added to the Entity List."
+    },
+    {
+      "id": "treasury",
+      "url": "https://home.treasury.gov/news/press-releases/jy2155",
+      "status": "verified",
+      "claim": "Treasury, 5 March 2024: OFAC designated two individuals and five Intellexa-related entities. Not the 2021 Entity List action."
+    },
+    {
+      "id": "judgment",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-cand-4_19-cv-07123/pdf/USCOURTS-cand-4_19-cv-07123-44.pdf",
+      "status": "verified",
+      "claim": "Judgment document 810, 12 November 2025: $4,447,190, of which $444,719 compensatory and $4,002,471 punitive. Injunction dates stated in the PDF."
     },
     {
       "id": "cafc",
       "url": "https://antifraudcentre-centreantifraude.ca/index-eng.htm",
       "status": "verified",
-      "claim": "Canadian Anti-Fraud Centre, the reporting centre linked for people in Canada. No U.S. Federal Trade Commission help link is used."
+      "claim": "Canadian Anti-Fraud Centre. The only fraud-reporting link. Not a statistical source."
+    },
+    {
+      "id": "hl263",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2024-07-23/HL263",
+      "status": "could not access",
+      "claim": "Revised report: parliamentary answer that the Rwanda partnership was finished on 5 August 2024. HTTP 403. The date is not a finding."
+    },
+    {
+      "id": "echr",
+      "url": "https://www.echr.coe.int/documents/d/echr/annual-report-2025-eng",
+      "status": "could not access",
+      "claim": "Revised report: A.R.E. v. Greece and G.R.J. in the 2025 annual report. The PDF did not yield readable text. Not a finding."
+    },
+    {
+      "id": "unsg",
+      "url": "https://www.un.org/sg/en/content/former-secretary-general/statements/2016-12-01/secretary-generals-remarks-the-general-assembly-new-approach-address-cholera-haiti-trilingual-version-delivered-scroll-down-for-english",
+      "status": "could not access",
+      "claim": "Revised report: 1 December 2016 Haiti cholera remarks. The URL did not return the statement. Not a finding."
+    },
+    {
+      "id": "odebrecht",
+      "url": "https://www.justice.gov/archives/opa/pr/odebrecht-and-braskem-plead-guilty-and-agree-pay-least-35-billion-global-penalties-resolve",
+      "status": "could not access",
+      "claim": "Revised report: December 2016 Odebrecht plea. The page returned a bot check, not the announcement. Not a finding."
+    },
+    {
+      "id": "goldman",
+      "url": "https://www.justice.gov/archives/opa/pr/goldman-sachs-charged-foreign-bribery-case-and-agrees-pay-over-29-billion",
+      "status": "could not access",
+      "claim": "Revised report: Goldman Sachs 1MDB resolution above $2.9 billion. The page returned a bot check. The $2.9 billion figure is not used."
+    },
+    {
+      "id": "oecd-lobby",
+      "url": "https://www.oecd.org/en/publications/anti-corruption-and-integrity-outlook-2026_16708b78-en/full-report/component-6.html",
+      "status": "could not access",
+      "claim": "Revised report: 2026 OECD lobbying and revolving-door chapter. HTTP 403. Not a finding."
+    },
+    {
+      "id": "idc",
+      "url": "https://publications.parliament.uk/pa/cm201719/cmselect/cmintdev/840/84004.htm",
+      "status": "could not access",
+      "claim": "Revised report: 31 July 2018 International Development Committee report. HTTP 403. Not used as replication of the Oxfam inquiry."
+    },
+    {
+      "id": "dol",
+      "url": "https://www.dol.gov/agencies/whd/data/charts/fair-labor-standards-act",
+      "status": "could not access",
+      "claim": "Revised report: US wage-and-hour recovery tables. HTTP 403. No recovery total is stated."
+    },
+    {
+      "id": "kenya",
+      "url": "https://apnews.com/article/ea5e0842ac3ec3eaf736cab76b2450b8",
+      "status": "could not access",
+      "claim": "Revised report: May 2024 Kenya flood-eviction reporting. HTTP 403. Not a finding."
+    },
+    {
+      "id": "witty",
+      "url": "https://www.finance.senate.gov/wp-content/uploads/meetings/78B31273-BC4A-06EF-54B4-84F7B588A49E/0501_witty_testimony.pdf",
+      "status": "could not access",
+      "claim": "Revised report: May 2024 testimony that a Change Healthcare portal lacked multifactor authentication. HTTP 403. Not a finding."
+    },
+    {
+      "id": "ftc-dark",
+      "url": "https://www.ftc.gov/reports/bringing-dark-patterns-light",
+      "status": "could not access",
+      "claim": "Revised report: September 2022 dark-patterns staff report. HTTP 404. Not a finding and not a fraud-reporting link."
+    },
+    {
+      "id": "allianz-d",
+      "url": "https://www.allianz.com/en/economic_research/insights/publications/global-wealth-report-2026/distribution.html",
+      "status": "could not access",
+      "claim": "Revised report: richest tenth holds 85.4 percent of net financial wealth. HTTP 403. Not a finding."
+    },
+    {
+      "id": "allianz-e",
+      "url": "https://www.allianz.com/en/economic_research/insights/publications/global-wealth-report-2026/executive-summary.html",
+      "status": "could not access",
+      "claim": "Revised report: global financial-wealth concentration easing. HTTP 403. Not a finding."
+    },
+    {
+      "id": "justia",
+      "url": "https://dockets.justia.com/docket/circuit-courts/ca9/26-874",
+      "status": "could not access",
+      "claim": "Revised report: Ninth Circuit docket 26-874 shows 2026 briefing. HTTP 403. Appeal status is not stated."
+    },
+    {
+      "id": "fr-removal",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-05/pdf/FR-2026-01-05.pdf",
+      "status": "could not access",
+      "claim": "Revised report: 5 January 2026 Federal Register page 329 removes three individuals. The retrieved file did not contain those names. Removals are not a finding."
+    },
+    {
+      "id": "ap-paragon",
+      "url": "https://apnews.com/article/f36dd32106f44398ee24001317ccf2bb",
+      "status": "could not access",
+      "claim": "Revised report: Italian official positions on Paragon surveillance. HTTP 403. Not summarised."
+    },
+    {
+      "id": "fbi-ic3",
+      "url": "https://www.fbi.gov/file-repository/2025_ic3report.pdf",
+      "status": "replaced",
+      "claim": "Revised report cited the FBI file-repository copy of the 2025 IC3 report. That URL returned 403. The same report was opened at ic3.gov and is the published source."
+    },
+    {
+      "id": "cpj-130",
+      "url": "https://cpj.org/data/killed/2025/",
+      "status": "replaced",
+      "claim": "Earlier unqualified 130 deaths in 2025. Replaced by the 25 February 2026 release reporting 129, with a database-change warning."
+    },
+    {
+      "id": "amnesty-method",
+      "url": "https://www.amnesty.org/en/latest/research/2021/07/forensic-methodology-report-how-to-catch-nso-groups-pegasus/",
+      "status": "removed",
+      "claim": "The revised report cites Amnesty's forensic methodology. The page opened. It is a how-to for catching the spyware, so it is not published. The four-backup conclusion is taken from Citizen Lab's peer review instead."
+    },
+    {
+      "id": "cross-claims",
+      "url": "https://artiais.com/investigations/global-injustice/synthesis/",
+      "status": "removed",
+      "claim": "Two earlier cross-dossier sentences, that missing records are usually held by powerful actors and that hidden top-level harm exceeds hidden household harm, are withdrawn. They are not established."
     }
   ]
 }
