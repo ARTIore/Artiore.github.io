@@ -97,6 +97,12 @@ export function HomeSections() {
           >
             Digital Safety Investigation
           </SiteLink>
+          <SiteLink
+            className="inline-flex min-h-11 items-center justify-center rounded-full border border-gold/60 px-5 py-2 text-sm font-semibold text-gold-bright"
+            href="/investigations/global-injustice/"
+          >
+            Global Injustice Investigation
+          </SiteLink>
         </div>
       </section>
 

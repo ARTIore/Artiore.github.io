@@ -22,6 +22,7 @@ import {
   threatLabMeta,
 } from './meta'
 import { investigationLicenseUrl, investigationMeta } from './investigation'
+import { globalInjusticeAlternatesFor, globalInjusticeMeta } from './global-injustice/catalog'
 import { arabicClaimsMeta, arabicInvestigationMeta } from './investigations/ar/meta'
 import { englishPathFor, investigationAlternates } from './investigations/locale'
 import { buildJsonLd } from '../seo/structuredData'
@@ -178,6 +179,24 @@ export const seoEntries: SeoEntry[] = [
     faqs: 'faqs' in page ? page.faqs : undefined,
     license: investigationLicenseUrl,
     alternates: investigationAlternates(englishPathFor(page.path)),
+  })),
+  ...globalInjusticeMeta.map((page) => ({
+    path: page.path,
+    headTitle: page.headTitle,
+    description: page.description,
+    sitemap: true,
+    prerender: true,
+    kind: 'article' as const,
+    crumbName: page.crumbName,
+    headline: page.headline,
+    author: 'ARTIore Research Desk',
+    authorOrganization: 'ARTIore',
+    datePublished: page.datePublished,
+    dateModified: page.dateModified,
+    lastmod: page.lastmod,
+    inLanguage: page.inLanguage,
+    locale: page.locale,
+    alternates: globalInjusticeAlternatesFor(page.path),
   })),
   {
     path: '/framework.html',
