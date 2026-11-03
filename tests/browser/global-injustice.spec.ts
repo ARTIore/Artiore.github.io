@@ -66,6 +66,33 @@ test.describe('Global Injustice Investigation', () => {
     expect(failures).toEqual([])
   })
 
+  test('the home page features both investigations in the same tab', async ({ page }) => {
+    await page.goto('/')
+    const section = page.locator('#investigations')
+    await expect(section.getByRole('heading', { level: 2, name: 'Investigations' })).toBeVisible()
+    const injustice = section.getByRole('link', { name: 'Global Injustice Investigation' })
+    await expect(injustice).toHaveAttribute('href', '/investigations/global-injustice/')
+    await expect(injustice).not.toHaveAttribute('target', '_blank')
+    await expect(section.getByRole('link', { name: 'Global Digital Exposure Investigation' })).toHaveAttribute(
+      'href',
+      '/investigations/digital-exposure/',
+    )
+  })
+
+  test('a spyware article links to L11 in the same tab', async ({ page }) => {
+    await page.goto('/investigations/digital-exposure/pegasus-predator-commercial-spyware/')
+    const link = page.getByRole('link', { name: /dossier L11/ })
+    await expect(link).toHaveAttribute('href', '/investigations/global-injustice/l11-commercial-spyware/')
+    await expect(link).not.toHaveAttribute('target', '_blank')
+  })
+
+  test('the Arabic exposure hub links to the English injustice hub', async ({ page }) => {
+    await page.goto('/investigations/digital-exposure/ar/')
+    const link = page.getByRole('link', { name: /التحقيق في الظلم العالمي/ })
+    await expect(link).toHaveAttribute('href', '/investigations/global-injustice/')
+    await expect(page.getByText('الصفحة بالإنجليزية.')).toBeVisible()
+  })
+
   test('the Digital Exposure hub is still the exposure investigation', async ({ page }) => {
     await page.goto('/investigations/digital-exposure/')
     await expect(page.getByRole('heading', { level: 1 })).toContainText('Global Digital Exposure Investigation')

@@ -13,6 +13,7 @@ import { canadianContacts, playbooks } from '../content/safety/playbooks'
 import { sources } from '../content/safety/sources'
 import { recoveryMeta } from '../content/meta'
 import { ExternalLink, SiteLink } from '../components/content/SiteLink'
+import { RelatedReadingFor } from '../components/related/RelatedReading'
 
 export default function RecoveryCenterPage() {
   const [large, setLarge] = useState(false)
@@ -68,6 +69,7 @@ export default function RecoveryCenterPage() {
         </p>
         <LanguageNote />
       </header>
+      <RelatedReadingFor sourcePath="/academy/recovery" />
       <section className="mt-8 rounded-2xl border border-gold/30 p-4">
         <h2 className="font-serif text-2xl text-gold-bright">Safety first</h2>
         <p className="mt-3 max-w-[68ch] text-cream/90">

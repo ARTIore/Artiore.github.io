@@ -10,6 +10,7 @@ import {
 } from '../components/safety/safety-ui'
 import { buttonClass, linkClass } from '../components/safety/safety-styles'
 import { SiteLink } from '../components/content/SiteLink'
+import { RelatedReadingFor } from '../components/related/RelatedReading'
 import {
   claimStatusLabel,
   publicationStatusLabel,
@@ -121,6 +122,7 @@ export default function ResearchDashboardPage() {
         </p>
         <LanguageNote />
       </header>
+      <RelatedReadingFor sourcePath="/academy/research" />
       <section className="mt-8 rounded-2xl border border-gold/30 p-4">
         <p className="max-w-[68ch] text-cream">
           <strong>{illustrativeLabel} </strong>

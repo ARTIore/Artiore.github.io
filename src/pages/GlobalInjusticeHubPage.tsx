@@ -9,6 +9,7 @@ import {
   globalInjusticeSourceCheck,
 } from '../content/global-injustice/catalog'
 import { confidenceDefinitions, ladderDefinitions } from '../content/global-injustice/ladder'
+import { RelatedReadingFor } from '../components/related/RelatedReading'
 
 const linkClass =
   'text-gold-bright underline decoration-gold/40 underline-offset-4 hover:decoration-gold-bright'
@@ -130,6 +131,8 @@ export default function GlobalInjusticeHubPage() {
             ))}
           </ul>
         </section>
+
+        <RelatedReadingFor sourcePath={globalInjusticeHub.path} />
 
         <section className="mt-12 max-w-[68ch]" id="corrections">
           <h2 className="font-serif text-3xl text-cream">Corrections</h2>

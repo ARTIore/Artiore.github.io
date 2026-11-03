@@ -12,6 +12,7 @@ import { buttonClass, pressedClass } from '../components/safety/safety-styles'
 import { safetyChrome } from '../content/safety/chrome'
 import { labScenarios } from '../content/safety/scenarios'
 import { threatLabMeta } from '../content/meta'
+import { RelatedReadingFor } from '../components/related/RelatedReading'
 import {
   advanceLab,
   answerLab,
@@ -112,6 +113,7 @@ export default function ThreatLabPage() {
         </p>
         <LanguageNote />
       </header>
+      <RelatedReadingFor sourcePath="/academy/threat-lab" />
       <section className="mt-8 rounded-2xl border border-gold/30 p-4">
         <p className="max-w-[68ch] text-cream/90">
           <strong>Practice, not a diagnosis. </strong>

@@ -10,6 +10,7 @@ import {
 } from '../content/global-injustice/catalog'
 import { injusticePage } from '../content/global-injustice/dossiers'
 import { injusticeSource } from '../content/global-injustice/sources'
+import { RelatedReadingFor } from '../components/related/RelatedReading'
 
 const linkClass =
   'text-gold-bright underline decoration-gold/40 underline-offset-4 hover:decoration-gold-bright'
@@ -151,6 +152,8 @@ export default function GlobalInjusticeDossierPage({ id }: { id: string }) {
             </ul>
           </section>
         ) : null}
+
+        <RelatedReadingFor sourcePath={page.path} />
 
         <section className="mt-10" id="sources">
           <h2 className="font-serif text-3xl text-cream">Sources opened</h2>
