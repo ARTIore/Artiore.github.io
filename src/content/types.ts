@@ -57,6 +57,8 @@ export type SeoEntry = PageMeta & {
   lastmod?: string
   inLanguage?: string
   locale?: string
+  /** Set on RTL translations so the prerendered document element carries dir. */
+  dir?: 'ltr' | 'rtl'
   alternates?: { hreflang: string; path: string }[]
   /** Absolute og:image. Defaults to the site image when omitted. */
   image?: string

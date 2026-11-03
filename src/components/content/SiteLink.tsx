@@ -30,8 +30,14 @@ type SiteLinkProps = {
   onClick?: () => void
 }
 
-export function OpensInNewTab() {
-  return <span className="sr-only"> (opens in a new tab)</span>
+export function OpensInNewTab(props?: { text?: string; lang?: string; dir?: 'ltr' | 'rtl' }) {
+  if (!props?.text) return <span className="sr-only"> (opens in a new tab)</span>
+  return (
+    <span className="sr-only" dir={props.dir} lang={props.lang}>
+      {' '}
+      {props.text}
+    </span>
+  )
 }
 
 export function ExternalLink({ href, className, children, onClick }: SiteLinkProps) {

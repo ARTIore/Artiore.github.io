@@ -73,8 +73,9 @@ for (const entry of seoEntries) {
     fail(`${entry.path} HTML is missing twitter:card`)
   }
   if (!html.includes('name="twitter:site" content="@Artiore"')) fail(`${entry.path} HTML is missing twitter:site`)
-  if (entry.inLanguage && !html.includes(`<html lang="${entry.inLanguage}">`)) {
-    fail(`${entry.path} HTML lang is not ${entry.inLanguage}`)
+  if (entry.inLanguage) {
+    const htmlTag = entry.dir === 'rtl' ? `<html lang="${entry.inLanguage}" dir="rtl">` : `<html lang="${entry.inLanguage}">`
+    if (!html.includes(htmlTag)) fail(`${entry.path} HTML lang is not ${entry.inLanguage}`)
   }
   if (entry.locale && !html.includes(`property="og:locale" content="${entry.locale}"`)) {
     fail(`${entry.path} HTML is missing og:locale`)

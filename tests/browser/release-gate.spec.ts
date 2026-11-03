@@ -250,6 +250,45 @@ test.describe('built site release checks', () => {
     await expect(arabic.filter({ hasText: "s'ouvre dans un nouvel onglet" })).toHaveCount(0)
   })
 
+  test('the Arabic investigation switches language on desktop and on a phone', async ({ page }) => {
+    async function expectArabic(path: string) {
+      await page.goto(path)
+      await expect(page.locator('html')).toHaveAttribute('lang', 'ar')
+      await expect(page.locator('html')).toHaveAttribute('dir', 'rtl')
+      const article = page.locator('article.investigation')
+      await expect(article).toHaveAttribute('lang', 'ar')
+      await expect(article).toHaveAttribute('dir', 'rtl')
+      const note = article.getByRole('note').first()
+      await expect(note).toContainText('بمساعدة آلية')
+      await expect(note).toContainText('لم يراجعها بعد متحدث أصلي')
+      await expect(note).toContainText('هي المرجع المعتمد')
+      await expect(note.getByRole('link', { name: 'النسخة الإنجليزية' })).toBeVisible()
+    }
+
+    await page.setViewportSize({ width: 1280, height: 800 })
+    await expectArabic('/investigations/digital-exposure/ar/')
+    const arabicNotice = page.locator('article.investigation a[target="_blank"] span.sr-only').first()
+    await expect(arabicNotice).toContainText('يفتح في علامة تبويب جديدة')
+    await expect(arabicNotice).toHaveAttribute('lang', 'ar')
+    await expect(arabicNotice).toHaveAttribute('dir', 'rtl')
+    await page.getByRole('navigation', { name: 'اللغات' }).getByRole('link', { name: 'English' }).click()
+    await expect(page).toHaveURL(/\/investigations\/digital-exposure\/?$/)
+    await expect(page.locator('html')).toHaveAttribute('lang', 'en')
+    await expect(page.locator('article.investigation')).toContainText('$20.877bn in reported losses to the FBI in 2025')
+    await page.getByRole('navigation', { name: 'Languages' }).getByRole('link', { name: 'العربية' }).click()
+    await expect(page).toHaveURL(/\/investigations\/digital-exposure\/ar\/?$/)
+    await expect(page.locator('article.investigation')).toHaveAttribute('dir', 'rtl')
+
+    await page.setViewportSize({ width: 320, height: 800 })
+    await page.getByRole('navigation', { name: 'اللغات' }).getByRole('link', { name: 'English' }).click()
+    await expect(page).toHaveURL(/\/investigations\/digital-exposure\/?$/)
+    await expect(page.getByRole('navigation', { name: 'Languages' })).toBeVisible()
+    await page.getByRole('navigation', { name: 'Languages' }).getByRole('link', { name: 'العربية' }).click()
+    await expect(page).toHaveURL(/\/investigations\/digital-exposure\/ar\/?$/)
+    await expect(page.locator('html')).toHaveAttribute('dir', 'rtl')
+    expect(await overflowCount(page)).toBe(0)
+  })
+
   test('hiding a disagreement flag moves focus and announces the change', async ({ page }) => {
     await page.goto('/academy/research/contradictions/')
     const hide = page.getByRole('button', { name: 'Hide this flag for now' }).first()

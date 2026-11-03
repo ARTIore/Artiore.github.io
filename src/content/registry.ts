@@ -22,6 +22,8 @@ import {
   threatLabMeta,
 } from './meta'
 import { investigationLicenseUrl, investigationMeta } from './investigation'
+import { arabicClaimsMeta, arabicInvestigationMeta } from './investigations/ar/meta'
+import { englishPathFor, investigationAlternates } from './investigations/locale'
 import { buildJsonLd } from '../seo/structuredData'
 import type { PageDocument, SeoEntry } from './types'
 
@@ -43,7 +45,6 @@ const customMetas = [
   provenanceMeta,
   correctionsMeta,
   contradictionMeta,
-  claimsMeta,
   blogMeta,
 ]
 
@@ -71,6 +72,31 @@ export const seoEntries: SeoEntry[] = [
     sitemap: true,
     prerender: true,
   })),
+  {
+    ...claimsMeta,
+    alternates: investigationAlternates(claimsMeta.path),
+    sitemap: true,
+    prerender: true,
+  },
+  {
+    path: arabicClaimsMeta.path,
+    headTitle: arabicClaimsMeta.headTitle,
+    description: arabicClaimsMeta.description,
+    crumbName: arabicClaimsMeta.crumbName,
+    headline: arabicClaimsMeta.headline,
+    kind: 'article',
+    author: 'ARTIore Research Desk',
+    authorOrganization: 'ARTIore',
+    datePublished: '2026-10-26',
+    dateModified: '2026-11-03',
+    sitemap: true,
+    prerender: true,
+    inLanguage: 'ar',
+    locale: 'ar_AR',
+    dir: 'rtl',
+    lastmod: arabicClaimsMeta.lastmod,
+    alternates: investigationAlternates(claimsMeta.path),
+  },
   ...fieldManualMetas.map((meta) => ({
     ...meta,
     alternates: fieldManualAlternates,
@@ -126,6 +152,32 @@ export const seoEntries: SeoEntry[] = [
     imageAlt: page.imageAlt,
     faqs: 'faqs' in page ? page.faqs : undefined,
     license: investigationLicenseUrl,
+    alternates: investigationAlternates(page.path),
+  })),
+  ...arabicInvestigationMeta.map((page) => ({
+    path: page.path,
+    headTitle: page.headTitle,
+    description: page.description,
+    sitemap: true,
+    prerender: true,
+    kind: 'article' as const,
+    crumbName: page.crumbName,
+    headline: page.headline,
+    author: 'ARTIore Research Desk',
+    authorOrganization: 'ARTIore',
+    datePublished: page.datePublished,
+    dateModified: 'dateModified' in page ? page.dateModified : undefined,
+    lastmod: 'lastmod' in page ? page.lastmod : undefined,
+    inLanguage: page.inLanguage,
+    locale: page.locale,
+    dir: page.dir,
+    image: page.image,
+    imageWidth: page.imageWidth,
+    imageHeight: page.imageHeight,
+    imageAlt: page.imageAlt,
+    faqs: 'faqs' in page ? page.faqs : undefined,
+    license: investigationLicenseUrl,
+    alternates: investigationAlternates(englishPathFor(page.path)),
   })),
   {
     path: '/framework.html',

@@ -3,7 +3,9 @@ import { SeoHead } from '../components/seo/SeoHead'
 import { SiteLink } from '../components/content/SiteLink'
 import { SincerityNote } from '../components/field-manual/SincerityNote'
 import { AlsoOnArtiore } from '../components/investigations/AlsoOnArtiore'
+import { InvestigationLanguageSwitcher } from '../components/investigations/InvestigationLanguageSwitcher'
 import { InvestigationLicense } from '../components/investigations/InvestigationLicense'
+import { arabicInvestigationBase, investigationAlternates } from '../content/investigations/locale'
 import { investigationHubCompanionUrl } from '../content/investigations/companions'
 import {
   investigationHub,
@@ -46,6 +48,7 @@ export default function InvestigationHubPage() {
         imageAlt={investigationOg.alt}
         imageHeight={investigationOg.height}
         imageWidth={investigationOg.width}
+        alternates={investigationAlternates(investigationHub.path)}
         inLanguage="en"
         kind="article"
         license={investigationLicenseUrl}
@@ -56,6 +59,11 @@ export default function InvestigationHubPage() {
       <Breadcrumbs current={investigationHub.crumbName} path={investigationHub.path} />
       <article className="investigation">
         <header className="max-w-[68ch]">
+          <InvestigationLanguageSwitcher
+            arPath={arabicInvestigationBase}
+            current="en"
+            enPath={investigationHub.path}
+          />
           <p className="text-xs uppercase tracking-[0.22em] text-gold">The Invisible Attack Surface</p>
           <h1 className="mt-4 font-serif text-4xl leading-tight text-cream sm:text-5xl">{investigationHub.title}</h1>
           <p className="mt-4 text-lg leading-relaxed text-cream/90">

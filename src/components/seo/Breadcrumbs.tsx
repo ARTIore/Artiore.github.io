@@ -1,12 +1,12 @@
 import { breadcrumbItems } from '../../content/urls'
 import { SiteLink } from '../content/SiteLink'
 
-export function Breadcrumbs({ path, current }: { path: string; current: string }) {
+export function Breadcrumbs({ path, current, label = 'Breadcrumb' }: { path: string; current: string; label?: string }) {
   const items = breadcrumbItems(path, current)
   if (items.length === 0) return null
 
   return (
-    <nav aria-label="Breadcrumb" className="mb-8">
+    <nav aria-label={label} className="mb-8">
       <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
         {items.map((item, index) => {
           const last = index === items.length - 1

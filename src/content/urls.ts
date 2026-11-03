@@ -79,6 +79,19 @@ export function breadcrumbItems(path: string, current: string): Crumb[] {
       { name: current, path: clean },
     ]
   }
+  if (clean === '/investigations/digital-exposure/ar' || clean.startsWith('/investigations/digital-exposure/ar/')) {
+    if (clean === '/investigations/digital-exposure/ar') {
+      return [
+        { name: 'الرئيسية', path: '/' },
+        { name: current, path: clean },
+      ]
+    }
+    return [
+      { name: 'الرئيسية', path: '/' },
+      { name: 'تحقيق التعرض الرقمي العالمي', path: '/investigations/digital-exposure/ar' },
+      { name: current, path: clean },
+    ]
+  }
   if (clean.startsWith('/investigations/digital-exposure/')) {
     return [
       { name: 'Home', path: '/' },
