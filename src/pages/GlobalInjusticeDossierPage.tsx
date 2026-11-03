@@ -52,6 +52,13 @@ export default function GlobalInjusticeDossierPage({ id }: { id: string }) {
           <h1 className="mt-4 font-serif text-4xl leading-tight text-cream">{page.title}</h1>
           <p className="mt-4 text-lg leading-relaxed text-cream/90">{page.finding}</p>
           <p className="mt-3 text-sm text-gold-bright">Rung in this edition: {page.findingRung}</p>
+          {page.seesCorrections ? (
+            <p className="mt-3 text-sm leading-relaxed text-cream/90">
+              <SiteLink className={linkClass} href="/investigations/global-injustice/#corrections">
+                Corrections and updates, 3 November 2026
+              </SiteLink>
+            </p>
+          ) : null}
           <p className="mt-3 text-sm text-muted">
             <SiteLink className={linkClass} href={globalInjusticeHub.path}>
               Global Injustice Investigation

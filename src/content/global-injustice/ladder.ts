@@ -20,22 +20,22 @@ export const ladderDefinitions: { rung: LadderRung; meaning: string }[] = [
   {
     rung: 'ESTABLISHED',
     meaning:
-      'The public sources opened for this edition agree on the point: a statute, a judgment, a regulator’s report, an official statistical release, or a forensic report named on the page.',
+      'Supported, within the stated scope, by a court, admitted facts, independently checked technical evidence, or a primary finding strong enough for that scope. One authoritative record can establish what that institution found. It is not treated as independent replication.',
   },
   {
     rung: 'DOCUMENTED IN PART',
     meaning:
-      'A real record exists, and this edition says which piece of it was opened. Named pieces are still missing, or the figure is an estimate, a survey, or a single source.',
+      'The opened evidence supports part of the claim. Material gaps remain, or the figure is an estimate, a survey, a rating, or a single program.',
   },
   {
     rung: 'CONTESTED',
     meaning:
-      'Credible sources disagree, or one series moves one way while another series was not opened. Both readings that were checked are stated. A conflict is not averaged.',
+      'Competing findings or interpretations stay visible. A conflict is not averaged, and one series is not used to cancel another.',
   },
   {
     rung: 'OPEN',
     meaning:
-      'This edition did not locate public evidence it could open. That is a statement about the search, not about whether an event happened. Each OPEN item says what would have to surface.',
+      'The record reviewed here does not resolve the question. That is a statement about the search, not a finding that nothing happened.',
   },
 ]
 
