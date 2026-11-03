@@ -1,6 +1,9 @@
 import type { ReactNode } from 'react'
 import { OpensInNewTab, SiteLink } from '../../components/content/SiteLink'
 import { investigationBase } from './catalog'
+import { localizeInvestigationHref } from './locale'
+
+export type InvestigationNewTab = { text: string; lang: string; dir: 'ltr' | 'rtl' }
 
 const linkClass =
   'text-gold-bright underline decoration-gold/40 underline-offset-4 hover:decoration-gold-bright'
@@ -13,7 +16,7 @@ function slugify(text: string) {
   const slug = text
     .toLowerCase()
     .replace(/['’]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/[^\p{L}\p{N}]+/gu, '-')
     .replace(/^-+|-+$/g, '')
   return slug || 'section'
 }
@@ -25,22 +28,24 @@ function bodyOf(markdown: string) {
   return markdown.slice(end + 4).replace(/^\n/, '')
 }
 
-function resolveHref(href: string, slugs: ReadonlySet<string>) {
+function resolveHref(href: string, slugs: ReadonlySet<string>, base: string, rtl: boolean) {
   const trimmed = href.trim()
-  if (/^(https?:|mailto:|#)/.test(trimmed)) return trimmed
+  if (/^(mailto:|#)/.test(trimmed)) return trimmed
   const hashAt = trimmed.indexOf('#')
   const hash = hashAt >= 0 ? trimmed.slice(hashAt) : ''
   const path = hashAt >= 0 ? trimmed.slice(0, hashAt) : trimmed
-  const slug = path.replace(/^\.\//, '').replace(/\/$/, '')
-  if (slugs.has(slug)) return `${investigationBase}/${slug}/${hash}`
-  if (path.startsWith('/')) {
-    if (path.endsWith('/') || /\.[a-z0-9]+$/i.test(path)) return `${path}${hash}`
-    return `${path}/${hash}`
+  let resolved = trimmed
+  if (!/^(https?:)/.test(trimmed)) {
+    const slug = path.replace(/^\.\//, '').replace(/\/$/, '')
+    if (slugs.has(slug)) resolved = `${base}/${slug}/${hash}`
+    else if (path.startsWith('/')) {
+      resolved = path.endsWith('/') || /\.[a-z0-9]+$/i.test(path) ? `${path}${hash}` : `${path}/${hash}`
+    }
   }
-  return trimmed
+  return rtl ? localizeInvestigationHref(resolved) : resolved
 }
 
-function renderLink(href: string, children: ReactNode, key: number) {
+function renderLink(href: string, children: ReactNode, key: number, rtl: boolean, newTab?: InvestigationNewTab) {
   if (href.startsWith('#')) {
     return (
       <a className={linkClass} href={href} key={key}>
@@ -51,9 +56,16 @@ function renderLink(href: string, children: ReactNode, key: number) {
   const external = href.startsWith('http://') || href.startsWith('https://')
   if (external) {
     return (
-      <a className={linkClass} href={href} key={key} rel="noreferrer" target="_blank">
+      <a
+        className={rtl ? `${linkClass} break-all` : linkClass}
+        dir={rtl ? 'ltr' : undefined}
+        href={href}
+        key={key}
+        rel="noreferrer"
+        target="_blank"
+      >
         {children}
-        <OpensInNewTab />
+        {newTab ? <OpensInNewTab dir={newTab.dir} lang={newTab.lang} text={newTab.text} /> : <OpensInNewTab />}
       </a>
     )
   }
@@ -111,13 +123,32 @@ function findBoldEnd(text: string, start: number) {
   return -1
 }
 
-function parseInline(text: string, key: Key, slugs: ReadonlySet<string>): ReactNode[] {
+type InlineOpts = {
+  slugs: ReadonlySet<string>
+  base: string
+  rtl: boolean
+  newTab?: InvestigationNewTab
+}
+
+function pushPlain(nodes: ReactNode[], text: string, key: Key, rtl: boolean) {
+  if (!rtl) {
+    nodes.push(text)
+    return
+  }
+  for (const part of text.split(/([A-Za-z0-9][A-Za-z0-9+./_#:@%&=~'’$-]*)/g)) {
+    if (!part) continue
+    if (/[A-Za-z0-9]/.test(part)) nodes.push(<bdi dir="ltr" key={key.n++}>{part}</bdi>)
+    else nodes.push(part)
+  }
+}
+
+function parseInline(text: string, key: Key, opts: InlineOpts): ReactNode[] {
   const nodes: ReactNode[] = []
   let index = 0
   let buffer = ''
   const flush = () => {
     if (!buffer) return
-    nodes.push(buffer)
+    pushPlain(nodes, buffer, key, opts.rtl)
     buffer = ''
   }
   while (index < text.length) {
@@ -126,7 +157,7 @@ function parseInline(text: string, key: Key, slugs: ReadonlySet<string>): ReactN
       if (end > index) {
         flush()
         nodes.push(
-          <code className="rounded bg-white/10 px-1 py-0.5 font-mono text-[0.9em]" key={key.n++}>
+          <code className="rounded bg-white/10 px-1 py-0.5 font-mono text-[0.9em]" dir={opts.rtl ? 'ltr' : undefined} key={key.n++}>
             {text.slice(index + 1, end)}
           </code>,
         )
@@ -138,7 +169,15 @@ function parseInline(text: string, key: Key, slugs: ReadonlySet<string>): ReactN
     if (link) {
       flush()
       const linkKey = key.n++
-      nodes.push(renderLink(resolveHref(link.href, slugs), parseInline(link.label, key, slugs), linkKey))
+      nodes.push(
+        renderLink(
+          resolveHref(link.href, opts.slugs, opts.base, opts.rtl),
+          parseInline(link.label, key, opts),
+          linkKey,
+          opts.rtl,
+          opts.newTab,
+        ),
+      )
       index = link.end
       continue
     }
@@ -147,7 +186,7 @@ function parseInline(text: string, key: Key, slugs: ReadonlySet<string>): ReactN
       if (end !== -1) {
         flush()
         nodes.push(
-          <strong key={key.n++}>{parseInline(text.slice(index + 2, end), key, slugs)}</strong>,
+          <strong key={key.n++}>{parseInline(text.slice(index + 2, end), key, opts)}</strong>,
         )
         index = end + 2
         continue
@@ -157,7 +196,7 @@ function parseInline(text: string, key: Key, slugs: ReadonlySet<string>): ReactN
       const end = text.indexOf('*', index + 1)
       if (end > index && !text.startsWith('**', index)) {
         flush()
-        nodes.push(<em key={key.n++}>{parseInline(text.slice(index + 1, end), key, slugs)}</em>)
+        nodes.push(<em key={key.n++}>{parseInline(text.slice(index + 1, end), key, opts)}</em>)
         index = end + 1
         continue
       }
@@ -166,7 +205,7 @@ function parseInline(text: string, key: Key, slugs: ReadonlySet<string>): ReactN
     if (url) {
       flush()
       const urlKey = key.n++
-      nodes.push(renderLink(url.href, url.href, urlKey))
+      nodes.push(renderLink(url.href, url.href, urlKey, opts.rtl, opts.newTab))
       index = url.end
       continue
     }
@@ -222,10 +261,23 @@ function headingTag(level: number, text: ReactNode, id: string, key: number) {
 
 export function renderInvestigationMarkdown(
   markdown: string,
-  options: { title: string; slugs: ReadonlySet<string>; partsToc: boolean },
+  options: {
+    title: string
+    slugs: ReadonlySet<string>
+    partsToc: boolean
+    base?: string
+    dir?: 'ltr' | 'rtl'
+    newTab?: InvestigationNewTab
+  },
 ) {
   const key: Key = { n: 0 }
   const slugs = options.slugs
+  const inline: InlineOpts = {
+    slugs,
+    base: options.base ?? investigationBase,
+    rtl: options.dir === 'rtl',
+    newTab: options.newTab,
+  }
   const lines = bodyOf(markdown).replaceAll('\r\n', '\n').split('\n')
   const blocks: ReactNode[] = []
   const toc: InvestigationTocItem[] = []
@@ -265,7 +317,7 @@ export function renderInvestigationMarkdown(
       }
       const id = uniqueId(text)
       if (options.partsToc && level === 1) toc.push({ id, text })
-      blocks.push(headingTag(level, parseInline(text, key, slugs), id, key.n++))
+      blocks.push(headingTag(level, parseInline(text, key, inline), id, key.n++))
       index += 1
       continue
     }
@@ -280,13 +332,13 @@ export function renderInvestigationMarkdown(
       const bodyRows = (hasSep ? rows.slice(2) : rows.slice(1)).filter((row) => !isSeparator(row))
       blocks.push(
         <div className="max-w-full overflow-x-auto" key={key.n++}>
-          <table className="w-full border-collapse text-left text-sm">
+          <table className="w-full border-collapse text-start text-sm">
             {hasSep ? (
               <thead>
                 <tr>
                   {header.map((cell, cellIndex) => (
                     <th className="border border-white/15 px-3 py-2 align-top font-semibold text-cream" key={cellIndex}>
-                      {parseInline(cell, key, slugs)}
+                      {parseInline(cell, key, inline)}
                     </th>
                   ))}
                 </tr>
@@ -297,7 +349,7 @@ export function renderInvestigationMarkdown(
                 <tr key={rowIndex}>
                   {splitRow(row).map((cell, cellIndex) => (
                     <td className="border border-white/15 px-3 py-2 align-top text-cream/90" key={cellIndex}>
-                      {parseInline(cell, key, slugs)}
+                      {parseInline(cell, key, inline)}
                     </td>
                   ))}
                 </tr>
@@ -331,10 +383,10 @@ export function renderInvestigationMarkdown(
       }
       if (orderedList) {
         blocks.push(
-          <ol className="max-w-[68ch] list-decimal space-y-2 pl-6 text-cream/90" key={key.n++}>
+          <ol className="max-w-[68ch] list-decimal space-y-2 ps-6 text-cream/90" key={key.n++}>
             {items.map((item, itemIndex) => (
               <li className="leading-relaxed" key={itemIndex}>
-                {parseInline(item.text, key, slugs)}
+                {parseInline(item.text, key, inline)}
               </li>
             ))}
           </ol>,
@@ -346,7 +398,7 @@ export function renderInvestigationMarkdown(
               <li className="leading-relaxed" key={itemIndex}>
                 <span className="flex gap-3">
                   <input className="mt-1 size-4 shrink-0 accent-gold" disabled type="checkbox" />
-                  <span>{parseInline(item.text, key, slugs)}</span>
+                  <span>{parseInline(item.text, key, inline)}</span>
                 </span>
               </li>
             ))}
@@ -354,10 +406,10 @@ export function renderInvestigationMarkdown(
         )
       } else {
         blocks.push(
-          <ul className="max-w-[68ch] list-disc space-y-2 pl-6 text-cream/90" key={key.n++}>
+          <ul className="max-w-[68ch] list-disc space-y-2 ps-6 text-cream/90" key={key.n++}>
             {items.map((item, itemIndex) => (
               <li className="leading-relaxed" key={itemIndex}>
-                {parseInline(item.text, key, slugs)}
+                {parseInline(item.text, key, inline)}
               </li>
             ))}
           </ul>,
@@ -381,7 +433,7 @@ export function renderInvestigationMarkdown(
     }
     blocks.push(
       <p className="max-w-[68ch] leading-relaxed text-cream/90" key={key.n++}>
-        {parseInline(paragraph.join(' '), key, slugs)}
+        {parseInline(paragraph.join(' '), key, inline)}
       </p>,
     )
   }

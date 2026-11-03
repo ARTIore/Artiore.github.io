@@ -26,11 +26,14 @@ function replaceAttr(html, pattern, value) {
   return html.replace(pattern, (full, before, after) => `${before}${value}${after}`)
 }
 
-function applyMeta(html, { title, description, canonical, robots, ogType, lang, locale, alternates, image, imageWidth, imageHeight, imageAlt }) {
+function applyMeta(html, { title, description, canonical, robots, ogType, lang, dir, locale, alternates, image, imageWidth, imageHeight, imageAlt }) {
   const safeTitle = escapeHtml(title)
   const safeCanonical = escapeHtml(canonical)
   let next = html
-  if (lang) next = next.replace('<html lang="en">', `<html lang="${escapeHtml(lang)}">`)
+  if (lang) {
+    const dirAttr = dir === 'rtl' ? ' dir="rtl"' : ''
+    next = next.replace('<html lang="en">', `<html lang="${escapeHtml(lang)}"${dirAttr}>`)
+  }
   next = next.replace(/<title>[\s\S]*?<\/title>/, `<title>${safeTitle}</title>`)
   next = upsertMeta(next, 'name', 'description', description)
   next = replaceAttr(next, /(<link\s+rel="canonical"\s+href=")[^"]*(")/, safeCanonical)
@@ -195,6 +198,7 @@ async function renderDocument(templateHtml, entry, location) {
     robots: entry.noindex ? 'noindex,follow' : 'index,follow',
     ogType: kind === 'blog-post' || kind === 'article' ? 'article' : 'website',
     lang: entry.inLanguage,
+    dir: entry.dir,
     locale: entry.locale,
     alternates: entry.alternates,
     image: entry.image,

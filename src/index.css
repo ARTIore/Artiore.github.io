@@ -55,6 +55,14 @@ body {
 }
 
 /* System fonts only. No remote font download. */
+.investigation[lang='ar'] {
+  overflow-wrap: anywhere;
+}
+
+.investigation[lang='ar'] :is(h1, h2, h3, p, li, td, th, a, span) {
+  font-family: 'Noto Naskh Arabic', 'Noto Sans Arabic', Amiri, 'Scheherazade New', 'Traditional Arabic', 'Geeza Pro', serif;
+}
+
 .field-manual[lang='ar'] :is(h1, h2, h3, p, li, td, th, a, span, caption) {
   font-family: 'Noto Naskh Arabic', 'Noto Sans Arabic', Amiri, 'Scheherazade New', 'Traditional Arabic', 'Geeza Pro', serif;
 }

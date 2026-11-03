@@ -24,6 +24,7 @@ type SeoHeadProps = {
   faqs?: { question: string; answer: string }[]
   inLanguage?: string
   locale?: string
+  dir?: 'ltr' | 'rtl'
   alternates?: { hreflang: string; path: string }[]
   image?: string
   imageWidth?: string
@@ -58,6 +59,7 @@ export function SeoHead({
   faqs,
   inLanguage,
   locale,
+  dir,
   alternates,
   image,
   imageWidth,
@@ -73,6 +75,7 @@ export function SeoHead({
     const ogAlt = imageAlt ?? OG_IMAGE_ALT
     document.title = title
     document.documentElement.lang = inLanguage ?? 'en'
+    document.documentElement.dir = dir ?? 'ltr'
 
     upsertMeta('meta[name="description"]', { name: 'description', content: description })
     upsertMeta('meta[property="og:site_name"]', { property: 'og:site_name', content: SITE_NAME })
@@ -139,7 +142,7 @@ export function SeoHead({
         license,
       }),
     )
-  }, [alternates, author, authorOrganization, crumbName, dateModified, datePublished, description, faqs, headline, image, imageAlt, imageHeight, imageWidth, inLanguage, kind, license, locale, noindex, path, title])
+  }, [alternates, author, authorOrganization, crumbName, dateModified, datePublished, description, dir, faqs, headline, image, imageAlt, imageHeight, imageWidth, inLanguage, kind, license, locale, noindex, path, title])
 
   return null
 }

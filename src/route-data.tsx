@@ -73,6 +73,13 @@ const loaders: Record<string, Loader> = {
   }),
   ...investigationRouteLoaders(),
   '/investigations/digital-exposure/claims': () => import('./pages/ClaimsPage'),
+  '/investigations/digital-exposure/ar/claims': async () => {
+    const view = await import('./pages/ClaimsPage')
+    function Page() {
+      return <view.default locale="ar" />
+    }
+    return { default: Page }
+  },
 }
 
 const notFoundLoader: Loader = () => import('./pages/NotFoundPage')

@@ -4,6 +4,11 @@ import { SeoHead } from '../components/seo/SeoHead'
 import { OpensInNewTab, SiteLink } from '../components/content/SiteLink'
 import { claimsPageData } from '../content/investigations/claims-data'
 import { claimsMeta } from '../content/meta'
+import { ArabicClaimTrace } from '../components/investigations/ArabicClaimTrace'
+import { InvestigationLanguageSwitcher } from '../components/investigations/InvestigationLanguageSwitcher'
+import { arabicClaimWording, arabicCaveat, arabicReason } from '../content/investigations/ar/claim-copy'
+import { arabicClaimsMeta } from '../content/investigations/ar/meta'
+import { investigationAlternates } from '../content/investigations/locale'
 
 const linkClass =
   'text-gold-bright underline decoration-gold/40 underline-offset-4 hover:decoration-gold-bright'
@@ -14,7 +19,7 @@ function labelText(label: string) {
   return label || 'Not stated'
 }
 
-export default function ClaimsPage() {
+export default function ClaimsPage({ locale = 'en' }: { locale?: 'en' | 'ar' }) {
   const [query, setQuery] = useState('')
   const [label, setLabel] = useState<(typeof labels)[number]>('All')
   const claims = claimsPageData.claims
@@ -31,7 +36,9 @@ export default function ClaimsPage() {
         ...claim.caveats,
         ...claim.quotes,
         ...claim.sources.flatMap((source) => [source.name, source.url]),
-        ...claim.history.flatMap((item) => [item.oldWording, item.newWording, item.reason]),
+        ...claim.history.flatMap((item) => [item.oldWording, item.newWording, item.reason, arabicReason[item.reason] ?? '']),
+        arabicClaimWording[claim.id] ?? '',
+        ...claim.caveats.map((caveat) => arabicCaveat[caveat] ?? ''),
       ]
         .join(' ')
         .toLowerCase()
@@ -39,9 +46,22 @@ export default function ClaimsPage() {
     })
   }, [claims, label, query])
 
+  if (locale === 'ar') {
+    return (
+      <ArabicClaimTrace
+        label={label}
+        query={query}
+        setLabel={setLabel}
+        setQuery={setQuery}
+        visible={visible}
+      />
+    )
+  }
+
   return (
     <>
       <SeoHead
+        alternates={investigationAlternates(claimsMeta.path)}
         crumbName={claimsMeta.crumbName}
         description={claimsMeta.description}
         kind={claimsMeta.kind}
@@ -50,6 +70,7 @@ export default function ClaimsPage() {
       />
       <Breadcrumbs current={claimsMeta.crumbName} path={claimsMeta.path} />
       <article className="mx-auto max-w-3xl">
+        <InvestigationLanguageSwitcher arPath={arabicClaimsMeta.path} current="en" enPath={claimsMeta.path} />
         <p className="text-xs uppercase tracking-[0.22em] text-gold">Global Digital Exposure Investigation</p>
         <h1 className="mt-3 font-serif text-4xl text-cream sm:text-5xl">Claim trace</h1>
         <p className="mt-4 text-lg leading-relaxed text-cream/90">
