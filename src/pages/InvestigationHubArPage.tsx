@@ -3,6 +3,7 @@ import { SeoHead } from '../components/seo/SeoHead'
 import { SiteLink } from '../components/content/SiteLink'
 import { SincerityNote } from '../components/field-manual/SincerityNote'
 import { AlsoOnArtiore } from '../components/investigations/AlsoOnArtiore'
+import { RelatedReadingFor } from '../components/related/RelatedReading'
 import { InvestigationLanguageSwitcher } from '../components/investigations/InvestigationLanguageSwitcher'
 import { InvestigationLicense } from '../components/investigations/InvestigationLicense'
 import { TranslationNotice } from '../components/investigations/TranslationNotice'
@@ -224,6 +225,7 @@ export default function InvestigationHubArPage() {
             </p>
           ))}
         </section>
+        <RelatedReadingFor sourcePath="/investigations/digital-exposure/ar" />
         <AlsoOnArtiore href={investigationHubCompanionUrl} locale="ar" />
         <SincerityNote code="ar" placement="bottom" />
       </article>

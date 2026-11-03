@@ -1,5 +1,6 @@
 import { links } from '../../content/links'
 import { blogSummaries } from '../../content/blog-summaries'
+import { featuredInvestigations } from '../../content/related-reading'
 import { SiteLink } from '../content/SiteLink'
 
 const five = [
@@ -103,6 +104,25 @@ export function HomeSections() {
           >
             Global Injustice Investigation
           </SiteLink>
+        </div>
+      </section>
+
+      <section id="investigations">
+        <h2 className="font-serif text-3xl text-cream">Investigations</h2>
+        <p className="mt-3 max-w-3xl text-muted">
+          Two desk investigations published on this site. Each keeps the wording of its own record.
+        </p>
+        <div className="mt-6 grid gap-4 lg:grid-cols-2">
+          {featuredInvestigations.map((item) => (
+            <article className="rounded-2xl border border-gold/30 bg-gold/5 p-6" key={item.href}>
+              <h3 className="font-serif text-2xl text-cream">
+                <SiteLink className="underline decoration-gold/40 underline-offset-4 hover:text-gold-bright" href={item.href}>
+                  {item.label}
+                </SiteLink>
+              </h3>
+              <p className="mt-3 leading-relaxed text-cream/90">{item.description}</p>
+            </article>
+          ))}
         </div>
       </section>
 

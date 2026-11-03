@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SeoHead } from '../components/seo/SeoHead'
 import { ExternalLink, SiteLink } from '../components/content/SiteLink'
+import { RelatedReadingFor } from '../components/related/RelatedReading'
 import {
   evidenceGrades,
   evidenceNotes,
@@ -193,6 +194,7 @@ export default function AcademyPage() {
             Belief or interpretation, and Corrected. Verified is not the same as Confirmed, and Unverified is not the
             same as Unsupported.
           </p>
+          <RelatedReadingFor ids={['academy-evidence']} sourcePath="/academy" />
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {evidenceGrades.map((grade) => (
               <article className="rounded-2xl border border-gold/20 p-4" key={grade.name}>
@@ -331,6 +333,7 @@ export default function AcademyPage() {
             </SiteLink>
             .
           </p>
+          <RelatedReadingFor ids={['academy-lessons']} sourcePath="/academy" />
           <label className="mt-4 block min-w-0 max-w-full" htmlFor="lesson">
             Lesson
             <select

@@ -20,6 +20,7 @@ import { arabicInvestigationFaqs } from '../content/investigations/ar/faqs'
 import { arabicPieceView } from '../content/investigations/ar/meta'
 import { renderInvestigationMarkdown } from '../content/investigations/markdown'
 import { AlsoOnArtiore } from '../components/investigations/AlsoOnArtiore'
+import { RelatedReadingFor } from '../components/related/RelatedReading'
 import { InvestigationLanguageSwitcher } from '../components/investigations/InvestigationLanguageSwitcher'
 import { InvestigationLicense } from '../components/investigations/InvestigationLicense'
 import { TranslationNotice } from '../components/investigations/TranslationNotice'
@@ -200,6 +201,7 @@ export default function InvestigationArticlePage({
           </nav>
         ) : null}
         <div className="mt-10 min-w-0 space-y-4">{body}</div>
+        <RelatedReadingFor sourcePath={locale === 'ar' ? arPath : enPath} />
         {investigationCompanionUrls[slug] ? (
           <AlsoOnArtiore href={investigationCompanionUrls[slug]} locale={locale} />
         ) : null}

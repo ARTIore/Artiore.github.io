@@ -13,6 +13,7 @@ import { incidents, platforms, removalWarning } from '../content/safety/navigato
 import { sources } from '../content/safety/sources'
 import { navigatorMeta } from '../content/meta'
 import { SiteLink } from '../components/content/SiteLink'
+import { RelatedReadingFor } from '../components/related/RelatedReading'
 
 export default function SafetyNavigatorPage() {
   const [large, setLarge] = useState(false)
@@ -67,6 +68,7 @@ export default function SafetyNavigatorPage() {
         </p>
         <LanguageNote />
       </header>
+      <RelatedReadingFor sourcePath="/academy/navigator" />
       <section className="mt-8 rounded-2xl border border-gold/20 p-4">
         <h2 className="font-serif text-2xl text-cream">Your controls</h2>
         <label className="mt-4 block text-cream" htmlFor="device">
