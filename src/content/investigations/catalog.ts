@@ -17,6 +17,33 @@ export const investigationOg = {
   alt: 'The Invisible Attack Surface. How everyday technology can compromise privacy, identity and financial security.',
 }
 
+export const invisibleAttackSurfaceCoverAlt =
+  'Cover: The Invisible Attack Surface, Global Digital Exposure Investigation by the ARTIore Research Desk. Covers Wi-Fi, DNS, Bluetooth, zero-click attacks and spyware.'
+
+export const invisibleAttackSurfaceCover = {
+  src: '/investigations/digital-exposure/invisible-attack-surface-cover.webp',
+  width: 1200,
+  height: 1200,
+  alt: invisibleAttackSurfaceCoverAlt,
+}
+
+/** JPG social card for the executive investigation page. */
+export const invisibleAttackSurfaceOg = {
+  src: 'https://artiais.com/investigations/digital-exposure/invisible-attack-surface-cover.jpg',
+  width: '1200',
+  height: '1200',
+  alt: invisibleAttackSurfaceCoverAlt,
+}
+
+export const invisibleAttackSurfaceInfographic = {
+  src: '/investigations/digital-exposure/invisible-attack-surface-infographic.webp',
+  width: 1254,
+  height: 1254,
+  alt: 'Infographic: a phone shown in layers, linked to ten exposure areas: Wi-Fi and hotel networks, Bluetooth and BLE, app permissions and accessibility, cloud storage and data exposure, DNS and network control, mobile exploitation, encrypted messaging, spyware and surveillance, and crypto and financial fraud.',
+  caption:
+    'Illustration of the exposure areas covered in this investigation. The globe markers are decorative and do not show data, locations or rankings.',
+}
+
 export const investigationPublished = '2026-10-26'
 
 /** First publication of the hub on artiais.com, commit a8cd068, 31 October 2026. */
@@ -408,21 +435,24 @@ export const investigationMeta = [
     imageAlt: investigationOg.alt,
     lastmod: investigationHub.lastmod,
   },
-  ...investigationPieces.map((piece) => ({
-    path: piece.path,
-    headTitle: piece.headTitle,
-    description: piece.description,
-    crumbName: piece.crumbName,
-    headline: piece.title,
-    datePublished: piece.datePublished ?? investigationPublished,
-    dateModified: piece.dateModified,
-    lastmod: piece.lastmod,
-    inLanguage: 'en' as const,
-    locale: 'en_US' as const,
-    image: investigationOg.src,
-    imageWidth: investigationOg.width,
-    imageHeight: investigationOg.height,
-    imageAlt: investigationOg.alt,
-    faqs: investigationFaqs[piece.slug],
-  })),
+  ...investigationPieces.map((piece) => {
+    const og = piece.slug === 'executive-investigation' ? invisibleAttackSurfaceOg : investigationOg
+    return {
+      path: piece.path,
+      headTitle: piece.headTitle,
+      description: piece.description,
+      crumbName: piece.crumbName,
+      headline: piece.title,
+      datePublished: piece.datePublished ?? investigationPublished,
+      dateModified: piece.dateModified,
+      lastmod: piece.lastmod,
+      inLanguage: 'en' as const,
+      locale: 'en_US' as const,
+      image: og.src,
+      imageWidth: og.width,
+      imageHeight: og.height,
+      imageAlt: og.alt,
+      faqs: investigationFaqs[piece.slug],
+    }
+  }),
 ]

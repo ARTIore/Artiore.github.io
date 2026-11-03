@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { isValidElement, useMemo, type ReactNode } from 'react'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SeoHead } from '../components/seo/SeoHead'
 import { SiteLink } from '../components/content/SiteLink'
@@ -7,6 +7,9 @@ import {
   investigationBase,
   investigationLicenseUrl,
   investigationOg,
+  invisibleAttackSurfaceCover,
+  invisibleAttackSurfaceInfographic,
+  invisibleAttackSurfaceOg,
   investigationPiece,
   investigationPrintPath,
   investigationPublished,
@@ -33,6 +36,43 @@ const linkClass =
   'text-gold-bright underline decoration-gold/40 underline-offset-4 hover:decoration-gold-bright'
 
 const arabicPrintPath = '/investigations/digital-exposure/ar/public-safety-checklist/print.html'
+
+function exposureInfographic() {
+  return (
+    <figure className="max-w-[68ch]" key="exposure-infographic">
+      <img
+        alt={invisibleAttackSurfaceInfographic.alt}
+        className="h-auto w-full"
+        decoding="async"
+        height={invisibleAttackSurfaceInfographic.height}
+        loading="lazy"
+        src={invisibleAttackSurfaceInfographic.src}
+        width={invisibleAttackSurfaceInfographic.width}
+      />
+      <figcaption className="mt-3 text-sm leading-relaxed text-muted">
+        {invisibleAttackSurfaceInfographic.caption}
+      </figcaption>
+    </figure>
+  )
+}
+
+function withExposureInfographic(body: ReactNode[]) {
+  const figure = exposureInfographic()
+  const next: ReactNode[] = []
+  let placed = false
+  for (const node of body) {
+    if (
+      !placed &&
+      isValidElement(node) &&
+      (node.props as { id?: string }).id === 'executive-summary'
+    ) {
+      next.push(figure)
+      placed = true
+    }
+    next.push(node)
+  }
+  return placed ? next : [figure, ...body]
+}
 
 function publishedLabel(iso: string, locale: 'en' | 'ar') {
   if (locale === 'ar') {
@@ -81,6 +121,9 @@ export default function InvestigationArticlePage({
   const printLabel = locale === 'ar' ? 'قائمة قابلة للطباعة' : 'Printable checklist'
   const printHref = locale === 'ar' ? arabicPrintPath : investigationPrintPath
   const fallbackByline = locale === 'ar' ? 'مكتب أبحاث ARTIore · الإصدار 1.0' : 'ARTIore Research Desk · Version 1.0'
+  const showSurfaceImages = locale === 'en' && slug === 'executive-investigation'
+  const og = showSurfaceImages ? invisibleAttackSurfaceOg : investigationOg
+  const body = showSurfaceImages ? withExposureInfographic(rendered.body) : rendered.body
 
   return (
     <>
@@ -95,10 +138,10 @@ export default function InvestigationArticlePage({
         dir={locale === 'ar' ? 'rtl' : undefined}
         faqs={locale === 'ar' ? arabicInvestigationFaqs[slug] : investigationFaqs[slug]}
         headline={piece.title}
-        image={investigationOg.src}
-        imageAlt={investigationOg.alt}
-        imageHeight={investigationOg.height}
-        imageWidth={investigationOg.width}
+        image={og.src}
+        imageAlt={og.alt}
+        imageHeight={og.height}
+        imageWidth={og.width}
         inLanguage={locale === 'ar' ? 'ar' : 'en'}
         kind="article"
         license={investigationLicenseUrl}
@@ -131,6 +174,15 @@ export default function InvestigationArticlePage({
             </p>
           ) : null}
         </header>
+        {showSurfaceImages ? (
+          <img
+            alt={invisibleAttackSurfaceCover.alt}
+            className="mt-8 h-auto w-full max-w-[68ch]"
+            height={invisibleAttackSurfaceCover.height}
+            src={invisibleAttackSurfaceCover.src}
+            width={invisibleAttackSurfaceCover.width}
+          />
+        ) : null}
         {locale === 'ar' ? <TranslationNotice englishPath={enPath} /> : null}
         <SincerityNote code={locale} />
         {rendered.toc.length > 0 ? (
@@ -147,7 +199,7 @@ export default function InvestigationArticlePage({
             </ol>
           </nav>
         ) : null}
-        <div className="mt-10 min-w-0 space-y-4">{rendered.body}</div>
+        <div className="mt-10 min-w-0 space-y-4">{body}</div>
         {investigationCompanionUrls[slug] ? (
           <AlsoOnArtiore href={investigationCompanionUrls[slug]} locale={locale} />
         ) : null}
