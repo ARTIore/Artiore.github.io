@@ -1,7 +1,6 @@
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SeoHead } from '../components/seo/SeoHead'
 import { SiteLink } from '../components/content/SiteLink'
-import { SincerityNote } from '../components/field-manual/SincerityNote'
 import { AlsoOnArtiore } from '../components/investigations/AlsoOnArtiore'
 import { RelatedReadingFor } from '../components/related/RelatedReading'
 import { InvestigationLanguageSwitcher } from '../components/investigations/InvestigationLanguageSwitcher'
@@ -75,7 +74,6 @@ export default function InvestigationHubPage() {
           </p>
           <InvestigationLicense />
         </header>
-        <SincerityNote code="en" />
         <div className="mt-10 max-w-[68ch] space-y-4 text-base leading-relaxed text-cream/90">
           <p>
             This investigation examines ten widespread assumptions about digital safety, then traces the technical layers
@@ -326,7 +324,6 @@ export default function InvestigationHubPage() {
 
         <RelatedReadingFor sourcePath={investigationHub.path} />
         <AlsoOnArtiore href={investigationHubCompanionUrl} />
-        <SincerityNote code="en" placement="bottom" />
       </article>
     </>
   )

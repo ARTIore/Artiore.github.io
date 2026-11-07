@@ -4,7 +4,6 @@ import { SeoHead } from '../seo/SeoHead'
 import { SiteLink } from '../content/SiteLink'
 import type { FieldManualBlock, FieldManualContent, FieldManualLanguage } from '../../content/field-manual/types'
 import { BookletViewer, type BookletPageImage } from './BookletViewer'
-import { SincerityNote } from './SincerityNote'
 
 const TRUTH_LABELS = [
   '[CITED FACT]',
@@ -612,7 +611,6 @@ export function FieldManualLayout({
             </ul>
           </aside>
         ) : null}
-        <SincerityNote code={manual.code} />
         <div
           aria-labelledby={showBooklet ? 'pocket-tab-text' : undefined}
           className={showBooklet && view !== 'text' ? 'pocket-text hidden' : 'pocket-text'}
@@ -660,7 +658,6 @@ export function FieldManualLayout({
             <BookletViewer pages={bookletPages} />
           </div>
         ) : null}
-        <SincerityNote code={manual.code} placement="bottom" />
       </article>
     </>
   )

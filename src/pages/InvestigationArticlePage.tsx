@@ -2,7 +2,6 @@ import { isValidElement, useMemo, type ReactNode } from 'react'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SeoHead } from '../components/seo/SeoHead'
 import { SiteLink } from '../components/content/SiteLink'
-import { SincerityNote } from '../components/field-manual/SincerityNote'
 import {
   investigationBase,
   investigationLicenseUrl,
@@ -191,7 +190,6 @@ export default function InvestigationArticlePage({
           />
         ) : null}
         {locale === 'ar' ? <TranslationNotice englishPath={enPath} /> : null}
-        <SincerityNote code={locale} />
         {rendered.toc.length > 0 ? (
           <nav aria-label={partsLabel} className="mt-10 max-w-[68ch] rounded-2xl border border-gold/30 bg-gold/5 p-5">
             <h2 className="font-serif text-2xl text-cream">{partsLabel}</h2>
@@ -216,7 +214,6 @@ export default function InvestigationArticlePage({
         ) : (
           <ArticleVerificationSources locale={locale} slug={slug} />
         )}
-        <SincerityNote code={locale} placement="bottom" />
       </article>
     </>
   )

@@ -1,7 +1,6 @@
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SeoHead } from '../components/seo/SeoHead'
 import { SiteLink } from '../components/content/SiteLink'
-import { SincerityNote } from '../components/field-manual/SincerityNote'
 import { AlsoOnArtiore } from '../components/investigations/AlsoOnArtiore'
 import { RelatedReadingFor } from '../components/related/RelatedReading'
 import { InvestigationLanguageSwitcher } from '../components/investigations/InvestigationLanguageSwitcher'
@@ -106,7 +105,6 @@ export default function InvestigationHubArPage() {
           <InvestigationLicense locale="ar" />
         </header>
         <TranslationNotice englishPath={investigationHub.path} />
-        <SincerityNote code="ar" />
         <div className="mt-10 max-w-[68ch] space-y-4 text-base leading-relaxed text-cream/90">
           <p>
             يفحص هذا التحقيق عشرة افتراضات شائعة عن الأمان الرقمي، ثم يتتبّع الطبقات التقنية تحتها: الشبكات المشتركة، ونظام أسماء النطاقات، وBluetooth وBluetooth Low Energy، وخدمات إمكانية الوصول، واستغلال أنظمة تشغيل الهواتف، والمراسلة المشفّرة، وبرامج التجسس التجارية، والتخزين السحابي، والعملات المشفّرة. ويختم ببيان كيف تجتمع هذه الطبقات، وكيف تُنتَج الكلفة البشرية للتعقيد، وما الذي يستطيع القرّاء فعله على نحو واقعي.
@@ -227,7 +225,6 @@ export default function InvestigationHubArPage() {
         </section>
         <RelatedReadingFor sourcePath="/investigations/digital-exposure/ar" />
         <AlsoOnArtiore href={investigationHubCompanionUrl} locale="ar" />
-        <SincerityNote code="ar" placement="bottom" />
       </article>
     </>
   )
