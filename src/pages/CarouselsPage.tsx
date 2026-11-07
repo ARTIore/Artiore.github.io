@@ -2,7 +2,6 @@ import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SeoHead } from '../components/seo/SeoHead'
 import { SiteLink } from '../components/content/SiteLink'
 import { CarouselRow } from '../components/field-manual/CarouselRow'
-import { SincerityNote } from '../components/field-manual/SincerityNote'
 import { carouselDecks, carouselOgImage, carouselPdfPath } from '../content/field-manual/carousels'
 import { carouselSeriesMeta } from '../content/field-manual/meta'
 
@@ -66,7 +65,6 @@ export default function CarouselsPage() {
           Forty-eight slides in six carousels. Each deck stands alone. The pocket booklet holds the sources and the
           longer reading.
         </p>
-        <SincerityNote code="en" />
         <nav aria-label="Carousels" className="mt-6 max-w-[68ch]">
           <ol className="space-y-1 text-sm">
             {carouselDecks.map((deck) => (
@@ -108,7 +106,6 @@ export default function CarouselsPage() {
             Download PDF
           </a>
         </p>
-        <SincerityNote code="en" placement="bottom" />
       </article>
     </>
   )
