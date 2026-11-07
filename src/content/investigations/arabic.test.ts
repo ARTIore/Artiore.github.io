@@ -54,7 +54,8 @@ describe('Arabic investigation', () => {
 
   it('publishes an Arabic route with lang, dir, hreflang, and a title ending in ARTIore', () => {
     const arabic = seoEntries.filter((entry) => entry.inLanguage === 'ar' && entry.path.includes('/investigations/digital-exposure'))
-    expect(arabic.length).toBe(investigationPieces.length + 2)
+    const translated = investigationPieces.filter((piece) => arabicPieceView(piece.slug))
+    expect(arabic.length).toBe(translated.length + 2)
     for (const entry of arabic) {
       expect(entry.dir).toBe('rtl')
       expect(entry.locale).toBe('ar_AR')
@@ -74,7 +75,10 @@ describe('Arabic investigation', () => {
   it('matches each Arabic article heading to the catalog title', () => {
     for (const piece of investigationPieces) {
       const arabic = arabicPieceView(piece.slug)
-      expect(arabic, piece.slug).toBeTruthy()
+      if (!arabic) {
+        expect(piece.slug).toBe('mobile-os-exposure')
+        continue
+      }
       const markdown = readFileSync(`src/content/investigations/source/ar/${piece.file}`, 'utf8')
       expect(firstHeading(markdown), piece.slug).toBe(arabic?.title)
     }

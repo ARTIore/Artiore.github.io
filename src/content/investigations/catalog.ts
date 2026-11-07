@@ -195,6 +195,22 @@ const pieceSource: Omit<InvestigationPiece, 'path' | 'headTitle' | 'crumbName' |
     lastmod: "2026-11-02",
   },
   {
+    file: "mobile-os-exposure.md",
+    slug: "mobile-os-exposure",
+    title: "Mobile Exposure",
+    seoTitle: "Mobile Exposure: iPhone, Android, Cloud | ARTIore",
+    description:
+      "Evidence-led guide to iPhone, Android, cloud and Bluetooth risks, with model-specific support checks, conditional exposure scenarios and safety-first advice.",
+    dek: "iPhone, Android, cloud accounts and Bluetooth: different risks, different defences.",
+    kicker: "Mobile",
+    readingTime: "18 minutes",
+    partsToc: false,
+    printable: false,
+    datePublished: "2026-11-07",
+    dateModified: "2026-11-07",
+    lastmod: "2026-11-07",
+  },
+  {
     file: "07-whatsapp-encryption-limits.md",
     slug: "whatsapp-encryption-limits",
     title: "WhatsApp Encryption Limits: What End-to-End Encryption Does Not Protect",

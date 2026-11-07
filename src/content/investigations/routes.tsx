@@ -12,6 +12,7 @@ const rawSources = {
   '04-bluetooth-ble-tracking.md': () => import('./source/04-bluetooth-ble-tracking.md?raw'),
   '05-android-accessibility-service-malware.md': () => import('./source/05-android-accessibility-service-malware.md?raw'),
   '06-iphone-zero-click-spyware.md': () => import('./source/06-iphone-zero-click-spyware.md?raw'),
+  'mobile-os-exposure.md': () => import('./source/mobile-os-exposure.md?raw'),
   '07-whatsapp-encryption-limits.md': () => import('./source/07-whatsapp-encryption-limits.md?raw'),
   '08-pegasus-predator-commercial-spyware.md': () => import('./source/08-pegasus-predator-commercial-spyware.md?raw'),
   '09-cloud-photo-account-takeover.md': () => import('./source/09-cloud-photo-account-takeover.md?raw'),
@@ -73,12 +74,15 @@ export function investigationRouteLoaders(): Record<string, Loader> {
       }
       return { default: Page }
     }
-    loaders[arabicPathFor(piece.path)] = async () => {
-      const [view, mod] = await Promise.all([import('../../pages/InvestigationArticlePage'), loadArabic()])
-      function Page() {
-        return <view.default locale="ar" markdown={mod.default} slug={piece.slug} />
+    // English-only pieces have no Arabic file. Do not invent a translation route.
+    if (loadArabic) {
+      loaders[arabicPathFor(piece.path)] = async () => {
+        const [view, mod] = await Promise.all([import('../../pages/InvestigationArticlePage'), loadArabic()])
+        function Page() {
+          return <view.default locale="ar" markdown={mod.default} slug={piece.slug} />
+        }
+        return { default: Page }
       }
-      return { default: Page }
     }
   }
   return loaders

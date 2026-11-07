@@ -153,7 +153,13 @@ export const seoEntries: SeoEntry[] = [
     imageAlt: page.imageAlt,
     faqs: 'faqs' in page ? page.faqs : undefined,
     license: investigationLicenseUrl,
-    alternates: investigationAlternates(page.path),
+    alternates:
+      page.path === '/investigations/digital-exposure/mobile-os-exposure'
+        ? [
+            { hreflang: 'en', path: page.path },
+            { hreflang: 'x-default', path: page.path },
+          ]
+        : investigationAlternates(page.path),
   })),
   ...arabicInvestigationMeta.map((page) => ({
     path: page.path,
