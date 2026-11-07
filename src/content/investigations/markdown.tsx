@@ -337,7 +337,7 @@ export function renderInvestigationMarkdown(
               <thead>
                 <tr>
                   {header.map((cell, cellIndex) => (
-                    <th className="border border-white/15 px-3 py-2 align-top font-semibold text-cream" key={cellIndex}>
+                    <th className="break-words border border-white/15 px-3 py-2 align-top font-semibold text-cream" key={cellIndex}>
                       {parseInline(cell, key, inline)}
                     </th>
                   ))}
@@ -348,7 +348,7 @@ export function renderInvestigationMarkdown(
               {(hasSep ? bodyRows : rows).map((row, rowIndex) => (
                 <tr key={rowIndex}>
                   {splitRow(row).map((cell, cellIndex) => (
-                    <td className="border border-white/15 px-3 py-2 align-top text-cream/90" key={cellIndex}>
+                    <td className="break-words border border-white/15 px-3 py-2 align-top text-cream/90" key={cellIndex}>
                       {parseInline(cell, key, inline)}
                     </td>
                   ))}

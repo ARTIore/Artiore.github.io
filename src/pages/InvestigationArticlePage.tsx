@@ -79,10 +79,12 @@ function publishedLabel(iso: string, locale: 'en' | 'ar') {
   if (locale === 'ar') {
     if (iso === '2026-10-25') return '25 أكتوبر 2026'
     if (iso === '2026-11-02') return '2 نوفمبر 2026'
+    if (iso === '2026-11-07') return '7 نوفمبر 2026'
     return '26 أكتوبر 2026'
   }
   if (iso === '2026-10-25') return '25 October 2026'
   if (iso === '2026-11-02') return '2 November 2026'
+  if (iso === '2026-11-07') return '7 November 2026'
   return '26 October 2026'
 }
 
@@ -153,7 +155,11 @@ export default function InvestigationArticlePage({
       <Breadcrumbs current={piece.crumbName} label={locale === 'ar' ? 'مسار التنقل' : undefined} path={piece.path} />
       <article className="investigation" dir={locale === 'ar' ? 'rtl' : undefined} lang={locale === 'ar' ? 'ar' : undefined}>
         <header className="max-w-[68ch]">
-          <InvestigationLanguageSwitcher arPath={arPath} current={locale} enPath={enPath} />
+          <InvestigationLanguageSwitcher
+            arPath={arabicPieceView(slug) ? arPath : undefined}
+            current={locale}
+            enPath={enPath}
+          />
           <p className="text-xs uppercase tracking-[0.22em] text-gold">{series}</p>
           <h1 className="mt-4 font-serif text-4xl leading-tight text-cream sm:text-5xl">{piece.title}</h1>
           {piece.dek ? <p className="mt-4 text-lg leading-relaxed text-cream/90">{piece.dek}</p> : null}
