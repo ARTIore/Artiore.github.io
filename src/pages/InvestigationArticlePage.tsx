@@ -21,6 +21,7 @@ import { renderInvestigationMarkdown } from '../content/investigations/markdown'
 import { AlsoOnArtiore } from '../components/investigations/AlsoOnArtiore'
 import { RelatedReadingFor } from '../components/related/RelatedReading'
 import { InvestigationLanguageSwitcher } from '../components/investigations/InvestigationLanguageSwitcher'
+import { InvestigationArticleFooter } from '../components/investigations/InvestigationArticleFooter'
 import { InvestigationLicense } from '../components/investigations/InvestigationLicense'
 import { TranslationNotice } from '../components/investigations/TranslationNotice'
 import { ArticleVerificationSources, VerificationSourceRegister } from '../components/investigations/VerificationSources'
@@ -214,6 +215,7 @@ export default function InvestigationArticlePage({
         ) : (
           <ArticleVerificationSources locale={locale} slug={slug} />
         )}
+        <InvestigationArticleFooter locale={locale} />
       </article>
     </>
   )
