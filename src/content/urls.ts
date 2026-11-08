@@ -32,7 +32,7 @@ export function toPublicPath(href: string) {
 }
 
 export function canonicalUrl(path: string) {
-  const site = 'https://artiais.com'
+  const site = 'https://artiore.com'
   if (path === '/' || path === '') return `${site}/`
   const pub = toPublicPath(path.startsWith('/') ? path : `/${path}`)
   return `${site}${pub}`

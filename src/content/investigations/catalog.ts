@@ -11,7 +11,7 @@ export const investigationPrintPath =
   '/investigations/digital-exposure/public-safety-checklist/print.html'
 
 export const investigationOg = {
-  src: 'https://artiais.com/investigations/digital-exposure/og-invisible-attack-surface.png',
+  src: 'https://artiore.com/investigations/digital-exposure/og-invisible-attack-surface.png',
   width: '1200',
   height: '630',
   alt: 'The Invisible Attack Surface. How everyday technology can compromise privacy, identity and financial security.',
@@ -29,7 +29,7 @@ export const invisibleAttackSurfaceCover = {
 
 /** JPG social card for the executive investigation page. */
 export const invisibleAttackSurfaceOg = {
-  src: 'https://artiais.com/investigations/digital-exposure/invisible-attack-surface-cover.jpg',
+  src: 'https://artiore.com/investigations/digital-exposure/invisible-attack-surface-cover.jpg',
   width: '1200',
   height: '1200',
   alt: invisibleAttackSurfaceCoverAlt,

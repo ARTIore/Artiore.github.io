@@ -21,7 +21,7 @@ export const engineMeta = {
   path: '/engine',
   headTitle: 'Eternia Aurora Sovereign Engine | ARTIore instrument',
   description:
-    'Eternia Aurora is a local-first generative ambient instrument in the browser. No server and no account. Play it on artiais.com or read the source on GitHub.',
+    'Eternia Aurora is a local-first generative ambient instrument in the browser. No server and no account. Play it on artiore.com or read the source on GitHub.',
   kind: 'engine' as const,
   crumbName: 'Eternia Aurora Sovereign Engine',
 }
@@ -128,7 +128,7 @@ export const systemMeta = {
   path: '/system-documentation',
   headTitle: 'ARTIore system documentation | Architecture and doctrine',
   description:
-    'Reasoning architecture, the five-line doctrine, four engine layers, the five-part response, and the hosted Acore systems document set on artiais.com.',
+    'Reasoning architecture, the five-line doctrine, four engine layers, the five-part response, and the hosted Acore systems document set on artiore.com.',
   kind: 'page' as const,
   crumbName: 'Architecture and principles',
 }

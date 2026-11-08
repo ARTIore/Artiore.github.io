@@ -88,7 +88,7 @@ export const aboutPage: PageDocument = {
         {
           eyebrow: 'This site',
           title: 'Artiais',
-          body: 'This site, artiais.com, is the public home of the published investigations, field notes, and reasoning notes.',
+          body: 'This site, artiore.com, is the public home of the published investigations, field notes, and reasoning notes.',
         },
         {
           eyebrow: 'Collaborative network',
@@ -598,7 +598,7 @@ export const howItWorksPage: PageDocument = {
     },
     {
       kind: 'note',
-      text: 'The HTML edition linked above is the Grand Directional Prompt Framework (V1.1, Zero-Drift Edition), a cognitive charter and operating protocol by Zain Ul Abdin. It stays at /framework.html because that address is already linked externally. This page is the six-layer account published on artiore.com/framework.',
+      text: 'The HTML edition linked above is the Grand Directional Prompt Framework (V1.1, Zero-Drift Edition), a cognitive charter and operating protocol by Zain Ul Abdin. It is published at /framework.html. This page is the six-layer account. There is no separate /framework address.',
     },
     {
       kind: 'numbered',

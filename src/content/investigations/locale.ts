@@ -88,7 +88,7 @@ export function localizeInvestigationHref(href: string) {
   const hashAt = href.indexOf('#')
   const hash = hashAt >= 0 ? href.slice(hashAt) : ''
   let path = hashAt >= 0 ? href.slice(0, hashAt) : href
-  const site = 'https://artiais.com'
+  const site = 'https://artiore.com'
   if (path.startsWith(site)) path = path.slice(site.length) || '/'
   if (path === '/perimeter' || path === '/perimeter/') {
     const next = `${arabicInvestigationBase}/perimeter/`

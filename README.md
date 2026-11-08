@@ -1,18 +1,16 @@
 # ARTIore.github.io
 
-Public site for ARTIore, an independent, AI-powered research and intelligence practice. It is currently published at [artiais.com](https://artiais.com).
+Public site for ARTIore, an independent, AI-powered research and intelligence practice. It is published at [artiore.com](https://artiore.com).
 
-- [artiais.com](https://artiais.com) — this site
-- [artiore.com](https://artiore.com) — separate host today; not yet this repository
+- [artiore.com](https://artiore.com) — this site
 - [artioreconsortium.com](https://artioreconsortium.com) — Artiore Consortium
 
-## On artiore.com
+## On this site
 
-- [Home](https://artiore.com)
-- [Framework](https://artiore.com/framework)
-- [Doctrine](https://artiore.com/doctrine)
-- [The Invisible Attack Surface](https://artiore.com/security/invisible-attack-surface)
-- [Security blog](https://artiore.com/blog)
+- [Home](/)
+- [Framework](/framework.html)
+- [Doctrine](/doctrine/)
+- [Blog](/blog/)
 
 ARTIore — an independent, AI-powered research and intelligence practice. Published work maps evidence, assumptions, trade-offs, next steps, and limits. The system is a witness, not a verdict.
 
@@ -40,7 +38,7 @@ The app is a `BrowserRouter` site. Direct loads are prerendered HTML for that ro
 
 ## Framework
 
-The Grand Directional Prompt Framework (V1.1, Zero-Drift Edition) is published at [https://artiais.com/framework.html](https://artiais.com/framework.html). A Markdown transcription and PDF live in `docs/` for the repository. The current full system prompt is [ARTIore System Prompt — Resolved & Winged](docs/ARTIore-System-Prompt.md).
+The Grand Directional Prompt Framework (V1.1, Zero-Drift Edition) is published at [https://artiore.com/framework.html](https://artiore.com/framework.html). A Markdown transcription and PDF live in `docs/` for the repository. The current full system prompt is [ARTIore System Prompt — Resolved & Winged](docs/ARTIore-System-Prompt.md).
 
 ## License
 

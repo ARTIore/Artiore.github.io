@@ -2,7 +2,6 @@ import { SeoHead } from '../components/seo/SeoHead'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SiteLink } from '../components/content/SiteLink'
 import { alsoOnArtioreBlog, blogIndexMeta, blogSummaries } from '../content/blog-summaries'
-import { links } from '../content/links'
 
 export default function BlogPage() {
   return (
@@ -20,8 +19,8 @@ export default function BlogPage() {
         <h1 className="mt-3 font-serif text-4xl text-cream sm:text-5xl">Notes and essays</h1>
         <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted">
           The practical note is published on this site. The four essays are the pieces by Zain Ul Abdin captured in full
-          from artiore.com on April 16, 2026. The blog index there lists more titles. Their full text is not reproduced
-          here.
+          from the previous artiore.com site on April 16, 2026. That previous blog index listed more titles. Their full
+          text is not reproduced here.
         </p>
         <div className="mt-8 space-y-4">
           {blogSummaries.map((post) => (
@@ -41,8 +40,11 @@ export default function BlogPage() {
         </div>
 
         <section className="mt-12">
-          <h2 className="font-serif text-3xl text-cream">Also listed on artiore.com/blog</h2>
-          <p className="mt-3 text-muted">Titles, dates, and the one-line descriptions from the index. No guessed URLs.</p>
+          <h2 className="font-serif text-3xl text-cream">Titles from the previous site</h2>
+          <p className="mt-3 text-muted">
+            These titles were listed on the previous artiore.com blog. Their full text is not in this repository, so this
+            page does not link them.
+          </p>
           <ul className="mt-5 space-y-4">
             {alsoOnArtioreBlog.map((item) => (
               <li className="border-l border-gold/40 pl-4" key={item.title}>
@@ -54,9 +56,6 @@ export default function BlogPage() {
               </li>
             ))}
           </ul>
-          <SiteLink className="mt-6 inline-block text-gold-bright underline underline-offset-4" href={links.artioreBlog}>
-            artiore.com/blog
-          </SiteLink>
         </section>
       </article>
     </>

@@ -267,7 +267,7 @@ export const blogPosts: Array<BlogMeta & { page: PageDocument }> = [
           kind: 'paragraphs',
           text: [
             'The Islamic foundation in the essay is stated as: Allah Alone is Enough; no magic in the system; the witness principle; and Qadar, acknowledging divine decree while respecting human choice. The essay says these shape how the ecosystem operates.',
-            'The essay points developers to artiore.com/api-documentation. That address responds with “Cannot GET /api-documentation”. No public API is documented on artiais.com.',
+            'The essay points developers to artiore.com/api-documentation. The previous site answered that path with “Cannot GET /api-documentation”. This site does not publish a public API there.',
             'The essay’s “looking forward” section says the network continues to expand, that Artiais continues work on reasoning, performance, and infrastructure, and that the Consortium continues work on ethical standards, research, and community. Those are the author’s forward-looking lines in the April 16, 2026 essay. They are not a separate product roadmap published on this site.',
           ],
         },

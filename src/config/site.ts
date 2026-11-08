@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://artiais.com'
+export const SITE_URL = 'https://artiore.com'
 export const SITE_NAME = 'ARTIore'
 export const SITE_POSITIONING =
   'ARTIore — an independent, AI-powered research and intelligence practice'

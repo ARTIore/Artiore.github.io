@@ -130,6 +130,7 @@ export const seoEntries: SeoEntry[] = [
     headline: summaryByPath[page.path]?.title ?? page.title,
     author: page.author,
     datePublished: page.published,
+    lastmod: page.path === '/blog/every-tap-on-allow' ? page.published : undefined,
   })),
   ...investigationMeta.map((page) => ({
     path: page.path,

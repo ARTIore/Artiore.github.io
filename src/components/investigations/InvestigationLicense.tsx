@@ -17,8 +17,8 @@ export function InvestigationLicense({ locale = 'en' }: { locale?: 'en' | 'ar' }
           <OpensInNewTab dir={notice?.dir} lang={notice?.lang} text={notice?.text} />
         </a>
         ). يجوز مشاركته وتعديله، بما في ذلك تجاريًا، مع نسبة العمل إلى Zain Ul Abdin (ARTIore) ورابط إلى{' '}
-        <a className={linkClass} href="https://artiais.com/">
-          <bdi dir="ltr">artiais.com</bdi>
+        <a className={linkClass} href="https://artiore.com/">
+          <bdi dir="ltr">artiore.com</bdi>
         </a>
         .
       </p>
@@ -32,8 +32,8 @@ export function InvestigationLicense({ locale = 'en' }: { locale?: 'en' | 'ar' }
         <OpensInNewTab />
       </a>
       ). You may share and adapt it, including commercially, with credit to Zain Ul Abdin (ARTIore) and a link to{' '}
-      <a className={linkClass} href="https://artiais.com/">
-        artiais.com
+      <a className={linkClass} href="https://artiore.com/">
+        artiore.com
       </a>
       .
     </p>

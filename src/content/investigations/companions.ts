@@ -18,7 +18,7 @@ export const investigationCompanionUrls: Record<string, string> = {
   'technical-glossary': 'https://artiore.com/blog/digital-security-glossary',
   'source-register': 'https://artiore.com/blog/digital-exposure-sources',
   'executive-investigation': 'https://artiore.com/security/invisible-attack-surface',
-  perimeter: 'https://artiore.com/framework',
+  perimeter: '/framework.html',
 }
 
 export const investigationHubCompanionUrl = 'https://artiore.com/security/invisible-attack-surface'
