@@ -1,4 +1,5 @@
-import { readFileSync } from 'node:fs'
+import { readFileSync, readdirSync, statSync } from 'node:fs'
+import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
 
 const chrome = [
@@ -31,5 +32,29 @@ describe('public chrome', () => {
     expect(readFileSync('src/components/investigations/InvestigationArticleFooter.tsx', 'utf8')).toContain(
       positioning,
     )
+  })
+
+  it('does not promote artiore.com/try anywhere in the site source', () => {
+    const files: string[] = []
+    const walk = (dir: string) => {
+      for (const name of readdirSync(dir)) {
+        const path = join(dir, name)
+        if (statSync(path).isDirectory()) {
+          if (name === 'node_modules' || name === 'dist' || name === 'dist-ssr') continue
+          walk(path)
+          continue
+        }
+        if (path.endsWith('try-artiore.test.ts')) continue
+        if (/\.(ts|tsx|html|md|txt|json|mjs)$/.test(path)) files.push(path)
+      }
+    }
+    walk('src')
+    walk('public')
+    files.push('index.html')
+    for (const file of files) {
+      const source = readFileSync(file, 'utf8')
+      expect(source, file).not.toContain('artiore.com/try')
+      expect(source, file).not.toContain('Try ARTIore')
+    }
   })
 })

@@ -152,7 +152,7 @@ export const caseStudiesPage: PageDocument = {
     {
       kind: 'paragraphs',
       text: [
-        'The case-studies page says Artiore is available with no training required and no implementation timeline. The try page is the live reasoning surface.',
+        'The case-studies page says Artiore is available with no training required and no implementation timeline.',
       ],
     },
     {
@@ -206,7 +206,7 @@ export const implementationPage: PageDocument = {
     {
       kind: 'paragraphs',
       text: [
-        'The page’s closing instruction is: start with a real decision, analyze it through all four pillars, and see how structured reasoning changes the picture. The try surface is artiore.com/try.',
+        'The page’s closing instruction is: start with a real decision, analyze it through all four pillars, and see how structured reasoning changes the picture.',
       ],
     },
     {
