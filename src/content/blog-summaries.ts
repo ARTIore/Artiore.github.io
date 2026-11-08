@@ -15,6 +15,18 @@ const date = 'April 16, 2026'
 
 export const blogSummaries: BlogSummary[] = [
   {
+    slug: 'every-tap-on-allow',
+    path: '/blog/every-tap-on-allow',
+    title: 'Every tap on Allow is a decision',
+    category: 'Practical',
+    date: '8 November 2026',
+    minutes: '7 min read',
+    author: 'ARTIore',
+    summary:
+      'A five-minute starting check for phone permissions: five taps worth a pause, and how to review them on iPhone and Android.',
+    tags: ['permissions', 'privacy', 'phone'],
+  },
+  {
     slug: 'artiore-ecosystem',
     path: '/blog/artiore-ecosystem',
     title: 'The Artiore ecosystem: connected platforms for clarity',
@@ -97,9 +109,9 @@ export const alsoOnArtioreBlog: Array<{ title: string; date: string; minutes: st
 
 export const blogIndexMeta = {
   path: '/blog',
-  headTitle: 'ARTIore blog | Four essays by Zain Ul Abdin (2026)',
+  headTitle: 'ARTIore blog | A permissions note and essays',
   description:
-    'Four essays by Zain Ul Abdin from April 16, 2026: the ecosystem, Sultān, the engineer’s oath, and Exhibit K. More titles are listed from artiore.com/blog.',
+    'A short note on five phone permissions worth a pause, with a five-minute iPhone and Android check. Four essays from 16 April 2026 follow.',
   kind: 'page' as const,
-  crumbName: 'Four essays',
+  crumbName: 'Blog',
 }
