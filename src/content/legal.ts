@@ -261,7 +261,7 @@ export const termsPage: PageDocument = {
         'The Codex (blog): educational content on security, decision-making, and strategic thinking',
         'Accessibility features: the terms say 19 or more tools, including text-to-speech, font controls, high contrast, dyslexia-friendly fonts, reading aids, and motion controls',
         'Multi-language support: the terms say content is available in 8 languages — English, Arabic, Urdu, French, Spanish, German, Chinese, and Hindi. This artiais.com site is published in English. It does not ship partial translations of these pages.',
-        'An Islamic theological framework: Quranic verses, Names of Allah, and Islamic principles, as the terms describe them',
+        'The terms describe religious material in the service: Quranic verses, Names of Allah, and Islamic principles. That is the terms’ description, not a slogan on this site.',
       ],
     },
     {
@@ -411,12 +411,12 @@ export const termsPage: PageDocument = {
     },
     {
       kind: 'heading',
-      text: '16. Islamic content',
+      text: '16. Religious content named in the terms',
     },
     {
       kind: 'paragraphs',
       text: [
-        'Artiore incorporates Islamic theological principles, Quranic verses, and references to the Names of Allah as part of its philosophical framework. The terms say this content is for educational and spiritual reflection. The Company says it is not a body of religious scholars. For authoritative Islamic guidance, consult qualified scholars and recognized institutions.',
+        'The April 16, 2026 terms say the service incorporates Islamic theological principles, Quranic verses, and references to the Names of Allah as part of its philosophical framework, and that this content is for educational and spiritual reflection. The terms say the Company is not a body of religious scholars, and that authoritative Islamic guidance should come from qualified scholars and recognized institutions. This page records that wording. It does not use it as a description of this site, and it does not amend the terms. Changing or removing that section of the terms is a decision for the operator named in them.',
       ],
     },
     {

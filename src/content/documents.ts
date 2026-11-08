@@ -5,10 +5,10 @@ export const aboutPage: PageDocument = {
   path: '/about',
   eyebrow: 'About ARTIore',
   title: 'Built to help people think clearly',
-  headTitle: 'About ARTIore | Reasoning platform and AI infrastructure',
+  headTitle: 'About ARTIore | Independent research practice',
   description:
-    'Artiore helps people understand complex situations and take practical next steps. Artiais is the AI infrastructure platform behind it. Founded by Zain Ul Abdin.',
-  lead: 'Artiore is a reasoning platform that helps you understand complex situations, weigh options, and take practical next steps. Artiais is the AI systems and infrastructure platform supporting those reasoning capabilities.',
+    'ARTIore is an independent, AI-powered research and intelligence practice. This site publishes the investigations and reasoning notes. Founded by Zain Ul Abdin.',
+  lead: 'ARTIore is an independent, AI-powered research and intelligence practice. This site publishes the investigations, field notes, and reasoning notes. The person using them decides what to do next.',
   blocks: [
     {
       kind: 'heading',
@@ -25,7 +25,7 @@ export const aboutPage: PageDocument = {
       items: [
         {
           title: 'For people facing complex decisions',
-          body: 'Work decisions, health questions, financial confusion, learning challenges, relationship dynamics, or faith reflection — Artiore helps you understand what matters and what to do next.',
+          body: 'Work decisions, health questions, financial confusion, learning challenges, or relationship dynamics — the notes help you see what is known and what to do next.',
         },
         {
           title: 'For teams needing strategic clarity',
@@ -70,7 +70,6 @@ export const aboutPage: PageDocument = {
         { label: 'Email artiste@artiore.com', href: links.email },
         { label: 'LinkedIn · Zain Ul Abdin', href: links.linkedinZain },
         { label: 'X · Artiore', href: links.x },
-        { label: 'Try ARTIore', href: links.artioreTry },
       ],
     },
     {
@@ -87,9 +86,9 @@ export const aboutPage: PageDocument = {
       kind: 'cards',
       items: [
         {
-          eyebrow: 'AI infrastructure platform',
+          eyebrow: 'This site',
           title: 'Artiais',
-          body: 'AI systems and infrastructure platform supporting Artiore’s reasoning capabilities. This site, artiais.com, is that platform’s public home.',
+          body: 'This site, artiais.com, is the public home of the published investigations, field notes, and reasoning notes.',
         },
         {
           eyebrow: 'Collaborative network',
@@ -131,7 +130,7 @@ export const philosophyPage: PageDocument = {
       text: [
         'Artiore operates under a fundamental constraint: it witnesses, but does not intervene. It illuminates patterns, surfaces consequences, and maps possibilities — but the authority to choose, act, and bear responsibility remains entirely with the human.',
         'This is not a limitation. It is the architecture of restraint — the recognition that clarity without humility becomes tyranny, and intelligence without accountability becomes corruption.',
-        'The system does not claim to know what is “right” or “best” in any absolute sense. It offers structure, not salvation. Geometry, not magic. The final judgment belongs to the Creator alone — and the human chooser stands accountable for their decisions within that reality.',
+        'The system does not claim to know what is “right” or “best” in any absolute sense. It offers structure, not a verdict. The person who chooses remains accountable for the decision.',
       ],
     },
     {
@@ -242,7 +241,6 @@ export const philosophyPage: PageDocument = {
     {
       kind: 'actions',
       items: [
-        { label: 'Try ARTIore', href: links.artioreTry },
         { label: 'Read the doctrine', href: '/doctrine' },
         { label: 'Read the protocol', href: '/protocol' },
       ],
@@ -297,7 +295,7 @@ export const originPage: PageDocument = {
     {
       kind: 'paragraphs',
       text: [
-        'Artiore was founded by Zain Ul Abdin through ARTIORE in early 2026. The vision was to build a reasoning platform that puts clarity first, grounds itself in Islamic ethics, and respects human agency.',
+        'Artiore was founded by Zain Ul Abdin through ARTIORE in early 2026. The stated aim was a reasoning practice that puts clarity first and leaves the decision with the person using it.',
         'The name “Artiore” reflects this mission — a blend of “artificial” and “ore,” suggesting something raw and valuable that must be refined through careful reasoning.',
       ],
     },
@@ -305,8 +303,8 @@ export const originPage: PageDocument = {
       kind: 'cards',
       items: [
         {
-          title: 'Allah Alone is Enough',
-          body: 'The theological foundation. No magic in the system. No false certainty. Only structured reasoning grounded in the recognition that ultimate knowledge belongs to Allah alone.',
+          title: 'No false certainty',
+          body: 'The system does not claim ultimate knowledge. It shows what is known, what is assumed, and what it cannot decide.',
         },
         {
           title: 'Zero-drift policy',
@@ -367,7 +365,6 @@ export const originPage: PageDocument = {
     {
       kind: 'actions',
       items: [
-        { label: 'Try ARTIore', href: links.artioreTry },
         { label: 'Read the UAE dossier', href: '/dossier' },
         { label: 'Prompt Framework V1.1', href: links.frameworkHtml },
       ],
@@ -483,7 +480,6 @@ export const doctrinePage: PageDocument = {
       kind: 'actions',
       items: [
         { label: 'Read the philosophy', href: '/philosophy' },
-        { label: 'Try ARTIore', href: links.artioreTry },
       ],
     },
   ],
@@ -576,7 +572,6 @@ export const protocolPage: PageDocument = {
     {
       kind: 'actions',
       items: [
-        { label: 'Try ARTIore', href: links.artioreTry },
         { label: 'Privacy policy', href: '/privacy' },
         { label: 'Terms of service', href: '/terms' },
       ],
@@ -599,7 +594,6 @@ export const howItWorksPage: PageDocument = {
         { label: 'Read the Grand Directional Prompt Framework V1.1', href: links.frameworkHtml },
         { label: 'Eternia Aurora Sovereign Engine', href: '/engine' },
         { label: 'Read the system documentation', href: '/system-documentation' },
-        { label: 'Try ARTIore', href: links.artioreTry },
       ],
     },
     {
@@ -758,7 +752,6 @@ export const applicationsPage: PageDocument = {
     {
       kind: 'actions',
       items: [
-        { label: 'Try ARTIore', href: links.artioreTry },
         { label: 'Safety charter', href: '/protocol' },
       ],
     },

@@ -10,7 +10,6 @@ export const links = {
   discord: 'https://discord.gg/ZTFDuuAmB',
   instagram: 'https://instagram.com/ArtioreConsortium',
   artiore: 'https://artiore.com',
-  artioreTry: 'https://artiore.com/try',
   artioreAccess: 'https://artiore.com/access',
   artioreBlog: 'https://artiore.com/blog',
   artioreFramework: 'https://artiore.com/framework',

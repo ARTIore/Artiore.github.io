@@ -1,8 +1,9 @@
+import { SITE_POSITIONING } from '../config/site'
+
 export const homeMeta = {
   path: '/',
-  headTitle: 'ARTIore Artiais | AI infrastructure for clear reasoning',
-  description:
-    'Artiais is ARTIore\u2019s AI infrastructure platform. Clarity-first reasoning maps evidence, assumptions, trade-offs, next steps, and limits. Witness, not a verdict.',
+  headTitle: 'ARTIore | Independent AI-powered research',
+  description: `${SITE_POSITIONING}. Published work maps evidence, assumptions, trade-offs, next steps, and limits.`,
   kind: 'home' as const,
   crumbName: 'Home',
 }

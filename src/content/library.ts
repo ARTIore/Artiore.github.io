@@ -152,13 +152,12 @@ export const caseStudiesPage: PageDocument = {
     {
       kind: 'paragraphs',
       text: [
-        'The case-studies page says Artiore is available with no training required and no implementation timeline. The try page is the live reasoning surface.',
+        'The case-studies page says Artiore is available with no training required and no implementation timeline.',
       ],
     },
     {
       kind: 'actions',
       items: [
-        { label: 'Try ARTIore', href: links.artioreTry },
         { label: 'Read the doctrine', href: '/doctrine' },
       ],
     },
@@ -207,14 +206,13 @@ export const implementationPage: PageDocument = {
     {
       kind: 'paragraphs',
       text: [
-        'The page’s closing instruction is: start with a real decision, analyze it through all four pillars, and see how structured reasoning changes the picture. The try surface is artiore.com/try.',
+        'The page’s closing instruction is: start with a real decision, analyze it through all four pillars, and see how structured reasoning changes the picture.',
       ],
     },
     {
       kind: 'actions',
       items: [
         { label: 'Open the guides on artiore.com', href: links.artioreImplementation },
-        { label: 'Try ARTIore', href: links.artioreTry },
         { label: 'Read the case studies', href: '/case-studies' },
       ],
     },
@@ -236,13 +234,12 @@ export const apiPage: PageDocument = {
       kind: 'paragraphs',
       text: [
         'The address artiore.com/api-documentation responds with “Cannot GET /api-documentation”. A blog post on the ecosystem points developers at that address. The address does not serve documentation.',
-        'Use the reasoning platform at artiore.com/try. Read the Grand Directional Prompt Framework at /framework.html. Play Eternia Aurora Sovereign Engine in the browser. Write to artiste@artiore.com if you need to ask about access.',
+        'Read the Grand Directional Prompt Framework at /framework.html. Play Eternia Aurora Sovereign Engine in the browser. Write to artiste@artiore.com if you need to ask about access.',
       ],
     },
     {
       kind: 'actions',
       items: [
-        { label: 'Try ARTIore', href: links.artioreTry },
         { label: 'Prompt Framework V1.1', href: links.frameworkHtml },
         { label: 'Eternia Aurora Sovereign Engine', href: '/engine' },
         { label: 'Email artiste@artiore.com', href: links.email },

@@ -25,8 +25,7 @@ const groups = [
   {
     title: 'Ecosystem',
     items: [
-      { label: 'artiore.com', href: links.artiore, note: 'The reasoning platform.' },
-      { label: 'Try ARTIore', href: links.artioreTry, note: 'The live reasoning page.' },
+      { label: 'artiore.com', href: links.artiore, note: 'Separate host today. This repository does not serve it yet.' },
       { label: 'Request access on artiore.com', href: links.artioreAccess, note: 'The access form is published there. This site does not collect that form.' },
       { label: 'artioreconsortium.com', href: links.consortium, note: 'Artiore Consortium.' },
       { label: 'GitHub · ARTIore', href: links.github, note: 'https://github.com/ARTIore' },

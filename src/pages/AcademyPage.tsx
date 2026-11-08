@@ -94,8 +94,7 @@ export default function AcademyPage() {
             Decide freely.
           </h1>
           <p className="mt-4 text-lg text-cream/90">
-            Allah alone is enough. AI remains a tool, not an authority. All people are welcome, regardless of faith or
-            belief.
+            AI remains a tool, not an authority. All people are welcome.
           </p>
           <nav aria-label="On this page" className="mt-6 flex flex-wrap gap-2">
             {[

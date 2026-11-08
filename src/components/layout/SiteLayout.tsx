@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
+import { SITE_POSITIONING } from '../../config/site'
 import { links } from '../../content/links'
 import { footerPages, primaryNav, type NavLinkItem } from '../../content/navigation'
 import { isStaticPath, normalizePath, toPublicPath } from '../../content/urls'
@@ -81,7 +82,7 @@ export function SiteLayout() {
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
           <NavLink className="min-w-0" end to="/">
             <span className="block font-serif text-2xl tracking-[0.14em] text-gold">ARTIore</span>
-            <span className="block text-xs text-muted">Clarity-first reasoning</span>
+            <span className="block text-xs text-muted">Independent research practice</span>
           </NavLink>
           <button
             aria-controls="site-menu"
@@ -172,9 +173,10 @@ export function SiteLayout() {
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
             <p className="font-serif text-3xl text-gold">ARTIore</p>
-            <p className="mt-3 font-serif text-lg text-gold-bright">Allah Alone is Enough.</p>
+            <p className="mt-3 text-sm leading-relaxed text-cream/90">{SITE_POSITIONING}.</p>
             <p className="mt-3 text-sm leading-relaxed text-muted">
-              Clarity-first reasoning. The system is a witness, not a verdict. No magic in the system.
+              Published work maps evidence, assumptions, trade-offs, next steps, and limits. The system is a witness,
+              not a verdict.
             </p>
           </div>
           <div>
@@ -233,11 +235,6 @@ export function SiteLayout() {
                 </ExternalLink>
               </li>
               <li>
-                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreTry}>
-                  Try ARTIore
-                </ExternalLink>
-              </li>
-              <li>
                 <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreFramework}>
                   Framework
                 </ExternalLink>
@@ -276,7 +273,7 @@ export function SiteLayout() {
           </div>
         </div>
         <p className="border-t border-white/10 px-4 py-6 text-center text-xs text-muted">
-          © 2026 ARTIORE. Allah Alone is Enough.
+          © 2026 ARTIore.
         </p>
       </footer>
     </div>

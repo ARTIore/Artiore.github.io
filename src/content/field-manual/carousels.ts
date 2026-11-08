@@ -17,12 +17,12 @@ export const carouselDecks: CarouselDeck[] = [
     id: "moral-frame",
     number: "01",
     title: "The moral frame",
-    subtitle: "Allah suffices.",
+    subtitle: "What the texts say, and what they do not.",
     slides: [
       {
         src: "/field-manual/carousels/s-01.webp",
-        alt: "01 Allah suffices. A moral frame for service to everyday people. IN THIS CAROUSEL Four verses, two sayings, one standard. What the texts say — and what they do not say. Why benefit and truthful speech are the test. # SWIPE Full sources and notes in the companion booklet.",
-        text: "01\nAllah suffices.\nA moral frame for service to everyday people.\nIN THIS CAROUSEL\nFour verses, two sayings, one standard. What the texts say — and what they do not say. Why benefit and truthful speech are the test.\n# SWIPE\nFull sources and notes in the companion booklet.",
+        alt: "01 The moral frame. A moral frame for service to everyday people. IN THIS CAROUSEL Four verses, two sayings, one standard. What the texts say — and what they do not say. Why benefit and truthful speech are the test. # SWIPE Full sources and notes in the companion booklet.",
+        text: "01\nThe moral frame.\nA moral frame for service to everyday people.\nIN THIS CAROUSEL\nFour verses, two sayings, one standard. What the texts say — and what they do not say. Why benefit and truthful speech are the test.\n# SWIPE\nFull sources and notes in the companion booklet.",
       },
       {
         src: "/field-manual/carousels/s-02.webp",
@@ -51,8 +51,8 @@ export const carouselDecks: CarouselDeck[] = [
       },
       {
         src: "/field-manual/carousels/s-07.webp",
-        alt: "01 They do not pick a side They do not tell us which armed group is right, which state is more guilty, or which donation is most effective. 02 They do not guarantee acceptance Only Allah knows what pleases Him. Do the work; do not claim the reward. 03 They do not replace evidence What is happening, what should be done, and how to do it are three different questions. 04 They do not excuse harm Good intentions do not justify lies, dehumanisation, or money sent to a fraud.",
-        text: "01 They do not pick a side\nThey do not tell us which armed group is right, which state is more guilty, or which donation is most effective.\n02 They do not guarantee acceptance\nOnly Allah knows what pleases Him. Do the work; do not claim the reward.\n03 They do not replace evidence\nWhat is happening, what should be done, and how to do it are three different questions.\n04 They do not excuse harm\nGood intentions do not justify lies, dehumanisation, or money sent to a fraud.",
+        alt: "01 They do not pick a side They do not tell us which armed group is right, which state is more guilty, or which donation is most effective. 02 They do not guarantee a result Do the work; do not claim the reward. 03 They do not replace evidence What is happening, what should be done, and how to do it are three different questions. 04 They do not excuse harm Good intentions do not justify lies, dehumanisation, or money sent to a fraud.",
+        text: "01 They do not pick a side\nThey do not tell us which armed group is right, which state is more guilty, or which donation is most effective.\n02 They do not guarantee a result\nDo the work; do not claim the reward.\n03 They do not replace evidence\nWhat is happening, what should be done, and how to do it are three different questions.\n04 They do not excuse harm\nGood intentions do not justify lies, dehumanisation, or money sent to a fraud.",
       },
       {
         src: "/field-manual/carousels/s-08.webp",

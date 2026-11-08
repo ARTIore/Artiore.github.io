@@ -1,3 +1,4 @@
+import { SITE_POSITIONING } from '../../config/site'
 import { links } from '../../content/links'
 import { blogSummaries } from '../../content/blog-summaries'
 import { featuredInvestigations } from '../../content/related-reading'
@@ -23,7 +24,7 @@ const layers = [
 const doctrine = [
   'Restraint is real power.',
   'The chooser may act, but must not claim the seat of final judgment.',
-  'Consequences unfold within a reality authored by the Creator.',
+  'Consequences stay with the person who acts.',
   'Witness records; it does not authorize, sanctify, or intervene.',
   'Therefore, act with humility, clarity, and accountability — and refrain from overclaim.',
 ] as const
@@ -32,17 +33,13 @@ export function HomeSections() {
   return (
     <div className="space-y-20">
       <section className="rounded-3xl border border-gold/25 bg-[radial-gradient(circle_at_top,rgba(212,179,106,0.16),transparent_42%),linear-gradient(#1c1916,#12100e)] px-5 py-12 sm:px-10 sm:py-16">
-        <p className="text-xs uppercase tracking-[0.28em] text-gold" lang="ar" dir="rtl">
-          حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ
-        </p>
-        <p className="mt-3 font-serif text-lg text-gold-bright">Allah Alone is Enough.</p>
+        <p className="text-xs uppercase tracking-[0.22em] text-gold">ARTIore</p>
         <h1 className="mt-6 max-w-4xl font-serif text-4xl leading-tight text-cream sm:text-6xl">
           Understand complex situations. Choose the next clear step.
         </h1>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-cream/90">
-          Artiais is the AI infrastructure platform for ARTIore — the technical foundation powering clarity-first
-          reasoning. ARTIore helps people understand complex situations, make grounded decisions, and take practical
-          next steps — without overwhelm, gatekeeping, or false certainty.
+          {SITE_POSITIONING}. The published work helps people understand complex situations, make grounded decisions,
+          and take practical next steps — without overwhelm, gatekeeping, or false certainty.
         </p>
         <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted">
           Every response maps evidence, assumptions, trade-offs, practical next steps, and limits. The system is a
@@ -50,12 +47,6 @@ export function HomeSections() {
         </p>
         <div className="mt-8 h-px w-40 bg-gold" />
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-          <SiteLink
-            className="inline-flex min-h-11 items-center justify-center rounded-full bg-gold px-5 py-2 text-sm font-semibold text-ink"
-            href={links.artioreTry}
-          >
-            Try ARTIore
-          </SiteLink>
           <SiteLink
             className="inline-flex min-h-11 items-center justify-center rounded-full border border-gold/60 px-5 py-2 text-sm font-semibold text-gold-bright"
             href={links.frameworkHtml}
@@ -175,15 +166,11 @@ export function HomeSections() {
           </SiteLink>
         </article>
         <article className="rounded-2xl border border-gold/25 p-6">
-          <h2 className="font-serif text-3xl text-cream">Allah Alone is Enough.</h2>
-          <p className="mt-4 leading-relaxed text-cream/90">
-            “Allah is sufficient for us, and He is the best Disposer of affairs.” Artiore is built on that premise:
-            Allah alone is sufficient. Not the system. Not the algorithm. Not the intelligence.
-          </p>
+          <h2 className="font-serif text-3xl text-cream">An independent practice</h2>
+          <p className="mt-4 leading-relaxed text-cream/90">{SITE_POSITIONING}.</p>
           <p className="mt-4 leading-relaxed text-muted">
-            The system clarifies your options. It maps consequences. It surfaces blind spots. Your trust — your
-            tawakkul — belongs to Allah alone. Not to the algorithm. Not to the analysis. Not to the clarity itself.
-            Use the tool. Seek clarity. Make your choice. Then place your trust where it has always belonged.
+            The system clarifies options, maps consequences, and surfaces blind spots. It does not decide. The person
+            who acts remains responsible for the choice.
           </p>
         </article>
       </section>
@@ -252,19 +239,15 @@ export function HomeSections() {
         <div className="mt-6 grid gap-4 lg:grid-cols-3">
           <article className="rounded-2xl border border-white/10 p-5">
             <h3 className="font-serif text-2xl text-cream">Artiore</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted">
-              The flagship reasoning platform. Dual-mode reasoning — Executive Edition and Clarity Edition — with
-              balanced perspectives, calibrated confidence, and actionable next steps.
-            </p>
-            <SiteLink className="mt-4 inline-block text-gold-bright underline underline-offset-4" href={links.artiore}>
-              artiore.com
+            <p className="mt-3 text-sm leading-relaxed text-muted">{SITE_POSITIONING}.</p>
+            <SiteLink className="mt-4 inline-block text-gold-bright underline underline-offset-4" href="/about">
+              About this practice
             </SiteLink>
           </article>
           <article className="rounded-2xl border border-gold/30 p-5">
             <h3 className="font-serif text-2xl text-cream">Artiais</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted">
-              AI infrastructure platform. The technical foundation powering Artiore’s reasoning capabilities: AI
-              systems architecture, reasoning-engine infrastructure, computational resources, and model orchestration.
+              The public address of this site today. It publishes the investigations, field notes, and reasoning notes.
             </p>
             <SiteLink className="mt-4 inline-block text-gold-bright underline underline-offset-4" href="/about">
               About this site

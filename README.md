@@ -1,9 +1,9 @@
 # ARTIore.github.io
 
-Public site for [artiais.com](https://artiais.com), the AI infrastructure platform in the ARTIore ecosystem.
+Public site for ARTIore, an independent, AI-powered research and intelligence practice. It is currently published at [artiais.com](https://artiais.com).
 
-- [artiore.com](https://artiore.com) — the reasoning platform ([try it](https://artiore.com/try))
-- [artiais.com](https://artiais.com) — Artiais, AI infrastructure platform
+- [artiais.com](https://artiais.com) — this site
+- [artiore.com](https://artiore.com) — separate host today; not yet this repository
 - [artioreconsortium.com](https://artioreconsortium.com) — Artiore Consortium
 
 ## On artiore.com
@@ -14,7 +14,7 @@ Public site for [artiais.com](https://artiais.com), the AI infrastructure platfo
 - [The Invisible Attack Surface](https://artiore.com/security/invisible-attack-surface)
 - [Security blog](https://artiore.com/blog)
 
-Clarity-first reasoning. ARTIore helps people understand complex situations, make grounded decisions, and take practical next steps — without overwhelm, gatekeeping, or false certainty. The system is a witness, not a verdict.
+ARTIore — an independent, AI-powered research and intelligence practice. Published work maps evidence, assumptions, trade-offs, next steps, and limits. The system is a witness, not a verdict.
 
 ## Development
 

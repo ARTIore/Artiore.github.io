@@ -30,7 +30,6 @@ export const pocketBooklet: FieldManualContent = {
     { type: 'p', text: 'in a broken world' },
     { type: 'p', text: 'PALESTINE · YEMEN · SYRIA · AFGHANISTAN' },
     { type: 'p', text: 'SAUDI ARABIA · SOMALIA · SOUTH SUDAN · CHAD · PAKISTAN' },
-    { type: 'p', text: '« Allah nous suffit ; Il est notre meilleur garant. »' },
     { type: 'p', text: 'A companion to the carousel series.' },
     {
       type: 'p',
@@ -112,7 +111,7 @@ export const pocketBooklet: FieldManualContent = {
     },
     {
       type: 'p',
-      text: '**What the texts do not do.** They do not identify which armed group is right, which state is more guilty, or which donation is most effective. They do not guarantee that our efforts please Allah; only Allah knows. They do not relieve us of the duty to check facts, count costs, and protect the vulnerable from our own zeal. [FAITH / PERSPECTIVE]',
+      text: '**What the texts do not do.** They do not identify which armed group is right, which state is more guilty, or which donation is most effective. They do not relieve us of the duty to check facts, count costs, and protect the vulnerable from our own zeal. [FAITH / PERSPECTIVE]',
     },
     {
       type: 'p',
@@ -433,7 +432,7 @@ export const pocketBooklet: FieldManualContent = {
         '**No secrecy that isolates.** If you cannot tell a trusted person what you are doing, examine why.',
         '**No burnout.** Ten minutes is enough. The work is a marathon, not a sprint.',
         '**No substitution.** Prayer and reflection do not replace the call, the donation, or the letter.',
-        '**No certainty about acceptance.** Only Allah knows what pleases Him. Do the work; do not claim the reward. [FAITH / PERSPECTIVE]',
+        '**Do the work.** Do not claim the reward. [FAITH / PERSPECTIVE]',
       ],
     },
     { type: 'h2', id: 'sources-and-notes', text: 'SOURCES AND NOTES' },
@@ -476,7 +475,7 @@ export const pocketBooklet: FieldManualContent = {
     },
     {
       type: 'p',
-      text: '**Control returns to you.** These are prepared actions, not taken ones. No money has moved, no one has been contacted, nothing has been published. The decision, the amount, the recipient, and the words are yours. May Allah accept what is done for the benefit of people, and forgive what is mistaken; only He knows what is pleasing to Him.',
+      text: '**Control returns to you.** These are prepared actions, not taken ones. No money has moved, no one has been contacted, nothing has been published. The decision, the amount, the recipient, and the words are yours.',
     },
   ],
 }

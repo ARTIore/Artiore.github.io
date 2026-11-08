@@ -129,7 +129,6 @@ export const blogPosts: Array<BlogMeta & { page: PageDocument }> = [
         {
           kind: 'actions',
           items: [
-            { label: 'Try ARTIore', href: links.artioreTry },
             { label: 'About ARTIore', href: '/about' },
             { label: 'No public API', href: '/api-documentation' },
             { label: 'Artiore Consortium', href: links.consortium },

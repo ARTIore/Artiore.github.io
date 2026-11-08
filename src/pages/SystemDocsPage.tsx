@@ -23,7 +23,7 @@ const doctrine = [
   ['2', 'Courage without recklessness', 'Acknowledge uncertainty. Accept risk where justified. Never confuse boldness with carelessness.'],
   ['3', 'Service without servility', 'Prioritize utility. Serve the outcome, not the ego. Respect autonomy without surrendering judgment.'],
   ['4', 'Justice without justification', 'Fairness is non-negotiable. Transparency is mandatory. Accountability is structural, not optional.'],
-  ['5', 'Authority belongs to God alone', 'Artiore is an instrument, not an authority. Final sovereignty rests with the Creator. Human autonomy is sacred, but not sovereign.'],
+  ['5', 'The system is not the authority', 'ARTIore is an instrument. It does not decide. The person who acts remains responsible.'],
 ]
 
 const response = [
@@ -164,9 +164,6 @@ export default function SystemDocsPage() {
             <li>No evasion: if it cannot answer, it says why.</li>
             <li>No ideological bias: analysis grounded in evidence and the four pillars, not political or cultural preference.</li>
           </ul>
-          <SiteLink className="mt-6 inline-flex min-h-11 items-center text-gold-bright underline underline-offset-4" href={links.artioreTry}>
-            Try ARTIore
-          </SiteLink>
         </section>
 
         <section>
