@@ -1,3 +1,5 @@
+import { ArticleIllustration } from '../components/content/PageHero'
+import { heroFor } from '../content/hero-images'
 import { isValidElement, useMemo, type ReactNode } from 'react'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SeoHead } from '../components/seo/SeoHead'
@@ -6,7 +8,6 @@ import {
   investigationBase,
   investigationLicenseUrl,
   investigationOg,
-  invisibleAttackSurfaceCover,
   invisibleAttackSurfaceInfographic,
   invisibleAttackSurfaceOg,
   investigationPiece,
@@ -181,16 +182,7 @@ export default function InvestigationArticlePage({
             </p>
           ) : null}
         </header>
-        {showSurfaceImages ? (
-          <img
-            alt={invisibleAttackSurfaceCover.alt}
-            className="mt-8 h-auto w-full max-w-[68ch]"
-            height={invisibleAttackSurfaceCover.height}
-            src={invisibleAttackSurfaceCover.src}
-            width={invisibleAttackSurfaceCover.width}
-          />
-        ) : null}
-        {locale === 'ar' ? <TranslationNotice englishPath={enPath} /> : null}
+        {locale === 'ar' ? <><TranslationNotice englishPath={enPath} /><ArticleIllustration path={arPath} /></> : null}
         {rendered.toc.length > 0 ? (
           <nav aria-label={partsLabel} className="mt-10 max-w-[68ch] rounded-2xl border border-gold/30 bg-gold/5 p-5">
             <h2 className="font-serif text-2xl text-cream">{partsLabel}</h2>
@@ -205,7 +197,13 @@ export default function InvestigationArticlePage({
             </ol>
           </nav>
         ) : null}
-        <div className="mt-10 min-w-0 space-y-4">{body}</div>
+        <div className="mt-10 min-w-0 space-y-4">{body.flatMap((node, index) => {
+            if (locale !== 'en' || !isValidElement(node)) return [node]
+            const props = node.props as { id?: string }
+            const item = heroFor(enPath)?.supporting.find(image =>
+              props.id === image.heading.toLowerCase().replace(/['’]/g, '').replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-+|-+$/g, ''))
+            return item ? [node, <ArticleIllustration key={`illustration-${index}`} path={enPath} heading={item.heading} />] : [node]
+          })}</div>
         <RelatedReadingFor sourcePath={locale === 'ar' ? arPath : enPath} />
         {investigationCompanionUrls[slug] ? (
           <AlsoOnArtiore href={investigationCompanionUrls[slug]} locale={locale} />

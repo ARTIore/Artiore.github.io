@@ -1,0 +1,870 @@
+{
+  "/": {
+    "src": "/images/heroes/hero-home.webp",
+    "small": "/images/heroes/hero-home-768.webp",
+    "og": "/images/heroes/hero-home-og.jpg",
+    "alt": "A gold-lit stepping-stone path passes five glowing obelisks toward an warm-gold lighthouse across a dark digital landscape.",
+    "compact": false,
+    "supporting": []
+  },
+  "/contact": {
+    "src": "/images/heroes/hero-contact.webp",
+    "small": "/images/heroes/hero-contact-768.webp",
+    "og": "/images/heroes/hero-contact-og.jpg",
+    "alt": "Several quiet gold communication lines converge on a single warm-gold-lit connection point.",
+    "compact": true,
+    "supporting": []
+  },
+  "/engine": {
+    "src": "/images/heroes/hero-engine.webp",
+    "small": "/images/heroes/hero-engine-768.webp",
+    "og": "/images/heroes/hero-engine-og.jpg",
+    "alt": "Gold sound waves orbit a dark resonating sphere with one warm-gold pulse.",
+    "compact": false,
+    "supporting": []
+  },
+  "/system-documentation": {
+    "src": "/images/heroes/hero-system-documentation.webp",
+    "small": "/images/heroes/hero-system-documentation-768.webp",
+    "og": "/images/heroes/hero-system-documentation-og.jpg",
+    "alt": "Layered gold-lit architectural panels connect to separate output channels beneath an inspection lamp.",
+    "compact": false,
+    "supporting": []
+  },
+  "/academy": {
+    "src": "/images/heroes/hero-academy.webp",
+    "small": "/images/heroes/hero-academy-768.webp",
+    "og": "/images/heroes/hero-academy-og.jpg",
+    "alt": "A small arrangement of learning stations connects along a gold path with one warm-gold starting marker.",
+    "compact": true,
+    "supporting": []
+  },
+  "/academy/threat-lab": {
+    "src": "/images/heroes/hero-academy-threat-lab.webp",
+    "small": "/images/heroes/hero-academy-threat-lab-768.webp",
+    "og": "/images/heroes/hero-academy-threat-lab-og.jpg",
+    "alt": "Five branching practice paths emerge from a tabletop model, with one warm-gold decision point.",
+    "compact": true,
+    "supporting": []
+  },
+  "/academy/recovery": {
+    "src": "/images/heroes/hero-academy-recovery.webp",
+    "small": "/images/heroes/hero-academy-recovery-768.webp",
+    "og": "/images/heroes/hero-academy-recovery-og.jpg",
+    "alt": "A broken gold connection is carefully rejoined beside a single warm-gold recovery key.",
+    "compact": true,
+    "supporting": []
+  },
+  "/academy/navigator": {
+    "src": "/images/heroes/hero-academy-navigator.webp",
+    "small": "/images/heroes/hero-academy-navigator-768.webp",
+    "og": "/images/heroes/hero-academy-navigator-og.jpg",
+    "alt": "A compass-like dial directs a gold path past a phone and a shield, with one warm-gold checkpoint.",
+    "compact": true,
+    "supporting": []
+  },
+  "/academy/evidence": {
+    "src": "/images/heroes/hero-academy-evidence.webp",
+    "small": "/images/heroes/hero-academy-evidence-768.webp",
+    "og": "/images/heroes/hero-academy-evidence-og.jpg",
+    "alt": "A translucent document rests under a gold inspection lens beside an warm-gold review marker.",
+    "compact": true,
+    "supporting": []
+  },
+  "/academy/research": {
+    "src": "/images/heroes/hero-academy-research.webp",
+    "small": "/images/heroes/hero-academy-research-768.webp",
+    "og": "/images/heroes/hero-academy-research-og.jpg",
+    "alt": "Several evidence trays hold distinct records, with one warm-gold marker beside an incomplete tray.",
+    "compact": true,
+    "supporting": []
+  },
+  "/academy/research/provenance": {
+    "src": "/images/heroes/hero-academy-research-provenance.webp",
+    "small": "/images/heroes/hero-academy-research-provenance-768.webp",
+    "og": "/images/heroes/hero-academy-research-provenance-og.jpg",
+    "alt": "A central record connects by gold threads to separate source documents, with one warm-gold missing-link marker.",
+    "compact": true,
+    "supporting": []
+  },
+  "/academy/research/corrections": {
+    "src": "/images/heroes/hero-academy-research-corrections.webp",
+    "small": "/images/heroes/hero-academy-research-corrections-768.webp",
+    "og": "/images/heroes/hero-academy-research-corrections-og.jpg",
+    "alt": "Two document sheets sit beside a gold revision loop and one warm-gold review tab.",
+    "compact": true,
+    "supporting": []
+  },
+  "/academy/research/contradictions": {
+    "src": "/images/heroes/hero-academy-research-contradictions.webp",
+    "small": "/images/heroes/hero-academy-research-contradictions-768.webp",
+    "og": "/images/heroes/hero-academy-research-contradictions-og.jpg",
+    "alt": "A figure faces two branching gold paths around a large question mark on a black background.",
+    "compact": true,
+    "supporting": []
+  },
+  "/blog": {
+    "src": "/images/heroes/hero-blog.webp",
+    "small": "/images/heroes/hero-blog-768.webp",
+    "og": "/images/heroes/hero-blog-og.jpg",
+    "alt": "Four illuminated manuscript panels stand in a dark reading space beneath one warm-gold light.",
+    "compact": false,
+    "supporting": []
+  },
+  "/investigations/digital-exposure/claims": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-claims.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-claims-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-claims-og.jpg",
+    "alt": "A chain of gold claim cards connects to separate source records beside an warm-gold review gate.",
+    "compact": true,
+    "supporting": []
+  },
+  "/field-manual": {
+    "src": "/images/heroes/hero-field-manual.webp",
+    "small": "/images/heroes/hero-field-manual-768.webp",
+    "og": "/images/heroes/hero-field-manual-og.jpg",
+    "alt": "An open field guide reveals four blank tabbed sections beside a small warm-gold lantern.",
+    "compact": false,
+    "supporting": []
+  },
+  "/field-manual/pocket-booklet": {
+    "src": "/images/heroes/hero-field-manual-pocket-booklet.webp",
+    "small": "/images/heroes/hero-field-manual-pocket-booklet-768.webp",
+    "og": "/images/heroes/hero-field-manual-pocket-booklet-og.jpg",
+    "alt": "A compact closed booklet rests beside a gold route line and one warm-gold bookmark.",
+    "compact": true,
+    "supporting": []
+  },
+  "/field-manual/carousels": {
+    "src": "/images/heroes/hero-field-manual-carousels.webp",
+    "small": "/images/heroes/hero-field-manual-carousels-768.webp",
+    "og": "/images/heroes/hero-field-manual-carousels-og.jpg",
+    "alt": "Six blank editorial cards fan across a dark surface, with gold edges and one warm-gold separator.",
+    "compact": true,
+    "supporting": []
+  },
+  "/about": {
+    "src": "/images/heroes/hero-about.webp",
+    "small": "/images/heroes/hero-about-768.webp",
+    "og": "/images/heroes/hero-about-og.jpg",
+    "alt": "Gold infrastructure conduits support a clear central prism with one warm-gold-lit foundation joint.",
+    "compact": false,
+    "supporting": []
+  },
+  "/philosophy": {
+    "src": "/images/heroes/hero-philosophy.webp",
+    "small": "/images/heroes/hero-philosophy-768.webp",
+    "og": "/images/heroes/hero-philosophy-og.jpg",
+    "alt": "A gold lamp illuminates several possible paths while a single warm-gold horizon light remains distant.",
+    "compact": false,
+    "supporting": []
+  },
+  "/origin": {
+    "src": "/images/heroes/hero-origin.webp",
+    "small": "/images/heroes/hero-origin-768.webp",
+    "og": "/images/heroes/hero-origin-og.jpg",
+    "alt": "One warm-gold seed of light unfolds into a branching gold structure above a dark foundation.",
+    "compact": false,
+    "supporting": []
+  },
+  "/doctrine": {
+    "src": "/images/heroes/hero-doctrine.webp",
+    "small": "/images/heroes/hero-doctrine-768.webp",
+    "og": "/images/heroes/hero-doctrine-og.jpg",
+    "alt": "Four stone pillars are joined by a continuous gold loop with one warm-gold junction.",
+    "compact": false,
+    "supporting": []
+  },
+  "/protocol": {
+    "src": "/images/heroes/hero-protocol.webp",
+    "small": "/images/heroes/hero-protocol-768.webp",
+    "og": "/images/heroes/hero-protocol-og.jpg",
+    "alt": "Several gold pathways approach a clear boundary with one warm-gold consent gate.",
+    "compact": false,
+    "supporting": []
+  },
+  "/how-it-works": {
+    "src": "/images/heroes/hero-how-it-works.webp",
+    "small": "/images/heroes/hero-how-it-works-768.webp",
+    "og": "/images/heroes/hero-how-it-works-og.jpg",
+    "alt": "A tiered black-and-gold structure rises toward a bright beacon.",
+    "compact": false,
+    "supporting": []
+  },
+  "/applications": {
+    "src": "/images/heroes/hero-applications.webp",
+    "small": "/images/heroes/hero-applications-768.webp",
+    "og": "/images/heroes/hero-applications-og.jpg",
+    "alt": "A central gold prism distributes light to several distinct work surfaces, with one warm-gold origin point.",
+    "compact": false,
+    "supporting": []
+  },
+  "/dossier": {
+    "src": "/images/heroes/hero-dossier.webp",
+    "small": "/images/heroes/hero-dossier-768.webp",
+    "og": "/images/heroes/hero-dossier-og.jpg",
+    "alt": "A personal notebook and separate translucent evidence sheets rest under one warm-gold review lamp.",
+    "compact": false,
+    "supporting": []
+  },
+  "/resources": {
+    "src": "/images/heroes/hero-resources.webp",
+    "small": "/images/heroes/hero-resources-768.webp",
+    "og": "/images/heroes/hero-resources-og.jpg",
+    "alt": "Gold-lit shelves hold blank reference volumes and a single warm-gold index tab.",
+    "compact": false,
+    "supporting": []
+  },
+  "/case-studies": {
+    "src": "/images/heroes/hero-case-studies.webp",
+    "small": "/images/heroes/hero-case-studies-768.webp",
+    "og": "/images/heroes/hero-case-studies-og.jpg",
+    "alt": "Four miniature architectural models sit on separate gold-lit platforms beside an warm-gold comparison marker.",
+    "compact": false,
+    "supporting": []
+  },
+  "/implementation": {
+    "src": "/images/heroes/hero-implementation.webp",
+    "small": "/images/heroes/hero-implementation-768.webp",
+    "og": "/images/heroes/hero-implementation-og.jpg",
+    "alt": "Five blank guide cards form stepping stones toward a four-part gold structure with one warm-gold starting point.",
+    "compact": false,
+    "supporting": []
+  },
+  "/privacy": {
+    "src": "/images/heroes/hero-privacy.webp",
+    "small": "/images/heroes/hero-privacy-768.webp",
+    "og": "/images/heroes/hero-privacy-og.jpg",
+    "alt": "An opaque dark enclosure sits beside a gold boundary line and a single warm-gold access indicator.",
+    "compact": true,
+    "supporting": []
+  },
+  "/terms": {
+    "src": "/images/heroes/hero-terms.webp",
+    "small": "/images/heroes/hero-terms-768.webp",
+    "og": "/images/heroes/hero-terms-og.jpg",
+    "alt": "Two blank document leaves meet at a clear gold boundary with one warm-gold binding clasp.",
+    "compact": true,
+    "supporting": []
+  },
+  "/blog/artiore-ecosystem": {
+    "src": "/images/heroes/hero-blog-artiore-ecosystem.webp",
+    "small": "/images/heroes/hero-blog-artiore-ecosystem-768.webp",
+    "og": "/images/heroes/hero-blog-artiore-ecosystem-og.jpg",
+    "alt": "Three distinct gold-lit structures connect around a shared warm-gold center.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-artiore-ecosystem-01.webp",
+        "alt": "Three black architectural structures represent an interface, infrastructure and a collaborative forum, connected by brushed-gold paths.",
+        "heading": "Three complementary platforms"
+      }
+    ]
+  },
+  "/blog/sultan-authority-cannot-be-touched": {
+    "src": "/images/heroes/hero-blog-sultan-authority-cannot-be-touched.webp",
+    "small": "/images/heroes/hero-blog-sultan-authority-cannot-be-touched-768.webp",
+    "og": "/images/heroes/hero-blog-sultan-authority-cannot-be-touched-og.jpg",
+    "alt": "A clear evidence prism casts gold light toward a distant sealed threshold with one warm-gold seal.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-sultan-authority-cannot-be-touched-01.webp",
+        "alt": "A clear evidence prism on a black desk casts gold light toward a sealed threshold.",
+        "heading": "Evidence before dominion"
+      }
+    ]
+  },
+  "/blog/engineers-oath-voltage-granted": {
+    "src": "/images/heroes/hero-blog-engineers-oath-voltage-granted.webp",
+    "small": "/images/heroes/hero-blog-engineers-oath-voltage-granted-768.webp",
+    "og": "/images/heroes/hero-blog-engineers-oath-voltage-granted-og.jpg",
+    "alt": "Two unbranded connector ends wait across a narrow gap while one warm-gold handshake pulse precedes a gold power path.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-engineers-oath-voltage-granted-01.webp",
+        "alt": "An engineer holds two unbranded connector ends apart while a small gold handshake pulse bridges the control channel before the larger power path lights.",
+        "heading": "Consent before current"
+      }
+    ]
+  },
+  "/blog/exhibit-k-forensic-witnesses": {
+    "src": "/images/heroes/hero-blog-exhibit-k-forensic-witnesses.webp",
+    "small": "/images/heroes/hero-blog-exhibit-k-forensic-witnesses-768.webp",
+    "og": "/images/heroes/hero-blog-exhibit-k-forensic-witnesses-og.jpg",
+    "alt": "A galaxy, network node, damaged circuit board, and small orchard occupy four gold-lit panels beside one warm-gold witness light.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-exhibit-k-forensic-witnesses-01.webp",
+        "alt": "Four separate panels show a galaxy, network node, damaged circuit board and orchard in black and gold.",
+        "heading": "Four distinct witnesses"
+      }
+    ]
+  },
+  "/investigations/digital-exposure": {
+    "src": "/images/heroes/hero-investigations-digital-exposure.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-og.jpg",
+    "alt": "A phone, router, cloud form, and access token connect through gold paths with one warm-gold exposure point.",
+    "compact": false,
+    "supporting": []
+  },
+  "/perimeter": {
+    "src": "/images/heroes/hero-perimeter.webp",
+    "small": "/images/heroes/hero-perimeter-768.webp",
+    "og": "/images/heroes/hero-perimeter-og.jpg",
+    "alt": "A gold network boundary follows permission gates around connected devices, with one warm-gold gate left open.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-perimeter-01.webp",
+        "alt": "Four nested black planes carry separate gold access gates around a phone, account token and recovery key.",
+        "heading": "The permissions stack"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/executive-investigation": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-executive-investigation.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-executive-investigation-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-executive-investigation-og.jpg",
+    "alt": "Several translucent layers beneath a connected device reveal gold pathways and one warm-gold inspection point.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-executive-investigation-01.webp",
+        "alt": "A researcher separates device observations, account records and source documents into distinct black trays linked by restrained gold lines.",
+        "heading": "Methodology and limits"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/password-protected-wifi-not-secure": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-password-protected-wifi-not-secure.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-password-protected-wifi-not-secure-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-password-protected-wifi-not-secure-og.jpg",
+    "alt": "A locked gold entry gate opens onto a larger network with one warm-gold uncertainty marker beyond it.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-password-protected-wifi-not-secure-01.webp",
+        "alt": "Two nearly identical unbranded wireless access points stand on separate black plinths; their gold signal arcs overlap while a phone pauses between them.",
+        "heading": "The evil-twin problem"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/hotel-wifi-security-guide": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-hotel-wifi-security-guide.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-hotel-wifi-security-guide-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-hotel-wifi-security-guide-og.jpg",
+    "alt": "A dark hotel corridor connects to a gold network hub beside one warm-gold access portal.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-hotel-wifi-security-guide-01.webp",
+        "alt": "An anonymous adult traveller at a hotel desk checks a phone beside a closed laptop and an unbranded router; a discreet gold connection line suggests choosing a trusted route.",
+        "heading": "A practical routine"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/dns-hijacking-explained": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-dns-hijacking-explained.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-dns-hijacking-explained-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-dns-hijacking-explained-og.jpg",
+    "alt": "A gold routing path reaches a junction where one warm-gold switch redirects a branch toward another endpoint.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-dns-hijacking-explained-01.webp",
+        "alt": "A gold address-routing line changes destination at a black junction while a separate intact encrypted tunnel remains visible.",
+        "heading": "What DNS control can and cannot do"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/bluetooth-ble-tracking": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-bluetooth-ble-tracking.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-bluetooth-ble-tracking-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-bluetooth-ble-tracking-og.jpg",
+    "alt": "Several small devices emit gold signal rings around one warm-gold observation point.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-bluetooth-ble-tracking-01.webp",
+        "alt": "Small wearable devices emit gold broadcast rings beside a researcher examining a blank signal record.",
+        "heading": "What a Bluetooth log actually shows"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/android-accessibility-service-malware": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-android-accessibility-service-malware.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-android-accessibility-service-malware-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-android-accessibility-service-malware-og.jpg",
+    "alt": "A translucent phone screen connects through a gold permission panel to one warm-gold control relay.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-android-accessibility-service-malware-01.webp",
+        "alt": "Close-up of an adult reviewing a generic permissions panel on a phone, with a gold-lit permission switch and a separate unselected control.",
+        "heading": "How to audit your device"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/iphone-zero-click-spyware": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-iphone-zero-click-spyware.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-iphone-zero-click-spyware-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-iphone-zero-click-spyware-og.jpg",
+    "alt": "An untouched unbranded phone stands beside a faint gold incoming signal and one warm-gold inspection lens.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-iphone-zero-click-spyware-01.webp",
+        "alt": "An untouched unbranded phone within a black architectural enclosure has several optional entry channels closed by brushed-gold shutters.",
+        "heading": "What Lockdown Mode does"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/mobile-os-exposure": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-mobile-os-exposure.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-mobile-os-exposure-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-mobile-os-exposure-og.jpg",
+    "alt": "Two unbranded phones connect to a gold cloud and nearby signal rings, with one warm-gold permission checkpoint.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-mobile-os-exposure-01.webp",
+        "alt": "An account-access key and an encrypted archive occupy separate black structures connected to a phone through different gold paths.",
+        "heading": "2. iCloud: authentication and encryption solve different problems"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/whatsapp-encryption-limits": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-whatsapp-encryption-limits.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-whatsapp-encryption-limits-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-whatsapp-encryption-limits-og.jpg",
+    "alt": "A sealed gold communication tunnel connects two devices while an warm-gold marker highlights an outer account path.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-whatsapp-encryption-limits-01.webp",
+        "alt": "Two phones connect through a sealed gold message tunnel; a separate branch leads to a backup archive outside the tunnel.",
+        "heading": "The backup gap"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/pegasus-predator-commercial-spyware": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-pegasus-predator-commercial-spyware.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-pegasus-predator-commercial-spyware-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-pegasus-predator-commercial-spyware-og.jpg",
+    "alt": "A device backup rests beneath a gold forensic lens beside one warm-gold evidence seal.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-pegasus-predator-commercial-spyware-01.webp",
+        "alt": "A forensic researcher examines a generic device backup beside separate blank case records under gold task lighting.",
+        "heading": "What the evidence establishes"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/cloud-photo-account-takeover": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-cloud-photo-account-takeover.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-cloud-photo-account-takeover-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-cloud-photo-account-takeover-og.jpg",
+    "alt": "Blank photo tiles sit inside a gold cloud chwarm-gold reached by one warm-gold session key.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-cloud-photo-account-takeover-01.webp",
+        "alt": "A small archive of blank photograph cards connects to two separate access keys and a shared-link chain, using gold on matte black.",
+        "heading": "Route 3: Delegated and accidental access"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/crypto-wallet-drainers": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-crypto-wallet-drainers.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-crypto-wallet-drainers-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-crypto-wallet-drainers-og.jpg",
+    "alt": "A gold wallet chwarm-gold connects to an outward channel through one warm-gold approval switch.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-crypto-wallet-drainers-01.webp",
+        "alt": "An anonymous adult pauses before a generic approval panel; a thin gold connection extends from an unbranded wallet chamber toward an external receiver.",
+        "heading": "How drainers work"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/sim-swap-account-takeover": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-sim-swap-account-takeover.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-sim-swap-account-takeover-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-sim-swap-account-takeover-og.jpg",
+    "alt": "A gold account connection shifts between two blank SIM cards through one warm-gold switching point.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-sim-swap-account-takeover-01.webp",
+        "alt": "A gold phone-number connection transfers between two blank SIM cards, while a separate physical security key remains disconnected from that transfer.",
+        "heading": "Why SMS is a weak second factor"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/hotel-keycard-lock-security": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-hotel-keycard-lock-security.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-hotel-keycard-lock-security-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-hotel-keycard-lock-security-og.jpg",
+    "alt": "A blank keycard faces a gold-lit door reader beside one warm-gold inspection marker.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-hotel-keycard-lock-security-01.webp",
+        "alt": "An unbranded hotel keycard and one specific reader model sit under a narrow gold inspection lamp; other differently shaped readers remain separate in the background.",
+        "heading": "What it does not prove"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/browser-extensions-session-theft": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-browser-extensions-session-theft.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-browser-extensions-session-theft-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-browser-extensions-session-theft-og.jpg",
+    "alt": "A gold browser window contains a small extension module reaching toward one warm-gold session token.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-browser-extensions-session-theft-01.webp",
+        "alt": "A browser-like black window holds a small plugin module connected by a gold permission line to a session token; the login gate is visible separately.",
+        "heading": "The permissions behind convenience"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/digital-security-warning-signs": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-digital-security-warning-signs.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-digital-security-warning-signs-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-digital-security-warning-signs-og.jpg",
+    "alt": "Several neutral device indicators sit under a gold magnifying lens with one warm-gold review light.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-digital-security-warning-signs-01.webp",
+        "alt": "An adult compares a warm phone, a disconnected-network symbol represented by simple shapes, and a blank account alert on separate review trays.",
+        "heading": "Use an evidence ladder"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/deepfake-ai-payment-fraud": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-deepfake-ai-payment-fraud.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-deepfake-ai-payment-fraud-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-deepfake-ai-payment-fraud-og.jpg",
+    "alt": "A video-call frame and a face-like mask sit beside a paused gold payment gate.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-deepfake-ai-payment-fraud-01.webp",
+        "alt": "An adult finance worker pauses at a payment approval desk while a generic video-call frame sits behind them and a separate callback handset is in front.",
+        "heading": "The approval screen"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/regional-reporting-limits": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-regional-reporting-limits.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-regional-reporting-limits-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-regional-reporting-limits-og.jpg",
+    "alt": "Three gold reporting windows reveal differently sized portions of a dark landscape beside one warm-gold coverage marker.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-regional-reporting-limits-01.webp",
+        "alt": "Three differently sized black archive windows show partial gold-lit records with one visible empty interval.",
+        "heading": "Oceania, and a gap"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/stalkerware-safety-planning": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-stalkerware-safety-planning.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-stalkerware-safety-planning-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-stalkerware-safety-planning-og.jpg",
+    "alt": "A protected gold pathway passes a pause point before branching toward a quiet desk.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-stalkerware-safety-planning-01.webp",
+        "alt": "Two anonymous adults sit at a quiet support desk; one keeps a phone resting untouched while the other helps organize a blank safety-plan notebook.",
+        "heading": "Preserve evidence first"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/evidence-method": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-evidence-method.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-evidence-method-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-evidence-method-og.jpg",
+    "alt": "Separate gold evidence trays remain behind a review gate marked by one warm-gold light.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-evidence-method-01.webp",
+        "alt": "Four physically separate black evidence trays have distinct gold-edged dividers and blank status tabs.",
+        "heading": "Four different states"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/global-threat-matrix": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-global-threat-matrix.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-global-threat-matrix-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-global-threat-matrix-og.jpg",
+    "alt": "An abstract gold lattice holds varied device surfaces with one warm-gold comparison point and no ranked scale.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-global-threat-matrix-01.webp",
+        "alt": "A researcher compares separate black trays containing a router, phone, session token and keycard, each outlined in gold.",
+        "heading": "How to read it"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/public-safety-checklist": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-public-safety-checklist.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-public-safety-checklist-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-public-safety-checklist-og.jpg",
+    "alt": "A short row of gold protective checkpoints leads past a phone toward one warm-gold completion light.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-public-safety-checklist-01.webp",
+        "alt": "An adult calmly checks a phone beside a physical security key and a closed backup notebook on a black desk under warm gold light.",
+        "heading": "The 20-minute baseline (everyone)"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/technical-glossary": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-technical-glossary.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-technical-glossary-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-technical-glossary-og.jpg",
+    "alt": "Several distinct gold technical forms pair with blank reference cards beside one warm-gold index tab.",
+    "compact": true,
+    "supporting": [
+      {
+        "src": "/images/articles/article-technical-glossary-01.webp",
+        "alt": "A device, a gold key, and a round token occupy three separate compartments in a black tray.",
+        "heading": "Identity and accounts"
+      }
+    ]
+  },
+  "/investigations/digital-exposure/source-register": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-source-register.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-source-register-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-source-register-og.jpg",
+    "alt": "Gold threads connect ordered source folders to a central record under one warm-gold archival light.",
+    "compact": true,
+    "supporting": [
+      {
+        "src": "/images/articles/article-source-register-01.webp",
+        "alt": "A researcher follows a gold thread from a blank citation card to an archived document, with another source path visibly unconnected.",
+        "heading": "Link policy"
+      }
+    ]
+  },
+  "/investigations/global-injustice": {
+    "src": "/images/heroes/hero-investigations-global-injustice.webp",
+    "small": "/images/heroes/hero-investigations-global-injustice-768.webp",
+    "og": "/images/heroes/hero-investigations-global-injustice-og.jpg",
+    "alt": "Gold-edged archival folders surround a reading desk beneath a warm lamp.",
+    "compact": false,
+    "supporting": []
+  },
+  "/investigations/global-injustice/l1-systems": {
+    "src": "/images/heroes/hero-investigations-global-injustice-l1-systems.webp",
+    "small": "/images/heroes/hero-investigations-global-injustice-l1-systems-768.webp",
+    "og": "/images/heroes/hero-investigations-global-injustice-l1-systems-og.jpg",
+    "alt": "Small neutral blocks face a large layered institutional structure linked by a narrow gold passage and one warm-gold review point.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-l1-systems-01.webp",
+        "alt": "An anonymous adult reviews a blank appeal folder across a desk from a caseworker.",
+        "heading": "Routes to challenge a decision"
+      }
+    ]
+  },
+  "/investigations/global-injustice/l2-corruption": {
+    "src": "/images/heroes/hero-investigations-global-injustice-l2-corruption.webp",
+    "small": "/images/heroes/hero-investigations-global-injustice-l2-corruption-768.webp",
+    "og": "/images/heroes/hero-investigations-global-injustice-l2-corruption-og.jpg",
+    "alt": "A procurement ledger with blank pages reveals a missing sheet under one warm-gold inspection light and gold edge lighting.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-l2-corruption-01.webp",
+        "alt": "An auditor compares an incomplete procurement file with a separate intact file under a gold desk lamp.",
+        "heading": "Procurement documentation gaps"
+      }
+    ]
+  },
+  "/investigations/global-injustice/l3-voices": {
+    "src": "/images/heroes/hero-investigations-global-injustice-l3-voices.webp",
+    "small": "/images/heroes/hero-investigations-global-injustice-l3-voices-768.webp",
+    "og": "/images/heroes/hero-investigations-global-injustice-l3-voices-og.jpg",
+    "alt": "Several gold sound-wave channels end at dark barriers while one warm-gold archival light illuminates the record.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-l3-voices-01.webp",
+        "alt": "A microphone, a blank legal file and a device backup sit on three separate gold-edged black platforms.",
+        "heading": "Separate forms of harm"
+      }
+    ]
+  },
+  "/investigations/global-injustice/l4-civic-space": {
+    "src": "/images/heroes/hero-investigations-global-injustice-l4-civic-space.webp",
+    "small": "/images/heroes/hero-investigations-global-injustice-l4-civic-space-768.webp",
+    "og": "/images/heroes/hero-investigations-global-injustice-l4-civic-space-og.jpg",
+    "alt": "A gold network of small civic structures sits behind a narrowing frame with one warm-gold review marker.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-l4-civic-space-01.webp",
+        "alt": "Two anonymous civic volunteers organize blank funding forms beside a narrowing gold-edged doorway.",
+        "heading": "Funding rules and paperwork"
+      }
+    ]
+  },
+  "/investigations/global-injustice/l5-ngo-conduct": {
+    "src": "/images/heroes/hero-investigations-global-injustice-l5-ngo-conduct.webp",
+    "small": "/images/heroes/hero-investigations-global-injustice-l5-ngo-conduct-768.webp",
+    "og": "/images/heroes/hero-investigations-global-injustice-l5-ngo-conduct-og.jpg",
+    "alt": "One organizational folder sits under a gold inspection lens while other folders remain separate beside an warm-gold review tab.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-l5-ngo-conduct-01.webp",
+        "alt": "A generic aid-office review desk holds one folder under a gold inspection lamp while other organisational folders remain separate and unlit.",
+        "heading": "Safeguarding and organisational accountability"
+      }
+    ]
+  },
+  "/investigations/global-injustice/l6-household-costs": {
+    "src": "/images/heroes/hero-investigations-global-injustice-l6-household-costs.webp",
+    "small": "/images/heroes/hero-investigations-global-injustice-l6-household-costs-768.webp",
+    "og": "/images/heroes/hero-investigations-global-injustice-l6-household-costs-og.jpg",
+    "alt": "Three separate gold-lit household ledgers rest on different platforms beside one warm-gold comparison marker.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-l6-household-costs-01.webp",
+        "alt": "An adult reviews three open ledgers beside models of a house, work equipment, and schoolbooks.",
+        "heading": "Different household burdens"
+      }
+    ]
+  },
+  "/investigations/global-injustice/l7-crime-trends": {
+    "src": "/images/heroes/hero-investigations-global-injustice-l7-crime-trends.webp",
+    "small": "/images/heroes/hero-investigations-global-injustice-l7-crime-trends-768.webp",
+    "og": "/images/heroes/hero-investigations-global-injustice-l7-crime-trends-og.jpg",
+    "alt": "Two separate gold measurement tracks move in different directions with one warm-gold separation marker and no numerical scale.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-l7-crime-trends-01.webp",
+        "alt": "Two gold sliders sit at different positions on separate black measurement rails.",
+        "heading": "Different measures can move differently"
+      }
+    ]
+  },
+  "/investigations/global-injustice/l8-cyber-hygiene": {
+    "src": "/images/heroes/hero-investigations-global-injustice-l8-cyber-hygiene.webp",
+    "small": "/images/heroes/hero-investigations-global-injustice-l8-cyber-hygiene-768.webp",
+    "og": "/images/heroes/hero-investigations-global-injustice-l8-cyber-hygiene-og.jpg",
+    "alt": "A gold maintenance grid surrounds a small hospital-like structure with one warm-gold patch point.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-l8-cyber-hygiene-01.webp",
+        "alt": "A hospital IT worker inspects a black workstation beside a gold-lit patch panel.",
+        "heading": "Basic maintenance in essential services"
+      }
+    ]
+  },
+  "/investigations/global-injustice/l9-technology-gap": {
+    "src": "/images/heroes/hero-investigations-global-injustice-l9-technology-gap.webp",
+    "small": "/images/heroes/hero-investigations-global-injustice-l9-technology-gap-768.webp",
+    "og": "/images/heroes/hero-investigations-global-injustice-l9-technology-gap-og.jpg",
+    "alt": "Two gold-lit learning platforms are separated by a gap crossed by a partial bridge and one warm-gold access light.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-l9-technology-gap-01.webp",
+        "alt": "An adult learner and instructor examine a simplified unbranded interface beside a gold-lit bridge between two black platforms.",
+        "heading": "Understanding opaque choices"
+      }
+    ]
+  },
+  "/investigations/global-injustice/l10-wealth-power": {
+    "src": "/images/heroes/hero-investigations-global-injustice-l10-wealth-power.webp",
+    "small": "/images/heroes/hero-investigations-global-injustice-l10-wealth-power-768.webp",
+    "og": "/images/heroes/hero-investigations-global-injustice-l10-wealth-power-og.jpg",
+    "alt": "Uneven stacks of neutral resource blocks stand apart from a separate gold institutional structure beside one warm-gold comparison light.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-l10-wealth-power-01.webp",
+        "alt": "Two separate preparation desks have visibly different stacks of blank files and reference books.",
+        "heading": "Resources and capacity to seek remedy"
+      }
+    ]
+  },
+  "/investigations/global-injustice/l11-commercial-spyware": {
+    "src": "/images/heroes/hero-investigations-global-injustice-l11-commercial-spyware.webp",
+    "small": "/images/heroes/hero-investigations-global-injustice-l11-commercial-spyware-768.webp",
+    "og": "/images/heroes/hero-investigations-global-injustice-l11-commercial-spyware-og.jpg",
+    "alt": "Device backup tiles and separate legal record folders sit along a gold timeline with one warm-gold review marker.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-l11-commercial-spyware-01.webp",
+        "alt": "Four generic backup tiles sit apart from blank export and court folders.",
+        "heading": "Distinct device and legal records"
+      }
+    ]
+  },
+  "/investigations/global-injustice/synthesis": {
+    "src": "/images/heroes/hero-investigations-global-injustice-synthesis.webp",
+    "small": "/images/heroes/hero-investigations-global-injustice-synthesis-768.webp",
+    "og": "/images/heroes/hero-investigations-global-injustice-synthesis-og.jpg",
+    "alt": "Distinct gold evidence fragments form a partial mosaic with a visible gap illuminated by one warm-gold light.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-synthesis-01.webp",
+        "alt": "Separate fragments of black archival material form an incomplete gold-edged mosaic.",
+        "heading": "Shared patterns and unresolved gaps"
+      }
+    ]
+  },
+  "/framework.html": {
+    "src": "/images/heroes/hero-framework.webp",
+    "small": "/images/heroes/hero-framework-768.webp",
+    "og": "/images/heroes/hero-framework-og.jpg",
+    "alt": "A blank structured charter unfolds into layered gold architectural planes with one warm-gold anchor point.",
+    "compact": false,
+    "supporting": []
+  },
+  "/eternia-aurofa-soverign-engine": {
+    "src": "/images/heroes/hero-eternia-aurofa-soverign-engine.webp",
+    "small": "/images/heroes/hero-eternia-aurofa-soverign-engine-768.webp",
+    "og": "/images/heroes/hero-eternia-aurofa-soverign-engine-og.jpg",
+    "alt": "Gold orbital sound waves surround a dark cosmic core with one warm-gold pulse and ample empty space.",
+    "compact": true,
+    "supporting": []
+  },
+  "/blog/every-tap-on-allow": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-android-accessibility-service-malware.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-android-accessibility-service-malware-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-android-accessibility-service-malware-og.jpg",
+    "alt": "An unbranded phone connects to a gold-lit permission switch and control relay.",
+    "compact": false,
+    "supporting": [
+      {
+        "src": "/images/articles/article-android-accessibility-service-malware-01.webp",
+        "alt": "Close-up of an adult reviewing a generic permissions panel on a phone, with a gold-lit permission switch and a separate unselected control.",
+        "heading": "How to audit your device"
+      }
+    ]
+  }
+}

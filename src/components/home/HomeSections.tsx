@@ -253,7 +253,7 @@ export function HomeSections() {
           <article className="rounded-2xl border border-gold/30 p-5">
             <h3 className="font-serif text-2xl text-cream">Artiais</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted">
-              The public address of this site today. It publishes the investigations, field notes, and reasoning notes.
+              The former public address of this site. The investigations, field notes, and reasoning notes now publish on artiore.com.
             </p>
             <SiteLink className="mt-4 inline-block text-gold-bright underline underline-offset-4" href="/about">
               About this site

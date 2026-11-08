@@ -1,3 +1,4 @@
+import { ArticleIllustration } from '../components/content/PageHero'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { ExternalLink, SiteLink } from '../components/content/SiteLink'
 import { SeoHead } from '../components/seo/SeoHead'
@@ -71,6 +72,7 @@ export default function GlobalInjusticeDossierPage({ id }: { id: string }) {
         <section className="mt-10">
           <h2 className="font-serif text-3xl text-cream">The lead</h2>
           <p className="mt-4 leading-relaxed text-cream/90">{page.lead}</p>
+          <ArticleIllustration path={page.path} />
         </section>
 
         <section className="mt-10">

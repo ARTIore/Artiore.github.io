@@ -1,4 +1,6 @@
-export const SITE_URL = 'https://artiore.com'
+import origin from './site-origin.json'
+
+export const SITE_URL = origin.current
 export const SITE_NAME = 'ARTIore'
 export const SITE_POSITIONING =
   'ARTIore — an independent, AI-powered research and intelligence practice'
