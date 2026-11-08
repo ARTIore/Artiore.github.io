@@ -274,8 +274,17 @@ if (existsSync(join(dist, 'engine.html'))) fail('dist/engine.html conflicts with
 if (existsSync(join(dist, 'framework', 'index.html'))) {
   fail('dist/framework/index.html conflicts with public/framework.html')
 }
-if (existsSync(join(dist, 'eternia-aurofa-soverign-engine'))) {
-  fail('This build must not shadow /eternia-aurofa-soverign-engine/')
+const eterniaFile = join(dist, 'eternia-aurofa-soverign-engine', 'index.html')
+const eterniaCanonical = 'https://artiore.com/eternia-aurofa-soverign-engine/'
+if (!existsSync(eterniaFile)) {
+  fail('Missing the static Eternia instrument at /eternia-aurofa-soverign-engine/')
+} else {
+  const eternia = readFileSync(eterniaFile, 'utf8')
+  if (!eternia.includes(`<link rel="canonical" href="${eterniaCanonical}">`)) {
+    fail('Eternia canonical must be https://artiore.com/eternia-aurofa-soverign-engine/')
+  }
+  if (eternia.includes('artiais.com')) fail('Eternia page still names artiais.com')
+  if (!eternia.includes('ETERNIA · AURORA')) fail('Eternia page is missing the instrument')
 }
 for (const required of [
   '404.html',
@@ -360,6 +369,28 @@ for (const loc of expected) {
 for (const loc of locs) {
   if (!expected.includes(loc)) fail(`sitemap.xml has an extra URL ${loc}`)
 }
+function fileForLoc(loc) {
+  const path = loc.replace('https://artiore.com', '') || '/'
+  if (path === '/') return join(dist, 'index.html')
+  if (path.endsWith('.html')) return join(dist, path.replace(/^\//, ''))
+  return join(dist, path.replace(/^\//, '').replace(/\/$/, ''), 'index.html')
+}
+
+for (const loc of locs) {
+  if (!loc.startsWith('https://artiore.com/')) fail(`sitemap URL is not on artiore.com: ${loc}`)
+  const file = fileForLoc(loc)
+  if (!existsSync(file)) {
+    fail(`sitemap URL has no built HTML: ${loc}`)
+    continue
+  }
+  const html = readFileSync(file, 'utf8')
+  const found = html.match(/<link rel="canonical" href="([^"]+)"/)
+  const canonical = found?.[1] ?? ''
+  if (!canonical.startsWith('https://artiore.com/')) {
+    fail(`${loc} canonical host is ${canonical || 'missing'}`)
+  }
+}
+
 if (locs.includes('https://artiore.com/api-documentation') || locs.includes('https://artiore.com/api-documentation/')) {
   fail('API page must stay out of the sitemap')
 }
