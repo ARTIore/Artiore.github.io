@@ -4,7 +4,7 @@ import { pathToFileURL } from 'node:url'
 import { loadSeoModule } from './load-seo.mjs'
 import { canonicalUrl } from './public-url.mjs'
 
-const SITE_URL = 'https://artiais.com'
+const SITE_URL = 'https://artiore.com'
 
 function escapeHtml(value) {
   return value
@@ -250,7 +250,7 @@ const notFoundEntry = {
   path: '/404.html',
   headTitle: 'Page not found | ARTIore',
   description:
-    'This address is not a page on artiais.com. Nothing was redirected. Use Home, Contact, the six-layer framework, or the Eternia Aurora engine.',
+    'This address is not a page on artiore.com. Nothing was redirected. Use Home, Contact, the six-layer framework, or the Eternia Aurora engine.',
   kind: 'page',
   crumbName: 'This page is not here.',
   noindex: true,

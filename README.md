@@ -1,8 +1,8 @@
 # ARTIore.github.io
 
-Public site for ARTIore, an independent, AI-powered research and intelligence practice. It is currently published at [artiais.com](https://artiais.com).
+Public site for ARTIore, an independent, AI-powered research and intelligence practice. This branch treats [artiore.com](https://artiore.com) as the public host. Do not merge it until GitHub Pages and DNS are switched in the same window.
 
-- [artiais.com](https://artiais.com) — this site
+- [artiore.com](https://artiore.com) — intended public host
 - [artiore.com](https://artiore.com) — separate host today; not yet this repository
 - [artioreconsortium.com](https://artioreconsortium.com) — Artiore Consortium
 
@@ -40,7 +40,7 @@ The app is a `BrowserRouter` site. Direct loads are prerendered HTML for that ro
 
 ## Framework
 
-The Grand Directional Prompt Framework (V1.1, Zero-Drift Edition) is published at [https://artiais.com/framework.html](https://artiais.com/framework.html). A Markdown transcription and PDF live in `docs/` for the repository. The current full system prompt is [ARTIore System Prompt — Resolved & Winged](docs/ARTIore-System-Prompt.md).
+The Grand Directional Prompt Framework (V1.1, Zero-Drift Edition) is published at [https://artiore.com/framework.html](https://artiore.com/framework.html). A Markdown transcription and PDF live in `docs/` for the repository. The current full system prompt is [ARTIore System Prompt — Resolved & Winged](docs/ARTIore-System-Prompt.md).
 
 ## License
 

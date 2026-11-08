@@ -259,7 +259,7 @@ for (const file of textFiles) {
     // testing the bare word, so a mention anywhere else in the sitemap is
     // still caught.
     if (investigationExempt && relative.endsWith('sitemap.xml')) {
-      text = text.replace(/https:\/\/artiais\.com\/investigations\/[^<\s]*/g, '')
+      text = text.replace(/https:\/\/artiore\.com\/investigations\/[^<\s]*/g, '')
     }
     // The investigation is part of the React app, so its article text and
     // slugs also live in the client bundles. Rendered HTML outside
@@ -295,7 +295,7 @@ for (const required of [
 
 const robots = existsSync(join(dist, 'robots.txt')) ? readFileSync(join(dist, 'robots.txt'), 'utf8') : ''
 if (!/Allow:\s*\//.test(robots)) fail('robots.txt should allow all crawlers')
-if (!robots.includes('Sitemap: https://artiais.com/sitemap.xml')) fail('robots.txt should point at the sitemap')
+if (!robots.includes('Sitemap: https://artiore.com/sitemap.xml')) fail('robots.txt should point at the sitemap')
 
 const home = existsSync(join(dist, 'index.html')) ? readFileSync(join(dist, 'index.html'), 'utf8') : ''
 if (!home.includes('rel="manifest"')) fail('home HTML is missing the web manifest link')
@@ -360,10 +360,10 @@ for (const loc of expected) {
 for (const loc of locs) {
   if (!expected.includes(loc)) fail(`sitemap.xml has an extra URL ${loc}`)
 }
-if (locs.includes('https://artiais.com/api-documentation') || locs.includes('https://artiais.com/api-documentation/')) {
+if (locs.includes('https://artiore.com/api-documentation') || locs.includes('https://artiore.com/api-documentation/')) {
   fail('API page must stay out of the sitemap')
 }
-if (locs.includes('https://artiais.com/framework')) fail('Bare /framework must not be a sitemap URL beside framework.html')
+if (locs.includes('https://artiore.com/framework')) fail('Bare /framework must not be a sitemap URL beside framework.html')
 if (locs.some((loc) => loc.endsWith('/404.html'))) fail('404 must stay out of the sitemap')
 
 if (failures.length) {

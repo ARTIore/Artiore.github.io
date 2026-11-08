@@ -223,12 +223,12 @@ export const apiPage: PageDocument = {
   path: '/api-documentation',
   eyebrow: 'API',
   title: 'No public API is available',
-  headTitle: 'No public API is published | ARTIore on artiais.com',
+  headTitle: 'No public API is published | ARTIore on artiore.com',
   description:
-    'artiais.com does not publish a public API. artiore.com/api-documentation responds with “Cannot GET /api-documentation”. No endpoints or schemas here.',
+    'This site does not publish a public API. artiore.com/api-documentation responds with “Cannot GET /api-documentation”. No endpoints or schemas here.',
   noindex: true,
   sitemap: false,
-  lead: 'There is no public API to document on artiais.com. There are no endpoints and no schemas on this site.',
+  lead: 'There is no public API to document on this site. There are no endpoints and no schemas here.',
   blocks: [
     {
       kind: 'paragraphs',

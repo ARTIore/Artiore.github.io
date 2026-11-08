@@ -1,7 +1,7 @@
 import { links } from './links'
 import type { PageDocument } from './types'
 
-const framing = `This is the policy published for the Artiore service at artiore.com, last updated April 16, 2026. It is reproduced here so readers of artiais.com can find it. artiais.com is a static site. It does not run the Artiore reasoning engine. The operator named in the policy is The Secret Affaire Inc., a private limited corporation registered in Canada. Questions go to ${links.policyEmailAddress}. The phone number printed on the original policy is omitted on this site.`
+const framing = `This is the policy published for the Artiore service at artiore.com, last updated April 16, 2026. It is reproduced on this site. This site is a static publication. It does not run a separate reasoning engine. The operator named in the policy is The Secret Affaire Inc., a private limited corporation registered in Canada. Questions go to ${links.policyEmailAddress}. The phone number printed on the original policy is omitted on this site.`
 
 export const privacyPage: PageDocument = {
   path: '/privacy',
@@ -260,7 +260,7 @@ export const termsPage: PageDocument = {
         'Artiore framework: a six-layer decision-making framework. The terms name the layers as Clarity, Reasoning, Archives, Witness, Upliftment, and Human Upliftment. The framework page names Clarity, Reasoning, Archives, Derivatives, AI in the margin, and Human upliftment. Both lists are published. This page does not silently pick one.',
         'The Codex (blog): educational content on security, decision-making, and strategic thinking',
         'Accessibility features: the terms say 19 or more tools, including text-to-speech, font controls, high contrast, dyslexia-friendly fonts, reading aids, and motion controls',
-        'Multi-language support: the terms say content is available in 8 languages — English, Arabic, Urdu, French, Spanish, German, Chinese, and Hindi. This artiais.com site is published in English. It does not ship partial translations of these pages.',
+        'Multi-language support: the terms say content is available in 8 languages — English, Arabic, Urdu, French, Spanish, German, Chinese, and Hindi. This site is published in English. It does not ship partial translations of these pages.',
         'An Islamic theological framework: Quranic verses, Names of Allah, and Islamic principles, as the terms describe them',
       ],
     },

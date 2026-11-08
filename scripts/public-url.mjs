@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://artiais.com'
+export const SITE_URL = 'https://artiore.com'
 
 export function toPublicPath(href) {
   if (!href.startsWith('/')) return href

@@ -22,7 +22,7 @@ export const links = {
   github: 'https://github.com/ARTIore',
   githubSite: 'https://github.com/ARTIore/Artiore.github.io',
   githubEternia: 'https://github.com/ARTIore/eternia-aurofa-soverign-engine',
-  eternia: 'https://artiais.com/eternia-aurofa-soverign-engine/',
+  eternia: 'https://artiore.com/eternia-aurofa-soverign-engine/',
   frameworkHtml: '/framework.html',
   openaiPrivacy: 'https://openai.com/privacy',
 } as const

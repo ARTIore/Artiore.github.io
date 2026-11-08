@@ -4,11 +4,11 @@ import { describe, expect, it } from 'vitest'
 const prints = [
   {
     file: 'public/investigations/digital-exposure/public-safety-checklist/print.html',
-    canonical: 'https://artiais.com/investigations/digital-exposure/public-safety-checklist/',
+    canonical: 'https://artiore.com/investigations/digital-exposure/public-safety-checklist/',
   },
   {
     file: 'public/investigations/digital-exposure/ar/public-safety-checklist/print.html',
-    canonical: 'https://artiais.com/investigations/digital-exposure/ar/public-safety-checklist/',
+    canonical: 'https://artiore.com/investigations/digital-exposure/ar/public-safety-checklist/',
   },
 ]
 

@@ -88,7 +88,7 @@ export const aboutPage: PageDocument = {
         {
           eyebrow: 'This site',
           title: 'Artiais',
-          body: 'This site, artiais.com, is the public home of the published investigations, field notes, and reasoning notes.',
+          body: 'This site, artiore.com, is the public home of the published investigations, field notes, and reasoning notes.',
         },
         {
           eyebrow: 'Collaborative network',

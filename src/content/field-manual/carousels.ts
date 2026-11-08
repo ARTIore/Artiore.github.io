@@ -301,7 +301,7 @@ export const carouselDecks: CarouselDeck[] = [
 export const carouselPdfPath = '/field-manual/carousels/ARTIORE-Carousel-Series-2026-10-23.pdf'
 
 export const carouselOgImage = {
-  src: 'https://artiais.com/field-manual/carousels/s-01.webp',
+  src: 'https://artiore.com/field-manual/carousels/s-01.webp',
   width: '792',
   height: '990',
 }
