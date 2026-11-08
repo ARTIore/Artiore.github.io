@@ -25,7 +25,7 @@ const groups = [
   {
     title: 'Ecosystem',
     items: [
-      { label: 'artiore.com', href: links.artiore, note: 'This site, once the published Pages deployment is serving it.' },
+      { label: 'artiore.com', href: links.artiore, note: 'This site.' },
       { label: 'artioreconsortium.com', href: links.consortium, note: 'Artiore Consortium.' },
       { label: 'GitHub · ARTIore', href: links.github, note: 'https://github.com/ARTIore' },
       { label: 'This site’s source', href: links.githubSite, note: 'Artiore.github.io' },

@@ -19,8 +19,8 @@ export default function BlogPage() {
         <h1 className="mt-3 font-serif text-4xl text-cream sm:text-5xl">Notes and essays</h1>
         <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted">
           The practical note is published on this site. The four essays are the pieces by Zain Ul Abdin captured in full
-          from artiore.com on April 16, 2026. The blog index there lists more titles. Their full text is not reproduced
-          here.
+          from the previous artiore.com site on April 16, 2026. That previous blog index listed more titles. Their full
+          text is not reproduced here.
         </p>
         <div className="mt-8 space-y-4">
           {blogSummaries.map((post) => (

@@ -1,8 +1,8 @@
 # ARTIore.github.io
 
-Public site for ARTIore, an independent, AI-powered research and intelligence practice. This branch treats [artiore.com](https://artiore.com) as the public host. Do not merge it until GitHub Pages and DNS are switched in the same window.
+Public site for ARTIore, an independent, AI-powered research and intelligence practice. It is published at [artiore.com](https://artiore.com).
 
-- [artiore.com](https://artiore.com) — intended public host
+- [artiore.com](https://artiore.com) — this site
 - [artioreconsortium.com](https://artioreconsortium.com) — Artiore Consortium
 
 ## On this site

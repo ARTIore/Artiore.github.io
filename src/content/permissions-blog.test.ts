@@ -13,6 +13,8 @@ describe('permissions blog note', () => {
     const entry = seoEntries.find((item) => item.path === '/blog/every-tap-on-allow')
     expect(entry?.kind).toBe('blog-post')
     expect(entry?.sitemap).not.toBe(false)
+    expect(entry?.datePublished).toBe('2026-11-08')
+    expect(entry?.lastmod).toBe('2026-11-08')
     expect(text).toContain('/investigations/digital-exposure/mobile-os-exposure/')
     expect(text).toContain('/investigations/digital-exposure/android-accessibility-service-malware/')
   })
