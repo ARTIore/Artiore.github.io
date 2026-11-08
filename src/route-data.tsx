@@ -52,6 +52,11 @@ const loaders: Record<string, Loader> = {
   '/api-documentation': documentRoute(async () => (await import('./content/library')).apiPage),
   '/privacy': documentRoute(async () => (await import('./content/legal')).privacyPage),
   '/terms': documentRoute(async () => (await import('./content/legal')).termsPage),
+  '/blog/every-tap-on-allow': documentRoute(async () => {
+    const post = (await import('./content/blog')).blogPosts.find((item) => item.slug === 'every-tap-on-allow')
+    if (!post) throw new Error('Missing essay every-tap-on-allow')
+    return post.page
+  }),
   '/blog/artiore-ecosystem': documentRoute(async () => {
     const post = (await import('./content/blog')).blogPosts.find((item) => item.slug === 'artiore-ecosystem')
     if (!post) throw new Error('Missing essay artiore-ecosystem')

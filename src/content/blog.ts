@@ -10,6 +10,150 @@ const published = '2026-04-16'
 
 export const blogPosts: Array<BlogMeta & { page: PageDocument }> = [
   {
+    ...summary['every-tap-on-allow'],
+    page: {
+      path: '/blog/every-tap-on-allow',
+      eyebrow: 'Practical · 8 November 2026',
+      title: 'Every tap on Allow is a decision. Most of us make it without reading.',
+      headTitle: 'Every tap on Allow is a decision | ARTIore',
+      description:
+        'A five-minute starting check for phone permissions. Five taps worth a pause, what the studies measured, and how to review iPhone and Android.',
+      author: summary['every-tap-on-allow'].author,
+      published: '2026-11-08',
+      lead: 'Casual Allow taps can trade privacy for convenience. This note names five permissions worth a slow thumb, and a five-minute starting check for iPhone and Android. It is not a full security assessment.',
+      blocks: [
+        {
+          kind: 'paragraphs',
+          text: [
+            'Picture this as a story, not a case file. You download a weather app at 7 a.m. It asks for your contacts. You tap Allow because you are late. Then location. Allow. Then Bluetooth. Allow. You never think about it again. A grant can let that app read what you just allowed. It does not, by itself, prove that a database now holds your address book or your morning route.',
+            'Every tap on Allow is a decision. Most of us make it without reading. Permission prompts are often easy to dismiss. [Nielsen Norman Group](https://www.nngroup.com/articles/permission-requests/) describes requests that arrive at a bad moment, fatigue from several prompts in a row, and Android dialogs that do not include a reason in the system box. The box is not a briefing.',
+          ],
+        },
+        {
+          kind: 'heading',
+          text: 'What the studies actually measured',
+        },
+        {
+          kind: 'paragraphs',
+          text: [
+            'In a 2021 USENIX Security paper, Shen and colleagues report two different groups. One is 4,636 people who installed the researchers’ Permission Checker app and whose real Android permission settings were collected. That group was not asked the comprehension questions. The 6.1% figure comes from a separate Mechanical Turk survey, Survey 1, with 359 valid responses (180 Android and 179 iOS), collected from April 2019 to May 2020. About one in twenty of those respondents, 6.1%, selected every correct use of the permission groups they were shown, using the text in the system dialog. The authors say the result is not a census of all phone users. [Shen et al., USENIX Security 2021](https://www.usenix.org/system/files/sec21-shen-bingyu.pdf)',
+            'The same paper reports, from March 2018 news accounts, that Facebook’s Android app collected and uploaded call history and SMS messages when people had granted those permissions, and that some people were surprised when they later downloaded their data. That report is about call logs and text messages. It is not evidence about photos or contacts.',
+            'Richards and Hartzog describe ways digital consent can fail without the person seeing the failure, including consent given without understanding the technology or the consequences. [The Pathologies of Digital Consent, Washington University Law Review, 2019](https://openscholarship.wustl.edu/law_lawreview/vol96/iss6/11)',
+            'A 2020 questionnaire of 61 Android participants, after the authors dropped incomplete answers, found negative answers on microphone access from 62%, and a near split on the camera (39% negative, 34% positive). People in that sample were more willing to allow the same access to an app they already liked. It is not a current survey of every phone owner. [Andriotis and Takasu, HCII 2020](https://andriotisp.github.io/assets/pdf/hcii20andrio.pdf)',
+          ],
+        },
+        {
+          kind: 'heading',
+          text: 'Five taps worth a pause',
+        },
+        {
+          kind: 'paragraphs',
+          text: [
+            'These are not a ranked list of the five worst permissions on earth. They are five grants that deserve a slow thumb, because each one can reach more than a single button on the screen. Not every app that asks is malicious. You should still know who has the key.',
+          ],
+        },
+        {
+          kind: 'numbered',
+          items: [
+            {
+              label: '1',
+              title: 'Accessibility access, on Android',
+              body: 'Android’s Accessibility Service can read what is on the screen and perform actions for you. That is what many assistive tools need, and it is also powerful in the wrong hands. [Android documentation](https://developer.android.com/reference/android/accessibilityservice/AccessibilityService) A flashlight that asks to act as your hands is a reason to stop and ask why. iPhone does not give ordinary apps this same system-wide service. Do not turn off an accessibility service you rely on. If you do not recognize a service, turn that service off. Turning a service off is not the same as uninstalling the app. [Google’s guidance on harmful settings](https://support.google.com/android/answer/12623953)',
+            },
+            {
+              label: '2',
+              title: 'Notification access, not the whole screen',
+              body: 'On Android, a notification listener can read notifications as they are posted, which may include a message preview or a one-time code. [NotificationListenerService](https://developer.android.com/reference/android/service/notification/NotificationListenerService) That is not the same as recording the screen. A widget may be the reason an app asks. Decide whether that widget is worth the access.',
+            },
+            {
+              label: '3',
+              title: 'Location all the time',
+              body: '“While using the app” is not the same as background location. Background location can keep a record of where the phone goes, including places you did not mean to log. [Android location permissions](https://developer.android.com/develop/sensors-and-location/location/permissions) On iPhone, Apple documents While Using, Always, and Allow Once, and you can change them later in Settings. [About Location Services](https://support.apple.com/en-us/102515)',
+            },
+            {
+              label: '4',
+              title: 'Bluetooth and nearby devices',
+              body: 'Nearby-device and Bluetooth access can see devices around the phone. On some Android versions a scan can also be used to infer location, unless the app declares that it will not use the scan for location. [Android Bluetooth permissions](https://developer.android.com/develop/connectivity/bluetooth/bt/permissions) Headphones are one use. They are not the only use.',
+            },
+            {
+              label: '5',
+              title: 'Contacts, photos, and broad file access',
+              body: 'These are different grants. Contacts are the address book. Photos are the camera roll. “All files” on Android is broader than the photo picker. Where the phone offers a selection, such as limited contacts on iPhone, prefer the selection unless the feature truly needs everything. [Apple on contact access](https://support.apple.com/guide/iphone/control-access-to-contacts-iph9536aa9a5/ios) [Android permission types](https://support.google.com/android/answer/9431959) The Facebook call-and-SMS report above is not a report about photos.',
+            },
+          ],
+        },
+        {
+          kind: 'paragraphs',
+          text: [
+            'A granted permission is a capability. It is not proof that the data was uploaded, stolen, or later abused. A 2019 Journal of Information Security paper discusses Android permission risks and a 100-person awareness survey in Saudi Arabia. It is not a count of how often granted permissions are exploited. [Al Jutail, Al-Akhras, and Albesher, 2019](https://doi.org/10.4236/jis.2019.102004)',
+          ],
+        },
+        {
+          kind: 'heading',
+          text: 'A five-minute starting check',
+        },
+        {
+          kind: 'paragraphs',
+          text: [
+            'You do not need to become a security expert. Five minutes is a start, not a finished audit. Menus move. Phone makers rename them. If a path below is missing, use the search box in Settings.',
+          ],
+        },
+        {
+          kind: 'list',
+          title: 'On iPhone',
+          items: [
+            'Open Settings, then Privacy & Security. Apple’s guide is [Control access to information in apps](https://support.apple.com/guide/iphone/control-access-to-information-in-apps-iph251e92810/ios).',
+            'Open Location Services, Tracking, Photos, Contacts, Bluetooth, Microphone, and Camera. For each app you do not use, turn the access off. For contacts, Apple documents a limited selection.',
+            'Search Settings for Background App Refresh. On many iPhones it sits under General. Turning it off stops some background updates. It does not revoke a permission, and it does not by itself stop all tracking.',
+          ],
+        },
+        {
+          kind: 'list',
+          title: 'On Android',
+          items: [
+            'Google’s current help, for many phones on Android 11 and later, is Settings, then Security & privacy, Privacy, Permission manager. Some phones still use Settings, Apps, then the app, then Permissions. [Change app permissions](https://support.google.com/android/answer/9431959)',
+            'Review location, camera, microphone, contacts, and nearby devices. Revoke access you do not use. For location, camera, and microphone, “while using the app” is narrower than “all the time.”',
+            'For accessibility, search Settings for Accessibility, then look for installed or downloaded services. Leave the services you use. Turn off a service you do not recognize. That is not the same step as deleting the app.',
+          ],
+        },
+        {
+          kind: 'heading',
+          text: 'Next time',
+        },
+        {
+          kind: 'paragraphs',
+          text: [
+            'Least access, shortest time, and a look again later. Grant a permission when a feature asks for it, not as a bundle when the app first opens. A messaging app needs contacts when you import them. A camera app needs the camera when you take a picture. Nielsen Norman Group’s timing advice is the same idea: ask for what the app needs to work at first launch, and ask for the rest in context.',
+            'If you deny a permission and a feature stops, that tells you the feature wanted that access. It does not prove the app is malicious. You can turn the permission back on. Less access is reversible. A copied address book is harder to take back.',
+            '“Share with partners” in a settings screen is the same kind of decision in different clothes. Read it before you leave it on.',
+            'Sign in with Google or Apple is a sign-in, not a device permission. Apple lets you share your name and either your email or a private relay address. [Hide My Email](https://support.apple.com/en-us/105078) Google’s basic sign-in scopes can include your name and email. Access to Drive, Photos, or other Google data is a separate scope, not something the blue button grants by itself. [Google’s scope list](https://developers.google.com/identity/protocols/oauth2/scopes) Read the screen. Do not treat a familiar button as a reason to skip it.',
+            'The prompt is easy to skip. Your attention is the check you still control.',
+          ],
+        },
+        {
+          kind: 'heading',
+          text: 'Related on this site',
+        },
+        {
+          kind: 'paragraphs',
+          text: [
+            'Mobile Exposure covers iPhone update cohorts, Android fix windows, cloud keys, and Bluetooth together. The Android accessibility article covers what that service can do when it is abused. This note is the everyday audit. It does not repeat those investigations.',
+          ],
+        },
+        {
+          kind: 'actions',
+          items: [
+            { label: 'Mobile Exposure', href: '/investigations/digital-exposure/mobile-os-exposure/' },
+            {
+              label: 'Android accessibility',
+              href: '/investigations/digital-exposure/android-accessibility-service-malware/',
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
     ...summary['artiore-ecosystem'],
     page: {
       path: '/blog/artiore-ecosystem',
