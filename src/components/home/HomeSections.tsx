@@ -37,6 +37,12 @@ export function HomeSections() {
         <h1 className="mt-6 max-w-4xl font-serif text-4xl leading-tight text-cream sm:text-6xl">
           Understand complex situations. Choose the next clear step.
         </h1>
+        <SiteLink
+          className="mt-6 inline-flex min-h-11 items-center justify-center rounded-full bg-gold px-5 py-2 text-sm font-semibold text-ink"
+          href="/investigations/digital-exposure/mobile-os-exposure/"
+        >
+          Mobile Exposure
+        </SiteLink>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-cream/90">
           {SITE_POSITIONING}. The published work helps people understand complex situations, make grounded decisions,
           and take practical next steps — without overwhelm, gatekeeping, or false certainty.
