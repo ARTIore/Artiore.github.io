@@ -100,13 +100,12 @@ export const resourcesPage: PageDocument = {
     {
       kind: 'paragraphs',
       text: [
-        'The Codex page also offers an “Artiore Companion” PDF, described as a portable reference covering the framework, the Sulemani Protocol, and the Eternal Loop. That file is published on artiore.com. It is not hosted in this repository, so this page does not pretend to offer the download.',
+        'The Codex page also offers an “Artiore Companion” PDF, described as a portable reference covering the framework, the Sulemani Protocol, and the Eternal Loop. That file was on the previous site. It is not hosted in this repository, so this page does not offer the download.',
       ],
     },
     {
       kind: 'actions',
       items: [
-        { label: 'Companion handbook on artiore.com', href: links.artioreCompanion },
         { label: 'Prompt Framework V1.1', href: links.frameworkHtml },
         { label: 'Read the doctrine', href: '/doctrine' },
         { label: 'Read the protocol', href: '/protocol' },
@@ -152,7 +151,7 @@ export const caseStudiesPage: PageDocument = {
     {
       kind: 'paragraphs',
       text: [
-        'The case-studies page says Artiore is available with no training required and no implementation timeline. The try page is the live reasoning surface.',
+        'The case-studies page says Artiore is available with no training required and no implementation timeline.',
       ],
     },
     {
@@ -206,13 +205,12 @@ export const implementationPage: PageDocument = {
     {
       kind: 'paragraphs',
       text: [
-        'The page’s closing instruction is: start with a real decision, analyze it through all four pillars, and see how structured reasoning changes the picture. The try surface is artiore.com/try.',
+        'The page’s closing instruction is: start with a real decision, analyze it through all four pillars, and see how structured reasoning changes the picture.',
       ],
     },
     {
       kind: 'actions',
       items: [
-        { label: 'Open the guides on artiore.com', href: links.artioreImplementation },
         { label: 'Read the case studies', href: '/case-studies' },
       ],
     },
@@ -225,7 +223,7 @@ export const apiPage: PageDocument = {
   title: 'No public API is available',
   headTitle: 'No public API is published | ARTIore on artiore.com',
   description:
-    'This site does not publish a public API. artiore.com/api-documentation responds with “Cannot GET /api-documentation”. No endpoints or schemas here.',
+    'This site does not publish a public API. There are no endpoints and no schemas on the API documentation page.',
   noindex: true,
   sitemap: false,
   lead: 'There is no public API to document on this site. There are no endpoints and no schemas here.',
@@ -233,7 +231,7 @@ export const apiPage: PageDocument = {
     {
       kind: 'paragraphs',
       text: [
-        'The address artiore.com/api-documentation responds with “Cannot GET /api-documentation”. A blog post on the ecosystem points developers at that address. The address does not serve documentation.',
+        'The previous site answered /api-documentation with “Cannot GET /api-documentation”. This site does not publish those endpoints either.',
         'Read the Grand Directional Prompt Framework at /framework.html. Play Eternia Aurora Sovereign Engine in the browser. Write to artiste@artiore.com if you need to ask about access.',
       ],
     },

@@ -3,16 +3,14 @@
 Public site for ARTIore, an independent, AI-powered research and intelligence practice. This branch treats [artiore.com](https://artiore.com) as the public host. Do not merge it until GitHub Pages and DNS are switched in the same window.
 
 - [artiore.com](https://artiore.com) — intended public host
-- [artiore.com](https://artiore.com) — separate host today; not yet this repository
 - [artioreconsortium.com](https://artioreconsortium.com) — Artiore Consortium
 
-## On artiore.com
+## On this site
 
-- [Home](https://artiore.com)
-- [Framework](https://artiore.com/framework)
-- [Doctrine](https://artiore.com/doctrine)
-- [The Invisible Attack Surface](https://artiore.com/security/invisible-attack-surface)
-- [Security blog](https://artiore.com/blog)
+- [Home](/)
+- [Framework](/framework.html)
+- [Doctrine](/doctrine/)
+- [Blog](/blog/)
 
 ARTIore — an independent, AI-powered research and intelligence practice. Published work maps evidence, assumptions, trade-offs, next steps, and limits. The system is a witness, not a verdict.
 

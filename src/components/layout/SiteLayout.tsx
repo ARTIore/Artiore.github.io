@@ -235,19 +235,19 @@ export function SiteLayout() {
                 </ExternalLink>
               </li>
               <li>
-                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreFramework}>
+                <SiteLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreFramework}>
                   Framework
-                </ExternalLink>
+                </SiteLink>
               </li>
               <li>
-                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreDoctrine}>
+                <SiteLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreDoctrine}>
                   Doctrine
-                </ExternalLink>
+                </SiteLink>
               </li>
               <li>
-                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreBlog}>
-                  Security blog
-                </ExternalLink>
+                <SiteLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreBlog}>
+                  Blog
+                </SiteLink>
               </li>
               <li>
                 <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.consortium}>
