@@ -335,7 +335,7 @@ export const englishManual: FieldManualContent = {
     },
     {
       "type": "p",
-      "text": "What these texts do not do. They do not identify which armed group is right, which state is more guilty, or which donation is most effective. They do not guarantee that our efforts please Allah; only Allah knows. They do not relieve us of the duty to check facts, count costs, and protect the vulnerable from our own zeal. [FAITH / PERSPECTIVE] The manual therefore separates three questions: What is happening? (evidence), What should be done? (prudential judgment), and How should I do it? (character and method). Confusing the three is how good impulses become harm. [REASONED GUIDANCE]"
+      "text": "What these texts do not do. They do not identify which armed group is right, which state is more guilty, or which donation is most effective. They do not relieve us of the duty to check facts, count costs, and protect the vulnerable from our own zeal. [FAITH / PERSPECTIVE] The manual therefore separates three questions: What is happening? (evidence), What should be done? (prudential judgment), and How should I do it? (character and method). Confusing the three is how good impulses become harm. [REASONED GUIDANCE]"
     },
     {
       "type": "h2",
@@ -426,7 +426,7 @@ export const englishManual: FieldManualContent = {
     },
     {
       "type": "p",
-      "text": "What this manual will not do. It will not produce propaganda, dehumanising language, or calls to violence against any group. It will not take the side of an armed group. It will not claim that a donation or a letter guarantees a result, or that our work is certainly pleasing to Allah. It will not ask you to trust an organization because it is famous. [REASONED GUIDANCE]"
+      "text": "What this manual will not do. It will not produce propaganda, dehumanising language, or calls to violence against any group. It will not take the side of an armed group. It will not claim that a donation or a letter guarantees a result. It will not ask you to trust an organization because it is famous. [REASONED GUIDANCE]"
     },
     {
       "type": "p",
@@ -2741,7 +2741,7 @@ export const englishManual: FieldManualContent = {
         "No secrecy that isolates. If you are giving or acting in a way that you cannot tell a trusted person about, examine why. [REASONED GUIDANCE]",
         "No burnout. Ten minutes is enough. The work is a marathon, not a sprint. [REASONED GUIDANCE]",
         "No substitution. Prayer and reflection do not replace the phone call, the donation, or the letter. They make them sustainable. [REASONED GUIDANCE]",
-        "No certainty about acceptance. Only Allah knows what pleases Him. Do the work; do not claim the reward. [FAITH / PERSPECTIVE]"
+        "Do the work; do not claim the reward. [FAITH / PERSPECTIVE]"
       ]
     },
     {
@@ -3306,7 +3306,7 @@ export const englishManual: FieldManualContent = {
     },
     {
       "type": "p",
-      "text": "Return of control. These are prepared actions, not taken ones. No money has moved, no one has been contacted, nothing has been published. The decision, the amount, the recipient, and the words are yours. May Allah accept what is done for the benefit of people, and forgive what is mistaken; only He knows what is pleasing to Him."
+      "text": "Return of control. These are prepared actions, not taken ones. No money has moved, no one has been contacted, nothing has been published. The decision, the amount, the recipient, and the words are yours."
     }
   ]
 }

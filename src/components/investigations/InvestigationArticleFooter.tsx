@@ -22,8 +22,8 @@ export function InvestigationArticleFooter({ locale = 'en' }: { locale?: 'en' | 
   return (
     <footer className="mt-12 max-w-[68ch] border-t border-white/10 pt-6 text-sm leading-relaxed text-cream/90">
       <p>
-        ARTIore — independent research and intelligence practice. No sponsor, vendor or government reviewed this work
-        before publication. Sources and evidence assessments are documented.
+        ARTIore — an independent, AI-powered research and intelligence practice. No sponsor, vendor or government
+        reviewed this work before publication. Sources and evidence assessments are documented.
       </p>
       <nav aria-label={items.map((item) => item.label).join(', ')} className="mt-3">
         <ul className="flex flex-wrap items-center gap-x-2 gap-y-1">

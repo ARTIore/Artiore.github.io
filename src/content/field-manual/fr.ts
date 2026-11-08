@@ -336,7 +336,7 @@ export const frenchManual: FieldManualContent = {
     },
     {
       "type": "p",
-      "text": "Ce que ces textes ne font pas. Ils ne désignent pas quel groupe armé a raison, quel État est le plus coupable, ni quel don est le plus efficace. Ils ne garantissent pas que nos efforts plaisent à Allah ; seul Allah le sait. Ils ne nous dispensent pas du devoir de vérifier les faits, de compter les coûts et de protéger les personnes vulnérables de notre propre zèle. [FAITH / PERSPECTIVE] Le manuel sépare donc trois questions : Que se passe-t-il ? (les éléments), Que convient-il de faire ? (le jugement prudentiel), et Comment dois-je le faire ? (le caractère et la méthode). Confondre les trois, c'est ainsi que de bons élans deviennent un tort. [REASONED GUIDANCE]"
+      "text": "Ce que ces textes ne font pas. Ils ne désignent pas quel groupe armé a raison, quel État est le plus coupable, ni quel don est le plus efficace. Ils ne nous dispensent pas du devoir de vérifier les faits, de compter les coûts et de protéger les personnes vulnérables de notre propre zèle. [FAITH / PERSPECTIVE] Le manuel sépare donc trois questions : Que se passe-t-il ? (les éléments), Que convient-il de faire ? (le jugement prudentiel), et Comment dois-je le faire ? (le caractère et la méthode). Confondre les trois, c'est ainsi que de bons élans deviennent un tort. [REASONED GUIDANCE]"
     },
     {
       "type": "h2",
@@ -427,7 +427,7 @@ export const frenchManual: FieldManualContent = {
     },
     {
       "type": "p",
-      "text": "Ce que ce manuel ne fera pas. Il ne produira pas de propagande, de langage déshumanisant, ni d'appels à la violence contre un groupe quelconque. Il ne prendra pas le parti d'un groupe armé. Il ne prétendra pas qu'un don ou une lettre garantit un résultat, ni que notre travail plaît certainement à Allah. Il ne vous demandera pas de faire confiance à une organisation parce qu'elle est célèbre. [REASONED GUIDANCE]"
+      "text": "Ce que ce manuel ne fera pas. Il ne produira pas de propagande, de langage déshumanisant, ni d'appels à la violence contre un groupe quelconque. Il ne prendra pas le parti d'un groupe armé. Il ne prétendra pas qu'un don ou une lettre garantit un résultat. Il ne vous demandera pas de faire confiance à une organisation parce qu'elle est célèbre. [REASONED GUIDANCE]"
     },
     {
       "type": "p",
@@ -2742,7 +2742,7 @@ export const frenchManual: FieldManualContent = {
         "Pas de secret qui isole. Si vous donnez ou agissez d'une manière que vous ne pouvez pas dire à une personne de confiance, examinez pourquoi. [REASONED GUIDANCE]",
         "Pas d'épuisement. Dix minutes suffisent. Le travail est un marathon, non un sprint. [REASONED GUIDANCE]",
         "Pas de substitution. La prière et la réflexion ne remplacent pas l'appel, le don ou la lettre. Elles les rendent tenables. [REASONED GUIDANCE]",
-        "Pas de certitude sur l'acceptation. Seul Allah sait ce qui Lui plaît. Faites le travail ; ne revendiquez pas la récompense. [FAITH / PERSPECTIVE]"
+        "Faites le travail ; ne revendiquez pas la récompense. [FAITH / PERSPECTIVE]"
       ]
     },
     {
@@ -3307,7 +3307,7 @@ export const frenchManual: FieldManualContent = {
     },
     {
       "type": "p",
-      "text": "Retour de la maîtrise. Ce sont des actions préparées, non des actions déjà prises. Aucun argent n'a bougé, personne n'a été contacté, rien n'a été publié. La décision, le montant, le destinataire et les mots sont les vôtres. Qu'Allah accepte ce qui est fait pour le bénéfice des gens, et pardonne ce qui est erroné ; Lui seul sait ce qui Lui est agréable."
+      "text": "Retour de la maîtrise. Ce sont des actions préparées, non des actions déjà prises. Aucun argent n'a bougé, personne n'a été contacté, rien n'a été publié. La décision, le montant, le destinataire et les mots sont les vôtres."
     }
   ]
 }
