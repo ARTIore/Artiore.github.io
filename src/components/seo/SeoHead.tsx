@@ -1,3 +1,4 @@
+import { heroFor } from '../../content/hero-images'
 import { useEffect } from 'react'
 import {
   OG_IMAGE_ALT,
@@ -69,10 +70,11 @@ export function SeoHead({
 }: SeoHeadProps) {
   useEffect(() => {
     const canonical = canonicalUrl(path)
-    const ogUrl = image ?? OG_IMAGE_URL
-    const ogWidth = imageWidth ?? OG_IMAGE_WIDTH
-    const ogHeight = imageHeight ?? OG_IMAGE_HEIGHT
-    const ogAlt = imageAlt ?? OG_IMAGE_ALT
+    const hero = heroFor(path)
+    const ogUrl = hero?.og ?? image ?? OG_IMAGE_URL
+    const ogWidth = hero ? '1200' : imageWidth ?? OG_IMAGE_WIDTH
+    const ogHeight = hero ? '630' : imageHeight ?? OG_IMAGE_HEIGHT
+    const ogAlt = hero?.alt ?? imageAlt ?? OG_IMAGE_ALT
     document.title = title
     document.documentElement.lang = inLanguage ?? 'en'
     document.documentElement.dir = dir ?? 'ltr'

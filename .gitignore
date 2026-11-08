@@ -26,3 +26,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Expanded from assets/editorial-images.zip during checks and builds
+public/images/
+assets/editorial-images.zip

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { SITE_POSITIONING } from '../../config/site'
+import { PageHero } from '../content/PageHero'
 import { links } from '../../content/links'
 import { footerPages, primaryNav, type NavLinkItem } from '../../content/navigation'
 import { isStaticPath, normalizePath, toPublicPath } from '../../content/urls'
@@ -166,6 +167,7 @@ export function SiteLayout() {
       </header>
 
       <main className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:py-16" id="main" tabIndex={-1}>
+        <PageHero path={location.pathname} />
         <Outlet />
       </main>
 

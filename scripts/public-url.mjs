@@ -1,4 +1,7 @@
-export const SITE_URL = 'https://artiore.com'
+import { readFileSync } from 'node:fs'
+
+const origin = JSON.parse(readFileSync(new URL('../src/config/site-origin.json', import.meta.url), 'utf8'))
+export const SITE_URL = origin.current
 
 export function toPublicPath(href) {
   if (!href.startsWith('/')) return href

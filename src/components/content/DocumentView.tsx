@@ -1,3 +1,4 @@
+import { ArticleIllustration } from './PageHero'
 import { SeoHead } from '../seo/SeoHead'
 import { Breadcrumbs } from '../seo/Breadcrumbs'
 import type { Block, PageDocument } from '../../content/types'
@@ -138,6 +139,7 @@ export function DocumentView({ page }: { page: PageDocument }) {
           <p className="mt-5 max-w-3xl text-lg leading-relaxed text-cream/90">{page.lead}</p>
         </header>
         <div className="mt-10 space-y-8">
+          {page.path.startsWith('/blog/') ? <ArticleIllustration path={page.path} /> : null}
           {page.blocks.map((block, index) => (
             <BlockView block={block} key={`${block.kind}-${index}`} />
           ))}

@@ -2,9 +2,20 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { loadSeoModule } from './load-seo.mjs'
-import { canonicalUrl } from './public-url.mjs'
+import { canonicalUrl, SITE_URL } from './public-url.mjs'
 
-const SITE_URL = 'https://artiore.com'
+const heroAlts = JSON.parse(readFileSync(join(process.cwd(), 'src/content/hero-alts.json'), 'utf8'))
+const heroManifest = JSON.parse(readFileSync(join(process.cwd(), 'src/content/hero-images.json'), 'utf8'))
+function heroFor(path) {
+ let key = path.replace(/\/$/, '') || '/'
+ if (key === '/field-manual/ar' || key === '/field-manual/fr') key = '/field-manual'
+ if (key === '/investigations/digital-exposure/ar/perimeter') key = '/perimeter'
+ key = key.replace('/digital-exposure/ar/', '/digital-exposure/')
+ if (key === '/investigations/digital-exposure/ar') key = '/investigations/digital-exposure'
+ const image = heroManifest[key]
+ return image ? { ...image, og: new URL(image.og, SITE_URL).href, alt: heroAlts[path.replace(/\/$/, '')] ?? image.alt } : undefined
+}
+
 
 function escapeHtml(value) {
   return value
@@ -190,6 +201,8 @@ const template = readFileSync(join(dist, 'index.html'), 'utf8')
 const scriptFile = entryScript(template)
 
 async function renderDocument(templateHtml, entry, location) {
+  const hero = heroFor(entry.path)
+  if (hero) entry = { ...entry, image: hero.og, imageWidth: '1200', imageHeight: '630', imageAlt: hero.alt }
   const kind = entry.kind ?? 'page'
   const htmlWithMeta = applyMeta(templateHtml, {
     title: entry.headTitle,
@@ -267,6 +280,10 @@ if (frameworkEntry) {
     canonical: canonicalUrl(frameworkEntry.path),
     robots: 'index,follow',
     ogType: 'website',
+    image: heroFor('/framework.html')?.og,
+    imageWidth: '1200',
+    imageHeight: '630',
+    imageAlt: heroFor('/framework.html')?.alt,
   })
   framework = replaceJsonLd(
     framework,
@@ -301,5 +318,8 @@ ${sitemapUrls
 `
 writeFileSync(join(dist, 'sitemap.xml'), sitemap)
 writeFileSync(join(process.cwd(), 'public', 'sitemap.xml'), sitemap)
+
+writeFileSync(join(dist, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`)
+writeFileSync(join(dist, 'CNAME'), new URL(SITE_URL).hostname + '\n')
 
 console.log(`Wrote ${rendered.length} prerendered routes, dist/404.html, and sitemap.xml`)

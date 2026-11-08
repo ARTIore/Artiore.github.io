@@ -1,3 +1,5 @@
+import { SITE_URL } from '../config/site'
+
 /** Public URL shape. GitHub Pages serves directory routes at the trailing-slash URL. */
 
 export function normalizePath(pathname: string) {
@@ -32,7 +34,7 @@ export function toPublicPath(href: string) {
 }
 
 export function canonicalUrl(path: string) {
-  const site = 'https://artiore.com'
+  const site = SITE_URL
   if (path === '/' || path === '') return `${site}/`
   const pub = toPublicPath(path.startsWith('/') ? path : `/${path}`)
   return `${site}${pub}`

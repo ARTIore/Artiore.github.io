@@ -10,7 +10,10 @@
     "test": "vitest run",
     "test:evidence": "python3 scripts/test_validate_evidence.py && python3 scripts/validate-evidence.py data/evidence/ledger-v1/example-record.json data/evidence/ledger-v1/example-list.json",
     "test:browser": "playwright test",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare:images": "python3 scripts/prepare-images.py",
+    "pretest": "python3 scripts/prepare-images.py",
+    "prebuild": "python3 scripts/prepare-images.py"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
