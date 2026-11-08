@@ -23,5 +23,16 @@ describe('permissions blog note', () => {
     expect(text).not.toContain('4,636 Android users, only 6.1%')
     expect(text).not.toContain('designed to be skipped')
     expect(text).not.toContain('master key')
+    expect(text).not.toContain('For location, camera, and microphone, “while using the app” is narrower than “all the time.”')
+  })
+
+  it('keeps location, nearby devices, and notification access distinct', () => {
+    expect(text).toContain('“all the time” is for location only')
+    expect(text).toContain('Camera and microphone do not use that same always option')
+    expect(text).toContain('neverForLocation')
+    expect(text).toContain('not proof the app cannot infer where you are another way')
+    expect(text).toContain('Search Settings for Notification access')
+    expect(text).toContain('RECEIVE_SENSITIVE_NOTIFICATIONS')
+    expect(text).toContain('not guaranteed a code')
   })
 })

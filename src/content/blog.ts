@@ -63,7 +63,7 @@ export const blogPosts: Array<BlogMeta & { page: PageDocument }> = [
             {
               label: '2',
               title: 'Notification access, not the whole screen',
-              body: 'On Android, a notification listener can read notifications as they are posted, which may include a message preview or a one-time code. [NotificationListenerService](https://developer.android.com/reference/android/service/notification/NotificationListenerService) That is not the same as recording the screen. A widget may be the reason an app asks. Decide whether that widget is worth the access.',
+              body: 'On Android, notification access lets an app read notifications the system delivers to it. That can include a message preview. It is not the same as recording the screen, and it is not the ordinary permission that only lets an app post its own alerts. What a listener can see depends on the Android version. Current Android documents a restricted permission, RECEIVE_SENSITIVE_NOTIFICATIONS, for certain sensitive notification content, including some one-time passwords. Apps without it cannot view those parts. That permission is limited to system-signed, preinstalled, known-signer, or role-holder apps, so an ordinary listener on Android 15 and later is not guaranteed a code. Older phones may still show more. [NotificationListenerService](https://developer.android.com/reference/android/service/notification/NotificationListenerService) [Sensitive-notification permission](https://developer.android.com/reference/android/Manifest.permission#RECEIVE_SENSITIVE_NOTIFICATIONS) A widget may be why an app asks. Decide whether that widget is worth the access.',
             },
             {
               label: '3',
@@ -73,7 +73,7 @@ export const blogPosts: Array<BlogMeta & { page: PageDocument }> = [
             {
               label: '4',
               title: 'Bluetooth and nearby devices',
-              body: 'Nearby-device and Bluetooth access can see devices around the phone. On some Android versions a scan can also be used to infer location, unless the app declares that it will not use the scan for location. [Android Bluetooth permissions](https://developer.android.com/develop/connectivity/bluetooth/bt/permissions) Headphones are one use. They are not the only use.',
+              body: 'On Android 12 and later, the Nearby devices prompt covers scanning, advertising, and connecting. That grant is separate from the location permission. If an app uses Bluetooth scan results to derive physical location, Android also expects a location permission. A developer can mark the scan permission neverForLocation. That is the developer’s assertion that the app does not derive location from scans. Android then filters some Bluetooth Low Energy beacons out of the results. The flag is not proof the app cannot infer where you are another way. [Android Bluetooth permissions](https://developer.android.com/develop/connectivity/bluetooth/bt-permissions) Headphones are one use. They are not the only use.',
             },
             {
               label: '5',
@@ -112,7 +112,8 @@ export const blogPosts: Array<BlogMeta & { page: PageDocument }> = [
           title: 'On Android',
           items: [
             'Google’s current help, for many phones on Android 11 and later, is Settings, then Security & privacy, Privacy, Permission manager. Some phones still use Settings, Apps, then the app, then Permissions. [Change app permissions](https://support.google.com/android/answer/9431959)',
-            'Review location, camera, microphone, contacts, and nearby devices. Revoke access you do not use. For location, camera, and microphone, “while using the app” is narrower than “all the time.”',
+            'Review location, camera, microphone, contacts, and nearby devices. Revoke access you do not use. For location, where the phone offers it, “while using the app” is narrower than “all the time.” Google’s help says “all the time” is for location only. Camera and microphone do not use that same always option. Depending on the phone, the choices are while using the app, ask every time, or don’t allow. [Change app permissions](https://support.google.com/android/answer/9431959)',
+            'Notification access is a separate review. Search Settings for Notification access. On many phones it sits under Apps, then Special app access. Google’s Messages help describes one Pixel path as Apps & notifications, Advanced, Special app access, Notification access. Turn off access you do not recognize. That list is who can read notifications, not the switch that only lets an app post its own. [Notification access](https://support.google.com/messages/answer/10252674)',
             'For accessibility, search Settings for Accessibility, then look for installed or downloaded services. Leave the services you use. Turn off a service you do not recognize. That is not the same step as deleting the app.',
           ],
         },
