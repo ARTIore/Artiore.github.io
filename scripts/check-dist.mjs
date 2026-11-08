@@ -274,17 +274,8 @@ if (existsSync(join(dist, 'engine.html'))) fail('dist/engine.html conflicts with
 if (existsSync(join(dist, 'framework', 'index.html'))) {
   fail('dist/framework/index.html conflicts with public/framework.html')
 }
-const eterniaFile = join(dist, 'eternia-aurofa-soverign-engine', 'index.html')
-const eterniaCanonical = 'https://artiore.com/eternia-aurofa-soverign-engine/'
-if (!existsSync(eterniaFile)) {
-  fail('Missing the static Eternia instrument at /eternia-aurofa-soverign-engine/')
-} else {
-  const eternia = readFileSync(eterniaFile, 'utf8')
-  if (!eternia.includes(`<link rel="canonical" href="${eterniaCanonical}">`)) {
-    fail('Eternia canonical must be https://artiore.com/eternia-aurofa-soverign-engine/')
-  }
-  if (eternia.includes('artiais.com')) fail('Eternia page still names artiais.com')
-  if (!eternia.includes('ETERNIA · AURORA')) fail('Eternia page is missing the instrument')
+if (existsSync(join(dist, 'eternia-aurofa-soverign-engine'))) {
+  fail('This build must not publish /eternia-aurofa-soverign-engine/. That path is the external project site.')
 }
 for (const required of [
   '404.html',
@@ -376,7 +367,21 @@ function fileForLoc(loc) {
   return join(dist, path.replace(/^\//, '').replace(/\/$/, ''), 'index.html')
 }
 
-for (const loc of locs) {
+const externalLocs = seoEntries
+  .filter((entry) => entry.external && entry.sitemap !== false)
+  .map((entry) => canonicalUrl(entry.path))
+const externalProject = 'https://artiore.com/eternia-aurofa-soverign-engine/'
+if (externalLocs.length !== 1 || externalLocs[0] !== externalProject) {
+  fail('The sitemap should list exactly one external project route: /eternia-aurofa-soverign-engine/')
+}
+if (!locs.includes(externalProject)) fail(`sitemap.xml is missing external project route ${externalProject}`)
+if (existsSync(fileForLoc(externalProject))) {
+  fail(`${externalProject} is served by its project site, so this build must not contain it`)
+}
+
+const builtLocs = locs.filter((loc) => loc !== externalProject)
+if (builtLocs.length !== 104) fail(`Expected 104 built sitemap pages, found ${builtLocs.length}`)
+for (const loc of builtLocs) {
   if (!loc.startsWith('https://artiore.com/')) fail(`sitemap URL is not on artiore.com: ${loc}`)
   const file = fileForLoc(loc)
   if (!existsSync(file)) {
@@ -402,4 +407,4 @@ if (failures.length) {
   process.exit(1)
 }
 
-console.log(`Checked ${seoEntries.length} SEO entries and ${textFiles.length} dist files.`)
+console.log(`Checked ${seoEntries.length} SEO entries, 104 built sitemap pages, 1 external project route, and ${textFiles.length} dist files.`)
