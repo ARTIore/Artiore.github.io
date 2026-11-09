@@ -18,7 +18,7 @@ export const staticPrefixes = ['/investigations/']
  * Served by another project at the same host. A client-side route would show
  * the not-found screen; the browser has to load the address itself.
  */
-const fullDocumentPaths = ['/eternia-aurofa-soverign-engine']
+const fullDocumentPaths = ['/eternia-aurora-sovereign-engine']
 
 export function isFullDocumentPath(href: string) {
   const path = normalizePath((href || '/').split('?')[0].split('#')[0])

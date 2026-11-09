@@ -89,7 +89,16 @@ test.describe('built site release checks', () => {
     await expect(page.getByRole('heading', { level: 1, name: 'Eternia Aurora Sovereign Engine' })).toBeVisible()
     await expect(page.getByRole('heading', { level: 1, name: 'This page is not here.' })).toHaveCount(0)
     const play = page.getByRole('link', { name: 'Play it in the browser' })
-    await expect(play).toHaveAttribute('href', '/eternia-aurofa-soverign-engine/')
+    await expect(play).toHaveAttribute('href', '/eternia-aurora-sovereign-engine/')
+    await expect(play).toHaveJSProperty('tagName', 'A')
+    await expect(play).not.toHaveAttribute('data-discover')
+  })
+
+  test('Play it in the browser is a full page link to the instrument', async ({ page }) => {
+    await page.goto('/engine/')
+    const play = page.getByRole('link', { name: 'Play it in the browser' })
+    await expect(play).toHaveAttribute('href', '/eternia-aurora-sovereign-engine/')
+    await expect(play).toHaveJSProperty('tagName', 'A')
     await expect(play).not.toHaveAttribute('data-discover')
   })
 

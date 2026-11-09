@@ -273,8 +273,8 @@ if (existsSync(join(dist, 'engine.html'))) fail('dist/engine.html conflicts with
 if (existsSync(join(dist, 'framework', 'index.html'))) {
   fail('dist/framework/index.html conflicts with public/framework.html')
 }
-if (existsSync(join(dist, 'eternia-aurofa-soverign-engine'))) {
-  fail('This build must not publish /eternia-aurofa-soverign-engine/. That path is the external project site.')
+if (existsSync(join(dist, 'eternia-aurora-sovereign-engine'))) {
+  fail('This build must not publish /eternia-aurora-sovereign-engine/. That path is the external project site.')
 }
 for (const required of [
   '404.html',
@@ -329,7 +329,7 @@ function sitePath(href) {
 
 function resolves(pathname) {
   const rel = decodeURIComponent(pathname.split('?')[0].split('#')[0])
-  if (rel === '/eternia-aurofa-soverign-engine' || rel === '/eternia-aurofa-soverign-engine/') return true
+  if (rel === '/eternia-aurora-sovereign-engine' || rel === '/eternia-aurora-sovereign-engine/') return true
   const clean = rel.replace(/^\//, '')
   if (clean === '') return existsSync(join(dist, 'index.html'))
   const candidates = [clean]
@@ -385,9 +385,9 @@ function fileForLoc(loc) {
 const externalLocs = seoEntries
   .filter((entry) => entry.external && entry.sitemap !== false)
   .map((entry) => canonicalUrl(entry.path))
-const externalProject = 'https://artiore.com/eternia-aurofa-soverign-engine/'
+const externalProject = 'https://artiore.com/eternia-aurora-sovereign-engine/'
 if (externalLocs.length !== 1 || externalLocs[0] !== externalProject) {
-  fail('The sitemap should list exactly one external project route: /eternia-aurofa-soverign-engine/')
+  fail('The sitemap should list exactly one external project route: /eternia-aurora-sovereign-engine/')
 }
 if (!locs.includes(externalProject)) fail(`sitemap.xml is missing external project route ${externalProject}`)
 if (existsSync(fileForLoc(externalProject))) {

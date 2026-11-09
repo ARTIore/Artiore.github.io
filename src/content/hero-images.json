@@ -845,10 +845,10 @@
     "compact": false,
     "supporting": []
   },
-  "/eternia-aurofa-soverign-engine": {
-    "src": "/images/heroes/hero-eternia-aurofa-soverign-engine.webp",
-    "small": "/images/heroes/hero-eternia-aurofa-soverign-engine-768.webp",
-    "og": "/images/heroes/hero-eternia-aurofa-soverign-engine-og.jpg",
+  "/eternia-aurora-sovereign-engine": {
+    "src": "/images/heroes/hero-eternia-aurora-sovereign-engine.webp",
+    "small": "/images/heroes/hero-eternia-aurora-sovereign-engine-768.webp",
+    "og": "/images/heroes/hero-eternia-aurora-sovereign-engine-og.jpg",
     "alt": "Gold orbital sound waves surround a dark cosmic core with one warm-gold pulse and ample empty space.",
     "compact": true,
     "supporting": []

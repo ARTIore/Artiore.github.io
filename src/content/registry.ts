@@ -216,7 +216,7 @@ export const seoEntries: SeoEntry[] = [
     crumbName: 'Prompt Framework V1.1',
   },
   {
-    path: '/eternia-aurofa-soverign-engine/',
+    path: '/eternia-aurora-sovereign-engine/',
     headTitle: 'Eternia Aurora Sovereign Engine',
     description: 'Local-first generative ambient instrument served from its own project.',
     sitemap: true,

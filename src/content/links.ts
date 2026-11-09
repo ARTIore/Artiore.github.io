@@ -18,8 +18,8 @@ export const links = {
   artioreTerms: '/terms/',
   github: 'https://github.com/ARTIore',
   githubSite: 'https://github.com/ARTIore/Artiore.github.io',
-  githubEternia: 'https://github.com/ARTIore/eternia-aurofa-soverign-engine',
-  eternia: '/eternia-aurofa-soverign-engine/',
+  githubEternia: 'https://github.com/ARTIore/eternia-aurora-sovereign-engine',
+  eternia: '/eternia-aurora-sovereign-engine/',
   frameworkHtml: '/framework.html',
   openaiPrivacy: 'https://openai.com/privacy',
 } as const

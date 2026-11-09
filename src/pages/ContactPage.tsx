@@ -32,7 +32,7 @@ const groups = [
       { label: 'GitHub · ARTIore', href: links.github, note: 'https://github.com/ARTIore' },
       { label: 'This site’s source', href: links.githubSite, note: 'Artiore.github.io' },
       { label: 'Play Eternia', href: links.eternia, note: 'Local-first instrument in the browser.' },
-      { label: 'Eternia source', href: links.githubEternia, note: 'github.com/ARTIore/eternia-aurofa-soverign-engine' },
+      { label: 'Eternia source', href: links.githubEternia, note: 'github.com/ARTIore/eternia-aurora-sovereign-engine' },
       { label: 'Prompt Framework V1.1', href: links.frameworkHtml, note: 'Hosted on this domain at /framework.html.' },
     ],
   },
