@@ -17,6 +17,7 @@ function routeOf(href: string) {
 describe('related reading routes', () => {
   it('points the home featured investigations at prerendered hubs', () => {
     expect(featuredInvestigations.map((item) => routeOf(item.href))).toEqual([
+      '/investigations/supply-chain-hidden-features',
       '/investigations/digital-exposure',
       '/investigations/global-injustice',
     ])

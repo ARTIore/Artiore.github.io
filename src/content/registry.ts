@@ -23,6 +23,14 @@ import {
 } from './meta'
 import { investigationLicenseUrl, investigationMeta } from './investigation'
 import { globalInjusticeAlternatesFor, globalInjusticeMeta } from './global-injustice/catalog'
+import {
+  supplyChainAlternates,
+  supplyChainDescription,
+  supplyChainHeadTitle,
+  supplyChainPath,
+  supplyChainPublished,
+  supplyChainTitle,
+} from './supply-chain/catalog'
 import { arabicClaimsMeta, arabicInvestigationMeta } from './investigations/ar/meta'
 import { englishPathFor, investigationAlternates } from './investigations/locale'
 import { buildJsonLd } from '../seo/structuredData'
@@ -205,6 +213,24 @@ export const seoEntries: SeoEntry[] = [
     locale: page.locale,
     alternates: globalInjusticeAlternatesFor(page.path),
   })),
+  {
+    path: supplyChainPath,
+    headTitle: supplyChainHeadTitle,
+    description: supplyChainDescription,
+    sitemap: true,
+    prerender: true,
+    kind: 'article' as const,
+    crumbName: 'Hidden features',
+    headline: supplyChainTitle,
+    author: 'ARTIore Research Desk',
+    authorOrganization: 'ARTIore',
+    datePublished: supplyChainPublished,
+    dateModified: supplyChainPublished,
+    lastmod: supplyChainPublished,
+    inLanguage: 'en',
+    locale: 'en_US',
+    alternates: supplyChainAlternates,
+  },
   {
     path: '/framework.html',
     headTitle: 'Grand Directional Prompt Framework, V1.1 | ARTIore',

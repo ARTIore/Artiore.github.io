@@ -395,7 +395,7 @@ if (existsSync(fileForLoc(externalProject))) {
 }
 
 const builtLocs = locs.filter((loc) => loc !== externalProject)
-if (builtLocs.length !== 104) fail(`Expected 104 built sitemap pages, found ${builtLocs.length}`)
+if (builtLocs.length !== 105) fail(`Expected 105 built sitemap pages, found ${builtLocs.length}`)
 for (const loc of builtLocs) {
   if (!loc.startsWith('https://artiore.com/')) fail(`sitemap URL is not on artiore.com: ${loc}`)
   const file = fileForLoc(loc)
@@ -428,4 +428,4 @@ if (failures.length) {
   process.exit(1)
 }
 
-console.log(`Checked ${seoEntries.length} SEO entries, 104 built sitemap pages, 1 external project route, and ${textFiles.length} dist files.`)
+console.log(`Checked ${seoEntries.length} SEO entries, 105 built sitemap pages, 1 external project route, and ${textFiles.length} dist files.`)

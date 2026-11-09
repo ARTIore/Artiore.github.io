@@ -81,6 +81,15 @@ test.describe('built site release checks', () => {
     expect(failures).toEqual([])
   })
 
+  test('the home investigation button opens the supply-chain article', async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 800 })
+    await page.goto('/')
+    await page.getByRole('link', { name: "Read: The Box Doesn't Tell You Everything" }).click()
+    await expect(page).toHaveURL(/\/investigations\/supply-chain-hidden-features\/?$/)
+    await expect(page.getByRole('heading', { level: 1, name: "The Box Doesn't Tell You Everything" })).toBeVisible()
+    await expect(page.getByRole('heading', { level: 1, name: 'This page is not here.' })).toHaveCount(0)
+  })
+
   test('the Engine nav link opens the Eternia page instead of not-found', async ({ page }) => {
     await page.setViewportSize({ width: 1280, height: 800 })
     await page.goto('/')
