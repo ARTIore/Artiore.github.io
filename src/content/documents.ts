@@ -860,7 +860,7 @@ export const dossierPage: PageDocument = {
       kind: 'actions',
       items: [
         { label: 'Read the origin', href: '/origin' },
-        { label: 'Instagram @ArtioreConsortium', href: links.instagram },
+        { label: 'Instagram @artiore.consortium', href: links.instagram },
         { label: 'X · Artiore', href: links.x },
       ],
     },

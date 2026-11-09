@@ -22,7 +22,7 @@ const groups = [
       { label: 'LinkedIn · ARTIore', href: links.linkedinCompany, note: 'https://www.linkedin.com/company/artiore/' },
       { label: 'LinkedIn · Zain Ul Abdin', href: links.linkedinZain, note: 'https://linkedin.com/in/zain-ul-abdin-artiore' },
       { label: 'Discord', href: links.discord, note: 'https://discord.gg/ZTFDuuAmB' },
-      { label: 'Instagram · ArtioreConsortium', href: links.instagram, note: 'https://instagram.com/ArtioreConsortium' },
+      { label: 'Instagram · @artiore.consortium', href: links.instagram, note: 'https://instagram.com/artiore.consortium' },
     ],
   },
   {

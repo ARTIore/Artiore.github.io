@@ -223,7 +223,7 @@ export function SiteLayout() {
               </li>
               <li>
                 <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.instagram}>
-                  Instagram · ArtioreConsortium
+                  Instagram · @artiore.consortium
                 </ExternalLink>
               </li>
             </ul>

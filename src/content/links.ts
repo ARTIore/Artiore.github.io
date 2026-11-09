@@ -8,7 +8,7 @@ export const links = {
   linkedinCompany: 'https://www.linkedin.com/company/artiore/',
   linkedinZain: 'https://linkedin.com/in/zain-ul-abdin-artiore',
   discord: 'https://discord.gg/ZTFDuuAmB',
-  instagram: 'https://instagram.com/ArtioreConsortium',
+  instagram: 'https://instagram.com/artiore.consortium',
   artiore: 'https://artiore.com',
   artioreBlog: '/blog/',
   artioreFramework: '/framework.html',
