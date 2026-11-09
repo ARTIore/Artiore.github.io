@@ -81,6 +81,18 @@ test.describe('built site release checks', () => {
     expect(failures).toEqual([])
   })
 
+  test('the Engine nav link opens the Eternia page instead of not-found', async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 800 })
+    await page.goto('/')
+    await page.getByRole('navigation', { name: 'Primary' }).getByRole('link', { name: 'Engine' }).click()
+    await expect(page).toHaveURL(/\/engine\/?$/)
+    await expect(page.getByRole('heading', { level: 1, name: 'Eternia Aurora Sovereign Engine' })).toBeVisible()
+    await expect(page.getByRole('heading', { level: 1, name: 'This page is not here.' })).toHaveCount(0)
+    const play = page.getByRole('link', { name: 'Play it in the browser' })
+    await expect(play).toHaveAttribute('href', '/eternia-aurofa-soverign-engine/')
+    await expect(play).not.toHaveAttribute('data-discover')
+  })
+
   test('desktop nav opens the research review page', async ({ page }) => {
     await page.setViewportSize({ width: 1280, height: 800 })
     await page.goto('/academy/threat-lab/')

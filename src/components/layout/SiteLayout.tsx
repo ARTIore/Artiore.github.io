@@ -4,7 +4,7 @@ import { SITE_POSITIONING } from '../../config/site'
 import { PageHero } from '../content/PageHero'
 import { links } from '../../content/links'
 import { footerPages, primaryNav, type NavLinkItem } from '../../content/navigation'
-import { isStaticPath, normalizePath, toPublicPath } from '../../content/urls'
+import { isFullDocumentPath, isStaticPath, normalizePath, toPublicPath } from '../../content/urls'
 import { ExternalLink, SiteLink } from '../content/SiteLink'
 
 const linkClass =
@@ -23,7 +23,8 @@ function NavAnchor({ item, onClick }: { item: NavLinkItem; onClick?: () => void 
     item.href.endsWith('.html') ||
     item.href.startsWith('http') ||
     item.href.startsWith('mailto:') ||
-    isStaticPath(item.href)
+    isStaticPath(item.href) ||
+    isFullDocumentPath(item.href)
   ) {
     return (
       <SiteLink className={itemClass(false)} href={item.href} onClick={onClick}>
