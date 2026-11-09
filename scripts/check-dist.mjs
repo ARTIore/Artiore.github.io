@@ -200,11 +200,10 @@ for (const entry of seoEntries) {
         const sameAs = org?.sameAs ?? []
         for (const url of [
           'https://artiore.com',
-          'https://artioreconsortium.com',
           'https://x.com/Artiore',
           'https://www.linkedin.com/company/artiore/',
           'https://github.com/ARTIore',
-          'https://instagram.com/ArtioreConsortium',
+          'https://instagram.com/artiore.consortium',
         ]) {
           if (!sameAs.includes(url)) fail(`Organization sameAs is missing ${url}`)
         }
@@ -274,8 +273,8 @@ if (existsSync(join(dist, 'engine.html'))) fail('dist/engine.html conflicts with
 if (existsSync(join(dist, 'framework', 'index.html'))) {
   fail('dist/framework/index.html conflicts with public/framework.html')
 }
-if (existsSync(join(dist, 'eternia-aurofa-soverign-engine'))) {
-  fail('This build must not publish /eternia-aurofa-soverign-engine/. That path is the external project site.')
+if (existsSync(join(dist, 'eternia-aurora-sovereign-engine'))) {
+  fail('This build must not publish /eternia-aurora-sovereign-engine/. That path is the external project site.')
 }
 for (const required of [
   '404.html',
@@ -330,7 +329,7 @@ function sitePath(href) {
 
 function resolves(pathname) {
   const rel = decodeURIComponent(pathname.split('?')[0].split('#')[0])
-  if (rel === '/eternia-aurofa-soverign-engine' || rel === '/eternia-aurofa-soverign-engine/') return true
+  if (rel === '/eternia-aurora-sovereign-engine' || rel === '/eternia-aurora-sovereign-engine/') return true
   const clean = rel.replace(/^\//, '')
   if (clean === '') return existsSync(join(dist, 'index.html'))
   const candidates = [clean]
@@ -386,9 +385,9 @@ function fileForLoc(loc) {
 const externalLocs = seoEntries
   .filter((entry) => entry.external && entry.sitemap !== false)
   .map((entry) => canonicalUrl(entry.path))
-const externalProject = 'https://artiore.com/eternia-aurofa-soverign-engine/'
+const externalProject = 'https://artiore.com/eternia-aurora-sovereign-engine/'
 if (externalLocs.length !== 1 || externalLocs[0] !== externalProject) {
-  fail('The sitemap should list exactly one external project route: /eternia-aurofa-soverign-engine/')
+  fail('The sitemap should list exactly one external project route: /eternia-aurora-sovereign-engine/')
 }
 if (!locs.includes(externalProject)) fail(`sitemap.xml is missing external project route ${externalProject}`)
 if (existsSync(fileForLoc(externalProject))) {
@@ -417,6 +416,12 @@ if (locs.includes('https://artiore.com/api-documentation') || locs.includes('htt
 }
 if (locs.includes('https://artiore.com/framework')) fail('Bare /framework must not be a sitemap URL beside framework.html')
 if (locs.some((loc) => loc.endsWith('/404.html'))) fail('404 must stay out of the sitemap')
+
+for (const file of textFiles.filter((item) => item.endsWith('.html'))) {
+  const lower = readFileSync(file, 'utf8').toLowerCase()
+  if (lower.includes('artiais')) fail(`${file.replace(root, '')} contains artiais`)
+  if (lower.includes('artioreconsortium')) fail(`${file.replace(root, '')} contains artioreconsortium`)
+}
 
 if (failures.length) {
   console.error(failures.join('\n'))

@@ -8,8 +8,11 @@ const groups = [
   {
     title: 'Email',
     items: [
-      { label: links.emailAddress, href: links.email, note: 'The address published with X, LinkedIn, and Discord.' },
-      { label: links.policyEmailAddress, href: links.policyEmail, note: 'The address named in the privacy policy and terms.' },
+      {
+        label: links.emailAddress,
+        href: links.email,
+        note: 'The address for this site, including the privacy policy and terms.',
+      },
     ],
   },
   {
@@ -19,18 +22,17 @@ const groups = [
       { label: 'LinkedIn · ARTIore', href: links.linkedinCompany, note: 'https://www.linkedin.com/company/artiore/' },
       { label: 'LinkedIn · Zain Ul Abdin', href: links.linkedinZain, note: 'https://linkedin.com/in/zain-ul-abdin-artiore' },
       { label: 'Discord', href: links.discord, note: 'https://discord.gg/ZTFDuuAmB' },
-      { label: 'Instagram · ArtioreConsortium', href: links.instagram, note: 'https://instagram.com/ArtioreConsortium' },
+      { label: 'Instagram · @artiore.consortium', href: links.instagram, note: 'https://instagram.com/artiore.consortium' },
     ],
   },
   {
     title: 'Ecosystem',
     items: [
       { label: 'artiore.com', href: links.artiore, note: 'This site.' },
-      { label: 'artioreconsortium.com', href: links.consortium, note: 'Artiore Consortium.' },
       { label: 'GitHub · ARTIore', href: links.github, note: 'https://github.com/ARTIore' },
       { label: 'This site’s source', href: links.githubSite, note: 'Artiore.github.io' },
       { label: 'Play Eternia', href: links.eternia, note: 'Local-first instrument in the browser.' },
-      { label: 'Eternia source', href: links.githubEternia, note: 'github.com/ARTIore/eternia-aurofa-soverign-engine' },
+      { label: 'Eternia source', href: links.githubEternia, note: 'github.com/ARTIore/eternia-aurora-sovereign-engine' },
       { label: 'Prompt Framework V1.1', href: links.frameworkHtml, note: 'Hosted on this domain at /framework.html.' },
     ],
   },

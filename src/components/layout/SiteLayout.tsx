@@ -4,7 +4,7 @@ import { SITE_POSITIONING } from '../../config/site'
 import { PageHero } from '../content/PageHero'
 import { links } from '../../content/links'
 import { footerPages, primaryNav, type NavLinkItem } from '../../content/navigation'
-import { isStaticPath, normalizePath, toPublicPath } from '../../content/urls'
+import { isFullDocumentPath, isStaticPath, normalizePath, toPublicPath } from '../../content/urls'
 import { ExternalLink, SiteLink } from '../content/SiteLink'
 
 const linkClass =
@@ -23,7 +23,8 @@ function NavAnchor({ item, onClick }: { item: NavLinkItem; onClick?: () => void 
     item.href.endsWith('.html') ||
     item.href.startsWith('http') ||
     item.href.startsWith('mailto:') ||
-    isStaticPath(item.href)
+    isStaticPath(item.href) ||
+    isFullDocumentPath(item.href)
   ) {
     return (
       <SiteLink className={itemClass(false)} href={item.href} onClick={onClick}>
@@ -223,7 +224,7 @@ export function SiteLayout() {
               </li>
               <li>
                 <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.instagram}>
-                  Instagram · ArtioreConsortium
+                  Instagram · @artiore.consortium
                 </ExternalLink>
               </li>
             </ul>
@@ -250,11 +251,6 @@ export function SiteLayout() {
                 <SiteLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.artioreBlog}>
                   Blog
                 </SiteLink>
-              </li>
-              <li>
-                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.consortium}>
-                  artioreconsortium.com
-                </ExternalLink>
               </li>
               <li>
                 <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.eternia}>

@@ -61,53 +61,37 @@ export const aboutPage: PageDocument = {
       text: [
         'Zain built Artiore to help people think more clearly under complexity. He works on systems that make reasoning more accessible, balanced, and actionable.',
         'Before Artiore, he worked on technology systems, strategic operations, and human-centered design. He believes AI should empower people, not replace them.',
-        'The Grand Directional Prompt Framework names him Managing Director, Artiore Consortium, and Independent Systems Architect, Acore Systems.',
+        'The Grand Directional Prompt Framework names him its author, and Independent Systems Architect, Acore Systems.',
       ],
     },
     {
       kind: 'actions',
       items: [
-        { label: 'Email artiste@artiore.com', href: links.email },
+        { label: `Email ${links.emailAddress}`, href: links.email },
         { label: 'LinkedIn · Zain Ul Abdin', href: links.linkedinZain },
         { label: 'X · Artiore', href: links.x },
       ],
     },
     {
       kind: 'heading',
-      text: 'Connected ecosystem',
+      text: 'This site',
     },
     {
       kind: 'paragraphs',
       text: [
-        'Artiore is part of a broader ecosystem of platforms dedicated to clarity, sovereignty, and structured reasoning.',
-      ],
-    },
-    {
-      kind: 'cards',
-      items: [
-        {
-          eyebrow: 'This site',
-          title: 'Artiais',
-          body: 'This site, artiore.com, is the public home of the published investigations, field notes, and reasoning notes.',
-        },
-        {
-          eyebrow: 'Collaborative network',
-          title: 'Artiore Consortium',
-          body: 'Collaborative network advancing clarity-first reasoning and ethical AI development.',
-        },
+        'artiore.com is the public home of the published investigations, field notes, and reasoning notes.',
       ],
     },
     {
       kind: 'actions',
       items: [
         { label: 'artiore.com', href: links.artiore },
-        { label: 'Artiore Consortium', href: links.consortium },
         { label: 'Join Discord', href: links.discord },
       ],
     },
     {
       kind: 'note',
-      text: 'Donations, as published on artiore.com, can be made with Bitcoin, Ethereum, or PayPal. They are voluntary and non-refundable, and they are not tax-deductible. This site does not publish wallet addresses or a payment link. Write to artiste@artiore.com, or use the donate path on artiore.com.',
+      text: `Donations, as published on artiore.com, can be made with Bitcoin, Ethereum, or PayPal. They are voluntary and non-refundable, and they are not tax-deductible. This site does not publish wallet addresses or a payment link. Write to ${links.emailAddress}, or use the donate path on artiore.com.`,
     },
   ],
 }
@@ -326,14 +310,6 @@ export const originPage: PageDocument = {
         'The first version of Artiore launched in April 2026 with two core features: dual-mode reasoning, and the Grand Prompt Framework.',
         'Executive Edition is for quick, structured analysis. Clarity Edition is for deep, comprehensive exploration. Two modes, one framework.',
         'The Grand Prompt Framework is an 18-section reasoning framework that guides analysis through situation assessment, stakeholder mapping, constraint analysis, option generation, and practical next steps.',
-      ],
-    },
-    {
-      kind: 'list',
-      title: 'The ecosystem it was designed into',
-      items: [
-        'Artiais — the technical infrastructure layer that powers Artiore’s reasoning engine',
-        'Artiore Consortium — a collaborative network for researchers, developers, and organizations working on clarity-first AI',
       ],
     },
     {
@@ -646,7 +622,7 @@ export const howItWorksPage: PageDocument = {
     {
       kind: 'paragraphs',
       text: [
-        'The Grand Directional Prompt Framework is described as a cognitive charter and operating protocol for an AI dedicated to knowledge, reasoning, and human advancement. Created by Zain Ul Abdin, Managing Director, Artiore Consortium. Version 1.1 — Zero-Drift Edition. Last updated April 2026.',
+        'The Grand Directional Prompt Framework is described as a cognitive charter and operating protocol for an AI dedicated to knowledge, reasoning, and human advancement. Created by Zain Ul Abdin. Version 1.1 — Zero-Drift Edition. Last updated April 2026.',
       ],
     },
     {
@@ -861,7 +837,7 @@ export const dossierPage: PageDocument = {
       kind: 'actions',
       items: [
         { label: 'Read the origin', href: '/origin' },
-        { label: 'Instagram @ArtioreConsortium', href: links.instagram },
+        { label: 'Instagram @artiore.consortium', href: links.instagram },
         { label: 'X · Artiore', href: links.x },
       ],
     },

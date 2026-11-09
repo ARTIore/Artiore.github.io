@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { isStaticPath, toPublicPath } from '../../content/urls'
+import { isFullDocumentPath, isStaticPath, toPublicPath } from '../../content/urls'
 
 function safeHref(href: string) {
   if (
@@ -19,7 +19,8 @@ function isSpaPath(href: string) {
     href.startsWith('/') &&
     !href.endsWith('.html') &&
     !href.endsWith('.pdf') &&
-    !isStaticPath(href)
+    !isStaticPath(href) &&
+    !isFullDocumentPath(href)
   )
 }
 

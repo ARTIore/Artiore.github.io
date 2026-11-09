@@ -3,7 +3,6 @@
 Public site for ARTIore, an independent, AI-powered research and intelligence practice. It is published at [artiore.com](https://artiore.com).
 
 - [artiore.com](https://artiore.com) — this site
-- [artioreconsortium.com](https://artioreconsortium.com) — Artiore Consortium
 
 ## On this site
 
@@ -34,7 +33,7 @@ npm run build
 
 The app is a `BrowserRouter` site. Direct loads are prerendered HTML for that route, then hydrated in the browser. Canonical URLs, the sitemap, and internal links use the trailing-slash form GitHub Pages serves with status 200. Unknown addresses serve `404.html`, which renders the in-app Not Found page. It does not redirect.
 
-`/framework.html` is the Grand Directional Prompt Framework V1.1 and is not an app route. The six-layer framework page is `/how-it-works` and links to that file. `/academy/` is the Clarity and Digital Safety Lab and is an app route. `/engine` is the Eternia Aurora Sovereign Engine page. The instrument itself stays at `/eternia-aurofa-soverign-engine/` from its own repository. This build does not publish that path. GitHub Pages serves it as that repository’s project site.
+`/framework.html` is the Grand Directional Prompt Framework V1.1 and is not an app route. The six-layer framework page is `/how-it-works` and links to that file. `/academy/` is the Clarity and Digital Safety Lab and is an app route. `/engine` is the Eternia Aurora Sovereign Engine page. The instrument itself stays at `/eternia-aurora-sovereign-engine/` from its own repository. This build does not publish that path. GitHub Pages serves it as that repository’s project site.
 
 ## Framework
 

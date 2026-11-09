@@ -43,12 +43,12 @@ export default function EnginePage() {
           runs in the page you open, with no server and no account.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-          <SiteLink
+          <a
             className="inline-flex min-h-11 items-center justify-center rounded-full bg-gold px-5 py-2 text-sm font-semibold text-ink"
             href={links.eternia}
           >
             Play it in the browser
-          </SiteLink>
+          </a>
           <SiteLink
             className="inline-flex min-h-11 items-center justify-center rounded-full border border-gold/50 px-5 py-2 text-sm font-semibold text-gold-bright"
             href={links.githubEternia}
