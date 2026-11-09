@@ -117,6 +117,12 @@ function exposurePair(
 
 export const featuredInvestigations = [
   {
+    href: '/investigations/supply-chain-hidden-features/',
+    label: "The Box Doesn't Tell You Everything",
+    description:
+      'Twelve documented cases of hidden or undisclosed capability in phones, televisions, and home devices, and what a person can check.',
+  },
+  {
     href: deHub,
     label: 'Global Digital Exposure Investigation',
     description: 'How everyday technology can compromise privacy, identity and financial security.',
@@ -130,6 +136,38 @@ export const featuredInvestigations = [
 ] as const
 
 export const relatedPlacements: RelatedPlacement[] = [
+  {
+    id: 'supply-chain',
+    sourcePath: '/investigations/supply-chain-hidden-features',
+    heading: 'Related on this site',
+    lang: 'en',
+    links: [
+      {
+        href: '/investigations/digital-exposure/global-threat-matrix/',
+        label: 'Digital Exposure threat matrix, including the row on pre-installed malware and supply-chain position.',
+      },
+      {
+        href: '/academy/navigator/',
+        label: 'Digital safety navigator: the device checks already written for a phone or computer in front of you.',
+      },
+      {
+        href: '/investigations/digital-exposure/public-safety-checklist/',
+        label: 'Public safety checklist: patching, Play Protect, and permission review, without a second copy here.',
+      },
+    ],
+  },
+  {
+    id: 'de-threat-matrix-supply',
+    sourcePath: '/investigations/digital-exposure/global-threat-matrix',
+    heading: 'Related on this site',
+    lang: 'en',
+    links: [
+      {
+        href: '/investigations/supply-chain-hidden-features/',
+        label: "The Box Doesn't Tell You Everything: twelve supply-chain cases, from a security-hub microphone to firmware malware.",
+      },
+    ],
+  },
   {
     id: 'de-hub',
     sourcePath: deHub,

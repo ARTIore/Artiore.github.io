@@ -107,8 +107,14 @@ export function HomeSections() {
       <section id="investigations">
         <h2 className="font-serif text-3xl text-cream">Investigations</h2>
         <p className="mt-3 max-w-3xl text-muted">
-          Two desk investigations published on this site. Each keeps the wording of its own record.
+          Three desk investigations published on this site. Each keeps the wording of its own record.
         </p>
+        <SiteLink
+          className="mt-6 inline-flex min-h-11 items-center justify-center rounded-full bg-gold px-5 py-2 text-sm font-semibold text-ink"
+          href="/investigations/supply-chain-hidden-features/"
+        >
+          Read: The Box Doesn't Tell You Everything
+        </SiteLink>
         <div className="mt-6 grid gap-4 lg:grid-cols-2">
           {featuredInvestigations.map((item) => (
             <article className="rounded-2xl border border-gold/30 bg-gold/5 p-6" key={item.href}>

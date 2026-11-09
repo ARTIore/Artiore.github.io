@@ -67,6 +67,7 @@ export const primaryNav: NavItem[] = [
     children: [
       { label: 'Global Digital Exposure Investigation', href: '/investigations/digital-exposure/' },
       { label: 'Global Injustice Investigation', href: '/investigations/global-injustice/' },
+      { label: "The Box Doesn't Tell You Everything", href: '/investigations/supply-chain-hidden-features/' },
       { label: 'Public safety checklist', href: '/investigations/digital-exposure/public-safety-checklist/' },
       { label: 'Deepfakes and AI payment fraud', href: '/investigations/digital-exposure/deepfake-ai-payment-fraud/' },
       { label: 'Regional reporting', href: '/investigations/digital-exposure/regional-reporting-limits/' },
@@ -109,6 +110,7 @@ export const footerPages: NavLinkItem[] = [
   { label: 'Possible disagreements', href: '/academy/research/contradictions' },
   { label: 'Global Digital Exposure Investigation', href: '/investigations/digital-exposure/' },
   { label: 'Global Injustice Investigation', href: '/investigations/global-injustice/' },
+  { label: "The Box Doesn't Tell You Everything", href: '/investigations/supply-chain-hidden-features/' },
   { label: 'Public safety checklist', href: '/investigations/digital-exposure/public-safety-checklist/' },
   { label: 'Deepfakes and AI payment fraud', href: '/investigations/digital-exposure/deepfake-ai-payment-fraud/' },
   { label: 'Regional reporting', href: '/investigations/digital-exposure/regional-reporting-limits/' },

@@ -7,6 +7,14 @@
     "compact": false,
     "supporting": []
   },
+  "/investigations/supply-chain-hidden-features": {
+    "src": "/images/heroes/hero-investigations-digital-exposure-mobile-os-exposure.webp",
+    "small": "/images/heroes/hero-investigations-digital-exposure-mobile-os-exposure-768.webp",
+    "og": "/images/heroes/hero-investigations-digital-exposure-mobile-os-exposure-og.jpg",
+    "alt": "Two unbranded phones connect to a gold cloud and nearby signal rings, with one warm-gold permission checkpoint.",
+    "compact": true,
+    "supporting": []
+  },
   "/contact": {
     "src": "/images/heroes/hero-contact.webp",
     "small": "/images/heroes/hero-contact-768.webp",
