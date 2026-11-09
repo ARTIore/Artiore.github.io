@@ -241,31 +241,11 @@ export function HomeSections() {
       </section>
 
       <section>
-        <h2 className="font-serif text-3xl text-cream">Three platforms</h2>
-        <div className="mt-6 grid gap-4 lg:grid-cols-3">
-          <article className="rounded-2xl border border-white/10 p-5">
-            <h3 className="font-serif text-2xl text-cream">Artiore</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted">{SITE_POSITIONING}.</p>
-            <SiteLink className="mt-4 inline-block text-gold-bright underline underline-offset-4" href="/about">
-              About this practice
-            </SiteLink>
-          </article>
-          <article className="rounded-2xl border border-gold/30 p-5">
-            <h3 className="font-serif text-2xl text-cream">Artiais</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted">
-              The former public address of this site. The investigations, field notes, and reasoning notes now publish on artiore.com.
-            </p>
-            <SiteLink className="mt-4 inline-block text-gold-bright underline underline-offset-4" href="/about">
-              About this site
-            </SiteLink>
-          </article>
-          <article className="rounded-2xl border border-white/10 p-5">
-            <h3 className="font-serif text-2xl text-cream">Artiore Consortium</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted">
-              A collaborative network advancing clarity-first reasoning and ethical AI development.
-            </p>
-          </article>
-        </div>
+        <h2 className="font-serif text-3xl text-cream">About this practice</h2>
+        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted">{SITE_POSITIONING}.</p>
+        <SiteLink className="mt-4 inline-block text-gold-bright underline underline-offset-4" href="/about">
+          About this practice
+        </SiteLink>
       </section>
 
       <section>

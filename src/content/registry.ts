@@ -209,7 +209,7 @@ export const seoEntries: SeoEntry[] = [
     path: '/framework.html',
     headTitle: 'Grand Directional Prompt Framework, V1.1 | ARTIore',
     description:
-      'Grand Directional Prompt Framework, V1.1, Zero-Drift Edition: a cognitive charter and operating protocol for an AI, by Zain Ul Abdin of the Artiore Consortium.',
+      'Grand Directional Prompt Framework, V1.1, Zero-Drift Edition: a cognitive charter and operating protocol for an AI, by Zain Ul Abdin.',
     sitemap: true,
     prerender: false,
     kind: 'page',

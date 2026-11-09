@@ -12,7 +12,7 @@ export const contactMeta = {
   path: '/contact',
   headTitle: 'Contact ARTIore | Email, social, and ecosystem links',
   description:
-    'Reach ARTIore at artiore@outlook.com. Find X, LinkedIn, Discord, and Instagram, plus artiore.com, the Artiore Consortium, GitHub, and Eternia.',
+    'Reach ARTIore at artiore@outlook.com. Find X, LinkedIn, Discord, and Instagram, plus artiore.com, GitHub, and Eternia Aurora.',
   kind: 'page' as const,
   crumbName: 'Reach ARTIore',
 }

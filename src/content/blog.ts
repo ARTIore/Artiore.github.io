@@ -161,15 +161,15 @@ export const blogPosts: Array<BlogMeta & { page: PageDocument }> = [
       title: 'The Artiore ecosystem: connected platforms for clarity',
       headTitle: 'The Artiore ecosystem | Essay by Zain Ul Abdin, 2026',
       description:
-        'Zain Ul Abdin on how Artiore, Artiais, and the Artiore Consortium fit together: a reasoning interface, AI infrastructure, and a collaborative network.',
+        'Zain Ul Abdin on how Artiore helps with a hard question: evidence, assumptions, trade-offs, practical next steps, and stated limits.',
       author: summary['artiore-ecosystem'].author,
       published,
-      lead: 'Discover how Artiore, Artiais, and the Artiore Consortium work together to advance clarity-first reasoning, AI infrastructure, and ethical development.',
+      lead: 'How the April 16, 2026 essay describes using Artiore to understand a complex situation and name a practical next step.',
       blocks: [
         {
           kind: 'paragraphs',
           text: [
-            'When you use Artiore to understand a complex situation or make a difficult decision, the essay says you are seeing the visible tip of a larger ecosystem. Artiore, Artiais, and the Artiore Consortium are described as one network with a single mission: helping people think clearly.',
+            'When you use Artiore to understand a complex situation or make a difficult decision, the essay says the visible work is a structured response: what is known, what is assumed, and what you can do next.',
           ],
         },
         {
@@ -196,59 +196,13 @@ export const blogPosts: Array<BlogMeta & { page: PageDocument }> = [
         },
         {
           kind: 'heading',
-          text: 'Artiais: the technical foundation',
-        },
-        {
-          kind: 'paragraphs',
-          text: [
-            'What you do not see: the AI infrastructure powering Artiore’s reasoning capabilities.',
-            'What it does, in the essay: systems architecture, computational resources, and model orchestration. The essay calls Artiais the engine room.',
-          ],
-        },
-        {
-          kind: 'list',
-          title: 'Capabilities the essay names',
-          items: [
-            'AI systems architecture and deployment',
-            'Reasoning engine infrastructure',
-            'Computational resource management',
-            'Model orchestration and optimization',
-            'Performance tuning and scalability',
-            'Technical innovation and research',
-          ],
-        },
-        {
-          kind: 'heading',
-          text: 'Artiore Consortium: the collaborative network',
-        },
-        {
-          kind: 'paragraphs',
-          text: [
-            'A collaborative network advancing clarity-first reasoning and ethical AI development. The essay says it brings together researchers, developers, and practitioners committed to building AI systems that empower people rather than replace them.',
-          ],
-        },
-        {
-          kind: 'list',
-          title: 'Activities the essay names',
-          items: [
-            'Research collaboration across institutions',
-            'Ethical AI development standards',
-            'Open standards and best practices',
-            'Knowledge sharing and documentation',
-            'Community building and education',
-          ],
-        },
-        {
-          kind: 'heading',
-          text: 'How the essay says they work together',
+          text: 'How the essay says a question is handled',
         },
         {
           kind: 'numbered',
           items: [
             { label: '1', title: 'You ask', body: 'You ask Artiore about a complex situation.' },
-            { label: '2', title: 'Artiais processes', body: 'Artiais processes the query using reasoning engines and AI infrastructure.' },
-            { label: '3', title: 'Artiore answers', body: 'Artiore delivers balanced perspectives, calibrated confidence, and next steps.' },
-            { label: '4', title: 'The Consortium', body: 'The Consortium is described as advancing the field through standards and shared knowledge.' },
+            { label: '2', title: 'Artiore answers', body: 'Artiore delivers balanced perspectives, calibrated confidence, and next steps.' },
           ],
         },
         {
@@ -267,7 +221,7 @@ export const blogPosts: Array<BlogMeta & { page: PageDocument }> = [
           text: [
             'The Islamic foundation in the essay is stated as: Allah Alone is Enough; no magic in the system; the witness principle; and Qadar, acknowledging divine decree while respecting human choice. The essay says these shape how the ecosystem operates.',
             'The essay points developers to artiore.com/api-documentation. The previous site answered that path with “Cannot GET /api-documentation”. This site does not publish a public API there.',
-            'The essay’s “looking forward” section says the network continues to expand, that Artiais continues work on reasoning, performance, and infrastructure, and that the Consortium continues work on ethical standards, research, and community. Those are the author’s forward-looking lines in the April 16, 2026 essay. They are not a separate product roadmap published on this site.',
+            'The essay’s “looking forward” lines are the author’s words from April 16, 2026. They are not a separate product roadmap published on this site.',
           ],
         },
         {

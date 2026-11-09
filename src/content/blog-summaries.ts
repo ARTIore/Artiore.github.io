@@ -35,7 +35,7 @@ export const blogSummaries: BlogSummary[] = [
     minutes: '6 min read',
     author,
     summary:
-      'How Artiore, Artiais, and the Artiore Consortium are described as one ecosystem for clarity-first reasoning, infrastructure, and ethical development.',
+      'How the April 16, 2026 essay describes Artiore’s approach to a hard question: evidence, limits, and practical next steps.',
     tags: ['ecosystem', 'infrastructure', 'collaboration'],
   },
   {

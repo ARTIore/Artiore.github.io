@@ -417,6 +417,12 @@ if (locs.includes('https://artiore.com/api-documentation') || locs.includes('htt
 if (locs.includes('https://artiore.com/framework')) fail('Bare /framework must not be a sitemap URL beside framework.html')
 if (locs.some((loc) => loc.endsWith('/404.html'))) fail('404 must stay out of the sitemap')
 
+for (const file of textFiles.filter((item) => item.endsWith('.html'))) {
+  const lower = readFileSync(file, 'utf8').toLowerCase()
+  if (lower.includes('artiais')) fail(`${file.replace(root, '')} contains artiais`)
+  if (lower.includes('artioreconsortium')) fail(`${file.replace(root, '')} contains artioreconsortium`)
+}
+
 if (failures.length) {
   console.error(failures.join('\n'))
   process.exit(1)
