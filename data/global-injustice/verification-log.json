@@ -1,7 +1,7 @@
 {
   "edition": "Global Injustice Investigation, revised desk report, 3 November 2026",
-  "sourceCheck": "2026-11-03",
-  "method": "Revised-report URLs were requested on 3 November 2026. A sentence is published only when the opened page supports it. The first edition log is superseded for what this edition states.",
+  "sourceCheck": "2026-11-09",
+  "method": "Revised-report URLs were requested on 3 November 2026. A sentence is published only when the opened page supports it. The first edition log is superseded for what this edition states. On 9 November 2026 the OFAC recent-actions page and the two Justice Department bribery pages were opened again.",
   "entries": [
     {
       "id": "ferguson",
@@ -332,6 +332,24 @@
       "url": "https://artiais.com/investigations/global-injustice/synthesis/",
       "status": "removed",
       "claim": "Two earlier cross-dossier sentences, that missing records are usually held by powerful actors and that hidden top-level harm exceeds hidden household harm, are withdrawn. They are not established."
+    },
+    {
+      "id": "ofac-20251230",
+      "url": "https://ofac.treasury.gov/recent-actions/20251230",
+      "status": "verified",
+      "claim": "Opened 9 November 2026. OFAC lists SDN deletions for Sara Aleksandra Fayssal Hamou, Andrea Nicola Costantino Hermes Gambazzi, and Merom Harpaz, each marked CYBER2. Intellexa entities are not in that deletion list."
+    },
+    {
+      "id": "doj-odebrecht-2026-11-09",
+      "url": "https://www.justice.gov/archives/opa/pr/odebrecht-and-braskem-plead-guilty-and-agree-pay-least-35-billion-global-penalties-resolve",
+      "status": "could not access",
+      "claim": "Checked again 9 November 2026. The page returned a bot challenge, not the plea announcement. The L2 plea line stays unpublished."
+    },
+    {
+      "id": "doj-edny-goldman-2026-11-09",
+      "url": "https://www.justice.gov/usao-edny/pr/goldman-sachs-resolves-foreign-bribery-case-and-agrees-pay-over-29-billion",
+      "status": "could not access",
+      "claim": "Checked 9 November 2026. The Eastern District of New York page returned a bot challenge, not the resolution. The $2.9 billion line stays unpublished."
     }
   ]
 }

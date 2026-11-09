@@ -227,6 +227,13 @@ export const injusticeSources: Record<string, InjusticeSource> = {
     url: 'https://www.bis.gov/press-release/commerce-adds-nso-group-other-foreign-companies-entity-list-malicious-cyber-activities',
     accessed,
   },
+  ofacRemoval: {
+    id: 'ofacRemoval',
+    publisher: 'U.S. Department of the Treasury, OFAC',
+    title: 'Recent actions, 30 December 2025',
+    url: 'https://ofac.treasury.gov/recent-actions/20251230',
+    accessed: '2026-11-09',
+  },
   treasury: {
     id: 'treasury',
     publisher: 'U.S. Department of the Treasury',

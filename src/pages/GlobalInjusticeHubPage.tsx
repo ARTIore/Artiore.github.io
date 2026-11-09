@@ -54,7 +54,9 @@ export default function GlobalInjusticeHubPage() {
             complaint statistics, and pages opened in 2026 sit side by side. Estimates are labelled as estimates.
           </p>
           <p className="mt-4 leading-relaxed text-cream/90">
-            Last source check: <time dateTime={globalInjusticeSourceCheck}>3 November 2026</time>, revised edition.
+            Last source check: <time dateTime="2026-11-09">9 November 2026</time>, for the sanctions
+            follow-up. The revised edition was checked on{' '}
+            <time dateTime={globalInjusticeSourceCheck}>3 November 2026</time>.
             A figure is a finding only when a source opened that day supports the sentence it is attached to.
             Anything else is marked “Not confirmed in this edition” and is not a finding. The revised report
             supersedes the earlier desk report’s conclusions for the claims it discusses. It does not certify every
@@ -193,8 +195,15 @@ export default function GlobalInjusticeHubPage() {
             <li>
               L11, sanctions. The November 2021 action that opened is a Commerce Entity List notice for NSO Group and
               Candiru. Treasury’s 5 March 2024 release designates Intellexa-related persons and entities. Those are
-              different instruments. The 30 December 2025 removal notice was not in the register file retrieved, so
-              the removals are not stated.
+              different instruments.
+            </li>
+            <li>
+              <time dateTime="2026-11-09">9 November 2026</time>. L11. OFAC’s recent-actions page for 30 December 2025
+              opened. It lists three individuals as CYBER2 deletions: Sara Aleksandra Fayssal Hamou, Andrea Nicola
+              Costantino Hermes Gambazzi, and Merom Harpaz. It does not list Intellexa entities in those deletions.
+              The earlier line that the removals were not a finding is replaced by that statement. The same day, the
+              Odebrecht plea page and the Eastern District of New York Goldman Sachs page still returned a bot check,
+              so those L2 lines stay off the findings.
             </li>
             <li>
               L11, litigation. The 12 November 2025 judgment PDF was opened. It distinguishes the jury award, the

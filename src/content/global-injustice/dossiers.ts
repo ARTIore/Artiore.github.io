@@ -138,7 +138,7 @@ export const injusticePages: InjusticePage[] = [
         deskClaim: 'Odebrecht and Braskem pleaded guilty in December 2016, and a Goldman Sachs 1MDB resolution exceeded $2.9 billion, with a Federal Reserve action the same day.',
         disposition: 'could not access',
         detail:
-          'The Justice Department archive pages returned a bot check instead of the announcements. The Federal Reserve page that did open fines Goldman Sachs $154 million for oversight and control failures related to 1MDB. That fine is not the $2.9 billion resolution, so the larger figure is not used.',
+          '9 November 2026: the Justice Department archive page and the Eastern District of New York page both returned a bot check, not the announcements. The pleas are still not findings. The Federal Reserve page that did open earlier fines Goldman Sachs $154 million for oversight and control failures related to 1MDB. That fine is not the $2.9 billion resolution, so the larger figure is not used.',
       },
       {
         deskClaim: 'A 2026 OECD integrity review finds gaps between lobbying safeguards and revolving-door controls.',
@@ -625,14 +625,14 @@ export const injusticePages: InjusticePage[] = [
         sourceIds: ['entity-list', 'treasury'],
       },
       {
-        rung: 'OPEN',
+        rung: 'ESTABLISHED',
         text:
-          'The public appellate docket cited for 2026 briefing did not open, so this edition does not describe the appeal’s status or call the 12 November 2025 judgment a final appellate result. A Federal Register file cited for three removals on 30 December 2025 did not contain those names in the copy retrieved. The removals are not stated as a finding.',
-        sourceIds: [],
+          'S11.8. OFAC’s recent-actions page for 30 December 2025 lists deletions from the SDN list. The deletions include three individuals, each marked CYBER2: Sara Aleksandra Fayssal Hamou, Andrea Nicola Costantino Hermes Gambazzi, and Merom Harpaz. The same page does not list Intellexa entities among those deletions. Removing these three people is not a finding that the Intellexa entities were removed, and it is not a finding that the original designations were disproved. The public appellate docket cited for 2026 briefing still did not open, so this edition does not describe the appeal’s status.',
+        sourceIds: ['ofacRemoval'],
       },
     ],
     caseFor:
-      'A peer review of device infections, a later forensic report about another vendor, a judgment with a stated dollar amount, and two different government actions are on the record. They are not one state operation.',
+      'A peer review of device infections, a later forensic report about another vendor, a judgment with a stated dollar amount, and dated government actions are on the record. They are not one state operation.',
     caseAgainst:
       'A security use and an abusive use have to be told apart. A tool can be identified more confidently than the client who ordered it. Authorities’ statements about one Paragon controversy were in a news article that did not open, so they are not summarised here. Different vendors and products are not one programme.',
     stillOpen: [
@@ -641,13 +641,13 @@ export const injusticePages: InjusticePage[] = [
     ],
     nextSources: [
       'The appellate docket, once it opens.',
-      'The removal notice, checked for the names and the date.',
+      'A later official notice, if one says the Intellexa entities themselves were removed.',
       'Export records where they are public.',
     ],
     falsifier:
       'A device claim weakens if a reanalysis invalidates the indicators. A named-client claim weakens if the operational records exclude that client. A diplomatic bargain needs a document that links the sale to the concession. One clean audit does not erase a different client’s abuse.',
     confidence:
-      'High for the four backups, the judgment’s figures, the Entity List release, and the March 2024 designation as those pages state them. Moderate for a wider market. Low for total scale, undisclosed customers, and an unproven diplomatic bargain.',
+      'High for the four backups, the judgment’s figures, the Entity List release, the March 2024 designation, and the 30 December 2025 individual deletions, as those pages state them. Moderate for a wider market. Low for total scale, undisclosed customers, and an unproven diplomatic bargain.',
     heldBack: [
       {
         deskClaim: 'A public Ninth Circuit docket, case 26-874, records appellate briefing in 2026.',
@@ -656,9 +656,9 @@ export const injusticePages: InjusticePage[] = [
       },
       {
         deskClaim: 'On 30 December 2025, three named individuals were removed from the sanctions list. That did not remove every related restriction.',
-        disposition: 'could not access',
+        disposition: 'replaced',
         detail:
-          'The daily Federal Register file that was retrieved did not contain the names or the cited page. The removal is not a finding. The names are not repeated.',
+          '9 November 2026: the OFAC recent-actions page for that date opened. It names the three individuals as CYBER2 deletions and does not list Intellexa entities there. The earlier “not a finding” line is replaced by that narrower statement.',
       },
       {
         deskClaim: 'Italian authorities described some surveillance as authorised and denied targeting a particular journalist.',
@@ -666,7 +666,7 @@ export const injusticePages: InjusticePage[] = [
         detail: 'The news article returned 403. The official position is not summarised.',
       },
     ],
-    sourceIds: ['citizen-lab', 'amnesty', 'paragon', 'judgment', 'entity-list', 'treasury'],
+    sourceIds: ['citizen-lab', 'amnesty', 'paragon', 'judgment', 'entity-list', 'treasury', 'ofacRemoval'],
   }),
   page({
     id: 'synthesis',

@@ -5,7 +5,7 @@ export type InjusticeSource = {
   publisher: string
   title: string
   url: string
-  accessed: '2026-11-03'
+  accessed: '2026-11-03' | '2026-11-09'
 }
 
 export type RecordBlock = {
