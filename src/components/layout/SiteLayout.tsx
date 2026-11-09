@@ -252,11 +252,6 @@ export function SiteLayout() {
                 </SiteLink>
               </li>
               <li>
-                <ExternalLink className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.consortium}>
-                  artioreconsortium.com
-                </ExternalLink>
-              </li>
-              <li>
                 <a className="inline-flex min-h-11 items-center text-cream/85 hover:text-gold-bright" href={links.eternia}>
                   Eternia Aurora Sovereign Engine
                 </a>

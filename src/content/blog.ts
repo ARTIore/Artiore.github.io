@@ -1,5 +1,4 @@
 import { blogSummaries, type BlogSummary } from './blog-summaries'
-import { links } from './links'
 import type { PageDocument } from './types'
 
 export type BlogMeta = BlogSummary
@@ -276,7 +275,6 @@ export const blogPosts: Array<BlogMeta & { page: PageDocument }> = [
           items: [
             { label: 'About ARTIore', href: '/about' },
             { label: 'No public API', href: '/api-documentation' },
-            { label: 'Artiore Consortium', href: links.consortium },
           ],
         },
       ],

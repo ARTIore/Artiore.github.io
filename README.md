@@ -3,7 +3,6 @@
 Public site for ARTIore, an independent, AI-powered research and intelligence practice. It is published at [artiore.com](https://artiore.com).
 
 - [artiore.com](https://artiore.com) — this site
-- [artioreconsortium.com](https://artioreconsortium.com) — Artiore Consortium
 
 ## On this site
 

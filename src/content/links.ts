@@ -1,9 +1,9 @@
 /** Public URLs taken from the artiore.com scrape (links.json) and the ARTIore profile README. */
 export const links = {
-  email: 'mailto:artiste@artiore.com',
-  emailAddress: 'artiste@artiore.com',
-  policyEmail: 'mailto:contact@artiore.com',
-  policyEmailAddress: 'contact@artiore.com',
+  email: 'mailto:artiore@outlook.com',
+  emailAddress: 'artiore@outlook.com',
+  policyEmail: 'mailto:artiore@outlook.com',
+  policyEmailAddress: 'artiore@outlook.com',
   x: 'https://x.com/Artiore',
   linkedinCompany: 'https://www.linkedin.com/company/artiore/',
   linkedinZain: 'https://linkedin.com/in/zain-ul-abdin-artiore',
@@ -16,7 +16,6 @@ export const links = {
   artioreImplementation: '/implementation/',
   artiorePrivacy: '/privacy/',
   artioreTerms: '/terms/',
-  consortium: 'https://artioreconsortium.com',
   github: 'https://github.com/ARTIore',
   githubSite: 'https://github.com/ARTIore/Artiore.github.io',
   githubEternia: 'https://github.com/ARTIore/eternia-aurofa-soverign-engine',

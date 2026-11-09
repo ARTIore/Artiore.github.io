@@ -264,9 +264,6 @@ export function HomeSections() {
             <p className="mt-3 text-sm leading-relaxed text-muted">
               A collaborative network advancing clarity-first reasoning and ethical AI development.
             </p>
-            <SiteLink className="mt-4 inline-block text-gold-bright underline underline-offset-4" href={links.consortium}>
-              artioreconsortium.com
-            </SiteLink>
           </article>
         </div>
       </section>

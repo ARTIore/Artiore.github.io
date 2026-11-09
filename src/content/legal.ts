@@ -440,7 +440,7 @@ export const termsPage: PageDocument = {
       kind: 'actions',
       items: [
         { label: 'Privacy policy', href: '/privacy' },
-        { label: 'Email contact@artiore.com', href: links.policyEmail },
+        { label: `Email ${links.policyEmailAddress}`, href: links.policyEmail },
       ],
     },
   ],

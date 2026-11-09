@@ -232,7 +232,7 @@ export const apiPage: PageDocument = {
       kind: 'paragraphs',
       text: [
         'The previous site answered /api-documentation with “Cannot GET /api-documentation”. This site does not publish those endpoints either.',
-        'Read the Grand Directional Prompt Framework at /framework.html. Play Eternia Aurora Sovereign Engine in the browser. Write to artiste@artiore.com if you need to ask about access.',
+        `Read the Grand Directional Prompt Framework at /framework.html. Play Eternia Aurora Sovereign Engine in the browser. Write to ${links.emailAddress} if you need to ask about access.`,
       ],
     },
     {
@@ -240,7 +240,7 @@ export const apiPage: PageDocument = {
       items: [
         { label: 'Prompt Framework V1.1', href: links.frameworkHtml },
         { label: 'Eternia Aurora Sovereign Engine', href: '/engine' },
-        { label: 'Email artiste@artiore.com', href: links.email },
+        { label: `Email ${links.emailAddress}`, href: links.email },
       ],
     },
   ],

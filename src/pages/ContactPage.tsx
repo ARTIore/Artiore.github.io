@@ -8,8 +8,11 @@ const groups = [
   {
     title: 'Email',
     items: [
-      { label: links.emailAddress, href: links.email, note: 'The address published with X, LinkedIn, and Discord.' },
-      { label: links.policyEmailAddress, href: links.policyEmail, note: 'The address named in the privacy policy and terms.' },
+      {
+        label: links.emailAddress,
+        href: links.email,
+        note: 'The address for this site, including the privacy policy and terms.',
+      },
     ],
   },
   {
@@ -26,7 +29,6 @@ const groups = [
     title: 'Ecosystem',
     items: [
       { label: 'artiore.com', href: links.artiore, note: 'This site.' },
-      { label: 'artioreconsortium.com', href: links.consortium, note: 'Artiore Consortium.' },
       { label: 'GitHub · ARTIore', href: links.github, note: 'https://github.com/ARTIore' },
       { label: 'This site’s source', href: links.githubSite, note: 'Artiore.github.io' },
       { label: 'Play Eternia', href: links.eternia, note: 'Local-first instrument in the browser.' },
