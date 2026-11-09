@@ -1,13 +1,11 @@
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SeoHead } from '../components/seo/SeoHead'
 import { SiteLink } from '../components/content/SiteLink'
-import { AlsoOnArtiore } from '../components/investigations/AlsoOnArtiore'
 import { RelatedReadingFor } from '../components/related/RelatedReading'
 import { InvestigationLanguageSwitcher } from '../components/investigations/InvestigationLanguageSwitcher'
 import { InvestigationLicense } from '../components/investigations/InvestigationLicense'
 import { TranslationNotice } from '../components/investigations/TranslationNotice'
 import { arabicHub, arabicPieces } from '../content/investigations/ar/meta'
-import { investigationHubCompanionUrl } from '../content/investigations/companions'
 import {
   investigationHub,
   investigationLicenseUrl,
@@ -224,7 +222,6 @@ export default function InvestigationHubArPage() {
           ))}
         </section>
         <RelatedReadingFor sourcePath="/investigations/digital-exposure/ar" />
-        <AlsoOnArtiore href={investigationHubCompanionUrl} locale="ar" />
       </article>
     </>
   )
