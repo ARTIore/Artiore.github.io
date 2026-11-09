@@ -95,6 +95,24 @@ export const playbooks: readonly Playbook[] = [
     sources: [sources.cafcReport, sources.cyberCentreIdentity, sources.identityTheftUs],
   },
   {
+    id: 'breach',
+    name: 'A company says your information was in a breach',
+    urgency: 'Read the notice. Do not use links in the message.',
+    first: [
+      'Read the notice carefully and keep it. The Office of the Privacy Commissioner of Canada says the organisation should tell you which personal information was compromised, what it has done to reduce the risk, and who to contact.',
+      'Contact the organisation through the details on the notice or in its privacy policy, not through a link or a phone number in the message.',
+      'Change passwords that were exposed, and any password you reused on another account. Turn on a second sign-in step.',
+    ],
+    then: [
+      'Monitor your accounts, including bank and card statements.',
+      'Consider a credit alert or ordering a credit report. That is what the Commissioner’s notice page advises.',
+      'Stay alert. The Commissioner says fraudsters may wait before they try to use the information.',
+      'If money or identity was misused, report it to the Canadian Anti-Fraud Centre and to local police.',
+    ],
+    avoid: 'Do not pay someone who contacts you offering to clean up the breach. Do not send identity documents to a service you did not contact yourself.',
+    sources: [sources.opcBreachNotice, sources.cafcReport],
+  },
+  {
     id: 'money',
     name: 'Money or crypto was sent to a scammer',
     urgency: 'Stop sending funds. Contact the bank or exchange yourself.',

@@ -16,6 +16,12 @@ import { RelatedReadingFor } from '../components/related/RelatedReading'
 const linkClass =
   'text-gold-bright underline decoration-gold/40 underline-offset-4 hover:decoration-gold-bright'
 
+function sourceOpenedLabel(iso: string) {
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+  const [year, month, day] = iso.split('-')
+  return `${Number(day)} ${months[Number(month) - 1]} ${year}`
+}
+
 const cafc = injusticeSource('cafc')
 
 export default function GlobalInjusticeDossierPage({ id }: { id: string }) {
@@ -167,15 +173,17 @@ export default function GlobalInjusticeDossierPage({ id }: { id: string }) {
         <section className="mt-10" id="sources">
           <h2 className="font-serif text-3xl text-cream">Sources opened</h2>
           <p className="mt-4 text-sm leading-relaxed text-muted">
-            Each link was opened on <time dateTime={globalInjusticeSourceCheck}>3 November 2026</time>. The log of
-            sources that were replaced, removed, or unreachable is kept with the edition, not only the links that
-            survived.
+            Each link shows the day it was opened. The log of sources that were replaced, removed, or unreachable is
+            kept with the edition, not only the links that survived.
           </p>
           <ul className="mt-4 space-y-4">
             {sources.map((source) => (
               <li key={source.id}>
                 <p className="text-cream">{source.title}</p>
                 <p className="text-sm text-muted">{source.publisher}</p>
+                <p className="text-sm text-muted">
+                  Opened <time dateTime={source.accessed}>{sourceOpenedLabel(source.accessed)}</time>
+                </p>
                 <ExternalLink className={`${linkClass} mt-1 inline-block break-all`} href={source.url}>
                   {source.publisher}: {source.title}
                 </ExternalLink>

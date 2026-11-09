@@ -48,6 +48,13 @@ const sharedChecks: readonly CheckItem[] = [
     limit: 'A second step helps when a password is stolen. It does not help if someone already sitting at the unlocked device approves the prompt.',
   },
   {
+    id: 'recovery-path',
+    title: 'Check how your accounts can be recovered',
+    steps:
+      'Open the account from the official app or a bookmark. Confirm the recovery email is still yours, with its own password and a second sign-in step. Confirm the recovery phone is a number you still have. Google says a change to a recovery phone may take up to 7 days, and says not to use a Google Voice number as that phone. Keep backup codes offline, with other important papers, not only in the inbox that can be reset. Review devices and sessions that are signed in, and sign out of ones you do not recognise. Apple’s two-factor step uses a code on a trusted device or a trusted phone number, so that number has to be one you still control.',
+    limit: 'These checks show how the account can be taken back. They do not prove nobody else already has access. The recovery page and the SIM-swap page cover what to do after something has already gone wrong.',
+  },
+  {
     id: 'apps',
     title: 'Review apps and permissions',
     steps:
@@ -113,7 +120,17 @@ export const platforms: readonly PlatformGuide[] = [
         limit: 'Encryption does not help while the phone is unlocked in someone else’s hands.',
       },
     ],
-    sources: [sources.googleTrackers, sources.googleFindHub, sources.getCyberSafeDevices, sources.accessibility],
+    sources: [
+      sources.googleTrackers,
+      sources.googleFindHub,
+      sources.getCyberSafeDevices,
+      sources.accessibility,
+      sources.googleRecovery,
+      sources.googleBackupCodes,
+      sources.googleDevices,
+      sources.recoveryCenter,
+      sources.simSwap,
+    ],
   },
   {
     id: 'ios',
@@ -164,8 +181,29 @@ export const platforms: readonly PlatformGuide[] = [
           'Open Settings, tap your name, then Find My. Turn on Find My iPhone or iPad. You cannot mark a lost device from the web if this was off when it disappeared.',
         limit: 'Find My can show the device to people in your Family Sharing group. Turn that on only if you want them to have it.',
       },
+      {
+        id: 'advanced-data',
+        title: 'Decide about Advanced Data Protection',
+        steps:
+          'Advanced Data Protection is optional. Apple says it protects the majority of iCloud data, including iCloud Backup, Photos and Notes, with end-to-end encryption. iCloud Mail is not end-to-end encrypted, because it has to work with ordinary email. Contacts and Calendars are not end-to-end encrypted, because the standards they use do not provide it. Before you turn it on, Apple guides you to set a recovery contact or a recovery key. After that, Apple says it does not have the keys to recover that data for you. Managed Apple Accounts and child accounts are not eligible. The mobile exposure page has the longer account.',
+        limit: 'Turning it on does not encrypt Mail, Contacts or Calendars. Losing the recovery contact or key, and the device passcode, can mean the protected data cannot be restored.',
+      },
     ],
-    sources: [sources.appleSafetyCheck, sources.appleStolenDevice, sources.appleTrackers, sources.appleFindMy],
+    sources: [
+      sources.appleSafetyCheck,
+      sources.appleStolenDevice,
+      sources.appleTrackers,
+      sources.appleFindMy,
+      sources.appleIcloudSecurity,
+      sources.appleAdvancedData,
+      sources.appleTwoFactor,
+      sources.googleRecovery,
+      sources.googleBackupCodes,
+      sources.googleDevices,
+      sources.mobileExposure,
+      sources.recoveryCenter,
+      sources.simSwap,
+    ],
   },
   {
     id: 'windows',
@@ -200,7 +238,17 @@ export const platforms: readonly PlatformGuide[] = [
         caution: removalCaution,
       },
     ],
-    sources: [sources.windowsEncryption, sources.windowsFind, sources.getCyberSafeDevices, sources.cyberCentreBasics],
+    sources: [
+      sources.windowsEncryption,
+      sources.windowsFind,
+      sources.getCyberSafeDevices,
+      sources.cyberCentreBasics,
+      sources.googleRecovery,
+      sources.googleBackupCodes,
+      sources.googleDevices,
+      sources.recoveryCenter,
+      sources.simSwap,
+    ],
   },
   {
     id: 'mac',
@@ -236,8 +284,28 @@ export const platforms: readonly PlatformGuide[] = [
         limit: 'A profile you do not recognize is a reason to get advice, not a reason to delete it in a hurry.',
         caution: removalCaution,
       },
+      {
+        id: 'advanced-data',
+        title: 'Decide about Advanced Data Protection',
+        steps:
+          'Advanced Data Protection is optional. Apple says it protects the majority of iCloud data, including iCloud Backup, Photos and Notes, with end-to-end encryption. iCloud Mail is not end-to-end encrypted, because it has to work with ordinary email. Contacts and Calendars are not end-to-end encrypted, because the standards they use do not provide it. Before you turn it on, Apple guides you to set a recovery contact or a recovery key. After that, Apple says it does not have the keys to recover that data for you. Managed Apple Accounts and child accounts are not eligible. The mobile exposure page has the longer account.',
+        limit: 'Turning it on does not encrypt Mail, Contacts or Calendars. Losing the recovery contact or key, and the device passcode, can mean the protected data cannot be restored.',
+      },
     ],
-    sources: [sources.appleFileVault, sources.appleFindMy, sources.getCyberSafeDevices],
+    sources: [
+      sources.appleFileVault,
+      sources.appleFindMy,
+      sources.getCyberSafeDevices,
+      sources.appleIcloudSecurity,
+      sources.appleAdvancedData,
+      sources.appleTwoFactor,
+      sources.googleRecovery,
+      sources.googleBackupCodes,
+      sources.googleDevices,
+      sources.mobileExposure,
+      sources.recoveryCenter,
+      sources.simSwap,
+    ],
   },
 ]
 
