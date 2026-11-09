@@ -1,12 +1,10 @@
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
 import { SeoHead } from '../components/seo/SeoHead'
 import { SiteLink } from '../components/content/SiteLink'
-import { AlsoOnArtiore } from '../components/investigations/AlsoOnArtiore'
 import { RelatedReadingFor } from '../components/related/RelatedReading'
 import { InvestigationLanguageSwitcher } from '../components/investigations/InvestigationLanguageSwitcher'
 import { InvestigationLicense } from '../components/investigations/InvestigationLicense'
 import { arabicInvestigationBase, investigationAlternates } from '../content/investigations/locale'
-import { investigationHubCompanionUrl } from '../content/investigations/companions'
 import {
   investigationHub,
   investigationLicenseUrl,
@@ -323,7 +321,6 @@ export default function InvestigationHubPage() {
         </section>
 
         <RelatedReadingFor sourcePath={investigationHub.path} />
-        <AlsoOnArtiore href={investigationHubCompanionUrl} />
       </article>
     </>
   )

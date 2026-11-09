@@ -309,8 +309,23 @@ if (notFound.includes('<div id="root"></div>')) fail('404.html has an empty #roo
 
 function internalTargets(html) {
   const hrefs = []
-  for (const match of html.matchAll(/href="([^"]+)"/g)) hrefs.push(match[1])
+  for (const match of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) hrefs.push(match[1])
   return hrefs
+}
+
+/** Root-relative path when the URL is this site, including absolute artiore.com links. */
+function sitePath(href) {
+  if (href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('data:')) return null
+  if (href.startsWith('/') && !href.startsWith('//')) return href
+  let url
+  try {
+    url = new URL(href)
+  } catch {
+    return null
+  }
+  const host = url.hostname.replace(/^www\./, '')
+  if (host !== 'artiore.com') return null
+  return `${url.pathname}${url.search}${url.hash}`
 }
 
 function resolves(pathname) {
@@ -338,9 +353,10 @@ function needsSlash(href) {
 for (const file of textFiles.filter((item) => item.endsWith('.html'))) {
   const html = readFileSync(file, 'utf8')
   for (const href of internalTargets(html)) {
-    if (!href.startsWith('/') || href.startsWith('//')) continue
-    if (!resolves(href)) fail(`${file.replace(root, '')} links to missing ${href}`)
-    if (needsSlash(href)) fail(`${file.replace(root, '')} links to ${href} without the trailing slash GitHub Pages serves`)
+    const path = sitePath(href)
+    if (!path) continue
+    if (!resolves(path)) fail(`${file.replace(root, '')} links to missing ${href}`)
+    if (needsSlash(path)) fail(`${file.replace(root, '')} links to ${href} without the trailing slash GitHub Pages serves`)
   }
 }
 
