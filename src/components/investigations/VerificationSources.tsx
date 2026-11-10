@@ -1,3 +1,4 @@
+import { CitationArchiveAside } from '../content/CitationArchive'
 import { OpensInNewTab } from '../content/SiteLink'
 import { arabicTopics, arabicUsedFor } from '../../content/investigations/ar/used-for'
 import { investigationNewTab } from '../../content/investigations/locale'
@@ -33,6 +34,7 @@ function SourceItem({ source, locale }: { source: VerificationSource; locale: 'e
         {source.title}
         {notice ? <OpensInNewTab dir={notice.dir} lang={notice.lang} text={notice.text} /> : <OpensInNewTab />}
       </a>
+      <CitationArchiveAside newTab={notice} url={source.url} />
       <span className="text-cream/80"> — {source.publisher}</span>
       {source.date ? (
         <span className="text-muted" dir="ltr">

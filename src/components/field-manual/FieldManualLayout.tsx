@@ -1,4 +1,5 @@
 import { createContext, useContext, useMemo, useState, type ReactNode } from 'react'
+import { CitationArchiveAside } from '../content/CitationArchive'
 import { Breadcrumbs } from '../seo/Breadcrumbs'
 import { SeoHead } from '../seo/SeoHead'
 import { SiteLink } from '../content/SiteLink'
@@ -186,6 +187,13 @@ function inlineNodes(text: string, state: TextState, keyPrefix: string) {
             {state.newTab}
           </span>
         </a>,
+      )
+      nodes.push(
+        <CitationArchiveAside
+          key={`${keyPrefix}-archive-${index}`}
+          newTab={{ text: state.newTab, lang: state.lang, dir: state.noticeDir }}
+          url={url}
+        />,
       )
       if (trailing) nodes.push(<Plain key={`${keyPrefix}-u-${index}`} rtl={rtl} text={trailing} />)
     }
