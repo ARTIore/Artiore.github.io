@@ -81,6 +81,20 @@ test.describe('built site release checks', () => {
     expect(failures).toEqual([])
   })
 
+  test('the preferred-source badge deeplinks to Google', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 800 })
+    await page.goto('/')
+    const badges = page.getByRole('link', { name: 'Add ARTIore as a preferred source on Google' })
+    await expect(badges).toHaveCount(2)
+    await expect(badges.first()).toHaveAttribute('href', 'https://www.google.com/preferences/source?q=artiore.com')
+    await expect(badges.first()).toHaveAttribute('target', '_blank')
+    await expect(badges.first()).toHaveAttribute('rel', /noopener/)
+    await page.goto('/field-manual/ar/')
+    const arabic = page.getByRole('link', { name: 'Add ARTIore as a preferred source on Google' })
+    await expect(arabic).toHaveAttribute('dir', 'ltr')
+    await expect(arabic).toHaveAttribute('href', 'https://www.google.com/preferences/source?q=artiore.com')
+  })
+
   test('the home investigation button opens the supply-chain article', async ({ page }) => {
     await page.setViewportSize({ width: 1280, height: 800 })
     await page.goto('/')

@@ -13,10 +13,10 @@ const prints = [
 ]
 
 describe('printable checklists', () => {
-  it('stay out of the index and point at the article', () => {
+  it('point at the article with a canonical link and stay indexable', () => {
     for (const page of prints) {
       const html = readFileSync(page.file, 'utf8')
-      expect(html, page.file).toContain('<meta name="robots" content="noindex,follow">')
+      expect(html, page.file).not.toContain('noindex')
       expect(html, page.file).toContain(`<link rel="canonical" href="${page.canonical}">`)
     }
   })
