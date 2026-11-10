@@ -5,6 +5,7 @@ import { PageHero } from '../content/PageHero'
 import { links } from '../../content/links'
 import { footerPages, primaryNav, type NavLinkItem } from '../../content/navigation'
 import { isFullDocumentPath, isStaticPath, normalizePath, toPublicPath } from '../../content/urls'
+import { PreferredSourceBadge } from '../content/PreferredSourceBadge'
 import { ExternalLink, SiteLink } from '../content/SiteLink'
 
 const linkClass =
@@ -181,6 +182,7 @@ export function SiteLayout() {
               Published work maps evidence, assumptions, trade-offs, next steps, and limits. The system is a witness,
               not a verdict.
             </p>
+            <PreferredSourceBadge className="mt-5" />
           </div>
           <div>
             <h2 className="text-xs uppercase tracking-[0.18em] text-gold">Pages</h2>

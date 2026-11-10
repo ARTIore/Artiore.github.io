@@ -125,9 +125,6 @@ for (const entry of seoEntries) {
     }
   }
 
-  if (entry.noindex) {
-    if (!html.includes('noindex')) fail(`${entry.path} should be noindex`)
-  }
   const head = html.slice(0, html.indexOf('</head>') === -1 ? html.length : html.indexOf('</head>'))
   const descriptionTag = head.match(/<meta name="description" content="([^"]*)"\s*\/?>/)
   if (!descriptionTag) fail(`${entry.path} HTML head is missing <meta name="description">`)
@@ -302,6 +299,11 @@ if (!home.includes('rel="manifest"')) fail('home HTML is missing the web manifes
 const notFound = existsSync(join(dist, '404.html')) ? readFileSync(join(dist, '404.html'), 'utf8') : ''
 if (!/This page is not here/.test(notFound)) fail('404.html does not explain that the page is missing')
 if (!/noindex/.test(notFound)) fail('404.html should be noindex')
+for (const file of walk(dist).filter((item) => item.endsWith('.html'))) {
+  if (file.endsWith('/404.html')) continue
+  const html = readFileSync(file, 'utf8')
+  if (/noindex/i.test(html)) fail(`${file.replace(root, '')} carries noindex; only 404.html may`)
+}
 if (/location\.replace|http-equiv="refresh"/i.test(notFound)) fail('404.html must not redirect')
 if ((notFound.match(/<h1\b/g) ?? []).length !== 1) fail('404.html should have one h1')
 if (notFound.includes('<div id="root"></div>')) fail('404.html has an empty #root')

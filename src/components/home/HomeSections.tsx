@@ -2,6 +2,7 @@ import { SITE_POSITIONING } from '../../config/site'
 import { links } from '../../content/links'
 import { blogSummaries } from '../../content/blog-summaries'
 import { featuredInvestigations } from '../../content/related-reading'
+import { PreferredSourceBadge } from '../content/PreferredSourceBadge'
 import { SiteLink } from '../content/SiteLink'
 
 const five = [
@@ -101,6 +102,7 @@ export function HomeSections() {
           >
             Global Injustice Investigation
           </SiteLink>
+          <PreferredSourceBadge className="self-center" />
         </div>
       </section>
 
