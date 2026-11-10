@@ -329,6 +329,14 @@ function sitePath(href) {
   return `${url.pathname}${url.search}${url.hash}`
 }
 
+for (const href of [
+  'https://web.archive.org/web/20251214210337/https://cyber.dhs.gov/assets/report/ed-19-01.pdf',
+  'https://archive.ph/example',
+  'https://archive.today/example',
+]) {
+  if (sitePath(href) !== null) fail(`${new URL(href).hostname} must stay an external host`)
+}
+
 function resolves(pathname) {
   const rel = decodeURIComponent(pathname.split('?')[0].split('#')[0])
   if (rel === '/eternia-aurora-sovereign-engine' || rel === '/eternia-aurora-sovereign-engine/') return true

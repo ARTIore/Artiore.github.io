@@ -81,6 +81,36 @@ test.describe('built site release checks', () => {
     expect(failures).toEqual([])
   })
 
+  test('dead citations keep their original URL and show an archive or a checked note', async ({ page }) => {
+    const note = '(original link no longer resolves; no archived copy found, checked 2026-11-09)'
+    const wayback = 'https://web.archive.org/web/20251214210337/https://cyber.dhs.gov/assets/report/ed-19-01.pdf'
+    const ed = 'https://cyber.dhs.gov/assets/report/ed-19-01.pdf'
+    for (const path of [
+      '/investigations/digital-exposure/digital-security-warning-signs/',
+      '/investigations/digital-exposure/ar/digital-security-warning-signs/',
+    ]) {
+      await page.goto(path)
+      const row = page.locator('p', { has: page.locator(`a[href="${ed}"]`) })
+      await expect(row).toContainText('Archived copy (Wayback Machine, 14 Dec 2025)')
+      await expect(row.locator(`a[href="${wayback}"]`)).toHaveAttribute('target', '_blank')
+    }
+    for (const path of [
+      '/investigations/digital-exposure/source-register/',
+      '/investigations/digital-exposure/ar/source-register/',
+    ]) {
+      await page.goto(path)
+      const infoblox =
+        'https://www.infoblox.com/blog/threat-intelligence/who-knew-domain-hijacking-is-easy/'
+      await expect(page.locator('p', { has: page.locator(`a[href="${infoblox}"]`) })).toContainText(note)
+      await expect(page.locator('li', { has: page.locator('a[href="https://www.sittingducks.fyi/"]') }).first()).toContainText(note)
+    }
+    for (const path of ['/field-manual/', '/field-manual/fr/', '/field-manual/ar/']) {
+      await page.goto(path)
+      const china = 'http://www.china.org.cn/world/2026-10/12/content_118729771.shtml'
+      await expect(page.locator('li', { has: page.locator(`a[href="${china}"]`) })).toContainText(note)
+    }
+  })
+
   test('the preferred-source badge deeplinks to Google', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 800 })
     await page.goto('/')

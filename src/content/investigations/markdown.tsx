@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { CitationArchiveAside } from '../../components/content/CitationArchive'
 import { OpensInNewTab, SiteLink } from '../../components/content/SiteLink'
 import { investigationBase } from './catalog'
 import { localizeInvestigationHref } from './locale'
@@ -169,15 +170,9 @@ function parseInline(text: string, key: Key, opts: InlineOpts): ReactNode[] {
     if (link) {
       flush()
       const linkKey = key.n++
-      nodes.push(
-        renderLink(
-          resolveHref(link.href, opts.slugs, opts.base, opts.rtl),
-          parseInline(link.label, key, opts),
-          linkKey,
-          opts.rtl,
-          opts.newTab,
-        ),
-      )
+      const href = resolveHref(link.href, opts.slugs, opts.base, opts.rtl)
+      nodes.push(renderLink(href, parseInline(link.label, key, opts), linkKey, opts.rtl, opts.newTab))
+      nodes.push(<CitationArchiveAside key={key.n++} newTab={opts.newTab} url={href} />)
       index = link.end
       continue
     }
@@ -206,6 +201,7 @@ function parseInline(text: string, key: Key, opts: InlineOpts): ReactNode[] {
       flush()
       const urlKey = key.n++
       nodes.push(renderLink(url.href, url.href, urlKey, opts.rtl, opts.newTab))
+      nodes.push(<CitationArchiveAside key={key.n++} newTab={opts.newTab} url={url.href} />)
       index = url.end
       continue
     }
