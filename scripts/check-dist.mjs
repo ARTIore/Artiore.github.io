@@ -1,5 +1,6 @@
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
 import { join, posix } from 'node:path'
+import { omitReaderComments } from './discoverability.mjs'
 import { loadSeoModule } from './load-seo.mjs'
 import { canonicalUrl } from './public-url.mjs'
 
@@ -257,6 +258,8 @@ for (const file of textFiles) {
     if (investigationExempt && relative.endsWith('sitemap.xml')) {
       text = text.replace(/https:\/\/artiore\.com\/investigations\/[^<\s]*/g, '')
     }
+    // llms.txt, llms-full.txt, and rss.xml reprint investigation titles and page text.
+    if (investigationExempt && /\/(llms\.txt|llms-full\.txt|rss\.xml)$/.test(relative)) continue
     // The investigation is part of the React app, so its article text and
     // slugs also live in the client bundles. Rendered HTML outside
     // /investigations/ is still scanned. The other identifiers in this list
@@ -283,6 +286,9 @@ for (const required of [
   'og-image.png',
   'robots.txt',
   'sitemap.xml',
+  'llms.txt',
+  'llms-full.txt',
+  'rss.xml',
   'site.webmanifest',
   'CNAME',
 ]) {
@@ -292,16 +298,26 @@ for (const required of [
 const robots = existsSync(join(dist, 'robots.txt')) ? readFileSync(join(dist, 'robots.txt'), 'utf8') : ''
 if (!/Allow:\s*\//.test(robots)) fail('robots.txt should allow all crawlers')
 if (!robots.includes('Sitemap: https://artiore.com/sitemap.xml')) fail('robots.txt should point at the sitemap')
+if (!robots.includes('# llms.txt: https://artiore.com/llms.txt')) fail('robots.txt should mention llms.txt')
+if (!existsSync(join(dist, 'llms.txt')) || !existsSync(join(dist, 'llms-full.txt'))) {
+  fail('llms.txt and llms-full.txt must both be generated')
+}
+const llms = readFileSync(join(dist, 'llms.txt'), 'utf8')
+if (/\]\(https:\/\/artiore\.com\/api-documentation\/?\)/.test(llms)) fail('llms.txt must not list the API stub')
+const llmsFull = readFileSync(join(dist, 'llms-full.txt'), 'utf8')
+if (!llmsFull.includes('URL: https://artiore.com/')) fail('llms-full.txt should name canonical page URLs')
+if (llmsFull.includes('URL: https://artiore.com/api-documentation')) fail('llms-full.txt must not include the API stub')
 
 const home = existsSync(join(dist, 'index.html')) ? readFileSync(join(dist, 'index.html'), 'utf8') : ''
 if (!home.includes('rel="manifest"')) fail('home HTML is missing the web manifest link')
+if (!home.includes('application/rss+xml')) fail('home HTML should link the RSS feed')
 
 const notFound = existsSync(join(dist, '404.html')) ? readFileSync(join(dist, '404.html'), 'utf8') : ''
 if (!/This page is not here/.test(notFound)) fail('404.html does not explain that the page is missing')
 if (!/noindex/.test(notFound)) fail('404.html should be noindex')
 for (const file of walk(dist).filter((item) => item.endsWith('.html'))) {
   if (file.endsWith('/404.html')) continue
-  const html = readFileSync(file, 'utf8')
+  const html = omitReaderComments(readFileSync(file, 'utf8'))
   if (/noindex/i.test(html)) fail(`${file.replace(root, '')} carries noindex; only 404.html may`)
 }
 if (/location\.replace|http-equiv="refresh"/i.test(notFound)) fail('404.html must not redirect')
@@ -370,6 +386,8 @@ for (const file of textFiles.filter((item) => item.endsWith('.html'))) {
 }
 
 const sitemap = existsSync(join(dist, 'sitemap.xml')) ? readFileSync(join(dist, 'sitemap.xml'), 'utf8') : ''
+if (!sitemap.includes('xmlns:xhtml="http://www.w3.org/1999/xhtml"')) fail('sitemap.xml should declare the xhtml namespace')
+if (!sitemap.includes('hreflang="x-default"')) fail('sitemap.xml should include x-default alternates')
 const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1])
 const lastmods = [...sitemap.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map((match) => match[1])
 if (lastmods.length !== locs.length) fail('sitemap.xml should give every URL a lastmod')
@@ -428,7 +446,9 @@ if (locs.includes('https://artiore.com/framework')) fail('Bare /framework must n
 if (locs.some((loc) => loc.endsWith('/404.html'))) fail('404 must stay out of the sitemap')
 
 for (const file of textFiles.filter((item) => item.endsWith('.html'))) {
-  const lower = readFileSync(file, 'utf8').toLowerCase()
+  // Reader comments, including their JSON-LD text, are not site copy.
+  // llms-full.txt and rss.xml are built without that region, so they are not scanned here.
+  const lower = omitReaderComments(readFileSync(file, 'utf8')).toLowerCase()
   if (lower.includes('artiais')) fail(`${file.replace(root, '')} contains artiais`)
   if (lower.includes('artioreconsortium')) fail(`${file.replace(root, '')} contains artioreconsortium`)
 }

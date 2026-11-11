@@ -3,6 +3,19 @@ import { join } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { loadSeoModule } from './load-seo.mjs'
 import { canonicalUrl, SITE_URL } from './public-url.mjs'
+import {
+  barePath,
+  htmlToPlainText,
+  injectRssLink,
+  isApiStub,
+  lastmodFor,
+  linkTitle,
+  renderLlmsFullTxt,
+  renderLlmsTxt,
+  renderRobots,
+  renderRss,
+  renderSitemap,
+} from './discoverability.mjs'
 
 const heroAlts = JSON.parse(readFileSync(join(process.cwd(), 'src/content/hero-alts.json'), 'utf8'))
 const heroManifest = JSON.parse(readFileSync(join(process.cwd(), 'src/content/hero-images.json'), 'utf8'))
@@ -221,8 +234,9 @@ async function renderDocument(templateHtml, entry, location) {
     imageHeight: entry.imageHeight,
     imageAlt: entry.imageAlt,
   })
+  const withRss = injectRssLink(htmlWithMeta)
   const withJson = replaceJsonLd(
-    htmlWithMeta,
+    withRss,
     buildJsonLd({
       kind,
       title: entry.headTitle,
@@ -297,6 +311,7 @@ if (frameworkEntry) {
     imageHeight: '630',
     imageAlt: heroFor('/framework.html')?.alt,
   })
+  framework = injectRssLink(framework)
   framework = replaceJsonLd(
     framework,
     buildJsonLd({
@@ -311,27 +326,33 @@ if (frameworkEntry) {
   writeFileSync(join(process.cwd(), 'public', 'framework.html'), framework)
 }
 
-// Default revision date. A page may set its own lastmod. Do not stamp the build clock.
-const defaultLastmod = '2026-10-31'
-const sitemapUrls = seoEntries.filter((entry) => entry.sitemap !== false)
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapUrls
-  .map((entry) => {
-    const loc = canonicalUrl(entry.path)
-    const lastmod = entry.lastmod || defaultLastmod
-    return `  <url>
-    <loc>${loc}</loc>
-    <lastmod>${lastmod}</lastmod>
-  </url>`
-  })
-  .join('\n')}
-</urlset>
-`
+function builtHtml(entry) {
+  if (entry.external || isApiStub(entry)) return null
+  if (barePath(entry.path) === '/') return join(dist, 'index.html')
+  if (entry.path.endsWith('.html')) return join(dist, entry.path.replace(/^\//, ''))
+  return join(dist, entry.path.replace(/^\//, '').replace(/\/$/, ''), 'index.html')
+}
+
+const sitemap = renderSitemap(seoEntries, canonicalUrl, lastmodFor)
 writeFileSync(join(dist, 'sitemap.xml'), sitemap)
 writeFileSync(join(process.cwd(), 'public', 'sitemap.xml'), sitemap)
 
-writeFileSync(join(dist, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`)
+writeFileSync(join(dist, 'robots.txt'), renderRobots(SITE_URL))
+writeFileSync(join(dist, 'llms.txt'), renderLlmsTxt(seoEntries, canonicalUrl))
+writeFileSync(join(dist, 'rss.xml'), renderRss(seoEntries, canonicalUrl, lastmodFor))
+
+const fullPages = []
+for (const entry of seoEntries) {
+  if (entry.sitemap === false || isApiStub(entry)) continue
+  const file = builtHtml(entry)
+  if (!file || !existsSync(file)) continue
+  fullPages.push({
+    title: linkTitle(entry),
+    url: canonicalUrl(entry.path),
+    text: htmlToPlainText(readFileSync(file, 'utf8')),
+  })
+}
+writeFileSync(join(dist, 'llms-full.txt'), renderLlmsFullTxt(fullPages))
 writeFileSync(join(dist, 'CNAME'), new URL(SITE_URL).hostname + '\n')
 
-console.log(`Wrote ${rendered.length} prerendered routes, dist/404.html, and sitemap.xml`)
+console.log(`Wrote ${rendered.length} prerendered routes, dist/404.html, sitemap.xml, rss.xml, llms.txt, and llms-full.txt`)
