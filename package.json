@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "python3 scripts/build-claims.py && tsc -b && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/write-route-html.mjs && node scripts/check-dist.mjs",
+    "build": "python3 scripts/build-claims.py && tsc -b && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node --experimental-strip-types scripts/write-route-html.mjs && node scripts/check-dist.mjs",
     "lint": "eslint .",
     "test": "vitest run",
     "test:evidence": "python3 scripts/test_validate_evidence.py && python3 scripts/validate-evidence.py data/evidence/ledger-v1/example-record.json data/evidence/ledger-v1/example-list.json",

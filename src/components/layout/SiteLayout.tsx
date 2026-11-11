@@ -5,6 +5,7 @@ import { PageHero } from '../content/PageHero'
 import { links } from '../../content/links'
 import { footerPages, primaryNav, type NavLinkItem } from '../../content/navigation'
 import { isFullDocumentPath, isStaticPath, normalizePath, toPublicPath } from '../../content/urls'
+import { ReaderComments } from '../comments/ReaderComments'
 import { PreferredSourceBadge } from '../content/PreferredSourceBadge'
 import { ExternalLink, SiteLink } from '../content/SiteLink'
 
@@ -171,6 +172,7 @@ export function SiteLayout() {
       <main className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:py-16" id="main" tabIndex={-1}>
         <PageHero path={location.pathname} />
         <Outlet />
+        <ReaderComments />
       </main>
 
       <footer className="site-footer border-t border-gold/20">

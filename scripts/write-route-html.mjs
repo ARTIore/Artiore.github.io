@@ -192,6 +192,8 @@ function injectPreloads(html, files) {
   return html.replace('<script type="module"', `${links}\n    <script type="module"`)
 }
 
+const { commentPagePath, fetchReaderCommentSnapshot } = await import('../src/content/comments.ts')
+
 const dist = join(process.cwd(), 'dist')
 const ssrEntry = join(process.cwd(), 'dist-ssr', 'entry-server.js')
 const { render } = await import(pathToFileURL(ssrEntry).href)
@@ -236,6 +238,10 @@ async function renderDocument(templateHtml, entry, location) {
       image: entry.image,
       faqs: entry.faqs,
       license: entry.license,
+      comments:
+        entry.kind === 'article' || entry.kind === 'blog-post'
+          ? (commentSnapshot[commentPagePath(entry.path)] ?? [])
+          : undefined,
     }),
   )
   const body = await render(location)
@@ -243,6 +249,12 @@ async function renderDocument(templateHtml, entry, location) {
   const sources = routeSources[entry.path] ?? []
   return inlineStyles(injectPreloads(withBody, collectPreloads(manifest, sources, scriptFile)), dist)
 }
+
+const commentPages = seoEntries
+  .filter((entry) => entry.prerender && (entry.kind === 'article' || entry.kind === 'blog-post'))
+  .map((entry) => commentPagePath(entry.path))
+const commentSnapshot = await fetchReaderCommentSnapshot(commentPages)
+globalThis.__ARTIORE_READER_COMMENTS__ = commentSnapshot
 
 const rendered = []
 for (const entry of seoEntries) {

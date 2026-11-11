@@ -104,3 +104,7 @@ export async function preloadRoute(pathname: string) {
 export function readRoute(pathname: string) {
   return cache.get(normalizePath(pathname))
 }
+
+export function hasAppRoute(pathname: string) {
+  return Object.hasOwn(loaders, normalizePath(pathname))
+}

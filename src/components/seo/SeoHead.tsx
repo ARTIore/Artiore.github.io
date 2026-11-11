@@ -8,6 +8,7 @@ import {
   SITE_NAME,
 } from '../../config/site'
 import { canonicalUrl } from '../../content/urls'
+import { publishedReaderComments } from '../../content/comments'
 import { buildJsonLd, openGraphType, type SeoKind } from '../../seo/structuredData'
 
 type SeoHeadProps = {
@@ -142,6 +143,7 @@ export function SeoHead({
         image: ogUrl,
         faqs,
         license,
+        comments: publishedReaderComments(path),
       }),
     )
   }, [alternates, author, authorOrganization, crumbName, dateModified, datePublished, description, dir, faqs, headline, image, imageAlt, imageHeight, imageWidth, inLanguage, kind, license, locale, noindex, path, title])
