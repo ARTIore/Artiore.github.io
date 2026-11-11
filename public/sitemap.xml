@@ -1,427 +1,661 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://artiore.com/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/contact/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/engine/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/system-documentation/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-08</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/academy/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-08</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/academy/threat-lab/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-03</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/academy/recovery/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-03</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/academy/navigator/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/academy/evidence/</loc>
     <lastmod>2026-11-02</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/academy/research/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-03</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/academy/research/provenance/</loc>
     <lastmod>2026-11-02</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/academy/research/corrections/</loc>
     <lastmod>2026-11-02</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/academy/research/contradictions/</loc>
     <lastmod>2026-11-02</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/blog/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/claims/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/claims/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/claims/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/claims/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/claims/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/claims/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/claims/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/claims/" />
   </url>
   <url>
     <loc>https://artiore.com/field-manual/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/field-manual/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://artiore.com/field-manual/fr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/field-manual/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/field-manual/" />
   </url>
   <url>
     <loc>https://artiore.com/field-manual/fr/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/field-manual/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://artiore.com/field-manual/fr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/field-manual/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/field-manual/" />
   </url>
   <url>
     <loc>https://artiore.com/field-manual/ar/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/field-manual/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://artiore.com/field-manual/fr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/field-manual/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/field-manual/" />
   </url>
   <url>
     <loc>https://artiore.com/field-manual/pocket-booklet/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-08</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/field-manual/carousels/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-08</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/about/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/philosophy/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/origin/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/doctrine/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/protocol/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/how-it-works/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/applications/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/dossier/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/resources/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/case-studies/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/implementation/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/privacy/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/terms/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/blog/every-tap-on-allow/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/blog/artiore-ecosystem/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/blog/sultan-authority-cannot-be-touched/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/blog/engineers-oath-voltage-granted/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/blog/exhibit-k-forensic-witnesses/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/" />
   </url>
   <url>
     <loc>https://artiore.com/perimeter/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/perimeter/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/perimeter/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/perimeter/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/executive-investigation/</loc>
     <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/executive-investigation/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/executive-investigation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/executive-investigation/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/password-protected-wifi-not-secure/</loc>
     <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/password-protected-wifi-not-secure/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/password-protected-wifi-not-secure/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/password-protected-wifi-not-secure/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/hotel-wifi-security-guide/</loc>
     <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/hotel-wifi-security-guide/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/hotel-wifi-security-guide/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/hotel-wifi-security-guide/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/dns-hijacking-explained/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/dns-hijacking-explained/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/dns-hijacking-explained/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/dns-hijacking-explained/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/bluetooth-ble-tracking/</loc>
     <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/bluetooth-ble-tracking/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/bluetooth-ble-tracking/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/bluetooth-ble-tracking/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/android-accessibility-service-malware/</loc>
     <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/android-accessibility-service-malware/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/android-accessibility-service-malware/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/android-accessibility-service-malware/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/iphone-zero-click-spyware/</loc>
     <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/iphone-zero-click-spyware/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/iphone-zero-click-spyware/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/iphone-zero-click-spyware/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/mobile-os-exposure/</loc>
     <lastmod>2026-11-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/mobile-os-exposure/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/mobile-os-exposure/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/whatsapp-encryption-limits/</loc>
     <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/whatsapp-encryption-limits/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/whatsapp-encryption-limits/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/whatsapp-encryption-limits/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/pegasus-predator-commercial-spyware/</loc>
     <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/pegasus-predator-commercial-spyware/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/pegasus-predator-commercial-spyware/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/pegasus-predator-commercial-spyware/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/cloud-photo-account-takeover/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/cloud-photo-account-takeover/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/cloud-photo-account-takeover/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/cloud-photo-account-takeover/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/crypto-wallet-drainers/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/crypto-wallet-drainers/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/crypto-wallet-drainers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/crypto-wallet-drainers/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/sim-swap-account-takeover/</loc>
     <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/sim-swap-account-takeover/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/sim-swap-account-takeover/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/sim-swap-account-takeover/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/hotel-keycard-lock-security/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/hotel-keycard-lock-security/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/hotel-keycard-lock-security/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/hotel-keycard-lock-security/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/browser-extensions-session-theft/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/browser-extensions-session-theft/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/browser-extensions-session-theft/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/browser-extensions-session-theft/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/digital-security-warning-signs/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/digital-security-warning-signs/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/digital-security-warning-signs/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/digital-security-warning-signs/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/deepfake-ai-payment-fraud/</loc>
     <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/deepfake-ai-payment-fraud/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/deepfake-ai-payment-fraud/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/deepfake-ai-payment-fraud/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/regional-reporting-limits/</loc>
     <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/regional-reporting-limits/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/regional-reporting-limits/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/regional-reporting-limits/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/stalkerware-safety-planning/</loc>
     <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/stalkerware-safety-planning/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/stalkerware-safety-planning/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/stalkerware-safety-planning/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/evidence-method/</loc>
     <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/evidence-method/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/evidence-method/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/evidence-method/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/global-threat-matrix/</loc>
     <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/global-threat-matrix/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/global-threat-matrix/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/global-threat-matrix/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/public-safety-checklist/</loc>
     <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/public-safety-checklist/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/public-safety-checklist/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/public-safety-checklist/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/technical-glossary/</loc>
     <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/technical-glossary/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/technical-glossary/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/technical-glossary/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/source-register/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/source-register/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/source-register/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/source-register/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/perimeter/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/perimeter/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/perimeter/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/perimeter/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/executive-investigation/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/executive-investigation/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/executive-investigation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/executive-investigation/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/password-protected-wifi-not-secure/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/password-protected-wifi-not-secure/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/password-protected-wifi-not-secure/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/password-protected-wifi-not-secure/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/hotel-wifi-security-guide/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/hotel-wifi-security-guide/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/hotel-wifi-security-guide/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/hotel-wifi-security-guide/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/dns-hijacking-explained/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/dns-hijacking-explained/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/dns-hijacking-explained/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/dns-hijacking-explained/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/bluetooth-ble-tracking/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/bluetooth-ble-tracking/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/bluetooth-ble-tracking/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/bluetooth-ble-tracking/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/android-accessibility-service-malware/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/android-accessibility-service-malware/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/android-accessibility-service-malware/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/android-accessibility-service-malware/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/iphone-zero-click-spyware/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/iphone-zero-click-spyware/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/iphone-zero-click-spyware/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/iphone-zero-click-spyware/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/whatsapp-encryption-limits/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/whatsapp-encryption-limits/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/whatsapp-encryption-limits/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/whatsapp-encryption-limits/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/pegasus-predator-commercial-spyware/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/pegasus-predator-commercial-spyware/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/pegasus-predator-commercial-spyware/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/pegasus-predator-commercial-spyware/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/cloud-photo-account-takeover/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/cloud-photo-account-takeover/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/cloud-photo-account-takeover/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/cloud-photo-account-takeover/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/crypto-wallet-drainers/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/crypto-wallet-drainers/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/crypto-wallet-drainers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/crypto-wallet-drainers/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/sim-swap-account-takeover/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/sim-swap-account-takeover/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/sim-swap-account-takeover/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/sim-swap-account-takeover/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/hotel-keycard-lock-security/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/hotel-keycard-lock-security/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/hotel-keycard-lock-security/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/hotel-keycard-lock-security/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/browser-extensions-session-theft/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/browser-extensions-session-theft/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/browser-extensions-session-theft/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/browser-extensions-session-theft/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/digital-security-warning-signs/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/digital-security-warning-signs/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/digital-security-warning-signs/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/digital-security-warning-signs/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/deepfake-ai-payment-fraud/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/deepfake-ai-payment-fraud/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/deepfake-ai-payment-fraud/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/deepfake-ai-payment-fraud/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/regional-reporting-limits/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/regional-reporting-limits/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/regional-reporting-limits/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/regional-reporting-limits/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/stalkerware-safety-planning/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/stalkerware-safety-planning/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/stalkerware-safety-planning/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/stalkerware-safety-planning/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/evidence-method/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/evidence-method/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/evidence-method/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/evidence-method/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/global-threat-matrix/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/global-threat-matrix/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/global-threat-matrix/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/global-threat-matrix/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/public-safety-checklist/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/public-safety-checklist/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/public-safety-checklist/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/public-safety-checklist/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/technical-glossary/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/technical-glossary/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/technical-glossary/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/technical-glossary/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/digital-exposure/ar/source-register/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/digital-exposure/source-register/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://artiore.com/investigations/digital-exposure/ar/source-register/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/digital-exposure/source-register/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/global-injustice/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/global-injustice/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/global-injustice/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/global-injustice/l1-systems/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/global-injustice/l1-systems/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/global-injustice/l1-systems/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/global-injustice/l2-corruption/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/global-injustice/l2-corruption/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/global-injustice/l2-corruption/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/global-injustice/l3-voices/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/global-injustice/l3-voices/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/global-injustice/l3-voices/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/global-injustice/l4-civic-space/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/global-injustice/l4-civic-space/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/global-injustice/l4-civic-space/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/global-injustice/l5-ngo-conduct/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/global-injustice/l5-ngo-conduct/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/global-injustice/l5-ngo-conduct/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/global-injustice/l6-household-costs/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/global-injustice/l6-household-costs/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/global-injustice/l6-household-costs/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/global-injustice/l7-crime-trends/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/global-injustice/l7-crime-trends/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/global-injustice/l7-crime-trends/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/global-injustice/l8-cyber-hygiene/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/global-injustice/l8-cyber-hygiene/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/global-injustice/l8-cyber-hygiene/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/global-injustice/l9-technology-gap/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/global-injustice/l9-technology-gap/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/global-injustice/l9-technology-gap/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/global-injustice/l10-wealth-power/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/global-injustice/l10-wealth-power/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/global-injustice/l10-wealth-power/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/global-injustice/l11-commercial-spyware/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/global-injustice/l11-commercial-spyware/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/global-injustice/l11-commercial-spyware/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/global-injustice/synthesis/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/global-injustice/synthesis/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/global-injustice/synthesis/" />
   </url>
   <url>
     <loc>https://artiore.com/investigations/supply-chain-hidden-features/</loc>
     <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://artiore.com/investigations/supply-chain-hidden-features/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://artiore.com/investigations/supply-chain-hidden-features/" />
   </url>
   <url>
     <loc>https://artiore.com/framework.html</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-09</lastmod>
+
   </url>
   <url>
     <loc>https://artiore.com/eternia-aurora-sovereign-engine/</loc>
     <lastmod>2026-10-31</lastmod>
+
   </url>
 </urlset>
