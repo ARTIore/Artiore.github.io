@@ -1,4 +1,5 @@
 import { OG_IMAGE_URL, SITE_NAME, SITE_URL } from '../config/site'
+import { readerCommentSchema, type ReaderComment } from '../content/comments'
 import { links } from '../content/links'
 import { breadcrumbItems, canonicalUrl } from '../content/urls'
 
@@ -22,6 +23,7 @@ export type JsonLdInput = {
   image?: string
   faqs?: { question: string; answer: string }[]
   license?: string
+  comments?: ReaderComment[]
 }
 
 export function openGraphType(kind: SeoKind | undefined) {
@@ -98,6 +100,7 @@ export function buildJsonLd(input: JsonLdInput) {
       image: input.image ?? OG_IMAGE_URL,
       publisher: { '@id': ORGANIZATION_ID },
       ...(input.inLanguage ? { inLanguage: input.inLanguage } : {}),
+      ...(input.comments ? readerCommentSchema(input.comments) : {}),
     })
   } else if (input.kind === 'article' && input.author && input.datePublished && input.headline) {
     const authors: Record<string, string>[] = [{ '@type': 'Person', name: input.author }]
@@ -118,6 +121,7 @@ export function buildJsonLd(input: JsonLdInput) {
       publisher: { '@id': ORGANIZATION_ID },
       ...(input.inLanguage ? { inLanguage: input.inLanguage } : {}),
       ...(input.license ? { license: input.license } : {}),
+      ...(input.comments ? readerCommentSchema(input.comments) : {}),
     })
   } else if (input.kind === 'engine') {
     graph.push({
