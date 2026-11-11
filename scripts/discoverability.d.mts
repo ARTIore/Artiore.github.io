@@ -4,6 +4,7 @@ export function barePath(path: string): string
 export function discoverableEntries<T extends { path: string; sitemap?: boolean }>(entries: T[]): T[]
 export function groupOf(entry: { path: string; kind?: string }): string
 export function htmlToPlainText(html: string): string
+export function omitReaderComments(html: string): string
 export function isFeedEntry(entry: { path: string; kind?: string; sitemap?: boolean }): boolean
 export function lastmodFor(entry: {
   path: string

@@ -207,8 +207,36 @@ export function renderLlmsTxt(entries, canonicalUrl) {
   return `${lines.join('\n').trim()}\n`
 }
 
+/** Drop reader comments and their JSON-LD text. Site copy and robots meta stay. */
+export function omitReaderComments(html) {
+  const withoutSection = String(html).replace(
+    /<section\b[^>]*\bid=["']reader-comments["'][^>]*>[\s\S]*?<\/section>/gi,
+    '',
+  )
+  return withoutSection.replace(
+    /<script\b[^>]*\bid=["']seo-jsonld["'][^>]*>([\s\S]*?)<\/script>/gi,
+    (full, json) => {
+      try {
+        const data = JSON.parse(json)
+        const graph = Array.isArray(data['@graph']) ? data['@graph'] : []
+        for (const node of graph) {
+          if (node && typeof node === 'object') {
+            delete node.comment
+            delete node.commentCount
+          }
+        }
+        const encoded = JSON.stringify(data).replaceAll('<', '\\u003c')
+        return `<script id="seo-jsonld" type="application/ld+json">${encoded}</script>`
+      } catch {
+        return full
+      }
+    },
+  )
+}
+
 export function htmlToPlainText(html) {
-  const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? html
+  const stripped = omitReaderComments(html)
+  const main = stripped.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? stripped
   const withoutCode = main.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ')
   const withBreaks = withoutCode
     .replace(/<br\s*\/?>/gi, '\n')
@@ -232,7 +260,7 @@ export function renderLlmsFullTxt(pages) {
   const lines = [
     '# ARTIore full text',
     '',
-    'Plain text of each sitemap page, taken from the built HTML. The API stub is not included.',
+    'Plain text of each sitemap page, taken from the built HTML. Reader comments are omitted. The API stub is not included.',
     '',
   ]
   for (const page of pages) {

@@ -6,6 +6,7 @@ import {
   groupOf,
   htmlToPlainText,
   isFeedEntry,
+  omitReaderComments,
   lastmodFor,
   renderLlmsTxt,
   renderRss,
@@ -86,6 +87,34 @@ describe('discoverability files', () => {
     expect(sitemap).toContain('xmlns:xhtml="http://www.w3.org/1999/xhtml"')
     expect(sitemap).toContain('hreflang="x-default"')
     expect(sitemap).toContain('hreflang="ar"')
+  })
+
+  it('ignores reader comments when checking site text, and leaves them out of the full dump', () => {
+    const html = `<head>
+      <meta name="robots" content="index,follow">
+      <script id="seo-jsonld" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Site headline","comment":[{"@type":"Comment","text":"noindex artiais artioreconsortium","author":{"@type":"Person","name":"Ada"}}],"commentCount":1}]}</script>
+    </head>
+    <main>
+      <p>The published page stays visible.</p>
+      <section id="reader-comments"><h2>Comments</h2><p>noindex artiais artioreconsortium</p>
+        <script id="reader-comments-snapshot" type="application/json">{"comments":[{"body":"noindex artiais artioreconsortium"}]}</script>
+      </section>
+    </main>`
+    const scanned = omitReaderComments(html)
+    expect(scanned).toContain('content="index,follow"')
+    expect(scanned).toContain('The published page stays visible.')
+    expect(scanned).toContain('Site headline')
+    expect(scanned.toLowerCase()).not.toContain('noindex')
+    expect(scanned.toLowerCase()).not.toContain('artiais')
+    expect(scanned.toLowerCase()).not.toContain('artioreconsortium')
+    const plain = htmlToPlainText(html)
+    expect(plain).toContain('The published page stays visible.')
+    expect(plain.toLowerCase()).not.toContain('noindex')
+    expect(plain.toLowerCase()).not.toContain('artiais')
+    const withRealNoindex = omitReaderComments(html.replace('index,follow', 'noindex,follow'))
+    expect(withRealNoindex).toMatch(/noindex/i)
+    const withSiteBan = omitReaderComments(html.replace('The published page stays visible.', 'The published page mentions artiais.'))
+    expect(withSiteBan.toLowerCase()).toContain('artiais')
   })
 
   it('bumps archive-note pages to the PR #57 date when the source file is older', () => {

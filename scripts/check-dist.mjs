@@ -1,5 +1,6 @@
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
 import { join, posix } from 'node:path'
+import { omitReaderComments } from './discoverability.mjs'
 import { loadSeoModule } from './load-seo.mjs'
 import { canonicalUrl } from './public-url.mjs'
 
@@ -316,7 +317,7 @@ if (!/This page is not here/.test(notFound)) fail('404.html does not explain tha
 if (!/noindex/.test(notFound)) fail('404.html should be noindex')
 for (const file of walk(dist).filter((item) => item.endsWith('.html'))) {
   if (file.endsWith('/404.html')) continue
-  const html = readFileSync(file, 'utf8')
+  const html = omitReaderComments(readFileSync(file, 'utf8'))
   if (/noindex/i.test(html)) fail(`${file.replace(root, '')} carries noindex; only 404.html may`)
 }
 if (/location\.replace|http-equiv="refresh"/i.test(notFound)) fail('404.html must not redirect')
@@ -445,7 +446,9 @@ if (locs.includes('https://artiore.com/framework')) fail('Bare /framework must n
 if (locs.some((loc) => loc.endsWith('/404.html'))) fail('404 must stay out of the sitemap')
 
 for (const file of textFiles.filter((item) => item.endsWith('.html'))) {
-  const lower = readFileSync(file, 'utf8').toLowerCase()
+  // Reader comments, including their JSON-LD text, are not site copy.
+  // llms-full.txt and rss.xml are built without that region, so they are not scanned here.
+  const lower = omitReaderComments(readFileSync(file, 'utf8')).toLowerCase()
   if (lower.includes('artiais')) fail(`${file.replace(root, '')} contains artiais`)
   if (lower.includes('artioreconsortium')) fail(`${file.replace(root, '')} contains artioreconsortium`)
 }
