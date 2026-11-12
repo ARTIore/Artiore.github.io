@@ -1,7 +1,7 @@
 import { links } from './links'
 import type { PageDocument } from './types'
 
-const framing = `This is the policy published for the Artiore service at artiore.com, last updated April 16, 2026. It is reproduced on this site. This site is a static publication. It does not run a separate reasoning engine. The operator named in the policy is The Secret Affaire Inc., a private limited corporation registered in Canada. Questions go to ${links.policyEmailAddress}. The phone number printed on the original policy is omitted on this site.`
+const framing = `This is the policy published for the Artiore service at artiore.com, last updated November 12, 2026. It is reproduced on this site. This site is a static publication. It does not run a separate reasoning engine. The operator named in the policy is The Secret Affaire Inc., a private limited corporation registered in Canada. Questions go to ${links.policyEmailAddress}. The phone number printed on the original policy is omitted on this site.`
 
 export const privacyPage: PageDocument = {
   path: '/privacy',
@@ -9,8 +9,8 @@ export const privacyPage: PageDocument = {
   title: 'Privacy policy',
   headTitle: 'Privacy policy | The Secret Affaire Inc. and ARTIore',
   description:
-    'Privacy policy published for artiore.com on April 16, 2026. The Secret Affaire Inc. says Artiore does not collect or store personal user data. Reproduced here.',
-  lead: 'Last updated April 16, 2026. The Secret Affaire Inc. (“Company”, “we”, “us”, or “our”) operates the Artiore website (artiore.com) and related services.',
+    'Privacy policy for artiore.com, updated November 12, 2026. The Secret Affaire Inc. stores public reader comments and uses cookieless Cloudflare analytics.',
+  lead: 'Last updated November 12, 2026. The Secret Affaire Inc. (“Company”, “we”, “us”, or “our”) operates the Artiore website (artiore.com) and related services.',
   blocks: [
     { kind: 'note', text: framing },
     {
@@ -27,17 +27,17 @@ export const privacyPage: PageDocument = {
     {
       kind: 'paragraphs',
       text: [
-        'As of the date of the policy, Artiore does not collect, store, or house any personal user data. It does not require registration, and it does not maintain user accounts or databases.',
+        'As of November 12, 2026, Artiore does not require registration and does not maintain user accounts. Reader comments are stored as described under “Reader comments and site analytics.” No email address is collected for a comment.',
       ],
     },
     {
       kind: 'list',
       title: '1.1 Information the policy says is not collected',
       items: [
-        'Personal identification information (name, email address, phone number)',
+        'Personal identification information (email address and phone number are not collected; a display name entered with a reader comment is stored)',
         'Account credentials',
         'Payment information (credit card numbers, billing addresses)',
-        'User-generated content or conversation history',
+        'User-generated content or conversation history, other than a reader comment on an article or investigation page',
         'Location data',
         'Device identifiers',
       ],
@@ -59,6 +59,19 @@ export const privacyPage: PageDocument = {
     },
     {
       kind: 'heading',
+      text: 'Reader comments and site analytics',
+    },
+    {
+      kind: 'paragraphs',
+      text: [
+        'Since November 10, 2026, articles and investigations on this site have reader comments. A comment is stored in a Cloudflare D1 database through a Cloudflare Worker at artiore-comments.artiore.workers.dev. For each comment the site stores the display name entered, the comment text, the page, the timestamp, and a salted one-way SHA-256 hash of the commenter’s IP address. The hash is used only to limit comments to 5 posts per 10 minutes. The raw IP address is not stored. Comments are public and are published immediately. There is no sign-in, and no email address is collected.',
+        'The comment form uses Cloudflare Turnstile, a bot check operated by Cloudflare under Cloudflare’s own privacy policy. The Turnstile script loads only when someone focuses the comment form.',
+        'Since November 10, 2026, site traffic is proxied through Cloudflare. Cloudflare Web Analytics is injected on every page. It is cookieless, records aggregate page views, and does not build visitor profiles.',
+        `A reader can ask for a comment to be removed by writing to ${links.policyEmailAddress}, the contact named in section 13. Comments are kept until the commenter or the site owner asks for removal, or the page is retired.`,
+      ],
+    },
+    {
+      kind: 'heading',
       text: '2. How we use your information',
     },
     {
@@ -76,7 +89,7 @@ export const privacyPage: PageDocument = {
     {
       kind: 'paragraphs',
       text: [
-        'No user database. The only data the policy associates with your use is accessibility preferences in localStorage, which you can clear in the browser or with the “Reset All Settings” control in the accessibility toolbar on the Service.',
+        'There is no account database. Reader comments are stored as described under “Reader comments and site analytics.” Accessibility preferences stay in localStorage, which you can clear in the browser or with the “Reset All Settings” control in the accessibility toolbar on the Service.',
         'Security measures named: HTTPS for all connections, secure hosting, regular security updates, and API key protection for third-party services.',
       ],
     },
@@ -87,7 +100,7 @@ export const privacyPage: PageDocument = {
     {
       kind: 'paragraphs',
       text: [
-        'The policy says Artiore does not use cookies for tracking or analytics. It uses localStorage for accessibility preferences. That is not a cookie and does not track you across websites.',
+        'The policy says Artiore does not use cookies for tracking. It uses localStorage for accessibility preferences. That is not a cookie and does not track you across websites. Since November 10, 2026, Cloudflare Web Analytics measures aggregate page views without cookies and without visitor profiles.',
         'Third-party services such as OpenAI may set their own cookies. The Company does not control those cookies.',
         'A cookie notice elsewhere on artiore.com says the site uses analytics cookies and that no personal data is sold. The privacy policy says the opposite about analytics cookies. Both lines are on the published site. This page follows the privacy policy’s own section 4, and it does not add an analytics banner.',
       ],
@@ -163,7 +176,7 @@ export const privacyPage: PageDocument = {
     {
       kind: 'paragraphs',
       text: [
-        'The policy says there is no retention period for user data, because none is stored. Accessibility settings remain in localStorage until you clear them.',
+        'Reader comments are kept until the commenter or the site owner asks for removal, or the page is retired. Accessibility settings remain in localStorage until you clear them.',
       ],
     },
     {
@@ -206,7 +219,7 @@ export const privacyPage: PageDocument = {
       kind: 'list',
       title: 'Privacy summary, as published',
       items: [
-        'No user data collection',
+        'Reader comments stored as described; no email collected',
         'No user accounts',
         'Local storage only for accessibility settings',
         'No tracking across websites',
